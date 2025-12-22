@@ -1,0 +1,53 @@
+{"grupper":[
+    {"designation":"Sommerferie",
+        "ture":[
+            {"startDate":"2002-07-01","endDate":"2002-07-31","designation":"Sommerferie 2002" ,"filename":"Sommerferie_02.kml","title":"Korsika"},  
+            {"startDate":"2003-07-29","endDate":"2003-08-09","designation":"Sommerferie 2003" ,"filename":"Sommerferie_03.kml","title":"Gotland"},  
+            {"startDate":"2004-07-12","endDate":"2004-07-29","designation":"Sommerferie 2004" ,"filename":"Sommerferie_04.kml","title":"Polen rundt"},  
+            {"startDate":"2005-06-24","endDate":"2005-07-18","designation":"Sommerferie 2005" ,"filename":"Sommerferie_05.kml","title":"Schweiz, Cadenet"},  
+            {"startDate":"2006-07-10","endDate":"2006-07-26","designation":"Sommerferie 2006" ,"filename":"Sommerferie_06.kml","title":"Strynø, Norge"},  
+            {"startDate":"2007-07-13","endDate":"2007.08-06","designation":"Sommerferie 2007" ,"filename":"Sommerferie_07.kml","title":"John Olsen, Vadehavet, Holland, Alsace, Biluheld"},  
+            {"startDate":"2008-07-09","endDate":"2008-08-01","designation":"Sommerferie 2008" ,"filename":"Sommerferie_08.kml","title":"Tyrol, Toscana"},  
+            {"startDate":"2009-06-29","endDate":"2006-07-20","designation":"Sommerferie 2009" ,"filename":"Sommerferie_09.kml","title":"Tilos, Rodos"},  
+            {"startDate":"2010-07-01","endDate":"2010-07-26","designation":"Sommerferie 2010" ,"filename":"Sommerferie_10.kml","title":"Rumænien, Slovakiet, Szarlota"},  
+            {"startDate":"2011-07-03","endDate":"2011-07-31","designation":"Sommerferie 2011" ,"filename":"Sommerferie_11.kml","title":"Jylland, Madeira, Alme, Szarlota"},  
+            {"startDate":"2012-07-16","endDate":"2012-08-04","designation":"Sommerferie 2012" ,"filename":"Sommerferie_12.kml","title":"Alme, Bornholm, Szarlota"},  
+            {"startDate":"2013-06-30","endDate":"2013-07-28","designation":"Sommerferie 2013" ,"filename":"Sommerferie_13.kml","title":"Lauterbrunnen, Chartreuse, Ligurien, Hell, Salzburg, Liberech, Szarlota"},  
+            {"startDate":"2014-07-01","endDate":"2014-08-02","designation":"Sommerferie 2014" ,"filename":"Sommerferie_14.kml","title":"Normandiet, Bretagne, Bourgogne, Liechtenstein, Hell, Szarlota, Askov"},  
+            {"startDate":"2015-07-18","endDate":"2015-07-24","designation":"Sommerferie 2015" ,"filename":"Sommerferie_15.kml","title":"London, Canterbury","note":"Done"},  
+            {"startDate":"2016-07-22","endDate":"2016-08-08","designation":"Sommerferie 2016" ,"filename":"Sommerferie_16.kml","title":"Schlesvig, Szarlota, Krakow","note":" tjek billeder for datoer og steder lav rudimentær kml - DOWNLOAD"},  
+            {"startDate":"2017-06-29","endDate":"2017-07-24","designation":"Sommerferie 2017" ,"filename":"Sommerferie_17.kml","title":"Legoland, Budapest, Magura, Cund, Szarlota"},  
+            {"startDate":"2018-07-08","endDate":"2018-07-29","designation":"Sommerferie 2018" ,"filename":"Sommerferie_18.kml","title":"Århus, Sverige, Estland, Letland, Litauen, Szarlota","note":"Find datao og sted via billeder - update Earth - DOWNLOAD"},
+            {"startDate":"2019-06-29","endDate":"2019-08-04","designation":"Sommerferie 2019" ,"filename":"Sommerferie_19.kml","title":"Århus, Bornholm, Bornholm, Szarlota","note":"Find datao og sted via billeder - update Earth - DOWNLOAD"}, 
+            {"startDate":"2020-07-05","endDate":"2020-07-25","designation":"Sommerferie 2020" ,"filename":"Sommerferie_20.kml","title":"Ålbæk, Norge, Bornholm","note":"Done"},
+            {"startDate":"2021-07-05","endDate":"2021-07-23","designation":"Sommerferie 2021" ,"filename":"Sommerferie_21.kml","title":"Sydfynsk cykeltur, Bornholm ","note":"Done"} ,
+            {"startDate":"2022-07-05","endDate":"2022-07-23","designation":"Sommerferie 2022" ,"filename":"Sommerferie_22.kml","title":"Bornholm, Amsterdam, Nantes, Chisseaux, Reims","note":"Done"}, 
+            {"startDate":"2022-07-08","endDate":"2022-07-23","designation":"Sommerferie 2023" ,"filename":"Sommerferie_23.kml","title":"Manchester, Llanwrtyd, Dublin, Galway, Sligo, Portrush, Belfast, Ayr, Edinbourgh","note":"Work"}, 
+            {"startDate":"2024-07-05","endDate":"2024-07-23","designation":"Sommerferie 2024" ,"filename":"Sommerferie_24.kml","title":"Bornholm, Erfurt, Bamberg, Donaudalen, Wien","note":"work"}, 
+            {"startDate":"2023-07-13","endDate":"2023-07-13","designation":"Dyfflin" ,"filename":"Dublin.kml","title":"Dublin","note":"work"} 
+        ]},
+    {"designation":"Andre ture",
+        "ture":[{"startDate":"1978-07-01","endDate":"2011-05-29","designation":"Ferieture" ,"filename":"Ferieture.kml","title":"Mindre ture - uden datoer"},
+            {"startDate":"1992-04-01","endDate":"2006-06-30","designation":"I embeds medfør" ,"filename":"I_embeds_medfør.kml","title":"Rejse med arbejdet"},
+            {"startDate":"2016-03-14","endDate":"2016-04-01","designation":"Japan 2016" ,"filename":"Japan_marts_2016.kml","title":"Den store Japantur - mangelfuld","note":" - tjek datoer med billeder, lidt flere prikker, DOWNLOAD"}, 
+            {"startDate":"2011-03-22","endDate":"2011-03-29","designation":"Rom 2011" ,"filename":"Rom_22_-_29_marts_2011.kml","title":"Med Ida i Rom i foråret"},
+            {"startDate":"2010-04-01","endDate":"2010-04-08","designation":"Tenerife 2010" ,"filename":"Tenerife_-_Påsken_2010.kml","title":"Tenerife i Påsken","note":"tjek med billeder"},
+            {"startDate":"2021-10-15","endDate":"2021-10-24","designation":"Schweiz 2021" ,"filename":"Schweiz_2021.kml","title":"Schweiz i efterårsferien 2021","note":"tjek med billeder"},    
+            {"startDate":"2023-04-14","endDate":"2023-04-19","designation":"Paris april 2023" ,"filename":"Paris2023.kml","title":"Paris med Ida og Erik - 14. - 19. april 2023","note":""}    
+        ]},
+    {"designation":"Altmuligt",
+        "ture":[
+            {"startDate":"2022-07-28","endDate":"2022-07-28","designation":"Diverse" ,"filename":"andet.kml","title":"Ønskelisten"},
+            {"startDate":"1963-04-18","endDate":"2027-07-28","designation":"Her boede vi" ,"filename":"hjem.kml","title":"De steder vi har boet"}
+        ]}
+    ]
+}
+
+
+
+
+            
+
+
+
+

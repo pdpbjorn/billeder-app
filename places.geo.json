@@ -1,0 +1,75 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "placeName":"Sigbrits Alle"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [12.60720430246772,55.657333487852725]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "placeName":"Tivoli"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates":  [12.56813134154448,55.67368808512277]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "placeName":"Tivoli, Koncertsal"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [12.568614139167162,55.67273821603379]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "placeName":"Tivoli, Kaserne"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [12.56839956244597,55.6747049759089]
+            }
+        },
+       
+        {
+            "type": "Feature",
+            "properties": {
+                "placeName":"Bøgebjergvej"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [12.248641596781246,56.083041756761986]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "placeName":"Tejnvej"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [14.804033070351839,55.26766870501935]
+            }
+        },{
+            "type": "Feature",
+            "properties": {
+                "placeName":"Ishøjvej 6"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [12.358722858545844,55.60746044440973]
+            }
+        }
+        ]
+    }

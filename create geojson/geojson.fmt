@@ -1,0 +1,13 @@
+#[HEAD]{
+#[HEAD]"type": "FeatureCollection",
+#[HEAD]"features": [{ "type": "Feature", "properties": {"description":"This is a dummy"}}
+#[SECT]    ,{   "type": "Feature", 
+#[SECT]         "properties": {
+#[SECT]            "timestamp": "${createdate#;DateFmt('%Y-%m-%dT%H:%M:%S')}",
+#[SECT]            "camera": "$make # $model",
+#[SECT]            "image": "${directory;s/C:\/Apache24\/htdocs\/Foto/../}/$filename"
+#[SECT]        }
+#[IF]  $gpslatitude $gpslongitude
+#[BODY]         ,"geometry": {"type": "Point", "coordinates": [$gpslongitude,$gpslatitude] }
+#[ENDS]    } 
+#[TAIL]]}

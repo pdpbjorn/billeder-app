@@ -1,0 +1,1439 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>Japan_marts_2016.kml</name>
+	<Style id="s_ylw-pushpin31">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_dining004">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin16">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin32</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl2</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_coffee">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/coffee.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_snack_bar8">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/snack_bar.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_dining00">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_dining004</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_dining33</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin11">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin713</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin26</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin_hl101">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin21">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin9</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl1020</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin26">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin023">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin18</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin108</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin0002">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin98">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin0002</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin28</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_dining12">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin28">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl14">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/ranger_station.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_snack_bar23">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_snack_bar110</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_snack_bar07</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin108">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin9">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff00ff00</color>
+			<width>2.3</width>
+		</LineStyle>
+	</Style>
+	<StyleMap id="msn_dining030">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_dining17</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_dining12</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin18">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_dining180">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin33">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin101</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl41</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="m_ylw-pushpin24">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin15</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl14</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin7">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl41">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl011">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/snack_bar.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_dining171">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin101">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_coffee5">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/coffee.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_snack_bar06">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/snack_bar.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin173">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin15">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin112</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl15</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_dining17">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl1020">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff00ff00</color>
+			<width>2.3</width>
+		</LineStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin17">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin16</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl17</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin15">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/ranger_station.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_coffee1">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_coffee5</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_coffee</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_dining02">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_snack_bar07">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/snack_bar.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin56">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin14">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/snack_bar.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl2">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_dining03">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_dining01</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_dining02</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_dining01">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin122">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl112">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin000">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_snack_bar7">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_snack_bar06</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_snack_bar8</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin_hl15">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff00ff00</color>
+			<width>3</width>
+		</LineStyle>
+	</Style>
+	<Style id="s_ylw-pushpin16">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin160">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin000</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl112</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="m_ylw-pushpin001">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin14</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl011</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_dining0">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_dining180</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_dining171</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin_hl17">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin32">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_dining33">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin14">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin31</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl101</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin8">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin7</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin173</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_snack_bar110">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/snack_bar.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin112">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff00ff00</color>
+			<width>3</width>
+		</LineStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin713">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin34">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin122</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin56</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Folder>
+		<name>Japan marts 2016</name>
+		<visibility>0</visibility>
+		<Folder>
+			<name>15. marts - ankomst</name>
+			<visibility>0</visibility>
+			<open>1</open>
+			<Placemark>
+				<name>Ankomst ved middagstid</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2016-03-16T04:38:08Z</begin>
+						<end>2016-04-02T18:22:50Z</end>
+					</gx:TimeSpan>
+					<longitude>139.7671785527994</longitude>
+					<latitude>35.54488566317198</latitude>
+					<altitude>0</altitude>
+					<heading>-138.6076915605089</heading>
+					<tilt>45.9082462530702</tilt>
+					<range>1427.39393157782</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin33</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>139.7689630595477,35.54504354790246,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Afhentning af mobilt hotspot på posthuset</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2016-03-16T04:38:08Z</begin>
+						<end>2016-04-02T18:22:50Z</end>
+					</gx:TimeSpan>
+					<longitude>139.7860081415878</longitude>
+					<latitude>35.54848853786837</latitude>
+					<altitude>22.16124379630734</altitude>
+					<heading>-138.5970710267394</heading>
+					<tilt>48.5233982316789</tilt>
+					<range>755.151432648884</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin33</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>139.7832499647967,35.54935394343224,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Tog til Ojima station - gåtur til hus</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2016-03-16T04:38:08Z</begin>
+						<end>2016-04-02T18:22:50Z</end>
+					</gx:TimeSpan>
+					<longitude>139.834952027096</longitude>
+					<latitude>35.69003884982165</latitude>
+					<altitude>0</altitude>
+					<heading>-7.087701904870837</heading>
+					<tilt>50.00987927305279</tilt>
+					<range>705.5149646757362</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin14</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>139.8356669040261,35.69005092548221,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>7Chome-7-1 Kameido RED WALL
+Koto-ku, Tokyo 136-0071</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2016-03-16T04:38:08Z</begin>
+						<end>2016-04-02T18:22:50Z</end>
+					</gx:TimeSpan>
+					<longitude>139.8337242058705</longitude>
+					<latitude>35.69588009228884</latitude>
+					<altitude>4.646113986024868</altitude>
+					<heading>62.64901256954651</heading>
+					<tilt>20.56977288518269</tilt>
+					<range>79.48098513273089</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin24</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>139.833569168043,35.69598104643672,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Aftensmadsindkøb - Family mart</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2016-03-16T04:38:08Z</begin>
+						<end>2016-04-02T18:22:50Z</end>
+					</gx:TimeSpan>
+					<longitude>139.8342028605544</longitude>
+					<latitude>35.69661497956771</latitude>
+					<altitude>4.737262743999718</altitude>
+					<heading>62.6492919583601</heading>
+					<tilt>20.57073934624852</tilt>
+					<range>203.03930131188</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_dining030</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>139.8342683143249,35.69730412666968,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>16. marts Omotesando, Takeshita dori, Nakano</name>
+			<visibility>0</visibility>
+			<Placemark>
+				<name>Morgenmad/frokost - indkøbt på metrostationen</name>
+				<visibility>0</visibility>
+				<Camera>
+					<gx:TimeSpan>
+						<begin>2016-03-16T04:38:08Z</begin>
+						<end>2016-04-02T18:22:50Z</end>
+					</gx:TimeSpan>
+					<longitude>139.7126145603348</longitude>
+					<latitude>35.66552887367659</latitude>
+					<altitude>148.3102536170747</altitude>
+					<heading>-54.99587649517962</heading>
+					<tilt>21.83359242460484</tilt>
+					<roll>2.054852477376924</roll>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</Camera>
+				<styleUrl>#m_ylw-pushpin001</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>139.7122510962616,35.66554236216815,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Apple store</name>
+				<visibility>0</visibility>
+				<Camera>
+					<gx:TimeSpan>
+						<begin>2016-03-16T04:38:08Z</begin>
+						<end>2016-04-02T18:22:50Z</end>
+					</gx:TimeSpan>
+					<longitude>139.7121777581992</longitude>
+					<latitude>35.6659281667371</latitude>
+					<altitude>237.9330790905621</altitude>
+					<heading>-54.99613126647671</heading>
+					<tilt>21.83404032248999</tilt>
+					<roll>2.054955541441479</roll>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</Camera>
+				<styleUrl>#msn_ylw-pushpin8</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>139.7108705086244,35.66620376622547,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Omotesando Hills - udkig ofter dansk desing - fandt vægfotos fra København</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2016-03-16T04:38:08Z</begin>
+						<end>2016-04-02T18:22:50Z</end>
+					</gx:TimeSpan>
+					<longitude>139.7089272384853</longitude>
+					<latitude>35.66672016338769</latitude>
+					<altitude>14.41573634698703</altitude>
+					<heading>2.863198065664167e-013</heading>
+					<tilt>2.906322458454573</tilt>
+					<range>151.9695050473568</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin8</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>139.7089450017816,35.66708470471337,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Tokyu Plaza  - flot rulletrappeindgang</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2016-03-16T04:38:08Z</begin>
+						<end>2016-04-02T18:22:50Z</end>
+					</gx:TimeSpan>
+					<longitude>139.7057933697624</longitude>
+					<latitude>35.66843941064479</latitude>
+					<altitude>7.856638646381033</altitude>
+					<heading>105.5975909785723</heading>
+					<tilt>59.49527307624272</tilt>
+					<range>78.86475782682392</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin8</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>139.7057057887058,35.66858259527842,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>H&amp;M hus</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2016-03-16T04:38:08Z</begin>
+						<end>2016-04-02T18:22:50Z</end>
+					</gx:TimeSpan>
+					<longitude>139.7065952130358</longitude>
+					<latitude>35.67009762060102</latitude>
+					<altitude>0</altitude>
+					<heading>32.05298720187648</heading>
+					<tilt>56.72806358271498</tilt>
+					<range>179.1544025367664</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin8</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>139.7061094070263,35.66958767630274,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Line Friends butik</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2016-03-16T04:38:08Z</begin>
+						<end>2016-04-02T18:22:50Z</end>
+					</gx:TimeSpan>
+					<longitude>139.7065952130358</longitude>
+					<latitude>35.67009762060102</latitude>
+					<altitude>0</altitude>
+					<heading>32.05298720187648</heading>
+					<tilt>56.72806358271498</tilt>
+					<range>179.1544025367664</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin8</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>139.706461881536,35.66965457378031,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Takeshita Dori</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2016-03-16T04:38:08Z</begin>
+						<end>2016-04-02T18:22:50Z</end>
+					</gx:TimeSpan>
+					<longitude>139.7062891310103</longitude>
+					<latitude>35.67049824335629</latitude>
+					<altitude>2.94457435615394</altitude>
+					<heading>-56.75172781498034</heading>
+					<tilt>45.00164740547026</tilt>
+					<range>101.3888148814448</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin8</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>139.706562021875,35.67029576428425,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Magnus køber cykelskjorte</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2016-03-16T04:38:08Z</begin>
+						<end>2016-04-02T18:22:50Z</end>
+					</gx:TimeSpan>
+					<longitude>139.7052670048118</longitude>
+					<latitude>35.67082013754965</latitude>
+					<altitude>5.511889265760929</altitude>
+					<heading>141.4691765443235</heading>
+					<tilt>53.24938578542075</tilt>
+					<range>71.15307843954064</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin8</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>139.7051917706707,35.67099327521545,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Kaffepause i 1.sals cafe med sjove blade</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2016-03-16T04:38:08Z</begin>
+						<end>2016-04-02T18:22:50Z</end>
+					</gx:TimeSpan>
+					<longitude>139.7049254180363</longitude>
+					<latitude>35.67131106790713</latitude>
+					<altitude>2.356155249326702</altitude>
+					<heading>99.28868092110301</heading>
+					<tilt>53.98288895508205</tilt>
+					<range>87.32643547719906</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_coffee1</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>139.7045581681026,35.67122988293958,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Mandarake stormagasin</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2016-03-16T04:38:08Z</begin>
+						<end>2016-04-02T18:22:50Z</end>
+					</gx:TimeSpan>
+					<longitude>139.6659361858841</longitude>
+					<latitude>35.70855456895963</latitude>
+					<altitude>5.024160391070634</altitude>
+					<heading>18.76416313137682</heading>
+					<tilt>17.24409391588173</tilt>
+					<range>153.154094097972</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin98</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>139.6656181459089,35.70863413422656,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Aftensmad på restaurant</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2016-03-16T04:38:08Z</begin>
+						<end>2016-04-02T18:22:50Z</end>
+					</gx:TimeSpan>
+					<longitude>139.6659734577968</longitude>
+					<latitude>35.70794444967225</latitude>
+					<altitude>6.475930705842645</altitude>
+					<heading>-14.00254272756896</heading>
+					<tilt>19.31718410446408</tilt>
+					<range>49.08673520367937</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_dining00</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>139.665995324663,35.70789002146923,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>17. marts Shitamachi Museum, Ueno Park, Asakusa</name>
+			<visibility>0</visibility>
+			<Placemark>
+				<name>Morgengåtur under motorvejen</name>
+				<visibility>0</visibility>
+				<styleUrl>#m_ylw-pushpin21</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						139.8334909890675,35.69606610535502,0 139.8332113859965,35.69582882304474,0 139.8329420673484,35.69574386009513,0 139.8329914638083,35.69550366885204,0 139.8330364532657,35.69520025347849,0 139.8330404210041,35.69483325910667,0 139.8323361929457,35.69471529781087,0 139.8315007371384,35.69470208314944,0 139.8315362132379,35.6942317113869,0 139.8316095012169,35.69392343582318,0 139.8303569938178,35.69382538846718,0 139.8286729243357,35.69370675324075,0 139.8268232785653,35.69370032574181,0 139.8233657313278,35.69343200111899,0 139.8196891624129,35.69329667560247,0 139.8190322183862,35.69324278285179,0 139.8188704818613,35.69275734043261,0 139.8188701000852,35.69244096893541,0 139.818911248212,35.69210235790543,0 139.8184225193797,35.69210544615425,0 139.8179275594612,35.69192500459015,0 139.8180925929785,35.69171759057951,0 139.8180188417549,35.69105666295549,0 139.8181249216891,35.69026965186913,0 139.8181633957095,35.69000167826696,0 139.8179029349797,35.68981793789433,0 139.8177525111763,35.68950383935844,0 139.817705830208,35.68925548706317,0 139.8170794925252,35.68916038208072,0 139.8163950484003,35.68913354049425,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>Frokostindkøb i kiosk</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2016-03-16T04:38:08Z</begin>
+						<end>2016-04-02T18:22:50Z</end>
+					</gx:TimeSpan>
+					<longitude>139.7730079171133</longitude>
+					<latitude>35.70858753179186</latitude>
+					<altitude>33.32363432716915</altitude>
+					<heading>-35.76246015723849</heading>
+					<tilt>40.66807712342741</tilt>
+					<range>173.6345197442809</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin160</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>139.772997114616,35.70858683063221,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Frokost ved søen</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2016-03-16T04:38:08Z</begin>
+						<end>2016-04-02T18:22:50Z</end>
+					</gx:TimeSpan>
+					<longitude>139.7729253277401</longitude>
+					<latitude>35.71029695916685</latitude>
+					<altitude>12.1858740766503</altitude>
+					<heading>40.19749314347867</heading>
+					<tilt>40.66823051840647</tilt>
+					<range>199.8350055651261</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_snack_bar7</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>139.7725577708869,35.71056580774164,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Sakura fest i Ueno</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2016-03-16T04:38:08Z</begin>
+						<end>2016-04-02T18:22:50Z</end>
+					</gx:TimeSpan>
+					<longitude>139.7737373682575</longitude>
+					<latitude>35.71106966713221</latitude>
+					<altitude>0</altitude>
+					<heading>40.19796711638421</heading>
+					<tilt>40.66749348043844</tilt>
+					<range>211.3858289439086</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin023</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>139.7735444924681,35.71109877965673,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Shitamachi Museum</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2016-03-16T04:38:08Z</begin>
+						<end>2016-04-02T18:22:50Z</end>
+					</gx:TimeSpan>
+					<longitude>139.7730602155934</longitude>
+					<latitude>35.71023499142099</latitude>
+					<altitude>20.10388092479374</altitude>
+					<heading>40.19818072151403</heading>
+					<tilt>47.28006162748951</tilt>
+					<range>165.4320506917194</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin023</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>139.7726399765334,35.71025109619055,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Taskeindkøb, Ameyokocho marked</name>
+				<visibility>0</visibility>
+				<open>1</open>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2016-03-16T04:38:08Z</begin>
+						<end>2016-04-02T18:22:50Z</end>
+					</gx:TimeSpan>
+					<longitude>139.773924020725</longitude>
+					<latitude>35.70933982241194</latitude>
+					<altitude>27.66207529830272</altitude>
+					<heading>12.15713567872459</heading>
+					<tilt>32.81802599492431</tilt>
+					<range>221.6882883261416</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin023</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>139.7743112461326,35.70939360562368,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Gåtur ti Asakusa ca</name>
+				<visibility>0</visibility>
+				<styleUrl>#m_ylw-pushpin15</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						139.7735750255643,35.70916108855283,0 139.7740973501238,35.70905593202839,0 139.7744955330177,35.71001060106738,0 139.7744688562564,35.71026193020302,0 139.7746015409006,35.71147390133304,0 139.7755641185111,35.71149265129992,0 139.7767779563034,35.71194745769355,0 139.7778568718009,35.7123031839699,0 139.7788147984874,35.71322778066976,0 139.779466716052,35.71369473652996,0 139.7806905535851,35.71283088375615,0 139.7830276641597,35.71327043439756,0 139.7883486672586,35.71269049790561,0 139.7889465877549,35.71417388949206,0 139.7888459421625,35.71451806038659,0 139.7925442597958,35.71371640478867,0 139.7933349047315,35.71361122339155,0 139.7942063078067,35.71413113547761,0 139.7950033446473,35.7143911320972,0 139.7962221985677,35.71452705627755,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>Tempelseremoni, Asakusa</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2016-03-16T04:38:08Z</begin>
+						<end>2016-04-02T18:22:50Z</end>
+					</gx:TimeSpan>
+					<longitude>139.7968223689079</longitude>
+					<latitude>35.71452114796748</latitude>
+					<altitude>9.545476347228142</altitude>
+					<heading>0.006865387332165703</heading>
+					<tilt>60.00289370315006</tilt>
+					<range>372.3471301550498</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin16</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>139.7967848761826,35.71450693559853,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Tutoro-ting</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2016-03-16T04:38:08Z</begin>
+						<end>2016-04-02T18:22:50Z</end>
+					</gx:TimeSpan>
+					<longitude>139.7969734222472</longitude>
+					<latitude>35.71205699514316</latitude>
+					<altitude>8.226363148873729</altitude>
+					<heading>0.006953567000467817</heading>
+					<tilt>60.00292161990451</tilt>
+					<range>375.9381693940475</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin16</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>139.7965283827208,35.71097921748833,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Aftensmad - sushirestaurant</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2016-03-16T04:38:08Z</begin>
+						<end>2016-04-02T18:22:50Z</end>
+					</gx:TimeSpan>
+					<gx:ViewerOptions>
+						<gx:option enabled="0" name="historicalimagery"></gx:option>
+						<gx:option enabled="0" name="sunlight"></gx:option>
+						<gx:option name="streetview"></gx:option>
+					</gx:ViewerOptions>
+					<longitude>139.8298130382435</longitude>
+					<latitude>35.697267008808</latitude>
+					<altitude>0</altitude>
+					<heading>-11.53603560528856</heading>
+					<tilt>73.64633302878919</tilt>
+					<range>40.96934011678736</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_dining03</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>139.8298742364445,35.69697298228815,9.544617905774169</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>18. marts - Miraikan, Ginza</name>
+			<visibility>0</visibility>
+			<Placemark>
+				<name>Shimbashi Station</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2016-03-16T04:38:08Z</begin>
+						<end>2016-04-02T18:22:50Z</end>
+					</gx:TimeSpan>
+					<longitude>139.7591341503752</longitude>
+					<latitude>35.66547133402637</latitude>
+					<altitude>47.66136680850486</altitude>
+					<heading>38.83972269799909</heading>
+					<tilt>56.61198897685113</tilt>
+					<range>644.0220105731038</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin34</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>139.7584223136883,35.66616257404193,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Yurikamome-hættemåge-tog</name>
+				<visibility>0</visibility>
+				<styleUrl>#m_ylw-pushpin21</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						139.7581432440089,35.66579308547396,0 139.7611852218904,35.66451451933725,0 139.7590391320907,35.66010156613769,0 139.7592901999993,35.65721129158992,0 139.7606434161074,35.65398300114649,0 139.7577564146487,35.64868370502269,0 139.7580615089385,35.64553846523884,0 139.7578552110003,35.64276687170244,0 139.7577491108467,35.64091267268793,0 139.7582136578027,35.63814387890827,0 139.7573503014159,35.63659326509303,0 139.7551683061501,35.63664605954177,0 139.7549328579425,35.63777293797633,0 139.7562686092819,35.63847926940818,0 139.7587399850559,35.6378698529962,0 139.7640489674622,35.63616159078196,0 139.7696581864437,35.6348296827452,0 139.7749884123493,35.63626727344725,0 139.7792955690294,35.63293193127274,0 139.7802482576013,35.63097331334566,0 139.7733130277271,35.62679981115926,0 139.7701893812696,35.62519823584031,0 139.7716874182267,35.6228521660698,0 139.7731409418709,35.62121283427076,0 139.7748211566769,35.61945193256773,0 139.7760582082288,35.61770444061808,0 139.7773728625669,35.61691536160571,0 139.778221703113,35.61695357207422,0 139.7782316226802,35.61694853221619,0 139.7792061149544,35.61742326698987,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>Her var indgangen ikke</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2016-03-16T04:38:08Z</begin>
+						<end>2016-04-02T18:22:50Z</end>
+					</gx:TimeSpan>
+					<longitude>139.7771041311316</longitude>
+					<latitude>35.61866222086466</latitude>
+					<altitude>27.7047641292845</altitude>
+					<heading>15.48600636075809</heading>
+					<tilt>35.12381975708193</tilt>
+					<range>159.0851589511851</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin17</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>139.7772230584379,35.61853508751763,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Frokostspisning, fiskeboller og risboller</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2016-03-16T04:38:08Z</begin>
+						<end>2016-04-02T18:22:50Z</end>
+					</gx:TimeSpan>
+					<longitude>139.7776080847351</longitude>
+					<latitude>35.62011976911871</latitude>
+					<altitude>9.819396544492273</altitude>
+					<heading>15.48624477860036</heading>
+					<tilt>38.63706238769822</tilt>
+					<range>152.7383980446895</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_snack_bar23</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>139.7776075263621,35.62011676318048,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Miraikan billetkontor</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2016-03-16T04:38:08Z</begin>
+						<end>2016-04-02T18:22:50Z</end>
+					</gx:TimeSpan>
+					<longitude>139.7769867173714</longitude>
+					<latitude>35.62014089821759</latitude>
+					<altitude>0</altitude>
+					<heading>-71.52198595578685</heading>
+					<tilt>60.0006452761324</tilt>
+					<range>132.3610754817638</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin11</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>139.7769150177528,35.61991138547815,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Globus</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2016-03-16T04:38:08Z</begin>
+						<end>2016-04-02T18:22:50Z</end>
+					</gx:TimeSpan>
+					<gx:ViewerOptions>
+						<gx:option enabled="0" name="historicalimagery"></gx:option>
+						<gx:option enabled="0" name="sunlight"></gx:option>
+						<gx:option name="streetview"></gx:option>
+					</gx:ViewerOptions>
+					<longitude>139.777194769016</longitude>
+					<latitude>35.61948297622767</latitude>
+					<altitude>0</altitude>
+					<heading>-14.98259650667972</heading>
+					<tilt>51.01761017540385</tilt>
+					<range>15.41419086930107</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin11</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>139.7771865682198,35.61948138143229,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Yamaha Ginza Flagship Store</name>
+				<visibility>0</visibility>
+				<Camera>
+					<gx:TimeSpan>
+						<begin>2016-03-16T04:38:08Z</begin>
+						<end>2016-04-02T18:22:50Z</end>
+					</gx:TimeSpan>
+					<gx:ViewerOptions>
+						<gx:option enabled="0" name="historicalimagery"></gx:option>
+						<gx:option enabled="0" name="sunlight"></gx:option>
+						<gx:option name="streetview"></gx:option>
+					</gx:ViewerOptions>
+					<longitude>139.7623259999999</longitude>
+					<latitude>35.66866299999997</latitude>
+					<altitude>2.499999998858889</altitude>
+					<heading>66.53823598518454</heading>
+					<tilt>104.7284947929594</tilt>
+					<roll>4.988563353416557e-014</roll>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</Camera>
+				<styleUrl>#msn_ylw-pushpin11</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>139.76258071494,35.6687478298123,13.48242022643714</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Nicolas G.Hayek Center - med elevatorer til urbutiker</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2016-03-16T04:38:08Z</begin>
+						<end>2016-04-02T18:22:50Z</end>
+					</gx:TimeSpan>
+					<gx:ViewerOptions>
+						<gx:option enabled="0" name="historicalimagery"></gx:option>
+						<gx:option enabled="0" name="sunlight"></gx:option>
+						<gx:option name="streetview"></gx:option>
+					</gx:ViewerOptions>
+					<longitude>143.4374999721119</longitude>
+					<latitude>34.23319925024823</latitude>
+					<altitude>0</altitude>
+					<heading>116.5337400255023</heading>
+					<tilt>89.43631191133277</tilt>
+					<range>371211.6697693293</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin11</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>139.7629405291194,35.66905806335182,5.97324414404373</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Ginza corner</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2016-03-16T04:38:08Z</begin>
+						<end>2016-04-02T18:22:50Z</end>
+					</gx:TimeSpan>
+					<longitude>139.7650868377227</longitude>
+					<latitude>35.67150681484492</latitude>
+					<altitude>30.74306255118136</altitude>
+					<heading>0.0009347915940981855</heading>
+					<tilt>58.47974281762483</tilt>
+					<range>156.8692281660927</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin11</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>139.7652484389717,35.6712906170078,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Nihombashi - vi forsøgte at finde noget at spise</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2016-03-16T04:38:08Z</begin>
+						<end>2016-04-02T18:22:50Z</end>
+					</gx:TimeSpan>
+					<longitude>139.7730752122666</longitude>
+					<latitude>35.68017250661352</latitude>
+					<altitude>38.51895702264645</altitude>
+					<heading>38.97744287498172</heading>
+					<tilt>34.39653881842666</tilt>
+					<range>225.1851643920415</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin11</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>139.7735392099079,35.68040915821021,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Aftensmad på nuddelrestaruant</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2016-03-16T04:38:08Z</begin>
+						<end>2016-04-02T18:22:50Z</end>
+					</gx:TimeSpan>
+					<gx:ViewerOptions>
+						<gx:option enabled="0" name="historicalimagery"></gx:option>
+						<gx:option enabled="0" name="sunlight"></gx:option>
+						<gx:option name="streetview"></gx:option>
+					</gx:ViewerOptions>
+					<longitude>139.9218750002287</longitude>
+					<latitude>35.76960866264789</latitude>
+					<altitude>0</altitude>
+					<heading>41.40439289214349</heading>
+					<tilt>89.35115216144621</tilt>
+					<range>11786.14354310574</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_dining0</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>139.8358412150305,35.69022391187365,-0.508398953447912</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+	</Folder>
+</Document>
+</kml>

@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Document>
+	<name>Sommerferie_05.kml</name>
+	<StyleMap id="msn_ylw-pushpin_copy101">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin_copy1000</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin_copy1001</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin_copy300">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="default0">
+	</Style>
+	<Style id="sn_ylw-pushpin_copy45">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="default_copy1+icon=http://maps.google.com/mapfiles/kml/pal3/icon55.png">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pal3/icon55.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>1.1</scale>
+		</LabelStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin_copy030">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin_copy33">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin_copy300</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin_copy311</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin_copy04">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="default_copy1+nicon=http://maps.google.com/mapfiles/kml/pal3/icon63.png+hicon=http://maps.google.com/mapfiles/kml/pal3/icon55.png">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#default_copy1+icon=http://maps.google.com/mapfiles/kml/pal3/icon63.png</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#default_copy1+icon=http://maps.google.com/mapfiles/kml/pal3/icon55.png</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin_copy01">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin_copy04</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin_copy030</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="default_copy1+icon=http://maps.google.com/mapfiles/kml/pal3/icon63.png">
+		<IconStyle>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pal3/icon63.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin_copy1001">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin_copy311">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin_copy402">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin_copy45</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin_copy40</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin2100">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin_copy1000">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin_copy40">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin6100">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin10000">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin2100</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin6100</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin_copy21">
+	</Style>
+	<Folder>
+		<name>Sommerferie &apos;05</name>
+		<visibility>0</visibility>
+		<open>1</open>
+		<Folder>
+			<name>24/6 - 18/7</name>
+			<visibility>0</visibility>
+			<open>1</open>
+			<Placemark>
+				<name>Zum Lindenhof</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>10.00984185240137</longitude>
+					<latitude>53.30473223557862</latitude>
+					<altitude>0</altitude>
+					<heading>0.03617089855944208</heading>
+					<tilt>2.677054411864635e-011</tilt>
+					<range>2091.513482471909</range>
+				</LookAt>
+				<styleUrl>#default_copy1+nicon=http://maps.google.com/mapfiles/kml/pal3/icon63.png+hicon=http://maps.google.com/mapfiles/kml/pal3/icon55.png</styleUrl>
+				<Point>
+					<coordinates>10.00812877306835,53.30810306823321,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Rousillon</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>5.297395196885221</longitude>
+					<latitude>43.90006406472419</latitude>
+					<altitude>0</altitude>
+					<heading>-3.797993624659185</heading>
+					<tilt>0</tilt>
+					<range>1723.707092757833</range>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin_copy402</styleUrl>
+				<Point>
+					<coordinates>5.297395196885221,43.90006406472419,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Cooperatif vinicole (eller noget)</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>5.370372344475574</longitude>
+					<latitude>43.72882498236501</latitude>
+					<altitude>0</altitude>
+					<heading>-3.747359613719902</heading>
+					<tilt>0</tilt>
+					<range>1111.035700883549</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin_copy01</styleUrl>
+				<Point>
+					<coordinates>5.370240815664545,43.72857989552864,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Pertuis Hyper U</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>5.492665282503016</longitude>
+					<latitude>43.6948167761989</latitude>
+					<altitude>0</altitude>
+					<heading>15.81110716976289</heading>
+					<tilt>0</tilt>
+					<range>532.0056167945977</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin_copy101</styleUrl>
+				<Point>
+					<coordinates>5.492084097511253,43.69518090845858,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Mont Ventoux</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>5.252408940051956</longitude>
+					<latitude>43.88825624625407</latitude>
+					<altitude>0</altitude>
+					<heading>-13.67658536770433</heading>
+					<tilt>66.50556506519055</tilt>
+					<range>63870.89785683054</range>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin_copy33</styleUrl>
+				<Point>
+					<coordinates>5.28322983150521,44.17222852171342,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Cadenet badesø</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>5.358498813913212</longitude>
+					<latitude>43.71785862470002</latitude>
+					<altitude>0</altitude>
+					<heading>15.718395838155</heading>
+					<tilt>0</tilt>
+					<range>952.5612583271887</range>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin10000</styleUrl>
+				<Point>
+					<coordinates>5.358498813913212,43.71785862470002,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Lottigna</name>
+				<visibility>0</visibility>
+				<styleUrl>#default_copy1+nicon=http://maps.google.com/mapfiles/kml/pal3/icon63.png+hicon=http://maps.google.com/mapfiles/kml/pal3/icon55.png</styleUrl>
+				<Point>
+					<coordinates>8.940861710387395,46.4541103870555,1376.715023476871</coordinates>
+				</Point>
+				<View>
+							<longitude>8.971382739107256</longitude>
+							<latitude>46.46845112328288</latitude>
+							<range>9618.672133496417</range>
+							<tilt>4.83789504434744e-012</tilt>
+							<heading>-4.262312797404507e-014</heading>
+						</View>
+			</Placemark>
+			<Placemark>
+				<name>Cadenet</name>
+				<visibility>0</visibility>
+				<styleUrl>#default_copy1+nicon=http://maps.google.com/mapfiles/kml/pal3/icon63.png+hicon=http://maps.google.com/mapfiles/kml/pal3/icon55.png</styleUrl>
+				<Point>
+					<coordinates>5.370761747853436,43.73552791553819,429.2600270287828</coordinates>
+				</Point>
+				<View>
+							<longitude>5.368251844197958</longitude>
+							<latitude>43.73626485691295</latitude>
+							<range>777.8302093850971</range>
+							<tilt>0</tilt>
+							<heading>-0.7033347007355716</heading>
+						</View>
+			</Placemark>
+			<Placemark>
+				<name>Lottigna view</name>
+				<visibility>0</visibility>
+				<styleUrl>#default_copy1+nicon=http://maps.google.com/mapfiles/kml/pal3/icon63.png+hicon=http://maps.google.com/mapfiles/kml/pal3/icon55.png</styleUrl>
+				<Point>
+					<coordinates>8.93746538086225,46.45129681712753,1321.2354665114</coordinates>
+				</Point>
+				<View>
+							<longitude>8.937465222882281</longitude>
+							<latitude>46.46170969772138</latitude>
+							<range>9984.833223125183</range>
+							<tilt>65.06241537360668</tilt>
+							<heading>-6.383153779863401e-014</heading>
+						</View>
+			</Placemark>
+			<Placemark>
+				<name>Niels og Judith</name>
+				<visibility>0</visibility>
+				<styleUrl>#default_copy1+nicon=http://maps.google.com/mapfiles/kml/pal3/icon63.png+hicon=http://maps.google.com/mapfiles/kml/pal3/icon55.png</styleUrl>
+				<Point>
+					<coordinates>8.196355688112391,47.43669727823843,521.4506871821577</coordinates>
+				</Point>
+				<View>
+							<longitude>8.199999999999918</longitude>
+							<latitude>47.43333400000429</latitude>
+							<range>2052.323865353442</range>
+							<tilt>0</tilt>
+							<heading>-8.194649947158585e-014</heading>
+						</View>
+			</Placemark>
+			<Placemark>
+				<name>Todi</name>
+				<visibility>0</visibility>
+				<styleUrl>#default_copy1+nicon=http://maps.google.com/mapfiles/kml/pal3/icon63.png+hicon=http://maps.google.com/mapfiles/kml/pal3/icon55.png</styleUrl>
+				<Point>
+					<coordinates>8.920114368970944,46.83435893102978,2133.213897936153</coordinates>
+				</Point>
+				<View>
+							<longitude>8.92435815834645</longitude>
+							<latitude>46.90004901075133</latitude>
+							<range>23481.58433956896</range>
+							<tilt>63.379399491493</tilt>
+							<heading>0.005888232420861596</heading>
+						</View>
+			</Placemark>
+			<Placemark>
+				<name>sommerferie</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>12.65846605920515</longitude>
+					<latitude>55.65320881966573</latitude>
+					<altitude>0</altitude>
+					<heading>-158.1753535717653</heading>
+					<tilt>45.00000217447499</tilt>
+					<range>47145.92157661082</range>
+				</LookAt>
+				<styleUrl>#sn_ylw-pushpin_copy21</styleUrl>
+				<LineString id="khLineString554">
+					<tessellate>1</tessellate>
+					<coordinates>
+						12.60115980232084,55.67005356076336,0 12.32614252678123,55.60655053676184,0 12.153289677753,55.48489349183859,0 12.05950050798028,55.34615065073211,0 11.93587629445493,55.11325869118032,0 12.01334184423708,54.97748262602591,0 11.94774273067842,54.93185714615684,0 11.78401166981767,54.82361719662247,0 11.46245880368272,54.77421494926056,0 11.44660127451508,54.73316946767561,0 11.45359677176954,54.69977611660512,0 11.4257731441793,54.70489672779217,0 11.36103458654638,54.65684235309819,0 11.19951585337404,54.46256866459098,0 10.00836166513854,53.53652102400106,0 10.00985541125182,53.31749795738735,0 8.686362425652092,50.11861345084153,0 8.577095391226237,49.23154057976983,0 8.562783720987952,47.64012110904253,0 8.219823417212425,47.41232740533265,0 8.775826989079192,47.16197054757443,0 8.610555683811157,46.88563984366091,0 8.43219356187474,46.50806498321484,0 8.898331839368964,46.39944403387831,0 8.925975113194554,46.53025323751664,0 8.924204970647111,46.6960486473243,0 8.579093995402261,46.57682960327756,0 8.255476191086942,46.47179752327408,0 8.426204542335157,46.41760445994728,0 8.804130450819557,46.39295333966707,0 8.897216741286798,46.35519705616944,0 8.85078653297964,46.20045127278112,0 8.653942258369341,45.99680757571253,0 8.509591646465935,45.94403930155988,0 8.430447336765852,45.9338750894587,0 8.362098328956449,45.82468763716224,0 8.444040235975066,45.96457112593748,0 8.581628572928437,45.92380131344316,0 8.6556273356357,46.08210978143976,0 8.945461222948865,46.37242068209943,0 8.69400107281399,46.17746488366949,0 8.564586799454148,45.95379984190079,0 9.059399981980519,45.84782038490423,0 9.11231830998112,45.92765830475958,0 9.213061675619997,45.99913543982241,0 9.142157693821773,45.96158234357817,0 9.084103188156391,45.86998969723533,0 9.028727574336743,45.7874367332396,0 9.063449286391077,45.69066131273467,0 8.899166836361673,45.50629703089156,0 8.565579674833984,45.47750041482541,0 8.164670612971449,45.47995312927136,0 7.910777844688411,45.53500294818892,0 7.789751600967166,45.60313952242642,0 7.723277973552953,45.6433059201182,0 7.721148182561748,45.69708443298698,0 7.684260135127701,45.73768544481075,0 7.421748098444852,45.73655892732271,0 7.333569448439789,45.78784576850207,0 7.178524833541445,45.80078923866268,0 7.164543111570652,45.87033792089769,0 7.160474952456994,45.94460547266407,0 7.153837785535985,46.01181055982722,0 7.103775524314103,46.11157647320687,0 7.433429748708605,46.25981935562975,0 7.575441834881175,46.30060139219426,0 7.725766773755268,46.32236536377305,0 7.924080989845919,46.30942685721563,0 8.048267865174509,46.35808504873626,0 8.154330706144151,46.41697502346861,0 8.295263006298555,46.51329958473675,0 8.366746359818379,46.53049932316871,0 7.982753313566192,46.34388429738671,0 7.864095617006414,46.30140221662947,0 7.671635924557323,46.32167865320149,0 7.492516611679861,46.28968943084702,0 7.250771070506104,46.18125002480397,0 7.024006034491876,46.07131532469368,0 7.380923613693156,46.23003312301626,0 7.429237174732933,46.18811039976217,0 7.478350145497856,46.13019298916095,0 7.430644544397454,46.1592217767208,0 7.32711469786355,46.22024902703842,0 7.174867639528984,46.13723359398048,0 6.975819079074498,46.04350431317269,0 6.852920576263174,45.90025934841334,0 6.71677082200634,45.88837758049328,0 6.518737393443871,45.82047837415142,0 6.396720627980857,45.66779095821892,0 6.246945779275266,45.60493359228255,0 6.112205434799279,45.48001400774239,0 5.971237928073165,45.29231467089628,0 5.863150058771794,45.21733723634633,0 5.717931452934153,45.16571126467683,0 5.662052177256896,45.04268465824825,0 5.638214752801432,44.91869357010256,0 5.663503066505157,44.69064197293335,0 5.698549439020752,44.4476748153679,0 5.866201223824959,44.21309960936503,0 5.943592452106388,44.09950123767787,0 5.900146513394176,43.89359186484091,0 5.804193986262732,43.7813628710479,0 5.680586299953902,43.73952861068923,0 5.537365497015173,43.7249478073192,0 5.393889913859383,43.7146899066139,0 5.384419199700417,43.76455327747735,0 5.306230601830677,43.81187486174056,0 5.417345170307357,43.80066686591879,0 5.469602341977605,43.70537979850695,0 5.4323320542088,43.66171210498586,0 5.493673758918803,43.61437282804668,0 5.430581684046089,43.53190897159792,0 5.315704857602313,43.52681521915891,0 5.199903750963543,43.5296593283655,0 5.098628049132188,43.64238573599728,0 5.096197007665609,43.7470696149717,0 5.063359711664106,43.79579158495454,0 4.957894639132846,43.87865130565098,0 4.838884673347707,43.98176244627044,0 4.768223059522101,44.0577544903008,0 4.734554834599706,44.24407151119195,0 4.68033605048295,44.46261991091009,0 4.750970533381036,44.65344264126959,0 4.816274538939538,44.77314137167056,0 4.846648315313004,45.08326742525655,0 4.809278509729168,45.2319072822595,0 4.755683708261799,45.37375265116576,0 4.876406291834073,45.69179332392161,0 5.176425972700656,45.81283275157753,0 5.27140517823544,45.96227375696046,0 5.402031956239071,46.05048842516761,0 5.51176359066271,46.1043199442626,0 5.612573431790608,46.12015123443108,0 5.730664667080533,46.14096735755166,0 5.825487343272243,46.15307520362722,0 5.975006273771556,46.15881680477889,0 6.123449801180044,46.18045023636893,0 6.155504296298859,46.2398055967867,0 6.164395674653846,46.28581918919318,0 6.202552523661624,46.34535336533299,0 6.274966411019278,46.41352672388268,0 6.254548089266806,46.42541948609473,0 6.559437268288649,46.54317930657449,0 6.574850791109398,46.69296081400373,0 6.363282791359482,46.64468897575228,0 6.314936930014867,46.64308138225815,0 6.277375085704392,46.66270912916657,0 6.214445699862524,46.70282837190252,0 6.139380495036292,46.72016573017135,0 6.040848851072468,46.75003428405391,0 6.039135071255004,46.77484952556061,0 5.999014039856277,46.82739869433829,0 5.902684469733345,46.8199989770755,0 5.793228686388346,46.82447695034747,0 5.664724649234401,46.91547532200583,0 5.438748642627544,46.99853590426916,0 5.311824548484296,47.12680959148659,0 5.30394709609844,47.28891521513842,0 5.333099349256244,47.44855008526103,0 6.162855183652625,47.47481761765295,0 7.397378167512855,47.58886592725484,0 7.563620707775456,48.25624622107906,0 7.690047561023505,48.55407030044174,0 8.07409792770882,48.90538798566521,0 8.23456417810462,49.12662049728529,0 8.355720470079064,49.31409512678454,0 9.101126147189291,49.84293300018159,0 9.380716807338672,50.14070578070055,0 9.425556434451906,50.33051006707908,0 9.609121954002916,50.49848351494943,0 9.622020385777617,50.70801389205373,0 9.913013861670123,50.69103421793623,0 10.05865172384847,50.7157869650473,0 9.714667488378751,50.71640440970464,0 9.67502432861086,51.26143209634274,0 9.885887332019593,52.76041665981419,0 10.09376626574941,53.06335794909291,0 9.901979150062644,53.70980514509756,0 10.98663653956972,54.26780647620364,0 11.2827283158796,54.41709656330707,0 11.32456244158566,54.67948126971893,0 11.74288645148448,54.80216862435296,0 12.07752139709898,54.93412847155252,0 12.10462520439705,55.09626026002857,0 12.12293528052031,55.3279538004127,0 12.1768822137571,55.46871680002539,0 12.43222141319711,55.65074380472549,0 12.55385882591755,55.65695360363677,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>Coppet</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>6.192233633887761</longitude>
+					<latitude>46.31488362716988</latitude>
+					<altitude>0</altitude>
+					<heading>-0.001777420872751152</heading>
+					<tilt>1.302229240362042e-011</tilt>
+					<range>1966.813536703612</range>
+				</LookAt>
+				<styleUrl>#default0</styleUrl>
+				<Point>
+					<coordinates>6.192233633887761,46.31488362716988,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Jougne</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>6.384941208591621</longitude>
+					<latitude>46.73702053277178</latitude>
+					<altitude>0</altitude>
+					<heading>-0.0005727910478868259</heading>
+					<tilt>0</tilt>
+					<range>13011.16412491029</range>
+				</LookAt>
+				<styleUrl>#default0</styleUrl>
+				<Point>
+					<coordinates>6.388091556974928,46.76345955430778,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Frokost</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>8.741896926622575</longitude>
+					<latitude>46.67465411011091</latitude>
+					<altitude>0</altitude>
+					<heading>0.1724976385662937</heading>
+					<tilt>0</tilt>
+					<range>4710.478445377894</range>
+				</LookAt>
+				<styleUrl>#default0</styleUrl>
+				<Point>
+					<coordinates>8.740562918756851,46.67511520655522,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Monestier der Claremont</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>5.638618314254317</longitude>
+					<latitude>44.919558922133</latitude>
+					<altitude>0</altitude>
+					<heading>2.158096471142009</heading>
+					<tilt>2.25886674788935e-011</tilt>
+					<range>3362.937197506498</range>
+				</LookAt>
+				<styleUrl>#default_copy1+nicon=http://maps.google.com/mapfiles/kml/pal3/icon63.png+hicon=http://maps.google.com/mapfiles/kml/pal3/icon55.png</styleUrl>
+				<Point>
+					<coordinates>5.636971221569269,44.91884329171111,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+	</Folder>
+</Document>
+</kml>

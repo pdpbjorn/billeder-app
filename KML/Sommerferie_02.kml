@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Document>
+	<name>Sommerferie_02.kml</name>
+	<Style id="default_copy12+icon=http://maps.google.com/mapfiles/kml/pal3/icon63.png">
+		<IconStyle>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pal3/icon63.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<StyleMap id="default_copy12+nicon=http://maps.google.com/mapfiles/kml/pal3/icon63.png+hicon=http://maps.google.com/mapfiles/kml/pal3/icon55.png">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#default_copy12+icon=http://maps.google.com/mapfiles/kml/pal3/icon63.png</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#default_copy12+icon=http://maps.google.com/mapfiles/kml/pal3/icon55.png</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="default_copy12+icon=http://maps.google.com/mapfiles/kml/pal3/icon55.png">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pal3/icon55.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>1.1</scale>
+		</LabelStyle>
+	</Style>
+	<Folder>
+		<name>Sommerferie &apos;02</name>
+		<open>1</open>
+		<Folder>
+			<name>Juli</name>
+			<visibility>0</visibility>
+			<open>1</open>
+			<Placemark>
+				<name>Korsika</name>
+				<visibility>0</visibility>
+				<styleUrl>#default_copy12+nicon=http://maps.google.com/mapfiles/kml/pal3/icon63.png+hicon=http://maps.google.com/mapfiles/kml/pal3/icon55.png</styleUrl>
+				<Point>
+					<coordinates>9.2991577494263,42.56206894159687,668.4639234190119</coordinates>
+				</Point>
+				<View>
+							<longitude>9.295977631089173</longitude>
+							<latitude>42.55165183942828</latitude>
+							<range>29429.75246528744</range>
+							<tilt>60.6248359496455</tilt>
+							<heading>-167.3277209285989</heading>
+						</View>
+			</Placemark>
+		</Folder>
+	</Folder>
+</Document>
+</kml>

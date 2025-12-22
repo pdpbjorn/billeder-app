@@ -1,0 +1,3086 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Document>
+	<name>Sommerferie_20.kml</name>
+	<Style id="sh_campground">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/campground.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin4">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin0">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin11">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin10">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl3">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl014">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/lodging.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin101">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin02">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin10</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl231</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin_hl25">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>fc0055ff</color>
+			<width>1.2</width>
+		</LineStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin1">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin2</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin11</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin512">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin215</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin43</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ferry4">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ferry0</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ferry0</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin7">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin0</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin0</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_snack_bar11">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/snack_bar.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin004">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin101</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin018</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin_hl0">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/ferry.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_snack_bar1">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/snack_bar.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_dining01">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin1">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin1">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/campground.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin002">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin1170</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl02</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin_hl2">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/grocery.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_campground13">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_campground9</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_campground04</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ferry">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/ferry.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl240">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff0055ff</color>
+			<width>1.2</width>
+		</LineStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl231">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin04">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_cabs3">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin53">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin04</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin13</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin15">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_cabs">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin0">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin08</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin10</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_dining013">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin000">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin6</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl04</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin_hl02">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_campground1">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/campground.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_bars05">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/bars.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ferry0">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/ferry.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_bars11">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_bars05</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_bars3</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_coffee32">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/coffee.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_dining1">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ferry01">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/ferry.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin031">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin260</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl014</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin10">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ferry">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/ferry.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_coffee13">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/coffee.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin13">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin138</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin168</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_dining2">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_dining</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_dining1</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin13">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl1">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin0">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin2</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl4</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_cabs0">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin4</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl23</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ferry">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ferry3</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ferry1</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ferry0">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/ferry.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl060">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin2">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin260">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin18</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl240</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_coffee02">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_coffee32</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_coffee13</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin00">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/ferry.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl23">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin10">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin00">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin00</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl0</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ferry1">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/ferry.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_cabs">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin260">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/lodging.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin11">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin1</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl10</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="m_ylw-pushpin35">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin016</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl3</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin37">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ferry0">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ferry</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ferry</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin016">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin0">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin18">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff0055ff</color>
+			<width>1.2</width>
+		</LineStyle>
+	</Style>
+	<Style id="sn_campground9">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/campground.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_dining02">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_dining01</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_dining013</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ferry11">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/ferry.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin1170">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin018">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_cabs0">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin6">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin0">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/grocery.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_snack_bar2">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_snack_bar1</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_snack_bar</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_cabs4">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_cabs0</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_cabs</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin1</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin08">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin2">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin6</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin_hl39">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_campground1">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_campground</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_campground1</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ferry2">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ferry01</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ferry11</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="m_ylw-pushpin3">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin15</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl060</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_campground0">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_campground0</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_campground</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ferry3">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/ferry.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin3">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin2">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/campground.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_cabs2">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin168">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin215">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_cabs2">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_cabs16</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_cabs2</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin19">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>fc0055ff</color>
+			<width>1.2</width>
+		</LineStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin31">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_snack_bar11">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/snack_bar.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin1">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_campground04">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/campground.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_cabs1">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin6">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl10">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/campground.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_snack_bar6">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_snack_bar11</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_snack_bar11</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_campground">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/campground.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl04">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin00">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin01">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin0</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl2</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin138">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin15">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin10</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin00</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_bars3">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/bars.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_cabs16">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin10">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin3</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl1</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin43">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_cabs">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_cabs3</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_cabs0</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin01">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin31</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin023</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_campground0">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/campground.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin023">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_snack_bar">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/snack_bar.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_cabs18">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_cabs</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_cabs1</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="m_ylw-pushpin270">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin19</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl25</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="m_ylw-pushpin36">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin37</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl39</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_dining">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl4">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/campground.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Folder>
+		<name>Sommerferie &apos;20</name>
+		<open>1</open>
+		<Folder>
+			<name>4-6. juli - Ålbæk</name>
+			<open>1</open>
+			<Placemark>
+				<name>Rødspætten på DCU Ålbæk Camping</name>
+				<LookAt>
+					<gx:TimeStamp><when>2010-07-10T13:44:19Z</when>
+</gx:TimeStamp>
+					<longitude>10.41975667259929</longitude>
+					<latitude>57.5867146747425</latitude>
+					<altitude>0</altitude>
+					<heading>0.4616939358412612</heading>
+					<tilt>30.0017784733379</tilt>
+					<range>395.9552789593667</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_campground13</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>10.41978544569801,57.5862943329013,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Henter Rasmine hos Christian</name>
+				<LookAt>
+					<gx:TimeStamp><when>2010-07-10T13:44:19Z</when>
+</gx:TimeStamp>
+					<longitude>9.87208138674359</longitude>
+					<latitude>55.8655893645571</latitude>
+					<altitude>0</altitude>
+					<heading>0.0001336222904350807</heading>
+					<tilt>28.44657928380223</tilt>
+					<range>166.1482318160751</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin3</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>9.87208138674359,55.8655893645571,0</coordinates>
+				</Point>
+			</Placemark>
+			<Folder>
+				<name>5. juli</name>
+				<open>1</open>
+				<Placemark>
+					<name>Skagen Museum</name>
+					<LookAt>
+						<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+						<longitude>10.59721727011534</longitude>
+						<latitude>57.72162626357682</latitude>
+						<altitude>0</altitude>
+						<heading>0.4506190323949066</heading>
+						<tilt>33.44720591581876</tilt>
+						<range>2551.632093842288</range>
+						<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+					</LookAt>
+					<styleUrl>#m_ylw-pushpin02</styleUrl>
+					<Point>
+						<gx:drawOrder>1</gx:drawOrder>
+						<coordinates>10.59733951443786,57.72474632332573,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark>
+					<name>Bilparkering</name>
+					<LookAt>
+						<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+						<longitude>10.62253340580421</longitude>
+						<latitude>57.73893192511989</latitude>
+						<altitude>0</altitude>
+						<heading>0.4720241494872167</heading>
+						<tilt>33.44721422761683</tilt>
+						<range>2553.310003828336</range>
+						<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+					</LookAt>
+					<styleUrl>#msn_cabs18</styleUrl>
+					<Point>
+						<gx:drawOrder>1</gx:drawOrder>
+						<coordinates>10.63188463463455,57.73892073132185,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark>
+					<name>Grenen</name>
+					<LookAt>
+						<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+						<longitude>10.64613495289872</longitude>
+						<latitude>57.74498479899692</latitude>
+						<altitude>0</altitude>
+						<heading>0.4919831379689608</heading>
+						<tilt>33.44721638879698</tilt>
+						<range>2553.745103011861</range>
+						<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+					</LookAt>
+					<styleUrl>#m_ylw-pushpin35</styleUrl>
+					<Point>
+						<gx:drawOrder>1</gx:drawOrder>
+						<coordinates>10.65346361340317,57.74607484711162,0</coordinates>
+					</Point>
+				</Placemark>
+			</Folder>
+			<Folder>
+				<name>6. juli</name>
+				<open>1</open>
+				<Placemark>
+					<name>Tilsandede Kirke</name>
+					<LookAt>
+						<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+						<longitude>10.55056999977503</longitude>
+						<latitude>57.71364000023078</latitude>
+						<altitude>0</altitude>
+						<heading>-3.102615188994252e-010</heading>
+						<tilt>45.00000000023081</tilt>
+						<range>1000.000116584456</range>
+						<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+					</LookAt>
+					<styleUrl>#m_ylw-pushpin35</styleUrl>
+					<Point>
+						<gx:drawOrder>1</gx:drawOrder>
+						<coordinates>10.55073670983413,57.7136116439878,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark>
+					<name>Frokostpølser på Solnedgangspladsen</name>
+					<LookAt>
+						<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+						<longitude>10.52359627218392</longitude>
+						<latitude>57.72867910272579</latitude>
+						<altitude>0</altitude>
+						<heading>-0.01779945525859407</heading>
+						<tilt>31.22612185067267</tilt>
+						<range>474.0951704296861</range>
+						<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+					</LookAt>
+					<styleUrl>#msn_snack_bar6</styleUrl>
+					<Point>
+						<gx:drawOrder>1</gx:drawOrder>
+						<coordinates>10.52188122627913,57.72912643013997,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark>
+					<name>Råbjerg Mile</name>
+					<LookAt>
+						<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+						<longitude>10.41060649622044</longitude>
+						<latitude>57.64898603880859</latitude>
+						<altitude>0</altitude>
+						<heading>-0.1090319717592758</heading>
+						<tilt>24.22628714310154</tilt>
+						<range>1251.503863139216</range>
+						<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+					</LookAt>
+					<styleUrl>#msn_ylw-pushpin53</styleUrl>
+					<Point>
+						<gx:drawOrder>1</gx:drawOrder>
+						<coordinates>10.41060649622044,57.64898603880858,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark>
+					<name>Hirtshals Fyr og Bunkere</name>
+					<LookAt>
+						<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+						<longitude>9.942444260555426</longitude>
+						<latitude>57.58473019444585</latitude>
+						<altitude>0</altitude>
+						<heading>-0.02218465087344449</heading>
+						<tilt>43.43265528751784</tilt>
+						<range>1096.561465424116</range>
+						<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+					</LookAt>
+					<styleUrl>#msn_ylw-pushpin53</styleUrl>
+					<Point>
+						<gx:drawOrder>1</gx:drawOrder>
+						<coordinates>9.942444260555428,57.58473019444585,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark>
+					<name>Proviantering i Netto</name>
+					<LookAt>
+						<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+						<longitude>9.960925422395457</longitude>
+						<latitude>57.58999895827247</latitude>
+						<altitude>0</altitude>
+						<heading>-0.002287483062575733</heading>
+						<tilt>34.72944205556363</tilt>
+						<range>664.8338309375921</range>
+						<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+					</LookAt>
+					<styleUrl>#msn_ylw-pushpin53</styleUrl>
+					<Point>
+						<gx:drawOrder>1</gx:drawOrder>
+						<coordinates>9.960925422395457,57.58999895827247,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark>
+					<name>Aftensmad - grill på ombygget tankstation</name>
+					<LookAt>
+						<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+						<longitude>9.960881565980237</longitude>
+						<latitude>57.58680587193928</latitude>
+						<altitude>0</altitude>
+						<heading>-0.03834217468314182</heading>
+						<tilt>24.38400825417293</tilt>
+						<range>263.9307044248366</range>
+						<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+					</LookAt>
+					<styleUrl>#m_ylw-pushpin000</styleUrl>
+					<Point>
+						<gx:drawOrder>1</gx:drawOrder>
+						<coordinates>9.960679750320674,57.58696768580936,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark>
+					<name>Færgeafgang</name>
+					<LookAt>
+						<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+						<longitude>9.981362559059114</longitude>
+						<latitude>57.5943130903625</latitude>
+						<altitude>0</altitude>
+						<heading>-0.02105074124639521</heading>
+						<tilt>24.38851074267743</tilt>
+						<range>1478.014273226105</range>
+						<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+					</LookAt>
+					<styleUrl>#msn_ferry2</styleUrl>
+					<Point>
+						<gx:drawOrder>1</gx:drawOrder>
+						<coordinates>9.97912060686742,57.59483957916875,0</coordinates>
+					</Point>
+				</Placemark>
+			</Folder>
+		</Folder>
+		<Folder>
+			<name>7. juli - Fjordline færge -&gt; Bergen Camping Park</name>
+			<Placemark>
+				<name>Kort anløb i Stavanger</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>5.757293990953687</longitude>
+					<latitude>58.9776748704377</latitude>
+					<altitude>0</altitude>
+					<heading>-3.415291895102531</heading>
+					<tilt>4.289362108215735</tilt>
+					<range>5087.091022646127</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin10</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>5.737227645333578,58.97272874901125,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Stræde med gasskibe - Egil på dæk</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>5.365406749047958</longitude>
+					<latitude>59.3500051446483</latitude>
+					<altitude>0</altitude>
+					<heading>-3.750604553187419</heading>
+					<tilt>2.994411317781417</tilt>
+					<range>10479.31357536736</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin10</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>5.295534887052487,59.36735599378167,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Bergen Camping Park</name>
+				<address>Travparkvegen 65, 5111 Breistein, Norway</address>
+				<description>Campground from 2020-07-07T17:05:03.000Z to 2020-07-08T08:56:15.285Z. Distance 0m</description>
+				<TimeSpan>
+					<begin>2020-07-07T17:05:03Z</begin>
+					<end>2020-07-08T08:56:15.285Z</end>
+				</TimeSpan>
+				<styleUrl>#m_ylw-pushpin260</styleUrl>
+				<ExtendedData>
+					<Data name="Email">
+						<value>pdpbjorn@gmail.com</value>
+					</Data>
+					<Data name="Category">
+						<value>Campground</value>
+					</Data>
+					<Data name="Distance">
+						<value>0</value>
+					</Data>
+				</ExtendedData>
+				<Point>
+					<coordinates>5.3823324,60.48520249999999,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>8. - Bergen Camping Park -&gt; Lunde Camping, Aurlandsvangen</name>
+			<open>1</open>
+			<Placemark>
+				<name>Driving</name>
+				<description>Driving from 2020-07-08T08:56:15.285Z to 2020-07-08T09:25:18.000Z. Distance 18351m</description>
+				<TimeSpan>
+					<begin>2020-07-08T08:56:15.285Z</begin>
+					<end>2020-07-08T09:25:18Z</end>
+				</TimeSpan>
+				<styleUrl>#m_ylw-pushpin270</styleUrl>
+				<ExtendedData>
+					<Data name="Email">
+						<value>pdpbjorn@gmail.com</value>
+					</Data>
+					<Data name="Category">
+						<value>Driving</value>
+					</Data>
+					<Data name="Distance">
+						<value>18351</value>
+					</Data>
+				</ExtendedData>
+				<LineString>
+					<extrude>1</extrude>
+					<coordinates>
+						5.382044,60.4852715,0 5.382098399999999,60.4847704,0 5.382704499999999,60.48476780000001,0 5.383220399999999,60.48461250000001,0 5.383471599999998,60.48439150000002,0 5.384070099999999,60.48311990000001,0 5.384916399999999,60.48228930000001,0 5.385591299999999,60.48261990000001,0 5.388184199999999,60.48219739999999,0 5.385591299999999,60.48261990000001,0 5.384916399999999,60.48228930000001,0 5.384070099999999,60.48311990000001,0 5.383471599999998,60.48439150000002,0 5.383220399999999,60.48461250000001,0 5.382704499999999,60.48476780000001,0 5.382281399999999,60.4847885,0 5.381931078214707,60.48444930547101,0 5.3814208,60.48454320000001,0 5.3810352,60.48445330000001,0 5.3806585,60.48444620000001,0 5.379842399999999,60.48453750000001,0 5.3794195,60.4845324,0 5.3772038,60.4842707,0 5.375402299999999,60.48419470000001,0 5.3749553,60.48426430000001,0 5.3737407,60.48308050000001,0 5.3730038,60.48262860000001,0 5.368855200000001,60.48073150000001,0 5.356153400000001,60.4780157,0 5.352146100000001,60.4767898,0 5.351746100000001,60.4767283,0 5.350870800000001,60.4766946,0 5.3486333,60.47687140000001,0 5.3460973,60.47732820000001,0 5.342160000000001,60.4777535,0 5.340506,60.47776400000001,0 5.338480300000001,60.47755060000001,0 5.3371891,60.47726490000001,0 5.3354574,60.47662980000001,0 5.3343477,60.4759821,0 5.3309908,60.4724882,0 5.326920100000001,60.4691893,0 5.325857800000001,60.46761910000001,0 5.324795200000001,60.4648298,0 5.323917900000001,60.46384740000001,0 5.320408000000001,60.461454,0 5.319454800000001,60.46049660000001,0 5.318924800000001,60.45914970000001,0 5.318960200000001,60.45796080000002,0 5.319822200000002,60.45595130000002,0 5.323478900000002,60.45166290000002,0 5.323861000000002,60.45076780000002,0 5.324410400000002,60.44806260000001,0 5.326313700000002,60.44432930000003,0 5.326516700000003,60.44359830000001,0 5.326448600000002,60.44230100000002,0 5.324523100000002,60.43881210000003,0 5.323285000000003,60.43760430000003,0 5.322181800000003,60.43695270000003,0 5.321168100000002,60.43653650000002,0 5.315288900000002,60.43496250000003,0 5.314469900000002,60.43463650000002,0 5.313698400000003,60.43420090000002,0 5.303973500000002,60.42667360000002,0 5.303823000000001,60.42626730000002,0 5.304563700000002,60.42403330000003,0 5.305693500000001,60.42275420000001,0 5.314343600000002,60.41717230000001,0 5.321432400000002,60.41486790000001,0 5.325028800000002,60.41429850000001,0 5.327740500000002,60.4134249,0 5.329174300000002,60.4126309,0 5.329975200000002,60.41203140000001,0 5.330965900000002,60.4109346,0 5.342380600000002,60.39416310000001,0 5.342611400000002,60.3935618,0 5.342677000000002,60.3924585,0 5.342245900000002,60.391323,0 5.341710000000002,60.3906118,0 5.338735800000002,60.38835690000001,0 5.337609000000002,60.3866064,0 5.337049400000002,60.3861398,0 5.334883800000003,60.38482380000001,0 5.334708400000002,60.38464550000002,0 5.334699000000002,60.38430550000001,0 5.334976900000003,60.38407900000001,0 5.335350700000003,60.3839472,0 5.335758200000003,60.38389830000001,0 5.336130600000003,60.3839302,0 5.336390100000004,60.38400340000002,0 5.336650800000003,60.38420710000001,0 5.336667400000003,60.3844814,0 5.336391900000003,60.384759,0 5.335260700000004,60.38521909999999,0 5.335007600000004,60.38525879999999,0 5.334710400000003,60.3855565,0 5.333853300000003,60.38724559999999,0 5.331199500000003,60.38930749999999,0 5.330797500000003,60.38936799999999,0 5.330564000000003,60.38932379999999,0 5.329812600000003,60.38883629999999,0 5.324932200000003,60.38984519999998,0 5.324267900000003,60.39004340000001,0 5.327295100000003,60.39316289999999,0 5.325044400000004,60.39361769999999,0 5.325329000000004,60.39421529999998,0 5.324577100000004,60.39431059999998,0 5.322825200000003,60.39471569999998,0 5.321003200000003,60.39528789999998,0 5.320667600000004,60.39527409999998,0 5.320117100000003,60.39516119999998,0 5.319396100000003,60.39554119999998,0 5.317158200000003,60.39637499999998,0 5.316914500000003,60.39641099999998,0 5.316356300000003,60.39634549999996,0 5.313516200000002,60.39732679999998,0 
+					</coordinates>
+					<tesselate>1</tesselate>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>Sigurd Eriksens Eftf</name>
+				<address>Strandkaien 22, 5013 Bergen, Norway</address>
+				<description>Clothing store from 2020-07-08T09:25:18.000Z to 2020-07-08T10:27:36.000Z. Distance 0m</description>
+				<TimeSpan>
+					<begin>2020-07-08T09:25:18Z</begin>
+					<end>2020-07-08T10:27:36Z</end>
+				</TimeSpan>
+				<styleUrl>#m_ylw-pushpin260</styleUrl>
+				<ExtendedData>
+					<Data name="Email">
+						<value>pdpbjorn@gmail.com</value>
+					</Data>
+					<Data name="Category">
+						<value>Clothing store</value>
+					</Data>
+					<Data name="Distance">
+						<value>0</value>
+					</Data>
+				</ExtendedData>
+				<Point>
+					<coordinates>5.320971999999999,60.39511249999999,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Walking</name>
+				<description>Walking from 2020-07-08T10:27:36.000Z to 2020-07-08T10:32:10.000Z. Distance 560m</description>
+				<TimeSpan>
+					<begin>2020-07-08T10:27:36Z</begin>
+					<end>2020-07-08T10:32:10Z</end>
+				</TimeSpan>
+				<styleUrl>#m_ylw-pushpin260</styleUrl>
+				<ExtendedData>
+					<Data name="Email">
+						<value>pdpbjorn@gmail.com</value>
+					</Data>
+					<Data name="Category">
+						<value>Walking</value>
+					</Data>
+					<Data name="Distance">
+						<value>560</value>
+					</Data>
+				</ExtendedData>
+				<LineString>
+					<extrude>1</extrude>
+					<coordinates>
+						5.320971999999999,60.39511249999999,0 5.320971999999999,60.39511249999999,0 5.3206581,60.3943322,0 5.3205236,60.3941809,0 5.3202701,60.3939513,0 5.3202113,60.3939183,0 5.3201007,60.39382100000001,0 5.3201006,60.3938115,0 5.3200963,60.3938026,0 5.3193982,60.3931374,0 5.3193501,60.39313550000001,0 5.3193309,60.3931333,0 5.3190951,60.39301390000001,0 5.3189586,60.3928838,0 5.3186851,60.3927449,0 5.3185035,60.392657,0 5.3184906,60.3926526,0 5.3184566,60.3926434,0 5.3184446,60.3926282,0 5.3185427,60.3925792,0 5.3187876,60.3925208,0 5.3188064,60.3925162,0 5.3188235,60.39251090000001,0 5.3191343,60.392385,0 5.3192171,60.39234499999999,0 5.3194018,60.39224839999999,0 5.3222549,60.39294309999999,0 5.3222549,60.39294309999999,0 
+					</coordinates>
+					<tesselate>1</tesselate>
+				</LineString>
+			</Placemark>
+			<Document>
+				<name>Location history from 2020-07-08 to 2020-07-08</name>
+				<StyleMap id="m_ylw-pushpin36">
+					<Pair>
+						<key>normal</key>
+						<styleUrl>#s_ylw-pushpin37</styleUrl>
+					</Pair>
+					<Pair>
+						<key>highlight</key>
+						<styleUrl>#s_ylw-pushpin_hl39</styleUrl>
+					</Pair>
+				</StyleMap>
+				<StyleMap id="m_ylw-pushpin2600">
+					<Pair>
+						<key>normal</key>
+						<styleUrl>#s_ylw-pushpin180</styleUrl>
+					</Pair>
+					<Pair>
+						<key>highlight</key>
+						<styleUrl>#s_ylw-pushpin_hl2400</styleUrl>
+					</Pair>
+				</StyleMap>
+				<Style id="s_ylw-pushpin37">
+					<IconStyle>
+						<scale>1.1</scale>
+						<Icon>
+							<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+						</Icon>
+						<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+					</IconStyle>
+				</Style>
+				<Style id="s_ylw-pushpin_hl39">
+					<IconStyle>
+						<scale>1.3</scale>
+						<Icon>
+							<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+						</Icon>
+						<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+					</IconStyle>
+				</Style>
+				<Style id="s_ylw-pushpin180">
+					<IconStyle>
+						<scale>1.1</scale>
+						<Icon>
+							<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+						</Icon>
+						<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+					</IconStyle>
+					<LineStyle>
+						<color>ff0055ff</color>
+						<width>1.2</width>
+					</LineStyle>
+				</Style>
+				<Style id="s_ylw-pushpin_hl2400">
+					<IconStyle>
+						<scale>1.3</scale>
+						<Icon>
+							<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+						</Icon>
+						<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+					</IconStyle>
+					<LineStyle>
+						<color>ff0055ff</color>
+						<width>1.2</width>
+					</LineStyle>
+				</Style>
+				<Placemark>
+					<name>Outdoor Bergen</name>
+					<address>Markeveien 3, 5012 Bergen, Norway</address>
+					<description>Outdoor sports store from 2020-07-08T10:32:10.000Z to 2020-07-08T11:26:14.983Z. Distance 0m</description>
+					<TimeSpan>
+						<begin>2020-07-08T10:32:10Z</begin>
+						<end>2020-07-08T11:26:14.983Z</end>
+					</TimeSpan>
+					<styleUrl>#m_ylw-pushpin2600</styleUrl>
+					<ExtendedData>
+						<Data name="Email">
+							<value>pdpbjorn@gmail.com</value>
+						</Data>
+						<Data name="Category">
+							<value>Outdoor sports store</value>
+						</Data>
+						<Data name="Distance">
+							<value>0</value>
+						</Data>
+					</ExtendedData>
+					<Point>
+						<coordinates>5.3222549,60.39294309999999,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark>
+					<name>Walking</name>
+					<description>Walking from 2020-07-08T11:26:14.983Z to 2020-07-08T11:41:53.000Z. Distance 1503m</description>
+					<TimeSpan>
+						<begin>2020-07-08T11:26:14.983Z</begin>
+						<end>2020-07-08T11:41:53Z</end>
+					</TimeSpan>
+					<styleUrl>#m_ylw-pushpin2600</styleUrl>
+					<ExtendedData>
+						<Data name="Email">
+							<value>pdpbjorn@gmail.com</value>
+						</Data>
+						<Data name="Category">
+							<value>Walking</value>
+						</Data>
+						<Data name="Distance">
+							<value>1503</value>
+						</Data>
+					</ExtendedData>
+					<LineString>
+						<extrude>1</extrude>
+						<coordinates>
+							5.3222549,60.39294309999999,0 5.3222549,60.39294309999999,0 5.3211084,60.3940423,0 5.3208756,60.3941992,0 5.3207992,60.39431740000001,0 5.3202352,60.39458819999999,0 5.3203914,60.3947573,0 5.3203283,60.3948517,0 5.319945,60.39510460000001,0 5.3198018,60.3952621,0 5.3195854,60.39533159999999,0 5.3191635,60.39546780000001,0 5.3188131,60.39565960000001,0 5.3185322,60.3958573,0 5.3179785,60.3960895,0 5.3177204,60.396192,0 5.317712,60.39622200000001,0 5.3176187,60.3962759,0 5.3170821,60.396357,0 5.3167423,60.3963259,0 5.3159246,60.3963706,0 5.315708,60.39643390000001,0 5.3156251,60.3965032,0 5.3155925,60.3964353,0 5.3153877,60.39637900000001,0 5.3150012,60.3965732,0 5.3146328,60.3968681,0 5.313885,60.3970889,0 5.3134484,60.3972251,0 5.3130972,60.397309,0 5.3138037,60.39721130000001,0 5.3139333,60.3970107,0 5.3140841,60.3967749,0 5.3147092,60.39648319999999,0 5.3151881,60.3963429,0 5.3155741,60.3962351,0 5.3160209,60.3961513,0 5.3164267,60.3960574,0 5.3166304,60.3959207,0 5.3170934,60.3958643,0 5.3172926,60.3957323,0 5.3177618,60.3956186,0 5.3181135,60.3954651,0 5.3183158,60.3953357,0 5.3186654,60.3951663,0 5.3190458,60.3950263,0 5.3196317,60.3947186,0 5.3199421,60.3946251,0 5.3202587,60.3945221,0 5.3206192,60.39419940000001,0 5.3208522,60.39405260000001,0 5.3210514,60.3939478,0 5.3213267,60.3938148,0 5.3222549,60.39294309999999,0 5.3222549,60.39294309999999,0 
+						</coordinates>
+						<tesselate>1</tesselate>
+					</LineString>
+				</Placemark>
+				<Placemark>
+					<name>Outdoor Bergen</name>
+					<address>Markeveien 3, 5012 Bergen, Norway</address>
+					<description>Outdoor sports store from 2020-07-08T11:41:53.000Z to 2020-07-08T12:14:25.850Z. Distance 0m</description>
+					<TimeSpan>
+						<begin>2020-07-08T11:41:53Z</begin>
+						<end>2020-07-08T12:14:25.85Z</end>
+					</TimeSpan>
+					<styleUrl>#m_ylw-pushpin2600</styleUrl>
+					<ExtendedData>
+						<Data name="Email">
+							<value>pdpbjorn@gmail.com</value>
+						</Data>
+						<Data name="Category">
+							<value>Outdoor sports store</value>
+						</Data>
+						<Data name="Distance">
+							<value>0</value>
+						</Data>
+					</ExtendedData>
+					<Point>
+						<coordinates>5.3222549,60.39294309999999,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark>
+					<name>Walking</name>
+					<description>Walking from 2020-07-08T12:14:25.850Z to 2020-07-08T12:16:48.867Z. Distance 358m</description>
+					<TimeSpan>
+						<begin>2020-07-08T12:14:25.85Z</begin>
+						<end>2020-07-08T12:16:48.867Z</end>
+					</TimeSpan>
+					<styleUrl>#m_ylw-pushpin2600</styleUrl>
+					<ExtendedData>
+						<Data name="Email">
+							<value>pdpbjorn@gmail.com</value>
+						</Data>
+						<Data name="Category">
+							<value>Walking</value>
+						</Data>
+						<Data name="Distance">
+							<value>358</value>
+						</Data>
+					</ExtendedData>
+					<LineString>
+						<extrude>1</extrude>
+						<coordinates>
+							5.3222549,60.39294309999999,0 5.3222549,60.39294309999999,0 5.3243222,60.39284739999999,0 5.3252785,60.39419760000001,0 5.3239167,60.39456260000001,0 5.3239167,60.39456260000001,0 
+						</coordinates>
+						<tesselate>1</tesselate>
+					</LineString>
+				</Placemark>
+				<Placemark>
+					<name>Fishmarket in Bergen</name>
+					<address>Torget 5, 5014 Bergen, Norway</address>
+					<description>Seafood from 2020-07-08T12:16:48.867Z to 2020-07-08T12:22:51.925Z. Distance 0m</description>
+					<TimeSpan>
+						<begin>2020-07-08T12:16:48.867Z</begin>
+						<end>2020-07-08T12:22:51.925Z</end>
+					</TimeSpan>
+					<styleUrl>#m_ylw-pushpin2600</styleUrl>
+					<ExtendedData>
+						<Data name="Email">
+							<value>pdpbjorn@gmail.com</value>
+						</Data>
+						<Data name="Category">
+							<value>Seafood</value>
+						</Data>
+						<Data name="Distance">
+							<value>0</value>
+						</Data>
+					</ExtendedData>
+					<Point>
+						<coordinates>5.3239167,60.3945626,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark>
+					<name>Walking</name>
+					<description>Walking from 2020-07-08T12:22:51.925Z to 2020-07-08T12:26:53.051Z. Distance 451m</description>
+					<TimeSpan>
+						<begin>2020-07-08T12:22:51.925Z</begin>
+						<end>2020-07-08T12:26:53.051Z</end>
+					</TimeSpan>
+					<styleUrl>#m_ylw-pushpin2600</styleUrl>
+					<ExtendedData>
+						<Data name="Email">
+							<value>pdpbjorn@gmail.com</value>
+						</Data>
+						<Data name="Category">
+							<value>Walking</value>
+						</Data>
+						<Data name="Distance">
+							<value>451</value>
+						</Data>
+					</ExtendedData>
+					<LineString>
+						<extrude>1</extrude>
+						<coordinates>
+							5.3239167,60.39456260000001,0 5.3239167,60.39456260000001,0 5.3248985,60.3944144,0 5.3259628,60.3955031,0 5.3240498,60.3968652,0 5.324197283951532,60.39754533759345,0 5.324197283951532,60.39754533759345,0 
+						</coordinates>
+						<tesselate>1</tesselate>
+					</LineString>
+				</Placemark>
+				<Placemark>
+					<name>Bryggen</name>
+					<address>5003 Bergen, Norway</address>
+					<description>Historical place from 2020-07-08T12:26:53.051Z to 2020-07-08T12:50:56.791Z. Distance 0m</description>
+					<TimeSpan>
+						<begin>2020-07-08T12:26:53.051Z</begin>
+						<end>2020-07-08T12:50:56.791Z</end>
+					</TimeSpan>
+					<styleUrl>#m_ylw-pushpin2600</styleUrl>
+					<ExtendedData>
+						<Data name="Email">
+							<value>pdpbjorn@gmail.com</value>
+						</Data>
+						<Data name="Category">
+							<value>Historical place</value>
+						</Data>
+						<Data name="Distance">
+							<value>0</value>
+						</Data>
+					</ExtendedData>
+					<Point>
+						<coordinates>5.3245493,60.3975672,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark>
+					<name>Walking</name>
+					<description>Walking from 2020-07-08T12:50:56.791Z to 2020-07-08T13:05:04.899Z. Distance 1010m</description>
+					<TimeSpan>
+						<begin>2020-07-08T12:50:56.791Z</begin>
+						<end>2020-07-08T13:05:04.899Z</end>
+					</TimeSpan>
+					<styleUrl>#m_ylw-pushpin2600</styleUrl>
+					<ExtendedData>
+						<Data name="Email">
+							<value>pdpbjorn@gmail.com</value>
+						</Data>
+						<Data name="Category">
+							<value>Walking</value>
+						</Data>
+						<Data name="Distance">
+							<value>1010</value>
+						</Data>
+					</ExtendedData>
+					<LineString>
+						<extrude>1</extrude>
+						<coordinates>
+							5.324197283951532,60.39754533759345,0 5.324197283951532,60.39754533759345,0 5.3230835,60.3970557,0 5.3248469,60.39546479999999,0 5.3244841,60.3952319,0 5.3227648,60.3947707,0 5.3207376,60.3952906,0 5.3190684,60.3955731,0 5.3168562,60.3964386,0 5.314578,60.396923,0 5.313436988053717,60.39726671992339,0 5.313436988053717,60.39726671992339,0 
+						</coordinates>
+						<tesselate>1</tesselate>
+					</LineString>
+				</Placemark>
+				<Placemark>
+					<name>Strandsiden</name>
+					<address>Bergen, Norway</address>
+					<description>from 2020-07-08T13:05:04.899Z to 2020-07-08T13:09:50.000Z. Distance 0m</description>
+					<TimeSpan>
+						<begin>2020-07-08T13:05:04.899Z</begin>
+						<end>2020-07-08T13:09:50Z</end>
+					</TimeSpan>
+					<styleUrl>#m_ylw-pushpin2600</styleUrl>
+					<ExtendedData>
+						<Data name="Email">
+							<value>pdpbjorn@gmail.com</value>
+						</Data>
+						<Data name="Category">
+						</Data>
+						<Data name="Distance">
+							<value>0</value>
+						</Data>
+					</ExtendedData>
+					<Point>
+						<coordinates>5.3160609,60.3970464,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark>
+					<name>Driving</name>
+					<description>Driving from 2020-07-08T13:09:50.000Z to 2020-07-08T13:33:43.000Z. Distance 18116m</description>
+					<TimeSpan>
+						<begin>2020-07-08T13:09:50Z</begin>
+						<end>2020-07-08T13:33:43Z</end>
+					</TimeSpan>
+					<styleUrl>#m_ylw-pushpin2600</styleUrl>
+					<ExtendedData>
+						<Data name="Email">
+							<value>pdpbjorn@gmail.com</value>
+						</Data>
+						<Data name="Category">
+							<value>Driving</value>
+						</Data>
+						<Data name="Distance">
+							<value>18116</value>
+						</Data>
+					</ExtendedData>
+					<LineString>
+						<extrude>1</extrude>
+						<coordinates>
+							5.3125931,60.39762750000001,0 5.310567,60.3987069,0 5.3100462,60.398508,0 5.309868,60.39861610000001,0 5.3103635,60.39882680000001,0 5.3121204,60.39780950000001,0 5.3163563,60.39634550000001,0 5.3169145,60.39641100000003,0 5.317158200000001,60.39637500000001,0 5.319396100000001,60.39554120000002,0 5.320365300000001,60.39498470000002,0 5.319988400000001,60.39461230000002,0 5.3205598,60.39428860000002,0 5.3175733,60.39183730000001,0 5.3160999,60.39221360000003,0 5.3152525,60.39230430000001,0 5.313078500000001,60.39023240000003,0 5.3131448,60.38994850000001,0 5.315926,60.3871692,0 5.316887599999999,60.3864862,0 5.3170521,60.3862281,0 5.3170109,60.38616700000001,0 5.3170647,60.3860808,0 5.3176542,60.3860297,0 5.319168199999999,60.38552910000001,0 5.319807999999999,60.3854601,0 5.3201559,60.38552729999999,0 5.3209483,60.38588809999999,0 5.321616699999999,60.38599039999999,0 5.322140199999999,60.38594830000001,0 5.324037199999999,60.38552910000001,0 5.329026,60.38373419999999,0 5.3304335,60.3834558,0 5.332586099999999,60.38331600000001,0 5.3348387,60.3833497,0 5.3353475,60.38326130000001,0 5.3362058,60.3829271,0 5.336549400000001,60.38287180000001,0 5.337024200000001,60.38289120000001,0 5.337689700000001,60.38310370000001,0 5.337920100000001,60.38335390000001,0 5.337869800000002,60.38371750000002,0 5.337577300000002,60.38395020000001,0 5.336622100000002,60.3843642,0 5.336308200000002,60.3846071,0 5.336163200000002,60.38522900000002,0 5.338065300000002,60.3868832,0 5.339121900000002,60.38842230000001,0 5.340944200000003,60.38965070000001,0 5.342218300000003,60.39083250000001,0 5.342935000000002,60.3920378,0 5.342971900000001,60.39361340000001,0 5.331408100000002,60.41114040000002,0 5.329975300000001,60.41265110000003,0 5.327377900000001,60.41436260000002,0 5.324475400000001,60.41559760000001,0 5.322762200000001,60.41608140000002,0 5.313242300000001,60.41803270000001,0 5.312554100000001,60.41835160000002,0 5.305702000000001,60.42293000000002,0 5.304905700000001,60.42377090000001,0 5.3040575,60.42588420000001,0 5.3042201,60.42667230000001,0 5.304565200000001,60.42702850000001,0 5.3059253,60.42780880000002,0 5.3145322,60.43440570000001,0 5.3164021,60.43514980000003,0 5.3217179,60.43660150000002,0 5.323189200000001,60.43734490000002,0 5.323945200000001,60.43790280000001,0 5.3258377,60.44030200000002,0 5.326801100000001,60.44279480000002,0 5.326616400000001,60.44415420000001,0 5.3240302,60.45136270000002,0 5.320155400000001,60.45581870000002,0 5.319430000000001,60.45708710000002,0 5.3190977,60.45880850000003,0 5.319402200000001,60.46005020000002,0 5.320295400000001,60.46113150000003,0 5.323701600000001,60.46346970000003,0 5.3249535,60.46472380000002,0 5.3263418,60.46810320000002,0 5.3274152,60.46944800000002,0 5.3313921,60.47264540000001,0 5.3341646,60.47563400000002,0 5.3353782,60.47644080000002,0 5.3366664,60.47697710000002,0 5.3392597,60.47754850000003,0 5.3412436,60.47766450000002,0 5.343378100000001,60.47753840000001,0 5.348853300000001,60.47676050000002,0 5.351433800000001,60.47664260000002,0 5.352355800000001,60.47676550000003,0 5.368942300000001,60.48061720000002,0 5.373123800000001,60.48256860000001,0 5.375098800000001,60.48422800000002,0 5.375402300000001,60.48419470000003,0 5.379842400000001,60.48453750000002,0 5.381035200000001,60.48445330000001,0 5.382020400000001,60.48475380000003,0 
+						</coordinates>
+						<tesselate>1</tesselate>
+					</LineString>
+				</Placemark>
+				<Placemark>
+					<name>Bergen Camping Park</name>
+					<address>Travparkvegen 65, 5111 Breistein, Norway</address>
+					<description>Campground from 2020-07-08T13:33:43.000Z to 2020-07-08T14:49:17.372Z. Distance 0m</description>
+					<TimeSpan>
+						<begin>2020-07-08T13:33:43Z</begin>
+						<end>2020-07-08T14:49:17.372Z</end>
+					</TimeSpan>
+					<styleUrl>#m_ylw-pushpin2600</styleUrl>
+					<ExtendedData>
+						<Data name="Email">
+							<value>pdpbjorn@gmail.com</value>
+						</Data>
+						<Data name="Category">
+							<value>Campground</value>
+						</Data>
+						<Data name="Distance">
+							<value>0</value>
+						</Data>
+					</ExtendedData>
+					<Point>
+						<coordinates>5.3823324,60.48520249999999,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark>
+					<name>Driving</name>
+					<description>Driving from 2020-07-08T14:49:17.372Z to 2020-07-08T17:22:11.318Z. Distance 142509m</description>
+					<TimeSpan>
+						<begin>2020-07-08T14:49:17.372Z</begin>
+						<end>2020-07-08T17:22:11.318Z</end>
+					</TimeSpan>
+					<styleUrl>#m_ylw-pushpin2600</styleUrl>
+					<ExtendedData>
+						<Data name="Email">
+							<value>pdpbjorn@gmail.com</value>
+						</Data>
+						<Data name="Category">
+							<value>Driving</value>
+						</Data>
+						<Data name="Distance">
+							<value>142509</value>
+						</Data>
+					</ExtendedData>
+					<LineString>
+						<extrude>1</extrude>
+						<coordinates>
+							5.380939,60.4846485,0 5.381255499999999,60.4844982,0 5.3810352,60.4844533,0 5.379842399999999,60.4845375,0 5.375402299999999,60.48419469999999,0 5.3749553,60.48426429999999,0 5.3737407,60.48308049999999,0 5.3688552,60.4807315,0 5.3537432,60.4773342,0 5.3523457,60.476517,0 5.3524248,60.4762946,0 5.352656499999999,60.47619529999999,0 5.3530604,60.47618090000001,0 5.354772,60.4756143,0 5.3574647,60.4741337,0 5.363709999999998,60.472392,0 5.366367699999999,60.4713074,0 5.376112099999999,60.4660243,0 5.378557799999999,60.46381169999999,0 5.383761799999999,60.4603846,0 5.3858412,60.45944749999999,0 5.388892299999999,60.458897,0 5.3926294,60.45881210000001,0 5.4027488,60.4601567,0 5.408116,60.4602736,0 5.4140169,60.45985049999998,0 5.4193555,60.46015959999998,0 5.423094300000001,60.45984279999998,0 5.427608100000001,60.4598137,0 5.430624900000001,60.45917369999999,0 5.434585700000001,60.45702319999998,0 5.436748800000001,60.45645589999999,0 5.440450800000002,60.45587129999998,0 5.442818400000001,60.45472349999997,0 5.443600500000001,60.45383169999999,0 5.444334100000002,60.45169709999998,0 5.449364400000001,60.44500709999997,0 5.451308100000001,60.44106789999998,0 5.451615000000001,60.43343849999998,0 5.452261900000002,60.43186699999997,0 5.454562900000002,60.42878539999998,0 5.455427700000001,60.42657259999997,0 5.459870600000001,60.42233659999997,0 5.459994400000001,60.42191269999999,0 5.464358800000001,60.41689069999998,0 5.464650200000001,60.41690459999998,0 5.466068800000001,60.41748049999998,0 5.467374400000002,60.41770439999998,0 5.468910900000001,60.41773989999998,0 5.473457700000002,60.41715349999997,0 5.476486800000001,60.41735719999997,0 5.499485000000002,60.42341699999997,0 5.501562700000002,60.42371339999998,0 5.504827000000002,60.42368299999999,0 5.515270100000002,60.42223729999997,0 5.520964100000001,60.42020849999997,0 5.522639800000002,60.41995259999999,0 5.524666000000003,60.41990099999998,0 5.526397700000002,60.42005549999999,0 5.535777900000002,60.42191699999998,0 5.539315000000002,60.42216069999998,0 5.555013500000002,60.42206769999999,0 5.560151900000002,60.42264679999998,0 5.569968500000002,60.42547079999998,0 5.572596000000002,60.42689179999996,0 5.575019200000003,60.42758129999998,0 5.581752100000003,60.42823949999998,0 5.584618300000003,60.42822259999998,0 5.586726800000003,60.42798309999997,0 5.595365400000003,60.42613129999996,0 5.597490100000003,60.42591999999996,0 5.606759800000003,60.42662219999997,0 5.617750100000003,60.42633919999997,0 5.620946300000004,60.42664399999997,0 5.622495500000004,60.42650539999997,0 5.624067400000004,60.42580509999997,0 5.625878300000004,60.42419879999997,0 5.629758500000004,60.42365799999997,0 5.631586700000003,60.42371869999997,0 5.634100600000003,60.42424319999998,0 5.635477300000003,60.42484229999997,0 5.636731200000003,60.42582179999998,0 5.637668200000004,60.42816629999997,0 5.637031400000004,60.43290139999998,0 5.634533800000003,60.43801849999998,0 5.634513800000004,60.43986889999999,0 5.635477200000003,60.44182379999999,0 5.636236500000004,60.44263689999998,0 5.637258200000004,60.44324929999996,0 5.676505900000005,60.45639899999998,0 5.678720000000005,60.45650629999997,0 5.680371400000005,60.45627979999997,0 5.688295200000005,60.45350259999998,0 5.692391300000004,60.45264389999997,0 5.695976200000003,60.45242299999997,0 5.705305300000005,60.45277709999996,0 5.708733500000004,60.45395059999996,0 5.710026800000004,60.45408639999996,0 5.716490900000004,60.45372249999996,0 5.720368200000004,60.45271369999995,0 5.720955600000004,60.45270069999995,0 5.722793600000004,60.45303539999995,0 5.725784900000004,60.45403069999995,0 5.730945900000004,60.45500429999995,0 5.735209900000005,60.45629249999996,0 5.737616100000004,60.45752129999995,0 5.745467400000004,60.46423959999996,0 5.747258400000004,60.46697099999996,0 5.747651000000005,60.46912379999997,0 5.744314500000004,60.47741219999997,0 5.745037600000003,60.48033979999998,0 5.744557000000004,60.48112579999998,0 5.734836800000004,60.48644409999996,0 5.734288300000004,60.48719509999997,0 5.734106800000004,60.48986709999998,0 5.734906500000006,60.49096379999999,0 5.734402100000004,60.49345879999999,0 5.732780500000005,60.49520040000001,0 5.732088100000004,60.50014969999999,0 5.731646500000005,60.5008376,0 5.729480700000004,60.50181629999999,0 5.727999400000003,60.50326299999999,0 5.727719300000004,60.50497089999999,0 5.726520700000004,60.50618469999999,0 5.726414100000004,60.50746409999998,0 5.725288900000005,60.50851579999999,0 5.725051000000004,60.5093046,0 5.726246300000004,60.51114419999998,0 5.726941500000004,60.51751819999998,0 5.725314000000004,60.52258759999997,0 5.725803200000005,60.52397529999999,0 5.723828500000002,60.53325459999997,0 5.722502800000004,60.53432119999997,0 5.720647500000004,60.53779039999998,0 5.720631400000005,60.53847159999999,0 5.722376100000004,60.54242769999998,0 5.723318500000004,60.54308839999999,0 5.726279600000003,60.54406739999998,0 5.728086300000003,60.54542669999999,0 5.734138200000004,60.54883579999999,0 5.737126700000004,60.55007830000001,0 5.750342300000003,60.55718109999999,0 5.755848200000003,60.55921869999999,0 5.764930300000002,60.5657671,0 5.773202000000004,60.5744866,0 5.774681600000003,60.57809300000001,0 5.775642200000003,60.5788598,0 5.777141500000003,60.5795864,0 5.778648900000003,60.57999619999998,0 5.787166300000003,60.5809531,0 5.795413100000003,60.58286469999999,0 5.804706400000003,60.58380439999998,0 5.808193100000003,60.58454649999999,0 5.816560300000004,60.58718009999999,0 5.817910800000004,60.58813939999999,0 5.818264400000003,60.58941579999998,0 5.817844800000002,60.5904879,0 5.816939400000003,60.591539,0 5.816718300000003,60.59244559999998,0 5.817000500000003,60.59317149999998,0 5.819307300000004,60.59506629999999,0 5.822243300000004,60.59855019999999,0 5.824370100000004,60.60022429999999,0 5.828488900000004,60.60579609999999,0 5.828367900000004,60.60810029999998,0 5.828726900000004,60.60895089999998,0 5.831226500000004,60.61131659999998,0 5.833163500000004,60.61224569999997,0 5.835552600000004,60.61264349999998,0 5.841396800000005,60.61274639999998,0 5.845042800000004,60.61317739999998,0 5.849070900000006,60.61415469999999,0 5.863951600000005,60.61988849999999,0 5.871122400000004,60.62159749999999,0 5.876280200000003,60.62169419999998,0 5.877491400000004,60.62196359999999,0 5.878386300000004,60.62234199999998,0 5.879915200000004,60.62415669999999,0 5.881624500000005,60.62519079999998,0 5.886781000000003,60.62646989999998,0 5.891365600000005,60.62707559999999,0 5.894854300000004,60.62720289999998,0 5.898272900000004,60.62643559999998,0 5.899437500000003,60.62639069999998,0 5.908281200000003,60.62747189999998,0 5.909627700000003,60.62742699999998,0 5.912830100000003,60.62692589999998,0 5.913845200000003,60.62690329999998,0 5.915184700000003,60.62707109999997,0 5.916879600000003,60.62772849999998,0 5.918967300000002,60.62991629999998,0 5.928982100000003,60.63384539999997,0 5.930301600000003,60.63410799999998,0 5.935607100000003,60.63435349999999,0 5.951896100000003,60.63770189999998,0 5.954971100000003,60.63746069999997,0 5.960632900000004,60.63756939999999,0 5.964930000000004,60.63642509999999,0 5.966461100000002,60.63641669999999,0 5.969422400000003,60.6370973,0 5.971371800000003,60.637962,0 5.972973700000004,60.63924610000001,0 5.974352800000002,60.6432591,0 5.975681900000001,60.6446218,0 5.976545300000002,60.64504480000001,0 5.978576000000001,60.64536550000001,0 5.986001300000002,60.64491930000001,0 5.989337500000001,60.64440280000002,0 5.990233000000002,60.64439010000001,0 5.991889600000002,60.64467610000001,0 5.994544600000001,60.64580690000003,0 5.998330500000002,60.64623630000001,0 6.001905400000002,60.6462431,0 6.006738100000002,60.64694480000001,0 6.011079700000002,60.6471681,0 6.012797400000002,60.64696890000001,0 6.013940500000002,60.6466108,0 6.015035300000001,60.64591870000001,0 6.016703300000001,60.64415340000002,0 6.017958900000001,60.64358450000001,0 6.021745800000001,60.64312820000001,0 6.024369900000001,60.64188240000001,0 6.026577500000001,60.64135900000001,0 6.028301100000002,60.64120560000001,0 6.029248000000001,60.64127070000001,0 6.032782800000001,60.64222270000002,0 6.0345567,60.64236660000001,0 6.035858700000001,60.64227030000001,0 6.039151200000001,60.64132950000001,0 6.048390500000001,60.6403937,0 6.049405100000001,60.6404656,0 6.050826000000001,60.6408349,0 6.051852200000001,60.64130970000001,0 6.0556856,60.64446250000001,0 6.0567792,60.64485840000001,0 6.0594051,60.64519840000001,0 6.0642455,60.64669350000001,0 6.066872,60.64723990000002,0 6.069528900000001,60.64737950000001,0 6.077163800000001,60.64625100000001,0 6.0831377,60.64639220000002,0 6.087161900000001,60.64606220000003,0 6.0989066,60.64632690000003,0 6.1006736,60.64652170000002,0 6.106891999999999,60.64783290000003,0 6.108287,60.64787640000002,0 6.1121493,60.64716310000002,0 6.116723099999999,60.64678470000002,0 6.120462399999999,60.64695390000003,0 6.123551799999999,60.64757530000003,0 6.125000099999999,60.64760880000003,0 6.1319,60.64637590000003,0 6.1347929,60.64616110000003,0 6.1359086,60.64629160000002,0 6.138194,60.64703650000002,0 6.1398763,60.64732490000002,0 6.146335099999999,60.64716790000002,0 6.149123899999999,60.64641330000001,0 6.157726700000001,60.64277470000002,0 6.1597031,60.64228770000001,0 6.160290999999999,60.64202120000001,0 6.161416899999999,60.64081170000002,0 6.162282399999999,60.64035500000002,0 6.1715148,60.63765470000003,0 6.172585199999999,60.63751060000003,0 6.174725299999999,60.63760680000004,0 6.180306599999999,60.63863260000004,0 6.181432999999999,60.63853470000004,0 6.1842645,60.63784480000006,0 6.1916086,60.63740530000005,0 6.192493100000001,60.63757150000006,0 6.1948555,60.63869790000006,0 6.1959215,60.63887430000006,0 6.197014400000001,60.63886620000006,0 6.200432599999999,60.63820040000007,0 6.2033638,60.63808550000006,0 6.2052292,60.63768850000005,0 6.206327900000001,60.63718080000005,0 6.2070436,60.63653610000005,0 6.2076957,60.63514210000006,0 6.208988299999999,60.63426750000006,0 6.210321199999999,60.63391810000005,0 6.219403699999998,60.63288480000007,0 6.223749999999999,60.63314360000006,0 6.2267328,60.63366200000006,0 6.2350859,60.63660430000006,0 6.2368312,60.63690550000005,0 6.239285600000001,60.63683500000006,0 6.243004000000001,60.63624280000007,0 6.244743,60.63569200000007,0 6.246709800000001,60.63466340000007,0 6.2485844,60.63265730000006,0 6.249408599999999,60.63221550000007,0 6.250960399999999,60.63189190000006,0 6.261187399999999,60.63254000000006,0 6.268453,60.63203790000007,0 6.274960599999999,60.63116180000007,0 6.279283499999998,60.63125400000007,0 6.281478999999999,60.63105070000006,0 6.292290999999999,60.62890530000007,0 6.294452399999999,60.62767050000007,0 6.295201399999999,60.62741720000007,0 6.296779699999998,60.62717060000006,0 6.314812099999998,60.62672160000007,0 6.318339199999999,60.62592510000008,0 6.325013799999999,60.62318860000007,0 6.338132899999999,60.61914220000007,0 6.3459821,60.61573770000007,0 6.350623499999999,60.61483790000007,0 6.353228999999998,60.61369720000007,0 6.354110899999999,60.61349030000007,0 6.3562177,60.61343790000008,0 6.357310899999999,60.61360970000008,0 6.359121199999999,60.61416780000007,0 6.362456199999999,60.61467720000006,0 6.372897699999998,60.61814000000006,0 6.377379599999999,60.62026240000006,0 6.380785499999998,60.62143980000005,0 6.383187999999999,60.62259220000005,0 6.387878799999999,60.62350550000006,0 6.392413099999999,60.62511380000007,0 6.399628899999999,60.62674430000006,0 6.400237499999999,60.62701370000006,0 6.400488599999999,60.62694860000006,0 6.400822199999999,60.62700170000007,0 6.400934099999998,60.62709220000007,0 6.400802099999998,60.62730090000007,0 6.400521199999999,60.62734660000008,0 6.402609699999999,60.62929030000007,0 6.404143999999998,60.63023480000006,0 6.419951899999998,60.63650170000006,0 6.429564999999998,60.64142550000006,0 6.431634799999999,60.64199550000005,0 6.435383099999999,60.64213380000007,0 6.435537299999997,60.64204280000006,0 6.435839299999998,60.64201600000006,0 6.436107499999999,60.64211510000007,0 6.436052799999998,60.64233910000006,0 6.4358251,60.64240140000005,0 6.435213799999999,60.64868790000005,0 6.436140099999999,60.65173130000005,0 6.436398399999999,60.65177480000004,0 6.436529399999999,60.65193740000005,0 6.435510699999999,60.65559080000004,0 6.435690199999997,60.65567250000005,0 6.435725699999997,60.65578040000004,0 6.435604099999996,60.65588420000004,0 6.435353799999996,60.65592730000004,0 6.435891799999998,60.65916540000004,0 6.436133099999999,60.65921260000004,0 6.436198699999998,60.65931240000005,0 6.436086999999998,60.65941070000006,0 6.435937899999997,60.65943740000004,0 6.436510099999998,60.66221350000005,0 6.436940599999998,60.66272290000004,0 6.444909299999997,60.66751370000005,0 6.449199999999997,60.66920520000004,0 6.449619399999997,60.66956710000003,0 6.450024999999997,60.67063540000004,0 6.452894699999996,60.67279410000003,0 6.453349199999996,60.67351760000003,0 6.453273599999998,60.67388820000003,0 6.452232299999997,60.67484160000003,0 6.452174099999996,60.67508160000002,0 6.452978799999997,60.67638880000003,0 6.456244799999997,60.67870570000002,0 6.457316699999997,60.67999300000002,0 6.460649599999997,60.68255160000003,0 6.461479999999995,60.68364040000002,0 6.461827899999997,60.68662650000001,0 6.468161799999996,60.69159980000003,0 6.470056199999995,60.69261430000003,0 6.473795499999996,60.69601860000003,0 6.473879699999996,60.69770100000003,0 6.480734699999997,60.70578100000004,0 6.485127999999997,60.70879120000004,0 6.485607999999997,60.70962890000004,0 6.485206899999996,60.71191070000003,0 6.486613999999996,60.71618110000005,0 6.491486399999996,60.72184380000002,0 6.491878199999996,60.72294500000003,0 6.491733299999996,60.72378350000004,0 6.490078999999995,60.72637270000003,0 6.490698399999997,60.72881120000003,0 6.490304499999996,60.73211720000003,0 6.490745599999997,60.73424060000004,0 6.489488899999996,60.73619640000003,0 6.489416099999995,60.73715790000004,0 6.490312499999996,60.73906410000004,0 6.489996899999996,60.74245630000004,0 6.490259899999996,60.74299420000004,0 6.494200799999996,60.74600590000004,0 6.499501699999995,60.74875060000002,0 6.500762399999996,60.75001350000003,0 6.500623299999996,60.75329310000002,0 6.495961899999997,60.75730740000004,0 6.491698399999996,60.75910240000003,0 6.490936899999997,60.75959420000002,0 6.490750599999998,60.76030360000003,0 6.492331699999997,60.76281230000003,0 6.493250099999996,60.76620140000003,0 6.492699099999997,60.76698290000003,0 6.488915399999997,60.76930820000003,0 6.487207099999996,60.77261070000004,0 6.485538499999996,60.77410940000004,0 6.484287599999996,60.77687120000004,0 6.484333599999996,60.77764250000004,0 6.487902799999997,60.78202380000005,0 6.488298399999996,60.78314680000004,0 6.488789899999997,60.78359230000006,0 6.490219999999997,60.78406090000005,0 6.491309499999998,60.78411810000006,0 6.492922899999998,60.78394390000006,0 6.497979999999997,60.78446160000006,0 6.498886599999998,60.78490560000007,0 6.500779699999997,60.78729410000007,0 6.502809999999997,60.78882260000007,0 6.504710399999996,60.78974730000007,0 6.506771599999997,60.79127560000008,0 6.508316499999997,60.79173260000007,0 6.508671599999997,60.79172150000007,0 6.508800599999997,60.79185060000008,0 6.513459399999997,60.79242860000007,0 6.517231899999998,60.79226030000007,0 6.520560299999997,60.79278780000008,0 6.522277099999997,60.79283100000007,0 6.534186399999996,60.79207420000009,0 6.540297599999997,60.79273880000008,0 6.542461399999997,60.79255490000008,0 6.547627599999997,60.79049810000008,0 6.553182399999997,60.78449510000009,0 6.555443899999997,60.78295880000009,0 6.556288299999997,60.78268900000009,0 6.557803499999997,60.78263870000009,0 6.559291299999998,60.78291130000007,0 6.562706399999997,60.78420000000008,0 6.564200299999996,60.78576120000007,0 6.564954899999997,60.78763690000007,0 6.565894799999997,60.78837320000007,0 6.577582899999997,60.79338590000007,0 6.582466299999997,60.79457300000006,0 6.588868099999997,60.79747310000007,0 6.591748299999997,60.79827970000007,0 6.599154399999998,60.79924660000007,0 6.608332099999998,60.79966800000007,0 6.612683999999997,60.80035300000007,0 6.618503099999997,60.80245270000008,0 6.621067299999996,60.80308620000007,0 6.622476599999997,60.80387130000007,0 6.626499999999997,60.80515810000006,0 6.630495199999996,60.80564070000007,0 6.633139299999997,60.80623140000007,0 6.634651999999998,60.80613280000007,0 6.637438499999997,60.80536880000006,0 6.640316699999999,60.80395840000006,0 6.642887299999997,60.80333560000007,0 6.644712899999997,60.80329150000007,0 6.648274699999996,60.80377120000007,0 6.651956799999997,60.80392360000006,0 6.653186599999997,60.80412810000006,0 6.659845299999998,60.80618170000006,0 6.668183699999998,60.80796150000005,0 6.672253499999997,60.80821890000006,0 6.673634499999999,60.80850470000006,0 6.678220999999998,60.81032430000006,0 6.683507299999998,60.81334930000006,0 6.686213799999998,60.81420080000006,0 6.686678599999998,60.81461590000006,0 6.687095699999998,60.81551450000006,0 6.688444799999998,60.81681650000005,0 6.689214599999998,60.81816220000005,0 6.689180499999997,60.81929210000006,0 6.688103399999998,60.82185720000005,0 6.688153499999998,60.82385590000007,0 6.687583799999999,60.82567630000006,0 6.686697099999998,60.82678700000005,0 6.6853959,60.82766070000005,0 6.680080799999998,60.82906260000004,0 6.678536299999998,60.82987070000005,0 6.677834799999998,60.83083820000006,0 6.678008599999997,60.83195760000004,0 6.679169099999998,60.83292910000004,0 6.681936099999998,60.83393000000005,0 6.682732999999997,60.83448930000005,0 6.684090599999997,60.83807700000005,0 6.683925999999996,60.84052420000005,0 6.684525099999997,60.84123530000006,0 6.685459099999995,60.84177820000005,0 6.686794899999997,60.84218910000005,0 6.688994299999996,60.84239820000005,0 6.691244299999997,60.84211810000005,0 6.692404299999995,60.84174200000005,0 6.696072799999997,60.83991440000007,0 6.697472599999997,60.83975510000006,0 6.698893799999996,60.83995230000006,0 6.701435799999995,60.84106710000006,0 6.704817499999996,60.84187000000005,0 6.710292799999996,60.84266480000004,0 6.716772399999996,60.84445830000006,0 6.718980799999995,60.84463770000006,0 6.723205399999995,60.84421500000006,0 6.725590299999995,60.84421600000006,0 6.727309899999995,60.84442940000006,0 6.732527599999994,60.84567890000007,0 6.735340599999995,60.84695860000007,0 6.739277599999995,60.84808720000006,0 6.747108699999995,60.85087280000004,0 6.750216399999996,60.85264420000005,0 6.755519999999994,60.85447240000004,0 6.758444899999994,60.85620200000005,0 6.763333199999995,60.85750790000005,0 6.764887899999994,60.85750870000005,0 6.768836399999994,60.85688190000005,0 6.772259599999995,60.85695650000005,0 6.775970299999994,60.85637730000006,0 6.777869199999995,60.85628810000004,0 6.779468899999994,60.85641550000003,0 6.785792099999996,60.85774550000005,0 6.788798099999994,60.85771470000005,0 6.790283199999994,60.85785730000005,0 6.793090899999994,60.85868260000006,0 6.805831199999994,60.86046930000005,0 6.818425599999994,60.86366230000004,0 6.820325299999994,60.86497980000006,0 6.821546999999995,60.86710390000007,0 6.823003099999992,60.86800980000005,0 6.825341899999993,60.86875140000006,0 6.826662799999993,60.86942880000005,0 6.833400799999994,60.87556980000004,0 6.838122899999994,60.87753030000005,0 6.847059899999993,60.87978140000006,0 6.849592999999994,60.88019380000007,0 6.872683399999994,60.88082040000005,0 6.928771299999994,60.88526710000005,0 6.973361199999994,60.88768700000006,0 7.021829499999994,60.89144320000006,0 7.050151299999994,60.89215030000005,0 7.052819999999995,60.89243390000006,0 7.054216799999995,60.89285960000006,0 7.055196399999994,60.89339270000006,0 7.057984199999995,60.89864110000006,0 7.059010599999994,60.89938830000006,0 7.060751099999995,60.89995370000004,0 7.062108999999994,60.90011530000005,0 7.064302799999994,60.89998390000005,0 7.065959599999994,60.89950570000006,0 7.094099899999995,60.88550560000006,0 7.101503099999995,60.88113530000005,0 7.107446099999994,60.87656970000006,0 7.114513699999994,60.86891260000008,0 7.114766799999995,60.86790300000006,0 7.114093299999995,60.86677290000008,0 7.112294199999995,60.86586320000006,0 7.109711399999993,60.86528250000006,0 7.107058799999993,60.86428130000007,0 7.105215999999995,60.86297980000006,0 7.104694899999994,60.86133550000007,0 7.105542799999993,60.86026070000006,0 7.107701899999993,60.85955640000005,0 7.115099899999994,60.85793480000005,0 7.118789699999994,60.85790450000005,0 7.121518099999993,60.85838430000005,0 7.123834199999994,60.85931300000005,0 7.124800199999992,60.85996280000006,0 7.127204599999993,60.86305130000005,0 7.128381399999993,60.86383810000005,0 7.129684799999994,60.86433200000004,0 7.139063099999992,60.86575860000004,0 7.141434799999994,60.86688030000006,0 7.142074999999994,60.86738690000006,0 7.142614699999994,60.86834840000005,0 7.142647399999994,60.87070970000006,0 7.144255099999994,60.87289590000006,0 7.144328999999994,60.87522960000005,0 7.144810499999994,60.87586180000006,0 7.145434299999995,60.87626730000005,0 7.146551699999995,60.87667120000005,0 7.148720099999995,60.87703370000005,0 7.150237099999993,60.87751210000004,0 7.151918799999995,60.87850250000005,0 7.154896299999995,60.88173230000005,0 7.155062099999993,60.88256640000005,0 7.154786599999994,60.88351040000006,0 7.155266599999995,60.88608630000005,0 7.156525599999994,60.88743510000005,0 7.156266299999994,60.88969100000006,0 7.156628899999994,60.89018710000006,0 7.164094899999994,60.89399850000005,0 7.165314399999994,60.89548730000005,0 7.167521799999993,60.89683910000004,0 7.170007299999995,60.89915920000004,0 7.171507299999993,60.89976800000004,0 7.173758299999993,60.90011640000004,0 7.177515999999991,60.90000930000005,0 7.181409499999991,60.90032450000004,0 7.184659699999991,60.90104180000004,0 7.186277799999991,60.90117510000005,0 7.19384639999999,60.90009290000004,0 7.196848899999991,60.90006720000005,0 7.204148099999991,60.89921790000005,0 7.207966399999991,60.89818760000005,0 7.210109099999992,60.89801930000005,0 7.210301699999993,60.89794390000006,0 7.210508399999991,60.89794690000006,0 7.210708399999993,60.89804520000007,0 7.210723899999992,60.89812550000006,0 7.209714899999991,60.89907510000006,0 7.206443899999992,60.90001320000006,0 
+						</coordinates>
+						<tesselate>1</tesselate>
+					</LineString>
+				</Placemark>
+				<Placemark>
+					<name>Lunde Camping</name>
+					<address>Skulevegen 50, 5745 Aurland, Norway</address>
+					<description>Campground from 2020-07-08T17:22:11.318Z to 2020-07-08T17:46:40.858Z. Distance 0m</description>
+					<TimeSpan>
+						<begin>2020-07-08T17:22:11.318Z</begin>
+						<end>2020-07-08T17:46:40.858Z</end>
+					</TimeSpan>
+					<styleUrl>#m_ylw-pushpin2600</styleUrl>
+					<ExtendedData>
+						<Data name="Email">
+							<value>pdpbjorn@gmail.com</value>
+						</Data>
+						<Data name="Category">
+							<value>Campground</value>
+						</Data>
+						<Data name="Distance">
+							<value>0</value>
+						</Data>
+					</ExtendedData>
+					<Point>
+						<coordinates>7.206329800000001,60.8999139,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark>
+					<name>Driving</name>
+					<description>Driving from 2020-07-08T17:46:40.858Z to 2020-07-08T17:52:04.363Z. Distance 1344m</description>
+					<TimeSpan>
+						<begin>2020-07-08T17:46:40.858Z</begin>
+						<end>2020-07-08T17:52:04.363Z</end>
+					</TimeSpan>
+					<styleUrl>#m_ylw-pushpin2600</styleUrl>
+					<ExtendedData>
+						<Data name="Email">
+							<value>pdpbjorn@gmail.com</value>
+						</Data>
+						<Data name="Category">
+							<value>Driving</value>
+						</Data>
+						<Data name="Distance">
+							<value>1344</value>
+						</Data>
+					</ExtendedData>
+					<LineString>
+						<extrude>1</extrude>
+						<coordinates>
+							7.206329800000001,60.8999139,0 7.206329800000001,60.8999139,0 7.2046773,60.9004727,0 7.1929279,60.9064084,0 7.187332,60.90586340000001,0 7.187139708737966,60.90589118721454,0 7.187139708737966,60.90589118721454,0 
+						</coordinates>
+						<tesselate>1</tesselate>
+					</LineString>
+				</Placemark>
+				<Placemark>
+					<name>Aurlandsvangen</name>
+					<address>5745, Norway</address>
+					<description>from 2020-07-08T17:52:04.363Z to 2020-07-08T18:18:47.798Z. Distance 0m</description>
+					<TimeSpan>
+						<begin>2020-07-08T17:52:04.363Z</begin>
+						<end>2020-07-08T18:18:47.798Z</end>
+					</TimeSpan>
+					<styleUrl>#m_ylw-pushpin2600</styleUrl>
+					<ExtendedData>
+						<Data name="Email">
+							<value>pdpbjorn@gmail.com</value>
+						</Data>
+						<Data name="Category">
+						</Data>
+						<Data name="Distance">
+							<value>0</value>
+						</Data>
+					</ExtendedData>
+					<Point>
+						<coordinates>7.188547999999999,60.9071385,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark>
+					<name>Driving</name>
+					<description>Driving from 2020-07-08T18:18:47.798Z to 2020-07-08T18:27:48.395Z. Distance 1232m</description>
+					<TimeSpan>
+						<begin>2020-07-08T18:18:47.798Z</begin>
+						<end>2020-07-08T18:27:48.395Z</end>
+					</TimeSpan>
+					<styleUrl>#m_ylw-pushpin2600</styleUrl>
+					<ExtendedData>
+						<Data name="Email">
+							<value>pdpbjorn@gmail.com</value>
+						</Data>
+						<Data name="Category">
+							<value>Driving</value>
+						</Data>
+						<Data name="Distance">
+							<value>1232</value>
+						</Data>
+					</ExtendedData>
+					<LineString>
+						<extrude>1</extrude>
+						<coordinates>
+							7.187032700000001,60.90586479999999,0 7.187030999999999,60.90583399999999,0 7.1870214,60.90579019999999,0 7.188031499999998,60.9057693,0 7.189922899999999,60.90565800000001,0 7.1899917,60.9056501,0 7.1901252,60.9056269,0 7.1902518,60.90560890000001,0 7.190380300000001,60.90558460000001,0 7.190652500000001,60.90556840000001,0 7.190783600000001,60.90556940000002,0 7.190914500000001,60.90556800000002,0 7.191039700000001,60.90557250000003,0 7.191534300000003,60.90560130000003,0 7.1919095,60.90561720000003,0 7.192044300000001,60.90562490000005,0 7.192293600000001,60.90563220000003,0 7.192429800000002,60.90564170000004,0 7.192548,60.90564220000003,0 7.192683000000002,60.90564820000002,0 7.192946000000002,60.90564770000002,0 7.193067000000001,60.90565030000002,0 7.1932099,60.90564750000002,0 7.193604499999999,60.90562670000003,0 7.1937269,60.90561470000002,0 7.1939992,60.90558150000003,0 7.194380399999999,60.90551750000002,0 7.1945068,60.90549280000004,0 7.194628999999999,60.90546560000003,0 7.194749399999998,60.90543560000002,0 7.194861099999998,60.90540280000003,0 7.194989899999999,60.90536970000002,0 7.195224399999999,60.90530250000002,0 7.195442899999999,60.90523010000001,0 7.195523299999998,60.90519830000002,0 7.195618399999999,60.90515750000002,0 7.195733399999997,60.90511260000002,0 7.195823899999998,60.90507450000002,0 7.196077399999998,60.90492420000001,0 7.1961656,60.90488060000001,0 7.196254099999999,60.9048242,0 7.196323499999999,60.904774,0 7.1964025,60.90472270000001,0 7.196490799999999,60.90467240000001,0 7.196898999999998,60.90440480000002,0 7.196981399999999,60.90435460000002,0 7.197121399999999,60.9042594,0 7.197209099999999,60.90420360000002,0 7.197341799999999,60.90410940000001,0 7.197592299999998,60.90395360000001,0 7.197951499999999,60.90368950000001,0 7.198096599999999,60.90356380000002,0 7.198151399999999,60.90350760000001,0 7.1982841,60.90339580000001,0 7.198463799999998,60.90322190000001,0 7.198550099999999,60.9031541,0 7.198584399999999,60.9031075,0 7.198642899999999,60.9030564,0 7.198684399999999,60.9030155,0 7.1987578,60.9029565,0 7.1989539,60.9027759,0 7.199054,60.90267460000001,0 7.199105700000001,60.9026174,0 7.199305500000001,60.9024378,0 7.1993562,60.9023821,0 7.199423400000001,60.90232740000001,0 7.199478500000001,60.90227650000001,0 7.199556500000001,60.9022152,0 7.199621600000001,60.90215400000001,0 7.199690800000002,60.90209850000001,0 7.199745400000001,60.90204210000001,0 7.199816600000001,60.90198580000001,0 7.199875400000002,60.9019351,0 7.199927500000002,60.90189660000001,0 7.2001954,60.90174080000002,0 7.200269000000002,60.9017054,0 7.200380600000002,60.90166590000001,0 7.200503,60.9016352,0 7.200975000000001,60.9014931,0 7.201191900000001,60.90143980000001,0 7.201756100000001,60.90127690000001,0 7.202087499999998,60.90118709999999,0 7.2023075,60.90113590000001,0 7.202514899999999,60.9010911,0 7.202729100000001,60.9010486,0 7.202949499999999,60.90101090000001,0 7.203078,60.90099309999998,0 7.203198199999999,60.90097119999999,0 7.2034512,60.90093639999999,0 7.203571,60.90091629999999,0 7.2036836,60.900903,0 7.203952800000003,60.9008627,0 7.204070900000001,60.9008416,0 7.204199800000001,60.90082209999999,0 7.204312100000002,60.9008025,0 7.204641700000003,60.90073509999999,0 7.204844700000002,60.9006774,0 7.204943200000002,60.9006462,0 7.205176700000001,60.9005638,0 7.205216500000001,60.9005473,0 
+						</coordinates>
+						<tesselate>1</tesselate>
+					</LineString>
+				</Placemark>
+				<Placemark>
+					<name>Lunde Camping</name>
+					<address>Skulevegen 50, 5745 Aurland, Norway</address>
+					<description>Campground from 2020-07-08T18:27:48.395Z to 2020-07-09T09:36:38.301Z. Distance 0m</description>
+					<TimeSpan>
+						<begin>2020-07-08T18:27:48.395Z</begin>
+						<end>2020-07-09T09:36:38.301Z</end>
+					</TimeSpan>
+					<styleUrl>#m_ylw-pushpin2600</styleUrl>
+					<ExtendedData>
+						<Data name="Email">
+							<value>pdpbjorn@gmail.com</value>
+						</Data>
+						<Data name="Category">
+							<value>Campground</value>
+						</Data>
+						<Data name="Distance">
+							<value>0</value>
+						</Data>
+					</ExtendedData>
+					<Point>
+						<coordinates>7.206329800000001,60.8999139,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark>
+					<name>Indkøb af feltudstyr</name>
+					<LookAt>
+						<gx:TimeSpan>
+							<begin>2020-07-08T11:41:53Z</begin>
+							<end>2020-07-08T12:14:25.85Z</end>
+						</gx:TimeSpan>
+						<longitude>5.322254899315709</longitude>
+						<latitude>60.39290987205702</latitude>
+						<altitude>0</altitude>
+						<heading>-9.328527123798975e-010</heading>
+						<tilt>44.99996677205701</tilt>
+						<range>994.7689107592794</range>
+						<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+					</LookAt>
+					<styleUrl>#m_ylw-pushpin36</styleUrl>
+					<Point>
+						<gx:drawOrder>1</gx:drawOrder>
+						<coordinates>5.322254899315708,60.39290987205702,0</coordinates>
+					</Point>
+				</Placemark>
+			</Document>
+			<Placemark>
+				<name>Lunde Camping</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>7.205453418021667</longitude>
+					<latitude>60.90039405345548</latitude>
+					<altitude>0</altitude>
+					<heading>-2.161110041264107</heading>
+					<tilt>26.08950041441322</tilt>
+					<range>829.8022310234502</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_campground1</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>7.204585418614897,60.90029998477565,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>9. juli - Aurlandsvangen -&gt; Viki Fjordcamping, Gaupne</name>
+			<open>1</open>
+			<Placemark>
+				<name>Proviantstop i Joker</name>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2020-07-08T17:52:04.363Z</begin>
+						<end>2020-07-08T18:18:47.798Z</end>
+					</gx:TimeSpan>
+					<longitude>7.579795000204419</longitude>
+					<latitude>61.05202369981593</latitude>
+					<altitude>0</altitude>
+					<heading>1.789507285978632e-010</heading>
+					<tilt>0</tilt>
+					<range>998.6529409262299</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin36</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>7.579795000204419,61.05202369981593,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Stavkirken</name>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2020-07-08T17:52:04.363Z</begin>
+						<end>2020-07-08T18:18:47.798Z</end>
+					</gx:TimeSpan>
+					<longitude>7.814825742498511</longitude>
+					<latitude>61.048501929586</latitude>
+					<altitude>0</altitude>
+					<heading>0.2023189169433496</heading>
+					<tilt>47.83777796484445</tilt>
+					<range>492.9912366691551</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin36</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>7.812626325198204,61.04710892824847,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Frokoststop</name>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2020-07-08T17:52:04.363Z</begin>
+						<end>2020-07-08T18:18:47.798Z</end>
+					</gx:TimeSpan>
+					<longitude>7.79733526367652</longitude>
+					<latitude>61.04283277019297</latitude>
+					<altitude>0</altitude>
+					<heading>0.181464528673503</heading>
+					<tilt>36.92350459383785</tilt>
+					<range>782.2019142846172</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin36</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>7.796472837093953,61.0432345430606,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>færgning</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>7.472172136024804</longitude>
+					<latitude>61.15062865509736</latitude>
+					<altitude>0</altitude>
+					<heading>-0.03173288494262418</heading>
+					<tilt>45.00403291706731</tilt>
+					<range>65006.6403808023</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin00</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>7.363232079955568,61.14694457084144,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Viki Fjordcamping</name>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2020-07-08T17:52:04.363Z</begin>
+						<end>2020-07-08T18:18:47.798Z</end>
+					</gx:TimeSpan>
+					<longitude>7.391883679367099</longitude>
+					<latitude>61.39824938323383</latitude>
+					<altitude>0</altitude>
+					<heading>0.05035268202993481</heading>
+					<tilt>0.201624972507529</tilt>
+					<range>1122.681543238405</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_campground0</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>7.391883679367099,61.39824938323384,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>10. - 11. juli - Viki Fjordcamping, Gaupne</name>
+			<open>1</open>
+			<Placemark>
+				<name>Shopping for en formue</name>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2020-07-08T17:52:04.363Z</begin>
+						<end>2020-07-08T18:18:47.798Z</end>
+					</gx:TimeSpan>
+					<longitude>7.296204348936128</longitude>
+					<latitude>61.40295000439116</latitude>
+					<altitude>0</altitude>
+					<heading>-0.01261287736244067</heading>
+					<tilt>36.17993472213049</tilt>
+					<range>639.4579687223068</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin512</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>7.296204348936128,61.40295000439117,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Parkering</name>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2020-07-08T17:52:04.363Z</begin>
+						<end>2020-07-08T18:18:47.798Z</end>
+					</gx:TimeSpan>
+					<longitude>7.273637125883696</longitude>
+					<latitude>61.33379760614661</latitude>
+					<altitude>0</altitude>
+					<heading>-0.05492592667642801</heading>
+					<tilt>52.55300939749776</tilt>
+					<range>955.7102772342103</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_cabs4</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>7.272734350629165,61.33324797308654,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Molden</name>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2020-07-08T17:52:04.363Z</begin>
+						<end>2020-07-08T18:18:47.798Z</end>
+					</gx:TimeSpan>
+					<longitude>7.317831650460312</longitude>
+					<latitude>61.34523281512588</latitude>
+					<altitude>0</altitude>
+					<heading>-0.01335658270386423</heading>
+					<tilt>32.50346263959546</tilt>
+					<range>1114.709678101064</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin13</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>7.317831650460311,61.34523281512588,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Urnes Stavkirke</name>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2020-07-08T17:52:04.363Z</begin>
+						<end>2020-07-08T18:18:47.798Z</end>
+					</gx:TimeSpan>
+					<longitude>7.319179676657039</longitude>
+					<latitude>61.2967878185552</latitude>
+					<altitude>0</altitude>
+					<heading>-0.003307026489744283</heading>
+					<tilt>45.00042120001531</tilt>
+					<range>1066.309761655172</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin512</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>7.321930009157045,61.29791333302688,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Feigumfossen</name>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2020-07-08T17:52:04.363Z</begin>
+						<end>2020-07-08T18:18:47.798Z</end>
+					</gx:TimeSpan>
+					<longitude>7.428824095857016</longitude>
+					<latitude>61.38614705949577</latitude>
+					<altitude>0</altitude>
+					<heading>0.03486839160164609</heading>
+					<tilt>43.15152530393466</tilt>
+					<range>2116.930622015797</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin512</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>7.428824095857016,61.38614705949576,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Breheimsenteret</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>7.275420000317583</longitude>
+					<latitude>61.65134000082495</latitude>
+					<altitude>0</altitude>
+					<heading>4.302646421697141e-010</heading>
+					<tilt>45.00000000082496</tilt>
+					<range>1000.00013640308</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin15</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>7.27558982356157,61.65154447152527,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Parkering</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>7.239185288810358</longitude>
+					<latitude>61.67401464053712</latitude>
+					<altitude>0</altitude>
+					<heading>-0.03197183409250702</heading>
+					<tilt>45.66577971178147</tilt>
+					<range>1157.183343005589</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_cabs</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>7.234797109850035,61.67209561318296,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Færgning</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>7.229616358046777</longitude>
+					<latitude>61.67469277400554</latitude>
+					<altitude>0</altitude>
+					<heading>-0.04039497707922772</heading>
+					<tilt>45.66681583724372</tilt>
+					<range>1318.44461863723</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ferry4</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>7.233103585179876,61.67330886726519,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Nigardsbreen</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>7.205020278556733</longitude>
+					<latitude>61.68095199285978</latitude>
+					<altitude>0</altitude>
+					<heading>-0.06204640862041035</heading>
+					<tilt>45.67058839967631</tilt>
+					<range>1905.727314181065</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin0</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>7.199815108337207,61.68059514089723,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>12. juli - Viki Fjordcamping, Gaupne -&gt; Trollveggen Camping, Åndalsnes</name>
+			<Placemark>
+				<name>Proviantering</name>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2020-07-08T17:52:04.363Z</begin>
+						<end>2020-07-08T18:18:47.798Z</end>
+					</gx:TimeSpan>
+					<longitude>7.602598218491786</longitude>
+					<latitude>61.49023984079068</latitude>
+					<altitude>0</altitude>
+					<heading>0.2378541797724889</heading>
+					<tilt>39.60903843086648</tilt>
+					<range>678.1113949439732</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin512</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>7.600381360719792,61.49051908607777,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Turtagrø</name>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2020-07-08T17:52:04.363Z</begin>
+						<end>2020-07-08T18:18:47.798Z</end>
+					</gx:TimeSpan>
+					<longitude>7.802019999983303</longitude>
+					<latitude>61.50410000129167</latitude>
+					<altitude>0</altitude>
+					<heading>-2.319260473723195e-011</heading>
+					<tilt>45.00000000129167</tilt>
+					<range>1000.000216188096</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin512</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>7.801637223113143,61.50438377021657,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Parkering</name>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2020-07-08T17:52:04.363Z</begin>
+						<end>2020-07-08T18:18:47.798Z</end>
+					</gx:TimeSpan>
+					<longitude>7.647713024858913</longitude>
+					<latitude>61.48800279315931</latitude>
+					<altitude>0</altitude>
+					<heading>-0.1335040450308178</heading>
+					<tilt>60.00354083219985</tilt>
+					<range>455.1396903186882</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_cabs2</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>7.647257858204346,61.4868318398443,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Wittgensteins Hytte</name>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2020-07-08T17:52:04.363Z</begin>
+						<end>2020-07-08T18:18:47.798Z</end>
+					</gx:TimeSpan>
+					<longitude>7.6315900001095</longitude>
+					<latitude>61.48734000147839</latitude>
+					<altitude>0</altitude>
+					<heading>1.486010806886681e-010</heading>
+					<tilt>45.00000000147838</tilt>
+					<range>1000.000195122245</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin01</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>7.631631481546146,61.48732979528904,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Is</name>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2020-07-08T17:52:04.363Z</begin>
+						<end>2020-07-08T18:18:47.798Z</end>
+					</gx:TimeSpan>
+					<longitude>7.649816587852867</longitude>
+					<latitude>61.488129453808</latitude>
+					<altitude>0</altitude>
+					<heading>-0.1315254067108459</heading>
+					<tilt>56.62386960676197</tilt>
+					<range>1018.174914061875</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_bars11</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>7.649452929955252,61.48532939515498,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Rast ved Prestesteinvatnet</name>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2020-07-08T17:52:04.363Z</begin>
+						<end>2020-07-08T18:18:47.798Z</end>
+					</gx:TimeSpan>
+					<longitude>7.939360000294246</longitude>
+					<latitude>61.55276000136303</latitude>
+					<altitude>0</altitude>
+					<heading>3.985266821420601e-010</heading>
+					<tilt>45.000000001363</tilt>
+					<range>1000.000173836327</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin01</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>7.939422510890366,61.55277409476305,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Sagasøyla</name>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2020-07-08T17:52:04.363Z</begin>
+						<end>2020-07-08T18:18:47.798Z</end>
+					</gx:TimeSpan>
+					<longitude>8.286522646497447</longitude>
+					<latitude>61.703531440757</latitude>
+					<altitude>0</altitude>
+					<heading>-0.0002373378916250907</heading>
+					<tilt>36.02806396274121</tilt>
+					<range>517.7964462764101</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin01</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>8.285479868372418,61.70357697492459,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Over Reinheimen</name>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2020-07-08T17:52:04.363Z</begin>
+						<end>2020-07-08T18:18:47.798Z</end>
+					</gx:TimeSpan>
+					<longitude>9.022140695212393</longitude>
+					<latitude>61.98225034295415</latitude>
+					<altitude>0</altitude>
+					<heading>0.6605654629838185</heading>
+					<tilt>6.510771858210428</tilt>
+					<range>11386.34847773676</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin002</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>8.972395025145598,61.9942909163584,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Trollveggen camping</name>
+				<Camera>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>7.763947494571658</longitude>
+					<latitude>62.48553981822798</latitude>
+					<altitude>915.1927611602953</altitude>
+					<heading>-0.02112621292207493</heading>
+					<tilt>44.13659761159542</tilt>
+					<roll>0.7191496102926049</roll>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</Camera>
+				<styleUrl>#m_ylw-pushpin11</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>7.757383163949747,62.49332745990466,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>13. juli -  Trollveggen Camping, Åndalsnes -&gt; City Living Schølller hotel, Trondheim</name>
+			<Placemark>
+				<name>Færgning</name>
+				<Camera>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>7.553920958469128</longitude>
+					<latitude>62.57268235687537</latitude>
+					<altitude>12303.85833998399</altitude>
+					<heading>-0.2075387539719376</heading>
+					<tilt>44.13659758332559</tilt>
+					<roll>0.7388375470663356</roll>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</Camera>
+				<styleUrl>#msn_ferry</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>7.476610239542993,62.67000933602229,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Frokostshopping - Raumasentret</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>7.684864665934093</longitude>
+					<latitude>62.5582097212347</latitude>
+					<altitude>0</altitude>
+					<heading>-1.942423902063049</heading>
+					<tilt>32.90794476608116</tilt>
+					<range>631.2492189815005</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin01</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>7.684864665934093,62.5582097212347,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Fotostop</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>7.231210600880705</longitude>
+					<latitude>62.9846773431155</latitude>
+					<altitude>0</altitude>
+					<heading>-0.09565349817899839</heading>
+					<tilt>23.06270370119852</tilt>
+					<range>7457.997207585742</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin7</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>7.184760386838695,62.99163947479649,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Frokost</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>7.31606280268528</longitude>
+					<latitude>63.0105698925034</latitude>
+					<altitude>0</altitude>
+					<heading>-0.03332392351471201</heading>
+					<tilt>39.24662238159651</tilt>
+					<range>1216.785375157426</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_snack_bar2</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>7.312749559552227,63.01094870163559,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Atlanterhavsveien</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>7.354750000330276</longitude>
+					<latitude>63.01675000059991</latitude>
+					<altitude>0</altitude>
+					<heading>4.431951872272039e-010</heading>
+					<tilt>45.00000000059988</tilt>
+					<range>1000.000109560419</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin1</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>7.354750000330277,63.01675000059991,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Atlanterhavstunnelen</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>7.698207390358378</longitude>
+					<latitude>63.11641735613629</latitude>
+					<altitude>0</altitude>
+					<heading>-1.932517284390758</heading>
+					<tilt>7.286215617914732</tilt>
+					<range>12967.15242959172</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin2</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>7.668349376424626,63.12600704898843,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>smuk broforbindelse</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>7.808598045888963</longitude>
+					<latitude>62.99759916756026</latitude>
+					<altitude>0</altitude>
+					<heading>-1.839109425486157</heading>
+					<tilt>6.351370099425749</tilt>
+					<range>74204.3283277193</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin2</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>7.808598045888964,62.99759916756025,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>smuk broforbindelse</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>7.808598045888963</longitude>
+					<latitude>62.99759916756026</latitude>
+					<altitude>0</altitude>
+					<heading>-1.839109425486157</heading>
+					<tilt>6.351370099425749</tilt>
+					<range>74204.3283277193</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin2</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>7.885093823756122,62.99045871496167,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Færgning</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>8.145823219833265</longitude>
+					<latitude>63.05201429988765</latitude>
+					<altitude>0</altitude>
+					<heading>-1.523317643176848</heading>
+					<tilt>10.06121591872986</tilt>
+					<range>10031.11863150904</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ferry0</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>8.175145195225342,63.05919496825243,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>City Living Schøller Hotel &amp; Apartments</name>
+				<LookAt>
+					<gx:TimeStamp><when>2021-08-04</when>
+</gx:TimeStamp>
+					<gx:ViewerOptions>
+						<gx:option name="historicalimagery"></gx:option>
+						<gx:option enabled="0" name="sunlight"></gx:option>
+						<gx:option enabled="0" name="streetview"></gx:option>
+					</gx:ViewerOptions>
+					<longitude>10.39570039887693</longitude>
+					<latitude>63.43218110009817</latitude>
+					<altitude>0</altitude>
+					<heading>-1.004694286386125e-009</heading>
+					<tilt>0</tilt>
+					<range>1000.000005342129</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin031</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>10.39570039887693,63.43218110009818,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Bror Burger</name>
+				<LookAt>
+					<gx:TimeStamp><when>2021-08-04</when>
+</gx:TimeStamp>
+					<gx:ViewerOptions>
+						<gx:option name="historicalimagery"></gx:option>
+						<gx:option enabled="0" name="sunlight"></gx:option>
+						<gx:option enabled="0" name="streetview"></gx:option>
+					</gx:ViewerOptions>
+					<longitude>10.39729397007859</longitude>
+					<latitude>63.43292509311517</latitude>
+					<altitude>0</altitude>
+					<heading>0.0005559400936830995</heading>
+					<tilt>32.77921867203215</tilt>
+					<range>708.626799166105</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_dining02</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>10.39729397007859,63.43292509311518,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>14. juli - Trondheim -&gt; Bakke Camping, Halden</name>
+			<open>1</open>
+			<Placemark>
+				<name>Morgenmad</name>
+				<LookAt>
+					<gx:TimeStamp><when>2021-08-04</when>
+</gx:TimeStamp>
+					<gx:ViewerOptions>
+						<gx:option name="historicalimagery"></gx:option>
+						<gx:option enabled="0" name="sunlight"></gx:option>
+						<gx:option enabled="0" name="streetview"></gx:option>
+					</gx:ViewerOptions>
+					<longitude>10.39484269020031</longitude>
+					<latitude>63.43227832485658</latitude>
+					<altitude>0</altitude>
+					<heading>-0.001505293831781436</heading>
+					<tilt>38.14520719305955</tilt>
+					<range>401.7152830382825</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_coffee02</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>10.39484269265347,63.4322783269084,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Kirken lukket om morgenen</name>
+				<LookAt>
+					<gx:TimeStamp><when>2021-08-04</when>
+</gx:TimeStamp>
+					<gx:ViewerOptions>
+						<gx:option name="historicalimagery"></gx:option>
+						<gx:option enabled="0" name="sunlight"></gx:option>
+						<gx:option enabled="0" name="streetview"></gx:option>
+					</gx:ViewerOptions>
+					<longitude>10.39428329692087</longitude>
+					<latitude>63.42806470374325</latitude>
+					<altitude>0</altitude>
+					<heading>-6.497018916448775e-005</heading>
+					<tilt>33.68429317006227</tilt>
+					<range>547.6439500931112</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin004</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>10.39590690120946,63.42692360731081,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>P-bøde</name>
+				<LookAt>
+					<gx:TimeStamp><when>2021-08-04</when>
+</gx:TimeStamp>
+					<gx:ViewerOptions>
+						<gx:option name="historicalimagery"></gx:option>
+						<gx:option enabled="0" name="sunlight"></gx:option>
+						<gx:option enabled="0" name="streetview"></gx:option>
+					</gx:ViewerOptions>
+					<longitude>10.39566358081585</longitude>
+					<latitude>63.43195950996346</latitude>
+					<altitude>0</altitude>
+					<heading>0.001169525041185846</heading>
+					<tilt>33.68285425797317</tilt>
+					<range>258.8138897473511</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin004</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>10.39551951502469,63.43204053147915,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Parkering</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>11.38618611789707</longitude>
+					<latitude>62.57364561294874</latitude>
+					<altitude>0</altitude>
+					<heading>0.002487558953025373</heading>
+					<tilt>20.58841280431736</tilt>
+					<range>916.6468381114833</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>11.38360693298574,62.57357120110761,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Museet</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>11.38618628006343</longitude>
+					<latitude>62.57486442192575</latitude>
+					<altitude>0</altitude>
+					<heading>0.002487702411850591</heading>
+					<tilt>20.58840680700055</tilt>
+					<range>914.7484862701892</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>11.39133407537083,62.57706064324729,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Køber vaffeljern</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>11.38630478945881</longitude>
+					<latitude>62.57498812751708</latitude>
+					<altitude>0</altitude>
+					<heading>0.002745337512453569</heading>
+					<tilt>24.66326763282944</tilt>
+					<range>350.4374235999155</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>11.3863047894588,62.57498812751708,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Dragon house - Aftensmad ?</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>11.38982060787237</longitude>
+					<latitude>59.11960999602616</latitude>
+					<altitude>0</altitude>
+					<heading>0.001408693631676473</heading>
+					<tilt>28.43227051398036</tilt>
+					<range>255.0497148123543</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_dining2</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>11.38971638346406,59.12018268573969,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Bakke Camping</name>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2020-07-07T17:05:03Z</begin>
+						<end>2020-07-08T08:56:15.285Z</end>
+					</gx:TimeSpan>
+					<longitude>11.45319595762872</longitude>
+					<latitude>59.01322110572136</latitude>
+					<altitude>0</altitude>
+					<heading>5.177882567532578</heading>
+					<tilt>19.30525980135791</tilt>
+					<range>760.1769491656637</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin0</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>11.44831878645253,59.01370701945712,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>15. juli - Halden -&gt; Ystad</name>
+			<open>1</open>
+		</Folder>
+		<Folder>
+			<name>16. - 25. juli - Tejnvej 20</name>
+			<open>1</open>
+			<Placemark>
+				<name>Besøg af Anna og Ella</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>14.80474979010628</longitude>
+					<latitude>55.26767677947316</latitude>
+					<altitude>0</altitude>
+					<heading>3.923766804987623</heading>
+					<tilt>18.9370043746741</tilt>
+					<range>296.2424752228222</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin1</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>14.8040498935637,55.267626742676,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+	</Folder>
+</Document>
+</kml>

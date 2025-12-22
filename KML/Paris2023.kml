@@ -1,0 +1,2793 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>Paris2023.kml</name>
+	<StyleMap id="msn_ylw-pushpin4">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin7</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin0</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin9">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin2">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/lodging.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin11">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin00</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl6</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin16">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ffff0055</color>
+			<width>5.7</width>
+		</LineStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin25">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_rail">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_rail</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_rail0</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin1">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_snack_bar10">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/snack_bar.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin0">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff000000</color>
+			<width>5</width>
+		</LineStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin5">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_coffee">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/coffee.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin9">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin0</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin4</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin4">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff00ff00</color>
+			<width>5</width>
+		</LineStyle>
+	</Style>
+	<Style id="sh_snack_bar">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/snack_bar.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin1">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ffffa65d</color>
+			<width>5.7</width>
+		</LineStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl14">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff7f00ff</color>
+			<width>5</width>
+		</LineStyle>
+	</Style>
+	<Style id="s_ylw-pushpin118">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_coffee">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_coffee</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_coffee9</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin_hl016">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff0055ff</color>
+			<width>5</width>
+		</LineStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin6">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ffffff55</color>
+			<width>5.7</width>
+		</LineStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin1">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin3</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin11</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_grocery6">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/grocery.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>5</width>
+		</LineStyle>
+	</Style>
+	<StyleMap id="msn_dining">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_dining22</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_dining</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="m_ylw-pushpin016">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin118</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl004</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_dining">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin000">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin109</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin57</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin2">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin1</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin14</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_grocery">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/grocery.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin212">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin2</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl09</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin11">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin419">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ffa5f8ff</color>
+			<width>5</width>
+		</LineStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin00">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin17</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin6</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_grocery">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_grocery1</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_grocery11</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="m_ylw-pushpin62">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin000</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl18</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="m_ylw-pushpin1">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin1</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_coffee">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/coffee.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_bars">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/bars.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin3">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff13d0ff</color>
+			<width>5</width>
+		</LineStyle>
+	</Style>
+	<Style id="sh_grocery11">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/grocery.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin5">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin3">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin2</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin01</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin024">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ffffff55</color>
+			<width>5.7</width>
+		</LineStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin116">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin16</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl2</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin0">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff00ff00</color>
+			<width>5</width>
+		</LineStyle>
+	</Style>
+	<Style id="sn_dining22">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin0">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin06</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl003</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_coffee1">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_coffee1</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_coffee</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin231">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin02">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin7">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff000000</color>
+			<width>5</width>
+		</LineStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin2">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff00a500</color>
+			<width>5</width>
+		</LineStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl013">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/rail.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin03">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin11</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl14</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin13">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin40">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ffff0055</color>
+			<width>5.7</width>
+		</LineStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin08">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin0</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl00</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin5">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_coffee9">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/coffee.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin0">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ffd70aff</color>
+			<width>5</width>
+		</LineStyle>
+	</Style>
+	<Style id="s_ylw-pushpin000">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_snack_bar0">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/snack_bar.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin10">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin4</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin014</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_grocery0">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_grocery6</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_grocery</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin06">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/bars.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin1">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff393939</color>
+			<width>5</width>
+		</LineStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin57">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_coffee1">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/coffee.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl00">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ffd70aff</color>
+			<width>5</width>
+		</LineStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl6">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin6">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin4">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin231</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl5</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin_hl09">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/lodging.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_rail">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/rail.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin113">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>5</width>
+		</LineStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin140">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin30">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff13d0ff</color>
+			<width>5</width>
+		</LineStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin40">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin30</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin3</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_bars">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/bars.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin6">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin4</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl013</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="m_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl0</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin_hl003">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/bars.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff393939</color>
+			<width>5</width>
+		</LineStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin09">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin114</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl015</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin319">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_snack_bar0">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_snack_bar0</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_snack_bar10</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin0">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin71</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin113</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="m_ylw-pushpin2">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin12</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl34</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="m_ylw-pushpin01">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin5</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl10</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin15">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin419</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin2</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin100">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin02</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin5</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin114">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>5</width>
+		</LineStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl2">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_rail0">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/rail.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl34">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl1">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/snack_bar.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin20">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin6</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin024</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_snack_bar25">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_snack_bar</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_snack_bar</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin96">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin73">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin13</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin140</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin10">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ffffa65d</color>
+			<width>5.7</width>
+		</LineStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin411">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin96</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin319</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin_hl5">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl004">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin11">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff7f00ff</color>
+			<width>5</width>
+		</LineStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin4">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff7f00ff</color>
+			<width>5</width>
+		</LineStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin17">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl0">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>5</width>
+		</LineStyle>
+	</Style>
+	<Style id="s_ylw-pushpin23">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff0055ff</color>
+			<width>5</width>
+		</LineStyle>
+	</Style>
+	<StyleMap id="msn_grocery30">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_grocery0</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_grocery6</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin00">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_grocery1">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/grocery.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin201">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin40</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin16</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin3">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin109">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin01">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff00a500</color>
+			<width>5</width>
+		</LineStyle>
+	</Style>
+	<Style id="s_ylw-pushpin3">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/snack_bar.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin104">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin5</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin025</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="m_ylw-pushpin017">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin3</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl1</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin18">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin8">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin10</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin1</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_grocery6">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/grocery.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl10">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin2">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ffa5f8ff</color>
+			<width>5</width>
+		</LineStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin025">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_grocery0">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/grocery.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin12">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_bars0">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_bars</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_bars</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin_hl015">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>5</width>
+		</LineStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin14">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin9</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin25</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin4">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/rail.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin71">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>5</width>
+		</LineStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl18">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_snack_bar">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/snack_bar.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin014">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff7f00ff</color>
+			<width>5</width>
+		</LineStyle>
+	</Style>
+	<Style id="s_ylw-pushpin16">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin00">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin23</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl016</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Folder>
+		<name>Paris med Ida og Erik - 14. - 19. april 2023</name>
+		<open>1</open>
+		<Placemark>
+			<name>15 Rue du Val de Grace</name>
+			<LookAt>
+				<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+				<longitude>2.338867171179553</longitude>
+				<latitude>48.8414049367416</latitude>
+				<altitude>0</altitude>
+				<heading>-8.926414897131508e-005</heading>
+				<tilt>27.87887637422762</tilt>
+				<range>430.668067361189</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#m_ylw-pushpin212</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>2.339016127985223,48.84132255804676,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Stribet supermarked</name>
+			<LookAt>
+				<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+				<longitude>2.33782839773617</longitude>
+				<latitude>48.84130973851211</latitude>
+				<altitude>30.57634102005125</altitude>
+				<heading>-0.0008713826038090098</heading>
+				<tilt>27.87873033687094</tilt>
+				<range>395.9014122066242</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_grocery30</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>2.337788204071813,48.84199663269462,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Carrefour Express</name>
+			<LookAt>
+				<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+				<longitude>2.340009995366417</longitude>
+				<latitude>48.83902594075418</latitude>
+				<altitude>21.61975939645994</altitude>
+				<heading>-0.0006320283378229365</heading>
+				<tilt>45.00964003231371</tilt>
+				<range>966.6437127978954</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_grocery30</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>2.340009995366417,48.83902594075418,0</coordinates>
+			</Point>
+		</Placemark>
+		<Folder>
+			<name>14. april</name>
+			<Placemark>
+				<name>Take-out pizza</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>2.337870993966174</longitude>
+					<latitude>48.84061233844268</latitude>
+					<altitude>14.49759911953658</altitude>
+					<heading>-0.0008393107739021752</heading>
+					<tilt>27.87880630255755</tilt>
+					<range>413.9863181698434</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_snack_bar0</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>2.338769343938765,48.8413844169608,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>15. april - Annes fødselsdag</name>
+			<Placemark>
+				<name>Lørdag morgen</name>
+				<styleUrl>#msn_ylw-pushpin8</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						2.338845398524074,48.84141138172981,0 2.339720053968506,48.84124599278454,0 2.34065657593808,48.84237311934892,0 2.341154434678174,48.84213977755334,0 2.341313994898471,48.84271947324872,0 2.344103333724525,48.84243826143516,0 2.344351062096721,48.84261443894644,0 2.348098822069462,48.8417023765513,0 2.348423325095652,48.84162186881557,0 2.349094213850143,48.84144548383165,0 2.349649077071472,48.84147144850052,0 2.349934332947092,48.84146818348768,0 2.350035356887805,48.84135245418344,0 2.350732485449123,48.84120167031712,0 2.35068414016083,48.84102287829506,0 2.351636075260917,48.84084570141103,0 2.351942309095787,48.84081904359375,0 2.352542425291144,48.84105962180846,0 2.354518956902525,48.84138093346142,0 2.355678127558907,48.84156952547357,0 2.35622144000408,48.84170179937111,0 2.356988768532238,48.84192197212119,0 2.357015240001075,48.84207214567254,0 2.357383564323916,48.84242106991061,0 2.35701141014788,48.84311129804927,0 2.357545128572356,48.84242801358526,0 2.358699614564601,48.84267674666525,0 2.360436641996573,48.84315644249006,0 2.36229566376128,48.84363249540296,0 2.363369738601648,48.84397303198153,0 2.363424992324106,48.84360099619941,0 2.363560461835055,48.84334355221053,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>Ecole Normale Superiore -  plancher</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>2.346341348969312</longitude>
+					<latitude>48.84169487217241</latitude>
+					<altitude>0</altitude>
+					<heading>-1.639095349735487</heading>
+					<tilt>31.81593897269501</tilt>
+					<range>347.5647223031759</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin411</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>2.347012223619105,48.84197034417931,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Le Vin Sobre - noget skrabet morgenmad</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>2.341339166074574</longitude>
+					<latitude>48.84224482674522</latitude>
+					<altitude>0</altitude>
+					<heading>-1.643528488962829</heading>
+					<tilt>41.86688082744446</tilt>
+					<range>230.9901571483338</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_coffee1</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>2.341150930932741,48.84210128061756,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Lamarcks hus</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>2.355996448816979</longitude>
+					<latitude>48.84194246871071</latitude>
+					<altitude>22.92038747988601</altitude>
+					<heading>-1.632819260171621</heading>
+					<tilt>44.50274013325246</tilt>
+					<range>534.8029521385054</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin000</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>2.356185761496072,48.84157075782542,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Galerie de Paléontologie et d’Anatomie comparée</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>2.362784532268136</longitude>
+					<latitude>48.84277107022059</latitude>
+					<altitude>13.82619679221892</altitude>
+					<heading>-146.6802144169499</heading>
+					<tilt>60.00248192153876</tilt>
+					<range>319.0343459633409</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin2</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>2.363569201534619,48.84331159914107,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Indkøb frokost</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>2.355564528161758</longitude>
+					<latitude>48.83966201250309</latitude>
+					<altitude>0</altitude>
+					<heading>172.1747365159194</heading>
+					<tilt>51.19101507645669</tilt>
+					<range>316.3075614183734</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_grocery0</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>2.35640282462998,48.84025019995707,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Lørdag middag</name>
+				<styleUrl>#msn_ylw-pushpin20</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						2.363390232967273,48.84329221947117,0 2.363334673451685,48.84382583507013,0 2.361641328528223,48.84334591810124,0 2.359929408463497,48.84290562011807,0 2.358407534872828,48.84243745805034,0 2.357390811833748,48.84219839883002,0 2.356879570764789,48.84207062741401,0 2.356928783491343,48.84180460916145,0 2.35596294007318,48.84149911045586,0 2.356380116269987,48.84034889278909,0 2.356073793720861,48.84147641993021,0 2.357007776326876,48.84179733137755,0 2.356781594663417,48.84198782612236,0 2.356845592525527,48.84177799924602,0 2.355767727340761,48.84148213429413,0 2.35381108648794,48.84120166041611,0 2.352906476651142,48.84107372096392,0 2.352046235612619,48.84074522011429,0 2.350891789638023,48.83883676517138,0 2.350929497447878,48.83854783690916,0 2.35050263909981,48.83826793476739,0 2.349736177965069,48.83779426853947,0 2.349359473307922,48.83764539247546,0 2.348886760113993,48.83679496631189,0 2.348545882755893,48.83599790437284,0 2.348676250285404,48.83566617798438,0 2.346410760383788,48.83498619984607,0 2.343951493728269,48.83486876824716,0 2.341607438564297,48.83473241399062,0 2.338243168890872,48.83465111068568,0 2.3365235897152,48.83452924346942,0 2.33624000608794,48.83450109611295,0 2.333714620710823,48.83443104512388,0 2.333311797399316,48.83437695444464,0 2.333425596596122,48.83397305695126,0 2.333532026972134,48.83354256835947,0 2.333162693514936,48.83313514464495,0 2.332594347628783,48.83325199953967,0 2.33208955089353,48.83346839554021,0 2.33229858926916,48.83387800740511,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>Arago monumentet</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>2.33695620038197</longitude>
+					<latitude>48.83365023199067</latitude>
+					<altitude>0</altitude>
+					<heading>34.6951520685129</heading>
+					<tilt>37.20986132366584</tilt>
+					<range>779.3914573642437</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin00</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>2.336570461097955,48.83455534775008,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Katakomberne</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>2.337478938496385</longitude>
+					<latitude>48.83354848670393</latitude>
+					<altitude>0</altitude>
+					<heading>34.69554552649439</heading>
+					<tilt>37.21090852131707</tilt>
+					<range>972.1833017176065</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin00</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>2.33240598962293,48.83385906431135,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Katakombernes udgang</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>2.334994622173945</longitude>
+					<latitude>48.82978526364142</latitude>
+					<altitude>10.75486905406678</altitude>
+					<heading>48.25145844241788</heading>
+					<tilt>32.87346710851381</tilt>
+					<range>285.5249604416683</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin00</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>2.334481433396931,48.82956593470151,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Lørdag eftermiddag</name>
+				<styleUrl>#msn_ylw-pushpin201</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						2.334253107000781,48.82975426947869,0 2.333651271627244,48.8314068196169,0 2.333234415602126,48.83273628647572,0 2.333182013806043,48.83333422369554,0 2.333639620565888,48.83351729106923,0 2.333484533259931,48.83424836437607,0 2.333047150470824,48.83456560356115,0 2.332574037487714,48.83467863488239,0 2.332420893563152,48.83507832199887,0 2.332814985661367,48.83474613507475,0 2.333592602530963,48.83563693153032,0 2.335449619005556,48.83763159418878,0 2.336524857043023,48.83871639223024,0 2.336484310753377,48.83977354222193,0 2.334274331583952,48.84036044655648,0 2.33427139373299,48.84036267973415,0 2.334262249821781,48.84036725153653,0 2.334297431805907,48.84035412038325,0 2.336169452632082,48.83994611871366,0 2.336476401223946,48.84054673001084,0 2.336792412071176,48.84095481242983,0 2.336888909386414,48.84110029412441,0 2.336865226141049,48.84156283319427,0 2.336985374105227,48.841351418454,0 2.337184476703456,48.84133934189414,0 2.337297278826258,48.8417713041928,0 2.337566410261056,48.84175414054408,0 2.337910376665735,48.84168231021907,0 2.337656026202963,48.84116731424695,0 2.337913609502853,48.84167993275599,0 2.338298662703437,48.84160428847166,0 2.339087854410862,48.84136359958954,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>Eftermiddagskage - Boulangerie Montparnasse</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>2.334272299565998</longitude>
+					<latitude>48.84005030156409</latitude>
+					<altitude>22.06103916029118</altitude>
+					<heading>-6.130374035713586e-010</heading>
+					<tilt>44.9997952015641</tilt>
+					<range>967.7583105822913</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_coffee</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>2.334162759051119,48.84038207539842,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Klosterprodukter</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>2.335776764334723</longitude>
+					<latitude>48.83899329141677</latitude>
+					<altitude>15.14737391517382</altitude>
+					<heading>0.001167203775605883</heading>
+					<tilt>55.22839779964725</tilt>
+					<range>538.6582340268709</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin73</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>2.335703010133876,48.83804934006879,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Fødselsdagsmiddag - Tamada</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>2.334272299565998</longitude>
+					<latitude>48.84005030156409</latitude>
+					<altitude>22.06103916029118</altitude>
+					<heading>-6.130374035713586e-010</heading>
+					<tilt>44.9997952015641</tilt>
+					<range>967.7583105822913</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_dining</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>2.337657370365545,48.84113092214219,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>16. april</name>
+			<Placemark>
+				<name>Søndag morgen - med bus</name>
+				<styleUrl>#msn_ylw-pushpin0</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						2.339196085314781,48.84125721692915,0 2.337995909178967,48.84174536532852,0 2.33730075730926,48.84063749869863,0 2.336985403645457,48.83990919612226,0 2.336106024228992,48.84007339121839,0 2.336056086496183,48.8399339362982,0 2.333263128673047,48.84078611437013,0 2.329748466883761,48.8419265942282,0 2.32462681550244,48.84367163690228,0 2.320172750279732,48.84512378742457,0 2.316781509079635,48.84682586852441,0 2.312752548870598,48.85370405063414,0 2.306511639652604,48.854167517631,0 2.305439271477825,48.85423522474454,0 2.302180208761067,48.85216031742321,0 2.300889432858524,48.8511737729003,0 2.291932142106823,48.8569288174053,0 2.291791386172615,48.85699506444141,0 2.291973852848603,48.85698798884495,0 2.292518475797003,48.85730739203959,0 2.292983950045788,48.85739100980199,0 2.293684465173933,48.85744201722708,0 2.294216689157278,48.85780160349478,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>Eiffeltårn - trappe til anden sal - elevator resten af vejen</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>2.294026830997025</longitude>
+					<latitude>48.85699236173436</latitude>
+					<altitude>11.0353000633002</altitude>
+					<heading>-0.01719732070609293</heading>
+					<tilt>29.69096411013451</tilt>
+					<range>996.5959821491998</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin016</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>2.294643184381995,48.85801525298765,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Søndag middag</name>
+				<styleUrl>#msn_ylw-pushpin15</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						2.294979870542406,48.85800688447162,0 2.293839040550052,48.85872923902852,0 2.294991931632073,48.85939599979018,0 2.296143041862069,48.85887692623081,0 2.296878403594795,48.85808189686103,0 2.296987883976696,48.85741668488188,0 2.296847694215516,48.85715546319961,0 2.297351654270883,48.85668954528072,0 2.297897914723235,48.85652198173191,0 2.299966458896825,48.85760168700971,0 2.301269436444202,48.85813806848192,0 2.303157879126192,48.85865335577947,0 2.305221395797208,48.85926396431628,0 2.307894598874984,48.85978218282178,0 2.310213796115577,48.86001724868661,0 2.312542293614273,48.86001877785929,0 2.3125753040975,48.86021130174414,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>Frokostindkøb</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>2.307302966781768</longitude>
+					<latitude>48.85983853567301</latitude>
+					<altitude>0</altitude>
+					<heading>-0.008698123001795875</heading>
+					<tilt>42.04671921013076</tilt>
+					<range>350.2101164386517</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_grocery</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>2.306923780940882,48.85970688470506,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Frokost i det grønne</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>2.312398158176947</longitude>
+					<latitude>48.86028987486147</latitude>
+					<altitude>0</altitude>
+					<heading>-0.00486093678253723</heading>
+					<tilt>42.04672678596169</tilt>
+					<range>351.4693214746088</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_snack_bar25</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>2.312569042912449,48.86018632969995,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Søndag Eftermiddag</name>
+				<styleUrl>#msn_ylw-pushpin40</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						2.312599617662581,48.86021176677853,0 2.312731381299702,48.85992639610993,0 2.312906157456889,48.85988243596838,0 2.312804861206601,48.858933733935,0 2.312306541075462,48.85860282192932,0 2.312238892889709,48.85839424030511,0 2.312838251479847,48.85831703486778,0 2.312881365231536,48.85813511471681,0 2.312744119984989,48.85694607699357,0 2.312674368418606,48.85632432420891,0 2.312603021008506,48.85588577189339,0 2.312587061720934,48.85554379758865,0 2.31263804211534,48.85617001096358,0 2.312210567939184,48.85609238559422,0 2.312158740788932,48.8556803760376,0 2.312053543748414,48.85527008478604,0 2.312067988842714,48.85495863391076,0 2.312464397772216,48.85469292834857,0 2.312509098682789,48.85478953427334,0 2.312179166433408,48.85481844360696,0 2.312276923988739,48.85624022426502,0 2.312806269265411,48.8567446689833,0 2.312906678156752,48.85796167211964,0 2.313525945154153,48.85852762199451,0 2.313870277456205,48.85857946441114,0 2.31399726599439,48.86047337890415,0 2.314216394199111,48.86164505236093,0 2.313434267157379,48.86306108247537,0 2.313666032237907,48.8646825360944,0 2.317917021973848,48.86465953304574,0 2.319175911772513,48.86434584550318,0 2.320795359955548,48.86377383481497,0 2.321578651250873,48.86370611220048,0 2.321958297847973,48.86410260780652,0 2.321176061184249,48.86362422563395,0 2.319983357597795,48.86385858843858,0 2.319283938965764,48.86258309883356,0 2.319860413706707,48.86167133838242,0 2.32282128312743,48.8585575681122,0 2.325298557787936,48.85652951200843,0 2.325761080258419,48.85593654858042,0 2.327195509441853,48.85103143680126,0 2.329035789878491,48.84876433689863,0 2.332469060194256,48.84496891724752,0 2.334736261460921,48.84270310428475,0 2.335702107499649,48.84161584874293,0 2.336078658756644,48.8411785603478,0 2.336171111087755,48.84068288505179,0 2.336738189383336,48.84076139903563,0 2.337333043305336,48.84126409271151,0 2.337951120995905,48.84156817817298,0 2.338991880408277,48.84125726285815,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>Museumspasindkøb</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>2.311236557773801</longitude>
+					<latitude>48.85701623018083</latitude>
+					<altitude>0</altitude>
+					<heading>-0.005735680812498928</heading>
+					<tilt>42.05343670897872</tilt>
+					<range>1466.800327676838</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin104</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>2.312373264354144,48.85691717323858,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Militærets kirke</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>2.311236557773801</longitude>
+					<latitude>48.85701623018083</latitude>
+					<altitude>0</altitude>
+					<heading>-0.005735680812498928</heading>
+					<tilt>42.05343670897872</tilt>
+					<range>1466.800327676838</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin104</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>2.312568400423107,48.85561423285176,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Napoleons Grav</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>2.311236557773801</longitude>
+					<latitude>48.85701623018083</latitude>
+					<altitude>0</altitude>
+					<heading>-0.005735680812498928</heading>
+					<tilt>42.05343670897872</tilt>
+					<range>1466.800327676838</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin104</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>2.312396144281876,48.85494086707284,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Aftensmad hjemme - á la italiano</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>2.334558874425301</longitude>
+					<latitude>48.84192979492691</latitude>
+					<altitude>16.45384104289258</altitude>
+					<heading>0.008925458855373101</heading>
+					<tilt>38.85604280313952</tilt>
+					<range>973.813843149348</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin01</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>2.338991880408277,48.84125726285815,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Latin-Zumba-træning</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>2.316200740137517</longitude>
+					<latitude>48.86331377276868</latitude>
+					<altitude>0</altitude>
+					<heading>-0.004898585571453287</heading>
+					<tilt>38.85953633778289</tilt>
+					<range>1593.774598585643</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin2</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>2.314565998806295,48.86194889897119,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Vandkanderne</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>2.321066758250086</longitude>
+					<latitude>48.86227708293487</latitude>
+					<altitude>0</altitude>
+					<heading>-0.001233712675117368</heading>
+					<tilt>38.85953085484972</tilt>
+					<range>1592.80169097098</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin2</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>2.323155422060572,48.86361300536413,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Forsinket bus</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>2.321066758250086</longitude>
+					<latitude>48.86227708293487</latitude>
+					<altitude>0</altitude>
+					<heading>-0.001233712675117368</heading>
+					<tilt>38.85953085484972</tilt>
+					<range>1592.80169097098</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin2</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>2.320148556948394,48.86146116609492,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>17. april</name>
+			<Placemark>
+				<name>Mandag morgen</name>
+				<styleUrl>#msn_ylw-pushpin9</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						2.33896474637054,48.84126077178142,0 2.338092092947057,48.84153916670244,0 2.33864705077381,48.84292032681505,0 2.339767428015092,48.84515582486579,0 2.342626739505309,48.84988825038411,0 2.343639142233061,48.85181218888965,0 2.344048929579277,48.8527941940254,0 2.343003367505916,48.85314882163389,0 2.34376423733148,48.85350436807592,0 2.343887714894295,48.85329791260595,0 2.344402207350294,48.8533372563005,0 2.344707703337481,48.85322991649839,0 2.345340504539619,48.85308538352015,0 2.345711787339564,48.85300330420359,0 2.346023424495605,48.85292282152364,0 2.346216392842626,48.85318549792477,0 2.346660396772069,48.8530676316541,0 2.346912606699312,48.85293084886728,0 2.34720891719665,48.85276577422389,0 2.347137434095132,48.85269934194557,0 2.347414822710749,48.85256111014471,0 2.347630786593447,48.85246699409039,0 2.347826187893427,48.85233454050166,0 2.348068610428393,48.85231843430739,0 2.34818332618187,48.85233104877516,0 2.348344621148033,48.85226028221185,0 2.348457431144737,48.85241556984254,0 2.34890197516699,48.85218421392672,0 2.349459470904145,48.85193013380636,0 2.351685977113587,48.85104010949271,0 2.352447080331637,48.85084016004385,0 2.352566904750704,48.85094468415549,0 2.353885807636049,48.85064001783511,0 2.354436517729317,48.85052990709918,0 2.354438719048464,48.85018549540657,0 2.354863846384538,48.85017980641326,0 2.355557451915349,48.85091986441386,0 2.3558967282944,48.85120068448825,0 2.356614497645335,48.85194112854672,0 2.353673703097496,48.85282476672541,0 2.354110297786578,48.85342380181302,0 2.353437624312256,48.85298765580656,0 2.352340172877308,48.85270555775298,0 2.352018256383086,48.85279737193251,0 2.350892991284106,48.85307046632572,0 2.349945280196779,48.85338626831643,0 2.34923225712953,48.85360423225737,0 2.348140857382852,48.85379954372698,0 2.348197879172302,48.85353274681809,0 2.348180892023195,48.85325432190252,0 2.34798199586767,48.85357569858486,0 2.347678672209819,48.85363376242379,0 2.347670121302017,48.85399061850039,0 2.347336815665586,48.8541869060426,0 2.347658193508264,48.85479780556448,0 2.346060934602665,48.85534555194955,0 2.345677694958586,48.85538537737199,0 2.345515791091573,48.85500371376617,0 2.3463260886048,48.85598769095008,0 2.346621852808448,48.85665768892181,0 2.346893439095048,48.85711730231061,0 2.347222311614046,48.85716613416477,0 2.347472196968954,48.85728176004248,0 2.347882333337641,48.85753753598498,0 2.348138103960862,48.85770882821619,0 2.348232891618005,48.85769117173366,0 2.349407873508009,48.85800647151795,0 2.349738975443179,48.8580893684867,0 2.350186941904464,48.85899793909281,0 2.350973102568073,48.85997085349089,0 2.351729875895336,48.85990813559373,0 2.351505527452114,48.85956807672891,0 2.351983294971101,48.85983896260957,0 2.352548285787692,48.85973959301214,0 2.353008297540182,48.86050245041526,0 2.353311835068375,48.86053313015339,0 2.353391175129895,48.86120608303606,0 2.352808539800453,48.86130505887867,0 2.352368956231907,48.86138449270121,0 2.352287469553143,48.86125559745599,0 2.352163130332803,48.86117758572815,0 2.351877365562916,48.86113942313821,0 2.351639679295867,48.86105861193554,0 2.351505519778432,48.86092954308867,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>Fisk i St. Michel-fontænen</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>2.34122139210128</longitude>
+					<latitude>48.855177081133</latitude>
+					<altitude>23.55649937886117</altitude>
+					<heading>4.101480007523273</heading>
+					<tilt>14.87303639829489</tilt>
+					<range>1183.678796326226</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin62</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>2.343871630977337,48.85334506346958,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Den fiskende kats gade</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>2.346852997884688</longitude>
+					<latitude>48.85325136545716</latitude>
+					<altitude>9.737697828013015</altitude>
+					<heading>4.104679544345405</heading>
+					<tilt>44.7424438234713</tilt>
+					<range>353.8301683950417</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin62</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>2.346147995801056,48.85312781595756,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Ladybugs udsigt</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>2.350749266618177</longitude>
+					<latitude>48.85142773082013</latitude>
+					<altitude>0</altitude>
+					<heading>4.107613471828655</heading>
+					<tilt>44.74246234586994</tilt>
+					<range>356.7593748408373</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin62</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>2.351232581623615,48.85121347471662,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Cafe - ikke for kaffedrikkere</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>2.354156624106059</longitude>
+					<latitude>48.85305949881648</latitude>
+					<altitude>23.89373275495575</altitude>
+					<heading>8.326400802535593</heading>
+					<tilt>8.911788220027084</tilt>
+					<range>233.492359150335</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin62</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>2.353668310653365,48.85291430660126,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Cafe med for få coroissants</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>2.354156624106059</longitude>
+					<latitude>48.85305949881648</latitude>
+					<altitude>23.89373275495575</altitude>
+					<heading>8.326400802535593</heading>
+					<tilt>8.911788220027084</tilt>
+					<range>233.492359150335</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin62</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>2.354115816217151,48.85341246488274,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Plancher om reparationsarbejdet</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>2.350178517907104</longitude>
+					<latitude>48.85367342386439</latitude>
+					<altitude>17.19839563009879</altitude>
+					<heading>8.323405197539884</heading>
+					<tilt>8.91179584874104</tilt>
+					<range>238.9743564779211</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin62</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>2.349740094021169,48.85342190681179,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Sentimentale fotos</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>2.348340455640154</longitude>
+					<latitude>48.85365245588963</latitude>
+					<altitude>0</altitude>
+					<heading>8.322021082999248</heading>
+					<tilt>8.911818735281798</tilt>
+					<range>255.4204152430077</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin62</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>2.348172564034596,48.85327251599628,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>For lang kø</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>2.345951056300688</longitude>
+					<latitude>48.8552088012419</latitude>
+					<altitude>19.02193007372247</altitude>
+					<heading>8.320221766781367</heading>
+					<tilt>8.911793655304841</tilt>
+					<range>237.3981344337014</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin62</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>2.345257754515946,48.85497378293753,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Madudstilling i Conciergeriets gotiske riddersal</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>2.34632499781638</longitude>
+					<latitude>48.85609782069827</latitude>
+					<altitude>27.85244835416903</altitude>
+					<heading>8.320503368509346</heading>
+					<tilt>8.911789133453846</tilt>
+					<range>234.1488207098166</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin62</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>2.345737068641896,48.8559326699798,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Sankt Jakobs tårn</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>2.3483412442396</longitude>
+					<latitude>48.85790413727155</latitude>
+					<altitude>10.12915524630094</altitude>
+					<heading>8.322021746353855</heading>
+					<tilt>8.911803306443332</tilt>
+					<range>244.3333231697777</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin62</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>2.348885447959308,48.85797716794238,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Stravinsky-fontænen under restauration</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>2.350693043911787</longitude>
+					<latitude>48.85941891487043</latitude>
+					<altitude>0</altitude>
+					<heading>8.323792845933097</heading>
+					<tilt>8.911814343349313</tilt>
+					<range>252.2645558872844</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin62</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>2.351512400382398,48.85945447503117,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Frokostsalatindkøb</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>2.353842957314358</longitude>
+					<latitude>48.86036023014996</latitude>
+					<altitude>12.81592648772418</altitude>
+					<heading>8.326141733309726</heading>
+					<tilt>8.93758104581001</tilt>
+					<range>425.9443769254089</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin62</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>2.353322854569606,48.86052762657358,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Frokost på granitpullerter</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>2.352732631019752</longitude>
+					<latitude>48.86044574308783</latitude>
+					<altitude>50.30029740747919</altitude>
+					<heading>8.324692947426771</heading>
+					<tilt>16.82392933426414</tilt>
+					<range>330.2701417524442</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin62</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>2.351496734095091,48.86091478301368,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Pompidou-centeret</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>2.352732631019752</longitude>
+					<latitude>48.86044574308783</latitude>
+					<altitude>50.30029740747919</altitude>
+					<heading>8.324692947426771</heading>
+					<tilt>16.82392933426414</tilt>
+					<range>330.2701417524442</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin62</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>2.352732631019752,48.86044574308783,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Mandag aften</name>
+				<styleUrl>#msn_ylw-pushpin3</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						2.351386728190905,48.86083662105948,0 2.350998503620074,48.86028398096153,0 2.349251370339365,48.8601154585959,0 2.349089744273933,48.85974586338577,0 2.348418626792246,48.85859020454371,0 2.348040736819292,48.85798904865477,0 2.347190994994428,48.85797599813981,0 2.346863404776995,48.85733373840675,0 2.346161208424551,48.85608238815775,0 2.345133498372711,48.85470991552629,0 2.344091095011263,48.85378250003461,0 2.343473246009602,48.85242092088804,0 2.342799767060293,48.85086384872254,0 2.342637679079775,48.85047593425525,0 2.340272298119595,48.84987705427958,0 2.340095141243266,48.84962335047133,0 2.340910587373806,48.84778416378849,0 2.340810912017577,48.84760167649292,0 2.340540290361532,48.84759138990805,0 2.340140169230645,48.84746985564316,0 2.340417376366171,48.84698139496603,0 2.340526718486129,48.84674288293891,0 2.339994951455759,48.84584236159798,0 2.339236931113764,48.84411373761585,0 2.339209213472002,48.84305377860834,0 2.339149949126151,48.84191615260763,0 2.339005734895554,48.84145532405263,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>Aftensmad Le Saigon d&apos;Antan</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>2.340526959054254</longitude>
+					<latitude>48.84938503390112</latitude>
+					<altitude>15.39812370934763</altitude>
+					<heading>-10.59276703505456</heading>
+					<tilt>37.11455788347221</tilt>
+					<range>203.1342881237158</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin4</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>2.340123056616179,48.84953896174875,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Kolossalt politiopbud</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>2.34111564250526</longitude>
+					<latitude>48.84813793822776</latitude>
+					<altitude>15.79629750195613</altitude>
+					<heading>-10.59232377537552</heading>
+					<tilt>37.11453022384323</tilt>
+					<range>198.0317151004602</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin100</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>2.340989371595632,48.84782174652492,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>18. april - Nunni fødselsdag</name>
+			<Placemark>
+				<name>Tirsdag morgen</name>
+				<styleUrl>#m_ylw-pushpin09</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						2.339143430898354,48.84137554681958,0 2.339062730669814,48.84406784446054,0 2.341707673188078,48.84874494155484,0 2.342700641318898,48.85035300608226,0 2.342833515967961,48.8506147729824,0 2.34355100278494,48.85037538433732,0 2.342465185791722,48.85034521902465,0 2.33915686334409,48.84981543704701,0 2.338426448588271,48.8498020316794,0 2.338332746906298,48.84923249518932,0 2.335924448380435,48.84928698918466,0 2.335681345414038,48.85075378278742,0 2.334854834719173,48.8507397215536,0 2.334987527893342,48.85094905160124,0 2.33476833781973,48.8507224052895,0 2.333901861482071,48.85068300663073,0 2.33331165584217,48.85082513711713,0 2.333350113607962,48.85053050368832,0 2.332956120948984,48.85122277721895,0 2.333179921935866,48.85263696592186,0 2.333454025526551,48.85369508641846,0 2.333623096859645,48.85409533676825,0 2.334276449798776,48.85396742217985,0 2.333610247880504,48.85415523982582,0 2.333947761687507,48.8555451347043,0 2.329888034577703,48.85693669583238,0 2.326699005871575,48.85818007231586,0 2.323740152814329,48.85928873281528,0 2.324944561387543,48.86034132402805,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>Musée de Cluny</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>2.344185233500526</longitude>
+					<latitude>48.8510537987078</latitude>
+					<altitude>0</altitude>
+					<heading>-10.58785388578652</heading>
+					<tilt>46.09916814348587</tilt>
+					<range>510.9292106411345</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin100</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>2.343951876506918,48.85052538911035,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Odeon</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>2.3396389046017</longitude>
+					<latitude>48.84957046775634</latitude>
+					<altitude>15.12014558080381</altitude>
+					<heading>-10.59298623556586</heading>
+					<tilt>33.43057538553264</tilt>
+					<range>833.1247096648633</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin100</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>2.338667492763171,48.84953118378414,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Saint Sulpice</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>2.336697643130621</longitude>
+					<latitude>48.84775605820007</latitude>
+					<altitude>0</altitude>
+					<heading>-10.59563081201912</heading>
+					<tilt>31.0240224880977</tilt>
+					<range>1873.463497334296</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin100</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>2.335154507683497,48.85098154841488,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Frokost - Madpakker</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>2.333363690196156</longitude>
+					<latitude>48.85252136351698</latitude>
+					<altitude>0</altitude>
+					<heading>0.3469776450459456</heading>
+					<tilt>21.4883033262346</tilt>
+					<range>1482.831304857774</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin017</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>2.333296675207937,48.85045192691495,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Saint Germain des Pres</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>2.33584538130365</longitude>
+					<latitude>48.85373450967393</latitude>
+					<altitude>13.42586565027769</altitude>
+					<heading>-10.59584256495469</heading>
+					<tilt>33.43063809665348</tilt>
+					<range>845.7969883707324</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin100</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>2.334166861366047,48.85413939367372,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Musée d&apos;Orsay</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>2.331539064143926</longitude>
+					<latitude>48.86068628028419</latitude>
+					<altitude>0</altitude>
+					<heading>-10.59737658377603</heading>
+					<tilt>46.10481357734187</tilt>
+					<range>1383.171897834259</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin100</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>2.325727699491469,48.86022349484473,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Tirsdag eftermiddag - med bus</name>
+				<styleUrl>#m_ylw-pushpin00</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						2.325119273390968,48.86060269143999,0 2.325382247418222,48.8609418831361,0 2.324478692787746,48.86130807902299,0 2.325121884180312,48.86246928722044,0 2.331208195845087,48.8605068861893,0 2.337542993047468,48.85935296426774,0 2.341733515428766,48.85863837170243,0 2.346486318937362,48.85730273647004,0 2.349024756969296,48.8565968694076,0 2.352571439416167,48.85529032747028,0 2.353244534443382,48.85595042824896,0 2.355309379241926,48.85593983810043,0 2.356384701960175,48.85582171672495,0 2.357454781549113,48.85548880797578,0 2.359607020141499,48.85549691443497,0 2.36164401055992,48.85511722428505,0 2.36305368013471,48.85471825047583,0 2.363734588680637,48.85555378134642,0 2.36432417110384,48.85649390361313,0 2.36446778400685,48.85658453221839,0 2.364423564687823,48.85644232408886,0 2.365567163628768,48.85627512146189,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>Busskift</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>2.353592543546357</longitude>
+					<latitude>48.85899732217863</latitude>
+					<altitude>0</altitude>
+					<heading>0.01949912858822164</heading>
+					<tilt>42.04903166231795</tilt>
+					<range>2037.526555275264</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin116</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>2.347009702961862,48.85721939165092,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Fødselsdagskage - Carette</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>2.365220403873038</longitude>
+					<latitude>48.8558575136466</latitude>
+					<altitude>0</altitude>
+					<heading>-0.3945031959377173</heading>
+					<tilt>52.87102803343715</tilt>
+					<range>268.1663338913679</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_bars0</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>2.365575870509025,48.85627506212056,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Le Café des Chats</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>2.371819099926551</longitude>
+					<latitude>48.85587389967688</latitude>
+					<altitude>20.26746840795367</altitude>
+					<heading>-5.56791878230355e-011</heading>
+					<tilt>0</tilt>
+					<range>979.7325323649303</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin1</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>2.371819099926551,48.85587389967688,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Fodbolddrenge</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>2.36716602432155</longitude>
+					<latitude>48.85449365681862</latitude>
+					<altitude>21.24616785019238</altitude>
+					<heading>-0.003504065388992712</heading>
+					<tilt>0</tilt>
+					<range>980.9215333465344</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin1</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>2.365656319175853,48.85590397415146,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Tirsdag eftermiddag - a</name>
+				<styleUrl>#msn_ylw-pushpin10</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						2.365565368238971,48.85625196696072,0 2.365580897495572,48.85593371447673,0 2.365822675550229,48.85586394952475,0 2.366184896685994,48.85583417728073,0 2.366689582341621,48.85600180283126,0 2.36818768787201,48.85583827739962,0 2.369156771843819,48.8558830155629,0 2.369941105588331,48.85565480750906,0 2.370606975121163,48.85552647919577,0 2.371684907217686,48.85567316399416,0 2.371989549742333,48.85584259642144,0 2.371386539299873,48.85554240431954,0 2.370576118733019,48.85542699221462,0 2.370271868134584,48.85571393980472,0 2.370513106614156,48.85663146232329,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>Metro Bréguet – Sabin</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>2.370525603916709</longitude>
+					<latitude>48.85605550703615</latitude>
+					<altitude>9.97927064670435</altitude>
+					<heading>0.001273187076435183</heading>
+					<tilt>37.1761997907927</tilt>
+					<range>392.8126783461925</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_rail</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>2.370552389049581,48.85669022909601,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Metro Chateau Rouge</name>
+				<Camera>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>2.352501943888374</longitude>
+					<latitude>48.88414378905606</latitude>
+					<altitude>492.0842134160188</altitude>
+					<heading>-36.4713269778398</heading>
+					<tilt>42.09644117141619</tilt>
+					<roll>4.388249864599053</roll>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</Camera>
+				<styleUrl>#msn_rail</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>2.349330997994295,48.88726795069325,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Tirsdag eftermiddag - b</name>
+				<styleUrl>#m_ylw-pushpin03</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						2.349368123911255,48.88737285351433,0 2.348853855610651,48.88775342157964,0 2.348090277203008,48.88835496567486,0 2.347682553725747,48.88696989849413,0 2.345129849754504,48.8864331678293,0 2.344228475128525,48.88618034760629,0 2.343827708605637,48.8860461029839,0 2.343583767972444,48.88591882159641,0 2.344006028190275,48.8861625597626,0 2.343546340889591,48.88623737382176,0 2.343108439911912,48.88617778459632,0 2.342859790103329,48.88630023148117,0 2.343312347654423,48.8865746691887,0 2.343365995168973,48.88629601932055,0 2.343193500671768,48.88615928335147,0 2.342952068877591,48.88616095843009,0 2.343548418563584,48.88627996644898,0 2.343904585180863,48.88622090963665,0 2.34470318275765,48.88635656103433,0 2.347371888448244,48.88681365185094,0 2.347808877718334,48.88750631011913,0 2.34801730739661,48.88846394628006,0 2.348875226429545,48.88778089794376,0 2.348801667110689,48.8877233840831,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>Fødselsdagsmiddag - Le Normandie</name>
+				<Camera>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>2.3521518891229</longitude>
+					<latitude>48.8846567613716</latitude>
+					<altitude>489.1992589853701</altitude>
+					<heading>-36.47159069196236</heading>
+					<tilt>42.09644114417569</tilt>
+					<roll>4.388249866280114</roll>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</Camera>
+				<styleUrl>#m_ylw-pushpin11</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>2.348777163625748,48.88765864022809,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Basilique de Sacre Coeur de Montmatre</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>2.343110000023152</longitude>
+					<latitude>48.88640134739545</latitude>
+					<altitude>29.53139262331428</altitude>
+					<heading>3.112550446680474e-011</heading>
+					<tilt>44.99970134739546</tilt>
+					<range>952.9821063062821</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin1</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>2.343110000023152,48.88640134739545,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Tirsdag aften - a</name>
+				<styleUrl>#m_ylw-pushpin08</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						2.348877309174282,48.8877139019777,0 2.349415580526233,48.88729258324705,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>Metro Port Royal</name>
+				<Camera>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>2.341600681869034</longitude>
+					<latitude>48.83658854402634</latitude>
+					<altitude>850.0832232641141</altitude>
+					<heading>-45.57585792761907</heading>
+					<tilt>29.98815296809703</tilt>
+					<roll>5.880835275124833</roll>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</Camera>
+				<styleUrl>#msn_rail</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>2.33684491576285,48.83965624558009,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Tirsdag aften - b</name>
+				<styleUrl>#m_ylw-pushpin08</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						2.336889347986251,48.83968143563211,0 2.33750344997703,48.84057990585668,0 2.337988426565958,48.84150228793565,0 2.338841110421401,48.8414498076142,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>bartur</name>
+				<styleUrl>#m_ylw-pushpin</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						2.354494568408441,48.87274003680837,0 2.355902318691665,48.87231849734548,0 2.357336318465291,48.87175477395608,0 2.358884202313367,48.87088152570817,0 2.357748511602513,48.86927539010039,0 2.359174744467123,48.86883598008259,0 2.359903237070724,48.86855624406044,0 2.36112360935677,48.86832036055726,0 2.361885979430001,48.86843368711045,0 2.361137289275967,48.86824948262802,0 2.359152928607564,48.86851242135552,0 2.357543305487553,48.86875796593415,0 2.355957461312674,48.8690466194037,0 2.355603958443358,48.86891345925115,0 2.35544511241131,48.86893415772327,0 2.355358489779982,48.86874284563158,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>Fødselsdagsdrinks - Lavomatic</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>2.361869700422938</longitude>
+					<latitude>48.8684697003456</latitude>
+					<altitude>23.20881746814716</altitude>
+					<heading>2.508324571069443e-011</heading>
+					<tilt>0</tilt>
+					<range>977.2619136594273</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin0</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>2.361869700422938,48.8684697003456,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>19. april</name>
+			<open>1</open>
+			<Placemark>
+				<name>F.Lorée - de Gourdon</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>2.322463800019554</longitude>
+					<latitude>48.87865880014745</latitude>
+					<altitude>18.4594205663365</altitude>
+					<heading>1.427929902709805e-011</heading>
+					<tilt>0</tilt>
+					<range>981.5405777979142</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin18</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>2.322463800019554,48.87865880014745,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Onsdag morgen - a</name>
+				<styleUrl>#msn_ylw-pushpin4</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						2.338898685290873,48.84135855659989,0 2.33793285309817,48.84151143064032,0 2.337513326871132,48.84182164875372,0 2.337068474058206,48.84172423270579,0 2.336893185798918,48.84257886539908,0 2.335453508572465,48.84273064924063,0 2.334697822507421,48.84268761835102,0 2.332756157040152,48.8446560983328,0 2.332409708693202,48.84509118629138,0 2.33061711054668,48.84407718802599,0 2.328713678544625,48.84539826458934,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>Métro Notre-Dame-des-Champs</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>2.328845388097849</longitude>
+					<latitude>48.84573857882786</latitude>
+					<altitude>24.42360972909771</altitude>
+					<heading>0.0004148349553319298</heading>
+					<tilt>45.68682995185318</tilt>
+					<range>481.6993072478433</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin6</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>2.328560662968116,48.845329996682,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Onsdag morgen - b</name>
+				<styleUrl>#msn_ylw-pushpin4</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						2.326133815883205,48.87632080175624,0 2.326357996216681,48.87650594147518,0 2.325082238293439,48.87630024709899,0 2.324814123026731,48.87588324526094,0 2.324005683323129,48.87572271368612,0 2.322401648668089,48.87862621374164,0 2.322563049586619,48.87818173885054,0 2.322851923469733,48.87840927087213,0 2.323321272559067,48.87661907212415,0 2.324419726143678,48.87518640773767,0 2.324688244648929,48.87452405532069,0 2.324084086639409,48.87275794840465,0 2.323014013880187,48.87051170158,0 2.323618567578389,48.869477314704,0 2.323752896998257,48.86915308226679,0 2.323247112481728,48.868300481581,0 2.327841297998003,48.86702155251631,0 2.335119363433207,48.86338075649947,0 2.339039877225038,48.86218976641721,0 2.341279411061936,48.86161899746466,0 2.340279430585093,48.85994047090635,0 2.340044211233017,48.85934544660799,0 2.342435706129091,48.85849192662616,0 2.346644306824515,48.85727823371759,0 2.346314947858255,48.8560146414513,0 2.345420042355593,48.85502957726305,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>Sainte-Chapelle</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>2.344962029508304</longitude>
+					<latitude>48.85535345422098</latitude>
+					<altitude>0</altitude>
+					<heading>0.0005486756845190617</heading>
+					<tilt>45.1406908708233</tilt>
+					<range>980.6223122384306</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>2.344962029508304,48.85535345422099,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Onsdag middag</name>
+				<styleUrl>#m_ylw-pushpin1</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						2.344756882531038,48.85543739888796,0 2.345184633925304,48.85525568235834,0 2.345295818565298,48.85521169400574,0 2.345540152059376,48.85566609378892,0 2.345831414557476,48.85551721939511,0 2.346156403529509,48.85595453814286,0 2.34615794056201,48.85626062629489,0 2.344608197106066,48.85676812559987,0 2.343901498471754,48.85685083539522,0 2.343050631599715,48.85695411981806,0 2.342249754139125,48.85708407732057,0 2.341091018935937,48.85720245050107,0 2.340924379455622,48.85729607144042,0 2.340698385843318,48.85728876451647,0 2.340515025700389,48.8572299497954,0 2.340270945644563,48.85735931250767,0 2.339483704496252,48.85769103300219,0 2.339420142512536,48.85774631220717,0 2.340041552310874,48.85762569921233,0 2.34007386638597,48.8576110704124,0 2.340391293093329,48.85751428322002,0 2.340703952729211,48.85741047045698,0 2.34065390427515,48.85724514116161,0 2.340847620517956,48.85720599466163,0 2.341075907786605,48.85696090085616,0 2.340704908847495,48.85654958807871,0 2.340622304822075,48.85636801487075,0 2.340541962085951,48.85637989654935,0 2.339977234515924,48.85551971043492,0 2.338389776323406,48.85369318418018,0 2.338773646738861,48.85251980012251,0 2.338729398451267,48.85212451219147,0 2.338787344590814,48.85182146119334,0 2.339486863693376,48.85092143912688,0 2.340387352374898,48.84889709829008,0 2.340959231522055,48.84787733676784,0 2.341146667943579,48.8475842719629,0 2.340956462575563,48.84723994385512,0 2.339214943774515,48.84403647723646,0 2.339137947783971,48.84219070747551,0 2.339066634843239,48.84137807794522,0 2.339284379768669,48.84128922738656,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+		</Folder>
+	</Folder>
+</Document>
+</kml>

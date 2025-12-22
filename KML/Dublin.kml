@@ -1,0 +1,2164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Document>
+	<name>Dublin.kml</name>
+	<Style id="sn_ylw-pushpin013">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ffff0000</color>
+			<width>3.2</width>
+		</LineStyle>
+	</Style>
+	<Style id="s_ylw-pushpin39">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ffff0000</color>
+			<width>3</width>
+		</LineStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl5">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/lodging.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin03">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin0</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin_hl4">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin6">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin10</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl1</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="m_ylw-pushpin08">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin27</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl5</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin_hl2">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/rail.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin2">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ffff0000</color>
+			<width>3</width>
+		</LineStyle>
+	</Style>
+	<Style id="sn_airports">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/airports.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl3">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>3</width>
+		</LineStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin01">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin212</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl00</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin1">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin0</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin16</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin_hl1">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_bus0">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/bus.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin04">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin2</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl18</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_lodging5">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_lodging3</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_lodging4</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_lodging1">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/lodging.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin10">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_airports">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/airports.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl125">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ffff0000</color>
+			<width>3</width>
+		</LineStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl83">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/rail.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin00">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/bus.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl00">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/rail.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/rail.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin18">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin0</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin9">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin10">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin013</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin04</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>3</width>
+		</LineStyle>
+	</Style>
+	<StyleMap id="msn_rail">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_rail</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_rail</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_airports">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_airports</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_airports</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="m_ylw-pushpin0">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin39</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl8</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="m_ylw-pushpin213">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin14</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl83</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin1">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/ferry.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl8">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ffff0000</color>
+			<width>3</width>
+		</LineStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin2">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin00</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl113</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin00">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin3</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin3</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin16">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_bus3">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/bus.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_bus4">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_bus2</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_bus</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_lodging4">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/lodging.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl43">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/rail.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin20">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin1</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl12</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_lodging">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/lodging.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_lodging2">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_lodging1</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_lodging</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_bus0">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/bus.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/rail.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin4">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin13</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl125</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_rail">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/rail.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin0">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin62">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin390</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl44</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin01">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>3</width>
+		</LineStyle>
+	</Style>
+	<Style id="s_ylw-pushpin212">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/rail.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl001">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/lodging.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin3">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin5</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl2</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="m_ylw-pushpin008">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin16</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl43</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin_hl18">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ffff0000</color>
+			<width>3</width>
+		</LineStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin3">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin390">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>3</width>
+		</LineStyle>
+	</Style>
+	<Style id="sn_rail">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/rail.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin04">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ffff0000</color>
+			<width>3.2</width>
+		</LineStyle>
+	</Style>
+	<Style id="s_ylw-pushpin5">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/rail.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin4">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>3</width>
+		</LineStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl0</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin16">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/rail.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ffff00ff</color>
+			<width>3</width>
+		</LineStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin2">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>3.2</width>
+		</LineStyle>
+	</Style>
+	<Style id="s_ylw-pushpin14">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/rail.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin04">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>3.2</width>
+		</LineStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin3">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin0">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ffff00ff</color>
+			<width>3</width>
+		</LineStyle>
+	</Style>
+	<Style id="sh_bus">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/bus.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl10">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ffff0000</color>
+			<width>3</width>
+		</LineStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin01">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>3</width>
+		</LineStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl113">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/bus.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin119">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin02</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl001</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin_hl12">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/ferry.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin0">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/rail.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin0">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin04</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin2</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin6">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin01</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin01</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin13">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ffff0000</color>
+			<width>3</width>
+		</LineStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl0">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/rail.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin27">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/lodging.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin11">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin12</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl10</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_bus2">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/bus.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_bus1">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_bus0</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_bus0</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin4</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="m_ylw-pushpin1">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin9</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl4</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin02">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/lodging.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin12">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ffff0000</color>
+			<width>3</width>
+		</LineStyle>
+	</Style>
+	<Style id="sn_lodging3">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/lodging.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_bus0">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_bus3</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_bus3</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="m_ylw-pushpin00">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin017</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl3</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin_hl44">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>3</width>
+		</LineStyle>
+	</Style>
+	<Style id="sh_bus3">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/bus.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin017">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>3</width>
+		</LineStyle>
+	</Style>
+	<Folder>
+		<name>Sommerferie &apos;23</name>
+		<open>1</open>
+		<Folder>
+			<name>8/7 - Smethwick</name>
+			<Placemark>
+				<name>Manchester Airport</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>-2.271786434628559</longitude>
+					<latitude>53.36188653444549</latitude>
+					<altitude>0</altitude>
+					<heading>0.003409107494145459</heading>
+					<tilt>20.76726326748447</tilt>
+					<range>1113.611259525731</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_airports</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>-2.274759577016494,53.36162181309064,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Manchester Airport Train Station</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>-2.272249644400198</longitude>
+					<latitude>53.36518791669332</latitude>
+					<altitude>0</altitude>
+					<heading>0.002998046471658781</heading>
+					<tilt>28.55692769800817</tilt>
+					<range>239.9257235546741</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_rail</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>-2.272249644400199,53.36518791669331,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Manchester Airport - Manchester Piccadilly</name>
+				<styleUrl>#msn_ylw-pushpin10</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						-2.271124735956573,53.36507282058572,0 -2.263679539951856,53.3658246664212,0 -2.251008991008906,53.36401881968781,0 -2.244304005664065,53.36206969902155,0 -2.238865319631942,53.36387406849698,0 -2.237008579589765,53.36892162829284,0 -2.230256465728375,53.39319794315576,0 -2.218896591076125,53.41459253614411,0 -2.207623456013216,53.43542611521401,0 -2.195410907408201,53.45039270646407,0 -2.203572494417376,53.46434578650123,0 -2.21060522205747,53.46995400633929,0 -2.22892710227306,53.47718599449195,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>Hamilton Drive</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>-1.950471583416542</longitude>
+					<latitude>52.48926671778578</latitude>
+					<altitude>0</altitude>
+					<heading>-9.870294649757197</heading>
+					<tilt>30.00200523259183</tilt>
+					<range>446.4240170702807</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_lodging2</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>-1.950738495322389,52.48935141542205,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Her troede vi at vi skulle bo</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>-2.000139498879581</longitude>
+					<latitude>52.50211510165859</latitude>
+					<altitude>0</altitude>
+					<heading>8.88632466720172e-010</heading>
+					<tilt>0</tilt>
+					<range>1000.000022447711</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin00</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>-2.000139498879581,52.50211510165859,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Manchester Piccadilly</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>-2.228306129623399</longitude>
+					<latitude>53.47761908299762</latitude>
+					<altitude>0</altitude>
+					<heading>0.005353138273659666</heading>
+					<tilt>30.36654181897456</tilt>
+					<range>710.6448198104354</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin01</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>-2.229933705315549,53.47700146190056,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Manchester Piccadilly - Oxford Train Station</name>
+				<styleUrl>#msn_ylw-pushpin10</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						-2.229340787296167,53.47733588046224,0 -2.214363077206816,53.47139950812738,0 -2.199070610166072,53.45753630090326,0 -2.19102668271808,53.44146429327236,0 -2.16711572755087,53.41189028745886,0 -2.178587605767544,53.40769099821637,0 -2.179988552145179,53.39117154036621,0 -2.147651159116844,53.38042736327351,0 -2.099424048309798,53.3680101732181,0 -2.096915633476821,53.36682648563073,0 -2.093785740924987,53.36525391057464,0 -2.09096672273044,53.36388351721347,0 -2.085956264227793,53.36116205864158,0 -2.083796198428755,53.35998231895668,0 -2.080374261076758,53.35841978024495,0 -2.07757403535204,53.35705996253052,0 -2.075114437695155,53.35493757035163,0 -2.072664063551382,53.35281708698954,0 -2.071480383248678,53.35051577044564,0 -2.070280776635944,53.34879049101477,0 -2.070009142502927,53.34764260711373,0 -2.069437099310771,53.34611306898853,0 -2.069480158182,53.34515724760083,0 -2.069581688017739,53.34324364943471,0 -2.069969661158813,53.34190645828209,0 -2.070668024692065,53.34057284394624,0 -2.071957972448177,53.33962724076326,0 -2.073542343472203,53.33887551149626,0 -2.076671805615509,53.3381338025556,0 -2.078843987278459,53.33814600638268,0 -2.079464961415551,53.33814948320249,0 -2.08068349518186,53.33891577538865,0 -2.083129203025216,53.34082654966925,0 -2.08530634189624,53.34121776595691,0 -2.086586889949176,53.33989493094763,0 -2.086599011588698,53.33932572581558,0 -2.086331248885948,53.33780383056782,0 -2.105364897537387,53.31016565368518,0 -2.109619020451055,53.28224506110026,0 -2.123386162942742,53.26182731138423,0 -2.126140964505337,53.20747893583177,0 -2.197419286208397,53.12756543592008,0 -2.241985112375496,53.06072893134044,0 -2.234758867506051,53.05045995591345,0 -2.218550797717827,53.03214946030876,0 -2.212262726803106,53.02732297066447,0 -2.208673299070404,53.02410240244031,0 -2.205973822976695,53.021938308868,0 -2.198795976680958,53.01440269721979,0 -2.195231938652985,53.01067979497207,0 -2.19167645523749,53.00750870177648,0 -2.188097966920981,53.00320812825763,0 -2.183609420286927,52.99996450835041,0 -2.183608871389819,52.99942272508681,0 -2.140013749572971,52.81100616736786,0 -2.120755793599005,52.57926571403824,0 -1.892936934987169,52.49325308950228,0 -1.503316378148244,52.40104440110303,0 -1.607899887173774,52.27475837840694,0 -1.328425084675396,52.07110952867524,0 -1.286759550754294,51.78594540626632,0 -1.269966282767751,51.75304935183921,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>Oxford Train Station</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>-1.270739423864334</longitude>
+					<latitude>51.75339652542301</latitude>
+					<altitude>0</altitude>
+					<heading>0.7506856634592698</heading>
+					<tilt>21.55957532775078</tilt>
+					<range>554.0143255708055</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin01</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>-1.270196860283591,51.75327378465642,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Oxford - Birmingham</name>
+				<styleUrl>#msn_ylw-pushpin10</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						-1.260970576651,51.75291065987083,0 -1.281144953504558,51.79034645176527,0 -1.324816682016784,52.07139392394952,0 -1.605197998669393,52.27401598638113,0 -1.498197175325648,52.40279339704064,0 -1.898593751770644,52.4776783321844,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>Birmingham New Street Station</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>-1.89893768527604</longitude>
+					<latitude>52.47747979709422</latitude>
+					<altitude>0</altitude>
+					<heading>0.2363404988198462</heading>
+					<tilt>30.00110125238837</tilt>
+					<range>245.1910584744244</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin01</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>-1.89893768527604,52.47747979709422,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Busstop</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>-1.899154785234161</longitude>
+					<latitude>52.47664001983959</latitude>
+					<altitude>0</altitude>
+					<heading>0.2361686997261262</heading>
+					<tilt>30.00035657574689</tilt>
+					<range>79.12636474371098</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_bus4</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>-1.899154785234161,52.47664001983958,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Busstop</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>-1.951151095343029</longitude>
+					<latitude>52.48768642986144</latitude>
+					<altitude>0</altitude>
+					<heading>0.1877127606795404</heading>
+					<tilt>30.00049532620889</tilt>
+					<range>111.3695831406088</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_bus4</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>-1.951487579288426,52.4876268616522,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>New Street Station - Hamilton Drive</name>
+				<styleUrl>#msn_ylw-pushpin0</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						-1.899543766746911,52.47671964972484,0 -1.899845110321884,52.47650753830141,0 -1.901233867525359,52.47767335106376,0 -1.903824649093808,52.48011020584394,0 -1.906945736758433,52.48114513508882,0 -1.910656969821547,52.4821712289744,0 -1.915814768514302,52.48270879421444,0 -1.919354121640843,52.4847386958891,0 -1.929041307479354,52.48674418008928,0 -1.937512200533147,52.48665442857359,0 -1.941882272185586,52.48646741737141,0 -1.948522411831486,52.48778217750424,0 -1.951462285687912,52.48783863008409,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>9/7 - Shrewsbury</name>
+			<Placemark>
+				<name>Lancasterian Court</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>-2.746896094727164</longitude>
+					<latitude>52.71282394789115</latitude>
+					<altitude>0</altitude>
+					<heading>0.0009416760402599681</heading>
+					<tilt>21.7828423669709</tilt>
+					<range>173.5690995733723</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_lodging5</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>-2.747203286636585,52.71302928651596,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Busstop</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>-2.070773955126609</longitude>
+					<latitude>52.51325477946786</latitude>
+					<altitude>0</altitude>
+					<heading>0.08908202643467421</heading>
+					<tilt>19.78931129567268</tilt>
+					<range>211.3948380089049</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_bus4</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>-2.069327842261114,52.51310770562417,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Grove Lane - Black Country Living Museum</name>
+				<styleUrl>#msn_ylw-pushpin6</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						-1.951072719958686,52.4879551306999,0 -1.95856420650964,52.48670458996659,0 -1.965329708655671,52.48845510583795,0 -1.969268485484774,52.49405854992982,0 -1.975930097334659,52.49886849005777,0 -1.980489233901323,52.50125272137373,0 -1.991476606802678,52.50275854569326,0 -2.000266089580093,52.50186991724089,0 -2.005539320152203,52.50271224081666,0 -2.01589964145925,52.501573685885,0 -2.02011998587496,52.50257230491567,0 -2.019128383718983,52.50523274590974,0 -2.013854545034723,52.50808894052665,0 -2.018124265130367,52.50911110159155,0 -2.023640786039983,52.50726335184423,0 -2.030133681637439,52.51080834962211,0 -2.041317624010465,52.51404536673307,0 -2.053111023757268,52.51454401853458,0 -2.055661824003924,52.51479156877945,0 -2.062048675035752,52.51343729808663,0 -2.069035604606349,52.51301340260092,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>Tipton Train Station</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>-2.064770314807034</longitude>
+					<latitude>52.53020763494268</latitude>
+					<altitude>0</altitude>
+					<heading>0.09930464045053315</heading>
+					<tilt>28.51171756903468</tilt>
+					<range>399.0178142311307</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin3</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>-2.065719265853576,52.53043556061148,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Wolverhampton Train Station</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>-2.11791663132897</longitude>
+					<latitude>52.58737760718276</latitude>
+					<altitude>0</altitude>
+					<heading>0.06371068180527995</heading>
+					<tilt>11.97116188504818</tilt>
+					<range>698.0656569323082</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin3</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>-2.119564674173563,52.58744042359078,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Shrewsbury Train Station</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>-2.749888690073065</longitude>
+					<latitude>52.71222952938135</latitude>
+					<altitude>0</altitude>
+					<heading>1.3114413718764e-008</heading>
+					<tilt>26.55296445437832</tilt>
+					<range>1031.907097274466</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin3</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>-2.749888690073065,52.71222952938135,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Tipton - Wolverhampton</name>
+				<styleUrl>#m_ylw-pushpin11</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						-2.066039042640306,52.53057071560043,0 -2.078868416908708,52.53496188975545,0 -2.085508334558827,52.5441956146874,0 -2.089902150628888,52.55378529703108,0 -2.100608981392812,52.56421102894028,0 -2.106430716527072,52.57458578084558,0 -2.11302463477983,52.58503586196806,0 -2.119583922025545,52.58797225961728,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>Wolverhampton - Shrewsbury</name>
+				<styleUrl>#m_ylw-pushpin11</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						-2.120001674611489,52.58776930053278,0 -2.126382847020115,52.59678219397163,0 -2.13859490224888,52.60835343657946,0 -2.171697426713135,52.61866746662554,0 -2.219166618408539,52.63024643346801,0 -2.253825335990532,52.63297618214158,0 -2.288490003025187,52.64462626965599,0 -2.322403590965332,52.64663462094129,0 -2.371884539640399,52.66657933853944,0 -2.416024613344183,52.67332378409105,0 -2.439893074366251,52.67866045510163,0 -2.447520255046437,52.68898919779696,0 -2.464884840700445,52.70016579728259,0 -2.510041814418354,52.70041074937337,0 -2.528656399160261,52.70251625127348,0 -2.553989161456612,52.71122159527082,0 -2.588838627948004,52.70700551781309,0 -2.59143447871974,52.70633969581334,0 -2.59581902585596,52.70526166485691,0 -2.625708375734291,52.69905436822481,0 -2.698692742932517,52.70720775209612,0 -2.741708002957083,52.71029556313362,0 -2.750605485870662,52.7132729206471,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>10-12/7 - Llanwrtyd Wells</name>
+			<Placemark>
+				<name>Cerdyn Villa Guesthouse</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>-3.627497390188017</longitude>
+					<latitude>52.1052606312449</latitude>
+					<altitude>0</altitude>
+					<heading>0.007779865245392042</heading>
+					<tilt>12.86630374794264</tilt>
+					<range>563.4573118623682</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_lodging5</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>-3.627092217251235,52.10577455128896,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Llanwrtyd Station</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>-3.632412443200805</longitude>
+					<latitude>52.10459446697143</latitude>
+					<altitude>0</altitude>
+					<heading>0.003899514543229588</heading>
+					<tilt>16.47548665563682</tilt>
+					<range>425.0899634118914</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin008</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>-3.632207099009015,52.10471091062539,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Shrewsbury - Llanwrtyd</name>
+				<styleUrl>#m_ylw-pushpin4</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						-2.749274026200015,52.712502892484,0 -2.742693783232272,52.70353007186596,0 -2.743814040936883,52.69998322227714,0 -2.751491839613793,52.6480930595623,0 -2.771815455347984,52.62278026767054,0 -2.775050287614846,52.58571283471682,0 -2.80001055429083,52.53860099732241,0 -2.825260176767342,52.51213063956138,0 -2.821968340064199,52.46846893694039,0 -2.876608993961906,52.42452899735564,0 -2.908663739304954,52.38722084799685,0 -2.951622542115477,52.35313261185374,0 -3.041207654317679,52.34280783968687,0 -3.10416238253505,52.36342447480564,0 -3.123536816269122,52.38269966108859,0 -3.142219762932133,52.38083102398825,0 -3.148078013909432,52.37730307741968,0 -3.159228991231479,52.34680629868331,0 -3.213169306446608,52.33651235595291,0 -3.260827760477516,52.28736555930535,0 -3.287349091262568,52.28142570610345,0 -3.30697027986367,52.27631195756597,0 -3.340288431385284,52.27860938143042,0 -3.403225898628225,52.155937969053,0 -3.632076681095806,52.1049178229106,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>12 - 14/7 - Dublin</name>
+			<open>1</open>
+			<Placemark>
+				<name>Generator Dublin</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>-6.277882475651508</longitude>
+					<latitude>53.34843262097656</latitude>
+					<altitude>0</altitude>
+					<heading>-0.01913448873747315</heading>
+					<tilt>36.00834792076188</tilt>
+					<range>335.8724161091857</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin119</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>-6.277882475651508,53.34843262097657,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Llanwrtyd -  Swansea</name>
+				<styleUrl>#m_ylw-pushpin04</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						-3.632061250526134,52.10539750756744,0 -3.658896465720121,52.09318351421036,0 -3.679265635866495,52.08638307048971,0 -3.700383300376088,52.07091124097938,0 -3.722300151817464,52.05366187442546,0 -3.745619630288513,52.03560845632968,0 -3.801835529397231,51.9948149911054,0 -3.856936355702096,51.97047382825322,0 -3.896211583885456,51.93655762935073,0 -3.934622675240003,51.91448085551922,0 -3.971134497823004,51.89748033008049,0 -3.985990707991012,51.88811374760508,0 -3.989219101982141,51.87680161844238,0 -3.998092600060242,51.86588151595775,0 -4.014481819105551,51.85361297593417,0 -4.003455675815026,51.83441046580113,0 -4.001656401855883,51.81395305545885,0 -3.995878085909607,51.79436031242763,0 -3.999456109519123,51.7653793077838,0 -4.021610516311479,51.74424866919794,0 -4.039742287330493,51.72426730433293,0 -4.064583184448159,51.70215213732236,0 -4.082519994970816,51.68773782297166,0 -4.08262120439155,51.68682684106595,0 -4.082112970991135,51.67735996511387,0 -4.101431676110176,51.67198532837791,0 -4.139010244265213,51.67117663680298,0 -4.162953593995486,51.67421934451983,0 -4.173101266699616,51.67793593871614,0 -4.134130937471349,51.67077459173006,0 -4.079015959486147,51.66203542053057,0 -4.040666830510507,51.65154150584333,0 -4.003290428867411,51.641591377625,0 -3.978267639914962,51.63782342504965,0 -3.963876898215054,51.63240970091891,0 -3.947788989127969,51.63516895691203,0 -3.941923468614287,51.63868288047685,0 -3.93854120057998,51.63874036559297,0 -3.936660549441081,51.63138875306246,0 -3.940038208328783,51.6259580604928,0 -3.941276167867314,51.62515911929091,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>Swansea - Fishguard</name>
+				<styleUrl>#m_ylw-pushpin04</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						-3.940940812180603,51.62527902428191,0 -3.937850003791965,51.63132570470053,0 -3.938631478694814,51.6362970711958,0 -3.942102592230077,51.63881683778234,0 -3.947412242708108,51.63560455855038,0 -3.963575894227559,51.63150900818335,0 -3.974336454704463,51.63734223761962,0 -4.008376527218522,51.64249128280855,0 -4.063250701059981,51.65825971463107,0 -4.112593340687033,51.66762255395328,0 -4.158252871342817,51.67519122731144,0 -4.175877515561338,51.67789873945286,0 -4.201236821703551,51.6851497679816,0 -4.227402197458052,51.68613977777805,0 -4.244881012479736,51.68436205337373,0 -4.277915152193728,51.68641297315672,0 -4.296891038066677,51.70627964027048,0 -4.302926183994135,51.72400331561693,0 -4.319307325821969,51.73526782394776,0 -4.346702359761555,51.73758994935103,0 -4.368574954909541,51.74224875418422,0 -4.375135537016165,51.75428483730261,0 -4.369994137834039,51.7670683318169,0 -4.363747343255627,51.77476916744392,0 -4.361158169063649,51.78398531421067,0 -4.351042131059858,51.79192751400888,0 -4.342390588373193,51.79448954852542,0 -4.323943171444519,51.80098190078191,0 -4.319119863161474,51.81253925208226,0 -4.320187349131812,51.82414968654871,0 -4.319875920921792,51.83096109240501,0 -4.313081859588336,51.83646000949604,0 -4.311690306935438,51.84589277764207,0 -4.315036894298737,51.84866263944801,0 -4.333475980088453,51.8491182449978,0 -4.349430057304712,51.8460199752775,0 -4.38180114774276,51.84303155762765,0 -4.396473674817612,51.8432858022853,0 -4.407610128299107,51.84247988265966,0 -4.422648513132478,51.84037066515031,0 -4.439949335832939,51.8374745477776,0 -4.46231299395355,51.83604646317157,0 -4.494607650646415,51.82780065187095,0 -4.525824758925992,51.83024605273444,0 -4.545101110471284,51.82569148454302,0 -4.556258047212848,51.82529638050358,0 -4.57113070334132,51.81357935439385,0 -4.577166224752611,51.81486467272939,0 -4.613557673323305,51.81755324593715,0 -4.626871756247719,51.82001235032041,0 -4.641016752763965,51.82721691921827,0 -4.678089068934469,51.83640909424799,0 -4.713327719167245,51.83778533968777,0 -4.755825860011034,51.84296019061785,0 -4.822335372464725,51.84269114086768,0 -4.85272318825859,51.84764447014586,0 -4.893154387289304,51.85363100531715,0 -4.927692610128384,51.85674561375082,0 -4.955884762105907,51.86018751335112,0 -4.964014152633231,51.86590493781555,0 -4.965936640958536,51.87992781395769,0 -4.970469522103152,51.89752118019428,0 -4.981880074337743,51.90223999405633,0 -4.999234982790012,51.90718124232358,0 -5.008188536693822,51.91629111386451,0 -5.01304316806546,51.9236384198846,0 -5.018942089847683,51.92998322339817,0 -5.01713186617866,51.934514949591,0 -5.004758954988454,51.94402085645297,0 -5.003945361794759,51.94744955172871,0 -5.012549270247736,51.95627226895677,0 -5.015821052351887,51.96675103699512,0 -5.013231975016973,51.97750269106179,0 -5.007277594151264,51.98162494362827,0 -5.007437989216633,51.99060654424501,0 -5.002006804419513,51.99748342996536,0 -4.994706099473135,52.00403945662477,0 -4.986519950658429,52.00959567253239,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>Swansea Station</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>-3.941347000724803</longitude>
+					<latitude>51.62577189245446</latitude>
+					<altitude>0</altitude>
+					<heading>0.4321837618882702</heading>
+					<tilt>40.57443222927527</tilt>
+					<range>367.266649081427</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin213</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>-3.941103320498126,51.62516801992428,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Fishguard Harbour</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>-4.985797017898244</longitude>
+					<latitude>52.01088078998367</latitude>
+					<altitude>0</altitude>
+					<heading>9.558328136835209e-006</heading>
+					<tilt>8.771054538231669</tilt>
+					<range>652.3873591530472</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin213</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>-4.985857343632572,52.01092029988965,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Stena Line Fishguard harbour</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>-4.98579701794079</longitude>
+					<latitude>52.01088078839734</latitude>
+					<altitude>0</altitude>
+					<heading>9.558128580883106e-006</heading>
+					<tilt>8.771054536645089</tilt>
+					<range>652.3874030970529</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin20</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>-4.985372167910244,52.01076546698216,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Rosslare Europort</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>-6.329360470086876</longitude>
+					<latitude>52.25143291956737</latitude>
+					<altitude>0</altitude>
+					<heading>-1.05690402522544</heading>
+					<tilt>6.857053267480604</tilt>
+					<range>3924.162668024564</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin20</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>-6.337492787705879,52.25465017392255,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Rosslare Europort</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>-6.334498755231333</longitude>
+					<latitude>52.25244534503455</latitude>
+					<altitude>0</altitude>
+					<heading>-1.061437922880063</heading>
+					<tilt>22.89429743196576</tilt>
+					<range>295.2733058067873</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_bus1</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>-6.335074169277425,52.25271138241209,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Fishguard - Rosslare</name>
+				<styleUrl>#msn_ylw-pushpin18</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						-4.982321113079241,52.01241695976672,0 -4.969448856895721,52.00854346764444,0 -4.958912055192767,52.01034077096422,0 -4.968518557356867,52.03610406993079,0 -5.02816409430493,52.04737391188195,0 -5.662566259825733,52.2217118343358,0 -6.169434338301202,52.25094239062751,0 -6.30875206354278,52.2555579771966,0 -6.335765445947182,52.26360317270462,0 -6.341959673057335,52.26028208290202,0 -6.338187628107185,52.25383926134442,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>Hotel vi ikke skulle bruge</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>-6.454587837171085</longitude>
+					<latitude>52.34308707193841</latitude>
+					<altitude>0</altitude>
+					<heading>-1.154050400531174</heading>
+					<tilt>10.34625320367011</tilt>
+					<range>1821.319759530464</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin1</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>-6.455317564300738,52.34453344558701,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Hæveautomat</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>-6.385005685372296</longitude>
+					<latitude>52.27144435634214</latitude>
+					<altitude>0</altitude>
+					<heading>-1.100216103617981</heading>
+					<tilt>17.51395120954314</tilt>
+					<range>1178.546252383212</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin6</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>-6.386589577270094,52.27323420085808,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Rosslare - Wexford</name>
+				<styleUrl>#m_ylw-pushpin00</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						-6.33549967423912,52.25264463122046,0 -6.334804686095965,52.25047117286681,0 -6.338324259113566,52.25130034017743,0 -6.343590461632576,52.25118362787189,0 -6.346557052666333,52.24504417488001,0 -6.35099780673638,52.24234294368425,0 -6.356158959033628,52.2420879849069,0 -6.360427554620907,52.24362170997917,0 -6.364005233431294,52.24407194353909,0 -6.370844480832387,52.24471591699061,0 -6.378212869526523,52.24405950536599,0 -6.384894193317777,52.24294687067084,0 -6.390356239127373,52.24351983126127,0 -6.389941269177641,52.2439959895269,0 -6.389635065925926,52.2442356968997,0 -6.389355873669203,52.24441609743477,0 -6.388989732683951,52.24462799661394,0 -6.388355172653411,52.24490313791361,0 -6.387934132333701,52.24511633902647,0 -6.38781343630428,52.24520759810503,0 -6.387652091701463,52.24532959218196,0 -6.387624975046511,52.24542066059046,0 -6.387624456228832,52.24563355111451,0 -6.387657882221656,52.24578609584996,0 -6.387806647358465,52.24581570408519,0 -6.388002420682828,52.24563092039535,0 -6.388251365580882,52.24547695009591,0 -6.388546492033049,52.24532320069201,0 -6.388665647198204,52.24523114198374,0 -6.388476944777455,52.24910953410429,0 -6.38817859898983,52.25230639345019,0 -6.385650484881232,52.25881623792467,0 -6.386992421159911,52.26091338617788,0 -6.392438901667159,52.26454463782169,0 -6.384048516410186,52.26915581933173,0 -6.386403789149067,52.27288820689078,0 -6.388823606655208,52.27656943041986,0 -6.392556805818251,52.28006743379298,0 -6.397114238211692,52.27661027478274,0 -6.398917619959415,52.2747791356536,0 -6.394411705744039,52.26622791355625,0 -6.393979864996617,52.26523458627364,0 -6.400051637760678,52.26148334169289,0 -6.41002861703435,52.25967564686477,0 -6.418681754394088,52.25940622537078,0 -6.422191683402287,52.25833180839614,0 -6.430984396681097,52.25822133287279,0 -6.439403242531963,52.25894055527882,0 -6.449856697735735,52.25661589095268,0 -6.456201723450752,52.25805353143752,0 -6.461453560394354,52.26459523552947,0 -6.463095957258363,52.28187668083233,0 -6.460600368997671,52.29538476777674,0 -6.458300858007858,52.30319580519541,0 -6.457134761014302,52.31072697936543,0 -6.453533707613603,52.31954679262639,0 -6.45301604703397,52.33251470977837,0 -6.456940297646554,52.33549579065962,0 -6.456942411437536,52.33642871296743,0 -6.458154588483476,52.33742501330127,0 -6.459069316590655,52.33736436629511,0 -6.459316709149924,52.33814468022084,0 -6.459245884402667,52.33820188103174,0 -6.459114455248787,52.33824184245567,0 -6.462035024683611,52.34151736131062,0 -6.462678879022706,52.34216533259757,0 -6.463597366664309,52.34276225265079,0 -6.464246505113622,52.34304688457247,0 -6.464451917471376,52.34272363808843,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>Wexford Bus station</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>-6.459407665665863</longitude>
+					<latitude>52.34229026512454</latitude>
+					<altitude>0</altitude>
+					<heading>-1.157866107815101</heading>
+					<tilt>10.34625421685125</tilt>
+					<range>1821.977903506328</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin2</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>-6.464960336401282,52.34232306439368,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Dublin bus</name>
+				<LookAt>
+					<longitude>-6.465986708584146</longitude>
+					<latitude>52.34299086604047</latitude>
+					<altitude>0</altitude>
+					<heading>-1.131716058680932</heading>
+					<tilt>23.65578875036757</tilt>
+					<range>481.5969590807977</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_bus0</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>-6.465451934626479,52.34316366105567,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Wexford - Dublin</name>
+				<styleUrl>#msn_ylw-pushpin</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						-6.465884077562125,52.34320916707318,0 -6.469272940026184,52.34456297846796,0 -6.475613001702811,52.34662200301948,0 -6.477983991586318,52.34638913739417,0 -6.487003279105618,52.347870070351,0 -6.497460783006888,52.35193668023359,0 -6.507381152483857,52.34948641376679,0 -6.511175687291174,52.35071122699814,0 -6.507136786794164,52.35489970122396,0 -6.505351098200073,52.36082523515142,0 -6.519255387880235,52.40410168092518,0 -6.52052846618643,52.40571932418224,0 -6.540549540853622,52.44236404551742,0 -6.564640244411254,52.50126137674879,0 -6.55397902599351,52.54274172470081,0 -6.495404240061948,52.59082898491461,0 -6.289067524902963,52.67656867552491,0 -6.262325677513394,52.70223076706742,0 -6.20854174636588,52.75764702675502,0 -6.157250416528951,52.7970530846538,0 -6.147474788943913,52.82079329223503,0 -6.099643228253669,52.89635854868446,0 -6.123758766863025,52.93065823303042,0 -6.08786355873413,53.03707402359851,0 -6.108491420606155,53.12705550088101,0 -6.144572592632292,53.17870262221938,0 -6.124736335958928,53.20515559920398,0 -6.133564791830136,53.23446366927112,0 -6.160439396794977,53.26668594693121,0 -6.199605508391461,53.29273725601347,0 -6.231793935226845,53.31842725770349,0 -6.245384780444252,53.3281550172004,0 -6.252337356148797,53.33254456296194,0 -6.248807858685922,53.33704836848678,0 -6.245857655373706,53.34019265601037,0 -6.251984621940085,53.34159699587146,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>Wexford Bus Stop - Clare St</name>
+				<LookAt>
+					<longitude>-6.251938076062384</longitude>
+					<latitude>53.34148676670973</latitude>
+					<altitude>0</altitude>
+					<heading>-0.552520190990629</heading>
+					<tilt>20.15676289567074</tilt>
+					<range>307.8379918846588</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_bus0</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>-6.251938076062383,53.34148676670973,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Wexford Bus Stop - Ushers Quay</name>
+				<styleUrl>#msn_ylw-pushpin</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						-6.250419454935873,53.34220378730616,0 -6.24926203828778,53.34422238161945,0 -6.254889251070084,53.3453365202374,0 -6.255098460439182,53.34701046064305,0 -6.254974074521976,53.34753984519421,0 -6.255013688508438,53.34754030451774,0 -6.257419447534399,53.34728297844497,0 -6.261470441925795,53.34624238078681,0 -6.264911859121391,53.34570185605897,0 -6.268848026552676,53.34520470216037,0 -6.271533571662729,53.34503909292288,0 -6.275508175575222,53.34524829285202,0 -6.280046657527716,53.34604716930181,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>DiFontaines Pizzaria - Aftensmad</name>
+				<LookAt>
+					<longitude>-6.267712424754468</longitude>
+					<latitude>53.3451952245478</latitude>
+					<altitude>0</altitude>
+					<heading>-0.0007666445956788579</heading>
+					<tilt>0</tilt>
+					<range>1005.798619901564</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin1</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>-6.267712424754469,53.3451952245478,0</coordinates>
+				</Point>
+			</Placemark>
+			<Folder>
+				<name>13/7</name>
+				<open>1</open>
+				<Placemark>
+					<name>Generator Dublin</name>
+					<address>Chimney Viewing Tower, Arran Quay, Smithfield, Dublin, D07 F2VF, Ireland</address>
+					<description>Hostel from 2023-07-13T21:37:50.094Z to 2023-07-14T08:56:36.631Z. Distance 0m</description>
+					<TimeSpan>
+						<begin>2023-07-13T21:37:50.094Z</begin>
+						<end>2023-07-14T08:56:36.631Z</end>
+					</TimeSpan>
+					<styleUrl>#m_ylw-pushpin62</styleUrl>
+					<ExtendedData>
+						<Data name="Email">
+							<value>pdpbjorn@gmail.com</value>
+						</Data>
+						<Data name="Category">
+							<value>Hostel</value>
+						</Data>
+						<Data name="Distance">
+							<value>0</value>
+						</Data>
+					</ExtendedData>
+					<Point>
+						<coordinates>-6.2778247,53.34843749999999,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark>
+					<name>Walking</name>
+					<description>Walking from 2023-07-13T15:33:01.020Z to 2023-07-13T15:35:01.063Z. Distance 295m</description>
+					<TimeSpan>
+						<begin>2023-07-13T15:33:01.02Z</begin>
+						<end>2023-07-13T15:35:01.063Z</end>
+					</TimeSpan>
+					<styleUrl>#m_ylw-pushpin62</styleUrl>
+					<ExtendedData>
+						<Data name="Email">
+							<value>pdpbjorn@gmail.com</value>
+						</Data>
+						<Data name="Category">
+							<value>Walking</value>
+						</Data>
+						<Data name="Distance">
+							<value>295</value>
+						</Data>
+					</ExtendedData>
+					<LineString>
+						<extrude>1</extrude>
+						<coordinates>
+							-6.2549209,53.3402225,0 -6.2549209,53.3402225,0 -6.258519799999999,53.3417802,0 -6.258519799999999,53.3417802,0 
+						</coordinates>
+						<tesselate>1</tesselate>
+					</LineString>
+				</Placemark>
+				<Placemark>
+					<name>Generator Dublin</name>
+					<address>Chimney Viewing Tower, Arran Quay, Smithfield, Dublin, D07 F2VF, Ireland</address>
+					<description>Hostel from 2023-07-12T22:44:06.866Z to 2023-07-13T09:56:11.544Z. Distance 0m</description>
+					<TimeSpan>
+						<begin>2023-07-12T22:44:06.866Z</begin>
+						<end>2023-07-13T09:56:11.544Z</end>
+					</TimeSpan>
+					<styleUrl>#m_ylw-pushpin62</styleUrl>
+					<ExtendedData>
+						<Data name="Email">
+							<value>pdpbjorn@gmail.com</value>
+						</Data>
+						<Data name="Category">
+							<value>Hostel</value>
+						</Data>
+						<Data name="Distance">
+							<value>0</value>
+						</Data>
+					</ExtendedData>
+					<Point>
+						<coordinates>-6.2778247,53.34843749999999,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark>
+					<name>Trinity College Dublin</name>
+					<address>College Green, Dublin 2, Ireland</address>
+					<description>University from 2023-07-13T11:48:26.965Z to 2023-07-13T14:47:06.915Z. Distance 0m</description>
+					<TimeSpan>
+						<begin>2023-07-13T11:48:26.965Z</begin>
+						<end>2023-07-13T14:47:06.915Z</end>
+					</TimeSpan>
+					<styleUrl>#m_ylw-pushpin62</styleUrl>
+					<ExtendedData>
+						<Data name="Email">
+							<value>pdpbjorn@gmail.com</value>
+						</Data>
+						<Data name="Category">
+							<value>University</value>
+						</Data>
+						<Data name="Distance">
+							<value>0</value>
+						</Data>
+					</ExtendedData>
+					<Point>
+						<coordinates>-6.254571599999999,53.3437935,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark>
+					<name>Walking</name>
+					<description>Walking from 2023-07-13T09:56:11.544Z to 2023-07-13T11:48:26.965Z. Distance 4050m</description>
+					<TimeSpan>
+						<begin>2023-07-13T09:56:11.544Z</begin>
+						<end>2023-07-13T11:48:26.965Z</end>
+					</TimeSpan>
+					<styleUrl>#m_ylw-pushpin62</styleUrl>
+					<ExtendedData>
+						<Data name="Email">
+							<value>pdpbjorn@gmail.com</value>
+						</Data>
+						<Data name="Category">
+							<value>Walking</value>
+						</Data>
+						<Data name="Distance">
+							<value>4050</value>
+						</Data>
+					</ExtendedData>
+					<LineString>
+						<extrude>1</extrude>
+						<coordinates>
+							-6.2785785,53.3482245,0 -6.2786949,53.34778250000002,0 -6.278478000000001,53.34759680000001,0 -6.278628,53.34760279999999,0 -6.2787901,53.34691050000001,0 -6.2787232,53.34690030000001,0 -6.278915499999999,53.346432,0 -6.2764377,53.34593660000001,0 -6.2761749,53.3459665,0 -6.2757152,53.34590840000001,0 -6.2757101,53.34591720000002,0 -6.2755039,53.34587200000001,0 -6.2755183,53.34584720000001,0 -6.275496,53.3458446,0 -6.275528499999998,53.3457435,0 -6.27554,53.3457448,0 -6.2757389,53.3453263,0 -6.2757258,53.3453245,0 -6.275754899999999,53.3452375,0 -6.276262399999999,53.34426640000001,0 -6.2764852,53.3442671,0 -6.2764845,53.3442198,0 -6.276114,53.34383919999999,0 -6.275477199999999,53.3434869,0 -6.2753837,53.34347680000001,0 -6.275279799999998,53.34342299999999,0 -6.275090499999999,53.3435259,0 -6.274881999999999,53.34341799999999,0 -6.274761499999999,53.3434346,0 -6.274709799999998,53.34336619999999,0 -6.274921099999999,53.34333709999999,0 -6.274721600000001,53.3433484,0 -6.274711300000001,53.3432241,0 -6.275275,53.34314809999999,0 -6.273801300000001,53.34227679999999,0 -6.2735702,53.34192609999999,0 -6.2750924,53.3415998,0 -6.2751317,53.3416684,0 -6.2785192,53.34126640000001,0 -6.2779884,53.34035829999999,0 -6.2779071,53.33989269999999,0 -6.275549099999999,53.33968759999999,0 -6.274485400000002,53.3394128,0 -6.2745604,53.33927620000001,0 -6.272879900000001,53.3389293,0 -6.272794600000001,53.3390588,0 -6.272783800000001,53.3390561,0 -6.272781500000001,53.33907770000001,0 -6.272426400000002,53.3390318,0 -6.272110600000001,53.3401588,0 -6.272124200000001,53.3405074,0 -6.271852700000002,53.3404497,0 -6.271795900000001,53.3402356,0 -6.271630300000002,53.3402302,0 -6.271600200000001,53.34013340000002,0 -6.271523300000002,53.3400785,0 -6.271185400000001,53.3400425,0 -6.271190300000001,53.33992680000001,0 -6.269908800000002,53.33989530000001,0 -6.269359700000001,53.33922010000001,0 -6.269195000000001,53.33927500000001,0 -6.267082,53.33943660000002,0 -6.267265400000001,53.3397216,0 -6.267170900000001,53.3397433,0 -6.265933400000002,53.3396539,0 -6.265914700000002,53.3397372,0 -6.265708500000002,53.3397221,0 -6.265758900000002,53.3396119,0 -6.263925000000001,53.33923249999999,0 -6.263800900000001,53.3391671,0 -6.261731200000003,53.33874530000001,0 -6.261463800000002,53.3390717,0 -6.261411900000003,53.33907339999999,0 -6.260919300000002,53.33970360000001,0 -6.260706700000002,53.3398547,0 -6.260651400000001,53.339862,0 -6.260562600000002,53.33975240000001,0 -6.2604677,53.3397635,0 -6.2603657,53.3396514,0 -6.260237500000002,53.33964450000001,0 -6.259988900000001,53.33948670000001,0 -6.259955300000001,53.33941050000001,0 -6.259575800000002,53.33937480000001,0 -6.258214900000001,53.33902940000001,0 -6.258044100000001,53.33921640000001,0 -6.258890200000002,53.33947620000001,0 -6.258923100000001,53.33957080000002,0 -6.258796300000002,53.33955680000002,0 -6.257870300000003,53.34284500000002,0 -6.258010700000003,53.34294830000002,0 -6.259359900000002,53.34316720000002,0 -6.259336200000002,53.34324340000001,0 -6.260803500000001,53.34380790000002,0 -6.260802000000001,53.34421150000002,0 -6.259687500000001,53.34429550000003,0 -6.259545700000002,53.34436950000003,0 -6.259525500000001,53.34434180000002,0 -6.2593508,53.34438070000001,0 -6.259402500000001,53.34447890000002,0 -6.258120500000001,53.34443700000001,0 
+						</coordinates>
+						<tesselate>1</tesselate>
+					</LineString>
+				</Placemark>
+				<Placemark>
+					<name>National Museum of Ireland - Archaeology</name>
+					<address>35A Kildare St, Dublin 2, D02 YK38, Ireland</address>
+					<description>Museum from 2023-07-13T14:47:06.915Z to 2023-07-13T15:33:01.020Z. Distance 0m</description>
+					<TimeSpan>
+						<begin>2023-07-13T14:47:06.915Z</begin>
+						<end>2023-07-13T15:33:01.02Z</end>
+					</TimeSpan>
+					<styleUrl>#m_ylw-pushpin62</styleUrl>
+					<ExtendedData>
+						<Data name="Email">
+							<value>pdpbjorn@gmail.com</value>
+						</Data>
+						<Data name="Category">
+							<value>Museum</value>
+						</Data>
+						<Data name="Distance">
+							<value>0</value>
+						</Data>
+					</ExtendedData>
+					<Point>
+						<coordinates>-6.2549209,53.3402225,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark>
+					<name>Yum Thai</name>
+					<address>Duke St, Dublin, Ireland</address>
+					<description>Thai from 2023-07-13T15:35:01.063Z to 2023-07-13T16:04:46.043Z. Distance 0m</description>
+					<TimeSpan>
+						<begin>2023-07-13T15:35:01.063Z</begin>
+						<end>2023-07-13T16:04:46.043Z</end>
+					</TimeSpan>
+					<styleUrl>#m_ylw-pushpin62</styleUrl>
+					<ExtendedData>
+						<Data name="Email">
+							<value>pdpbjorn@gmail.com</value>
+						</Data>
+						<Data name="Category">
+							<value>Thai</value>
+						</Data>
+						<Data name="Distance">
+							<value>0</value>
+						</Data>
+					</ExtendedData>
+					<Point>
+						<coordinates>-6.258519799999999,53.3417802,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark>
+					<name>The Cobblestone</name>
+					<address>77 King St N, Smithfield, Dublin, D07 TP22, Ireland</address>
+					<description>Irish pub from 2023-07-13T17:30:50.626Z to 2023-07-13T18:48:07.336Z. Distance 0m</description>
+					<TimeSpan>
+						<begin>2023-07-13T17:30:50.626Z</begin>
+						<end>2023-07-13T18:48:07.336Z</end>
+					</TimeSpan>
+					<styleUrl>#m_ylw-pushpin62</styleUrl>
+					<ExtendedData>
+						<Data name="Email">
+							<value>pdpbjorn@gmail.com</value>
+						</Data>
+						<Data name="Category">
+							<value>Irish pub</value>
+						</Data>
+						<Data name="Distance">
+							<value>0</value>
+						</Data>
+					</ExtendedData>
+					<Point>
+						<coordinates>-6.277836100000001,53.3498083,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark>
+					<name>Walking</name>
+					<description>Walking from 2023-07-13T16:04:46.043Z to 2023-07-13T17:30:50.626Z. Distance 2330m</description>
+					<TimeSpan>
+						<begin>2023-07-13T16:04:46.043Z</begin>
+						<end>2023-07-13T17:30:50.626Z</end>
+					</TimeSpan>
+					<styleUrl>#m_ylw-pushpin62</styleUrl>
+					<ExtendedData>
+						<Data name="Email">
+							<value>pdpbjorn@gmail.com</value>
+						</Data>
+						<Data name="Category">
+							<value>Walking</value>
+						</Data>
+						<Data name="Distance">
+							<value>2330</value>
+						</Data>
+					</ExtendedData>
+					<LineString>
+						<extrude>1</extrude>
+						<coordinates>
+							-6.258519799999999,53.3417802,0 -6.258519799999999,53.3417802,0 -6.259830200000001,53.34211979999999,0 -6.2607569,53.34193230000001,0 -6.260354800000001,53.34275270000001,0 -6.2609505,53.3438621,0 -6.2607617,53.3438352,0 -6.2608466,53.3438166,0 -6.2602312,53.34362670000001,0 -6.260661799999999,53.3437503,0 -6.260864800000001,53.3438592,0 -6.261822,53.34467359999999,0 -6.2619452,53.3456928,0 -6.262566600000001,53.3456498,0 -6.263195300000001,53.3455888,0 -6.2629016,53.3456898,0 -6.2630595,53.3457811,0 -6.262880100000001,53.3456322,0 -6.262963699999999,53.346049,0 -6.2630932,53.3463688,0 -6.2632196,53.34645179999999,0 -6.266876199999999,53.3461617,0 -6.2677643,53.34634059999999,0 -6.267815300000001,53.3463504,0 -6.2680966,53.3463864,0 -6.267960399999999,53.34630920000001,0 -6.2679071,53.3463462,0 -6.2679045,53.3463614,0 -6.2680399,53.3465789,0 -6.2684801,53.3476056,0 -6.2686538,53.348198,0 -6.2688262,53.3484441,0 -6.269211000000001,53.34965159999999,0 -6.2705015,53.35059570000001,0 -6.2724789,53.35002519999999,0 -6.274575999999999,53.3499945,0 -6.2751031,53.3500343,0 -6.277662500000001,53.34992739999999,0 -6.277836100000001,53.3498083,0 -6.277836100000001,53.3498083,0 
+						</coordinates>
+						<tesselate>1</tesselate>
+					</LineString>
+				</Placemark>
+				<Placemark>
+					<name>Generator Dublin</name>
+					<address>Chimney Viewing Tower, Arran Quay, Smithfield, Dublin, D07 F2VF, Ireland</address>
+					<description>Hostel from 2023-07-13T18:48:07.336Z to 2023-07-13T20:35:10.011Z. Distance 0m</description>
+					<TimeSpan>
+						<begin>2023-07-13T18:48:07.336Z</begin>
+						<end>2023-07-13T20:35:10.011Z</end>
+					</TimeSpan>
+					<styleUrl>#m_ylw-pushpin62</styleUrl>
+					<ExtendedData>
+						<Data name="Email">
+							<value>pdpbjorn@gmail.com</value>
+						</Data>
+						<Data name="Category">
+							<value>Hostel</value>
+						</Data>
+						<Data name="Distance">
+							<value>0</value>
+						</Data>
+					</ExtendedData>
+					<Point>
+						<coordinates>-6.2778247,53.34843749999999,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark>
+					<name>Walking</name>
+					<description>Walking from 2023-07-13T20:35:10.011Z to 2023-07-13T20:40:00.709Z. Distance 429m</description>
+					<TimeSpan>
+						<begin>2023-07-13T20:35:10.011Z</begin>
+						<end>2023-07-13T20:40:00.709Z</end>
+					</TimeSpan>
+					<styleUrl>#m_ylw-pushpin62</styleUrl>
+					<ExtendedData>
+						<Data name="Email">
+							<value>pdpbjorn@gmail.com</value>
+						</Data>
+						<Data name="Category">
+							<value>Walking</value>
+						</Data>
+						<Data name="Distance">
+							<value>429</value>
+						</Data>
+					</ExtendedData>
+					<LineString>
+						<extrude>1</extrude>
+						<coordinates>
+							-6.2778247,53.34843749999999,0 -6.2778247,53.34843749999999,0 -6.2771406,53.3460444,0 -6.276762299999999,53.3459901,0 -6.275792099999999,53.3449326,0 -6.275792099999999,53.3449326,0 
+						</coordinates>
+						<tesselate>1</tesselate>
+					</LineString>
+				</Placemark>
+				<Placemark>
+					<name>Ned O&apos; Sheas</name>
+					<address>12a Lower Bridge St, The Liberties, Dublin, D08 Y271, Ireland</address>
+					<description>Irish pub from 2023-07-13T20:40:00.709Z to 2023-07-13T21:33:50.042Z. Distance 0m</description>
+					<TimeSpan>
+						<begin>2023-07-13T20:40:00.709Z</begin>
+						<end>2023-07-13T21:33:50.042Z</end>
+					</TimeSpan>
+					<styleUrl>#m_ylw-pushpin62</styleUrl>
+					<ExtendedData>
+						<Data name="Email">
+							<value>pdpbjorn@gmail.com</value>
+						</Data>
+						<Data name="Category">
+							<value>Irish pub</value>
+						</Data>
+						<Data name="Distance">
+							<value>0</value>
+						</Data>
+					</ExtendedData>
+					<Point>
+						<coordinates>-6.275792099999999,53.3449326,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark>
+					<name>Walking</name>
+					<description>Walking from 2023-07-13T21:33:50.042Z to 2023-07-13T21:37:50.094Z. Distance 412m</description>
+					<TimeSpan>
+						<begin>2023-07-13T21:33:50.042Z</begin>
+						<end>2023-07-13T21:37:50.094Z</end>
+					</TimeSpan>
+					<styleUrl>#m_ylw-pushpin62</styleUrl>
+					<ExtendedData>
+						<Data name="Email">
+							<value>pdpbjorn@gmail.com</value>
+						</Data>
+						<Data name="Category">
+							<value>Walking</value>
+						</Data>
+						<Data name="Distance">
+							<value>412</value>
+						</Data>
+					</ExtendedData>
+					<LineString>
+						<extrude>1</extrude>
+						<coordinates>
+							-6.275792099999999,53.3449326,0 -6.275792099999999,53.3449326,0 -6.2778247,53.34843749999999,0 -6.2778247,53.34843749999999,0 
+						</coordinates>
+						<tesselate>1</tesselate>
+					</LineString>
+				</Placemark>
+			</Folder>
+		</Folder>
+		<Folder>
+			<name>14 - 17/7 - Galway</name>
+			<Placemark>
+				<name>Heuston Station</name>
+				<LookAt>
+					<gx:TimeStamp><when>2023-07-12T22:44:06.866Z</when>
+</gx:TimeStamp>
+					<longitude>-6.296778090528966</longitude>
+					<latitude>53.34567046369703</latitude>
+					<altitude>0</altitude>
+					<heading>-13.19492218517317</heading>
+					<tilt>13.26489735892197</tilt>
+					<range>1139.425333402571</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin03</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>-6.292751482631296,53.34628518137603,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Dublin - Cork</name>
+				<styleUrl>#m_ylw-pushpin0</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						-6.292474390210088,53.3517434309319,0 -6.656098004904272,53.22442064589137,0 -7.288254393014507,53.03037781967884,0 -7.793800735054527,52.68546619792065,0 -8.148088698862008,52.47423642281205,0 -8.669130260207908,52.35977489715104,0 -8.646574663138082,52.13742506827558,0 -8.47150297218621,51.90194145866927,0 -8.458679925454643,51.90166599176722,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>Cork Kent Station</name>
+				<LookAt>
+					<gx:TimeStamp><when>2023-07-12T22:44:06.866Z</when>
+</gx:TimeStamp>
+					<longitude>-8.455317306690416</longitude>
+					<latitude>51.90141044350347</latitude>
+					<altitude>0</altitude>
+					<heading>-14.95722347313284</heading>
+					<tilt>11.73267926821687</tilt>
+					<range>617.9302369878106</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>-8.458699630319503,51.90164262404621,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Corib Village - block B</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>-9.065671350464925</longitude>
+					<latitude>53.2889912281812</latitude>
+					<altitude>0</altitude>
+					<heading>-0.4537032782808609</heading>
+					<tilt>40.22314800161701</tilt>
+					<range>674.714631894517</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin119</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>-9.065671350464925,53.2889912281812,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>17/7 - Sligo</name>
+			<Placemark>
+				<name>Riverside Hotel</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>-8.467220000522703</longitude>
+					<latitude>54.27148000062957</latitude>
+					<altitude>0</altitude>
+					<heading>-7.293377648384212e-010</heading>
+					<tilt>45.00000000062958</tilt>
+					<range>1000.000152876975</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin119</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>-8.467220000522703,54.27148000062958,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>18 - 20/7 Portrush</name>
+			<Placemark>
+				<name>81 Main st., Portrush, UK</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>-6.656348345271708</longitude>
+					<latitude>55.20805540371502</latitude>
+					<altitude>0</altitude>
+					<heading>-7.866942976865935e-011</heading>
+					<tilt>0</tilt>
+					<range>1008.601921165683</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin08</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>-6.656348345271708,55.20805540371502,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>20/7 - Ayr</name>
+			<Placemark>
+				<name>The Beechwood En-suite Rooms Guest House</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>-4.623143702557764</longitude>
+					<latitude>55.4759743656695</latitude>
+					<altitude>0</altitude>
+					<heading>0.8020147220508956</heading>
+					<tilt>34.09598193591128</tilt>
+					<range>617.3334454118601</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin08</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>-4.623143702557764,55.47597436566951,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>21-23/ - Edinbourgh</name>
+			<open>1</open>
+			<Placemark>
+				<name>James Square - Apartment building
+65 Caledonian Crescent</name>
+				<LookAt>
+					<gx:TimeStamp><when>2020-07-07T17:05:03Z</when>
+</gx:TimeStamp>
+					<longitude>-3.219563492869091</longitude>
+					<latitude>55.94210726056186</latitude>
+					<altitude>0</altitude>
+					<heading>-18.3972901759813</heading>
+					<tilt>34.44438640712598</tilt>
+					<range>344.0123508294771</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin08</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>-3.219855620971029,55.94214137489355,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+	</Folder>
+</Document>
+</kml>

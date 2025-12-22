@@ -1,0 +1,178 @@
+  
+<!DOCTYPE html>
+<!--
+	FIX: Udaterede billeder kan ikke listes: function: buildTiles -> dateGroup dannes ikke
+	!!!!!fix: klik på infowindow billede virker ikke
+	fix: vis billedliste for disse markører  virker ikke
+	fix: til tur bounds virker ikke på fjernsyn
+	fix: stedfilter meget langsom på fjernsyn - måske ventecursor
+	fix: dropdpwn værdier bør nulstille, når anden dropdown bruges
+	Ide: bedre månedsmeny - nested
+	Check om 'i embeds medfør er med'
+fix: noget galt med areas! - fx Estland, men Norge virker...
+fix : billeder i skt jørgens sø...
+fix: load af turbilleder virker ikke
+ide: liste over kameraer på både thumb og map-visning, toggel buttons, når kamera vælges, filtreres billeder - reversibelt
+ide: når load af turbilleder - status over ikke geotaggede i perioden		
+Ide: Klik på geomarkør i thumbs-oversigt
+ide: stabil header når der scrolles 
+ide: håndter også hjemmevideo/telefonfilm
+ide: mere modulær indexering - indexere nytilkomne og opdaterede foldere
+lav geotagger
+		lille form udenfor kort - ml kort og navi-panel
+			Nej, nedenfor træ, delt horisontalt med valgte billeder til højre
+			vis større version ved hover
+		https://stackoverflow.com/questions/21661703/jquery-date-picker-not-working-with-google-map-infowindow
+		https://developers.google.com/maps/documentation/javascript/controls
+	
+		søg billeder vha datoer - mulighed for også at loade taggede billeder - indikator
+		stort billed ved hover over thumb
+Højreklik på ikon fjerner marker, fjerner featureColl entry, og fjerner sort class fra thumb
+
+		Knapper med kendte lokationer - hjemme, tivoli, alme, højklint
+		placering genererer exiftool kommando (hvis billederne har nikonnavn, opdateres både original og kopi) + opdatering til images.geo.json
+
+		https://mcpmag.com/articles/2018/08/08/replace-text-with-powershell.aspx
+https://stackoverflow.com/questions/35062320/string-replacement-in-a-file-using-powershell
+https://docs.microsoft.com/en-us/answers/questions/467133/find-and-replace-in-a-file-using-powershell.html
+https://powershellcookbook.com/recipe/uZgg/replace-text-in-a-string
+https://stackoverflow.com/questions/3403217/how-to-replace-multiple-strings-in-a-file-using-powershell
+
+ide: med tiden erstatte Googlearth helt - migrere til ën geojson fil og udvikle funktion til at gemme punkter og pathes direkte i filen - som så er master
+ide: find turbilleder som ikke er geokodet vha datoer
+Ide: Vis alle billeder i tids-liste, hvis denne er geografisk filtreret
+Ide: sammenklappelig månedsmenu
+Ide: *Swipe på mobil
+Ide: Bladr måned op/ned når thumbs er månedsloadet
+Ide: erstat Underscore med plain JS filtrering
+Ide: Byg dateringsinterface til udaterede billeder  -  noget ala geotagger
+
+-->
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+<title>billeder</title>
+<script src="./js/jquery-3.2.1.min.js" type="text/javascript" language="JavaScript"></script>
+<script src="./js/images.js" type="text/javascript" language="JavaScript"></script>
+<script src="./js/jstree.js"></script>
+<script src="./js/filesystempaths.js"></script>
+<script>
+	$(document).bind("mobileinit", function(){
+		$.mobile.defaultPageTransition = 'none';
+	});
+</script>
+<script src="./js/jquery.mobile-1.5.0-alpha.1.min.js"></script>
+<script src="./js/underscore-min.js" type="text/javascript" language="JavaScript"></script>
+<script src="./js/turf.min.js" type="text/javascript" language="JavaScript"></script>
+<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyB2J_gYxDzUWIYJH9HqmnN_gfiZxUEzvxs&callback=initMap&libraries=drawing" defer></script> 
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="./css/jquery.mobile-1.5.0-alpha.1.min.css"/>
+	 
+	<link rel="stylesheet" type="text/css" href="./css/images.css"/>
+	<link rel="stylesheet" href="./css/jstree/default/style.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link rel="shortcut icon" href="fav.png" type="image/png" />
+</head>
+<body>
+
+	
+	<div data-role="page" class="jqm-demos" data-quicklinks="true" id="initial">
+		<div data-role="header" data-position="fixed" class="header-footer ui-header ui-header-fullscreen ui-bar-inherit ui-header-fixed slidedown centerflex">
+			
+			<br/>
+			
+			 <form>
+
+				<div data-role="controlgroup" data-type="horizontal" data-mini="true" style="display:inline-flex" >
+					<select name="select-native-14" id="monthSelect">
+						<option>Tid</option>
+					</select>
+					<select name="select-native-15" id="areaSelect">
+						<option>Sted</option>	
+					</select>
+					<select name="select-native-16" id="tripSelect">
+						<option>Anvendelse</option>
+					</select>
+				</div>
+			</form>
+				<form>
+			
+				<fieldset data-role="controlgroup" data-mini="true" data-type="horizontal" style="float:right;display:inline-flex">
+					<input type="radio" name="radio-choice-h-6" id="radio-choice-thumbs" value="on" checked="checked">
+					<label for="radio-choice-thumbs">Thumbs</label>
+					<input type="radio" name="radio-choice-h-6" id="radio-choice-map" value="off">
+					<label for="radio-choice-map">Kort</label>
+				</fieldset>
+
+				</form>
+			
+		</div>
+		<div class="dropdown">
+			<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Tutorials
+			<span class="caret"></span></button>
+			<ul class="dropdown-menu" id="dropMonths">
+				<!--
+			  <li><a tabindex="-1" href="#">HTML</a></li>
+			  <li><a tabindex="-1" href="#">CSS</a></li>
+			  <li class="dropdown-submenu">
+				<a class="test" tabindex="-1" href="#">New dropdown <span class="caret"></span></a>
+				<ul class="dropdown-menu">
+				  <li><a tabindex="-1" href="#">2nd level dropdown</a></li>
+				  <li><a tabindex="-1" href="#">2nd level dropdown</a></li>
+				  <li class="dropdown-submenu">
+					<a class="test" href="#">Another dropdown <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+					  <li><a href="#"  onclick="injectMonth('2019-01')">2019-01</a></li>
+					  <li><a href="#">3rd level dropdown</a></li>
+					</ul>
+				  </li>
+				</ul>
+			  </li>
+			-->
+			</ul>
+		  </div>
+		</div>
+			  <!--
+			  <li class="dropend"><a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">Another action</a>
+				<ul  class="dropdown-menu dropdown-submenu">
+					<li><a class="dropdown-item" href="#" onclick="injectMonth('2019-01')">2019-01</a></li>
+					<li><a class="dropdown-item" href="#">Another action</a></li>
+					<li><a class="dropdown-item" href="#">Something else here</a></li>
+				  </ul>
+			  </li> -->
+		<div role="main" class="ui-content mainbox" id="tilebox">
+			<img src="lillehest.png" width="60%" class="lillehest">
+			 <div id="spinner"><img src="fav.png"/></div>
+
+			
+		</div>
+
+
+
+		<div data-role="footer" data-position="fixed" data-tap-toggle="false" class="header-footer jqm-footer ui-footer ui-bar-inherit ui-footer-fixed slideup centerflex" role="contentinfo">
+			<div style="font-size: large;">Vores billeder</div>
+			<div id="counters">Vi har <span id="totalcount" class="counters"></span> billeder - af dem er <span id="datedcount" class="counters"></span> daterede og <span id="gtcount" class="counters"></span> er geotagged </div> 
+			
+		</div>
+
+		
+
+	</div>
+</body>
+<script>
+
+	window.onload = loadData()
+	//making the nested month-dropdown work
+	$(document).ready(function(){
+  $('.dropdown-submenu a.test').on("click", function(e){
+    $(this).next('ul').toggle();
+    e.stopPropagation();
+    e.preventDefault();
+  });
+});	
+	</script>
+</html>

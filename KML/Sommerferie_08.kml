@@ -1,0 +1,5000 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>Sommerferie_08.kml</name>
+	<StyleMap id="msn_ylw-pushpin141">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin080</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin4110</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_star110">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_star12</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_star101</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_parking_lot5">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_parking_lot3</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_parking_lot5</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_star01">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_star5">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_star5</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_star16</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_coffee000">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/coffee.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_coffee10">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/coffee.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_dining40">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_dining30</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_dining100</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_star43">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sn_dining30">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_star60">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sn_star100">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sh_star010">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sn_dining020">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_star100">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_star30</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_star000</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_star1000">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sn_rail00">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/rail.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_star31">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_star16">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_star7</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_star21</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_coffee20">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_coffee000</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_coffee010</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_campground10">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/campground.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_star8">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_star10">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_star000</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_star23</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_star">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sn_star20">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_star101">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_star130</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_star70</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_snack_bar20">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/snack_bar.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin00100">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff00aa00</color>
+			<width>3.1</width>
+		</LineStyle>
+	</Style>
+	<StyleMap id="msn_coffee10">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_coffee10</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_coffee001</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_star1300">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_star160</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_star170</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_star50">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_star001</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_star400</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_star7">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sh_snack_bar0100">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/snack_bar.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin041">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff7fff00</color>
+			<width>2</width>
+		</LineStyle>
+	</Style>
+	<Style id="sn_star30">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sn_star18">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sh_star12">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sn_star11">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_star201">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_star71</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_star31</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_star2">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_star18">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_star17</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_star22</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_star170">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_star22</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_star17</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_dining300">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_dining100</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_dining300</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_star160">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sh_parking_lot2">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/parking_lot.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_campground100">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/campground.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_snack_bar110">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_snack_bar201</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_snack_bar020</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_snack_bar002">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/snack_bar.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_parking_lot3">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/parking_lot.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_snack_bar310">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/snack_bar.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_snack_bar2000">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/snack_bar.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_lodging00">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_lodging100</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_lodging000</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_star5">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sh_dining200">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_snack_bar400">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/snack_bar.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_rail4">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_rail4</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_rail3</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_dining111">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_snack_bar0000">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/snack_bar.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_snack_bar300">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/snack_bar.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin2200">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff00ff55</color>
+			<width>5</width>
+		</LineStyle>
+	</Style>
+	<Style id="sh_parking_lot6">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/parking_lot.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_star50">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sh_star31">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_coffee00">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_coffee010</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_coffee000</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin0030">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff00aa00</color>
+			<width>3.1</width>
+		</LineStyle>
+	</Style>
+	<StyleMap id="msn_rail1">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_rail1</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_rail4</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_star170">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sn_star40">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sh_star130">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_star130">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_star80</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_star14</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_star00">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_star1">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_star4</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_star10</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_star11">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_star212</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_star110</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_campground02">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/campground.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_dining20">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_parking_lot4">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/parking_lot.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_parking_lot6">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_parking_lot10</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_parking_lot1</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_star14">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_campground70">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_campground2</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_campground00</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_parking_lot7">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/parking_lot.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_star0000">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin1020">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin1800</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin131</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_campground01">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/campground.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_star001">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sn_star0">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sn_parking_lot10">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/parking_lot.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_parking_lot8">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/parking_lot.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_star100">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sh_star22">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_parking_lot20">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_parking_lot</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_parking_lot2</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_snack_bar30">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/snack_bar.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_grocery0000">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/grocery.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_dining80">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_dining6</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_dining1010</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin080">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff00aa00</color>
+			<width>3.1</width>
+		</LineStyle>
+	</Style>
+	<Style id="sh_dining300">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_dining1010">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_lodging000">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/lodging.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_dining001">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_star11">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sh_star5">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_campground10">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_campground10</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_campground50</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_star1">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sn_grocery100">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/grocery.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_snack_bar410">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/snack_bar.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_star52">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_star9</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_star13</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_snack_bar40">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_snack_bar100</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_snack_bar0100</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin150">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff00aa00</color>
+			<width>3.1</width>
+		</LineStyle>
+	</Style>
+	<Style id="sn_star17">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sh_coffee100">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/coffee.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_parking_lot0">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_parking_lot7</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_parking_lot3</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_coffee001">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/coffee.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_star32">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sh_campground000">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/campground.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_star32">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_star110</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_star00</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_campground2">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/campground.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_campground11">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_campground01</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_campground4</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_star41">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_star43</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_star90</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_star400">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_star9">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_star14</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_star40</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_snack_bar100">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_snack_bar0000</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_snack_bar100</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_star20">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_star23</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_star010</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_snack_bar30">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_snack_bar310</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_snack_bar11</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_star130">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_campground30">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_campground30</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_campground20</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_star110">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sn_coffee00">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/coffee.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_dining001">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_dining010</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_dining50</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_snack_bar010">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_snack_bar400</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_snack_bar300</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_star15">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_star10</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_star4</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_coffee010">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/coffee.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin820">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff00ff55</color>
+			<width>5</width>
+		</LineStyle>
+	</Style>
+	<Style id="sn_parking_lot7">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/parking_lot.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_star6">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_snack_bar020">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_snack_bar21</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_snack_bar0010</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_star4">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_star21</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_star18</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_parking_lot6">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/parking_lot.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_star010">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_star41</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_star50</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_dining210">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_star120">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_star15</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_star15</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_parking_lot1">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/parking_lot.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_dining01">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_dining210</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_dining001</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_star">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_star</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_star1</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_star1">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_cabs6">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_cabs000</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_cabs5</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_cabs5">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_dining000">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_lodging210">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_lodging30</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_lodging10</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_star7">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sn_campground00">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/campground.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_rail2">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/rail.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_star300">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_star40</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_star500</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_rail3">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/rail.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_star70">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_star31</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_star8</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_star23">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_parking_lot">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_parking_lot0</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_parking_lot4</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_star71">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sh_dining110">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_star0">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_dining200">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_dining20</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_dining200</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_rail00">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/rail.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_snack_bar100">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/snack_bar.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_dining6">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_star42">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sn_dining50">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_grocery0000">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_grocery0000</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_grocery000</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_star">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_parking_lot1">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_parking_lot6</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_parking_lot8</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_star14">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sh_star15">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sn_star50">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_parking_lot00">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_parking_lot2</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_parking_lot0</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_snack_bar50">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_snack_bar500</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_snack_bar002</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_star3">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sn_dining010">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_cabs000">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_star19">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_star40">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_star210</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_star2</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_parking_lot4">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/parking_lot.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_parking_lot">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/parking_lot.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_star200">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_star0000</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_star1000</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_parking_lot1">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/parking_lot.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_snack_bar500">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/snack_bar.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_star4">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sh_star20">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_star13">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_star6</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_star25</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_star10">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sh_star3">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sh_campground00">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/campground.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_snack_bar100">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/snack_bar.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_star8">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_star16</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_star120</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_parking_lot5">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/parking_lot.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin4110">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff00aa00</color>
+			<width>3.1</width>
+		</LineStyle>
+	</Style>
+	<Style id="sh_star8">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_campground2">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_campground00</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_campground000</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_star60">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_star50</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_star60</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_star400">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_star100</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_star20</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin1020">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff00ff00</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="sn_rail2">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/rail.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_snack_bar0110">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_snack_bar410</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_snack_bar400</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_star21">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_star13</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_star01</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_snack_bar400">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/snack_bar.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_star22">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sn_rail3">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/rail.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_star4">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sn_coffee000">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/coffee.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_parking_lot2">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_parking_lot1</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_parking_lot</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_star12">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_star2</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_star0</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_star23">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sn_campground40">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/campground.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_dining010">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_campground01">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/campground.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin1800">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff7fff00</color>
+			<width>2</width>
+		</LineStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin2020">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff00aa00</color>
+			<width>3.1</width>
+		</LineStyle>
+	</Style>
+	<Style id="sh_star101">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sh_star30">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sh_star21">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sh_grocery10">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/grocery.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_star60">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sn_star21">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sn_rail1">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/rail.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_parking_lot4">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_parking_lot4</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_parking_lot6</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_snack_bar20">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_snack_bar30</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_snack_bar20</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_coffee010">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/coffee.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_star9">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sh_rail1">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/rail.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin230">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin0030</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin2020</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_grocery010">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/grocery.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_parking_lot0">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/parking_lot.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_star51">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_star70</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_star100</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_star24">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sn_dining51">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_dining40">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_campground100">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_campground5</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_campground100</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_coffee40">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_coffee00</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_coffee100</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_star0">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_star24</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_star</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_dining110">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_star18">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sh_dining0000">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_lodging100">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/lodging.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_dining120">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_dining020</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_dining22</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_dining201">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_dining110</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_dining111</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_star19">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_star0</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_star3</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_star212">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sh_snack_bar0010">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/snack_bar.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_rail4">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/rail.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_dining60">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_dining101</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_dining40</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_dining100">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_dining000</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_dining0000</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_star7">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_star19</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_star7</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_rail0">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_rail00</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_rail00</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_dining110">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_dining51</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_dining010</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin2200">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin820</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin2200</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_dining50">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_dining50</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_dining110</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_campground30">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/campground.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_star3">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_star8</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_star5</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_campground4">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_campground40</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_campground3</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_star120">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sh_star000">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sh_campground50">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/campground.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_star70">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_star17">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_star1</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_star12</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_parking_lot3">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_parking_lot5</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_parking_lot7</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_star6">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_snack_bar0000">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_snack_bar2000</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_snack_bar0000</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_parking_lot">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/parking_lot.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_star41">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sh_star90">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_star2">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_star11</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_star9</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_snack_bar0000">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/snack_bar.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin810">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff00ff00</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="sn_snack_bar21">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/snack_bar.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_rail4">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/rail.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_snack_bar11">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/snack_bar.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_star9">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin3100">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin1020</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin810</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_snack_bar201">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/snack_bar.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_lodging10">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/lodging.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_star10">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sn_star15">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sh_star16">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin131">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff7fff00</color>
+			<width>2</width>
+		</LineStyle>
+	</Style>
+	<StyleMap id="msn_star30">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_star60</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_star30</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_star25">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sh_star40">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin05">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin150</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin00100</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_star00">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_star42</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_star32</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_star210">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sn_star01">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sh_parking_lot0">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/parking_lot.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_star6">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_star00</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_star19</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_star16">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sh_star70">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sn_star00">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_grocery010">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_grocery0010</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_grocery10</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_star19">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sh_star500">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sn_parking_lot2">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/parking_lot.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_star62">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_star01</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_star130</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_star80">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sh_star13">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin00100">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin6200</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin420</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_star01">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_star18</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_star24</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_dining50">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_parking_lot3">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/parking_lot.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_campground4">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/campground.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_rail30">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_rail2</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_rail2</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin6200">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>9e7faaff</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>1c7faaff</color>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="msn_star31">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_star20</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_star11</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_campground50">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_campground02</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_campground01</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_campground3">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/campground.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_star2">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sn_star000">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sn_parking_lot5">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/parking_lot.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_dining100">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_grocery510">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_grocery100</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_grocery010</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_grocery000">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/grocery.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin420">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>9e7faaff</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>1c7faaff</color>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="msn_rail2">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_rail3</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_rail1</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_dining100">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_star13">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sh_campground20">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/campground.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_star14">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_star3</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_star6</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_dining101">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_campground5">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/campground.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_snack_bar020">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/snack_bar.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_lodging30">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/lodging.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_star17">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sh_dining22">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_star12">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sn_star110">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sn_star24">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/star.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin1900">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin070</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin041</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin070">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff7fff00</color>
+			<width>2</width>
+		</LineStyle>
+	</Style>
+	<Style id="sn_grocery0010">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/grocery.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Folder>
+		<name>Sommerferie &apos;08</name>
+		<visibility>0</visibility>
+		<open>1</open>
+		<Folder>
+			<name>9. - 10. Udrejse, Hamburg - München, Tyskland</name>
+			<visibility>0</visibility>
+			<Placemark>
+				<name>Tissestop</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>9.342944047406988</longitude>
+					<latitude>54.83255154005545</latitude>
+					<altitude>0</altitude>
+					<heading>-0.4821783436852247</heading>
+					<tilt>0</tilt>
+					<range>429.6324598159278</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_star0</styleUrl>
+				<Point>
+					<coordinates>9.34315103559986,54.83279507829292,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Autohof Wikingerland</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>9.546346845923623</longitude>
+					<latitude>54.47653906523733</latitude>
+					<altitude>0</altitude>
+					<heading>-0.3171213191919859</heading>
+					<tilt>0</tilt>
+					<range>456.8465551035467</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_star19</styleUrl>
+				<Point>
+					<coordinates>9.5451864107348,54.47777823819345,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Hamburg Altona, Autotog</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>9.935267000088118</longitude>
+					<latitude>53.55258800000226</latitude>
+					<altitude>0</altitude>
+					<heading>7.076893193990398e-011</heading>
+					<tilt>0</tilt>
+					<range>245.6491703701801</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_rail2</styleUrl>
+				<Point>
+					<coordinates>9.935504814587972,53.55258552105217,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Rangierbahnhof Machen</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>10.06267708612627</longitude>
+					<latitude>53.40575345570122</latitude>
+					<altitude>0</altitude>
+					<heading>38.27567925989978</heading>
+					<tilt>33.41738446691597</tilt>
+					<range>2491.571262211176</range>
+				</LookAt>
+				<styleUrl>#msn_rail1</styleUrl>
+				<Point>
+					<coordinates>10.06267708612627,53.40575345570123,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Lumbardbrücke</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>9.995475831008648</longitude>
+					<latitude>53.55517986987221</latitude>
+					<altitude>0</altitude>
+					<heading>-142.8288864933342</heading>
+					<tilt>71.27159527942646</tilt>
+					<range>368.8353772858247</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_rail0</styleUrl>
+				<Point>
+					<coordinates>9.997195868770461,53.55692605890729,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>München Ost, Autotog</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>11.6068494921673</longitude>
+					<latitude>48.12720351535371</latitude>
+					<altitude>0</altitude>
+					<heading>0.03815596009719151</heading>
+					<tilt>0</tilt>
+					<range>647.3593273677374</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_rail30</styleUrl>
+				<Point>
+					<coordinates>11.60596752497104,48.12673972873093,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>2. morgenmad</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>11.32473532449109</longitude>
+					<latitude>47.820236551258</latitude>
+					<altitude>0</altitude>
+					<heading>-0.1714701125623825</heading>
+					<tilt>0</tilt>
+					<range>448.8586596879034</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_snack_bar100</styleUrl>
+				<Point>
+					<coordinates>11.32446479458888,47.82040357026929,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Ettal - kloster</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>11.09469788245571</longitude>
+					<latitude>47.56985809857937</latitude>
+					<altitude>0</altitude>
+					<heading>-0.002520629683889114</heading>
+					<tilt>0</tilt>
+					<range>490.8113353743356</range>
+				</LookAt>
+				<styleUrl>#msn_star200</styleUrl>
+				<Point>
+					<coordinates>11.09469788245571,47.56985809857937,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Frokost på afveje</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>11.01977453590452</longitude>
+					<latitude>47.60992925395784</latitude>
+					<altitude>0</altitude>
+					<heading>-0.05783553601979287</heading>
+					<tilt>0</tilt>
+					<range>591.2597710670767</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_dining300</styleUrl>
+				<Point>
+					<coordinates>11.01947110207593,47.61013340768255,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Indkøb - MPreis med udsigt til Zugspitze</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>10.92916751101957</longitude>
+					<latitude>47.4008736026676</latitude>
+					<altitude>0</altitude>
+					<heading>62.75618686503168</heading>
+					<tilt>87.18699699846027</tilt>
+					<range>1563.173346642585</range>
+				</LookAt>
+				<styleUrl>#msn_grocery0000</styleUrl>
+				<Point>
+					<coordinates>10.91462201644046,47.39549015787958,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Is og kaffe med udsigt til Zugspitze, lige før Fernpass</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>10.85377241086866</longitude>
+					<latitude>47.36348864717501</latitude>
+					<altitude>0</altitude>
+					<heading>69.02100527311605</heading>
+					<tilt>71.07679080395226</tilt>
+					<range>1352.893632276878</range>
+				</LookAt>
+				<styleUrl>#msn_snack_bar0000</styleUrl>
+				<Point>
+					<coordinates>10.84461081795951,47.36176196260072,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>10. - 12. Umhausen, Østrig</name>
+			<visibility>0</visibility>
+			<Placemark>
+				<name>Overnatning, Camping Ötztal Arena</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>10.93251447676623</longitude>
+					<latitude>47.13967374361162</latitude>
+					<altitude>0</altitude>
+					<heading>-6.944090687698722</heading>
+					<tilt>77.33152076700155</tilt>
+					<range>985.9216142193509</range>
+				</LookAt>
+				<styleUrl>#msn_campground30</styleUrl>
+				<Point>
+					<coordinates>10.93341003160998,47.13425706610701,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Aftensmad 10. og 11.</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>10.93217505504575</longitude>
+					<latitude>47.13545902652329</latitude>
+					<altitude>0</altitude>
+					<heading>-0.0006386832094338416</heading>
+					<tilt>0</tilt>
+					<range>506.9736938383685</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_dining100</styleUrl>
+				<Point>
+					<coordinates>10.93179226938192,47.13530074189939,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Udflugt badesø</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>10.93296485820454</longitude>
+					<latitude>47.13185912283784</latitude>
+					<altitude>0</altitude>
+					<heading>-3.615870433247562</heading>
+					<tilt>3.806667331381713</tilt>
+					<range>242.6160125186294</range>
+				</LookAt>
+				<styleUrl>#msn_star100</styleUrl>
+				<Point>
+					<coordinates>10.93296485820454,47.13185912283785,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Timmelsjoch/Passo del Rombo (2509 m.)</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>11.09781575500942</longitude>
+					<latitude>46.90333894578399</latitude>
+					<altitude>0</altitude>
+					<heading>126.3096683346646</heading>
+					<tilt>53.77094500684913</tilt>
+					<range>1986.819338438115</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_star010</styleUrl>
+				<Point>
+					<coordinates>11.096716146737,46.90525493303617,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Fotostop efter pasafgift</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>11.04326963497864</longitude>
+					<latitude>46.92204768599713</latitude>
+					<altitude>0</altitude>
+					<heading>-30.6381048312472</heading>
+					<tilt>68.48478855664901</tilt>
+					<range>1624.624496012727</range>
+				</LookAt>
+				<styleUrl>#msn_star31</styleUrl>
+				<Point>
+					<coordinates>11.05272325632481,46.91139935120903,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>Udflugt den 11.</name>
+			<visibility>0</visibility>
+			<Placemark>
+				<name>Seilbahn fra Pill</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>11.04146315546407</longitude>
+					<latitude>46.89801095695331</latitude>
+					<altitude>0</altitude>
+					<heading>69.31826324212727</heading>
+					<tilt>88.62986425887917</tilt>
+					<range>255.7341302483065</range>
+				</LookAt>
+				<styleUrl>#msn_star400</styleUrl>
+				<Point>
+					<coordinates>11.04083807980891,46.89777551452405,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>via Hochgurgl</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>11.05352899895584</longitude>
+					<latitude>46.89905146051292</latitude>
+					<altitude>0</altitude>
+					<heading>98.09718162943389</heading>
+					<tilt>89.73913752081838</tilt>
+					<range>544.3807131569258</range>
+				</LookAt>
+				<styleUrl>#msn_star50</styleUrl>
+				<Point>
+					<coordinates>11.05192585868542,46.8992004471875,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>til Obergurgl</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>11.07366651839944</longitude>
+					<latitude>46.8867423317249</latitude>
+					<altitude>0</altitude>
+					<heading>124.7467350047481</heading>
+					<tilt>67.35850791820445</tilt>
+					<range>290.8760504765596</range>
+				</LookAt>
+				<styleUrl>#msn_star60</styleUrl>
+				<Point>
+					<coordinates>11.07376987948896,46.88670206342042,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Og videre med stolelift</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>11.07539190438754</longitude>
+					<latitude>46.8873936754415</latitude>
+					<altitude>0</altitude>
+					<heading>119.5509673956356</heading>
+					<tilt>81.64966560580032</tilt>
+					<range>323.3066140375314</range>
+				</LookAt>
+				<styleUrl>#msn_star30</styleUrl>
+				<Point>
+					<coordinates>11.0752701065019,46.88721920515432,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>til Wurmkogl</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>11.08256132169606</longitude>
+					<latitude>46.88030851349709</latitude>
+					<altitude>0</altitude>
+					<heading>170.0464407142613</heading>
+					<tilt>37.04882331715945</tilt>
+					<range>424.2699210053743</range>
+				</LookAt>
+				<styleUrl>#msn_star300</styleUrl>
+				<Point>
+					<coordinates>11.0837367454578,46.88038708147249,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Frokost</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>11.07507598226917</longitude>
+					<latitude>46.88820336206551</latitude>
+					<altitude>0</altitude>
+					<heading>123.3469631494455</heading>
+					<tilt>19.4390309483897</tilt>
+					<range>364.6842111577845</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_dining40</styleUrl>
+				<Point>
+					<coordinates>11.07505336056843,46.88811202821536,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>12. - 19. Stigliano, Italien</name>
+			<visibility>0</visibility>
+			<Placemark>
+				<name>Aftensmad 12/7</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>11.22544973793825</longitude>
+					<latitude>44.03156333900041</latitude>
+					<altitude>0</altitude>
+					<heading>121.8184331459348</heading>
+					<tilt>13.7265550473004</tilt>
+					<range>750.3959600434445</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_dining200</styleUrl>
+				<Point>
+					<coordinates>11.22416498013084,44.03218796494363,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Mere aftensmad 12/7</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>11.2202003414839</longitude>
+					<latitude>43.2452243042566</latitude>
+					<altitude>0</altitude>
+					<heading>-27.32381927064605</heading>
+					<tilt>17.31575602784942</tilt>
+					<range>551.1756222461064</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_dining110</styleUrl>
+				<Point>
+					<coordinates>11.2206459239943,43.2445844447874,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Pogiarello di Stigliano, La Loggia</name>
+				<visibility>0</visibility>
+				<description>http://secure.worldby.com/cgi-bin/gwholavasubmit.cgi</description>
+				<LookAt>
+					<longitude>11.22758055565997</longitude>
+					<latitude>43.22442467424593</latitude>
+					<altitude>0</altitude>
+					<heading>-27.31876383430241</heading>
+					<tilt>17.3156307599617</tilt>
+					<range>428.8217158012927</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_lodging00</styleUrl>
+				<Point>
+					<coordinates>11.22777436753898,43.22420665752974,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>14. Sienna</name>
+			<visibility>0</visibility>
+			<Placemark>
+				<name>Torre del Mangia</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>11.33107648179703</longitude>
+					<latitude>43.31816390829447</latitude>
+					<altitude>0</altitude>
+					<heading>0.0003774357642379853</heading>
+					<tilt>0</tilt>
+					<range>387.6070368891504</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_star41</styleUrl>
+				<Point>
+					<coordinates>11.33213752599863,43.31822549138339,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Frokost</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>11.33179459112269</longitude>
+					<latitude>43.31854943447677</latitude>
+					<altitude>0</altitude>
+					<heading>0.0008701110668033284</heading>
+					<tilt>0</tilt>
+					<range>397.5388082437343</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_snack_bar40</styleUrl>
+				<Point>
+					<coordinates>11.33071179879987,43.31798285675437,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Duomo</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>11.32875368806828</longitude>
+					<latitude>43.31773756311884</latitude>
+					<altitude>0</altitude>
+					<heading>-0.001216092570807067</heading>
+					<tilt>0</tilt>
+					<range>384.5954979934245</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_star9</styleUrl>
+				<Point>
+					<coordinates>11.32858712104189,43.31737006276934,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Bilparkering</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>11.32872418956896</longitude>
+					<latitude>43.3154669290923</latitude>
+					<altitude>0</altitude>
+					<heading>-0.001236413505339796</heading>
+					<tilt>0</tilt>
+					<range>398.6736672803121</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_parking_lot</styleUrl>
+				<Point>
+					<coordinates>11.32806229095968,43.31529375922878,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Parkometerløb</name>
+				<visibility>0</visibility>
+				<styleUrl>#msn_ylw-pushpin1020</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						11.32812797173179,43.31540814596012,0 11.32820948229885,43.31543850449058,0 11.32877719081671,43.31568683835172,0 11.32914923514252,43.3158438533663,0 11.32944067007638,43.31598471024955,0 11.32955753808147,43.31604832456375,0 11.32969407776233,43.31612621210397,0 11.32975268008593,43.31616881367753,0 11.32986016041208,43.3162326786052,0 11.33007544895861,43.31637485760792,0 11.33028141158536,43.3165101123836,0 11.33046861695573,43.31668876351561,0 11.3305478411812,43.31677489957333,0 11.33060741722859,43.31685405092198,0 11.33069703632515,43.31699111922266,0 11.33076712976417,43.31709979959987,0 11.33076716753092,43.31711425860996,0 11.33082750683123,43.3171943776555,0 11.33091843753053,43.31733320148555,0 11.33096916184404,43.31741385956818,0 11.33098973139299,43.31750887468136,0 11.33098000618908,43.31761084539672,0 11.33089957701468,43.31771883807373,0 11.33083883682651,43.3178113478886,0 11.33079844779144,43.3178752487176,0 11.33076811657304,43.3179607803665,0 11.33075791044595,43.31803229562323,0 11.330667902971,43.31806610072766,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>15. San Gimignano</name>
+			<visibility>0</visibility>
+			<Placemark>
+				<name>Bilparkering</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>11.0452744696056</longitude>
+					<latitude>43.46890022121527</latitude>
+					<altitude>0</altitude>
+					<heading>0.001049805944714831</heading>
+					<tilt>0</tilt>
+					<range>779.8695779199708</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_parking_lot20</styleUrl>
+				<Point>
+					<coordinates>11.04419989725656,43.47067365178861,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Palazzo Comunale - Torre Grossa</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>11.04338257158271</longitude>
+					<latitude>43.46767201409715</latitude>
+					<altitude>0</altitude>
+					<heading>-0.0002957946928127406</heading>
+					<tilt>0</tilt>
+					<range>339.4478443171967</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_star130</styleUrl>
+				<Point>
+					<coordinates>11.04299217111307,43.46762080599411,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Frokost</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>11.04265508698966</longitude>
+					<latitude>43.46689141590616</latitude>
+					<altitude>0</altitude>
+					<heading>-0.0007522168791840209</heading>
+					<tilt>0</tilt>
+					<range>440.9658880181011</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_dining001</styleUrl>
+				<Point>
+					<coordinates>11.04282776291542,43.4668377073377,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Fuglemuseum</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>11.04265508696988</longitude>
+					<latitude>43.46689141591327</latitude>
+					<altitude>0</altitude>
+					<heading>-0.000752216892780892</heading>
+					<tilt>0</tilt>
+					<range>586.8680131567338</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_star32</styleUrl>
+				<Point>
+					<coordinates>11.04147460698945,43.46716100561324,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>16. Lille gårtur samt Arrezzo - efter frokost - med Gaye og Eva</name>
+			<visibility>0</visibility>
+			<Placemark>
+				<name>Frokost?</name>
+				<visibility>0</visibility>
+				<styleUrl>#msn_ylw-pushpin2200</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						11.679916988787,43.33330437794375,0 11.67888318535206,43.33339377369731,0 11.67761945753604,43.3335517305979,0 11.67567699545312,43.33375707228603,0 11.67422598132038,43.33384284448537,0 11.67277123735127,43.33419500548936,0 11.67159032688279,43.33478527532945,0 11.67032591215926,43.33544579019665,0 11.66841046314617,43.33644223483883,0 11.66704823364012,43.33693919001919,0 11.66571403433822,43.3375040623912,0 11.66491165356932,43.33859390338584,0 11.66570585241891,43.3393678591917,0 11.6648614240707,43.34012659622827,0 11.66368219363913,43.34076981579729,0 11.66316536642853,43.34194509283284,0 11.66295383285597,43.34290057161724,0 11.66284176127063,43.34409905354167,0 11.66208124690455,43.34451391038952,0 11.66037454735364,43.34468376331915,0 11.65996818966633,43.34470517431443,0 11.65768997516696,43.34477629261382,0 11.65586785344065,43.34495063889506,0 11.65483044829808,43.34627074643796,0 11.65442870680316,43.34691573209545,0 11.65283773806081,43.34770281997104,0 11.65189342926484,43.34777649899234,0 11.65062708267448,43.34865083409638,0 11.651374183497,43.34935525300772,0 11.65219215726783,43.35031976965492,0 11.651602379754,43.35129803340437,0 11.65081148925791,43.35239733476286,0 11.65001287407206,43.35351253622425,0 11.64896562104788,43.35435362385569,0 11.64768590872254,43.35423992858683,0 11.64701792539897,43.35432164358338,0 11.64463928236864,43.35497863764761,0 11.64310368840971,43.3546594583714,0 11.64350225522608,43.3535766220933,0 11.64404970700522,43.35240593581215,0 11.64441209657033,43.35122352863755,0 11.64351341643285,43.35040182803663,0 11.64171771070194,43.35022555761146,0 11.64117870616195,43.34937588526648,0 11.64070275774827,43.34845177116544,0 11.64018758814581,43.34745281555049,0 11.63950199681896,43.34671948709185,0 11.63865668460369,43.34623244509641,0 11.63719032528101,43.34510142955094,0 11.63628790000516,43.34415676926574,0 11.63574764495823,43.3438157515706,0 11.63380398713788,43.34494221078133,0 11.63250931573899,43.34499603858227,0 11.63098440356822,43.34482385569546,0 11.62983128494761,43.34494730051873,0 11.62872954480753,43.3454294714446,0 11.62729963800734,43.3466193852308,0 11.6263032792092,43.34783638656754,0 11.62552207791131,43.34865657846918,0 11.62293583187886,43.34990972631383,0 11.62154805474661,43.34990756374208,0 11.62091976155206,43.34985554077229,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>Bilparkering</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>11.87515409919354</longitude>
+					<latitude>43.4627037440068</latitude>
+					<altitude>0</altitude>
+					<heading>0.02490512687215621</heading>
+					<tilt>0</tilt>
+					<range>371.3076775797896</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_parking_lot00</styleUrl>
+				<Point>
+					<coordinates>11.87510570690448,43.46239385033021,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>San Francesco</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>11.87924802475234</longitude>
+					<latitude>43.46494856954737</latitude>
+					<altitude>0</altitude>
+					<heading>0.02772105009290108</heading>
+					<tilt>0</tilt>
+					<range>559.3311910872241</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_star120</styleUrl>
+				<Point>
+					<coordinates>11.88082763198295,43.46454891684981,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Piazza Grande</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>11.88295116439285</longitude>
+					<latitude>43.46432759667764</latitude>
+					<altitude>0</altitude>
+					<heading>0.03026844263480102</heading>
+					<tilt>0</tilt>
+					<range>923.8149740955375</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_star201</styleUrl>
+				<Point>
+					<coordinates>11.88400769273451,43.46469664737934,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Fontana della Chimera</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>11.87501949095018</longitude>
+					<latitude>43.46090774062488</latitude>
+					<altitude>0</altitude>
+					<heading>0.02481245326929833</heading>
+					<tilt>0</tilt>
+					<range>945.5526020196235</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_star52</styleUrl>
+				<Point>
+					<coordinates>11.87653246046622,43.46140372225634,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Parkometerløb</name>
+				<visibility>0</visibility>
+				<styleUrl>#msn_ylw-pushpin1900</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						11.88303735853991,43.46477510081705,0 11.88291099873393,43.4647037238537,0 11.8827986213512,43.46463199616037,0 11.88270101357016,43.46452846776809,0 11.8826026802589,43.46444565518319,0 11.88248972026449,43.46436276881462,0 11.88239058400527,43.46429002551184,0 11.88224847822739,43.46418575212373,0 11.88212026414645,43.46408092333184,0 11.88196271000618,43.46398674006831,0 11.88184716761157,43.46394509430524,0 11.88167319849256,43.46387162053432,0 11.88154112784943,43.4637861913587,0 11.88140887913363,43.46370063561836,0 11.88129148987323,43.46360421948666,0 11.8811294635007,43.46348610658487,0 11.88099688403389,43.46336769644852,0 11.88089336847082,43.46327054137647,0 11.88083356109826,43.46321639488417,0 11.88057950185275,43.46299990115428,0 11.88045999645591,43.46289170307681,0 11.88032560068983,43.46277272661902,0 11.88022109969077,43.46267540955247,0 11.88011662786811,43.46257811918522,0 11.87999729468174,43.46250249939989,0 11.87983325700017,43.46238368920938,0 11.87963947609281,43.46227566006687,0 11.87950528203913,43.46217829548048,0 11.87937097200928,43.46208071387279,0 11.87923646295319,43.46198285255756,0 11.87914660730337,43.46189573675152,0 11.87899668912122,43.46178650562609,0 11.87887671334347,43.46169917975448,0 11.87875661941881,43.46161176835602,0 11.87862171940462,43.46156798924484,0 11.87851705740093,43.46156802550805,0 11.87832249561328,43.46154621076792,0 11.87820266405659,43.46152436596949,0 11.87800751244079,43.46146954893064,0 11.87781167834935,43.46140339700673,0 11.87766047963487,43.46131536659194,0 11.87752354575585,43.46122679817933,0 11.87740111134124,43.46114874777045,0 11.87727912124373,43.46107107681115,0 11.87715877907704,43.46103829089885,0 11.87697858355608,43.46104929204456,0 11.87682863316331,43.46109310564666,0 11.87667897947171,43.46118066294919,0 11.87649926985684,43.46125726889709,0 11.87633462301482,43.46133384864375,0 11.87621377158946,43.46138801798698,0 11.87606161645581,43.46148531780644,0 11.87610736890262,43.46159459767006,0 11.87621393811806,43.46164961399815,0 11.87627452301797,43.46179144247145,0 11.87622924793587,43.46188944997738,0 11.87609260830378,43.4619326403398,0 11.87595614283053,43.46197594488849,0 11.8758199176665,43.46204117939058,0 11.87565486189267,43.4621285653913,0 11.87550800992577,43.46223833540124,0 11.87538666647137,43.46233628481599,0 11.87526498898122,43.46241244122816,0 11.87515849044926,43.4624886712261,0 11.87511287388513,43.46253227089097,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>17. Pienza og Montepulciano</name>
+			<visibility>0</visibility>
+			<Placemark>
+				<name>Bilparkering</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>11.68067681732643</longitude>
+					<latitude>43.07750962722342</latitude>
+					<altitude>0</altitude>
+					<heading>0.001623117276132986</heading>
+					<tilt>0</tilt>
+					<range>289.1695911188619</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_parking_lot3</styleUrl>
+				<Point>
+					<coordinates>11.68113888467019,43.07814927113504,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Piazza Papa Pio II</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>11.67893621163138</longitude>
+					<latitude>43.07688854064168</latitude>
+					<altitude>0</altitude>
+					<heading>0.0004343142366297264</heading>
+					<tilt>0</tilt>
+					<range>388.9134382745687</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_star8</styleUrl>
+				<Point>
+					<coordinates>11.67919495230095,43.07655879831908,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Pieve di Corsignano</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>11.67163210394777</longitude>
+					<latitude>43.07699720951803</latitude>
+					<altitude>0</altitude>
+					<heading>-0.1243140711935553</heading>
+					<tilt>0</tilt>
+					<range>459.3496560128734</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_star70</styleUrl>
+				<Point>
+					<coordinates>11.67152395047249,43.07705271760818,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Bilparkering</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>11.78483855026261</longitude>
+					<latitude>43.0957431026976</latitude>
+					<altitude>0</altitude>
+					<heading>-0.04700256720140916</heading>
+					<tilt>0</tilt>
+					<range>723.4085330004327</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_parking_lot0</styleUrl>
+				<Point>
+					<coordinates>11.78507603883254,43.09759949842708,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Frokost</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>11.78615934084127</longitude>
+					<latitude>43.09562091203475</latitude>
+					<altitude>0</altitude>
+					<heading>-0.04610124386732793</heading>
+					<tilt>0</tilt>
+					<range>1345.714916995496</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_dining50</styleUrl>
+				<Point>
+					<coordinates>11.78597401928955,43.09736176489016,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Palazzo Comunale</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>11.78197795416263</longitude>
+					<latitude>43.09346067592191</latitude>
+					<altitude>0</altitude>
+					<heading>-0.04895795666117845</heading>
+					<tilt>0</tilt>
+					<range>666.6522382002563</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_star5</styleUrl>
+				<Point>
+					<coordinates>11.78063772272857,43.09273513313892,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>San Biagio</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>11.77622615966686</longitude>
+					<latitude>43.09111932946791</latitude>
+					<altitude>0</altitude>
+					<heading>-0.05288747046051321</heading>
+					<tilt>0</tilt>
+					<range>530.3174722070727</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_star110</styleUrl>
+				<Point>
+					<coordinates>11.77458402725306,43.09074825700898,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Bilhentningsløb</name>
+				<visibility>0</visibility>
+				<styleUrl>#msn_ylw-pushpin05</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						11.77495294830773,43.09080829905852,0 11.77518348960295,43.09092198237086,0 11.77543846992793,43.09107068511231,0 11.77566683842775,43.09121760463989,0 11.77589908480991,43.09133231236473,0 11.7761566853079,43.09141415122431,0 11.77620783882288,43.09145081883796,0 11.77661574011027,43.09157362830513,0 11.77686795066291,43.09167060001507,0 11.77706833220886,43.09174764362116,0 11.77739250771545,43.09189764657962,0 11.77761995885538,43.09206131069745,0 11.77781981120316,43.09225493992864,0 11.77806885124726,43.09243376604857,0 11.77838314498297,43.09266026653992,0 11.7785734666072,43.09279764508624,0 11.77881019208731,43.09296844786673,0 11.77901960977252,43.09315242874835,0 11.77918223840125,43.09325367076595,0 11.77936553928566,43.09338644273787,0 11.77945875458375,43.09342125269964,0 11.77975829872612,43.09355702237375,0 11.7800541413262,43.09370705035151,0 11.78023072706938,43.09383586086629,0 11.78045190152193,43.09398102688886,0 11.78067309040743,43.09411014533782,0 11.78089271910608,43.09412710169034,0 11.78104438512085,43.09414267299513,0 11.78130320458696,43.09420471720623,0 11.78149786396413,43.09429917405065,0 11.7817587277515,43.09444173330761,0 11.78195540409172,43.09460148466247,0 11.78202122102809,43.09468185616341,0 11.78235339572464,43.09489217465603,0 11.78253266623417,43.09497409604378,0 11.78275867749561,43.09508968717363,0 11.78296439577984,43.09517344305154,0 11.78317204029121,43.09527455126452,0 11.78338098755988,43.09532638957961,0 11.78363781185335,43.09536211577133,0 11.78382258611237,43.09547991980216,0 11.78381821397565,43.09564508698069,0 11.78379092621117,43.0958092877033,0 11.78388034315114,43.09597467693797,0 11.78404143279319,43.09609241640009,0 11.78408787260595,43.09610968241818,0 11.78429489369127,43.09619430097364,0 11.78470287530533,43.09635960114979,0 11.78483566521437,43.09650706657825,0 11.78490229206217,43.09667231658642,0 11.78497563226421,43.09682564927044,0 11.78509781866366,43.09706527979156,0 11.78510456435375,43.09723796615023,0 11.78510944722957,43.09739302392771,0 11.78511781399854,43.09765284836879,0 11.78512457074118,43.09782811359131,0 11.78512796131012,43.09791606127045,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>18. Gåtur</name>
+			<visibility>0</visibility>
+			<Placemark>
+				<name>Edderkopper og sommerfugle</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>11.22570630854116</longitude>
+					<latitude>43.21551822836028</latitude>
+					<altitude>0</altitude>
+					<heading>-27.32003960568028</heading>
+					<tilt>17.31559780522489</tilt>
+					<range>1157.969875450222</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_star1300</styleUrl>
+				<Point>
+					<coordinates>11.22623734431286,43.21494541939504,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Holiday Bonds palazzo</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>11.22960387690529</longitude>
+					<latitude>43.22283798003858</latitude>
+					<altitude>0</altitude>
+					<heading>-27.31737035391527</heading>
+					<tilt>17.31558469458667</tilt>
+					<range>820.5889320888366</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_star00</styleUrl>
+				<Point>
+					<coordinates>11.22869563315722,43.22287115437058,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>19. - 23. Serravalle, San Marino</name>
+			<visibility>0</visibility>
+			<Placemark>
+				<name>Frokost</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>11.71193514546491</longitude>
+					<latitude>43.26495030824442</latitude>
+					<altitude>0</altitude>
+					<heading>20.23371332481678</heading>
+					<tilt>16.75336213936442</tilt>
+					<range>964.1708447540896</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_snack_bar0110</styleUrl>
+				<Point>
+					<coordinates>11.71206953113162,43.26397704421078,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Stejlt vejkryds</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>11.74363911794958</longitude>
+					<latitude>43.27447795701557</latitude>
+					<altitude>0</altitude>
+					<heading>20.2554444104768</heading>
+					<tilt>16.75307785559991</tilt>
+					<range>825.4889551129936</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_cabs6</styleUrl>
+				<Point>
+					<coordinates>11.74351082353252,43.27360105305641,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Kaffe og is</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>12.12738572831746</longitude>
+					<latitude>43.56991230014931</latitude>
+					<altitude>0</altitude>
+					<heading>-2.133841509544924</heading>
+					<tilt>0</tilt>
+					<range>813.6422866820756</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_coffee10</styleUrl>
+				<Point>
+					<coordinates>12.12634766054227,43.56948936233757,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>På bro gennem Appeninerne</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>11.83183778373332</longitude>
+					<latitude>44.0172441356642</latitude>
+					<altitude>0</altitude>
+					<heading>-26.22070744652688</heading>
+					<tilt>88.6503597083792</tilt>
+					<range>28269.04165376839</range>
+				</LookAt>
+				<styleUrl>#msn_star21</styleUrl>
+				<Point>
+					<coordinates>11.97669615915112,43.80296832128602,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Centro Vacanze, San Marino</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>12.46304654371423</longitude>
+					<latitude>43.95941249843013</latitude>
+					<altitude>0</altitude>
+					<heading>-1.90419308031836</heading>
+					<tilt>0</tilt>
+					<range>243.9094460814012</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_campground11</styleUrl>
+				<Point>
+					<coordinates>12.46367014558315,43.9593172423419,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>22. Urbino og Ravenna</name>
+			<visibility>0</visibility>
+			<Placemark>
+				<name>Bilparkering</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>12.63693101588366</longitude>
+					<latitude>43.72290602801727</latitude>
+					<altitude>0</altitude>
+					<heading>-6.886178488691095</heading>
+					<tilt>0.008466950094277961</tilt>
+					<range>762.6724799254095</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_parking_lot1</styleUrl>
+				<Point>
+					<coordinates>12.63731148143363,43.72108595101572,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Palazzo Ducale</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>12.63705127755199</longitude>
+					<latitude>43.72299874840861</latitude>
+					<altitude>0</altitude>
+					<heading>-15.3962593680176</heading>
+					<tilt>64.0264372457489</tilt>
+					<range>557.4199502902723</range>
+				</LookAt>
+				<styleUrl>#msn_star18</styleUrl>
+				<Point>
+					<coordinates>12.63636851358258,43.72413667170907,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Parkometerløb</name>
+				<visibility>0</visibility>
+				<styleUrl>#msn_ylw-pushpin230</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						12.63645955643368,43.72417900666513,0 12.63653305407671,43.72432696506619,0 12.63663031695913,43.72441605756266,0 12.63677892904603,43.72444804117676,0 12.63683525666141,43.7243611988089,0 12.63689634939937,43.72424475950457,0 12.63692830255312,43.72413697832004,0 12.63696373533172,43.72400956026553,0 12.63697379513994,43.72395005961553,0 12.63699902651877,43.72380082301256,0 12.63700719846241,43.7236696827415,0 12.63699819463538,43.723556809349,0 12.63697365005383,43.72345210213585,0 12.63696122516066,43.7233580985568,0 12.63695557283812,43.72322259048271,0 12.63695701828343,43.7231286909562,0 12.63694787518705,43.72301224987526,0 12.63692115008318,43.72291460252721,0 12.63688357462912,43.7227939723812,0 12.63681903731379,43.72265894772472,0 12.63675057602558,43.72254415231264,0 12.63668328739575,43.72241775857592,0 12.63662652769701,43.72231346729907,0 12.63660158472473,43.72218961529136,0 12.63660696195622,43.7220558218779,0 12.63662522490053,43.72193317678952,0 12.63662902007293,43.72180800308511,0 12.63664911962643,43.72167104785994,0 12.63671803845226,43.72160769767904,0 12.63691970155092,43.72155729591258,0 12.6369395982332,43.72142879924886,0 12.63700243285719,43.721313937441,0 12.63717009928506,43.72130060447205,0 12.63731760057961,43.72132187399661,0 12.63746096872222,43.72128158709526,0 12.63751058227095,43.72117260116936,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>Frokost</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>12.63768532857057</longitude>
+					<latitude>43.7217620761551</latitude>
+					<altitude>0</altitude>
+					<heading>-5.138754647620743</heading>
+					<tilt>12.53071735328875</tilt>
+					<range>395.7228896948776</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_coffee00</styleUrl>
+				<Point>
+					<coordinates>12.63723023223541,43.7212675957536,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Bilparkering</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>12.20443833491903</longitude>
+					<latitude>44.41886637297922</latitude>
+					<altitude>0</altitude>
+					<heading>-5.438143217375109</heading>
+					<tilt>12.53151863643651</tilt>
+					<range>228.3104285913882</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_parking_lot4</styleUrl>
+				<Point>
+					<coordinates>12.20344017292895,44.41906412304196,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>San Vitale</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>12.1975307923297</longitude>
+					<latitude>44.42061543554371</latitude>
+					<altitude>0</altitude>
+					<heading>-5.442977827461721</heading>
+					<tilt>12.53151317263057</tilt>
+					<range>420.4675679539333</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_star6</styleUrl>
+				<Point>
+					<coordinates>12.19631879177558,44.42055194018663,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Mausoleo di Galla Placidia</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>12.1975307923297</longitude>
+					<latitude>44.42061543554371</latitude>
+					<altitude>0</altitude>
+					<heading>-5.442977827461721</heading>
+					<tilt>12.53151317263057</tilt>
+					<range>420.4675679539333</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_star15</styleUrl>
+				<Point>
+					<coordinates>12.19704637509537,44.42095304210179,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Aftensmad ?</name>
+				<visibility>0</visibility>
+				<styleUrl>#msn_ylw-pushpin00100</styleUrl>
+				<Polygon>
+					<tessellate>1</tessellate>
+					<outerBoundaryIs>
+						<LinearRing>
+							<coordinates>
+								12.19728139076851,44.42077228064926,0 12.19633027054675,44.41994145261508,0 12.19802949855934,44.41934179277725,0 12.19859594113576,44.42076499640868,0 12.19728139076851,44.42077228064926,0 
+							</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>21. Urbino</name>
+			<visibility>0</visibility>
+			<Placemark>
+				<name>Bilparkering</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>12.63647521775647</longitude>
+					<latitude>43.72891002298331</latitude>
+					<altitude>0</altitude>
+					<heading>-6.886492352209499</heading>
+					<tilt>0.008466950094277961</tilt>
+					<range>337.4502419403257</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_parking_lot6</styleUrl>
+				<Point>
+					<coordinates>12.6360515988362,43.72950506038758,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Orto Botanico “Pierina Scaramella”, Università di Urbino</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>12.63670663564031</longitude>
+					<latitude>43.72733337283589</latitude>
+					<altitude>0</altitude>
+					<heading>-6.886332591401532</heading>
+					<tilt>0.008466952590920845</tilt>
+					<range>311.2608583208753</range>
+				</LookAt>
+				<styleUrl>#msn_star3</styleUrl>
+				<Point>
+					<coordinates>12.63670663564031,43.72733337283589,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Frokost</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>12.63701759530333</longitude>
+					<latitude>43.72523103538376</latitude>
+					<altitude>0</altitude>
+					<heading>-7.001566369501317</heading>
+					<tilt>0.7444390873896155</tilt>
+					<range>299.9671632892266</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_snack_bar20</styleUrl>
+				<Point>
+					<coordinates>12.63636556346529,43.72472370682218,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Parkometerløb</name>
+				<visibility>0</visibility>
+				<styleUrl>#msn_ylw-pushpin141</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						12.636248450889,43.72640975187192,0 12.63614681599654,43.72650382695355,0 12.63607652357328,43.726580338881,0 12.63599042265696,43.72666594608825,0 12.63585943885178,43.72676787495015,0 12.63576013673531,43.7268517943424,0 12.63566260301336,43.72692547424686,0 12.63564658627537,43.72702637816355,0 12.6357470162249,43.7271072514301,0 12.63587539075784,43.72719079871564,0 12.63597594100283,43.72727159180053,0 12.63607650039911,43.72735228975707,0 12.63622641956462,43.7274783523809,0 12.6362533069515,43.72757312482709,0 12.63625221942343,43.72766452082576,0 12.63624419931351,43.72779770936285,0 12.63619757514131,43.72790629370086,0 12.63610399146741,43.72804075979455,0 12.6360716227814,43.72814957640661,0 12.6360705802939,43.72824088785951,0 12.6360645227322,43.72836212458688,0 12.63607057749208,43.72849563894158,0 12.63608164752155,43.72859913842756,0 12.63609104486602,43.72871262985082,0 12.6361110572125,43.7288474290331,0 12.63611497852901,43.72890862367716,0 12.63610566388603,43.72904818173733,0 12.63608598495991,43.72916439743676,0 12.63605419785064,43.72926852089193,0 12.63604280649415,43.72933588098592,0 12.63602320920424,43.72945202736599,0 12.63600022153052,43.72958865558768,0 12.63599366373917,43.72962763239992,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>20. San Marino</name>
+			<visibility>0</visibility>
+			<Placemark>
+				<name>San Marino, San Marino</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>11.83520092863245</longitude>
+					<latitude>43.34011783225895</latitude>
+					<altitude>0</altitude>
+					<heading>-142.9785479855906</heading>
+					<tilt>90</tilt>
+					<range>86438.17702259155</range>
+				</LookAt>
+				<styleUrl>#msn_star51</styleUrl>
+				<Point>
+					<coordinates>12.44957263028555,43.93555211273205,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Ospedale di Stato R.S.M.</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>12.45489401524277</longitude>
+					<latitude>43.95229928829354</latitude>
+					<altitude>0</altitude>
+					<heading>-13.98608699078435</heading>
+					<tilt>63.48464477562376</tilt>
+					<range>475.8090589161712</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_star01</styleUrl>
+				<Point>
+					<coordinates>12.45530986428918,43.95064305210635,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>23. - 26. Fiesole, Italien</name>
+			<visibility>0</visibility>
+			<Placemark>
+				<name>Frokost</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>11.88815841393306</longitude>
+					<latitude>44.13611141372533</latitude>
+					<altitude>0</altitude>
+					<heading>28.81731374657272</heading>
+					<tilt>51.53296398309207</tilt>
+					<range>411.1438177132864</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_snack_bar010</styleUrl>
+				<Point>
+					<coordinates>11.88761260590518,44.13675322220219,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Kaffe</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>11.89234831050811</longitude>
+					<latitude>44.13854158472852</latitude>
+					<altitude>0</altitude>
+					<heading>53.33920415402969</heading>
+					<tilt>67.03707212155599</tilt>
+					<range>494.0066883872648</range>
+				</LookAt>
+				<styleUrl>#msn_coffee20</styleUrl>
+				<Point>
+					<coordinates>11.88966108904324,44.13728892372838,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Passo di Muraglione</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>11.65601368028528</longitude>
+					<latitude>43.93292402756959</latitude>
+					<altitude>0</altitude>
+					<heading>19.20075986940977</heading>
+					<tilt>37.83967329876406</tilt>
+					<range>645.6071560755221</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_star11</styleUrl>
+				<Point>
+					<coordinates>11.65492836897892,43.93254772105465,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Camping Panoramico Fiesole</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>11.30705810032248</longitude>
+					<latitude>43.80746070909473</latitude>
+					<altitude>0</altitude>
+					<heading>-21.33609452405325</heading>
+					<tilt>18.52349055895762</tilt>
+					<range>218.4572822628971</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_campground2</styleUrl>
+				<Point>
+					<coordinates>11.30710789166078,43.80792129726264,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>25. Pisa</name>
+			<visibility>0</visibility>
+			<Placemark>
+				<name>ipercoop</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>10.47514871462191</longitude>
+					<latitude>43.67369996391722</latitude>
+					<altitude>0</altitude>
+					<heading>0.05427705892949036</heading>
+					<tilt>0</tilt>
+					<range>569.2390261700467</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_grocery010</styleUrl>
+				<Point>
+					<coordinates>10.47430279210759,43.67448157312472,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Bilparkering</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>10.39601329389102</longitude>
+					<latitude>43.72119609840827</latitude>
+					<altitude>0</altitude>
+					<heading>-0.000406726201180706</heading>
+					<tilt>0</tilt>
+					<range>592.2948199419767</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_parking_lot5</styleUrl>
+				<Point>
+					<coordinates>10.39564873766997,43.72104440086756,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Campo dei Miracoli</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>10.39592464288886</longitude>
+					<latitude>43.72294963820772</latitude>
+					<altitude>0</altitude>
+					<heading>-0.0004679683357316568</heading>
+					<tilt>0</tilt>
+					<range>594.423860638812</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_star1</styleUrl>
+				<Point>
+					<coordinates>10.39469823716701,43.72338079825526,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Frokost</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>10.39592464285906</longitude>
+					<latitude>43.72294963829334</latitude>
+					<altitude>0</altitude>
+					<heading>-0.0004679683563336998</heading>
+					<tilt>0</tilt>
+					<range>248.2350392645413</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_snack_bar020</styleUrl>
+				<Point>
+					<coordinates>10.39603965570196,43.72337189651901,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Arnomundingen</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>10.30313663714222</longitude>
+					<latitude>43.67361380331629</latitude>
+					<altitude>0</altitude>
+					<heading>-0.06462563855578576</heading>
+					<tilt>0</tilt>
+					<range>4757.103688234499</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_star10</styleUrl>
+				<Point>
+					<coordinates>10.274811972236,43.67889895206575,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Vejudfletninger i Livorno</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>10.3249821441775</longitude>
+					<latitude>43.59100009239923</latitude>
+					<altitude>0</altitude>
+					<heading>-0.04958102506321212</heading>
+					<tilt>0</tilt>
+					<range>2477.124990209693</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_dining201</styleUrl>
+				<Point>
+					<coordinates>10.32323841384417,43.58766766188867,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Middag</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>10.27980719785096</longitude>
+					<latitude>43.66061146726538</latitude>
+					<altitude>0</altitude>
+					<heading>-0.08073620628019082</heading>
+					<tilt>0</tilt>
+					<range>258.3135870386445</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_dining01</styleUrl>
+				<Point>
+					<coordinates>10.27907754724561,43.6601587130633,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>24. Firenze</name>
+			<visibility>0</visibility>
+			<Placemark>
+				<name>Palazzo Medici Ricciardi</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>11.25654921398009</longitude>
+					<latitude>43.77559016638444</latitude>
+					<altitude>0</altitude>
+					<heading>55.49258983654351</heading>
+					<tilt>9.860229716705341</tilt>
+					<range>276.3925948504946</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_star170</styleUrl>
+				<Point>
+					<coordinates>11.25568778242843,43.77513264975785,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Chiesa di San Lorenzo</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>11.25376395983039</longitude>
+					<latitude>43.77484732843318</latitude>
+					<altitude>0</altitude>
+					<heading>50.36174237536194</heading>
+					<tilt>56.66107204653735</tilt>
+					<range>360.4600833028992</range>
+				</LookAt>
+				<styleUrl>#msn_star7</styleUrl>
+				<Point>
+					<coordinates>11.25369961221733,43.77494872755606,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Frokost</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>11.25396767015246</longitude>
+					<latitude>43.77548551282809</latitude>
+					<altitude>0</altitude>
+					<heading>55.49080378271567</heading>
+					<tilt>9.860233735898992</tilt>
+					<range>176.0980341184072</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_dining60</styleUrl>
+				<Point>
+					<coordinates>11.25357528321351,43.77565235062964,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Battistero di S. Giovanni</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>11.25543476549622</longitude>
+					<latitude>43.77300542613642</latitude>
+					<altitude>0</altitude>
+					<heading>50.36228515885212</heading>
+					<tilt>56.66100823279082</tilt>
+					<range>351.9664801404695</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_star20</styleUrl>
+				<Point>
+					<coordinates>11.25517295929136,43.7731466769729,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Cattedrale di S. Maria del Fiore</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>11.25543476549622</longitude>
+					<latitude>43.77300542613642</latitude>
+					<altitude>0</altitude>
+					<heading>50.36228515885212</heading>
+					<tilt>56.66100823279082</tilt>
+					<range>351.9664801404695</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_star14</styleUrl>
+				<Point>
+					<coordinates>11.25615069243162,43.77310312491476,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Loggia dei Lanzi</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>11.25612394146353</longitude>
+					<latitude>43.76991188252878</latitude>
+					<altitude>0</altitude>
+					<heading>50.36276156212269</heading>
+					<tilt>56.66106033152068</tilt>
+					<range>358.9008254291732</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_star16</styleUrl>
+				<Point>
+					<coordinates>11.25551418440746,43.7692492241374,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Ponte Vecchio</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>11.25418590885684</longitude>
+					<latitude>43.76797049094218</latitude>
+					<altitude>0</altitude>
+					<heading>50.36142085588041</heading>
+					<tilt>56.66106781891455</tilt>
+					<range>359.8973870341001</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_star4</styleUrl>
+				<Point>
+					<coordinates>11.25318459265051,43.76801854478394,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Middag; Evas hjem</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>11.25235025574608</longitude>
+					<latitude>43.76865532647916</latitude>
+					<altitude>0</altitude>
+					<heading>50.36015108225985</heading>
+					<tilt>56.66109862978667</tilt>
+					<range>363.9983081126049</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_dining120</styleUrl>
+				<Point>
+					<coordinates>11.25097131072978,43.7681496523238,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>26. - 27. Gargnano, Italien</name>
+			<visibility>0</visibility>
+			<Placemark>
+				<name>Palazzo Ducale</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>10.79856684119932</longitude>
+					<latitude>45.16034108278678</latitude>
+					<altitude>0</altitude>
+					<heading>-21.27397292504056</heading>
+					<tilt>17.83906337233537</tilt>
+					<range>538.6642678999004</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_star13</styleUrl>
+				<Point>
+					<coordinates>10.79765285672674,45.16017127137885,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Fuld campingplads</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>10.78589684432987</longitude>
+					<latitude>45.80923962706989</latitude>
+					<altitude>0</altitude>
+					<heading>-32.39462952637703</heading>
+					<tilt>59.53511720610045</tilt>
+					<range>1031.690091774505</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_campground10</styleUrl>
+				<Point>
+					<coordinates>10.78853428350102,45.80542335127727,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Fuld campingplads</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>10.78513350675613</longitude>
+					<latitude>45.80189561234246</latitude>
+					<altitude>0</altitude>
+					<heading>-32.39517711559708</heading>
+					<tilt>59.53564154424704</tilt>
+					<range>480.9856095309206</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_campground50</styleUrl>
+				<Point>
+					<coordinates>10.78601788936859,45.80072393211811,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Fuld Campingpads</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>10.68445346939856</longitude>
+					<latitude>45.70858032640707</latitude>
+					<altitude>0</altitude>
+					<heading>-32.46728607645659</heading>
+					<tilt>54.57845626383423</tilt>
+					<range>1121.575093183053</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_campground4</styleUrl>
+				<Point>
+					<coordinates>10.68600274848748,45.70662167200452,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Regnvejrscamping</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>10.66840669559602</longitude>
+					<latitude>45.69243007302933</latitude>
+					<altitude>0</altitude>
+					<heading>-21.75338041876685</heading>
+					<tilt>18.52444291682726</tilt>
+					<range>567.2665780313279</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_campground70</styleUrl>
+				<Point>
+					<coordinates>10.66858144516726,45.69212416605995,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>27. - 29. Valnontey, Italien</name>
+			<visibility>0</visibility>
+			<Placemark>
+				<name>Frokost</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>9.904285038848812</longitude>
+					<latitude>45.62991089339275</latitude>
+					<altitude>0</altitude>
+					<heading>-21.91307302010806</heading>
+					<tilt>17.83863919128966</tilt>
+					<range>830.0345625427808</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_snack_bar30</styleUrl>
+				<Point>
+					<coordinates>9.902927287285564,45.63072564658635,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Camping Lo Stambeco</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>7.345083613774263</longitude>
+					<latitude>45.59031159641413</latitude>
+					<altitude>0</altitude>
+					<heading>26.95800775967778</heading>
+					<tilt>68.31332955347045</tilt>
+					<range>563.2016708303717</range>
+				</LookAt>
+				<styleUrl>#msn_campground100</styleUrl>
+				<Point>
+					<coordinates>7.342816887220438,45.58752911586371,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Middag 27. og 28.</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>7.342156003729811</longitude>
+					<latitude>45.58736198000129</latitude>
+					<altitude>0</altitude>
+					<heading>19.18329711379002</heading>
+					<tilt>32.2840646670325</tilt>
+					<range>341.7416540613878</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_dining80</styleUrl>
+				<Point>
+					<coordinates>7.341151767962273,45.58697059545053,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>28. Botanisk have, gåtur og Aosta</name>
+			<visibility>0</visibility>
+			<Placemark>
+				<name>Giardino Botanico Alpino Paradisia</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>7.345083611919165</longitude>
+					<latitude>45.59031159416632</latitude>
+					<altitude>0</altitude>
+					<heading>26.94062350633696</heading>
+					<tilt>68.31332955087845</tilt>
+					<range>1215.079511731472</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_star17</styleUrl>
+				<Point>
+					<coordinates>7.339542926225036,45.58668672782627,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Bilparkering</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>7.314067864283813</longitude>
+					<latitude>45.73452081047855</latitude>
+					<altitude>0</altitude>
+					<heading>-0.02212552532654008</heading>
+					<tilt>0</tilt>
+					<range>420.3270251328182</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_parking_lot2</styleUrl>
+				<Point>
+					<coordinates>7.313986777114436,45.73507334686259,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Amfiteatro Romano</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>7.321616923709512</longitude>
+					<latitude>45.73433514294575</latitude>
+					<altitude>0</altitude>
+					<heading>-0.01671945901975038</heading>
+					<tilt>0</tilt>
+					<range>1295.771411276445</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_star</styleUrl>
+				<Point>
+					<coordinates>7.322729213824076,45.73868977519081,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Hôtel de Ville</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>7.321096913596306</longitude>
+					<latitude>45.7360539307724</latitude>
+					<altitude>0</altitude>
+					<heading>-0.0170918263433869</heading>
+					<tilt>0</tilt>
+					<range>417.652491031506</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_star12</styleUrl>
+				<Point>
+					<coordinates>7.32047369713662,45.73722394359042,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>29. - 31. Lupfig/Birr, Schweitz</name>
+			<visibility>0</visibility>
+			<Placemark>
+				<name>Morgenmad</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>7.342156003729811</longitude>
+					<latitude>45.58736198000129</latitude>
+					<altitude>0</altitude>
+					<heading>19.18329711379002</heading>
+					<tilt>32.2840646670325</tilt>
+					<range>341.7416540613878</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_coffee40</styleUrl>
+				<Point>
+					<coordinates>7.341189683691866,45.58730776387921,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Indkøb - kontant!</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>7.341417298208499</longitude>
+					<latitude>45.73707916271116</latitude>
+					<altitude>0</altitude>
+					<heading>-0.002538178452039753</heading>
+					<tilt>0</tilt>
+					<range>1081.459337243007</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_grocery510</styleUrl>
+				<Point>
+					<coordinates>7.342540971095644,45.73811040252934,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Tur efter kontanter</name>
+				<visibility>0</visibility>
+				<styleUrl>#msn_ylw-pushpin3100</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						7.342511564040038,45.73821028048612,0 7.342591499389258,45.73799564981022,0 7.342476072109804,45.73782997322611,0 7.34228577004717,45.73778015532476,0 7.342021098531006,45.73777988607248,0 7.341563807781598,45.73777936505907,0 7.341370514856308,45.73777905420391,0 7.340983449684401,45.73781146103624,0 7.340597611949079,45.73782730780913,0 7.340284561166456,45.73784325140866,0 7.339998853346799,45.73776039650296,0 7.339856842975038,45.73769427258727,0 7.339571477116962,45.7376114867955,0 7.339401232417885,45.73771012434921,0 7.33923043485585,45.73784148233743,0 7.339081417454382,45.73807105856426,0 7.338935214044683,45.73821828207459,0 7.338741529435467,45.73839795179026,0 7.338691142357291,45.73856135971779,0 7.338640548258184,45.73874086545881,0 7.338638194991831,45.73890414959598,0 7.338707378171363,45.73908411474331,0 7.338753731124342,45.73918227300779,0 7.338561507330297,45.73939342228545,0 7.338324064145638,45.73945754527092,0 7.338230628486983,45.73931033966753,0 7.338208794379824,45.73913092253662,0 7.338162913759589,45.73898391047073,0 7.33783300647339,45.73881946044753,0 7.337598348317925,45.7386720111715,0 7.337434221540875,45.73855737858966,0 7.337340862625795,45.73845926714212,0 7.337200411341001,45.73834469055696,0 7.336966114389399,45.73816454496109,0 7.33670894887959,45.73790253677395,0 7.336545061907529,45.73775504466678,0 7.3364046350665,45.73762390019475,0 7.336146174699564,45.73745977825217,0 7.335934426633656,45.7373120107793,0 7.335746363821883,45.73714785169006,0 7.335605076555466,45.73708217745389,0 7.33532265424769,45.73693445851397,0 7.335040294497431,45.73680321118775,0 7.334757963465735,45.73672127271869,0 7.334499318061417,45.73665578402213,0 7.334334773357269,45.73665589812153,0 7.33405286609154,45.73685276904406,0 7.333912124478346,45.73698379312746,0 7.333724711336459,45.73713100490097,0 7.333537493567973,45.73719632899257,0 7.333420608060692,45.7372616190371,0 7.333140265485014,45.73737574111643,0 7.332883564716326,45.73745712195071,0 7.332580467222713,45.73752208443342,0 7.332347683857549,45.73760330550598,0 7.332115223658334,45.73770070181621,0 7.331883032586831,45.73779798506845,0 7.331512124007503,45.73795989403931,0 7.331141802879217,45.73808904063592,0 7.33081919384621,45.73825022994956,0 7.330611274068858,45.7383795048834,0 7.330380022469271,45.73852499273461,0 7.330195681381369,45.73870268376555,0 7.330011585259199,45.7388639792752,0 7.329806241159176,45.73907285110632,0 7.329715726629345,45.73920120894535,0 7.329510335202841,45.7393774624491,0 7.329326534169752,45.73945747962846,0 7.329073066712666,45.73952144108245,0 7.328864665753187,45.73952141403966,0 7.328631318697575,45.73944138633518,0 7.328375016842216,45.73937731500976,0 7.328118183783459,45.73929718555468,0 7.327977448410749,45.73923307155382,0 7.327740115857253,45.73907301542344,0 7.327690534047349,45.73889580376559,0 7.327757436682703,45.73873453200032,0 7.327870356178408,45.73854081344921,0 7.327984911884683,45.73842767720947,0 7.328029128727721,45.73826591538873,0 7.328094391738118,45.73794201030546,0 7.327906581555511,45.73782849330677,0 7.327697038913627,45.7377797255576,0 7.327302613505253,45.73776328177634,0 7.327023944912058,45.73773069120312,0 7.326861456274145,45.73771438538323,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>Frokost og tisning - regnvejr og utilpasse børn</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>7.171883304325347</longitude>
+					<latitude>45.86935547856159</latitude>
+					<altitude>0</altitude>
+					<heading>19.0613873417506</heading>
+					<tilt>32.27953551766409</tilt>
+					<range>466.2019211909138</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_snack_bar50</styleUrl>
+				<Point>
+					<coordinates>7.170417672423227,45.86858205986227,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>30. Aareschlucht</name>
+			<visibility>0</visibility>
+			<Placemark>
+				<name>Alpnachstad - Pilatusbahn</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>8.278345068274291</longitude>
+					<latitude>46.95690597465171</latitude>
+					<altitude>0</altitude>
+					<heading>1.297852450005305</heading>
+					<tilt>78.39699255885188</tilt>
+					<range>513.6552577258458</range>
+				</LookAt>
+				<styleUrl>#msn_star2</styleUrl>
+				<Point>
+					<coordinates>8.278016478218703,46.95431369354566,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Frokost (?)</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>8.141754110445959</longitude>
+					<latitude>46.73382223243382</latitude>
+					<altitude>0</altitude>
+					<heading>164.4178147429994</heading>
+					<tilt>78.51714240458108</tilt>
+					<range>2932.161769924135</range>
+				</LookAt>
+				<styleUrl>#msn_snack_bar110</styleUrl>
+				<Point>
+					<coordinates>8.133955295831598,46.75466968948975,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Aareschlucht</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>8.211667762284662</longitude>
+					<latitude>46.71959209317209</latitude>
+					<altitude>0</altitude>
+					<heading>-31.39508682271125</heading>
+					<tilt>62.42408309769924</tilt>
+					<range>2294.174048163326</range>
+				</LookAt>
+				<styleUrl>#msn_star40</styleUrl>
+				<Point>
+					<coordinates>8.211667762284662,46.71959209317209,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Huunenweg 27</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>8.195701381610377</longitude>
+					<latitude>47.4368553996874</latitude>
+					<altitude>0</altitude>
+					<heading>-0.002380466037022393</heading>
+					<tilt>0</tilt>
+					<range>276.6400513827415</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_lodging210</styleUrl>
+				<Point>
+					<coordinates>8.195490771420396,47.43690008541519,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>31. - 1. Hjemrejse, Lörrach - Hamburg, Tyskland</name>
+			<visibility>0</visibility>
+			<Placemark>
+				<name>Brugg</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>8.20673226654287</longitude>
+					<latitude>47.4863343280043</latitude>
+					<altitude>0</altitude>
+					<heading>0.005748492875627184</heading>
+					<tilt>0</tilt>
+					<range>459.2165879822454</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_star101</styleUrl>
+				<Point>
+					<coordinates>8.206828238400604,47.48613969850544,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Lörrach biltog</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>7.667836085762843</longitude>
+					<latitude>47.61927072928152</latitude>
+					<altitude>0</altitude>
+					<heading>-0.3926654459355207</heading>
+					<tilt>0</tilt>
+					<range>475.2223842840947</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_rail4</styleUrl>
+				<Point>
+					<coordinates>7.667885239073556,47.61864587265222,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Hedeby</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>9.566536978387207</longitude>
+					<latitude>54.49223086076757</latitude>
+					<altitude>0</altitude>
+					<heading>0.9044357519393433</heading>
+					<tilt>0</tilt>
+					<range>2425.467367957273</range>
+				</LookAt>
+				<styleUrl>#msn_star62</styleUrl>
+				<Point>
+					<coordinates>9.566536978387207,54.49223086076756,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+	</Folder>
+</Document>
+</kml>

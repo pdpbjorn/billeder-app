@@ -1,0 +1,909 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>Rom_22_-_29_marts_2011.kml</name>
+	<StyleMap id="msn_ylw-pushpin001">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin410</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin275</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin620">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin5140">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin275">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin241">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin52">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin87</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin625</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin410">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin315">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_snack_bar14">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/snack_bar.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin323">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin224</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin315</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin006">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin251</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin301</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin235">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin33</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin171</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin625">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin513">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin134</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin08</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_snack_bar000">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_snack_bar60</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_snack_bar14</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_grocery61">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/grocery.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin43">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin40">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff0000aa</color>
+			<width>2</width>
+		</LineStyle>
+	</Style>
+	<Style id="sn_grocery60">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/grocery.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin08">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ffffaa55</color>
+			<width>1.9</width>
+		</LineStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin42">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin262">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff7f00ff</color>
+			<width>1.7</width>
+		</LineStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin710">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin46</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin40</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin0102">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin46">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff0000aa</color>
+			<width>2</width>
+		</LineStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin134">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ffffaa55</color>
+			<width>1.9</width>
+		</LineStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin301">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_grocery6">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/grocery.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin014">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin110</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin262</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin251">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin224">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin103">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin620</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin5140</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin413">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin43</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin034</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_dining81">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin921">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_grocery6">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_grocery61</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_grocery011</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin91">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin003</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin921</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin310">
+	</Style>
+	<StyleMap id="msn_ylw-pushpin40">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin0102</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin42</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin33">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_dining6000">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin87">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin3140">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_grocery001">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_grocery60</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_grocery6</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin306">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin241</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin217</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin111">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin307</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin3140</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin034">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin110">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff7f00ff</color>
+			<width>1.7</width>
+		</LineStyle>
+	</Style>
+	<StyleMap id="msn_dining43">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_dining81</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_dining6000</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin307">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin171">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin003">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_snack_bar60">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/snack_bar.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin217">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_grocery011">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/grocery.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Folder>
+		<name>Forårstur til Rom - 22 - 29. marts 2011</name>
+		<visibility>0</visibility>
+		<description>Se også KNZ-fil</description>
+		<Folder>
+			<name>23. marts - Collosseum, Palatin, Forum Romanum</name>
+			<visibility>0</visibility>
+			<Placemark>
+				<name>Gåtur - Colosseum, Palatin, Forum Romanum</name>
+				<visibility>0</visibility>
+				<styleUrl>#msn_ylw-pushpin014</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						12.4790598984327,41.90456000900616,0 12.47897524931482,41.90452126300944,0 12.4793904091394,41.9036016955483,0 12.47955351906996,41.90321291748153,0 12.47985544392449,41.90251527952444,0 12.48033533485024,41.90153358644123,0 12.48074135969075,41.90059220027747,0 12.48163267206589,41.90082285969703,0 12.48207940858219,41.90093126729378,0 12.48227806812176,41.90050439730274,0 12.48241548471156,41.90048874911197,0 12.48279091534141,41.89969868093193,0 12.48311494425731,41.89894003486779,0 12.48312916371144,41.89861044695599,0 12.48272655724324,41.89837394598417,0 12.48324516421361,41.89713355264679,0 12.48295677199152,41.89697880904504,0 12.48255883789339,41.89664786459606,0 12.48288889030953,41.89600905007906,0 12.48298142747948,41.89577709811564,0 12.48295483061193,41.89545848604289,0 12.48348556591673,41.89533090500656,0 12.48382772028605,41.89499065868276,0 12.48451693965492,41.89454157497681,0 12.48526217838427,41.89414116885765,0 12.48633581553731,41.89348873228376,0 12.4865305797464,41.89333862520614,0 12.48641545144595,41.89326093476253,0 12.48664321277916,41.89329818962643,0 12.48774960671988,41.89271829427195,0 12.48901934708842,41.89203752051347,0 12.49022940748072,41.89134931654073,0 12.49093955721474,41.89118934157035,0 12.4916313932114,41.8911053269995,0 12.49133607466627,41.89079998903487,0 12.4911226322432,41.89038771712389,0 12.49136413463362,41.88970789464706,0 12.49209996244685,41.8895104407599,0 12.49303229403145,41.88948826214618,0 12.49346110822247,41.88977238953865,0 12.49357501682899,41.89010415398844,0 12.49314056139704,41.89073536589063,0 12.49254888229723,41.89098356206846,0 12.49219543796887,41.89102130978237,0 12.49223031538944,41.89084891520384,0 12.49266249882088,41.89081903479379,0 12.4929145408028,41.89070407459121,0 12.49302337527596,41.89058877556193,0 12.49286451898143,41.89040493390595,0 12.49263134358267,41.89035840090406,0 12.4924812694796,41.89043731123777,0 12.49228271970772,41.89047122553892,0 12.4920699407429,41.89048818896188,0 12.49189082086327,41.8904491712852,0 12.49182651154018,41.89029872671298,0 12.49175449640029,41.89009110799464,0 12.4915870033743,41.89023514041993,0 12.49165010684048,41.89047523267706,0 12.49187326075587,41.89058672161668,0 12.49221199088774,41.89066416201634,0 12.49260089535565,41.89060413855496,0 12.49278818227799,41.89050275220102,0 12.49289793604101,41.89059069570499,0 12.49293765564343,41.89063782997432,0 12.49273162070653,41.89074235803077,0 12.49292624534677,41.89066157548227,0 12.49282772299397,41.89057527889796,0 12.49270033094304,41.89033935848342,0 12.49239185839398,41.89044038762748,0 12.49210798781639,41.89046303110229,0 12.49192975785318,41.89039307653367,0 12.49186891335693,41.89026430001184,0 12.49134036282092,41.89008841023052,0 12.49106468672087,41.88995471365052,0 12.49090046470718,41.88983626435307,0 12.4912933461784,41.88957804485937,0 12.49092550517822,41.88959667806417,0 12.49054808691387,41.88960920649513,0 12.49033766194855,41.8898188669232,0 12.49039352888,41.89006979286007,0 12.49038457880179,41.89016444169403,0 12.48992205361158,41.89031152078246,0 12.48923260202622,41.89050961898845,0 12.4891044628315,41.89054570702708,0 12.48974889825772,41.89038276378511,0 12.49016837162298,41.89025702776646,0 12.49048661015794,41.89018761034041,0 12.49063323753872,41.89053226567792,0 12.49081330551608,41.89090485346782,0 12.49094598964772,41.89107643089745,0 12.49079700899284,41.89071042826272,0 12.49063046048768,41.8903902917452,0 12.49042854371051,41.88995498616127,0 12.49037606710287,41.88967388664027,0 12.49046616863974,41.88926306251219,0 12.4902606921088,41.88867350672567,0 12.49009625706679,41.88812189464601,0 12.48995102549232,41.88778616734958,0 12.48960031607738,41.887858721068,0 12.48949865146113,41.88751378869593,0 12.48931610258699,41.88718915809695,0 12.48930638218174,41.88688310238861,0 12.48906646673114,41.88659368774235,0 12.4887987951248,41.88631202366304,0 12.48850120649487,41.88640859965698,0 12.48846418134189,41.88678949169299,0 12.48849281056783,41.88692755595006,0 12.48849629676765,41.88712172521832,0 12.48873729337535,41.88754022920006,0 12.48887494467971,41.8877709488326,0 12.48861561647588,41.88782034532142,0 12.48843269800089,41.88786848726263,0 12.48834497255839,41.8879568321884,0 12.48822003962578,41.88807096495466,0 12.48802634059128,41.88819028594734,0 12.48790342170293,41.88824815560822,0 12.48770508193813,41.88814524550317,0 12.48741168685784,41.88802858235497,0 12.48711107161875,41.88798166673598,0 12.48694578505575,41.8878456161298,0 12.48686525083757,41.88770323509509,0 12.48690959186781,41.88778536071525,0 12.48706428295205,41.88800186695914,0 12.48723415267256,41.88814054467177,0 12.48759828890404,41.8883212026341,0 12.48720109708436,41.88852231690506,0 12.48716082905558,41.88867041765215,0 12.48697123064443,41.88884396313733,0 12.48666823528448,41.88901315699737,0 12.48647163774555,41.88922245869892,0 12.48629214366421,41.88922089316522,0 12.48611329233903,41.8890161604896,0 12.48587839535358,41.888964583186,0 12.48565229318599,41.88908972299216,0 12.485446737711,41.88928421143557,0 12.48554069655181,41.88940800836467,0 12.485682969936,41.88942125135922,0 12.48548083533881,41.8893511677911,0 12.48534574936107,41.8892360183449,0 12.48521535851482,41.88922342530181,0 12.48504890142778,41.88932994635974,0 12.48517646149701,41.8895623780251,0 12.48519962470152,41.88966326313466,0 12.48508610845777,41.88976717025098,0 12.48490852109626,41.88996047112143,0 12.48506151902822,41.89002963700056,0 12.485157443306,41.89011670489833,0 12.4853659332754,41.89018599055991,0 12.48556732455402,41.89015284120896,0 12.48574272477884,41.890073300388,0 12.48546909784621,41.89015450892229,0 12.48522180785516,41.89016919396584,0 12.48546917281254,41.89021968936086,0 12.48509555237853,41.89005686557676,0 12.48497912939366,41.89003561842391,0 12.4849715497134,41.88986069419516,0 12.48522031395538,41.88970069536126,0 12.4854624382284,41.88950737531279,0 12.48574144713247,41.88939616243212,0 12.48566936015552,41.88935168296774,0 12.48561099615938,41.88927765265161,0 12.48564043855097,41.88920434948915,0 12.48566375559196,41.8892900310079,0 12.48576623081303,41.88936896785062,0 12.48556019044662,41.88946959233305,0 12.48534222360468,41.88960916002031,0 12.48514496929953,41.88974794048918,0 12.485014923817,41.8898969622081,0 12.48500593402566,41.89005979512064,0 12.48509034633306,41.89008399448242,0 12.48518162122008,41.89014942480241,0 12.48560595641177,41.89016188176562,0 12.48574256972942,41.89017498391252,0 12.48605382560088,41.89030945243749,0 12.48619601430881,41.89051046082966,0 12.48642250081421,41.89064631206465,0 12.48638920761985,41.89097048471227,0 12.48634844963396,41.8907808916614,0 12.48627644184599,41.89057676258663,0 12.48653140517337,41.89039733361128,0 12.48680619088419,41.89023697427938,0 12.48685607008278,41.89013614039311,0 12.48685768228032,41.89012455134017,0 12.48690128412002,41.88999847792541,0 12.48710493775549,41.89005266039307,0 12.48726035895855,41.88995473698678,0 12.4873066181416,41.88975111595787,0 12.4876168013388,41.88963843399921,0 12.48772513756585,41.88968850631495,0 12.48788904958411,41.88965192546046,0 12.48803368075236,41.89006246724734,0 12.48811146971452,41.89019891477989,0 12.4884325337683,41.89060724227478,0 12.48846293164612,41.8906444802053,0 12.48860384134587,41.89086246397586,0 12.48839739384479,41.89097227641329,0 12.48835876339947,41.89112358931192,0 12.48824373713101,41.89117429375204,0 12.48796285826492,41.89127745934453,0 12.48770018928933,41.89135768549653,0 12.48751247124964,41.89155470807403,0 12.48720475395358,41.89170739269804,0 12.48676201191906,41.89182132086072,0 12.48650668750686,41.89185937550816,0 12.4864100108852,41.8915409356457,0 12.4864116007689,41.89173738913799,0 12.48629538719766,41.89178645971185,0 12.48620937643287,41.8919422379259,0 12.48626580273674,41.89201858786686,0 12.4862654581741,41.89215857785904,0 12.48594156610023,41.89231071487889,0 12.48563618241818,41.89245397503562,0 12.48526097559888,41.89260701638744,0 12.48528020473652,41.89273424859395,0 12.48520355673382,41.89283681805728,0 12.4852483033813,41.8926544938349,0 12.48542333406598,41.89251235382112,0 12.48580806662625,41.89238590224047,0 12.48604524666144,41.89224560821997,0 12.48638024510022,41.89211054730841,0 12.48651461475563,41.89225562886656,0 12.48666562016423,41.89241496750721,0 12.48676818908917,41.89253332516872,0 12.48698817305622,41.89270929241692,0 12.48727891953044,41.89291625887072,0 12.48719778872696,41.89301640493237,0 12.48739261586998,41.89322213100615,0 12.48697659635178,41.89345717555238,0 12.48606657617439,41.89397157922348,0 12.48506187793894,41.89455317319511,0 12.48426095450656,41.89503020497869,0 12.48395308753377,41.89554812669778,0 12.48379524074616,41.8956062974185,0 12.48364252787442,41.89583854684554,0 12.48339011665768,41.89576084168581,0 12.48304844955248,41.89578582928362,0 12.48293956371901,41.89600463161352,0 12.4827666108027,41.89632967634363,0 12.48260872457146,41.89661059852793,0 12.48263368207712,41.8966652308852,0 12.48275223140973,41.89670206590922,0 12.48270032432045,41.89689923028617,0 12.48242594347817,41.8968266991207,0 12.48221176889916,41.8967871465082,0 12.48200288820038,41.89719958521113,0 12.48172625312485,41.89785966369859,0 12.48130429098297,41.89888153599149,0 12.48101012860288,41.89988710348658,0 12.48079087998504,41.90032614998751,0 12.48064995558854,41.90071477199714,0 12.48042867193004,41.90125856878979,0 12.48026628245858,41.90158993599941,0 12.47996623336489,41.9022734601069,0 12.47974858074849,41.90266434952125,0 12.4795282578081,41.90329510123592,0 12.47922384240497,41.90392028635419,0 12.47898795152872,41.90446476075933,0 12.47900487868973,41.90455352932124,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>Kejserfotos</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeStamp><when>2010-07-10T13:44:19Z</when>
+</gx:TimeStamp>
+					<longitude>12.48458405204367</longitude>
+					<latitude>41.89443945401796</latitude>
+					<altitude>0</altitude>
+					<heading>-0.001129247750893527</heading>
+					<tilt>0</tilt>
+					<range>323.5272936316321</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin001</styleUrl>
+				<Point>
+					<altitudeMode>absolute</altitudeMode>
+					<coordinates>12.48491390654481,41.89433958021646,21.82195815492009</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Stummus</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeStamp><when>2010-07-10T13:44:19Z</when>
+</gx:TimeStamp>
+					<longitude>12.4911372306187</longitude>
+					<latitude>41.89045161864806</latitude>
+					<altitude>0</altitude>
+					<heading>0.0032236832605496</heading>
+					<tilt>22.80592671361923</tilt>
+					<range>80.80336803878244</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin323</styleUrl>
+				<Point>
+					<altitudeMode>absolute</altitudeMode>
+					<coordinates>12.49127065988908,41.8904543914704,22.28633582703659</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Frokost 23/3</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeStamp><when>2010-07-10T13:44:19Z</when>
+</gx:TimeStamp>
+					<longitude>12.4914065004127</longitude>
+					<latitude>41.88968285200718</latitude>
+					<altitude>0</altitude>
+					<heading>0.003403419503698478</heading>
+					<tilt>22.80638002051128</tilt>
+					<range>113.2296827614819</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_snack_bar000</styleUrl>
+				<Point>
+					<altitudeMode>absolute</altitudeMode>
+					<coordinates>12.49124928140245,41.88963054134064,22.17320017431706</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>1. splatdyrskøb</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeStamp><when>2010-07-10T13:44:19Z</when>
+</gx:TimeStamp>
+					<longitude>12.49025739879389</longitude>
+					<latitude>41.88982846574737</latitude>
+					<altitude>0</altitude>
+					<heading>0.002636163385640968</heading>
+					<tilt>22.806385825292</tilt>
+					<range>114.8951157975412</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin91</styleUrl>
+				<Point>
+					<altitudeMode>absolute</altitudeMode>
+					<coordinates>12.49031989443834,41.88996287058582,20.63796240431222</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Det var en udgang</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeStamp><when>2010-07-10T13:44:19Z</when>
+</gx:TimeStamp>
+					<longitude>12.48995225121493</longitude>
+					<latitude>41.89021454378821</latitude>
+					<altitude>0</altitude>
+					<heading>0.002432308664109844</heading>
+					<tilt>22.807006535857</tilt>
+					<range>195.380868961594</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin306</styleUrl>
+				<Point>
+					<altitudeMode>absolute</altitudeMode>
+					<coordinates>12.48904062813897,41.89056286943988,23.87326543611499</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Her var helle ikke nogen indgang</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeStamp><when>2010-07-10T13:44:19Z</when>
+</gx:TimeStamp>
+					<longitude>12.48995225121493</longitude>
+					<latitude>41.89021454378821</latitude>
+					<altitude>0</altitude>
+					<heading>0.002432308664109844</heading>
+					<tilt>22.807006535857</tilt>
+					<range>195.380868961594</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin235</styleUrl>
+				<Point>
+					<altitudeMode>absolute</altitudeMode>
+					<coordinates>12.49087436571586,41.8909986667165,23.87326543611499</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Livias hus</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeStamp><when>2010-07-10T13:44:19Z</when>
+</gx:TimeStamp>
+					<longitude>12.48630537442268</longitude>
+					<latitude>41.88888296569875</latitude>
+					<altitude>0</altitude>
+					<heading>-2.62470329523566e-006</heading>
+					<tilt>22.80750297749167</tilt>
+					<range>240.2516310407369</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin40</styleUrl>
+				<Point>
+					<altitudeMode>absolute</altitudeMode>
+					<coordinates>12.48564121849635,41.88926876741776,47.92577193309551</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Romulis&apos; hytter</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeStamp><when>2010-07-10T13:44:19Z</when>
+</gx:TimeStamp>
+					<longitude>12.48523042746377</longitude>
+					<latitude>41.88956078094684</latitude>
+					<altitude>0</altitude>
+					<heading>-0.0007203527514669319</heading>
+					<tilt>22.80751811869116</tilt>
+					<range>244.595524094028</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin52</styleUrl>
+				<Point>
+					<altitudeMode>absolute</altitudeMode>
+					<coordinates>12.48493492754093,41.88924216305381,43.92148543517811</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Udsigtover forum - med måger</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeStamp><when>2010-07-10T13:44:19Z</when>
+</gx:TimeStamp>
+					<longitude>12.48621289832726</longitude>
+					<latitude>41.89100941478659</latitude>
+					<altitude>0</altitude>
+					<heading>-6.435834209139872e-005</heading>
+					<tilt>22.80757415598951</tilt>
+					<range>260.672197955709</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#sn_ylw-pushpin310</styleUrl>
+				<Point>
+					<altitudeMode>absolute</altitudeMode>
+					<coordinates>12.48639203755829,41.89097733407346,29.10176950965191</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Her savnedes en udgang</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeStamp><when>2010-07-10T13:44:19Z</when>
+</gx:TimeStamp>
+					<longitude>12.48645677012741</longitude>
+					<latitude>41.89209465447275</latitude>
+					<altitude>0</altitude>
+					<heading>112.1527002916129</heading>
+					<tilt>45.11165577281571</tilt>
+					<range>533.4688068206473</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin413</styleUrl>
+				<Point>
+					<altitudeMode>absolute</altitudeMode>
+					<coordinates>12.48521176045056,41.89281743932146,13.26174817438408</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Koreaner med gulerodsdyr</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeStamp><when>2010-07-10T13:44:19Z</when>
+</gx:TimeStamp>
+					<longitude>12.48276023290323</longitude>
+					<latitude>41.89617263851779</latitude>
+					<altitude>0</altitude>
+					<heading>112.1502318879565</heading>
+					<tilt>45.10930979487628</tilt>
+					<range>242.2012319833111</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin103</styleUrl>
+				<Point>
+					<altitudeMode>absolute</altitudeMode>
+					<coordinates>12.48279945150239,41.89636928802124,18.9383491056852</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>24. marts - Peterkirken</name>
+			<visibility>0</visibility>
+			<Placemark>
+				<name>Untitled Path</name>
+				<visibility>0</visibility>
+				<styleUrl>#msn_ylw-pushpin710</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						12.47908833334753,41.90456870447805,0 12.4789521951198,41.90455264338985,0 12.47888661450631,41.90462408380784,0 12.4776284214649,41.90412878923375,0 12.47704241373541,41.90388773431719,0 12.47706259845934,41.9038064922406,0 12.47716338720041,41.90367259896281,0 12.47717688452686,41.90335569800548,0 12.47696049259579,41.90336172204183,0 12.47667384064087,41.90325303902807,0 12.47683508509656,41.90251190711082,0 12.47588835106225,41.90232316103391,0 12.47505692307704,41.90189577367381,0 12.47497057497263,41.90168648422866,0 12.47436299922306,41.90175887240689,0 12.47414636427184,41.9018391651307,0 12.47358504117877,41.90181108507192,0 12.47231423925163,41.90191844177556,0 12.4725055366058,41.90133410543691,0 12.47261626157868,41.90100120535807,0 12.47264375541551,41.90090333570811,0 12.4731583370738,41.90088478725784,0 12.47320169122567,41.90054010256559,0 12.47316496565538,41.90036565621043,0 12.47318369579143,41.90007330370507,0 12.47317658651076,41.89982982554199,0 12.47326668152586,41.89897915948017,0 12.47297811298116,41.89884317508874,0 12.4725666930289,41.89881548623307,0 12.47294225719255,41.89889242346428,0 12.47282462144406,41.89982781483854,0 12.47226042500927,41.89982756705803,0 12.47189043835309,41.89992452810486,0 12.4716721585272,41.89975897843314,0 12.47152388404887,41.89967077782372,0 12.47142698188086,41.89982450386007,0 12.47141960288039,41.89996122257956,0 12.4713150500079,41.90012190386791,0 12.47129416432509,41.90049901609695,0 12.47088514985826,41.90051209621458,0 12.47063174447531,41.9005208246952,0 12.47056140356241,41.9009667982352,0 12.47020050998214,41.90092610560253,0 12.47020592598524,41.90077815870492,0 12.47018501074259,41.90097400790181,0 12.47058616598062,41.90100365145448,0 12.47062570980132,41.90055161841767,0 12.4702104097287,41.90049361431021,0 12.46950099958211,41.90052650102856,0 12.46898736012756,41.90054703033493,0 12.46820470998866,41.90056235840161,0 12.46762223212235,41.90056893476916,0 12.467419573245,41.90063075080862,0 12.4668805118066,41.90111702311849,0 12.46671238355902,41.90115666236107,0 12.46646629592833,41.90113212827927,0 12.46646525076798,41.90128650264234,0 12.46647520225217,41.90134884280137,0 12.46641861549183,41.90181310654029,0 12.46637992996306,41.9023875589596,0 12.46636077201537,41.90247845301508,0 12.46606333879291,41.90249597774528,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>25. marts - Villa Borghese - aftentur til Pantheon</name>
+			<visibility>0</visibility>
+			<Placemark>
+				<name>Piazza diSpagna - Villa Borghese -PiazzadelPopolo</name>
+				<visibility>0</visibility>
+				<styleUrl>#msn_ylw-pushpin513</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						12.47912615744423,41.90459654527403,0 12.48056111044416,41.90511367316661,0 12.48169113326515,41.90554781616917,0 12.48222946568255,41.90577544180216,0 12.48247033379976,41.90580041257075,0 12.48273995929805,41.90588032313467,0 12.48287646532632,41.90586911645897,0 12.48297344487402,41.90595278872824,0 12.48306626095385,41.90602521170709,0 12.48313937692136,41.90601521972989,0 12.48334757187465,41.90594932648968,0 12.4834174187607,41.90598418099162,0 12.48328958484301,41.90610443110991,0 12.48296538950127,41.9068920198128,0 12.48272810326742,41.90749080048784,0 12.48258925864929,41.90778961619095,0 12.48249897709629,41.90802777390022,0 12.48216330496937,41.90823420504942,0 12.48217073854173,41.90831424284001,0 12.48170245997261,41.90849495256341,0 12.48130244664405,41.90872160619333,0 12.48079989865072,41.90901961140693,0 12.48051157198354,41.90918299975103,0 12.48028666444509,41.90934166895328,0 12.48023374883957,41.90943159245113,0 12.48019415949872,41.90951075467351,0 12.48013177378707,41.90958735284381,0 12.48048689729945,41.90978963376042,0 12.48120733030491,41.910386184982,0 12.48110789859792,41.91075768421575,0 12.48086220242089,41.91142838676043,0 12.48049928876244,41.91147105386294,0 12.48025477483178,41.91131811411308,0 12.480163563715,41.91122243633517,0 12.48002018905315,41.91122728188717,0 12.47982619446406,41.91126656956688,0 12.47967939675757,41.91144297730421,0 12.47964107635466,41.91139460107587,0 12.47962446418914,41.91120945525815,0 12.47953848844204,41.91105691960441,0 12.47930500784011,41.9109121702947,0 12.47906051865542,41.91087836912324,0 12.47914899615495,41.91065770264681,0 12.47953960409537,41.91075214996064,0 12.47992165899927,41.91084394100204,0 12.48092046814119,41.91110412967142,0 12.48110336526246,41.91066165392911,0 12.48118334229837,41.91041906277314,0 12.48124551756145,41.91043813792325,0 12.4811862936454,41.91061657686913,0 12.48103717888448,41.91113441532612,0 12.48046257305211,41.91101575291688,0 12.47973913850827,41.91083039418854,0 12.47921678488741,41.91072112254557,0 12.47896683829096,41.91062164393952,0 12.4787530662883,41.91105565703825,0 12.47849484093647,41.91152638017084,0 12.47842980290368,41.91159832247615,0 12.47833982259901,41.91167413574261,0 12.47819821801322,41.91179082577826,0 12.47812565480935,41.91175611445708,0 12.47806162464166,41.91163426144141,0 12.47805212958391,41.91158286218198,0 12.47803637226951,41.91155232309733,0 12.47792798125707,41.91158632670935,0 12.47783698750431,41.91165557134846,0 12.47775130391331,41.91173512492523,0 12.477665092186,41.91176361362977,0 12.47762863481995,41.91168965461299,0 12.47763273629345,41.91160062205647,0 12.47760707095639,41.91152784545402,0 12.47750659249762,41.91150904380431,0 12.47747996348357,41.91151418808792,0 12.47736522383463,41.91155454811079,0 12.47726163008223,41.91158069470101,0 12.47715053853415,41.91157812336021,0 12.47708880484258,41.91152174372796,0 12.47714382184462,41.91139533287315,0 12.47716106646703,41.91131899300512,0 12.47715499966711,41.91130991574137,0 12.47713374070077,41.91128685687492,0 12.47708256303239,41.91125108315336,0 12.47693761024035,41.91124830098596,0 12.47708528321543,41.91133710681714,0 12.4769166707785,41.91127808443594,0 12.47690514630514,41.91125460706699,0 12.4767025545256,41.91125932683199,0 12.47658421612049,41.91124526198737,0 12.47613436061805,41.91120947715493,0 12.47618784945889,41.91109229301301,0 12.47629790786939,41.9108089345979,0 12.47625387827526,41.9107877328057,0 12.47568745656006,41.91053672347611,0 12.47575484751559,41.91045553863659,0 12.47622028087338,41.91042537571499,0 12.47642489966538,41.9103665999741,0 12.47664643755544,41.90991798763801,0 12.47672986930947,41.90965182862943,0 12.47712764687237,41.90874125217591,0 12.47766720246229,41.90750406519811,0 12.4781923849721,41.9061067707139,0 12.47858816937651,41.90521057388006,0 12.4788147217515,41.90477043040188,0 12.47895997096432,41.90455011371741,0 12.47908121014866,41.90459439108886,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>Cykel i Villa Borhgese</name>
+				<visibility>0</visibility>
+				<styleUrl>#msn_ylw-pushpin111</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						12.48121511700856,41.91038201679441,0 12.48134260651129,41.91042518305868,0 12.4811593798056,41.91104101973456,0 12.48131114458292,41.91118250894384,0 12.48237423520183,41.91149842524395,0 12.48385355928117,41.91214384443575,0 12.48453367083494,41.91239105739883,0 12.48474234585427,41.91237788169529,0 12.48486892537649,41.91251591266734,0 12.48722110402519,41.91517889249481,0 12.48706872673788,41.91526781427784,0 12.48642302964558,41.91560985807576,0 12.48582620114446,41.91572976451918,0 12.48548480330311,41.91538736010871,0 12.48546628100708,41.91536573834836,0 12.48543509336893,41.91502881376773,0 12.48504001505893,41.91472289223584,0 12.48470932815885,41.91478282727701,0 12.48415749269711,41.91533462402446,0 12.48366743186408,41.91569282271297,0 12.48395356644591,41.9154800839769,0 12.48449460727424,41.91495264300372,0 12.48486853188851,41.9147444280217,0 12.48530605203609,41.91483919499523,0 12.4854139206553,41.91517728483934,0 12.48562394224786,41.91563767339746,0 12.4862865085784,41.91570196263331,0 12.48687990154319,41.91542254698005,0 12.487121715721,41.91519034848917,0 12.48702213414365,41.91491338892331,0 12.48618043437223,41.91409294569002,0 12.48546261605652,41.91344403338943,0 12.48531391595231,41.91329974503205,0 12.48465498961492,41.91370465937404,0 12.48392116362164,41.91413807437631,0 12.48306257962279,41.91441517015355,0 12.48278374174577,41.91437730561209,0 12.48240937551665,41.91438199637471,0 12.48193107668039,41.91460745345738,0 12.48082978003695,41.91539062974397,0 12.48202396380487,41.91462509509606,0 12.48223140633961,41.91468833561213,0 12.48205619690103,41.91455658576286,0 12.48252008418823,41.91437140454952,0 12.4828794251456,41.91437424982573,0 12.48314978262507,41.91430023051576,0 12.48356101538108,41.91406572340544,0 12.48423585331152,41.91367070531766,0 12.48497135735727,41.9132337449618,0 12.48511008241977,41.91315872344833,0 12.4852384365622,41.91330040736828,0 12.48531875384905,41.91326627979231,0 12.48546321179151,41.91316209923643,0 12.4863343510934,41.91257281353537,0 12.48701043824514,41.91222935514362,0 12.48711959962659,41.91214948267501,0 12.48726980627198,41.91219529121471,0 12.48780342524567,41.91266106187496,0 12.48802676417863,41.91275835610207,0 12.48807436187423,41.91293148495394,0 12.48764614994026,41.91276027962135,0 12.48743169528275,41.91285088034862,0 12.48742037101461,41.91286297888104,0 12.48736554110217,41.91290053694988,0 12.48686875469948,41.91314859077875,0 12.48682008154143,41.91316426331039,0 12.4862971951827,41.9136758518143,0 12.48597712855009,41.91380844075057,0 12.48486927806007,41.91263613905276,0 12.48460532908299,41.91254910959196,0 12.48444831271309,41.91238767604364,0 12.48346166124053,41.91200902226679,0 12.48245512918273,41.91160450841182,0 12.48167152690422,41.91131734906904,0 12.48113725092609,41.91117444501646,0 12.48124127564528,41.91052692919416,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>26. marts - Vatikanmuseet, Sixtinske Kapel</name>
+			<visibility>0</visibility>
+		</Folder>
+		<Folder>
+			<name>27. marts - MAXXI, San Clemente, Santa Maria Maggiore</name>
+			<visibility>0</visibility>
+		</Folder>
+		<Folder>
+			<name>Hele ugen</name>
+			<visibility>0</visibility>
+			<Placemark>
+				<name>Largo Goldoni 47 B</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeStamp><when>2010-07-10T13:44:19Z</when>
+</gx:TimeStamp>
+					<longitude>12.47991767201085</longitude>
+					<latitude>41.90407744023</latitude>
+					<altitude>0</altitude>
+					<heading>6.17743043237285</heading>
+					<tilt>0</tilt>
+					<range>351.5494322496224</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin006</styleUrl>
+				<Point>
+					<altitudeMode>absolute</altitudeMode>
+					<coordinates>12.47909395379145,41.9043755658081,15.92422844784896</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>aftensmad 22/3</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeStamp><when>2010-07-10T13:44:19Z</when>
+</gx:TimeStamp>
+					<longitude>12.4789953585879</longitude>
+					<latitude>41.90350750695081</latitude>
+					<altitude>0</altitude>
+					<heading>112.1477685558259</heading>
+					<tilt>58.65654240610642</tilt>
+					<range>149.7293771253366</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_dining43</styleUrl>
+				<Point>
+					<altitudeMode>absolute</altitudeMode>
+					<coordinates>12.4781820647937,41.90366189206284,15.65220746015398</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Supermarked</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeStamp><when>2010-07-10T13:44:19Z</when>
+</gx:TimeStamp>
+					<longitude>12.47687504893924</longitude>
+					<latitude>41.90390626292348</latitude>
+					<altitude>0</altitude>
+					<heading>6.401788443601473</heading>
+					<tilt>22.31320569183718</tilt>
+					<range>118.3438497550575</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_grocery001</styleUrl>
+				<Point>
+					<altitudeMode>absolute</altitudeMode>
+					<coordinates>12.47709431337952,41.90389416987725,16.66698646125123</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Supermarked</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeStamp><when>2010-07-10T13:44:19Z</when>
+</gx:TimeStamp>
+					<longitude>12.47742449273609</longitude>
+					<latitude>41.90672791886917</latitude>
+					<altitude>0</altitude>
+					<heading>159.5563549700736</heading>
+					<tilt>45.8372021930229</tilt>
+					<range>153.8753841598827</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_grocery6</styleUrl>
+				<Point>
+					<altitudeMode>absolute</altitudeMode>
+					<coordinates>12.4771793788695,41.90690005504162,15.73910751996181</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+	</Folder>
+</Document>
+</kml>

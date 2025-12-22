@@ -1,0 +1,3278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>Tenerife_-_Påsken_2010.kml</name>
+	<Style id="sn_ylw-pushpin1220">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin00012">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff0000aa</color>
+		</LineStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin0002">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_partly_cloudy2">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/partly_cloudy.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin342">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin560">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin062">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_swimming">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/swimming.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_camera00">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_camera1</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_camera0</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_snack_bar8">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_snack_bar0120</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_snack_bar003</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_snack_bar003">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/snack_bar.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_snack_bar30">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/snack_bar.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin2711">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin304</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin153</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin0050">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin64">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin09</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin2130</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_swimming">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_swimming</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_swimming3</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_parks0">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/parks.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin127">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin1003</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin0011</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin161">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin1012</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin1100</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin143">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_coffee02">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/coffee.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_snack_bar70">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_snack_bar9</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_snack_bar6</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin323">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin361">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin314">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin292</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin0002</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_snack_bar9">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/snack_bar.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin33">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin590</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin00012</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin411">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin5020">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_partly_cloudy2">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/partly_cloudy.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin00110">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin1421</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin1720</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_snack_bar060">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_snack_bar002</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_snack_bar9</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin55">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_snack_bar010">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/snack_bar.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin013">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin1120">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin581</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin105</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin391">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff00aa00</color>
+		</LineStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin243">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin033">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ffffff00</color>
+		</LineStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin191">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin6110">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_snack_bar6">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/snack_bar.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_grocery01">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/grocery.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_partly_cloudy1">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/partly_cloudy.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin1012">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_cabs101">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin501">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin590">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff0000aa</color>
+		</LineStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin3021">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff7f55aa</color>
+		</LineStyle>
+	</Style>
+	<StyleMap id="msn_bars010">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_bars2</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_bars01</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_swimming1">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/swimming.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin1100">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin342</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin1230</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_partly_cloudy">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_partly_cloudy2</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_partly_cloudy</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_cabs11">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_cabs400</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_cabs300</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin320">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin391</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin1130</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin1421">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin590">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin1202</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin541</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin2410">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff00ffff</color>
+		</LineStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin180">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin350</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin5020</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin1711">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin361</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin41</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin2130">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff7faa00</color>
+		</LineStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin153">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin56">
+		<LineStyle>
+			<color>ffffaa00</color>
+		</LineStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin411">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin252</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin412</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin481">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin703</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin1602</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_swimming3">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/swimming.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_cabs200">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_cabs100</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_cabs100</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin2021">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin412">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin630">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin56</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin05</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_cabs01">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_cabs30</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_cabs20</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_parks0">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_parks</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_parks0</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin09">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff7faa00</color>
+		</LineStyle>
+	</Style>
+	<Style id="sn_cabs20">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_bars01">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/bars.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ranger_station">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/ranger_station.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin05">
+		<IconStyle>
+			<scale>1.2</scale>
+		</IconStyle>
+		<LineStyle>
+			<color>ffffaa00</color>
+		</LineStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin122">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin92">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin580</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin3030</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin0011">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin292">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin2140">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin1720">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin701">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin6110</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin0003</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_cabs20">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin1130">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin000">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin2120</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin2040</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_cabs300">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin104">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin332</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin2140</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_parks">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/parks.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_partly_cloudy1">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_partly_cloudy</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_partly_cloudy1</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_partly_cloudy">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/partly_cloudy.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin2141">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin0031</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin062</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_camera0">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/camera.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin412">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_snack_bar12">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_snack_bar130</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_snack_bar000</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin3220">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_bars2">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/bars.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin550">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin1220</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin560</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_coffee24">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_coffee02</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_coffee01</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_grocery200">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/grocery.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_cabs01">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_parks0">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/parks.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin1040">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff7f55aa</color>
+		</LineStyle>
+	</Style>
+	<Style id="sn_partly_cloudy0">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/partly_cloudy.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin332">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin56">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin403</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin3310</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_partly_cloudy0">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_partly_cloudy0</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_partly_cloudy0</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_camera1">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/camera.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin1013">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_snack_bar410">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/snack_bar.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin1202">
+	</Style>
+	<Style id="sh_snack_bar9">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/snack_bar.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_cabs0000">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_cabs20</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_cabs01</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin105">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin2001">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_snack_bar002">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/snack_bar.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_swimming2">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_swimming3</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_swimming1</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin1230">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_cabs0000">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin214">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin1013</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin550</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin1031">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin150">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin1022">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin013</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin2001</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_cabs01">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin1130">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff00aa00</color>
+		</LineStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin720">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin0120</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin1031</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin57">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin143</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin0050</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin112">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin10110">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin105">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin2010</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin122</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin52">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ffffff00</color>
+		</LineStyle>
+	</Style>
+	<Style id="sn_parks">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/parks.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin404">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin04</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin252</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_cabs11">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin1003">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin291">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin118">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin52</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin033</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin502">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin3310</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin2021</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin1302">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff00ffff</color>
+		</LineStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin215">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin291</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin00011</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin3030">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_snack_bar03">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/snack_bar.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin1040">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff00ffff</color>
+		</LineStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin3310">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_cabs100">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin04">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_coffee01">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/coffee.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin831">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin142">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff00ffff</color>
+		</LineStyle>
+	</Style>
+	<Style id="sh_swimming3">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/swimming.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin3310">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff7fff55</color>
+		</LineStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin2040">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin0031">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin81">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin304">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin0120">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin1050">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin3021</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin1040</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_snack_bar0010">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_snack_bar0010</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_snack_bar410</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin032">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin501</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin071</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin540">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin2140</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin232</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_snack_bar120">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_snack_bar03</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_snack_bar30</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin182">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin831</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin304</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_cabs30">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin580">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_cabs02">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_cabs11</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_cabs101</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_cabs100">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_cabs01</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_cabs0000</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_snack_bar13">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_snack_bar010</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_snack_bar010</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_cabs400">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_partly_cloudy">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/partly_cloudy.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin1601">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin2120">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin311">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin3220</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin81</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin1602">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin0003">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin203">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin2410</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin142</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin581">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin2101">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin323</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin243</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin541">
+		<IconStyle>
+			<scale>1.2</scale>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_parks">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_parks0</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_parks</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_cabs100">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin252">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin304">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin071">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_partly_cloudy1">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/partly_cloudy.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_snack_bar010">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/snack_bar.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin232">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ranger_station">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ranger_station</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ranger_station</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_grocery020">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_grocery01</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_grocery200</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin1321">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin1130</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin191</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_partly_cloudy2">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_partly_cloudy1</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_partly_cloudy2</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin2010">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin252">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_snack_bar0010">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/snack_bar.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin703">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin305">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_snack_bar130">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/snack_bar.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin2140">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin41">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin1920">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin10110</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin150</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_partly_cloudy0">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/partly_cloudy.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin2710">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin411</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin305</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_snack_bar000">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/snack_bar.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin550">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin403">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff7fff55</color>
+		</LineStyle>
+	</Style>
+	<Style id="sh_ranger_station">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/ranger_station.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin1100">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin371">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin412</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin1601</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin00011">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin2602">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin1040</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin1302</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin730">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin55</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin112</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin350">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_snack_bar0120">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/snack_bar.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Folder>
+		<name>Tenerife - Påsken 2010</name>
+		<description>Se også KMZ-fil</description>
+		<Folder>
+			<name>Tirsdag 30/3</name>
+			<visibility>0</visibility>
+		</Folder>
+		<Folder>
+			<name>Onsdag 31/3</name>
+			<visibility>0</visibility>
+			<Placemark>
+				<name>Puerto de La Cruz - Bilparkering</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>-16.54997370959036</longitude>
+					<latitude>28.41846996070914</latitude>
+					<altitude>0</altitude>
+					<heading>-18.65234962809293</heading>
+					<tilt>9.250714829923115</tilt>
+					<range>384.045600562374</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin1711</styleUrl>
+				<Point>
+					<coordinates>-16.55145292204924,28.41868421463756,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Puerto de La Cruz - Kirkepladsen</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>-16.54864306623757</longitude>
+					<latitude>28.41696806973391</latitude>
+					<altitude>0</altitude>
+					<heading>-18.65171638270573</heading>
+					<tilt>9.255813744504463</tilt>
+					<range>160.3678281786372</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin371</styleUrl>
+				<Point>
+					<coordinates>-16.54867129960622,28.41683549297925,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Puerto de La Cruz - Gedevaskerstranden</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>-16.54864306629355</longitude>
+					<latitude>28.41696806965938</latitude>
+					<altitude>0</altitude>
+					<heading>-18.65171638316488</heading>
+					<tilt>9.255813744449601</tilt>
+					<range>341.0154122546436</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin215</styleUrl>
+				<Point>
+					<coordinates>-16.55050608265416,28.41760929879156,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Puerto de La Cruz - Toldbod</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>-16.54864306629355</longitude>
+					<latitude>28.41696806965938</latitude>
+					<altitude>0</altitude>
+					<heading>-18.65171638316488</heading>
+					<tilt>9.255813744449601</tilt>
+					<range>341.0154122546436</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin161</styleUrl>
+				<Point>
+					<coordinates>-16.54995904544335,28.41808216914015,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Puerto de La Cruz - Kamerabutik</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>-16.5471026844153</longitude>
+					<latitude>28.41515126442674</latitude>
+					<altitude>0</altitude>
+					<heading>-18.65098324424108</heading>
+					<tilt>9.255802286881306</tilt>
+					<range>283.6134463281021</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin1100</styleUrl>
+				<Point>
+					<coordinates>-16.54678264460894,28.41548197804702,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Puerto de La Cruz - Rejepladsen</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>-16.55105872508172</longitude>
+					<latitude>28.41664815600215</latitude>
+					<altitude>0</altitude>
+					<heading>-18.65286578957265</heading>
+					<tilt>9.254123453369282</tilt>
+					<range>170.8022940287169</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin311</styleUrl>
+				<Point>
+					<coordinates>-16.55076070541758,28.41663053271785,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>Skærtorsdag 1/4</name>
+			<visibility>0</visibility>
+			<Placemark>
+				<name>La Laguna - Santa domingo</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>-16.31328185130465</longitude>
+					<latitude>28.48631447753635</latitude>
+					<altitude>0</altitude>
+					<heading>0.09995378592466049</heading>
+					<tilt>0</tilt>
+					<range>95.15862683736326</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin502</styleUrl>
+				<Point>
+					<coordinates>-16.31342054539509,28.48646931466574,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>La Laguna - Turistinformation</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>-16.31449763580213</longitude>
+					<latitude>28.48764619892006</latitude>
+					<altitude>0</altitude>
+					<heading>3.363627640033472</heading>
+					<tilt>0</tilt>
+					<range>156.8556848247725</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin1920</styleUrl>
+				<Point>
+					<coordinates>-16.31486621238525,28.48739521868615,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>La Laguna - Bilparkering</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>-16.31451953349232</longitude>
+					<latitude>28.488104141647</latitude>
+					<altitude>0</altitude>
+					<heading>-2.388247198039058</heading>
+					<tilt>8.696517254213873</tilt>
+					<range>564.6985569538729</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin92</styleUrl>
+				<Point>
+					<coordinates>-16.3124706544447,28.48809230207582,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Frokost 1/4</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>-16.41731877684158</longitude>
+					<latitude>28.22238464854381</latitude>
+					<altitude>0</altitude>
+					<heading>0.05052876125819293</heading>
+					<tilt>0</tilt>
+					<range>479.6092164095498</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_snack_bar060</styleUrl>
+				<Point>
+					<coordinates>-16.41797682506327,28.22266881812459,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Her sku vi ikke bade</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>-16.41482753801761</longitude>
+					<latitude>28.21895251355288</latitude>
+					<altitude>0</altitude>
+					<heading>0.05170679930002308</heading>
+					<tilt>0</tilt>
+					<range>870.2307421876991</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_swimming</styleUrl>
+				<Point>
+					<coordinates>-16.41441505120754,28.21964858680884,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Badning</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>-16.43838206072291</longitude>
+					<latitude>28.143012450074</latitude>
+					<altitude>0</altitude>
+					<heading>0.04057957106275845</heading>
+					<tilt>0</tilt>
+					<range>345.7982618713434</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_swimming2</styleUrl>
+				<Point>
+					<coordinates>-16.4390183269368,28.14255258899231,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>San Pablo - La Laguna - Candelario - Fasnia - Les Rogues - Los Abades - retur</name>
+				<visibility>0</visibility>
+				<styleUrl>#msn_ylw-pushpin56</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						-16.6987088292117,28.34900249900195,0 -16.69860215218239,28.34870936675518,0 -16.69902743186458,28.34852560648961,0 -16.69879280696014,28.34781430418689,0 -16.69825716251171,28.3479498805337,0 -16.69811045480835,28.34817176379994,0 -16.69736170886561,28.34859759629769,0 -16.69741806143259,28.34922525539294,0 -16.69778588105643,28.34936155595302,0 -16.69796681804574,28.34976843472772,0 -16.69811071797732,28.34990773048465,0 -16.69847955360346,28.35001538276893,0 -16.69921235562865,28.35098067216314,0 -16.69978405240503,28.35146814987742,0 -16.70071000634842,28.35192370331571,0 -16.70122387544242,28.35277927700506,0 -16.70151834966997,28.35290362384085,0 -16.70194680586998,28.35331980859005,0 -16.70205244473156,28.35337138551336,0 -16.7031243719842,28.35358153155536,0 -16.7037395356649,28.35377853071129,0 -16.70406639678002,28.35371563482258,0 -16.70566834769562,28.35406408058617,0 -16.70612114402822,28.35451432785323,0 -16.70659041265032,28.35463298247165,0 -16.70745300029881,28.35560765992845,0 -16.70794013591928,28.35601801029466,0 -16.70854278401634,28.35682455479834,0 -16.70917433853258,28.35684753479866,0 -16.70951904905388,28.35721466970726,0 -16.71004534343167,28.35711268073089,0 -16.7112280915226,28.35785889655393,0 -16.71099322613846,28.35794571227265,0 -16.71082681473677,28.35871117552895,0 -16.71124645230292,28.3592720666577,0 -16.7115306313293,28.35941536272955,0 -16.71173202009277,28.35962939820528,0 -16.7115051788952,28.35970872630968,0 -16.71119181427305,28.35957942105089,0 -16.71035108668384,28.35995452032014,0 -16.71031673349363,28.36017124620193,0 -16.71060455088361,28.360564263112,0 -16.71101803194156,28.36074919200876,0 -16.71194504718113,28.36162158322376,0 -16.71209269025738,28.36167297024393,0 -16.71298034500481,28.36161740639926,0 -16.71413845847681,28.3619355381187,0 -16.71465844841946,28.36187712956049,0 -16.71487567175024,28.3621658841483,0 -16.71493910314578,28.36231018508262,0 -16.71368000238329,28.36291421127632,0 -16.71368540841935,28.36333803231869,0 -16.71241501230029,28.36412803954852,0 -16.71209211566794,28.36465620905251,0 -16.71053970367196,28.36545906626544,0 -16.71049154114045,28.36590534234706,0 -16.70996333887205,28.36690974535017,0 -16.70958829423196,28.36748062835669,0 -16.71063185548062,28.36754905457648,0 -16.71065779580991,28.36780998403072,0 -16.71082908280022,28.36810838559815,0 -16.71154263277259,28.36854347363357,0 -16.71180018837643,28.36940824696613,0 -16.71215688891812,28.37024249033242,0 -16.71134761498066,28.3707653853194,0 -16.71050835540188,28.37209779759796,0 -16.70928385971086,28.37386229277284,0 -16.70768440903716,28.37503095936494,0 -16.70637351044381,28.37532635043249,0 -16.70457294819568,28.37445846924933,0 -16.70386641795786,28.37430777923082,0 -16.70265875466313,28.37528863103361,0 -16.70146742465391,28.37604917436524,0 -16.69869703600979,28.37689047653232,0 -16.69733972619074,28.3774335728853,0 -16.69403121442194,28.37943569481629,0 -16.66671922821734,28.39164927389184,0 -16.5803522475597,28.39666472248257,0 -16.54477161183802,28.39693030636833,0 -16.51552584772929,28.40273550735391,0 -16.49649985510786,28.42605452801907,0 -16.46452218782298,28.44165618504793,0 -16.41518922779012,28.47666391852851,0 -16.39698681896461,28.47959261385356,0 -16.37313112509901,28.49038772167158,0 -16.33785728189075,28.48920764541318,0 -16.31898808998899,28.48014196665761,0 -16.31597672352483,28.48731596145592,0 -16.3140590830348,28.48541648146003,0 -16.31256190832993,28.48513727591632,0 -16.31390076148046,28.48558905429329,0 -16.31259760020887,28.48803500218971,0 -16.31850390429375,28.48088444151335,0 -16.30409448457974,28.4650704279355,0 -16.30815925513891,28.43928354370377,0 -16.30208847429162,28.43741756401554,0 -16.30309215497377,28.42838332482992,0 -16.32861257060799,28.40420930328995,0 -16.33664092959079,28.4057787150671,0 -16.36244066459404,28.38458608050573,0 -16.37169521962787,28.35474260007475,0 -16.37465791323533,28.33106825131686,0 -16.37684003947573,28.32844133058711,0 -16.3835809087998,28.32792450640448,0 -16.38729820642179,28.32933245371723,0 -16.39272909857791,28.33035635556752,0 -16.3941891983782,28.33523187517536,0 -16.39881525325354,28.33041316572183,0 -16.39993229109584,28.32641471242133,0 -16.407749881097,28.3194302082132,0 -16.40970972409101,28.31611888082153,0 -16.4110341037748,28.31301219496698,0 -16.41249583666902,28.3127334729475,0 -16.41349857451006,28.30995927889807,0 -16.41282693778804,28.30752074818473,0 -16.41629672657805,28.30527420301694,0 -16.41791989132545,28.29885932384729,0 -16.41267409704003,28.2951829586197,0 -16.40314927143494,28.29467898153946,0 -16.40255924134856,28.29334628576661,0 -16.40292441997481,28.29226142559277,0 -16.40259458073813,28.2916167322738,0 -16.40194613663614,28.28972731379386,0 -16.40315826765787,28.2892719434569,0 -16.40547413009625,28.28948687813281,0 -16.40571696100136,28.28810637770206,0 -16.40464136259847,28.28722677091447,0 -16.40571334818776,28.2863919081828,0 -16.40586952194192,28.28450052489199,0 -16.40737194092777,28.28389176508873,0 -16.40728002298428,28.28273198322018,0 -16.40690635730795,28.28178150550874,0 -16.40918321132577,28.28020916415413,0 -16.41512080769473,28.27399820066636,0 -16.41822201543285,28.27129810743785,0 -16.42311717059461,28.26853636548199,0 -16.42789142461587,28.26272791720004,0 -16.43148038121315,28.25858029495907,0 -16.43294249780106,28.25401538760177,0 -16.43628734429625,28.25025626209567,0 -16.4394320622858,28.24879226298814,0 -16.43669090640004,28.24634139726118,0 -16.4397644241227,28.23981311687538,0 -16.44190791366993,28.23611325720162,0 -16.4396537278709,28.23626331711548,0 -16.43810709339306,28.23656566762792,0 -16.43563932212433,28.23505793243209,0 -16.43646654980746,28.2335293753184,0 -16.43495499496584,28.23189879142127,0 -16.43373566665376,28.23124448929834,0 -16.43323684966865,28.22693109764953,0 -16.42918873833825,28.22843333614132,0 -16.42859289540851,28.23055554562793,0 -16.42939820584919,28.22556604407125,0 -16.42708742247003,28.22647695747641,0 -16.42252772553285,28.22341076680268,0 -16.42149596315157,28.22600945025939,0 -16.42028541649547,28.22417328728946,0 -16.41735372503126,28.22261211001726,0 -16.41594216265809,28.22248065844569,0 -16.41540086264351,28.22328979263923,0 -16.41511675373787,28.22419493558872,0 -16.41427375799549,28.2240710569558,0 -16.41372503321061,28.22380008058714,0 -16.41485295346368,28.22130698007002,0 -16.41422402991968,28.22014377612389,0 -16.41501053954001,28.22209153071303,0 -16.41390269325229,28.2239113960844,0 -16.41647711518475,28.22087491634319,0 -16.42605878194666,28.20903030073219,0 -16.42886501446598,28.18752860052172,0 -16.43613164115079,28.1634046536637,0 -16.45121899351921,28.14566710690014,0 -16.44121365837356,28.14229152188677,0 -16.4390261931299,28.14283795117515,0 -16.44216397959035,28.14152464950142,0 -16.45115436577798,28.14576338267233,0 -16.44723235449209,28.14922737261227,0 -16.422677184269,28.19499746320082,0 -16.41073656406439,28.22355618789331,0 -16.38885852180862,28.26396936073956,0 -16.36934161591059,28.32457767634255,0 -16.35819715866445,28.38238815868921,0 -16.30757445997643,28.42938997974501,0 -16.32359824447893,28.48366746630627,0 -16.38369496401877,28.4834681362212,0 -16.52440535740028,28.40282067779815,0 -16.5972643506902,28.39514447582436,0 -16.65472295656038,28.39209494264264,0 -16.70488838932361,28.37492261386136,0 -16.70117738628762,28.34950714799484,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>Langfredag 2/4</name>
+			<visibility>0</visibility>
+			<Placemark>
+				<name>La Laguna - Nuestra Señora de la Concepción</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>-16.3196128062147</longitude>
+					<latitude>28.49033745020795</latitude>
+					<altitude>0</altitude>
+					<heading>-2.390579166363443</heading>
+					<tilt>8.694497590182326</tilt>
+					<range>309.696910667959</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin2141</styleUrl>
+				<Point>
+					<coordinates>-16.32053380407902,28.49051707783245,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>La Laguna - Brændte kirke - Antiguo Convento San Agustín</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>-16.31714231294655</longitude>
+					<latitude>28.49063424582715</latitude>
+					<altitude>0</altitude>
+					<heading>-2.389168458593999</heading>
+					<tilt>8.694503214422296</tilt>
+					<range>300.1170342197223</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin182</styleUrl>
+				<Point>
+					<coordinates>-16.31724910158781,28.4903983990947,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Frokost 2/4</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>-16.3147229449563</longitude>
+					<latitude>28.48827940324206</latitude>
+					<altitude>0</altitude>
+					<heading>0.02105941982952263</heading>
+					<tilt>0</tilt>
+					<range>181.9714799125726</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_snack_bar70</styleUrl>
+				<Point>
+					<coordinates>-16.3147229449563,28.48827940324206,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Llano de los Viejos -  bilparkering</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>-16.28384643121269</longitude>
+					<latitude>28.52235536461445</latitude>
+					<altitude>0</altitude>
+					<heading>-2.372555131599989</heading>
+					<tilt>8.6967248362118</tilt>
+					<range>412.48808884416</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_cabs100</styleUrl>
+				<Point>
+					<coordinates>-16.28359657749139,28.52253516422062,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Punta de la Barranquera</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>-16.3974085652861</longitude>
+					<latitude>28.53704466897364</latitude>
+					<altitude>0</altitude>
+					<heading>-77.71250465726791</heading>
+					<tilt>45.88848274182765</tilt>
+					<range>180.5902345983876</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin2101</styleUrl>
+				<Point>
+					<coordinates>-16.39692327955565,28.53757481478004,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Bar Restaurante Concagua - San Juan del la Rampla</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeStamp><when>2010-07-10T13:44:19Z</when>
+</gx:TimeStamp>
+					<longitude>-16.63296177131771</longitude>
+					<latitude>28.39326505334839</latitude>
+					<altitude>0</altitude>
+					<heading>-18.76440478538975</heading>
+					<tilt>0</tilt>
+					<range>223.2418954345967</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_coffee24</styleUrl>
+				<Point>
+					<coordinates>-16.63369508188573,28.39400038641309,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>San Pablo - La Laguna - Llano de los Viejos - Punta de la Barranguera - San Juan- tilbage</name>
+				<visibility>0</visibility>
+				<styleUrl>#msn_ylw-pushpin118</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<altitudeMode>relativeToGround</altitudeMode>
+					<coordinates>
+						-16.7004876259508,28.34946447975717,0 -16.70207913651839,28.37274856273794,0 -16.61367862066087,28.39141551834565,0 -16.52033627412708,28.40052945738683,0 -16.41424260835623,28.47153991041494,0 -16.37559360906184,28.48702722075676,0 -16.33696494526419,28.48955374601779,0 -16.3243262396432,28.48640495837268,0 -16.31895284922043,28.4805608432246,0 -16.31217846100667,28.48572529588319,0 -16.31196653500301,28.4889524838728,0 -16.30951605933833,28.49227947216418,0 -16.30967813794296,28.49359104282183,0 -16.30802971996468,28.49534882673579,0 -16.30850594713314,28.49824907008241,0 -16.30590122853711,28.50294050458896,0 -16.29534990999494,28.51350400344227,0 -16.28719571106842,28.51747396299723,0 -16.28626177544618,28.51849892507152,0 -16.28656816866008,28.51931730155238,0 -16.28591145031237,28.5197338618786,0 -16.28430538421331,28.52143155682181,0 -16.28338945208772,28.52260231649737,0 -16.28557126033867,28.52041754087332,0 -16.2865766212114,28.51903633898955,0 -16.28648200794455,28.51823259013935,0 -16.28804478074608,28.51685487898095,0 -16.29101416623058,28.51567190349253,0 -16.29467869182782,28.51459900015541,0 -16.29970588569334,28.51007581238926,0 -16.3002314675302,28.5104256565625,0 -16.29790860691063,28.51466942260691,0 -16.29515764966349,28.5189964065102,0 -16.29630629998495,28.51959908544187,0 -16.29855749941853,28.51745293350061,0 -16.30075401507297,28.51600923995925,0 -16.30583909340654,28.51324830695828,0 -16.30727958601865,28.51390112195884,0 -16.31338818904596,28.51363076966111,0 -16.32371638865483,28.51818882346932,0 -16.32471644309898,28.51857141224268,0 -16.33854856636722,28.52169940454318,0 -16.34442590544851,28.52271985974007,0 -16.35058310083472,28.52410487983607,0 -16.3522319259786,28.52738808024325,0 -16.35738656125217,28.52983261079015,0 -16.35936776733238,28.529366772446,0 -16.35905007566432,28.53327389083247,0 -16.36007187183024,28.5335951272079,0 -16.36090149417652,28.53458734277151,0 -16.36025439938117,28.5360949682368,0 -16.35894862664733,28.53521784858304,0 -16.35881429379051,28.53673404134126,0 -16.35926870091325,28.53542143810162,0 -16.36061500453191,28.53574065372079,0 -16.36131013836872,28.53451419494175,0 -16.36443604285929,28.53365448601301,0 -16.36889955183568,28.53346723870252,0 -16.37436813869954,28.52680940202502,0 -16.38148327141834,28.52268806735878,0 -16.38283824757947,28.52132497107032,0 -16.38334846916888,28.52330459454043,0 -16.38237249514659,28.52441348971811,0 -16.3839566742791,28.52679409100642,0 -16.38438125531,28.52665808932309,0 -16.38512618113518,28.52698355455733,0 -16.38713960995855,28.52923473432627,0 -16.3874493829241,28.53070412503916,0 -16.38833038823936,28.53160585964676,0 -16.39068926554842,28.5325607663744,0 -16.39434393250641,28.53477660007116,0 -16.3964557206343,28.53689696987534,0 -16.3969715001425,28.53680232609106,0 -16.39678763853841,28.53722042575516,0 -16.39673548237881,28.53738884069294,0 -16.39681965615451,28.53729148732282,0 -16.39700754359822,28.53740022334073,0 -16.39727430063836,28.53680220950832,0 -16.39641392277659,28.53677176639589,0 -16.39444947419418,28.53511168819279,0 -16.39283009870637,28.53349125067751,0 -16.38984868566579,28.53207911204217,0 -16.38770985582042,28.53101188996237,0 -16.38545700015088,28.52735283427233,0 -16.38419846391495,28.52684999899497,0 -16.38249455298584,28.52425343622458,0 -16.38347828307124,28.52318060042217,0 -16.38297177987069,28.52128870771042,0 -16.38639801971192,28.51996903127613,0 -16.38718252918942,28.51894761260983,0 -16.38999529283983,28.51777703606476,0 -16.39207215210704,28.516003476041,0 -16.38603396001368,28.51402962608897,0 -16.39694751242387,28.51179881701447,0 -16.40504728602042,28.50245264289733,0 -16.40959756482177,28.49158449314479,0 -16.41101482637104,28.4863572390093,0 -16.41383607369013,28.4783696940649,0 -16.41914406157232,28.47517235592078,0 -16.41426920041479,28.47548525151576,0 -16.42926710949547,28.47276256001613,0 -16.43587144622801,28.46663807999054,0 -16.44715216161719,28.45999794383365,0 -16.48523422812621,28.43242460254412,0 -16.50265568469004,28.41647730625358,0 -16.5212597917919,28.39916740135135,0 -16.50772749836942,28.40639037107938,0 -16.5479111015332,28.40079401966904,0 -16.65368178581067,28.39174506325356,0 -16.69933353940819,28.37896992275881,0 -16.70071264883351,28.35651010502667,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>Procession</name>
+				<visibility>0</visibility>
+				<styleUrl>#msn_ylw-pushpin2602</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						-16.32046806791801,28.49060298008924,0 -16.31877392199209,28.49008900424303,0 -16.3184737565101,28.4906631209865,0 -16.31644095059219,28.48994422027376,0 -16.31680605198767,28.48874657218524,0 -16.32027979488484,28.49059402467188,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>Llano de los Viejos - Gåtur</name>
+				<visibility>0</visibility>
+				<styleUrl>#msn_ylw-pushpin1022</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						-16.28335171748748,28.52259492847378,0 -16.28302977404425,28.52303978866396,0 -16.28315284087399,28.5233836378777,0 -16.28307282427138,28.5238823781812,0 -16.28260786899952,28.52392031510081,0 -16.28250937375822,28.52398672147806,0 -16.28249305373893,28.52409461562717,0 -16.28269650596538,28.52410257143314,0 -16.28302281753118,28.52411808546301,0 -16.28325444869971,28.52417834648702,0 -16.28337924218714,28.5238950325607,0 -16.28374095695368,28.5234866441714,0 -16.28422551210364,28.52330565796749,0 -16.28362661824553,28.52355622391119,0 -16.28339091809644,28.52406278258761,0 -16.28313768443441,28.52414515426377,0 -16.28293739765311,28.52410587793835,0 -16.28257747578076,28.52415477814284,0 -16.28287115533225,28.52438953980287,0 -16.2830330834867,28.52452065902257,0 -16.28328236323396,28.52471145429138,0 -16.28351472980243,28.52468727851789,0 -16.28385544280832,28.524314818034,0 -16.28379892988342,28.52402520961737,0 -16.28431884672664,28.52378338369292,0 -16.28493649982624,28.52378913587234,0 -16.28533631590144,28.52382467736733,0 -16.28586782670931,28.52412216980699,0 -16.2861751038816,28.52410680154393,0 -16.28687071142173,28.52427719244925,0 -16.28744066711687,28.52407793679016,0 -16.28768623590103,28.5240464751526,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>Lørdag 3/4</name>
+			<visibility>0</visibility>
+			<Placemark>
+				<name>San Pablo - Santiago del Teide - Arguayao - Chio - Alcalá - Jungle park - tilbage</name>
+				<visibility>0</visibility>
+				<styleUrl>#msn_ylw-pushpin33</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						-16.69906096154198,28.34927763110659,0 -16.71130321782564,28.35764994059498,0 -16.71207907722812,28.35790978465712,0 -16.71204755586484,28.35599082072984,0 -16.7147403569332,28.35610628201212,0 -16.71677015845743,28.35480385996441,0 -16.71896977874383,28.35698409654065,0 -16.72626872400116,28.35899314526934,0 -16.73014000434764,28.35786414423937,0 -16.73257542062936,28.35733398774487,0 -16.73355117762137,28.35867706271587,0 -16.7338206123124,28.35755904805839,0 -16.73602177639284,28.35629933962862,0 -16.73717602352206,28.35447120371842,0 -16.7388409098964,28.35387385100436,0 -16.73886645299187,28.35432799026948,0 -16.74002277152945,28.35477856719128,0 -16.74267712196658,28.35395434932748,0 -16.74438398682291,28.351761603251,0 -16.74581728721479,28.35209199312114,0 -16.7485490444046,28.34759143359846,0 -16.75054129881509,28.34637368818108,0 -16.75340448484437,28.34347932566704,0 -16.75587679817161,28.33935826451115,0 -16.75592211049034,28.33774411027698,0 -16.75794730517252,28.33584867261241,0 -16.7590643365159,28.33577227180027,0 -16.75900634198365,28.33468259678852,0 -16.75576300349648,28.334583295194,0 -16.75690739165693,28.33290614080853,0 -16.75982628082173,28.3327899425684,0 -16.76447791881704,28.33207629528943,0 -16.76574993713621,28.33146659486958,0 -16.77218597244766,28.33040733767519,0 -16.77381315458734,28.33068468009187,0 -16.77744049048984,28.32973919667305,0 -16.78254908607698,28.32879483949445,0 -16.78276218340814,28.32920317876767,0 -16.78311807312799,28.32895195356761,0 -16.7857030007681,28.33018104088147,0 -16.78903753536738,28.32911141655525,0 -16.79180089698785,28.32590016216245,0 -16.7933444910419,28.32515223921098,0 -16.79510815430085,28.32507419120754,0 -16.79633532148773,28.32407768675391,0 -16.79746007158047,28.32074240254951,0 -16.79627508837131,28.31906252471304,0 -16.79704766353278,28.31829337476815,0 -16.79879104014515,28.3176832746627,0 -16.79873544336734,28.31713606356253,0 -16.80008493900604,28.31547176982377,0 -16.80220827346045,28.31622153414278,0 -16.80438129785245,28.31771828905032,0 -16.80437700362961,28.3163263291179,0 -16.80424185448113,28.31508950563306,0 -16.80511679774011,28.31409590217746,0 -16.80811775366306,28.31103574110481,0 -16.80884876604075,28.30933603846878,0 -16.80991776078298,28.30958684761867,0 -16.8105742866352,28.30707227484857,0 -16.81126261327533,28.30805425574536,0 -16.81660294183474,28.29726059452568,0 -16.81496728718482,28.29525801140988,0 -16.81387071695582,28.29116872612826,0 -16.81231465190314,28.29002376364579,0 -16.80736208008644,28.28999190342476,0 -16.80450173962506,28.2871125555322,0 -16.80233777572472,28.28616737917364,0 -16.8012027521343,28.28421225851175,0 -16.80000485915109,28.28485242309056,0 -16.79952269252364,28.28330684580994,0 -16.79752930769029,28.28212931137759,0 -16.79987296809694,28.28075399207997,0 -16.80163240498251,28.27736877858198,0 -16.80133990660178,28.27484285864684,0 -16.80443696230925,28.27178022980626,0 -16.80665898681988,28.27053505139032,0 -16.80761770066006,28.26542428596906,0 -16.80835556199543,28.25638162143815,0 -16.80177660521548,28.24878423973064,0 -16.79991443616621,28.24713341804923,0 -16.80073976449325,28.24598759798385,0 -16.79783476123042,28.24207511999131,0 -16.79670090373752,28.24063388094088,0 -16.79792174424314,28.23917020400284,0 -16.79926872181481,28.23855660538969,0 -16.79922752237995,28.23832062258346,0 -16.79975484294949,28.23804856693383,0 -16.79948365861461,28.23663980266258,0 -16.80117235854572,28.23533297369534,0 -16.80315268934806,28.23398755993878,0 -16.80653357238045,28.23109899956043,0 -16.80068095313629,28.23556057215258,0 -16.80249602117598,28.23822200343167,0 -16.80008849441353,28.23953458210377,0 -16.79940161624209,28.24004861563994,0 -16.79861196277037,28.23889191522567,0 -16.79662060010269,28.24067078771544,0 -16.79588101128172,28.24044063433835,0 -16.79529786674232,28.24057048302868,0 -16.7944825696895,28.23925892610638,0 -16.79479972168845,28.23824387937523,0 -16.79425889815794,28.23774352537676,0 -16.79462384861504,28.23717256868827,0 -16.79396247379706,28.23600112141167,0 -16.79390710126882,28.2359837828765,0 -16.78490049281646,28.2150872357049,0 -16.79504507167503,28.21931301466124,0 -16.79432626198001,28.21570625038783,0 -16.79600718006336,28.21146378942915,0 -16.79499402479695,28.2068129609458,0 -16.79526828189714,28.20271819212509,0 -16.79597788756026,28.19877099946687,0 -16.79363345656434,28.19528265796832,0 -16.79332823283568,28.19326331151508,0 -16.79479315950702,28.1940294671334,0 -16.7991363968342,28.19264904453925,0 -16.80002857154305,28.1930519943348,0 -16.80026839774168,28.19179230578416,0 -16.79870716129883,28.19153215518958,0 -16.80265032740755,28.18679665981363,0 -16.80467664180078,28.18652484837178,0 -16.80750369296439,28.18826295684296,0 -16.80613064494839,28.18555281658448,0 -16.81277245686614,28.18447858722441,0 -16.81320840973051,28.18285248734486,0 -16.81624376319483,28.18364529633627,0 -16.82599530308636,28.19914503041808,0 -16.8276270179867,28.20198533020735,0 -16.82823003935915,28.2026471021136,0 -16.82886443731815,28.20197090590806,0 -16.82905459411129,28.20149180386111,0 -16.82888856887772,28.20146500917154,0 -16.82800096239733,28.20246589072346,0 -16.82735639236841,28.20158303119036,0 -16.82674082020349,28.2004059632889,0 -16.82761615400172,28.20073424502435,0 -16.82783761898851,28.20119956760183,0 -16.82669566346316,28.20037991934542,0 -16.82277750254667,28.19407198955732,0 -16.82022311854101,28.1914930565715,0 -16.81624368054023,28.18323905857825,0 -16.81366322718299,28.18247650051035,0 -16.81296913466166,28.1840664793105,0 -16.81152370706345,28.18254929139436,0 -16.80543335910222,28.18179387989744,0 -16.80419738534744,28.17662443399255,0 -16.79779039788202,28.17439607053882,0 -16.79899689668132,28.15958474236137,0 -16.79475224007286,28.15919584500427,0 -16.79389392040765,28.15286077302292,0 -16.78552288621482,28.14122537065013,0 -16.77865467095232,28.134926475043,0 -16.76843309537921,28.13468070674466,0 -16.75370274604178,28.12773344058682,0 -16.74429171323586,28.1268996638854,0 -16.73291271996975,28.10879978787791,0 -16.72978597172475,28.0931583812411,0 -16.72890047065566,28.07693409733095,0 -16.72595918537503,28.06956723451361,0 -16.7119972743818,28.06430962552538,0 -16.71307063228713,28.06797047601876,0 -16.71047807922159,28.06990181569388,0 -16.70597702086958,28.0702074956402,0 -16.70062257132554,28.07042870991453,0 -16.6999494712782,28.07070018317535,0 -16.6998039492443,28.07147516038361,0 -16.69957833803653,28.07170692073407,0 -16.69854880528429,28.07229897917622,0 -16.69647378905782,28.07364999805956,0 -16.69577799657009,28.07615034749901,0 -16.69586081634574,28.07701494271878,0 -16.69505947987041,28.07786743482865,0 -16.69420764347797,28.07970637014948,0 -16.69419445222172,28.08055463753835,0 -16.69438894062186,28.08181903229282,0 -16.69472504177109,28.08110163019023,0 -16.69442994115111,28.08179813395606,0 -16.69494514098203,28.08109521967975,0 -16.69632814309529,28.08074217944239,0 -16.69669183969327,28.08040002026121,0 -16.69645453252786,28.07958588477525,0 -16.69650852094002,28.07917105773669,0 -16.69789122517666,28.0789650111095,0 -16.69809271459885,28.07870373801648,0 -16.69708586632881,28.07812263672605,0 -16.69592917888301,28.07647624495467,0 -16.70003459830658,28.07075199471221,0 -16.70503210154224,28.07079198300782,0 -16.70713237299342,28.07034053470375,0 -16.71151171669444,28.06993181225506,0 -16.71287397658177,28.06713254043363,0 -16.71084183100809,28.06442863435113,0 -16.70441815581982,28.06167951400901,0 -16.68922618658571,28.0590182350786,0 -16.68532526719219,28.05752675326723,0 -16.676121513738,28.05250536787489,0 -16.66199445647974,28.05249927848824,0 -16.64393174513601,28.05322581348153,0 -16.59545709283339,28.05343186965217,0 -16.56429571920266,28.06678912653468,0 -16.53193342064647,28.07298474615315,0 -16.5200544598798,28.08304470448817,0 -16.49350310253549,28.10230600697607,0 -16.47476635767339,28.11859075012442,0 -16.43356748227857,28.17512368177086,0 -16.4105145829304,28.23023292656577,0 -16.38094880412505,28.30537173939245,0 -16.3388770122045,28.40010911139104,0 -16.30585991005852,28.43023728383595,0 -16.30555731971652,28.46305063740574,0 -16.32681379457544,28.48713857965808,0 -16.37131608167502,28.48875168835698,0 -16.42544098587024,28.47335123547769,0 -16.52486353352228,28.40439651248862,0 -16.62615282126494,28.39384712718863,0 -16.65091718373527,28.39276825631658,0 -16.68563444703183,28.38167938320848,0 -16.70103075377229,28.37837882167906,0 -16.69993180675015,28.3516490463789,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>Alcalá - bilparkering</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>-16.82772970399748</longitude>
+					<latitude>28.20060206493682</latitude>
+					<altitude>0</altitude>
+					<heading>-2.630874327299555</heading>
+					<tilt>8.699393427301352</tilt>
+					<range>232.2980288353785</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_cabs0000</styleUrl>
+				<Point>
+					<coordinates>-16.82781357339144,28.2011981644919,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Frokost</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>-16.82803412374934</longitude>
+					<latitude>28.20093204156365</latitude>
+					<altitude>0</altitude>
+					<heading>-2.631018178502274</heading>
+					<tilt>8.70351571984677</tilt>
+					<range>132.0551126791758</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_snack_bar8</styleUrl>
+				<Point>
+					<coordinates>-16.82830087419539,28.20089139756784,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Chío</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>-16.79707492073794</longitude>
+					<latitude>28.2390979542166</latitude>
+					<altitude>0</altitude>
+					<heading>-2.616394364359127</heading>
+					<tilt>8.693543373781006</tilt>
+					<range>1458.646165894635</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin1321</styleUrl>
+				<Point>
+					<coordinates>-16.79684658722028,28.24070278837049,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Playa de San Juan</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>-16.8026513591261</longitude>
+					<latitude>28.17186210055298</latitude>
+					<altitude>0</altitude>
+					<heading>-2.618990461675221</heading>
+					<tilt>8.69192876042233</tilt>
+					<range>10295.63296486113</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin590</styleUrl>
+				<Point>
+					<coordinates>-16.81525413017567,28.18250525273893,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Jungle Park</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>-16.6939839883048</longitude>
+					<latitude>28.07954131440094</latitude>
+					<altitude>0</altitude>
+					<heading>-0.518926729677365</heading>
+					<tilt>51.48341654994972</tilt>
+					<range>1295.832448996019</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin404</styleUrl>
+				<Point>
+					<coordinates>-16.69512798177476,28.07947419574987,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Bilparkering - Jungle Park</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>-16.69471838905887</longitude>
+					<latitude>28.08108176358752</latitude>
+					<altitude>0</altitude>
+					<heading>-0.5192672530291986</heading>
+					<tilt>51.46015361720503</tilt>
+					<range>89.56182915732057</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_cabs200</styleUrl>
+				<Point>
+					<coordinates>-16.6947102206838,28.08108936197239,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Tiger</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>-16.69464530700868</longitude>
+					<latitude>28.08035438098406</latitude>
+					<altitude>0</altitude>
+					<heading>-0.5192328552399272</heading>
+					<tilt>51.46179887126556</tilt>
+					<range>67.62525711431714</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_partly_cloudy2</styleUrl>
+				<Point>
+					<coordinates>-16.69464530700868,28.08035438098406,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Papegøjearena</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>-16.69589984033694</longitude>
+					<latitude>28.08034430898212</latitude>
+					<altitude>0</altitude>
+					<heading>-0.5198233641794543</heading>
+					<tilt>51.46676944283436</tilt>
+					<range>59.99616599472655</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_partly_cloudy</styleUrl>
+				<Point>
+					<coordinates>-16.69594832744896,28.08029169868086,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Ørnearena</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>-16.69528705414676</longitude>
+					<latitude>28.07967991114806</latitude>
+					<altitude>0</altitude>
+					<heading>-0.519534923885154</heading>
+					<tilt>51.46425430313</tilt>
+					<range>67.62319746264365</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_partly_cloudy1</styleUrl>
+				<Point>
+					<coordinates>-16.69531701977637,28.07958598261274,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>GoCart start</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>-16.69524546512727</longitude>
+					<latitude>28.07845508473357</latitude>
+					<altitude>0</altitude>
+					<heading>-0.5195153610335523</heading>
+					<tilt>51.47562713077846</tilt>
+					<range>184.8134826739732</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_partly_cloudy0</styleUrl>
+				<Point>
+					<coordinates>-16.69525526713962,28.07804716030909,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>Påskedag 4/4</name>
+			<visibility>0</visibility>
+			<Placemark>
+				<name>San Pablo - La Orotava - Portillo - Minas de San Jose - Teleferico - Rogues de Garcia - Tamamo - Santiago del Teide - tilbage</name>
+				<visibility>0</visibility>
+				<styleUrl>#msn_ylw-pushpin320</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						-16.69729409900911,28.34631188505814,0 -16.69589995201685,28.37709821307056,0 -16.53682930059269,28.39849892505485,0 -16.52277833796394,28.39849859945605,0 -16.51795310586553,28.39780338690181,0 -16.51967587262665,28.395504733132,0 -16.52014467605589,28.39357215603533,0 -16.52170711786183,28.39248006164662,0 -16.52176413194533,28.39201637114453,0 -16.52247889368213,28.39191767949908,0 -16.52168695790802,28.39197711743196,0 -16.51756426242259,28.39156048223063,0 -16.52030119161318,28.38909505632807,0 -16.51438888411173,28.38846611126419,0 -16.50874532619932,28.38839971078739,0 -16.51039383841454,28.38662974204543,0 -16.51905968932167,28.37675359919661,0 -16.50730990638688,28.37919436893998,0 -16.5120249521096,28.37398288739988,0 -16.52310341867978,28.36920432821759,0 -16.52903630419045,28.36636248786508,0 -16.50421462342312,28.36599575323343,0 -16.49927515244276,28.36353954194911,0 -16.49575148778983,28.36084876962182,0 -16.50070968090837,28.36155905548224,0 -16.5027491793471,28.359975153542,0 -16.50678060156714,28.35709794802614,0 -16.51793069749632,28.3541211369828,0 -16.52655573984185,28.34845689539099,0 -16.51189111458092,28.34909699289812,0 -16.52071394675205,28.34440745748639,0 -16.52266626946884,28.34185446768586,0 -16.52478378137582,28.34062827508788,0 -16.52720218468098,28.33810666703833,0 -16.52826273647623,28.33782329038477,0 -16.53174558264221,28.33144992879807,0 -16.53242424458239,28.32796155480814,0 -16.53587856642354,28.32479616887823,0 -16.53759756473333,28.32383465026003,0 -16.53854248394336,28.32245665553544,0 -16.53949574468481,28.32328125127978,0 -16.54107578690073,28.32197298081714,0 -16.55031315409725,28.32196601793543,0 -16.55959782437116,28.31910897484682,0 -16.56216564183815,28.31902911434987,0 -16.56345076077811,28.31719034309046,0 -16.57033547554532,28.31650941594024,0 -16.57533065305439,28.31495050012684,0 -16.56732892622179,28.31155585637049,0 -16.57044277811724,28.3109615581258,0 -16.56516277417047,28.30675183314483,0 -16.56469338030837,28.30599969660931,0 -16.56462427371293,28.30514134676822,0 -16.56725965456799,28.30340815115707,0 -16.56850042533996,28.30152800613106,0 -16.56707429533019,28.30089204086978,0 -16.56685182862896,28.30031054883285,0 -16.56522338170474,28.30004810549796,0 -16.56595052372825,28.29868186870149,0 -16.56533180342518,28.29760540549692,0 -16.565789519568,28.29641985917251,0 -16.564636444913,28.29173919667927,0 -16.56517873136562,28.28884729609582,0 -16.56470587516579,28.28773576495835,0 -16.5652500697752,28.28653646350923,0 -16.56803104928363,28.28438306817375,0 -16.56951910825745,28.28365821034035,0 -16.5712345721685,28.28358627095852,0 -16.57738351210428,28.27928576974836,0 -16.57662541160259,28.27677903545089,0 -16.58017364812939,28.27546931645092,0 -16.58840693010514,28.26604814481464,0 -16.59413266091289,28.26026609153558,0 -16.59914904544034,28.25933284478411,0 -16.60482588710143,28.25903052678498,0 -16.60813195880715,28.25925178604615,0 -16.61187820171203,28.25766592481292,0 -16.61488631222379,28.25943373381688,0 -16.61794275204119,28.25811122730796,0 -16.61919093168369,28.25590514512154,0 -16.62215440753005,28.2546252243869,0 -16.62334166620454,28.25621820638928,0 -16.62575866893857,28.25497350406893,0 -16.62359890853448,28.25636110431521,0 -16.62244708444595,28.25451240826348,0 -16.62524864507127,28.25358381789407,0 -16.62706136302682,28.25076868801058,0 -16.63017251931442,28.24432047805994,0 -16.62930797273738,28.22951691873368,0 -16.62890040998572,28.22639863959882,0 -16.62790159729355,28.2254320598626,0 -16.62888403209148,28.22629765096949,0 -16.62778973989645,28.21833455746931,0 -16.62643476903131,28.21737472698193,0 -16.62603625476907,28.21690651636959,0 -16.62920525497776,28.21245332757863,0 -16.64058209761036,28.21017882087006,0 -16.65080179650537,28.21064432389258,0 -16.6575048993947,28.21115369987932,0 -16.66735621575529,28.21509649242229,0 -16.66995614235131,28.21589661152148,0 -16.67189751717958,28.21535571519376,0 -16.6787593194606,28.21427277873762,0 -16.69707090142077,28.23733472235175,0 -16.69804870514524,28.23797996235488,0 -16.70296761076262,28.24199641078334,0 -16.70646335093138,28.24798008312993,0 -16.71083283007875,28.25230856734062,0 -16.71447450087462,28.25462703068827,0 -16.7159678402757,28.25740452535959,0 -16.71731133037933,28.2584304113146,0 -16.72001620758436,28.25919349652128,0 -16.72516881294413,28.2663516742787,0 -16.72987238930521,28.26935174636884,0 -16.72932491490413,28.2749533806665,0 -16.73246130666248,28.27706183044158,0 -16.73586853556776,28.27364972996041,0 -16.73807053859992,28.26382533111185,0 -16.74138785302073,28.26260485738612,0 -16.74517318118209,28.26763491012513,0 -16.7509756356347,28.26974008674819,0 -16.76076434290073,28.28345091640179,0 -16.76482147579451,28.28439300213441,0 -16.7668949525367,28.28349115661938,0 -16.76767014249509,28.28222543349434,0 -16.76769862906975,28.2761843622207,0 -16.77011611180478,28.26180658831184,0 -16.76952733163988,28.2577595466231,0 -16.76766566641662,28.25600853750605,0 -16.76499522105466,28.24900667562895,0 -16.76548458143459,28.24687311639052,0 -16.76400514783316,28.2445094798135,0 -16.76464181204522,28.24352939920765,0 -16.76407583864259,28.24279779163224,0 -16.7640741300437,28.24146509894566,0 -16.76345217253669,28.23969950678882,0 -16.76366981746599,28.23886762507899,0 -16.76173496734055,28.23660554482544,0 -16.76027653620547,28.2363500341184,0 -16.75973820595731,28.23557529104876,0 -16.76196071845454,28.23480241461101,0 -16.75987664103898,28.22967658661306,0 -16.75792686400223,28.22840325061985,0 -16.75413571497081,28.22452989688315,0 -16.75384311288587,28.22369520329324,0 -16.75511773023212,28.22282696292143,0 -16.75823487762174,28.22359478231313,0 -16.76173617142634,28.22554802664052,0 -16.7640512918932,28.22610771166133,0 -16.76784902833857,28.22634470647216,0 -16.7698374711408,28.22783593781081,0 -16.7723461817241,28.22900134349336,0 -16.77377979898813,28.22880711190058,0 -16.77593215190667,28.2301535802916,0 -16.77815734208991,28.2302719196515,0 -16.7786548242781,28.23142977754579,0 -16.78005007202362,28.23192767772062,0 -16.78283060956983,28.23449379700298,0 -16.78475714583567,28.23589470048356,0 -16.78596212071563,28.2373106545367,0 -16.78620750587576,28.23824278164366,0 -16.78756148634119,28.23874457411756,0 -16.78937132447459,28.23786202826473,0 -16.79080153946822,28.23905248059498,0 -16.79072758555892,28.23985886191952,0 -16.7935090659144,28.24261030413063,0 -16.79595601735299,28.24228937845831,0 -16.79834944435946,28.24396748922096,0 -16.79920180269802,28.24444174658684,0 -16.80507925093403,28.25000550694544,0 -16.80674607830985,28.24917828203334,0 -16.81014059044124,28.25130325346203,0 -16.81095591953985,28.25213864208675,0 -16.81207511150602,28.251965645531,0 -16.81274115491879,28.25243637217168,0 -16.81641934461624,28.25378965579832,0 -16.81584090486449,28.25696860263461,0 -16.81866438436634,28.25712191694213,0 -16.81894387135745,28.25915115186745,0 -16.81902866905787,28.26116616247894,0 -16.81744207082546,28.2631784024592,0 -16.81856993952771,28.26775644806376,0 -16.81915929720679,28.26994345461916,0 -16.81740774174924,28.27048895697153,0 -16.81825264439437,28.27108804349142,0 -16.81901993915593,28.27297825062007,0 -16.82079120968176,28.27431917643429,0 -16.82064597174956,28.27476242179186,0 -16.81928264067228,28.27466427845761,0 -16.81804779261941,28.27380850383862,0 -16.81645794800649,28.27405365783121,0 -16.81394165395379,28.27345687648907,0 -16.81399283500946,28.27488595501504,0 -16.81570035380992,28.27692490419087,0 -16.81888499102415,28.27912138699884,0 -16.81677552801206,28.27924686734031,0 -16.81448540103266,28.27813529271641,0 -16.81391784548612,28.27837902102407,0 -16.81295958410177,28.27792300225601,0 -16.81359545276717,28.27962281601386,0 -16.81479933727309,28.28132187388732,0 -16.81433009663445,28.2821020465205,0 -16.81017879691817,28.28002111352689,0 -16.81119079970164,28.28340683414155,0 -16.81025369457561,28.28582555191324,0 -16.81171482951413,28.28610941203083,0 -16.81249601199849,28.2873573550835,0 -16.81369875504374,28.28836514926699,0 -16.81440365779394,28.29235761704814,0 -16.81565553044178,28.29357066395814,0 -16.8151073376801,28.29562936521526,0 -16.81618155722431,28.29730000151821,0 -16.81480759012467,28.30051912906163,0 -16.81641854363818,28.30278924147346,0 -16.81494374534609,28.30409177852929,0 -16.81271995356432,28.30408051351773,0 -16.81348730959926,28.30662334804021,0 -16.81264638167643,28.30843057913166,0 -16.81082597428105,28.30707431805989,0 -16.8097427373631,28.30960533957289,0 -16.80834872195727,28.31082197993613,0 -16.80685429311836,28.31180007924787,0 -16.80630480637858,28.31325852398435,0 -16.80507400751112,28.31506089984275,0 -16.80450587335117,28.31648451735943,0 -16.80408593869874,28.31778560099454,0 -16.80264531068852,28.31624395056345,0 -16.80167154264951,28.31640239885029,0 -16.80061497130464,28.31556055034928,0 -16.79857862601418,28.31780249602048,0 -16.79702111823552,28.31840467377049,0 -16.79627576690884,28.31930596381593,0 -16.79757893204524,28.32205270681716,0 -16.79631615116629,28.32428374704235,0 -16.79330153154305,28.32520796641255,0 -16.79155170593343,28.32604357567457,0 -16.7891019309753,28.32906387698029,0 -16.78563263975183,28.33028080035388,0 -16.7817000745906,28.32884736523831,0 -16.77379136226663,28.33051813979814,0 -16.75684020852924,28.33283306163426,0 -16.75551521714147,28.33449650887938,0 -16.75867979947748,28.33462827705142,0 -16.75893683443375,28.33611054487789,0 -16.75623410450027,28.33808984132906,0 -16.75582776569506,28.33975250731546,0 -16.75358584166138,28.34340496336977,0 -16.74848648634595,28.34776722252848,0 -16.7462960383005,28.35190234707691,0 -16.74282541763897,28.35345363117156,0 -16.74006999948105,28.35457905278415,0 -16.73425554372625,28.35707467504543,0 -16.72619089570964,28.35878792977174,0 -16.71904023572968,28.35681616077464,0 -16.71679234792001,28.3547960704106,0 -16.71449621076854,28.35610034617634,0 -16.71165716509125,28.35767446425035,0 -16.70023264590023,28.3489569669607,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>Bilparkering - La Orotava</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>-16.52362609803002</longitude>
+					<latitude>28.391497618889</latitude>
+					<altitude>0</altitude>
+					<heading>0.03272636961373565</heading>
+					<tilt>0</tilt>
+					<range>166.2421092936012</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_cabs02</styleUrl>
+				<Point>
+					<coordinates>-16.5239589430474,28.39173547492426,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>La Orotava - Iglesia de Ntra. Sra. de la Concepción</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>-16.52520081999937</longitude>
+					<latitude>28.39032306582256</latitude>
+					<altitude>0</altitude>
+					<heading>0.0319776149576924</heading>
+					<tilt>0</tilt>
+					<range>187.3570849453191</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin57</styleUrl>
+				<Point>
+					<coordinates>-16.52544989423491,28.39004153249318,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>La Orotava - Procession</name>
+				<visibility>0</visibility>
+				<styleUrl>#msn_ylw-pushpin203</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						-16.52533522342121,28.39006125814452,0 -16.5254976232505,28.3902398123932,0 -16.52583880634677,28.39045162540132,0 -16.52590276265426,28.38995957390877,0 -16.52591648988527,28.38969509726149,0 -16.52548483447569,28.38984323756529,0 -16.52524515879564,28.38994046781288,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>Portillo - Frokost</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeStamp><when>2010-05-06T08:55:16Z</when>
+</gx:TimeStamp>
+					<longitude>-16.56480841097986</longitude>
+					<latitude>28.30561256524315</latitude>
+					<altitude>0</altitude>
+					<heading>-2.506721068640708</heading>
+					<tilt>8.687474078371068</tilt>
+					<range>78.73867034426223</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_snack_bar120</styleUrl>
+				<Point>
+					<coordinates>-16.56461829182777,28.30559482490742,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Minas de San Juan</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeStamp><when>2010-05-06T08:55:16Z</when>
+</gx:TimeStamp>
+					<longitude>-16.58836918753467</longitude>
+					<latitude>28.2658477501243</latitude>
+					<altitude>0</altitude>
+					<heading>-0.01055355149125814</heading>
+					<tilt>0</tilt>
+					<range>95.72037023396094</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin1120</styleUrl>
+				<Point>
+					<coordinates>-16.58871564991404,28.26582516098612,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Udsigtspunkt med Slangetunge</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeStamp><when>2010-05-06T08:55:16Z</when>
+</gx:TimeStamp>
+					<longitude>-16.61046348515298</longitude>
+					<latitude>28.25733736800441</latitude>
+					<altitude>0</altitude>
+					<heading>-0.02098188817353373</heading>
+					<tilt>0</tilt>
+					<range>256.4727262124728</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin2710</styleUrl>
+				<Point>
+					<coordinates>-16.61065944265685,28.25763572192017,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Rogues de Garcia</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeStamp><when>2010-05-06T08:55:16Z</when>
+</gx:TimeStamp>
+					<longitude>-16.62457530604487</longitude>
+					<latitude>28.22365128200456</latitude>
+					<altitude>0</altitude>
+					<heading>-0.02766048430600388</heading>
+					<tilt>0</tilt>
+					<range>2361.200697252844</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin104</styleUrl>
+				<Point>
+					<coordinates>-16.62789269162427,28.22544435759667,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Udsigt over skyhav</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeStamp><when>2010-05-06T08:55:16Z</when>
+</gx:TimeStamp>
+					<longitude>-16.92654202203836</longitude>
+					<latitude>28.22987779134803</latitude>
+					<altitude>0</altitude>
+					<heading>-93.43432886219718</heading>
+					<tilt>79.97939236413433</tilt>
+					<range>25338.01303860659</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin481</styleUrl>
+				<Point>
+					<coordinates>-16.70302790351063,28.24214791677499,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Teide med superkrateret</name>
+				<visibility>0</visibility>
+				<Camera>
+					<gx:TimeStamp><when>2010-05-06T08:55:16Z</when>
+</gx:TimeStamp>
+					<longitude>-16.53128911554282</longitude>
+					<latitude>28.35350977277152</latitude>
+					<altitude>3310.772087483742</altitude>
+					<heading>-141.7450352859861</heading>
+					<tilt>64.50095078332483</tilt>
+					<roll>5.162167470202546e-010</roll>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</Camera>
+				<styleUrl>#msn_ylw-pushpin203</styleUrl>
+				<Point>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+					<coordinates>-16.64156876666038,28.27351904644954,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>2. påskedag 5/4</name>
+			<visibility>0</visibility>
+			<Placemark>
+				<name>San Pablo - Icod de los Vinos - Puerto de la Cruz - tilbage</name>
+				<visibility>0</visibility>
+				<styleUrl>#msn_ylw-pushpin64</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						-16.69620353750984,28.34914745589972,0 -16.71191577566481,28.37018026564946,0 -16.71414159623936,28.36956485469555,0 -16.71618310135913,28.36958356448506,0 -16.71881023803525,28.36919415944092,0 -16.71929337896321,28.36890178004934,0 -16.7192888775837,28.36845080812476,0 -16.7196761507775,28.36835934350341,0 -16.72018106866964,28.36814568006321,0 -16.72014034850372,28.3680166790633,0 -16.71923899011522,28.36875980086266,0 -16.71691490626774,28.36947973329739,0 -16.71354086323483,28.36969502346515,0 -16.71113694431151,28.37112012389,0 -16.70861534458816,28.37431390846081,0 -16.70548889488013,28.37501328122085,0 -16.70302547475633,28.37494502579813,0 -16.69511633077165,28.37863980656265,0 -16.66156792242984,28.39007640767258,0 -16.65828062644465,28.39526832793314,0 -16.65142647312355,28.39346749795016,0 -16.64884313661793,28.39281940109336,0 -16.64289250746951,28.39424411594525,0 -16.63819781236471,28.39260780168691,0 -16.63316218952791,28.3938923999553,0 -16.62586938438212,28.39155517648386,0 -16.6185471919237,28.39289182632084,0 -16.61207489238175,28.39254140056525,0 -16.60666728960307,28.39160719956448,0 -16.59451637699514,28.39507696661513,0 -16.58990991221343,28.39212487057886,0 -16.58178761622431,28.39252826506836,0 -16.5716699214275,28.39206636110386,0 -16.56246300010074,28.39377443542212,0 -16.55364742779148,28.39387636480329,0 -16.54736561626103,28.3977705996388,0 -16.53907923687579,28.39687812099649,0 -16.52401439867928,28.39798586985138,0 -16.51640749832818,28.40275414022268,0 -16.51705743911147,28.40332808149264,0 -16.51919405461241,28.40454580647373,0 -16.5212362499842,28.40479220348264,0 -16.52371158165123,28.40534464535465,0 -16.52667432148203,28.40535197566121,0 -16.52907614376608,28.40659305505298,0 -16.53215754054909,28.40749456774308,0 -16.53289685125291,28.40850474961232,0 -16.53217220906137,28.40986328122986,0 -16.53113381627025,28.41073472029663,0 -16.529305249068,28.41244090391041,0 -16.52990912121429,28.41277620878267,0 -16.53146777444287,28.41247495271448,0 -16.5329115792854,28.41228323090952,0 -16.5348339807775,28.41218301909779,0 -16.53540011445506,28.41196488119383,0 -16.53582080652299,28.41165118918843,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>Udsigt mod dragetræ</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeStamp><when>2010-05-06T08:55:16Z</when>
+</gx:TimeStamp>
+					<longitude>-16.72207144428532</longitude>
+					<latitude>28.36689582740902</latitude>
+					<altitude>0</altitude>
+					<heading>-122.7164362194309</heading>
+					<tilt>61.6022330299023</tilt>
+					<range>90.6437413812704</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_camera00</styleUrl>
+				<Point>
+					<coordinates>-16.72191869068308,28.36690116053659,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Dragetræ</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeStamp><when>2010-05-06T08:55:16Z</when>
+</gx:TimeStamp>
+					<longitude>-16.72201968056198</longitude>
+					<latitude>28.36667305765711</latitude>
+					<altitude>0</altitude>
+					<heading>-0.07387057042800943</heading>
+					<tilt>0</tilt>
+					<range>191.0247098355873</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_parks0</styleUrl>
+				<Point>
+					<coordinates>-16.72227386393631,28.3665230977568,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Icod - frokost</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeStamp><when>2010-05-06T08:55:16Z</when>
+</gx:TimeStamp>
+					<longitude>-16.72016724706683</longitude>
+					<latitude>28.36669209047645</latitude>
+					<altitude>0</altitude>
+					<heading>-0.07304241297547076</heading>
+					<tilt>0</tilt>
+					<range>194.0573234499361</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_snack_bar13</styleUrl>
+				<Point>
+					<coordinates>-16.72006042186041,28.36704436223403,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Jardin de Aclimatación de La Oratova</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeStamp><when>2010-05-06T08:55:16Z</when>
+</gx:TimeStamp>
+					<longitude>-16.53535535345541</longitude>
+					<latitude>28.40994304668226</latitude>
+					<altitude>0</altitude>
+					<heading>0.01460769542894478</heading>
+					<tilt>0</tilt>
+					<range>277.7080858343029</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin00110</styleUrl>
+				<Point>
+					<coordinates>-16.53523894825318,28.41078120578048,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Bilparkering ved drageblodstræ - p-kælder</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeStamp><when>2010-05-06T08:55:16Z</when>
+</gx:TimeStamp>
+					<longitude>-16.71978791520678</longitude>
+					<latitude>28.36795693742624</latitude>
+					<altitude>0</altitude>
+					<heading>-0.07281021371378559</heading>
+					<tilt>0</tilt>
+					<range>187.2518941157392</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_cabs01</styleUrl>
+				<Point>
+					<coordinates>-16.72010966155109,28.36795790023284,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Kiosk med dragetræsstiklinger</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeStamp><when>2010-05-06T08:55:16Z</when>
+</gx:TimeStamp>
+					<longitude>-16.53618078090388</longitude>
+					<latitude>28.41175346150935</latitude>
+					<altitude>0</altitude>
+					<heading>62.96791372089983</heading>
+					<tilt>11.02095861675938</tilt>
+					<range>206.0814592962178</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_parks</styleUrl>
+				<Point>
+					<coordinates>-16.53625726139338,28.4115910443118,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Is</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeStamp><when>2010-05-06T08:55:16Z</when>
+</gx:TimeStamp>
+					<longitude>-16.53618078090388</longitude>
+					<latitude>28.41175346150935</latitude>
+					<altitude>0</altitude>
+					<heading>62.96791372089983</heading>
+					<tilt>11.02095861675938</tilt>
+					<range>206.0814592962178</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_bars010</styleUrl>
+				<Point>
+					<coordinates>-16.53631563474512,28.41175439447978,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Bilparkering - botanisk have</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeStamp><when>2010-05-06T08:55:16Z</when>
+</gx:TimeStamp>
+					<longitude>-16.53618078090388</longitude>
+					<latitude>28.41175346150935</latitude>
+					<altitude>0</altitude>
+					<heading>62.96791372089983</heading>
+					<tilt>11.02095861675938</tilt>
+					<range>206.0814592962178</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_cabs11</styleUrl>
+				<Point>
+					<coordinates>-16.53583420373355,28.41166267185178,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>Tirsdag 6/4</name>
+			<visibility>0</visibility>
+			<Placemark>
+				<name>San Pablo - Garachico - Buenavista del Norte - El Palmar - Tabaibanas - Masca - Siam Park - Hjemad</name>
+				<visibility>0</visibility>
+				<styleUrl>#msn_ylw-pushpin1050</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						-16.70203960470479,28.35032880924146,0 -16.71124279576434,28.35632697408643,0 -16.71454004083042,28.36237411670925,0 -16.714744930091,28.36955673257729,0 -16.71697611959233,28.36942725579969,0 -16.71866384448899,28.36908409896785,0 -16.71978260357091,28.36883135512549,0 -16.72166044013859,28.37022408970191,0 -16.72280129216993,28.37050890870782,0 -16.75012481380148,28.360297933809,0 -16.72475126185111,28.37013592182149,0 -16.72738326956894,28.36963976003402,0 -16.72970362606335,28.37171863714006,0 -16.73121414576615,28.37288506424119,0 -16.73291744809998,28.3734688900417,0 -16.735021742295,28.37270997060381,0 -16.7372912198903,28.37334875112382,0 -16.73941033779277,28.37377475925712,0 -16.74081314575274,28.37308349173442,0 -16.74136459417546,28.37312196872871,0 -16.74223231226633,28.37358078463062,0 -16.74269503545062,28.37291671498836,0 -16.74440027076649,28.37341898675479,0 -16.7470687402364,28.3722497693255,0 -16.74982406833351,28.37017196159012,0 -16.75169329176706,28.37000217436904,0 -16.75670907735302,28.37154641487573,0 -16.75837109843881,28.37410678611474,0 -16.76105768159948,28.37419153850933,0 -16.76282812366905,28.37531851622747,0 -16.7639777271546,28.37522193364644,0 -16.76526432116184,28.37428755939763,0 -16.76596502227372,28.37268562117874,0 -16.76767321931536,28.37179605471494,0 -16.76767135481303,28.37082194397171,0 -16.76857796217795,28.37080490863947,0 -16.770344221381,28.37098631754673,0 -16.76989781487221,28.37223106680457,0 -16.77178867815217,28.37271922140105,0 -16.77911768231032,28.37243094408982,0 -16.7807555124058,28.37208240616873,0 -16.78204273689451,28.37256219225569,0 -16.78293481970198,28.37203377605324,0 -16.7867519318281,28.37182727963106,0 -16.79010834971946,28.37104617893975,0 -16.79331179264381,28.37008507405226,0 -16.79534815710455,28.37041133670083,0 -16.79892421424947,28.36986959914296,0 -16.80234967467549,28.36963317057158,0 -16.80321118452195,28.36910343961513,0 -16.80840360005719,28.36787613409288,0 -16.80969935272528,28.3659040154004,0 -16.81095375463118,28.36534192645605,0 -16.81302561731636,28.36522778260769,0 -16.81605189115789,28.36531649221448,0 -16.81903566140875,28.36555535269749,0 -16.82020253049247,28.36545334087656,0 -16.82084699182521,28.3655060100376,0 -16.82276083026309,28.36557041933339,0 -16.82599116843897,28.36558325728764,0 -16.82868188705371,28.36599888541653,0 -16.83279376322086,28.36731057714989,0 -16.84121786834312,28.36724960187941,0 -16.84638268322868,28.36952506521119,0 -16.84934049806294,28.37044968082802,0 -16.85015635262468,28.37014798346536,0 -16.84896752075189,28.3679157972352,0 -16.84864573696489,28.36699573090649,0 -16.84701334828232,28.36681803604673,0 -16.84541045627815,28.3654188880414,0 -16.84593454469644,28.36213329081839,0 -16.84846247405551,28.3605921299305,0 -16.84685946655795,28.36072262241327,0 -16.84302807300906,28.35930041415152,0 -16.84301473146872,28.35913177607873,0 -16.84509991884554,28.3592832050872,0 -16.84630580174733,28.35868340922299,0 -16.84430513863121,28.35853298607095,0 -16.84558143094991,28.35764686102434,0 -16.84564474918924,28.35707214544778,0 -16.84376285550686,28.35708418174437,0 -16.84488970598136,28.35587139596103,0 -16.84568171033931,28.35461348719089,0 -16.8441329001889,28.35447439409424,0 -16.84502088478129,28.35240162928231,0 -16.84354105652346,28.35229736092899,0 -16.84473289275534,28.35181164441909,0 -16.84422074270998,28.35028199265878,0 -16.84572583083251,28.34927799633489,0 -16.84492044204113,28.34933186277909,0 -16.84403883185084,28.34914670946547,0 -16.84488009609723,28.3488446339571,0 -16.84374661987595,28.34786659448815,0 -16.84483385401896,28.34577032472607,0 -16.84588267549658,28.34600388136161,0 -16.8463508629328,28.34568177043358,0 -16.84622529375269,28.34482851495794,0 -16.84905984179816,28.34222027901598,0 -16.85135062315646,28.33942694568098,0 -16.85145432682886,28.33483419036119,0 -16.84929714490765,28.33451263142601,0 -16.84835527985585,28.3350143481819,0 -16.84389077061423,28.33420351427439,0 -16.84262348870636,28.3334846723046,0 -16.84379339755844,28.33405304161082,0 -16.84477310799459,28.33312489312947,0 -16.84470770397463,28.33228244605401,0 -16.84590693700713,28.33175582730654,0 -16.84701827904441,28.33080907811583,0 -16.84749965355909,28.329682223451,0 -16.84678953861151,28.32880007332988,0 -16.84520792850763,28.3291002493706,0 -16.84320313298295,28.32860107284882,0 -16.84361200862061,28.32699921047107,0 -16.84445565274912,28.32707839823376,0 -16.84532457885877,28.32678298252245,0 -16.84576774068264,28.32574394399668,0 -16.84531481738004,28.3252133903615,0 -16.8435638232944,28.32439293497924,0 -16.84299555179618,28.32442050332616,0 -16.84252343009753,28.32353681481997,0 -16.84294319001059,28.32339974850738,0 -16.84331145805542,28.32357494733312,0 -16.84481842841118,28.32280452625372,0 -16.84447120203677,28.32228926865527,0 -16.84577145024381,28.32236620543628,0 -16.84666264054748,28.32216511448954,0 -16.84825289086032,28.32208752620212,0 -16.8494743202328,28.32246040792051,0 -16.8500104568882,28.3230933317199,0 -16.85045887540443,28.32301614791549,0 -16.85063995904923,28.32407591045163,0 -16.85095673014313,28.3241768445251,0 -16.85172253560418,28.32390727232918,0 -16.85214890614146,28.32456546965931,0 -16.85269327164335,28.32540252043759,0 -16.85344378632073,28.32594799984934,0 -16.8541719558911,28.32595467698555,0 -16.85472629748153,28.32690527248339,0 -16.85622965706458,28.32788475185251,0 -16.8565713381243,28.32620242128178,0 -16.85579414293495,28.32559044036678,0 -16.85732868194172,28.32427275904125,0 -16.85627188895406,28.32230091130721,0 -16.85251927660819,28.31749719182883,0 -16.85269911064044,28.31619429375034,0 -16.8496232239239,28.31681729885204,0 -16.84577913826454,28.31385991460398,0 -16.845766438964,28.31305818270944,0 -16.84681809026827,28.31155464538285,0 -16.84657659351226,28.31011357288117,0 -16.84641282884999,28.30939833659789,0 -16.84596724959798,28.30917568595871,0 -16.84583305020824,28.30845934093694,0 -16.84602424259877,28.30970434652475,0 -16.8460170384879,28.31086445808834,0 -16.84520389942573,28.31106672837864,0 -16.84432523309845,28.31050502656913,0 -16.84312109316069,28.31054841461221,0 -16.8426916513482,28.30970646151836,0 -16.84143527432364,28.31002899336307,0 -16.84098435355321,28.30873783995109,0 -16.83953195501536,28.30810491849853,0 -16.8402921098012,28.30729970788375,0 -16.84023113814252,28.30612924629612,0 -16.83997503533987,28.30549058469253,0 -16.83837038116722,28.30448093466546,0 -16.83729052849228,28.3040593309839,0 -16.83681009980988,28.30365667974297,0 -16.83538792885364,28.30387882610727,0 -16.83448823106277,28.30391472651889,0 -16.83633808710305,28.30433384424833,0 -16.83503164881923,28.30458764564004,0 -16.83425748771792,28.3041490153456,0 -16.8337853520745,28.30349788119901,0 -16.83339957843925,28.30337428060403,0 -16.8321832368049,28.30377730155968,0 -16.83325541161226,28.30391024445136,0 -16.83247556301587,28.30433829165751,0 -16.83149758755543,28.30405299661966,0 -16.83094567980236,28.30426516184134,0 -16.83067621611044,28.30348991761346,0 -16.83045081496061,28.30464227425989,0 -16.83000317170171,28.30346582379465,0 -16.8298710342281,28.30471664586551,0 -16.82952693813525,28.30367183036035,0 -16.82888751253871,28.30373378370955,0 -16.82739982565123,28.30205493172423,0 -16.82654901806344,28.30188493969093,0 -16.82666062333788,28.3010231086064,0 -16.82727796201416,28.30111912090509,0 -16.82726124835554,28.3003221294443,0 -16.8272981870861,28.29992786527618,0 -16.82720636472413,28.29972862369531,0 -16.82759340539721,28.29935381689541,0 -16.8274589030958,28.2991538898583,0 -16.82654798229226,28.30021389986969,0 -16.82591914984041,28.29991322222746,0 -16.82557322731948,28.29949856837089,0 -16.82544180199923,28.29988296976053,0 -16.82525595490084,28.30034514749638,0 -16.82522212298099,28.30116408315397,0 -16.82408327492026,28.29978311210853,0 -16.82379500989932,28.29969332588579,0 -16.82325613934388,28.29914212151087,0 -16.82108839759649,28.29812275364308,0 -16.82229954655756,28.29946557477198,0 -16.82059242572597,28.29884915300427,0 -16.82000700163624,28.29796161996179,0 -16.81949415648848,28.29775595462028,0 -16.81832358757389,28.29685299844309,0 -16.81813892199848,28.29702924767273,0 -16.81614778591198,28.29729788425893,0 -16.81512736512347,28.29557332130612,0 -16.81535100260564,28.29416708085115,0 -16.81556048565763,28.2934719575582,0 -16.81450131481668,28.29239016903366,0 -16.81385641659234,28.2908209569091,0 -16.8126165092102,28.28728325622841,0 -16.81064568153452,28.28104600024658,0 -16.80992742547852,28.28011481733398,0 -16.81478307704385,28.28215987327426,0 -16.81483320502489,28.28066144296077,0 -16.81376074708314,28.27956124621845,0 -16.81295691901334,28.2778766480006,0 -16.81448025909605,28.27820516503058,0 -16.8187635252585,28.27933396078941,0 -16.81757923071478,28.27846958788019,0 -16.81549727853154,28.27667121809127,0 -16.81403349894829,28.27498951296476,0 -16.81380276546607,28.27340550583024,0 -16.81644273419862,28.27399727478032,0 -16.82047634823058,28.27475560017216,0 -16.82066036204433,28.27430660724463,0 -16.8194436587438,28.27344159442045,0 -16.81841720423549,28.2713203911016,0 -16.81765999062225,28.2703347067071,0 -16.81907591301708,28.26960367477063,0 -16.81765840540938,28.26463685658516,0 -16.81889448708218,28.26135224436372,0 -16.81917309606918,28.25844913512874,0 -16.81830390268414,28.2571152343445,0 -16.81690288035744,28.25759157513728,0 -16.81569746898206,28.25614658375711,0 -16.81548479248101,28.25369156560616,0 -16.81218019033015,28.25191401547387,0 -16.80598590029346,28.25000896080052,0 -16.80042765420847,28.24559916283376,0 -16.79673894040229,28.24037599912174,0 -16.78535871652611,28.21553836536564,0 -16.77889906106792,28.20773470292417,0 -16.76969239911564,28.20613701642481,0 -16.76848795229046,28.20050435055922,0 -16.76729765613989,28.19750862903775,0 -16.76896528949189,28.19525359575355,0 -16.76497202288705,28.19244937206244,0 -16.76709019310362,28.17031228157369,0 -16.7633652431899,28.1646674247899,0 -16.76408129280934,28.15601653778512,0 -16.76171346573522,28.14733067656418,0 -16.75685403574369,28.14286994286267,0 -16.75705458989566,28.1406571942088,0 -16.75056027101386,28.13414836069115,0 -16.74262249097883,28.12477303868721,0 -16.73566532533756,28.11327302802832,0 -16.73327347681789,28.1082205267328,0 -16.72952607016789,28.09085112663532,0 -16.72957726457427,28.07597942447075,0 -16.72502279975022,28.06882250051454,0 -16.71317597692453,28.06479669410509,0 -16.68684224230543,28.05756455291015,0 -16.6755848278159,28.05228273404486,0 -16.6396162965026,28.05292475016931,0 -16.59675358623006,28.05277633757588,0 -16.5361458472121,28.07304258015713,0 -16.48845271883925,28.10931936477215,0 -16.44065255126126,28.16305478337834,0 -16.41509018857711,28.22148225847878,0 -16.38277433261013,28.30045830664917,0 -16.37454369204203,28.34349714613569,0 -16.367152833503,28.37338215077241,0 -16.36396990238132,28.38453208532903,0 -16.35690455092382,28.38394935307996,0 -16.34918859990251,28.38818453018568,0 -16.33982541022472,28.40085386053587,0 -16.32666851993119,28.40459404604468,0 -16.31325130064905,28.41488484581004,0 -16.30373140053574,28.42686274387841,0 -16.30159575105424,28.43594954997642,0 -16.30596711641412,28.44397719006631,0 -16.30498243613568,28.46567891848779,0 -16.32232204688094,28.4828950662414,0 -16.35296341104448,28.48939406986349,0 -16.37151825762692,28.49141206867522,0 -16.40071930935775,28.4787505323082,0 -16.45130419928029,28.45708016337638,0 -16.47063965367915,28.43984599977211,0 -16.49887892137988,28.42222207337898,0 -16.51622182661077,28.4028617107175,0 -16.57744046960984,28.39604554210243,0 -16.62762361561619,28.39211493299128,0 -16.6661158464354,28.38823867435945,0 -16.69488625030781,28.37914565412713,0 -16.69982155422004,28.37291772279295,0 -16.69974090244512,28.35622922413753,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>Garachico - gara</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeStamp><when>2010-05-06T08:55:16Z</when>
+</gx:TimeStamp>
+					<longitude>-16.74259016647504</longitude>
+					<latitude>28.36775765686414</latitude>
+					<altitude>0</altitude>
+					<heading>-0.0831969510635279</heading>
+					<tilt>0</tilt>
+					<range>11249.5665437717</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin105</styleUrl>
+				<Point>
+					<coordinates>-16.76274308990554,28.37975446382449,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Vinindkøb - tror jeg</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>-16.8424610508646</longitude>
+					<latitude>28.33373122925876</latitude>
+					<altitude>0</altitude>
+					<heading>41.13573282184365</heading>
+					<tilt>22.21052343474609</tilt>
+					<range>133.4056437751184</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin000</styleUrl>
+				<Point>
+					<coordinates>-16.84246510583392,28.33351240497549,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Montañas del Palmar</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeStamp><when>2010-05-06T08:55:16Z</when>
+</gx:TimeStamp>
+					<longitude>-16.84690113958651</longitude>
+					<latitude>28.33699167732506</latitude>
+					<altitude>0</altitude>
+					<heading>-44.23443561620006</heading>
+					<tilt>10.27530666413911</tilt>
+					<range>1828.666686892735</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin032</styleUrl>
+				<Point>
+					<coordinates>-16.84722579100824,28.33009307430218,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Tabaibanas</name>
+				<visibility>0</visibility>
+				<Camera>
+					<gx:TimeStamp><when>2010-05-06T08:55:16Z</when>
+</gx:TimeStamp>
+					<longitude>-16.85504295868353</longitude>
+					<latitude>28.32826800094844</latitude>
+					<altitude>588.0856558752649</altitude>
+					<heading>-3.541059773956911</heading>
+					<tilt>0.2720975215478156</tilt>
+					<roll>-1.993551914647856</roll>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</Camera>
+				<styleUrl>#msn_ylw-pushpin180</styleUrl>
+				<Point>
+					<coordinates>-16.85622759403649,28.32791440691659,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Frokost ved Masca</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>-16.84586958530057</longitude>
+					<latitude>28.30975621401215</latitude>
+					<altitude>0</altitude>
+					<heading>-0.1324452503033564</heading>
+					<tilt>0</tilt>
+					<range>208.2710419787158</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_snack_bar12</styleUrl>
+				<Point>
+					<coordinates>-16.84595792672023,28.31011292583907,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Stop efter Masca - udsigt til huler og Barrancaen</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>-16.83325692450321</longitude>
+					<latitude>28.3034913690461</latitude>
+					<altitude>0</altitude>
+					<heading>-0.1264646596639036</heading>
+					<tilt>0</tilt>
+					<range>316.3234869080472</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin314</styleUrl>
+				<Point>
+					<coordinates>-16.83321204118634,28.30333692657285,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Udsigt - Degollada de Chelde ? ser Palma, Hierro, Gomera og Teide</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>-16.82509986020433</longitude>
+					<latitude>28.29941346841476</latitude>
+					<altitude>0</altitude>
+					<heading>8.26036659263595</heading>
+					<tilt>10.43786124489941</tilt>
+					<range>487.24745184012</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin214</styleUrl>
+				<Point>
+					<coordinates>-16.82391488160084,28.29972588185141,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Siam Park</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeStamp><when>2010-05-06T08:55:16Z</when>
+</gx:TimeStamp>
+					<longitude>-16.71060441696359</longitude>
+					<latitude>28.06773966922651</latitude>
+					<altitude>0</altitude>
+					<heading>-0.0681438282702386</heading>
+					<tilt>0</tilt>
+					<range>4026.614041209418</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin701</styleUrl>
+				<Point>
+					<coordinates>-16.7247030495908,28.07085399464431,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>Onsdag 7/4</name>
+			<visibility>0</visibility>
+			<Placemark>
+				<name>Gåtur - 6,76 km</name>
+				<visibility>0</visibility>
+				<styleUrl>#msn_ylw-pushpin630</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						-16.69868387974859,28.34894934046501,0 -16.69860749876379,28.34870121975481,0 -16.69907070419072,28.34854338347214,0 -16.69880065148238,28.34784901034739,0 -16.69826823132458,28.34792531780927,0 -16.69810528119718,28.34813763080841,0 -16.69767974816822,28.34833649514269,0 -16.69734190695735,28.34862740997517,0 -16.69742676930296,28.34919949862149,0 -16.69774413687945,28.34936089121753,0 -16.69797738236236,28.34979601815344,0 -16.6981003549678,28.34994364258165,0 -16.69851626720258,28.35005226496002,0 -16.69863710989556,28.35022920682041,0 -16.69880194150694,28.35043033094921,0 -16.69894930916944,28.35066631846248,0 -16.69920650207661,28.35104228257224,0 -16.69876468682353,28.35096967002979,0 -16.69841876787116,28.35095284628931,0 -16.69774147628477,28.35112665975971,0 -16.69738256212682,28.3512135916409,0 -16.69717438619954,28.35124876892222,0 -16.69691517566142,28.3513433776851,0 -16.69686215761208,28.35148302444936,0 -16.69673243586905,28.35149277831931,0 -16.69659436109253,28.35128974021023,0 -16.69636835642915,28.35113871946862,0 -16.69600761201506,28.35123609694787,0 -16.69524721548904,28.35138370910876,0 -16.69499707667989,28.35129659754212,0 -16.69462207035095,28.3513476115922,0 -16.69387527580464,28.35112541427315,0 -16.69368541902624,28.35104385133784,0 -16.6935379934683,28.35082874977027,0 -16.69352508344657,28.35055323230569,0 -16.69324921875783,28.35040006876063,0 -16.69224812123884,28.34896953719345,0 -16.69220036965745,28.34876834487715,0 -16.6920033129307,28.34832702264504,0 -16.69174393122088,28.34722117831296,0 -16.69136110355765,28.34671995530304,0 -16.6910839278576,28.3464398661415,0 -16.69075104257234,28.34628609887426,0 -16.69041970846701,28.3457649167434,0 -16.69029903254648,28.34571372430427,0 -16.68978685048383,28.34483426057261,0 -16.68960115063084,28.3441746354108,0 -16.68945142163085,28.34357498537228,0 -16.68935801368036,28.34298830374858,0 -16.68936325083281,28.34278637194221,0 -16.68932771787188,28.34250942792793,0 -16.68943520244233,28.34219894078838,0 -16.68948099416309,28.3419175922916,0 -16.68945395398839,28.341477776452,0 -16.68952830931146,28.3409561122144,0 -16.68953175634257,28.34085258744622,0 -16.68914372231185,28.34048788817017,0 -16.68892165952481,28.33995930437115,0 -16.68885376034237,28.33963286540317,0 -16.68869906828597,28.33927727541451,0 -16.68855409168299,28.33903416628281,0 -16.68846803130511,28.33878613931864,0 -16.68855398337105,28.33829846068944,0 -16.68857364570048,28.3380195910967,0 -16.68845584229661,28.33793461764962,0 -16.68834351462567,28.33786495917789,0 -16.68826610258579,28.33793122481017,0 -16.68823082552776,28.33812252127114,0 -16.68812089830332,28.33831431733151,0 -16.68791484868303,28.33841147357656,0 -16.68767611483735,28.33842553866821,0 -16.68745039239292,28.3382265626618,0 -16.68740170629759,28.33818066516405,0 -16.6876136447956,28.33833353341445,0 -16.6878317909918,28.33839936193379,0 -16.68805025904958,28.33833538345678,0 -16.68816471316002,28.33819778983838,0 -16.68824150943029,28.3380180651973,0 -16.68830076332454,28.33787556513196,0 -16.6884119353841,28.33789382296461,0 -16.68860143651687,28.3380073011121,0 -16.68864467526624,28.33766417631972,0 -16.68867652901974,28.33729834006283,0 -16.6887509139319,28.33695559913452,0 -16.68877597627161,28.33668033892161,0 -16.68866888238839,28.33640721438114,0 -16.68861706723313,28.33628377899148,0 -16.68851965363729,28.33615486623785,0 -16.68841544928539,28.33606233943703,0 -16.68833477818393,28.3361435914583,0 -16.68821094005916,28.33629062257914,0 -16.68802786312671,28.33646462932488,0 -16.68783863874228,28.33657550242256,0 -16.68771797455324,28.33660003493997,0 -16.68762420829246,28.33669005445039,0 -16.68744635093554,28.33671254592424,0 -16.6872538291125,28.33667220662721,0 -16.6870218920022,28.33666380832181,0 -16.68688268455779,28.33665987432536,0 -16.68679222965121,28.33669440329605,0 -16.68680310255692,28.33687712403838,0 -16.68673438428821,28.33697296707251,0 -16.68643250199387,28.3371679190319,0 -16.68624432706588,28.33739804819988,0 -16.68618102150249,28.3376848465217,0 -16.68620316428089,28.33802953586492,0 -16.68633963045095,28.3382838423029,0 -16.68653987821439,28.33852180935249,0 -16.68662872776251,28.33879625459867,0 -16.68683492418914,28.33930234996684,0 -16.68687539289013,28.33961824661726,0 -16.68672554652595,28.33994787958141,0 -16.68688279861282,28.34083026788805,0 -16.68683492732389,28.34102210719872,0 -16.68685790014948,28.34134376890875,0 -16.68688870341761,28.34181114156154,0 -16.68694886778369,28.34196424231989,0 -16.68696370034805,28.34224147272165,0 -16.68700412813806,28.34255236601143,0 -16.68733100990184,28.34260010604827,0 -16.68802073400957,28.3427606299027,0 -16.68857617234892,28.3429322197314,0 -16.68921532410444,28.34328114252653,0 -16.68938034602125,28.34345627502125,0 -16.68947434131417,28.3436864296273,0 -16.68965884091776,28.3443705962075,0 -16.68990870285931,28.34495997803461,0 -16.6901604282447,28.34553800257643,0 -16.69034245834585,28.34573521241842,0 -16.6906620218084,28.34623425765543,0 -16.69099592377573,28.34637720115854,0 -16.6912812689886,28.34664833961106,0 -16.69168574532269,28.347126536074,0 -16.69189124023934,28.34788735018455,0 -16.69204553431548,28.34843622347781,0 -16.6922184959327,28.34886197549902,0 -16.69267835637564,28.34957904908416,0 -16.69332466773642,28.35044680460527,0 -16.69355277468457,28.35063496616675,0 -16.69361362110649,28.35094535613085,0 -16.69379775600552,28.35110350538995,0 -16.69443762649277,28.3512991182598,0 -16.69483109620123,28.35133367211035,0 -16.69511973510702,28.35131612444502,0 -16.69567853536075,28.35134882585302,0 -16.69618849880029,28.35114422957814,0 -16.69649492726256,28.35117539259265,0 -16.6966855064812,28.35139216593396,0 -16.69678266767881,28.35148448468032,0 -16.69690681179482,28.35140865104608,0 -16.69702732105879,28.35125172155379,0 -16.69816728230177,28.35100048358504,0 -16.69896665383378,28.35100491710271,0 -16.69929429490246,28.3510585845868,0 -16.69888357498042,28.35051287975006,0 -16.6985843477259,28.35013790959964,0 -16.69838952312803,28.35000252417892,0 -16.69821599745146,28.34996402454683,0 -16.69786858806024,28.34958151791626,0 -16.69778293515995,28.3494102417503,0 -16.69770549179328,28.34932241578086,0 -16.69747388404649,28.34924972057332,0 -16.69740819827413,28.34900797640006,0 -16.69733878299436,28.34870111307314,0 -16.69748300880278,28.34846282511151,0 -16.69796197467916,28.34821859895101,0 -16.69820061000096,28.34799008208889,0 -16.69867695803705,28.3478401962611,0 -16.69878937324998,28.34780083552937,0 -16.69905908676754,28.34849340481617,0 -16.69900741301214,28.34856764106768,0 -16.69866551286522,28.34867368308952,0 -16.69862153005094,28.34881072580717,0 -16.69871902707275,28.34900923053661,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>Fløjtespilleren</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>-16.69595966600091</longitude>
+					<latitude>28.35133455666455</latitude>
+					<altitude>0</altitude>
+					<heading>-44.16282145105134</heading>
+					<tilt>10.26434971338949</tilt>
+					<range>190.7266265635538</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin411</styleUrl>
+				<Point>
+					<coordinates>-16.69610852216819,28.35130996610706,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Kapel</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>-16.68944206853922</longitude>
+					<latitude>28.34447886267398</latitude>
+					<altitude>0</altitude>
+					<heading>-44.1597267611111</heading>
+					<tilt>10.26690411852527</tilt>
+					<range>316.8955963671687</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin730</styleUrl>
+				<Point>
+					<coordinates>-16.68966196032274,28.34392368146502,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Frokost</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>-16.68938324363624</longitude>
+					<latitude>28.33978686733745</latitude>
+					<altitude>0</altitude>
+					<heading>-44.1596987815682</heading>
+					<tilt>10.26495375109403</tilt>
+					<range>489.4153620483777</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_snack_bar0010</styleUrl>
+				<Point>
+					<coordinates>-16.68892621164953,28.34019474901966,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Tegne-male stop</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>-16.68704603162298</longitude>
+					<latitude>28.33724137588288</latitude>
+					<altitude>0</altitude>
+					<heading>-44.15858935876901</heading>
+					<tilt>10.26484574734326</tilt>
+					<range>422.0092425613356</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin2711</styleUrl>
+				<Point>
+					<coordinates>-16.68690690614641,28.33659075548188,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>Torsdag 8/4</name>
+			<visibility>0</visibility>
+		</Folder>
+		<Folder>
+			<name>Hele ugen</name>
+			<Placemark>
+				<name>La Mancha - La Guancha - afkørsel</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>-16.69814314641545</longitude>
+					<latitude>28.37876475262974</latitude>
+					<altitude>0</altitude>
+					<heading>-44.16385844711799</heading>
+					<tilt>10.19775852324082</tilt>
+					<range>536.9638366039408</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin720</styleUrl>
+				<Point>
+					<coordinates>-16.697862972903,28.37895490573683,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Kænguru</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>-16.70537021005953</longitude>
+					<latitude>28.37451074245938</latitude>
+					<altitude>0</altitude>
+					<heading>-44.16729308890221</heading>
+					<tilt>10.19589540937745</tilt>
+					<range>194.30403191761</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin550</styleUrl>
+				<Point>
+					<coordinates>-16.70488657782101,28.37467667018612,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Finca San Pablo</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>-16.69838185419053</longitude>
+					<latitude>28.34882488894972</latitude>
+					<altitude>0</altitude>
+					<heading>-44.16397127681324</heading>
+					<tilt>10.18893136649403</tilt>
+					<range>311.4502591415777</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin540</styleUrl>
+				<Point>
+					<coordinates>-16.69856945498569,28.34890299419365,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Hundejaguar</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>-16.69757004464096</longitude>
+					<latitude>28.34908810207079</latitude>
+					<altitude>0</altitude>
+					<heading>-44.16358580124376</heading>
+					<tilt>10.19251524916137</tilt>
+					<range>223.9042737961611</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin127</styleUrl>
+				<Point>
+					<coordinates>-16.698576,28.348998,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Hyperdino</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>-16.70643613849197</longitude>
+					<latitude>28.37535076812837</latitude>
+					<altitude>0</altitude>
+					<heading>-14.68357267351312</heading>
+					<tilt>9.109520372114915</tilt>
+					<range>153.7125897050495</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_grocery020</styleUrl>
+				<Point>
+					<coordinates>-16.70649127504257,28.37540467425929,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Kirke på lille bjerg ved Puerto de la Cruz</name>
+				<LookAt>
+					<gx:TimeStamp><when>2010-05-06T08:55:16Z</when>
+</gx:TimeStamp>
+					<longitude>-16.5180937226528</longitude>
+					<latitude>28.41567572430123</latitude>
+					<altitude>0</altitude>
+					<heading>63.90915266021479</heading>
+					<tilt>86.23023170143588</tilt>
+					<range>6520.218281752847</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ranger_station</styleUrl>
+				<Point>
+					<coordinates>-16.56213248377498,28.39135676883884,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+	</Folder>
+</Document>
+</kml>

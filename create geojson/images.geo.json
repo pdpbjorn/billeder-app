@@ -1,0 +1,14 @@
+{
+"type": "FeatureCollection",
+"features": [{ "type": "Feature", "properties": {"description":"This is a dummy"}}
+    ,{   "type": "Feature", 
+         "properties": {
+            "image": "../kamera/17527785457793063069323034867736.jpg"
+        }
+    } 
+    ,{   "type": "Feature", 
+         "properties": {
+            "image": "../kamera/17527801703366947514262941565361.jpg"
+        }
+    } 
+]}

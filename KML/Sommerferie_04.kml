@@ -1,0 +1,723 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Document>
+	<name>Sommerferie_04.kml</name>
+	<Style id="sn_ylw-pushpin28">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin730">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin_copy70">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin_copy70</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin_copy70</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin_copy050">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin_copy0</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin_copy020</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="default_copy1+icon=http://maps.google.com/mapfiles/kml/pal3/icon63.png">
+		<IconStyle>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pal3/icon63.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl002">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin_copy17">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin_copy114</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin_copy105</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin711">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin460">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin10010">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin730</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin330</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin_copy70">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ffffaaff</color>
+			<width>1.7</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>1f7f00ff</color>
+		</PolyStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl010">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin000">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin7</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl010</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin1210">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin_copy42">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin_copy40</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin_copy43</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin_copy114">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin7">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin145">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin460</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin96</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="m_ylw-pushpin3">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin01</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl002</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin_copy40">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin_copy105">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin211">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin28</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin711</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin_copy20">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>b5ff00aa</color>
+			<width>5.1</width>
+		</LineStyle>
+	</Style>
+	<Style id="s_ylw-pushpin01">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="default_copy1+icon=http://maps.google.com/mapfiles/kml/pal3/icon55.png">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pal3/icon55.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>1.1</scale>
+		</LabelStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin_copy43">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_lodging4">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/lodging.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin96">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin_copy0">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin3001">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin7000</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin1210</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_lodging5">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/lodging.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin330">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin_copy25">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>b5ff00aa</color>
+			<width>5.1</width>
+		</LineStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin_copy22">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin_copy25</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin_copy20</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin7000">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin_copy70">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ffffaaff</color>
+			<width>1.7</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>1f7f00ff</color>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="default_copy1+nicon=http://maps.google.com/mapfiles/kml/pal3/icon63.png+hicon=http://maps.google.com/mapfiles/kml/pal3/icon55.png">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#default_copy1+icon=http://maps.google.com/mapfiles/kml/pal3/icon63.png</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#default_copy1+icon=http://maps.google.com/mapfiles/kml/pal3/icon55.png</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin_copy020">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_lodging10">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_lodging5</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_lodging4</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Folder>
+		<name>Sommerferie &apos;04</name>
+		<open>1</open>
+		<Folder>
+			<name>12/7 - 29/7</name>
+			<open>1</open>
+			<Placemark>
+				<name>Pensionat Unikat</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeStamp><when>2010-07-10T13:44:19Z</when>
+</gx:TimeStamp>
+					<longitude>23.85525082424886</longitude>
+					<latitude>52.70154362850628</latitude>
+					<altitude>0</altitude>
+					<heading>11.09861692851403</heading>
+					<tilt>19.13678966531249</tilt>
+					<range>997.1179068197472</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin000</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>23.85650167218628,52.70176798535733,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Indgang til nationalparken</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeStamp><when>2010-07-10T13:44:19Z</when>
+</gx:TimeStamp>
+					<longitude>23.84455702112778</longitude>
+					<latitude>52.71490565426964</latitude>
+					<altitude>0</altitude>
+					<heading>-90.12630973916819</heading>
+					<tilt>33.99176090648312</tilt>
+					<range>392.2992889498333</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin000</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>23.84474485616067,52.71537823406162,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Dunajec raft cirka</name>
+				<styleUrl>#msn_ylw-pushpin_copy22</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						20.3818496579109,49.39257524746453,0 20.38189889098554,49.39199521463611,0 20.3823476297446,49.39127188800397,0 20.38287727055936,49.39067657268561,0 20.38351109155963,49.39007710842359,0 20.38406569808139,49.38954206318774,0 20.3847860083056,49.3891293104103,0 20.38585272795311,49.38889125726329,0 20.38718358633901,49.38876718502315,0 20.38812853337477,49.38872375309084,0 20.38907298029794,49.38868060157883,0 20.38973152184708,49.38865122462546,0 20.39104360684191,49.38859430152761,0 20.39286873029062,49.38850406899314,0 20.39371688434483,49.38877509065764,0 20.39476653399515,49.3890355688984,0 20.39581866555157,49.38935965512514,0 20.39687733808621,49.3894332466861,0 20.39832289855224,49.38961386321861,0 20.39909570117047,49.38982818341668,0 20.40064671205879,49.39019505891085,0 20.40152340393968,49.39046973486897,0 20.40260266457528,49.39099163175735,0 20.40358222593525,49.39126561173061,0 20.40485988748098,49.3915909748379,0 20.40574462502137,49.39180951236524,0 20.40682718145169,49.3920201431294,0 20.40771799841714,49.3922403897164,0 20.40892384278975,49.39270477339026,0 20.41024657390971,49.39314877438532,0 20.41108140207476,49.39368972357191,0 20.41202314062333,49.39429565152513,0 20.41285915221798,49.39477959638311,0 20.41361454235209,49.39547548074125,0 20.41407604439872,49.39627892141165,0 20.41443972650126,49.39701114303743,0 20.41482298274845,49.39786184553815,0 20.41488253738379,49.39855272920035,0 20.41494461806066,49.39934130914311,0 20.41501842261079,49.40028653100543,0 20.41519403389033,49.40113882185139,0 20.41526503069521,49.40190866101248,0 20.41542042998385,49.40246522522332,0 20.41550319962863,49.40340692132032,0 20.41589702896857,49.40422776419384,0 20.41679956525307,49.40470938891833,0 20.41790362502643,49.40527807213959,0 20.41886359722423,49.40550303813326,0 20.4200428971056,49.40577639496401,0 20.42118592528182,49.40563117184589,0 20.42209503876013,49.40530101794072,0 20.42319699784437,49.40483363342824,0 20.42417442114162,49.40422963639234,0 20.42481580500011,49.40357116767097,0 20.42573045006287,49.40272598260405,0 20.4263447437622,49.40195820247606,0 20.42721091688517,49.40140176781677,0 20.4276668286673,49.40091545554132,0 20.42817876740828,49.40018628304535,0 20.42888658162585,49.39944269493933,0 20.42954590269949,49.39848064825501,0 20.42987219624234,49.39792446865078,0 20.43046054722616,49.39714234404581,0 20.43126097447554,49.39653482741418,0 20.43214505286476,49.39652105310813,0 20.43335082908277,49.39706923906491,0 20.4341760242684,49.39765779155879,0 20.43451935618433,49.39835076017883,0 20.43480683159135,49.39921316621172,0 20.43481135456653,49.40018140212568,0 20.43463069672812,49.40084649200004,0 20.43448781312036,49.40178616058591,0 20.43450078058132,49.40243712224709,0 20.43524025082861,49.40363598114053,0 20.43598993125602,49.40431886338463,0 20.43683165215398,49.40497790329781,0 20.4373440133831,49.40557684683818,0 20.43739494583591,49.40639860310911,0 20.4367286507248,49.40718690896632,0 20.43592392393346,49.40789872457068,0 20.43491025118779,49.40835953489517,0 20.43366205261793,49.40833471111743,0 20.43277518806272,49.40825232410981,0 20.43131490133452,49.40827202266741,0 20.43020381967411,49.40860711124403,0 20.42933750062984,49.40921727146566,0 20.4288157252809,49.4100324659824,0 20.42862729277219,49.41092503614186,0 20.42867682507689,49.41201712142897,0 20.42902943564934,49.41294320256317,0 20.4296875683106,49.41383350836785,0 20.43023481158063,49.41458450162462,0 20.43074004952297,49.41566391339683,0 20.43169347076305,49.41629245580097,0 20.43256803388016,49.41643331095344,0 20.43382047840433,49.41658303554079,0 20.43539256440208,49.41687082429332,0 20.436371979244,49.41657688878256,0 20.43712017955079,49.41621850630948,0 20.43839112741163,49.41572038078921,0 20.4394772421056,49.41516582861472,0 20.44097852129198,49.41451626554026,0 20.44181804825145,49.414190297521,0 20.44286258974063,49.41377757571579,0 20.44381676258472,49.41313558346025,0 20.4446560698001,49.41256219187826,0 20.44559998752775,49.41197730796524,0 20.44696127256599,49.41186181738748,0 20.44840337287735,49.41278778439737,0 20.44902777751263,49.41368530065659,0 20.44895856108197,49.41445946560327,0 20.44832236355423,49.41507011252557,0 20.44741771108656,49.41552460029525,0 20.44681889683812,49.41643286668062,0 20.4479276480688,49.41667099081275,0 20.44910340148411,49.41661712482598,0 20.45038263395723,49.41649470145162,0 20.451777620006,49.41680245252872,0 20.45305051515713,49.41734535145087,0 20.45420936900642,49.41788611229872,0 20.45544156300081,49.41892353860714,0 20.45623461993969,49.41987146647699,0 20.45662128738617,49.42039799554392,0 20.45731281630962,49.42155527995819,0 20.4579918739465,49.42232709694535,0 20.45883683996424,49.42327264876339,0 20.45982722942368,49.42392761756913,0 20.45932907414381,49.42467511226823,0 20.45881523887805,49.42535049406863,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>Tre Kroner</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>20.40431003894478</longitude>
+					<latitude>49.40879054096304</latitude>
+					<altitude>0</altitude>
+					<heading>3.907949928321973</heading>
+					<tilt>75.93284923517828</tilt>
+					<range>3625.051928280333</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin_copy050</styleUrl>
+				<Point>
+					<coordinates>20.41624221944832,49.41479664885156,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Zamosc</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>23.25212555527391</longitude>
+					<latitude>50.71679588114586</latitude>
+					<altitude>0</altitude>
+					<heading>9.185289073978762</heading>
+					<tilt>2.456868938624827</tilt>
+					<range>677.7877981404516</range>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin_copy42</styleUrl>
+				<Point>
+					<coordinates>23.25212555527391,50.71679588114586,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Tarnica område</name>
+				<visibility>0</visibility>
+				<styleUrl>#msn_ylw-pushpin_copy70</styleUrl>
+				<Polygon>
+					<tessellate>1</tessellate>
+					<outerBoundaryIs>
+						<LinearRing>
+							<coordinates>
+								22.69272298845435,49.07778656341196,0 22.69382602214088,49.07788108934114,0 22.69404542814367,49.07835804473264,0 22.69423808726994,49.07879252872834,0 22.69099010850898,49.07831894541267,0 22.68889395971802,49.07765484405975,0 22.68575370464248,49.07629184683108,0 22.6844497161968,49.07563830142809,0 22.68115809083502,49.0739896411068,0 22.67645511137907,49.07109016352211,0 22.67426659587427,49.06993589851575,0 22.67097685117979,49.06705076342562,0 22.66959539515912,49.06589591958139,0 22.66767468033237,49.06256052073834,0 22.66767856179553,49.06098240390639,0 22.66772897554047,49.05997280485943,0 22.66853379229602,49.05679063758175,0 22.66916325571606,49.05561180744208,0 22.67150221292339,49.05317612764757,0 22.67514153836141,49.05066805054759,0 22.68125779675316,49.04664556893483,0 22.68445781666141,49.04535836217843,0 22.69109597193058,49.04322886840697,0 22.69428624908028,49.04213411317204,0 22.70061963736201,49.04135800739993,0 22.70906341761098,49.04039112249415,0 22.71310068450183,49.0402051144349,0 22.72156046310205,49.04060117391176,0 22.72563269660279,49.04114729621001,0 22.73127119087644,49.04300768280317,0 22.73586914561945,49.04383551557889,0 22.74104490137681,49.04643304058828,0 22.74329338848311,49.04779135972447,0 22.74700351686482,49.05040430049947,0 22.74832127124373,49.05187873592932,0 22.75037526719855,49.05497748378594,0 22.75150470140039,49.05708098758171,0 22.75246981129966,49.06011896919586,0 22.75284481730488,49.06185469536948,0 22.75316650802107,49.06393466487585,0 22.75290118219292,49.06491920145241,0 22.75195961440361,49.06730672956763,0 22.75119557660111,49.06871740857494,0 22.74976552710686,49.07037281973111,0 22.74557911381669,49.07340747905455,0 22.74236425618263,49.0746349257804,0 22.73429203652314,49.07635321006859,0 22.7306416560838,49.07648186009334,0 22.71152203121859,49.07838486022861,0 22.69669246196578,49.0784659333737,0 22.69272298845435,49.07778656341196,0 
+							</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>Niedzica Zamek</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>20.3225764387321</longitude>
+					<latitude>49.4249905522937</latitude>
+					<altitude>0</altitude>
+					<heading>-175.463189287646</heading>
+					<tilt>19.69816075054469</tilt>
+					<range>6375.572100955171</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin3001</styleUrl>
+				<Point>
+					<coordinates>20.32141732170824,49.4196499897865,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Torun</name>
+				<visibility>0</visibility>
+				<styleUrl>#default_copy1+nicon=http://maps.google.com/mapfiles/kml/pal3/icon63.png+hicon=http://maps.google.com/mapfiles/kml/pal3/icon55.png</styleUrl>
+				<Point>
+					<coordinates>18.6197022001718,53.01340214815529,78.9768280435093</coordinates>
+				</Point>
+				<View>
+							<longitude>18.61970220017187</longitude>
+							<latitude>53.01340214814882</latitude>
+							<range>5199.169482452428</range>
+							<tilt>0</tilt>
+							<heading>-8.334424189572648e-014</heading>
+						</View>
+			</Placemark>
+			<Placemark>
+				<name>Sandomierz</name>
+				<visibility>0</visibility>
+				<styleUrl>#default_copy1+nicon=http://maps.google.com/mapfiles/kml/pal3/icon63.png+hicon=http://maps.google.com/mapfiles/kml/pal3/icon55.png</styleUrl>
+				<Point>
+					<coordinates>21.7557238220075,50.67662792222644,147.3032570941539</coordinates>
+				</Point>
+				<View>
+							<longitude>21.75572581945909</longitude>
+							<latitude>50.67663037586684</latitude>
+							<range>8541.353466680428</range>
+							<tilt>9.655308396175781e-012</tilt>
+							<heading>-6.880492430542654e-014</heading>
+						</View>
+			</Placemark>
+			<Placemark>
+				<name>Zakopane</name>
+				<visibility>0</visibility>
+				<styleUrl>#default_copy1+nicon=http://maps.google.com/mapfiles/kml/pal3/icon63.png+hicon=http://maps.google.com/mapfiles/kml/pal3/icon55.png</styleUrl>
+				<Point>
+					<coordinates>19.95741512921839,49.27092037766038,1065.313744099335</coordinates>
+				</Point>
+				<View>
+							<longitude>19.9574578473265</longitude>
+							<latitude>49.2439531232402</latitude>
+							<range>13680.6568496581</range>
+							<tilt>70.6231510750581</tilt>
+							<heading>179.9413254751141</heading>
+						</View>
+			</Placemark>
+			<Placemark>
+				<name>Debno</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>20.2210923186817</longitude>
+					<latitude>49.46529844689489</latitude>
+					<altitude>0</altitude>
+					<heading>-145.13720951046</heading>
+					<tilt>65.05744510535307</tilt>
+					<range>4846.99570828345</range>
+					<altitudeMode>relativeToGround</altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin_copy17</styleUrl>
+				<Point>
+					<coordinates>20.20992308130926,49.46633651294057,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Warszawski. Hotel - flink receptionist fandt Hanja</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2010-07-13T13:18:27Z</begin>
+						<end>2010-07-18T09:54:03Z</end>
+					</gx:TimeSpan>
+					<longitude>19.94528655381511</longitude>
+					<latitude>50.06579867992569</latitude>
+					<altitude>0</altitude>
+					<heading>-1.032451696609601</heading>
+					<tilt>36.59919683961023</tilt>
+					<range>448.9298749844537</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin145</styleUrl>
+				<Point>
+					<altitudeMode>absolute</altitudeMode>
+					<coordinates>19.94474994297409,50.06525227898526,213.3959640468088</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>INSTYTUT HISTORII SZTUKI UJ</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2010-07-13T13:18:27Z</begin>
+						<end>2010-07-18T09:54:03Z</end>
+					</gx:TimeSpan>
+					<longitude>19.93824325835593</longitude>
+					<latitude>50.05704209507692</latitude>
+					<altitude>0</altitude>
+					<heading>-2.16652754909542</heading>
+					<tilt>23.40722784129592</tilt>
+					<range>88.20450095510611</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin211</styleUrl>
+				<Point>
+					<altitudeMode>absolute</altitudeMode>
+					<coordinates>19.9379490948054,50.05704576686556,215.6800004918272</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Collegium Maius - skæld ud af guiden, fordi Rasmine græd</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2010-07-13T13:18:27Z</begin>
+						<end>2010-07-18T09:54:03Z</end>
+					</gx:TimeSpan>
+					<longitude>19.93436207189179</longitude>
+					<latitude>50.06131775007488</latitude>
+					<altitude>0</altitude>
+					<heading>-2.168439678177533</heading>
+					<tilt>23.64487651793301</tilt>
+					<range>386.7217124409502</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin10010</styleUrl>
+				<Point>
+					<altitudeMode>absolute</altitudeMode>
+					<coordinates>19.93378962435823,50.06167798726369,216.5189368474402</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Hotel Gromada - topværelse med jacuzzi</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeStamp><when>2010-07-10T13:44:19Z</when>
+</gx:TimeStamp>
+					<longitude>18.6063062509841</longitude>
+					<latitude>53.00899879399937</latitude>
+					<altitude>0</altitude>
+					<heading>0.1071917402193467</heading>
+					<tilt>3.637502151146663</tilt>
+					<range>279.6339388297819</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_lodging10</styleUrl>
+				<Point>
+					<altitudeMode>absolute</altitudeMode>
+					<coordinates>18.60633699835042,53.00859323578256,54.14690881235482</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Lublin - slottet, med kapel</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeStamp><when>2010-07-10T13:44:19Z</when>
+</gx:TimeStamp>
+					<longitude>22.5832518512185</longitude>
+					<latitude>51.24866457435184</latitude>
+					<altitude>0</altitude>
+					<heading>-0.1301399738973197</heading>
+					<tilt>8.404916360826679</tilt>
+					<range>3558.312619279895</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin3</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>22.57193911897272,51.25065448420362,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Gammel bydel -stadig beboet</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeStamp><when>2010-07-10T13:44:19Z</when>
+</gx:TimeStamp>
+					<longitude>22.57079849899193</longitude>
+					<latitude>51.24743273904136</latitude>
+					<altitude>0</altitude>
+					<heading>-0.1384681269737042</heading>
+					<tilt>14.13816923878137</tilt>
+					<range>946.8566242328876</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin3</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>22.56878010232878,51.2483587324351,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Hotel Lublin - tror jeg nok</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeStamp><when>2010-07-10T13:44:19Z</when>
+</gx:TimeStamp>
+					<longitude>22.56161607240666</longitude>
+					<latitude>51.2480782265254</latitude>
+					<altitude>0</altitude>
+					<heading>-11.33301001067516</heading>
+					<tilt>45.56229979892927</tilt>
+					<range>102.7917915918242</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin3</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>22.56160607506011,51.24807697753826,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+	</Folder>
+</Document>
+</kml>

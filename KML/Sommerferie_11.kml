@@ -1,0 +1,4230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>Sommerferie_11.kml</name>
+	<StyleMap id="msn_dining000">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_dining011</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_dining71</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_lodging23">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/lodging.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_campground6">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_campground60</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_campground5</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_dining17">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_dining700</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_dining4</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_dining10">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin54">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin002">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin105</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin130</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin35">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_dining71">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin95">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin95</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin021</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin108">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin38</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin174</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin2021">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin29</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin22</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin4170">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_bars04">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/bars.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin41">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin341">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin324">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin217</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin235</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_lodging6">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/lodging.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_snack_bar001">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_snack_bar40</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_snack_bar122</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_cabs6">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_coffee21">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_coffee03</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_coffee6</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_bars4">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_bars04</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_bars11</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_coffee12">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/coffee.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin194">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_dining61">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_dining14</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_dining04</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin0102">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin54</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin0051</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin44">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_dining14">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin275">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_campground60">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/campground.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin61">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin1190</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin205</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_snack_bar40">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/snack_bar.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin89">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_dining160">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_dining05">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_bus2">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_bus2</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_bus1</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin153">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin452</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin010</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="lineStyle600">
+		<LineStyle>
+			<color>99ffac59</color>
+			<width>6</width>
+		</LineStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin38">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin110">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin640</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin54</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin159">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin431">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_coffee01">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_coffee51</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_coffee12</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_dining04">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin120">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin275</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin87</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin87">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin1730">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_dining4">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin2122">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin1015</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin513</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_bus">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/bus.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin0011">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_snack_bar15">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/snack_bar.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin28">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin002</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin012</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin1002">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin120">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_dining9">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_dining012</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_dining160</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin148">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin0051">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl1000">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin350">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ffffaa00</color>
+			<width>2.2</width>
+		</LineStyle>
+	</Style>
+	<Style id="s_ylw-pushpin1000">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_dining011">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_dining9">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_bars11">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/bars.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin16">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin603</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin341</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin83">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_snack_bar80">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/snack_bar.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_bus1">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/bus.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin100">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin0000</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl0100</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_snack_bar13">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/snack_bar.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_dining1020">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_dining54</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_dining2</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_bus">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_bus20</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_bus</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_coffee6">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/coffee.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin51">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin27</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin1002</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin102">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin148</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin0101</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_snack_bar122">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/snack_bar.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_snack_bar004">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/snack_bar.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin001">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin127">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_bus20">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/bus.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin452">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_dining012">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin0000">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin1000</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl1000</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_bus0">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_bus1</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_bus20</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin722">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin244</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin194</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin235">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff7f55aa</color>
+			<width>2</width>
+		</LineStyle>
+	</Style>
+	<StyleMap id="msn_snack_bar04">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_snack_bar004</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_snack_bar71</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_lodging5">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_lodging23</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_lodging1</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_dining15">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin0101">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin25">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_snack_bar31">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_snack_bar51</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_snack_bar80</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_bus20">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/bus.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_dining102">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_dining42</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_dining05</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin71">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin591</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin61</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_coffee02">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_coffee12</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_coffee22</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin130">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_campground3">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_campground3</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_campground02</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_snack_bar02">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/snack_bar.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin105">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_lodging1">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/lodging.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_shopping">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_shopping</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_shopping</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin60">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin164">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_cabs000">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_cabs21</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_cabs30</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_snack_bar004">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/snack_bar.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_shopping">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/shopping.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin1242">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_bus2">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/bus.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin53">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_cabs21">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin4160">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_dining42">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_snack_bar31">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/snack_bar.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin225">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin30</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin35</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_bus1">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/bus.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin200">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin47">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin83</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin281</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin27">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_lodging11">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_lodging02</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_lodging23</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin0000">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/lodging.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin281">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_cabs14">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_cabs6</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_cabs12</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_bus3">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_bus0</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_bus2</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin1015">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin60">
+		<LineStyle>
+			<color>99ffac59</color>
+			<width>6</width>
+		</LineStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin1103">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_lodging2">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_lodging03</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_lodging6</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin260">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin135</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin83</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_cabs30">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_dining14">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_dining70</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_dining101</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin81">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_dining70">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin012">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin244">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin513">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin010">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_dining22">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin414">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin350</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin25</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_dining2">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_shopping">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/shopping.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin60">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin0103</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin1103</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_snack_bar050">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/snack_bar.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin1190">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_campground3">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/campground.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_snack_bar08">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_snack_bar13</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_snack_bar16</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_coffee51">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/coffee.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_dining700">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin194">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin4160">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin61">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_dining3100">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin0103">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin49">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin53</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin44</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_dining101">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin035">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_coffee03">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/coffee.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin83">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff0055ff</color>
+			<width>2</width>
+		</LineStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin25">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ffffaa00</color>
+			<width>2.2</width>
+		</LineStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin22">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin121">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin4160</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin4160</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_lodging23">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/lodging.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin191">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin1242</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin60</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_snack_bar01">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/snack_bar.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin89">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin70</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin163</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin640">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_cabs12">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/cabs.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin217">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff7f55aa</color>
+			<width>2</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle400">
+		<LineStyle>
+			<color>99ffac59</color>
+			<width>6</width>
+		</LineStyle>
+	</Style>
+	<Style id="sn_coffee12">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/coffee.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin117">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_bus2">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/bus.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin591">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_snack_bar17">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_snack_bar050</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_snack_bar004</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin54">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_snack_bar16">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/snack_bar.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl000">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin110">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin001</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl000</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin205">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin711">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin236">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin19</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin164</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_campground02">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/campground.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin021">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff0055ff</color>
+			<width>2</width>
+		</LineStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin163">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin514">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin31</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin159</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin1540">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin25</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin035</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_lodging02">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/lodging.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin95">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff0055ff</color>
+			<width>2</width>
+		</LineStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin043">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin194</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin431</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin002">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin603">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_snack_bar51">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/snack_bar.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_snack_bar102">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_snack_bar02</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_snack_bar150</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin_hl0100">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/lodging.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_lodging03">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/lodging.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_dining02">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_dining15</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_dining18</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_dining18">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_dining22</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_dining9</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_dining54">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin220">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin127</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin200</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_snack_bar90">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_snack_bar15</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_snack_bar01</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin29">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_snack_bar05">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/snack_bar.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin30">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_dining52">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_dining10</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_dining3100</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin109">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin81</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin117</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin31">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_dining18">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/dining.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin19">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin135">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff0055ff</color>
+			<width>2</width>
+		</LineStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin202">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin711</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin4170</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_snack_bar1120">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_snack_bar31</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_snack_bar05</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin174">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_snack_bar71">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/snack_bar.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin712">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin89</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin120</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin70">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_campground5">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/campground.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_bus0">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/bus.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin531">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin41</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin780</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin780">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_snack_bar150">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/snack_bar.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin033">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin0011</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin1730</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_coffee22">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/coffee.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Folder>
+		<name>Sommerferie &apos;11</name>
+		<open>1</open>
+		<Folder>
+			<name>Jyllandstur 3-6/7</name>
+			<visibility>0</visibility>
+			<open>1</open>
+			<description>DM for bygarder
+Moesgaard
+Legoland
+Jelling
+Egtvedpigen</description>
+		</Folder>
+		<Folder>
+			<name>Dm for Bygarder, Randers, 3/7</name>
+			<visibility>0</visibility>
+			<Placemark>
+				<name>Langaa Camping</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2011-07-03T08:16:47Z</begin>
+						<end>2011-07-31T13:31:04Z</end>
+					</gx:TimeSpan>
+					<longitude>9.906120725438097</longitude>
+					<latitude>56.38699923045636</latitude>
+					<altitude>0</altitude>
+					<heading>6.723020373834208</heading>
+					<tilt>7.957588040062602</tilt>
+					<range>149.118976663809</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_campground3</styleUrl>
+				<Point>
+					<coordinates>9.905129526728363,56.3870996429862,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>AutoC Park Randers</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2011-07-03T08:16:47Z</begin>
+						<end>2011-07-31T13:31:04Z</end>
+					</gx:TimeSpan>
+					<longitude>10.01070910716198</longitude>
+					<latitude>56.46588507044552</latitude>
+					<altitude>0</altitude>
+					<heading>6.807794269437879</heading>
+					<tilt>23.13733854068491</tilt>
+					<range>212.4804005150686</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin236</styleUrl>
+				<Point>
+					<coordinates>10.01037966485603,56.46586338835748,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Elro Arena/Essex Park</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2011-07-03T08:16:47Z</begin>
+						<end>2011-07-31T13:31:04Z</end>
+					</gx:TimeSpan>
+					<longitude>10.01434918396836</longitude>
+					<latitude>56.464442298085</latitude>
+					<altitude>0</altitude>
+					<heading>6.810828268836691</heading>
+					<tilt>23.13892396255659</tilt>
+					<range>490.5579784863087</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin236</styleUrl>
+				<Point>
+					<coordinates>10.01409112408345,56.46460001104222,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Aftensmad med Ida og Erik 3/7</name>
+				<visibility>0</visibility>
+				<description>Niels Ebbesens Spisehus</description>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2011-07-03T08:16:47Z</begin>
+						<end>2011-07-31T13:31:04Z</end>
+					</gx:TimeSpan>
+					<longitude>10.03839838526055</longitude>
+					<latitude>56.45803061286261</latitude>
+					<altitude>0</altitude>
+					<heading>1.785416047641821</heading>
+					<tilt>45.10352586356404</tilt>
+					<range>265.9647488123523</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_dining02</styleUrl>
+				<Point>
+					<coordinates>10.03838845508204,56.45779985339426,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>Moesgaard 4/7</name>
+			<visibility>0</visibility>
+			<Placemark>
+				<name>Moesgaard</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2011-07-03T08:16:47Z</begin>
+						<end>2011-07-31T13:31:04Z</end>
+					</gx:TimeSpan>
+					<longitude>10.22656207769725</longitude>
+					<latitude>56.08709694196211</latitude>
+					<altitude>0</altitude>
+					<heading>1.93823760596373</heading>
+					<tilt>0</tilt>
+					<range>415.7744371473561</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin722</styleUrl>
+				<Point>
+					<coordinates>10.225454855925,56.08694686286113,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Parkering</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2011-07-03T08:16:47Z</begin>
+						<end>2011-07-31T13:31:04Z</end>
+					</gx:TimeSpan>
+					<longitude>10.23479001793563</longitude>
+					<latitude>56.08358199450705</latitude>
+					<altitude>0</altitude>
+					<heading>1.945065741916802</heading>
+					<tilt>0</tilt>
+					<range>225.6171914015629</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_cabs000</styleUrl>
+				<Point>
+					<coordinates>10.2348962661092,56.08400920790875,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Frokost 4/7 - på parkeringspladsen</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2011-07-03T08:16:47Z</begin>
+						<end>2011-07-31T13:31:04Z</end>
+					</gx:TimeSpan>
+					<longitude>10.23479001793563</longitude>
+					<latitude>56.08358199450705</latitude>
+					<altitude>0</altitude>
+					<heading>1.945065741916802</heading>
+					<tilt>0</tilt>
+					<range>225.6171914015629</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_snack_bar17</styleUrl>
+				<Point>
+					<coordinates>10.23480124715139,56.08408407567125,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Aftensmad 4/7 -Græsk buffet</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2011-07-03T08:16:47Z</begin>
+						<end>2011-07-31T13:31:04Z</end>
+					</gx:TimeSpan>
+					<longitude>10.14567735711529</longitude>
+					<latitude>55.97237546896414</latitude>
+					<altitude>0</altitude>
+					<heading>35.28945283268146</heading>
+					<tilt>45.5331810566954</tilt>
+					<range>99.20517018917359</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_dining14</styleUrl>
+				<Point>
+					<coordinates>10.14567735711529,55.97237546896414,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Billund camping</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2011-07-03T08:16:47Z</begin>
+						<end>2011-07-31T13:31:04Z</end>
+					</gx:TimeSpan>
+					<longitude>9.137152373180911</longitude>
+					<latitude>55.72914360164809</latitude>
+					<altitude>0</altitude>
+					<heading>34.44880291141126</heading>
+					<tilt>0</tilt>
+					<range>436.2748053464168</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_campground6</styleUrl>
+				<Point>
+					<coordinates>9.137919300209029,55.72921758056318,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>5/7 Legoland</name>
+			<visibility>0</visibility>
+			<Placemark>
+				<name>Frokost 4/7</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeStamp><when>2011-07-05T12:38:33Z</when>
+</gx:TimeStamp>
+					<longitude>9.127217065842491</longitude>
+					<latitude>55.73534505923376</latitude>
+					<altitude>0</altitude>
+					<heading>-0.001494085008164352</heading>
+					<tilt>8.362717024149218</tilt>
+					<range>146.0184146953131</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_snack_bar102</styleUrl>
+				<Point>
+					<coordinates>9.127217065842491,55.73534505923376,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Aftensmad 4/7</name>
+				<visibility>0</visibility>
+				<description>Riddermad</description>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2011-07-03T08:16:47Z</begin>
+						<end>2011-07-31T13:31:04Z</end>
+					</gx:TimeSpan>
+					<longitude>9.12456163535445</longitude>
+					<latitude>55.73637132495025</latitude>
+					<altitude>0</altitude>
+					<heading>1.558203768527217</heading>
+					<tilt>5.878173727505247</tilt>
+					<range>209.1339074238821</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_dining52</styleUrl>
+				<Point>
+					<coordinates>9.12397361670592,55.73607803197644,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>6/7 Jelling, Egtvedpigen</name>
+			<visibility>0</visibility>
+			<Placemark>
+				<name>Jellingestenene</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2011-07-03T08:16:47Z</begin>
+						<end>2011-07-31T13:31:04Z</end>
+					</gx:TimeSpan>
+					<longitude>9.419552613631321</longitude>
+					<latitude>55.75668575386458</latitude>
+					<altitude>0</altitude>
+					<heading>1.668603854327571</heading>
+					<tilt>26.12224904935456</tilt>
+					<range>80.68204015723927</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin110</styleUrl>
+				<Point>
+					<coordinates>9.419575256343904,55.75659799861779,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Frokost 6/7</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2011-07-03T08:16:47Z</begin>
+						<end>2011-07-31T13:31:04Z</end>
+					</gx:TimeSpan>
+					<longitude>9.41950060997662</longitude>
+					<latitude>55.75677967304945</latitude>
+					<altitude>0</altitude>
+					<heading>1.668560816843188</heading>
+					<tilt>26.12243937076903</tilt>
+					<range>128.8272706474422</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_snack_bar001</styleUrl>
+				<Point>
+					<coordinates>9.419130364039821,55.75694614396511,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Kongernes Jelling</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2011-07-03T08:16:47Z</begin>
+						<end>2011-07-31T13:31:04Z</end>
+					</gx:TimeSpan>
+					<longitude>9.41865871237237</longitude>
+					<latitude>55.75686580833632</latitude>
+					<altitude>0</altitude>
+					<heading>1.667864857764618</heading>
+					<tilt>26.12237714489329</tilt>
+					<range>128.8457800096852</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin202</styleUrl>
+				<Point>
+					<coordinates>9.4182493965376,55.75686253401399,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>På afveje, men smukt</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2011-07-03T08:16:47Z</begin>
+						<end>2011-07-31T13:31:04Z</end>
+					</gx:TimeSpan>
+					<longitude>9.379452656651734</longitude>
+					<latitude>55.67754975031569</latitude>
+					<altitude>0</altitude>
+					<heading>0.05691153953103109</heading>
+					<tilt>0</tilt>
+					<range>1272.88992135272</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin202</styleUrl>
+				<Point>
+					<coordinates>9.379155783937872,55.67382766186744,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Egtvedpigen</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2011-07-03T08:16:47Z</begin>
+						<end>2011-07-31T13:31:04Z</end>
+					</gx:TimeSpan>
+					<longitude>9.283059959664229</longitude>
+					<latitude>55.62841762163487</latitude>
+					<altitude>0</altitude>
+					<heading>-0.02278801884158557</heading>
+					<tilt>0</tilt>
+					<range>480.6960683342922</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin202</styleUrl>
+				<Point>
+					<coordinates>9.282878604483365,55.62847041383209,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>Madeira 11-18 juli</name>
+			<visibility>0</visibility>
+			<open>1</open>
+			<description>KML fil med billeder i 2011-07-madeira_udvalg</description>
+			<Placemark>
+				<name>Hotel Monte Carlo 11-18 juli</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2010-07-10T13:44:19Z</begin>
+						<end>2011-07-17T16:20:03Z</end>
+					</gx:TimeSpan>
+					<longitude>-16.91354240625799</longitude>
+					<latitude>32.65258914678199</latitude>
+					<altitude>0</altitude>
+					<heading>-0.001368575989699622</heading>
+					<tilt>50.83586485851733</tilt>
+					<range>52.69024237956855</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_lodging5</styleUrl>
+				<Point>
+					<altitudeMode>absolute</altitudeMode>
+					<coordinates>-16.91364130808921,32.65264479956129,76.8736856466483</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>12 juli Svævebane til Monte</name>
+			<visibility>0</visibility>
+			<open>1</open>
+			<Placemark>
+				<name>Svævebanestation</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2010-07-10T13:44:19Z</begin>
+						<end>2011-07-17T16:20:03Z</end>
+					</gx:TimeSpan>
+					<longitude>-16.90208271919195</longitude>
+					<latitude>32.64835469532012</latitude>
+					<altitude>0</altitude>
+					<heading>0.004803401376365013</heading>
+					<tilt>48.69147887864818</tilt>
+					<range>564.4463939875576</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin191</styleUrl>
+				<Point>
+					<altitudeMode>absolute</altitudeMode>
+					<coordinates>-16.90220467883047,32.64713185856652,18.72235127078503</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Svævebanestation</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2010-07-10T13:44:19Z</begin>
+						<end>2011-07-17T16:20:03Z</end>
+					</gx:TimeSpan>
+					<longitude>-16.8997210777171</longitude>
+					<latitude>32.67533021790549</latitude>
+					<altitude>0</altitude>
+					<heading>-0.9613984323035852</heading>
+					<tilt>37.52608338059264</tilt>
+					<range>342.3159965584419</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin514</styleUrl>
+				<Point>
+					<altitudeMode>absolute</altitudeMode>
+					<coordinates>-16.90019537208694,32.67537748380204,559.570920035465</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Jardim Tropical Monte Palace</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2010-07-10T13:44:19Z</begin>
+						<end>2011-07-17T16:20:03Z</end>
+					</gx:TimeSpan>
+					<longitude>-16.90147564837564</longitude>
+					<latitude>32.67427323293393</latitude>
+					<altitude>0</altitude>
+					<heading>-0.9623457452218698</heading>
+					<tilt>37.52478763624416</tilt>
+					<range>279.5565126146388</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin2122</styleUrl>
+				<Point>
+					<altitudeMode>absolute</altitudeMode>
+					<coordinates>-16.90211529573237,32.67399795086275,538.0308188616068</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Frokost 12/7 Frugt og sukkerrør fra torvet</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2010-07-10T13:44:19Z</begin>
+						<end>2011-07-17T16:20:03Z</end>
+					</gx:TimeSpan>
+					<longitude>-16.90143438143822</longitude>
+					<latitude>32.67362702406855</latitude>
+					<altitude>0</altitude>
+					<heading>-0.8875759182950034</heading>
+					<tilt>45.06048795516817</tilt>
+					<range>144.2475146329906</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_snack_bar90</styleUrl>
+				<Point>
+					<altitudeMode>absolute</altitudeMode>
+					<coordinates>-16.90139574566922,32.67421435254159,519.6194153552117</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Kaffe og vinsmagning</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2010-07-10T13:44:19Z</begin>
+						<end>2011-07-17T16:20:03Z</end>
+					</gx:TimeSpan>
+					<longitude>-16.90155474947015</longitude>
+					<latitude>32.67298349950198</latitude>
+					<altitude>0</altitude>
+					<heading>-0.8873919581701393</heading>
+					<tilt>37.65583579895253</tilt>
+					<range>259.8209738323951</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_coffee21</styleUrl>
+				<Point>
+					<altitudeMode>absolute</altitudeMode>
+					<coordinates>-16.9021709818374,32.67253526086946,503.7724277029923</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Nossa Senhora do Monte</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2010-07-10T13:44:19Z</begin>
+						<end>2011-07-17T16:20:03Z</end>
+					</gx:TimeSpan>
+					<longitude>-16.90195014045991</longitude>
+					<latitude>32.67571949546907</latitude>
+					<altitude>0</altitude>
+					<heading>-0.9626285819862831</heading>
+					<tilt>38.09428752560399</tilt>
+					<range>197.1245132432532</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin16</styleUrl>
+				<Point>
+					<altitudeMode>absolute</altitudeMode>
+					<coordinates>-16.90257432706279,32.67592309187834,576.5249161476465</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Nedtur med slæde</name>
+				<visibility>0</visibility>
+				<styleUrl>#msn_ylw-pushpin95</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						-16.90258499235766,32.67542450257208,0 -16.90270854990158,32.67534723887633,0 -16.90305582657915,32.67532440001114,0 -16.9032764480908,32.67528749138001,0 -16.90338296245619,32.6751846823186,0 -16.90356267170447,32.67497691530957,0 -16.90375070235823,32.67465408212853,0 -16.90399422265415,32.67394150144733,0 -16.90419679297881,32.67319444435705,0 -16.90434783412886,32.67277455869971,0 -16.90471884782533,32.6721255996723,0 -16.90488131008896,32.67167234678399,0 -16.90450354824749,32.67157019449589,0 -16.90447563719318,32.67100891016396,0 -16.90430238122587,32.6702535245357,0 -16.90414356782197,32.66909416111427,0 -16.90398280981105,32.66851653700972,0 -16.90385343782627,32.66805013006464,0 -16.90399732958388,32.66743218775803,0 -16.90411652821884,32.66688027837171,0 -16.90409838966308,32.66610771115025,0 -16.90433416711829,32.66555858331963,0 -16.90443640628056,32.66511687946507,0 -16.90450568757527,32.66482162705668,0 -16.90463777740349,32.66440005791401,0 -16.90471292156755,32.66414151957826,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>Fodtur til aftensmad</name>
+				<visibility>0</visibility>
+				<styleUrl>#msn_ylw-pushpin324</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						-16.90471777463297,32.66413878184493,0 -16.90479221979281,32.66359977196353,0 -16.90479202192038,32.66359499810448,0 -16.90489642861109,32.66307155738505,0 -16.90506700700852,32.66232080920125,0 -16.90520158474007,32.66174788769334,0 -16.90532116320654,32.66118795570637,0 -16.90559710014303,32.66047622938405,0 -16.90591299646697,32.65995970065463,0 -16.90640869223569,32.65904136986261,0 -16.90684395336405,32.6583911111219,0 -16.90728979978863,32.65773878526518,0 -16.90750536099781,32.65725537246292,0 -16.90760945809993,32.65697540856096,0 -16.907993787191,32.65602430412785,0 -16.90836657794419,32.65543258601041,0 -16.9084860825311,32.65433012741889,0 -16.90861193013303,32.65327392793388,0 -16.9085568679362,32.65312773520546,0 -16.90856285313063,32.65302843761915,0 -16.9084062910154,32.65288962035893,0 -16.90821215151117,32.65258069603693,0 -16.90812743019784,32.65231313974402,0 -16.90797994720131,32.65203482888172,0 -16.90774236828983,32.65174503049786,0 -16.9074608404742,32.65141472095343,0 -16.90714546575663,32.65110036584203,0 -16.90696022684886,32.65081970327168,0 -16.90683991916166,32.65054176381133,0 -16.90671305578902,32.65017288057997,0 -16.90659545513799,32.64994653428927,0 -16.90649622154658,32.6498328333143,0 -16.90639620267428,32.64968334715216,0 -16.90660339072951,32.64960876077767,0 -16.90687123152363,32.64949697932556,0 -16.90711652151045,32.64933626516419,0 -16.90733673067958,32.64964129857218,0 -16.90754102431737,32.64956753275359,0 -16.9077405652295,32.64942195953395,0 -16.90794051115614,32.64925537294651,0 -16.90816576253279,32.64912825224437,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>Aftensmad 12/7 hos den rødhårede dame - Espade med banan</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2010-07-10T13:44:19Z</begin>
+						<end>2011-07-17T16:20:03Z</end>
+					</gx:TimeSpan>
+					<longitude>-16.90814347267901</longitude>
+					<latitude>32.64913359595192</latitude>
+					<altitude>0</altitude>
+					<heading>-0.9654592116561332</heading>
+					<tilt>49.15027947692609</tilt>
+					<range>119.6354876532979</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_dining17</styleUrl>
+				<Point>
+					<altitudeMode>absolute</altitudeMode>
+					<coordinates>-16.90815330483936,32.64906688100568,29.33178399725009</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>13 juli - Punta de São Lourenço</name>
+			<open>1</open>
+			<Placemark>
+				<name>Gåtur</name>
+				<visibility>0</visibility>
+				<styleUrl>#msn_ylw-pushpin260</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						-16.70136753407993,32.74313681906758,0 -16.70107543083616,32.74335324198221,0 -16.70084320071472,32.74344238998342,0 -16.7009258135899,32.74363628311177,0 -16.70113273298985,32.74376995578578,0 -16.70129993751229,32.74385241202596,0 -16.70143921868009,32.7439884672527,0 -16.70155488647292,32.74413601894792,0 -16.70175864766674,32.74443858268918,0 -16.70151046211075,32.74457079267383,0 -16.70150621347269,32.74457111900861,0 -16.70111071328455,32.7446207229144,0 -16.70081927203955,32.74469149794125,0 -16.70063217661903,32.7449260387229,0 -16.70044055417396,32.74530297875883,0 -16.70018475233084,32.74563552809742,0 -16.69989514922129,32.74582024042861,0 -16.69947094402897,32.74592590087557,0 -16.69912327349567,32.74607779692287,0 -16.69874470223129,32.74628874982671,0 -16.69844825960202,32.74655115490474,0 -16.69822781510377,32.74673595840727,0 -16.69802341488752,32.74693889985438,0 -16.69779524633582,32.74712278112685,0 -16.69771966506441,32.74721074107013,0 -16.69755983842051,32.74745725850049,0 -16.69764513456359,32.74766506559946,0 -16.69768711860907,32.74784338620837,0 -16.697840336999,32.74803716320771,0 -16.69770989036931,32.74824385180573,0 -16.69758791982185,32.74855217369543,0 -16.69750288659918,32.74870917409377,0 -16.6972777616126,32.74845340268077,0 -16.697182182511,32.74827653200883,0 -16.69702811463236,32.74813002575768,0 -16.69693836087093,32.74794566527897,0 -16.69681231375361,32.74781209279418,0 -16.69661270582279,32.74762230532748,0 -16.69646156595944,32.74756110657712,0 -16.69626707190547,32.74759709493193,0 -16.69613028157417,32.74764729398164,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>Frokost 13/7</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2010-07-10T13:44:19Z</begin>
+						<end>2011-07-17T16:20:03Z</end>
+					</gx:TimeSpan>
+					<longitude>-16.6956081016631</longitude>
+					<latitude>32.74773915203874</latitude>
+					<altitude>0</altitude>
+					<heading>0.112418492226765</heading>
+					<tilt>27.26746440630791</tilt>
+					<range>176.3086498781137</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_snack_bar31</styleUrl>
+				<Point>
+					<altitudeMode>absolute</altitudeMode>
+					<coordinates>-16.69609460786867,32.74761962267162,20.69548630661046</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Fotostop</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2011-07-15T15:10:54Z</begin>
+						<end>2011-07-17T16:20:03Z</end>
+					</gx:TimeSpan>
+					<longitude>-17.17907236059735</longitude>
+					<latitude>32.79476854046887</latitude>
+					<altitude>0</altitude>
+					<heading>8.650622432767504</heading>
+					<tilt>48.21048600601345</tilt>
+					<range>311.7485279587613</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin121</styleUrl>
+				<Point>
+					<coordinates>-17.17907236059735,32.79476854046887,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Aftensmad 13/7 - Tanquerina - Espada med skinke og ost</name>
+				<visibility>0</visibility>
+				<description>http://static.panoramio.com/photos/original/22860998.jpg</description>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2010-07-10T13:44:19Z</begin>
+						<end>2011-07-17T16:20:03Z</end>
+					</gx:TimeSpan>
+					<longitude>-16.91135791800574</longitude>
+					<latitude>32.6511468949734</latitude>
+					<altitude>0</altitude>
+					<heading>-0.002193828306906771</heading>
+					<tilt>21.78248530917892</tilt>
+					<range>241.8264894183986</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_dining61</styleUrl>
+				<Point>
+					<altitudeMode>absolute</altitudeMode>
+					<coordinates>-16.91121777837067,32.6505608318759,50.08746832158668</coordinates>
+				</Point>
+			</Placemark>
+			<Folder>
+				<name>Henter sweater til sløj Rasmine</name>
+				<open>1</open>
+				<Placemark>
+					<name>Path</name>
+					<styleUrl>#lineStyle600</styleUrl>
+					<LineString>
+						<tessellate>1</tessellate>
+						<coordinates>
+							-16.913613,32.652665,122 -16.913613,32.652665,122 -16.913339,32.652896,122 -16.913339,32.652896,122 -16.913023,32.653009,120 -16.913023,32.653009,120 -16.912728,32.65274,117 -16.912728,32.65274,117 -16.912626,32.652429,116 -16.912626,32.652429,116 -16.912519,32.652145,114 -16.912519,32.652145,114 -16.912342,32.651898,120 -16.912342,32.651898,120 -16.912009,32.651834,113 -16.912009,32.651834,113 -16.911682,32.651641,109 -16.911682,32.651641,109 -16.911505,32.651335,105 -16.911505,32.651335,105 -16.911199,32.650927,113 -16.911199,32.650927,113 -16.911017,32.650611,116 -16.911017,32.650611,116 
+						</coordinates>
+					</LineString>
+				</Placemark>
+			</Folder>
+		</Folder>
+		<Folder>
+			<name>14 juli - Levada do Norte til Capo Girão</name>
+			<visibility>0</visibility>
+			<Placemark>
+				<name>Kapellet</name>
+				<visibility>0</visibility>
+				<Camera>
+					<gx:TimeStamp><when>2010-07-10T13:44:19Z</when>
+</gx:TimeStamp>
+					<longitude>-16.97993266595039</longitude>
+					<latitude>32.67572444086073</latitude>
+					<altitude>189.2048676795779</altitude>
+					<heading>-5.372803055400754</heading>
+					<tilt>1.668320573733537</tilt>
+					<roll>-9.020527259044398</roll>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</Camera>
+				<styleUrl>#msn_ylw-pushpin153</styleUrl>
+				<Point>
+					<altitudeMode>absolute</altitudeMode>
+					<coordinates>-16.98037767489714,32.67577810030876,523.2993690256005</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Busstop</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2010-07-10T13:44:19Z</begin>
+						<end>2011-07-17T16:20:03Z</end>
+					</gx:TimeSpan>
+					<longitude>-16.98196857430572</longitude>
+					<latitude>32.67623584636474</latitude>
+					<altitude>0</altitude>
+					<heading>0.006529244772323115</heading>
+					<tilt>22.88125907527921</tilt>
+					<range>339.8992968183713</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin712</styleUrl>
+				<Point>
+					<altitudeMode>absolute</altitudeMode>
+					<coordinates>-16.98147508986411,32.67590147419094,574.3983251292963</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Levada do Norte</name>
+				<visibility>0</visibility>
+				<styleUrl>#msn_ylw-pushpin414</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						-16.98138798155007,32.67596170511558,0 -16.98139609143813,32.67589513269404,0 -16.98125009722615,32.67552103860026,0 -16.98137735820147,32.6754588908863,0 -16.98191986983665,32.67580502002417,0 -16.98321235746238,32.67693261475174,0 -16.98333283042745,32.67703346159806,0 -16.98352921892664,32.67699840735413,0 -16.98380344121757,32.67693121941875,0 -16.98432197530433,32.67706643812514,0 -16.98457047148907,32.67713901610925,0 -16.98475195660821,32.67705256095842,0 -16.9848347157613,32.67695335848427,0 -16.98471776489311,32.67684383673194,0 -16.98440674696913,32.67644264946595,0 -16.98440248488843,32.67643806766654,0 -16.98431045895441,32.67619810343114,0 -16.98433926222829,32.6758781396472,0 -16.98434507313651,32.67571863421946,0 -16.98436080962692,32.67553996110361,0 -16.98435688691103,32.67552637176397,0 -16.9844751287483,32.67536935600153,0 -16.98470248552847,32.67528147548055,0 -16.9847074378006,32.67528169865083,0 -16.98490618644412,32.67527349178373,0 -16.9853420915666,32.67533509578374,0 -16.98559686448109,32.67534405609051,0 -16.98602805778795,32.67533828274745,0 -16.9864543256714,32.6753803420305,0 -16.98681376575544,32.67565820759756,0 -16.98686567323943,32.67581569414091,0 -16.9869704377736,32.67602135394041,0 -16.98708897309182,32.6761439244159,0 -16.98716909592745,32.67621454203101,0 -16.98733327782579,32.67616869640282,0 -16.98735723751208,32.6759637381668,0 -16.98742095772502,32.67578066356342,0 -16.98761552239793,32.67570375419858,0 -16.98779155773257,32.67560341541171,0 -16.98799089621974,32.67547840868412,0 -16.98809160963004,32.67519352536511,0 -16.98811868279817,32.67506644405932,0 -16.9881699581462,32.67491123559274,0 -16.98829389759718,32.67486217067024,0 -16.98849928393161,32.67501518448358,0 -16.98869083785006,32.67520665273418,0 -16.98886579420927,32.67538302373902,0 -16.98892347627869,32.67541525520087,0 -16.98899571065675,32.67538368831003,0 -16.98928583156006,32.67523238167249,0 -16.98935607838923,32.67522457128901,0 -16.98960145823474,32.67537322841999,0 -16.98972836264555,32.67552773680801,0 -16.98982288907635,32.67560361064709,0 -16.98986738447679,32.67566166846123,0 -16.99006498445406,32.67583451122353,0 -16.99037975732039,32.67608606813918,0 -16.99035688366514,32.67620251098299,0 -16.99022734568818,32.67642983166924,0 -16.99018136036705,32.67672476549283,0 -16.99021522440215,32.67694207289994,0 -16.99031133342602,32.67708501596189,0 -16.99038374183629,32.67739391540476,0 -16.9904998252715,32.677597431841,0 -16.9904974009367,32.67774776860192,0 -16.99062848184126,32.67795295424141,0 -16.99078391019418,32.6781356126144,0 -16.99116783760957,32.67847531278557,0 -16.99123895328633,32.6785256060933,0 -16.99133572933178,32.67856882879472,0 -16.99146380769665,32.6787001257872,0 -16.99162213146324,32.67881248903131,0 -16.99203162398242,32.6790767242731,0 -16.99220846137215,32.67934820588898,0 -16.99280485718429,32.67975731251202,0 -16.99284063862298,32.67981087756547,0 -16.99283457989286,32.67988640719285,0 -16.99267595770386,32.68006367682601,0 -16.9924047396194,32.68033407082699,0 -16.9922624858077,32.68059080369559,0 -16.99212379505891,32.68086951008488,0 -16.99204928879037,32.68112724845614,0 -16.99199984207082,32.68127446755381,0 -16.99208979438071,32.68131312838607,0 -16.99229998298493,32.68112770186176,0 -16.99251456192445,32.68093628037239,0 -16.99283408620834,32.68079461733692,0 -16.99292862196821,32.6807636116805,0 -16.99308910202281,32.68080707984372,0 -16.9931487136543,32.68079386870912,0 -16.99330279719681,32.68072225443021,0 -16.9934303996536,32.68051820671822,0 -16.99350276419663,32.68031802137071,0 -16.99353673293903,32.68027906909124,0 -16.99374604810027,32.68017049484362,0 -16.99381096474502,32.68013863886699,0 -16.99390256875676,32.68016086357611,0 -16.99401348811827,32.68009146845513,0 -16.99417582490167,32.68000568055132,0 -16.99428880103942,32.68000894387249,0 -16.99440635185803,32.68010400934033,0 -16.99445825590808,32.68019140432434,0 -16.9945629913966,32.68025436584451,0 -16.99466025110075,32.68040223575784,0 -16.99472142686897,32.68050230860928,0 -16.99480909177639,32.68057544704204,0 -16.99492932494666,32.68067977510848,0 -16.99498699458725,32.68071146050988,0 -16.99506735801094,32.68068672587795,0 -16.99521567644123,32.68063717125266,0 -16.99555694854138,32.68058137618863,0 -16.99570134836512,32.68059226484611,0 -16.99587489068772,32.6806398379144,0 -16.9958685925306,32.6806247684777,0 -16.99585868149063,32.68061925131001,0 -16.99587910847021,32.68061045018884,0 -16.99586248528157,32.68050317230252,0 -16.99564640109079,32.68039856762244,0 -16.99531393833078,32.6803210790232,0 -16.99510567226791,32.67999856814917,0 -16.99468182109352,32.67971024728764,0 -16.99465609109196,32.67970444264682,0 -16.99402758480732,32.6791998954925,0 -16.99311436484169,32.67814990724727,0 -16.99295275826341,32.6779329402982,0 -16.99266833095718,32.67766696860132,0 -16.99262529403406,32.67757911526724,0 -16.99252314227241,32.67746099424541,0 -16.992464616147,32.67720481194847,0 -16.99247107686352,32.67719653073348,0 -16.99272494961229,32.6770414534562,0 -16.9928650022639,32.67694446444987,0 -16.99304328002871,32.67681772209207,0 -16.99313819480014,32.67674357208436,0 -16.99326091486173,32.67673132398746,0 -16.99321937353095,32.67660209420878,0 -16.9929409464837,32.67632671257314,0 -16.99298512335492,32.67607272069418,0 -16.99279576277642,32.67568667775092,0 -16.99261804072191,32.67532684369385,0 -16.99245829240645,32.67504783147848,0 -16.9923895955881,32.67497363043675,0 -16.99227320140149,32.67483239550147,0 -16.99219079397351,32.67471887708935,0 -16.99224197156189,32.67466649346949,0 -16.99234895013245,32.67454144883965,0 -16.99234721679374,32.6744616249687,0 -16.99222819107461,32.67435892117104,0 -16.99221902468451,32.67435441908553,0 -16.99197710747036,32.67418858354071,0 -16.99196707391583,32.67418357239858,0 -16.99183030410799,32.67403820445788,0 -16.99182659978899,32.6740205759759,0 -16.99178362204814,32.67387335573972,0 -16.99176346667833,32.67386325272167,0 -16.99162812503997,32.67363609900359,0 -16.99148619616376,32.6734436638793,0 -16.99128737190396,32.67330688728146,0 -16.99127667621963,32.67330276570704,0 -16.99099432165946,32.67309619059752,0 -16.99062959058755,32.67274571178542,0 -16.990619414973,32.67274069160835,0 -16.99027762225684,32.67246252739652,0 -16.99025199008241,32.67244550361965,0 -16.99008007818552,32.67222652473848,0 -16.99025756510661,32.67209068869126,0 -16.99039473598611,32.6719797954601,0 -16.99040679496427,32.67197124000715,0 -16.99048297675273,32.67190413555878,0 -16.99055043901319,32.67190696634187,0 -16.99061129833849,32.67223984809886,0 -16.99087680513061,32.67268699063358,0 -16.99100861824692,32.67265631487665,0 -16.99142554411367,32.67224210692198,0 -16.99155026070696,32.67212980243642,0 -16.99192253360526,32.67203125367549,0 -16.99233691768186,32.67203938169552,0 -16.9926618695016,32.67203800121717,0 -16.99291885598259,32.67192922764758,0 -16.99327396701283,32.67172301129416,0 -16.99356843427358,32.67161162639125,0 -16.99369169746219,32.67146071594542,0 -16.99357709332846,32.67130442536969,0 -16.9932720855783,32.67111974935492,0 -16.99320489322744,32.67099401661007,0 -16.99392843800127,32.67068179506878,0 -16.99431005955121,32.67053854982061,0 -16.99452065410137,32.6705059548304,0 -16.99456426785928,32.67041230732866,0 -16.99450516982105,32.67030672857265,0 -16.99413541757263,32.66997684699806,0 -16.99368849444781,32.66966250466385,0 -16.99337105287122,32.66945774579949,0 -16.99335742651961,32.66945097252872,0 -16.99305957653399,32.66935056038599,0 -16.99304614229404,32.6693439922445,0 -16.99282780761667,32.66925997541541,0 -16.99281126179296,32.66912667196898,0 -16.99287764629773,32.66889256873173,0 -16.9928489184231,32.66877009325779,0 -16.99268022057178,32.66864448942938,0 -16.99266693298904,32.66863123590109,0 -16.99225158947383,32.66847776687103,0 -16.99206266132794,32.66830276471132,0 -16.99195522250893,32.66819508928623,0 -16.99173068277597,32.66814551947098,0 -16.99159623123654,32.66810114896423,0 -16.99152297806029,32.66791883382184,0 -16.99149549990004,32.66769232600237,0 -16.9915492240615,32.6674789258299,0 -16.991719077337,32.6673889126248,0 -16.99172692143928,32.66738937309717,0 -16.99193323420441,32.66734580694539,0 -16.99212361168232,32.66726522613141,0 -16.99224757962945,32.66716243028434,0 -16.99245829695967,32.66705779296534,0 -16.99247275342286,32.66705870461359,0 -16.9927912828358,32.66705818410968,0 -16.9928338057202,32.66706690594517,0 -16.99286908303704,32.66707520535039,0 -16.99287625828563,32.66707561326864,0 -16.99299836109127,32.66714506374239,0 -16.99330233561707,32.66727899416743,0 -16.99330931081608,32.66727939791802,0 -16.99349419364075,32.66736226927629,0 -16.99352095516092,32.66736976621208,0 -16.99369783671896,32.66729593335871,0 -16.99389775378931,32.66710213823641,0 -16.99417922320799,32.6670304346724,0 -16.9945221123527,32.66712582828423,0 -16.99467365866176,32.66719052924542,0 -16.99492910377645,32.66729121466015,0 -16.99503615572709,32.66729848361578,0 -16.99512318465124,32.66724027803171,0 -16.99509466766926,32.6670931453685,0 -16.9950090809679,32.6669027664481,0 -16.99497158070104,32.6667416088811,0 -16.99502097690704,32.66657077400735,0 -16.99498490659314,32.6665176797511,0 -16.99492847339248,32.66635918740493,0 -16.99483711765816,32.66616915643608,0 -16.99475644148309,32.66597974776344,0 -16.9946653704171,32.6658066715292,0 -16.99462543911462,32.66570783523561,0 -16.99449467973679,32.66554489054051,0 -16.99432834480545,32.66534445079441,0 -16.99418735453198,32.66516872971606,0 -16.99410797424634,32.66516076539307,0 -16.99382484159398,32.66517662918512,0 -16.99347579574912,32.66502786987159,0 -16.99338378753503,32.66497825421542,0 -16.99337127609793,32.66493816416657,0 -16.99340576321254,32.66484062132701,0 -16.99349153965055,32.66477776943169,0 -16.99356554595018,32.66470064735003,0 -16.99362466624456,32.66460556650926,0 -16.99363380339968,32.66455549208283,0 -16.99362577013781,32.66449205043943,0 -16.99371251727043,32.66446908801588,0 -16.9937777259013,32.66452823634352,0 -16.9938876193578,32.66470602641328,0 -16.99405478749219,32.66470801148277,0 -16.99444230411669,32.6647191584436,0 -16.99461272134069,32.66472124514663,0 -16.99461604663002,32.66472140198771,0 -16.99490775826672,32.66466181282058,0 -16.99504992754063,32.66463267537191,0 -16.99517885048483,32.66465813251577,0 -16.99533641111672,32.66467339707225,0 -16.99542144810447,32.66473860204375,0 -16.9955522116419,32.66478792943451,0 -16.99567143151385,32.66487441764087,0 -16.99569604870409,32.66496015742093,0 -16.99573273934794,32.66505013403717,0 -16.99574452208434,32.66506126352473,0 -16.99584369614274,32.66506512545269,0 -16.99600409113461,32.66510151798043,0 -16.99623041506683,32.66524177633562,0 -16.99641580718073,32.66532001741677,0 -16.99656742901922,32.66539295432088,0 -16.99670081322311,32.66543078610358,0 -16.99692912263464,32.66549131642552,0 -16.99709598426099,32.66559270280865,0 -16.99723682891707,32.66567324153498,0 -16.99743518718025,32.66579960481624,0 -16.9975599687308,32.66586817412286,0 -16.99764439268922,32.6658678657932,0 -16.99770315927911,32.6658347715129,0 -16.9977520030685,32.66582540044256,0 -16.99789857152463,32.66586767437541,0 -16.99802800194875,32.66594434321514,0 -16.99817919144794,32.66605325419971,0 -16.99824917156513,32.66615036064121,0 -16.99827444506189,32.66639474388995,0 -16.99837103833488,32.66646482654276,0 -16.99851557934127,32.66653519332515,0 -16.99864548959401,32.66657093509369,0 -16.99881097534213,32.66658836701294,0 -16.99896253045602,32.66667658276381,0 -16.99905670080003,32.66678408787937,0 -16.99950290056906,32.6670052735718,0 -16.99982905010467,32.66712296288596,0 -16.99988538417811,32.66715714116263,0 -16.99992877140813,32.66724327285056,0 -16.99997673273493,32.66748780164314,0 -16.99998715314365,32.66751842037731,0 -17.00004316336942,32.66756542272547,0 -17.00014599860431,32.6676162114683,0 -17.00026393350621,32.66764736385628,0 -17.00032432017292,32.66761038284858,0 -17.00029195324147,32.66736219207594,0 -17.00035407276852,32.66720897313397,0 -17.00041971987544,32.66703619116248,0 -17.00042188708142,32.66685061551235,0 -17.00037310204879,32.66673623395614,0 -17.00029703893738,32.66662745179616,0 -17.00029861277082,32.66657382868691,0 -17.00029894477637,32.66657125053319,0 -17.00035783532108,32.66652585819538,0 -17.00049230431043,32.6664556139142,0 -17.0005632576515,32.66638645247496,0 -17.00062008527842,32.66631095754604,0 -17.00071120904426,32.66618223753376,0 -17.00081400087689,32.66607665084369,0 -17.00092154251771,32.66597410941129,0 -17.00105017709937,32.66584183444153,0 -17.00112993520111,32.66557025703766,0 -17.00115409306245,32.66552664047246,0 -17.00127800767058,32.66544006349783,0 -17.00136307807729,32.66533463650074,0 -17.0016265270072,32.66495913732018,0 -17.00186629208429,32.66452503708879,0 -17.00210280877273,32.66412047038327,0 -17.00213143933443,32.66400919953495,0 -17.00212565865575,32.66373512880958,0 -17.00212051980548,32.66348245025022,0 -17.00212169241816,32.66332628246824,0 -17.00214820462872,32.66324308081943,0 -17.00208993442407,32.66320879636892,0 -17.00204454209544,32.66292972703678,0 -17.00206715057471,32.66267584723158,0 -17.00214417980313,32.66253755837162,0 -17.00225292966385,32.66235643540317,0 -17.00229280719191,32.66216919737135,0 -17.00236921966417,32.66187779508934,0 -17.00241076160894,32.66169667185596,0 -17.00240103508958,32.66141883963837,0 -17.00239273180302,32.66136375668164,0 -17.00243083822762,32.66131930734334,0 -17.00241927766967,32.66115910421116,0 -17.00252390391411,32.66098151235562,0 -17.00254896971006,32.66081650791163,0 -17.00242765696797,32.66052973542204,0 -17.0023915792272,32.66033410772263,0 -17.00211149399669,32.65997014919193,0 -17.00189219078114,32.65963826230728,0 -17.00169048092988,32.65941341629618,0 -17.00163319656949,32.65932153741625,0 -17.00153130611173,32.65923918925471,0 -17.00139024792946,32.65914648806658,0 -17.00115361980605,32.65901283589703,0 -17.00107536410721,32.65889615197014,0 -17.00097323351303,32.65871191942941,0 -17.00094201415456,32.65833305597552,0 -17.00093345301038,32.65825959748662,0 -17.00096523495624,32.65811100781795,0 -17.00105911184403,32.65793143275788,0 -17.00113982635409,32.65781670832988,0 -17.00119872157431,32.65772248674378,0 -17.00101726573962,32.65760811079014,0 -17.00094138584996,32.65754747298195,0 -17.00100150538534,32.65739158640103,0 -17.00107958062796,32.65724349971813,0 -17.00112629439166,32.65716485950153,0 -17.00097917093011,32.65685477638358,0 -17.00088819243905,32.65659575818839,0 -17.00103267367724,32.6569420841687,0 -17.00126274672222,32.65733966925961,0 -17.00139296920056,32.65756462723672,0 -17.00150479399805,32.65770536423338,0 -17.00171069371343,32.65767932776423,0 -17.00194789777841,32.65776247063385,0 -17.00244411775568,32.65789085312225,0 -17.00277321168474,32.65806434438867,0 -17.00299617012043,32.65823885581403,0 -17.00337930484753,32.65829747279552,0 -17.00371467135471,32.65819101809574,0 -17.00404131733032,32.65810915963328,0 -17.00426883178145,32.65791402680738,0 -17.00438021852487,32.65771677314262,0 -17.00445634566826,32.65747660663746,0 -17.00464723479057,32.65731265985733,0 -17.00466286599669,32.65720929915038,0 -17.00472965621363,32.65703461843324,0 -17.00482502808977,32.65693581602466,0 -17.00463827719137,32.6568886742531,0 -17.00454792267063,32.65681463806293,0 -17.00439048967653,32.65651873260584,0 -17.00458655978316,32.65687329793521,0 -17.0048520775836,32.65701013680852,0 -17.0046307711409,32.65713484913366,0 -17.00482049177847,32.65798255178415,0 -17.00487535476413,32.65837150352281,0 -17.00461582261972,32.65875395936661,0 -17.00402254435717,32.65928475837347,0 -17.00323403718479,32.65939420181184,0 -17.00306144688157,32.65943414253847,0 -17.00314628855808,32.65975178882356,0 -17.00335720266557,32.65998024992179,0 -17.00354573828313,32.66024012826996,0 -17.00366679582093,32.66064710422159,0 -17.00383104063482,32.66117334383476,0 -17.00386473476929,32.66143241969131,0 -17.00368772563827,32.66214509549521,0 -17.00350778354473,32.66260633220243,0 -17.00350602957752,32.66268056885427,0 -17.00358426901856,32.66275097178339,0 -17.00383610815639,32.66295262433351,0 -17.0039655232572,32.66337747836033,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>Frokost 14/7h</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2010-07-10T13:44:19Z</begin>
+						<end>2011-07-17T16:20:03Z</end>
+					</gx:TimeSpan>
+					<longitude>-16.99190783341584</longitude>
+					<latitude>32.67438739667594</latitude>
+					<altitude>0</altitude>
+					<heading>-40.28324788072671</heading>
+					<tilt>66.8895986785311</tilt>
+					<range>373.8776965394991</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_snack_bar04</styleUrl>
+				<Point>
+					<altitudeMode>absolute</altitudeMode>
+					<coordinates>-16.99283697278933,32.67495269921539,489.175500648729</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Vi hørte lyden af skriget fra en pige, der blev spist af en løve</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeStamp><when>2010-07-10T13:44:19Z</when>
+</gx:TimeStamp>
+					<longitude>-16.99930873174595</longitude>
+					<latitude>32.66675588534037</latitude>
+					<altitude>0</altitude>
+					<heading>10.14425459495667</heading>
+					<tilt>16.20560808030858</tilt>
+					<range>720.139243595075</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin71</styleUrl>
+				<Point>
+					<altitudeMode>absolute</altitudeMode>
+					<coordinates>-16.99999313385316,32.66759727832813,533.2187785696697</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>1. levadabro</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2010-07-10T13:44:19Z</begin>
+						<end>2011-07-17T16:20:03Z</end>
+					</gx:TimeSpan>
+					<longitude>-16.99223025744269</longitude>
+					<latitude>32.68191941685735</latitude>
+					<altitude>0</altitude>
+					<heading>6.30295344580551</heading>
+					<tilt>63.64450440320917</tilt>
+					<range>493.924047164518</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin2021</styleUrl>
+				<Point>
+					<altitudeMode>absolute</altitudeMode>
+					<coordinates>-16.99201811461507,32.68130366263843,600.2045877950195</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>2. levadabro</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2010-07-10T13:44:19Z</begin>
+						<end>2011-07-17T16:20:03Z</end>
+					</gx:TimeSpan>
+					<longitude>-16.99574711497163</longitude>
+					<latitude>32.6812099253608</latitude>
+					<altitude>0</altitude>
+					<heading>-40.28555914979223</heading>
+					<tilt>63.2718185205965</tilt>
+					<range>223.4590660694601</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin033</styleUrl>
+				<Point>
+					<altitudeMode>absolute</altitudeMode>
+					<coordinates>-16.99580239151151,32.68058952446633,572.8033818655335</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>kaffe og is</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2010-07-10T13:44:19Z</begin>
+						<end>2011-07-17T16:20:03Z</end>
+					</gx:TimeSpan>
+					<longitude>-16.99164803060723</longitude>
+					<latitude>32.67310183023204</latitude>
+					<altitude>0</altitude>
+					<heading>-40.28275826334648</heading>
+					<tilt>77.5137022572419</tilt>
+					<range>179.5087787238108</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_coffee01</styleUrl>
+				<Point>
+					<altitudeMode>absolute</altitudeMode>
+					<coordinates>-16.99107667170523,32.67228246194612,565.6135980978082</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Parkeringsplads med damer med lille hund</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>-17.00111109103396</longitude>
+					<latitude>32.65746448241736</latitude>
+					<altitude>0</altitude>
+					<heading>-0.004343901958093733</heading>
+					<tilt>0</tilt>
+					<range>637.9854556690506</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin47</styleUrl>
+				<Point>
+					<altitudeMode>absolute</altitudeMode>
+					<coordinates>-17.00173293949781,32.65766702261143,525.6760657845306</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Holiday Bond - fæl timeshare</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>-16.99752776056129</longitude>
+					<latitude>32.65835545243171</latitude>
+					<altitude>0</altitude>
+					<heading>-0.0024102278619056</heading>
+					<tilt>0</tilt>
+					<range>4303.365540325113</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin89</styleUrl>
+				<Point>
+					<altitudeMode>absolute</altitudeMode>
+					<coordinates>-17.00406734192688,32.65765186989517,338.7025013294855</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Busstop</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>-17.0036599503031</longitude>
+					<latitude>32.66322407601655</latitude>
+					<altitude>0</altitude>
+					<heading>-0.005719337559078384</heading>
+					<tilt>0</tilt>
+					<range>301.3344418888955</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin043</styleUrl>
+				<Point>
+					<altitudeMode>absolute</altitudeMode>
+					<coordinates>-17.00396312924611,32.66339153587232,589.0604934899905</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Supermarked med IS</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<longitude>-17.00264284058986</longitude>
+					<latitude>32.66252047918508</latitude>
+					<altitude>0</altitude>
+					<heading>-0.005170411946411909</heading>
+					<tilt>0</tilt>
+					<range>1003.820568252709</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_coffee02</styleUrl>
+				<Point>
+					<altitudeMode>absolute</altitudeMode>
+					<coordinates>-17.00363901325278,32.66258908054084,566.9164385901237</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Aftensmad 14 juli - Espatada -Photographia Museu ‘Vicentes’</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeStamp><when>2011-07-15T11:19:32Z</when>
+</gx:TimeStamp>
+					<gx:ViewerOptions>
+						<gx:option name="historicalimagery"></gx:option>
+						<gx:option enabled="0" name="sunlight"></gx:option>
+						<gx:option enabled="0" name="streetview"></gx:option>
+					</gx:ViewerOptions>
+					<longitude>-16.91034272458674</longitude>
+					<latitude>32.64961286676928</latitude>
+					<altitude>0</altitude>
+					<heading>0.04384742168076122</heading>
+					<tilt>0</tilt>
+					<range>406.4282181853651</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_dining1020</styleUrl>
+				<Point>
+					<altitudeMode>absolute</altitudeMode>
+					<coordinates>-16.91028245369801,32.64891753370171,36.28857750830311</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>15 juli - Nedstigning fra  Eiro do Serrado til Curral das Freiras</name>
+			<open>1</open>
+			<Placemark>
+				<name>Busstop</name>
+				<LookAt>
+					<longitude>-16.96107152841901</longitude>
+					<latitude>32.71070092393889</latitude>
+					<altitude>0</altitude>
+					<heading>0.01727500781520547</heading>
+					<tilt>0</tilt>
+					<range>591.4217497717592</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_bus</styleUrl>
+				<Point>
+					<altitudeMode>absolute</altitudeMode>
+					<coordinates>-16.96196916773476,32.7105270380351,1045.468088127806</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Udsigt over Curral das Freiras</name>
+				<LookAt>
+					<longitude>-16.96560347522669</longitude>
+					<latitude>32.71031225457164</latitude>
+					<altitude>0</altitude>
+					<heading>0.0148259968416118</heading>
+					<tilt>0</tilt>
+					<range>313.6227192045602</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin102</styleUrl>
+				<Point>
+					<coordinates>-16.96575924629041,32.71033670415382,1011.521141053446</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Start på gåtur</name>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2011-07-15T10:51:23Z</begin>
+						<end>2011-07-15T13:22:46Z</end>
+					</gx:TimeSpan>
+					<longitude>-16.96020254908405</longitude>
+					<latitude>32.70921079732835</latitude>
+					<altitude>0</altitude>
+					<heading>99.50308042483438</heading>
+					<tilt>60.89223415664445</tilt>
+					<range>657.1169243846316</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin28</styleUrl>
+				<Point>
+					<coordinates>-16.96231312234318,32.71058357764564,978.8371156004062</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Path</name>
+				<styleUrl>#lineStyle400</styleUrl>
+				<MultiGeometry>
+					<LineString>
+						<tessellate>1</tessellate>
+						<coordinates>
+							-16.962821,32.710172,1080 -16.962821,32.710172,1080 -16.964173,32.710354,1072 -16.964173,32.710354,1072 -16.964548,32.710322,1074 -16.964548,32.710322,1074 -16.964918,32.710317,1079 -16.964918,32.710317,1079 -16.965262,32.71036,1082 -16.965262,32.71036,1082 -16.965702,32.71036,1084 -16.965702,32.71036,1084 -16.965235,32.710301,1089 -16.965235,32.710301,1089 -16.964892,32.710328,1092 -16.964892,32.710328,1092 -16.964538,32.710354,1089 -16.964538,32.710354,1089 -16.964173,32.710349,1077 -16.964173,32.710349,1077 -16.963668,32.710242,1080 -16.963668,32.710242,1080 -16.963245,32.710145,1076 -16.963245,32.710145,1076 -16.962864,32.710204,1065 -16.962864,32.710204,1065 -16.962515,32.710263,1065 -16.962515,32.710263,1065 -16.962231,32.710494,1065 -16.962231,32.710494,1065 -16.962,32.710719,1060 -16.962,32.710719,1060 
+						</coordinates>
+					</LineString>
+					<LineString>
+						<tessellate>1</tessellate>
+						<coordinates>
+							-16.962343,32.710553,1063 -16.962343,32.710553,1063 -16.962714,32.710665,1064 -16.962714,32.710665,1064 -16.962698,32.710961,1055 -16.962698,32.710961,1055 -16.963041,32.710987,1047 -16.963041,32.710987,1047 -16.963465,32.710955,1038 -16.963465,32.710955,1038 -16.963883,32.710939,1031 -16.963883,32.710939,1031 -16.964307,32.711052,1026 -16.964307,32.711052,1026 -16.964006,32.711138,1006 -16.964006,32.711138,1006 
+						</coordinates>
+					</LineString>
+					<LineString>
+						<tessellate>1</tessellate>
+						<coordinates>
+							-16.96362,32.711416,969.9999999999998 -16.96362,32.711416,969.9999999999998 -16.963341,32.71161,950.9999999999999 -16.963341,32.71161,950.9999999999999 -16.963357,32.711781,924 -16.963357,32.711781,924 -16.963631,32.712087,912 -16.963631,32.712087,912 -16.963824,32.712286,891.9999999999999 -16.963824,32.712286,891.9999999999999 -16.963481,32.712296,887.9999999999999 -16.963481,32.712296,887.9999999999999 -16.963497,32.712704,907.9999999999999 -16.963497,32.712704,907.9999999999999 -16.963121,32.712892,908.9999999999998 -16.963121,32.712892,908.9999999999998 -16.963261,32.71302,876.9999999999998 -16.963261,32.71302,876.9999999999998 -16.963711,32.713117,876.9999999999998 -16.963711,32.713117,876.9999999999998 -16.963513,32.713122,856.9999999999998 -16.963513,32.713122,856.9999999999998 -16.963357,32.713519,833.9999999999998 -16.963357,32.713519,833.9999999999998 -16.963567,32.7139,845.9999999999998 -16.963567,32.7139,845.9999999999998 -16.963658,32.713643,840.9999999999998 -16.963658,32.713643,840.9999999999998 
+						</coordinates>
+					</LineString>
+					<LineString>
+						<tessellate>1</tessellate>
+						<coordinates>
+							-16.963803,32.713594,809.9999999999998 -16.963803,32.713594,809.9999999999998 -16.964178,32.713476,796.0000000000001 -16.964178,32.713476,796.0000000000001 -16.964511,32.713364,781.9999999999998 -16.964511,32.713364,781.9999999999998 
+						</coordinates>
+					</LineString>
+					<LineString>
+						<tessellate>1</tessellate>
+						<coordinates>
+							-16.964849,32.713423,764.9999999999998 -16.964849,32.713423,764.9999999999998 -16.96523,32.713342,755.9999999999999 -16.96523,32.713342,755.9999999999999 -16.96487,32.713568,748.9999999999999 -16.96487,32.713568,748.9999999999999 -16.965278,32.713632,746 -16.965278,32.713632,746 -16.965653,32.713707,730 -16.965653,32.713707,730 -16.965069,32.713852,727 -16.965069,32.713852,727 -16.964806,32.714067,727 -16.964806,32.714067,727 -16.964591,32.714313,714.9999999999999 -16.964591,32.714313,714.9999999999999 -16.964307,32.714528,702 -16.964307,32.714528,702 -16.964151,32.714877,689 -16.964151,32.714877,689 -16.964275,32.715204,683 -16.964275,32.715204,683 -16.964629,32.715445,690 -16.964629,32.715445,690 -16.96435,32.716019,683.9999999999999 -16.96435,32.716019,683.9999999999999 -16.964264,32.716341,676 -16.964264,32.716341,676 -16.963856,32.71684,673.9999999999999 -16.963856,32.71684,673.9999999999999 -16.963508,32.717038,669 -16.963508,32.717038,669 
+						</coordinates>
+					</LineString>
+					<LineString>
+						<tessellate>1</tessellate>
+						<coordinates>
+							-16.96347,32.717387,670.9999999999999 -16.96347,32.717387,670.9999999999999 -16.96281,32.71765,661 -16.96281,32.71765,661 -16.962858,32.717972,666.9999999999999 -16.962858,32.717972,666.9999999999999 -16.96325,32.718025,666 -16.96325,32.718025,666 -16.963615,32.718068,672 -16.963615,32.718068,672 -16.963974,32.718186,675 -16.963974,32.718186,675 -16.964259,32.718363,678 -16.964259,32.718363,678 -16.964602,32.718546,683 -16.964602,32.718546,683 -16.964934,32.718621,687.9999999999999 -16.964934,32.718621,687.9999999999999 -16.964752,32.718943,683 -16.964752,32.718943,683 -16.964441,32.719249,682 -16.964441,32.719249,682 -16.964226,32.719485,679.9999999999999 -16.964226,32.719485,679.9999999999999 -16.9645,32.719683,679.9999999999999 -16.9645,32.719683,679.9999999999999 -16.964597,32.719774,678 -16.964597,32.719774,678 
+						</coordinates>
+					</LineString>
+				</MultiGeometry>
+			</Placemark>
+			<Placemark>
+				<name>Frokost 15 juli</name>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2011-07-12T09:47:33Z</begin>
+						<end>2011-07-17T16:20:03Z</end>
+					</gx:TimeSpan>
+					<gx:ViewerOptions>
+						<gx:option name="historicalimagery"></gx:option>
+						<gx:option enabled="0" name="sunlight"></gx:option>
+						<gx:option enabled="0" name="streetview"></gx:option>
+					</gx:ViewerOptions>
+					<longitude>-16.96426790703934</longitude>
+					<latitude>32.71374207107671</latitude>
+					<altitude>0</altitude>
+					<heading>-0.0140517094748055</heading>
+					<tilt>4.666672072011167</tilt>
+					<range>274.2868674796391</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_snack_bar1120</styleUrl>
+				<Point>
+					<altitudeMode>absolute</altitudeMode>
+					<coordinates>-16.96448087501787,32.7134925920204,730.9607407581955</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Heromkring forladt fugleunge</name>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2011-07-15T10:51:23Z</begin>
+						<end>2011-07-15T13:22:46Z</end>
+					</gx:TimeSpan>
+					<longitude>-16.96477158558618</longitude>
+					<latitude>32.71307067280001</latitude>
+					<altitude>0</altitude>
+					<heading>125.7617931357488</heading>
+					<tilt>45.581455569307</tilt>
+					<range>820.9785393069419</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin108</styleUrl>
+				<Point>
+					<coordinates>-16.96417378916505,32.71500366329728,630.8185834120471</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Nedkomst</name>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2011-07-15T10:51:23Z</begin>
+						<end>2011-07-15T13:22:46Z</end>
+					</gx:TimeSpan>
+					<longitude>-16.96420813647993</longitude>
+					<latitude>32.71632885230731</latitude>
+					<altitude>0</altitude>
+					<heading>125.7620981116358</heading>
+					<tilt>45.57989601326817</tilt>
+					<range>499.8887758206331</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin220</styleUrl>
+				<Point>
+					<extrude>1</extrude>
+					<coordinates>-16.96347017697119,32.71725051889246,792.2832565596042</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Kage og sodavand</name>
+				<LookAt>
+					<longitude>-16.96401993426731</longitude>
+					<latitude>32.71946570919561</latitude>
+					<altitude>0</altitude>
+					<heading>0.01571462199721311</heading>
+					<tilt>0.1349529574492407</tilt>
+					<range>222.666003707461</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_bars4</styleUrl>
+				<Point>
+					<altitudeMode>absolute</altitudeMode>
+					<coordinates>-16.96469621029005,32.71966376079108,631.848866461761</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Busstop</name>
+				<LookAt>
+					<longitude>-16.96401993426731</longitude>
+					<latitude>32.71946570919561</latitude>
+					<altitude>0</altitude>
+					<heading>0.01571462199721311</heading>
+					<tilt>0.1349529574492407</tilt>
+					<range>222.666003707461</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_bus0</styleUrl>
+				<Point>
+					<altitudeMode>absolute</altitudeMode>
+					<coordinates>-16.96449265069462,32.71968677236926,646.0303058832261</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Lido - lignede ikke noget for børn</name>
+				<LookAt>
+					<gx:TimeStamp><when>2011-07-15T11:19:32Z</when>
+</gx:TimeStamp>
+					<gx:ViewerOptions>
+						<gx:option name="historicalimagery"></gx:option>
+						<gx:option enabled="0" name="sunlight"></gx:option>
+						<gx:option enabled="0" name="streetview"></gx:option>
+					</gx:ViewerOptions>
+					<longitude>-16.89758243456241</longitude>
+					<latitude>32.6471033856423</latitude>
+					<altitude>0</altitude>
+					<heading>0.0507312740186463</heading>
+					<tilt>0</tilt>
+					<range>289.0309641514698</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin1540</styleUrl>
+				<Point>
+					<altitudeMode>absolute</altitudeMode>
+					<coordinates>-16.89738460888605,32.6467162996514,21.03933928302953</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Maritimo fanbutik - fodboldtøj til Magnus</name>
+				<LookAt>
+					<gx:TimeStamp><when>2011-07-15T11:19:32Z</when>
+</gx:TimeStamp>
+					<gx:ViewerOptions>
+						<gx:option name="historicalimagery"></gx:option>
+						<gx:option enabled="0" name="sunlight"></gx:option>
+						<gx:option enabled="0" name="streetview"></gx:option>
+					</gx:ViewerOptions>
+					<longitude>-16.90333467460432</longitude>
+					<latitude>32.6478079848247</latitude>
+					<altitude>0</altitude>
+					<heading>0.04762812254386234</heading>
+					<tilt>0</tilt>
+					<range>330.4859830512111</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin225</styleUrl>
+				<Point>
+					<altitudeMode>absolute</altitudeMode>
+					<coordinates>-16.90305264613555,32.64792284032782,17.20346980703566</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Aftensmad 15/7 Olivero? - Espada med spinat</name>
+				<LookAt>
+					<gx:TimeStamp><when>2011-07-15T11:19:32Z</when>
+</gx:TimeStamp>
+					<gx:ViewerOptions>
+						<gx:option name="historicalimagery"></gx:option>
+						<gx:option enabled="0" name="sunlight"></gx:option>
+						<gx:option enabled="0" name="streetview"></gx:option>
+					</gx:ViewerOptions>
+					<longitude>-16.90798810732849</longitude>
+					<latitude>32.64898999093092</latitude>
+					<altitude>0</altitude>
+					<heading>0.04511760237542526</heading>
+					<tilt>0</tilt>
+					<range>242.5528803551799</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_dining000</styleUrl>
+				<Point>
+					<altitudeMode>absolute</altitudeMode>
+					<coordinates>-16.90832945679003,32.64902659066114,29.07490520320431</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Frakørsel til  Eiro do Serrado</name>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2011-07-15T10:51:23Z</begin>
+						<end>2011-07-15T13:22:46Z</end>
+					</gx:TimeSpan>
+					<longitude>-16.95304919952782</longitude>
+					<latitude>32.70365119321758</latitude>
+					<altitude>0</altitude>
+					<heading>61.2638483073755</heading>
+					<tilt>38.59619723660689</tilt>
+					<range>399.0693770311906</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin51</styleUrl>
+				<Point>
+					<coordinates>-16.95405548108537,32.70462585265055,978.4683651336242</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>16 juli - Pico Ruivo</name>
+			<visibility>0</visibility>
+			<open>1</open>
+			<Placemark>
+				<name>Kaffepause, chaufføren skulle hente nogle akvariefisk</name>
+				<visibility>0</visibility>
+				<description>Position uklar</description>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2011-07-15T07:51:39.860812067Z</begin>
+						<end>2011-07-17T09:00:48.860812067Z</end>
+					</gx:TimeSpan>
+					<longitude>-16.82835351571952</longitude>
+					<latitude>32.77532779135353</latitude>
+					<altitude>0</altitude>
+					<heading>0.06034466394741152</heading>
+					<tilt>67.1487452889242</tilt>
+					<range>863.6877560816209</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin002</styleUrl>
+				<Point>
+					<altitudeMode>absolute</altitudeMode>
+					<coordinates>-16.82862141341248,32.77234103354024,6.747712108032512</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Achada do Teixeira - posada lukket</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2011-07-15T07:51:39.860812067Z</begin>
+						<end>2011-07-17T09:00:48.860812067Z</end>
+					</gx:TimeSpan>
+					<longitude>-16.91990284884149</longitude>
+					<latitude>32.76538216533739</latitude>
+					<altitude>0</altitude>
+					<heading>0.02153484227282909</heading>
+					<tilt>40.94265767174309</tilt>
+					<range>182.8551523887315</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin60</styleUrl>
+				<Point>
+					<altitudeMode>absolute</altitudeMode>
+					<coordinates>-16.92005444717431,32.76531045167758,1587.375625031523</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Pousada do Pico Ruivo</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2011-07-15T07:51:39.860812067Z</begin>
+						<end>2011-07-17T09:00:48.860812067Z</end>
+					</gx:TimeSpan>
+					<longitude>-16.94152284090539</longitude>
+					<latitude>32.76335409015587</latitude>
+					<altitude>0</altitude>
+					<heading>-1.052769451033625</heading>
+					<tilt>55.33452981126861</tilt>
+					<range>535.177726516024</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin110</styleUrl>
+				<Point>
+					<coordinates>-16.94163945323295,32.76034744534456,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Her sad vi, da Inger ringede</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2011-07-15T07:51:39.860812067Z</begin>
+						<end>2011-07-17T09:00:48.860812067Z</end>
+					</gx:TimeSpan>
+					<longitude>-16.942911664917</longitude>
+					<latitude>32.75892619937864</latitude>
+					<altitude>0</altitude>
+					<heading>-1.053520952072492</heading>
+					<tilt>55.33222110002298</tilt>
+					<range>104.0101022492541</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin110</styleUrl>
+				<Point>
+					<coordinates>-16.94311307078191,32.75906924210877,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Pico Ruivo</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2011-07-15T07:51:39.860812067Z</begin>
+						<end>2011-07-17T09:00:48.860812067Z</end>
+					</gx:TimeSpan>
+					<longitude>-16.942911664917</longitude>
+					<latitude>32.75892619937864</latitude>
+					<altitude>0</altitude>
+					<heading>-1.053520952072492</heading>
+					<tilt>55.33222110002298</tilt>
+					<range>104.0101022492541</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin110</styleUrl>
+				<Point>
+					<coordinates>-16.94264528829936,32.75878893324919,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Aqua Parque</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2010-07-10T13:44:19Z</begin>
+						<end>2011-07-17T16:20:03Z</end>
+					</gx:TimeSpan>
+					<longitude>-16.79664743391343</longitude>
+					<latitude>32.68366315698008</latitude>
+					<altitude>0</altitude>
+					<heading>0.05248299386273179</heading>
+					<tilt>11.88684904940484</tilt>
+					<range>183.1387641504232</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin109</styleUrl>
+				<Point>
+					<altitudeMode>absolute</altitudeMode>
+					<coordinates>-16.79678628442657,32.68353060933548,27.23495011818489</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>17 juli - vestøen rundt</name>
+			<visibility>0</visibility>
+			<open>1</open>
+			<Placemark>
+				<name>Udsigtspunkt over Camera de Lobos</name>
+				<visibility>0</visibility>
+				<description>Retarderet fyr sælger blomster han har stjålet i haverne</description>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2011-07-15T15:10:54Z</begin>
+						<end>2011-07-17T16:20:03Z</end>
+					</gx:TimeSpan>
+					<longitude>-16.97196986699656</longitude>
+					<latitude>32.65115005858227</latitude>
+					<altitude>0</altitude>
+					<heading>-1.026120164913673</heading>
+					<tilt>2.037948760537032</tilt>
+					<range>898.7041494093088</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin121</styleUrl>
+				<Point>
+					<coordinates>-16.97348468037065,32.65216674720598,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>View af Ribeira Brava</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2011-07-15T15:10:54Z</begin>
+						<end>2011-07-17T16:20:03Z</end>
+					</gx:TimeSpan>
+					<longitude>-17.06260971461377</longitude>
+					<latitude>32.67000835142144</latitude>
+					<altitude>0</altitude>
+					<heading>-1.086416453371969</heading>
+					<tilt>5.677834336282205</tilt>
+					<range>245.2449596076442</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin121</styleUrl>
+				<Point>
+					<coordinates>-17.06313656222842,32.66944454786105,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Påkørt</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2011-07-15T15:10:54Z</begin>
+						<end>2011-07-17T16:20:03Z</end>
+					</gx:TimeSpan>
+					<longitude>-17.04967448202729</longitude>
+					<latitude>32.68642533174089</latitude>
+					<altitude>0</altitude>
+					<heading>-1.079432163497114</heading>
+					<tilt>5.677880426245759</tilt>
+					<range>969.9620164803306</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin121</styleUrl>
+				<Point>
+					<coordinates>-17.051079901609,32.68633441745412,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Sao Vicente - stop</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2011-07-15T15:10:54Z</begin>
+						<end>2011-07-17T16:20:03Z</end>
+					</gx:TimeSpan>
+					<longitude>-17.04724409348415</longitude>
+					<latitude>32.80411253709314</latitude>
+					<altitude>0</altitude>
+					<heading>-1.079273828039658</heading>
+					<tilt>12.10796100877816</tilt>
+					<range>254.1521325536172</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin121</styleUrl>
+				<Point>
+					<coordinates>-17.04627411968391,32.80509430290223,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Honningindkøb</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2011-07-15T15:10:54Z</begin>
+						<end>2011-07-17T16:20:03Z</end>
+					</gx:TimeSpan>
+					<longitude>-17.04724409348415</longitude>
+					<latitude>32.80411253709314</latitude>
+					<altitude>0</altitude>
+					<heading>-1.079273828039658</heading>
+					<tilt>12.10796100877816</tilt>
+					<range>254.1521325536172</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin110</styleUrl>
+				<Point>
+					<coordinates>-17.04721155722594,32.80356134732013,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Frokost 17/7 - tunbøffer vistnok</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2011-07-15T15:10:54Z</begin>
+						<end>2011-07-17T16:20:03Z</end>
+					</gx:TimeSpan>
+					<longitude>-17.04967440742816</longitude>
+					<latitude>32.80802697725731</latitude>
+					<altitude>0</altitude>
+					<heading>-1.083951816435837</heading>
+					<tilt>13.2593882787076</tilt>
+					<range>200.3003553857681</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_dining102</styleUrl>
+				<Point>
+					<coordinates>-17.05004400634716,32.808067822984,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Bilvask</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2011-07-15T15:10:54Z</begin>
+						<end>2011-07-17T16:20:03Z</end>
+					</gx:TimeSpan>
+					<longitude>-17.06386404348915</longitude>
+					<latitude>32.81369402252267</latitude>
+					<altitude>0</altitude>
+					<heading>8.713068869062594</heading>
+					<tilt>45.0990393703415</tilt>
+					<range>585.4512772085934</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin121</styleUrl>
+				<Point>
+					<coordinates>-17.06422831954745,32.81153555790723,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>O Cachalote - ingen lepas denne gang</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2011-07-15T15:10:54Z</begin>
+						<end>2011-07-17T16:20:03Z</end>
+					</gx:TimeSpan>
+					<longitude>-17.16562393336427</longitude>
+					<latitude>32.86798784679044</latitude>
+					<altitude>0</altitude>
+					<heading>8.657925692980205</heading>
+					<tilt>48.45125240274297</tilt>
+					<range>155.5885088320637</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin121</styleUrl>
+				<Point>
+					<coordinates>-17.16559771676015,32.8678081440712,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Levadatur start</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2011-07-16T10:31:44.041585206Z</begin>
+						<end>2011-07-17T16:20:03Z</end>
+					</gx:TimeSpan>
+					<longitude>-17.13286536767437</longitude>
+					<latitude>32.75353358792588</latitude>
+					<altitude>0</altitude>
+					<heading>8.675869298072129</heading>
+					<tilt>44.36116289064684</tilt>
+					<range>305.9985281040956</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin121</styleUrl>
+				<Point>
+					<coordinates>-17.13273470960296,32.75333707714409,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Levadatur slut</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2011-07-16T10:31:44.041585206Z</begin>
+						<end>2011-07-17T16:20:03Z</end>
+					</gx:TimeSpan>
+					<longitude>-17.12502652401355</longitude>
+					<latitude>32.7495949381693</latitude>
+					<altitude>0</altitude>
+					<heading>8.680109975665523</heading>
+					<tilt>44.36046417211433</tilt>
+					<range>252.6163178535455</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin121</styleUrl>
+				<Point>
+					<coordinates>-17.12418835349567,32.74939606378296,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Lille levadatur - Levada do Alecrim</name>
+				<visibility>0</visibility>
+				<styleUrl>#sn_ylw-pushpin60</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						-17.13263338169098,32.75317694930176,1352 -17.13297070343359,32.75354732896452,1352 -17.13318013990836,32.75364953476893,1352 -17.13334328634614,32.75353993952699,1352 -17.13338817858607,32.75346194311633,1352 -17.13329728461301,32.75317196581089,1352 -17.13278275184082,32.75281296642727,1352 -17.13215366315984,32.75199496052904,1352 -17.1316375111946,32.75182370010607,1352 -17.13136619187249,32.75163681572924,1352 -17.13097308760646,32.75166075339202,1352 -17.130738,32.751542,1329 -17.130738,32.751542,1329 -17.13047,32.751355,1330 -17.13047,32.751355,1330 -17.130089,32.75114,1331 -17.130089,32.75114,1331 -17.129847,32.750925,1329 -17.129847,32.750925,1329 -17.129504,32.750877,1332 -17.129504,32.750877,1332 -17.129139,32.750861,1331 -17.129139,32.750861,1331 -17.128726,32.750877,1329 -17.128726,32.750877,1329 -17.12841,32.750722,1331 -17.12841,32.750722,1331 -17.12834,32.750368,1330 -17.12834,32.750368,1330 -17.128292,32.750062,1328 -17.128292,32.750062,1328 -17.128217,32.749708,1332 -17.128217,32.749708,1332 -17.128018,32.74945,1331 -17.128018,32.74945,1331 -17.127761,32.749246,1330 -17.127761,32.749246,1330 -17.12746,32.749091,1333 -17.12746,32.749091,1333 -17.127085,32.748984,1336 -17.127085,32.748984,1336 -17.126736,32.749021,1336 -17.126736,32.749021,1336 -17.1265,32.748806,1339 -17.1265,32.748806,1339 -17.126259,32.748549,1339 -17.126259,32.748549,1339 -17.125915,32.748404,1338 -17.125915,32.748404,1338 -17.125518,32.74834,1336 -17.125518,32.74834,1336 -17.124247,32.749354,1333 -17.124247,32.749354,1333 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>Øens ligeste vej</name>
+				<visibility>0</visibility>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2011-07-16T10:31:44.041585206Z</begin>
+						<end>2011-07-17T16:20:03Z</end>
+					</gx:TimeSpan>
+					<longitude>-17.10728922508953</longitude>
+					<latitude>32.75230062978272</latitude>
+					<altitude>0</altitude>
+					<heading>8.689705479654444</heading>
+					<tilt>44.36125368783186</tilt>
+					<range>493.9760850575241</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin121</styleUrl>
+				<Point>
+					<coordinates>-17.10690882771545,32.75347760860536,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Souvenirbutik med poncha</name>
+				<visibility>0</visibility>
+				<description>Madeirataske,
+T-shirt</description>
+				<LookAt>
+					<gx:TimeSpan>
+						<begin>2011-07-16T10:31:44.041585206Z</begin>
+						<end>2011-07-17T16:20:03Z</end>
+					</gx:TimeSpan>
+					<longitude>-17.01952585153202</longitude>
+					<latitude>32.75460927792449</latitude>
+					<altitude>0</altitude>
+					<heading>8.737191667943581</heading>
+					<tilt>44.35879548459522</tilt>
+					<range>276.1644886463139</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_ylw-pushpin121</styleUrl>
+				<Point>
+					<coordinates>-17.01998191410976,32.75431512020597,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>Alme 19-21/7</name>
+			<visibility>0</visibility>
+		</Folder>
+		<Folder>
+			<name>Polen 23-31juli</name>
+			<visibility>0</visibility>
+			<Folder>
+				<name>23-24/7 Gdansk</name>
+				<visibility>0</visibility>
+				<Placemark>
+					<name>Apartamenty VNS 23-24/7</name>
+					<visibility>0</visibility>
+					<description>Apartamenty VNS
+ul. Dlugie Pobrzeze 14
+Gdansk 80-888
+Polen</description>
+					<LookAt>
+						<gx:TimeSpan>
+							<begin>2011-07-03T08:16:47Z</begin>
+							<end>2011-07-31T13:31:04Z</end>
+						</gx:TimeSpan>
+						<longitude>18.65664697343791</longitude>
+						<latitude>54.3492905967638</latitude>
+						<altitude>0</altitude>
+						<heading>14.0767759717613</heading>
+						<tilt>33.37013202669526</tilt>
+						<range>139.0972568760574</range>
+						<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+					</LookAt>
+					<styleUrl>#m_ylw-pushpin100</styleUrl>
+					<Point>
+						<coordinates>18.65686140152773,54.34953812127947,0</coordinates>
+					</Point>
+				</Placemark>
+				<Folder>
+					<name>23/7 -tur på Długi Targ</name>
+					<visibility>0</visibility>
+					<open>1</open>
+					<Placemark>
+						<name>Ankomst med bus fra Port Luctnici</name>
+						<visibility>0</visibility>
+						<LookAt>
+							<gx:TimeSpan>
+								<begin>2011-07-03T08:16:47Z</begin>
+								<end>2011-07-31T13:31:04Z</end>
+							</gx:TimeSpan>
+							<longitude>18.64576014836861</longitude>
+							<latitude>54.35022134094449</latitude>
+							<altitude>0</altitude>
+							<heading>6.854616243021393</heading>
+							<tilt>48.98782628642054</tilt>
+							<range>100.9960086885279</range>
+							<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+						</LookAt>
+						<styleUrl>#msn_bus3</styleUrl>
+						<Point>
+							<coordinates>18.64567467933304,54.35032990677121,0</coordinates>
+						</Point>
+					</Placemark>
+					<Placemark>
+						<name>Taxa nr to kunne køre - men havde svært ved at finde hotellet</name>
+						<visibility>0</visibility>
+						<LookAt>
+							<gx:TimeSpan>
+								<begin>2011-07-03T08:16:47Z</begin>
+								<end>2011-07-31T13:31:04Z</end>
+							</gx:TimeSpan>
+							<longitude>18.64525706488818</longitude>
+							<latitude>54.34976589535107</latitude>
+							<altitude>0</altitude>
+							<heading>6.854207441432009</heading>
+							<tilt>48.98782234155799</tilt>
+							<range>100.4141308743747</range>
+							<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+						</LookAt>
+						<styleUrl>#msn_cabs14</styleUrl>
+						<Point>
+							<coordinates>18.64516224342941,54.34977610711892,0</coordinates>
+						</Point>
+					</Placemark>
+					<Placemark>
+						<name>Galerii Handlowej &quot;Madison&quot;</name>
+						<visibility>0</visibility>
+						<description>Svømmetøj
+Sko</description>
+						<LookAt>
+							<gx:TimeSpan>
+								<begin>2011-07-03T08:16:47Z</begin>
+								<end>2011-07-31T13:31:04Z</end>
+							</gx:TimeSpan>
+							<longitude>18.64954022500804</longitude>
+							<latitude>54.35674192522759</latitude>
+							<altitude>0</altitude>
+							<heading>6.857893933907963</heading>
+							<tilt>38.74875017371576</tilt>
+							<range>337.4955180033832</range>
+							<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+						</LookAt>
+						<styleUrl>#msn_shopping</styleUrl>
+						<Point>
+							<coordinates>18.64900791212856,54.35625642849595,0</coordinates>
+						</Point>
+					</Placemark>
+					<Placemark>
+						<name>Aftensmad 23/7 - Kuchnia Rosyjska</name>
+						<visibility>0</visibility>
+						<LookAt>
+							<gx:TimeSpan>
+								<begin>2011-07-03T08:16:47Z</begin>
+								<end>2011-07-31T13:31:04Z</end>
+							</gx:TimeSpan>
+							<longitude>18.6534960678782</longitude>
+							<latitude>54.34819125269269</latitude>
+							<altitude>0</altitude>
+							<heading>6.860955941097541</heading>
+							<tilt>25.14791634639612</tilt>
+							<range>73.88009770633524</range>
+							<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+						</LookAt>
+						<styleUrl>#msn_dining9</styleUrl>
+						<Point>
+							<coordinates>18.65332142259794,54.34824963729058,0</coordinates>
+						</Point>
+					</Placemark>
+					<Placemark>
+						<name>Harmonikamusikere</name>
+						<visibility>0</visibility>
+						<LookAt>
+							<gx:TimeSpan>
+								<begin>2011-07-03T08:16:47Z</begin>
+								<end>2011-07-31T13:31:04Z</end>
+							</gx:TimeSpan>
+							<longitude>18.65578993052916</longitude>
+							<latitude>54.34822860257737</latitude>
+							<altitude>0</altitude>
+							<heading>6.862477215347898</heading>
+							<tilt>60.16941214962456</tilt>
+							<range>128.4791394707905</range>
+							<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+						</LookAt>
+						<styleUrl>#msn_ylw-pushpin531</styleUrl>
+						<Point>
+							<coordinates>18.65579552170491,54.34793749908997,0</coordinates>
+						</Point>
+					</Placemark>
+					<Placemark>
+						<name>Spray-can kunst</name>
+						<visibility>0</visibility>
+						<LookAt>
+							<gx:TimeSpan>
+								<begin>2011-07-03T08:16:47Z</begin>
+								<end>2011-07-31T13:31:04Z</end>
+							</gx:TimeSpan>
+							<longitude>18.65578993052916</longitude>
+							<latitude>54.34822860257737</latitude>
+							<altitude>0</altitude>
+							<heading>6.862477215347898</heading>
+							<tilt>60.16941214962456</tilt>
+							<range>128.4791394707905</range>
+							<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+						</LookAt>
+						<styleUrl>#msn_ylw-pushpin531</styleUrl>
+						<Point>
+							<coordinates>18.65548238339693,54.3479365887419,0</coordinates>
+						</Point>
+					</Placemark>
+				</Folder>
+				<Folder>
+					<name>24/7</name>
+					<visibility>0</visibility>
+					<open>1</open>
+					<Placemark>
+						<name>Flodtur til Westerplatte</name>
+						<visibility>0</visibility>
+						<styleUrl>#m_ylw-pushpin0000</styleUrl>
+						<LineString>
+							<tessellate>1</tessellate>
+							<coordinates>
+								18.65632278360931,54.34828117105045,0 18.65719963288175,54.34927692861169,0 18.65871149015366,54.35291445060408,0 18.66160923614164,54.35397732585849,0 18.66492556526803,54.35460674412873,0 18.6662016769019,54.3563162406753,0 18.66573356957079,54.35836103350972,0 18.6635307788353,54.36084566991911,0 18.66502092784746,54.36349256805458,0 18.66444353924418,54.37032037960426,0 18.66299609206566,54.37428973522324,0 18.66063678671872,54.38001186849701,0 18.66326718171103,54.38458592751594,0 18.66626518210914,54.38708086056914,0 18.67228752971924,54.39236365086914,0 18.67911653272322,54.39766655007822,0 18.68078772345551,54.4030412186106,0 
+							</coordinates>
+						</LineString>
+					</Placemark>
+					<Placemark>
+						<name>Frokost 24/7</name>
+						<visibility>0</visibility>
+						<LookAt>
+							<gx:TimeStamp><when>2011-07-23T18:20:09Z</when>
+</gx:TimeStamp>
+							<longitude>18.67930788535788</longitude>
+							<latitude>54.40660092972669</latitude>
+							<altitude>0</altitude>
+							<heading>0.01912966421454585</heading>
+							<tilt>0</tilt>
+							<range>229.3828750585315</range>
+							<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+						</LookAt>
+						<styleUrl>#msn_snack_bar08</styleUrl>
+						<Point>
+							<coordinates>18.67930788535788,54.40660092972668,0</coordinates>
+						</Point>
+					</Placemark>
+					<Placemark>
+						<name>LEGO-udstilling, LUGPol, Gamle rådhus</name>
+						<visibility>0</visibility>
+						<LookAt>
+							<gx:TimeSpan>
+								<begin>2011-07-03T08:16:47Z</begin>
+								<end>2011-07-31T13:31:04Z</end>
+							</gx:TimeSpan>
+							<longitude>18.65234851681564</longitude>
+							<latitude>54.34866319599904</latitude>
+							<altitude>0</altitude>
+							<heading>4.32329888642118</heading>
+							<tilt>0</tilt>
+							<range>306.3585256071777</range>
+							<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+						</LookAt>
+						<styleUrl>#msn_ylw-pushpin120</styleUrl>
+						<Point>
+							<coordinates>18.65270771933145,54.3489546656233,0</coordinates>
+						</Point>
+					</Placemark>
+					<Placemark>
+						<name>Bus til Lufthavnen</name>
+						<visibility>0</visibility>
+						<LookAt>
+							<gx:TimeSpan>
+								<begin>2011-07-03T08:16:47Z</begin>
+								<end>2011-07-31T13:31:04Z</end>
+							</gx:TimeSpan>
+							<longitude>18.64665928976806</longitude>
+							<latitude>54.35073416803809</latitude>
+							<altitude>0</altitude>
+							<heading>6.855391513269609</heading>
+							<tilt>35.51084327019105</tilt>
+							<range>133.2262096094242</range>
+							<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+						</LookAt>
+						<styleUrl>#msn_bus3</styleUrl>
+						<Point>
+							<coordinates>18.64658148084135,54.35065915825576,0</coordinates>
+						</Point>
+					</Placemark>
+				</Folder>
+			</Folder>
+			<Folder>
+				<name>24-30/7 - Szarlota</name>
+				<visibility>0</visibility>
+				<open>1</open>
+				<Placemark>
+					<name>Szarlota hytte nr 15</name>
+					<visibility>0</visibility>
+					<LookAt>
+						<gx:TimeSpan>
+							<begin>2011-07-03T08:16:47Z</begin>
+							<end>2011-07-31T13:31:04Z</end>
+						</gx:TimeSpan>
+						<longitude>17.94731571358011</longitude>
+						<latitude>54.1020810024107</latitude>
+						<altitude>0</altitude>
+						<heading>4.057960255968673</heading>
+						<tilt>0</tilt>
+						<range>945.3947415955414</range>
+						<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+					</LookAt>
+					<styleUrl>#msn_lodging2</styleUrl>
+					<Point>
+						<coordinates>17.94601457009369,54.10193873059802,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark>
+					<name>Koncert i Trefoldighedskirken 29/7</name>
+					<visibility>0</visibility>
+					<LookAt>
+						<gx:TimeSpan>
+							<begin>2011-07-03T08:16:47Z</begin>
+							<end>2011-07-31T13:31:04Z</end>
+						</gx:TimeSpan>
+						<longitude>17.98004719373613</longitude>
+						<latitude>54.12202837183735</latitude>
+						<altitude>0</altitude>
+						<heading>7.512353955873004</heading>
+						<tilt>0</tilt>
+						<range>985.5036216478935</range>
+						<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+					</LookAt>
+					<styleUrl>#msn_ylw-pushpin0102</styleUrl>
+					<Point>
+						<coordinates>17.97755380556038,54.12126391746981,0</coordinates>
+					</Point>
+				</Placemark>
+			</Folder>
+			<Folder>
+				<name>30-31Gdansk</name>
+				<visibility>0</visibility>
+				<Placemark>
+					<name>Apartament Gdańsk Św. Ducha</name>
+					<visibility>0</visibility>
+					<LookAt>
+						<gx:TimeSpan>
+							<begin>2011-07-03T08:16:47Z</begin>
+							<end>2011-07-31T13:31:04Z</end>
+						</gx:TimeSpan>
+						<longitude>18.65237510341638</longitude>
+						<latitude>54.3509695590767</latitude>
+						<altitude>0</altitude>
+						<heading>6.860296397855918</heading>
+						<tilt>45.68878891121187</tilt>
+						<range>315.2058947686833</range>
+						<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+					</LookAt>
+					<styleUrl>#msn_lodging11</styleUrl>
+					<Point>
+						<coordinates>18.65188483158717,54.3504430156225,0</coordinates>
+					</Point>
+				</Placemark>
+				<Folder>
+					<name>30/7 markedsdag</name>
+					<visibility>0</visibility>
+					<open>1</open>
+					<Placemark>
+						<name>Ankomst fra Szarlota</name>
+						<visibility>0</visibility>
+						<description>Med Susanne, Michael,Nikolaj og Christel, Isak, Juliane - midt i loppemarkedet</description>
+						<LookAt>
+							<gx:TimeSpan>
+								<begin>2011-07-03T08:16:47Z</begin>
+								<end>2011-07-31T13:31:04Z</end>
+							</gx:TimeSpan>
+							<longitude>18.65510698373935</longitude>
+							<latitude>54.35350695584882</latitude>
+							<altitude>0</altitude>
+							<heading>6.862416232888993</heading>
+							<tilt>38.75072278883007</tilt>
+							<range>317.3284667081973</range>
+							<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+						</LookAt>
+						<styleUrl>#msn_bus2</styleUrl>
+						<Point>
+							<coordinates>18.65477217150884,54.35338659132565,0</coordinates>
+						</Point>
+					</Placemark>
+				</Folder>
+				<Folder>
+					<name>31/7 mere markedsdag</name>
+					<visibility>0</visibility>
+					<open>1</open>
+					<Placemark>
+						<name>Insektudstilling</name>
+						<visibility>0</visibility>
+						<LookAt>
+							<gx:TimeSpan>
+								<begin>2011-07-03T08:16:47Z</begin>
+								<end>2011-07-31T13:31:04Z</end>
+							</gx:TimeSpan>
+							<longitude>18.65511364157078</longitude>
+							<latitude>54.34812539260689</latitude>
+							<altitude>0</altitude>
+							<heading>4.633465873334083</heading>
+							<tilt>45.00096914994916</tilt>
+							<range>274.754543975438</range>
+							<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+						</LookAt>
+						<styleUrl>#msn_ylw-pushpin61</styleUrl>
+						<Point>
+							<coordinates>18.6552563416135,54.34758152096491,0</coordinates>
+						</Point>
+					</Placemark>
+					<Placemark>
+						<name>Legoudstilling igen - med Nikolaj</name>
+						<visibility>0</visibility>
+						<LookAt>
+							<gx:TimeSpan>
+								<begin>2011-07-03T08:16:47Z</begin>
+								<end>2011-07-31T13:31:04Z</end>
+							</gx:TimeSpan>
+							<longitude>18.65159989481757</longitude>
+							<latitude>54.3488119832369</latitude>
+							<altitude>0</altitude>
+							<heading>6.859670531525077</heading>
+							<tilt>47.65231903892453</tilt>
+							<range>251.073013277519</range>
+							<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+						</LookAt>
+						<styleUrl>#msn_ylw-pushpin49</styleUrl>
+						<Point>
+							<coordinates>18.65268469816866,54.34892972918833,0</coordinates>
+						</Point>
+					</Placemark>
+					<Placemark>
+						<name>Slikkepindstrækning</name>
+						<visibility>0</visibility>
+						<LookAt>
+							<gx:TimeSpan>
+								<begin>2011-07-03T08:16:47Z</begin>
+								<end>2011-07-31T13:31:04Z</end>
+							</gx:TimeSpan>
+							<longitude>18.65054449731073</longitude>
+							<latitude>54.3493523618809</latitude>
+							<altitude>0</altitude>
+							<heading>6.858214891040324</heading>
+							<tilt>60.16932791802179</tilt>
+							<range>117.6628665456884</range>
+							<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+						</LookAt>
+						<styleUrl>#msn_ylw-pushpin531</styleUrl>
+						<Point>
+							<coordinates>18.65075320994843,54.3491952420673,0</coordinates>
+						</Point>
+					</Placemark>
+					<Placemark>
+						<name>Cukiernia i Piekarnia Pellowski</name>
+						<visibility>0</visibility>
+						<LookAt>
+							<gx:TimeSpan>
+								<begin>2011-07-03T08:16:47Z</begin>
+								<end>2011-07-31T13:31:04Z</end>
+							</gx:TimeSpan>
+							<longitude>18.65235855427815</longitude>
+							<latitude>54.34893000212768</latitude>
+							<altitude>0</altitude>
+							<heading>6.859688957423031</heading>
+							<tilt>60.1693470004389</tilt>
+							<range>120.1132628146792</range>
+							<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+						</LookAt>
+						<styleUrl>#msn_ylw-pushpin531</styleUrl>
+						<Point>
+							<coordinates>18.65237273417326,54.34869880534793,0</coordinates>
+						</Point>
+					</Placemark>
+					<Placemark>
+						<name>Dansende Mickey Mouse</name>
+						<visibility>0</visibility>
+						<LookAt>
+							<gx:TimeSpan>
+								<begin>2011-07-03T08:16:47Z</begin>
+								<end>2011-07-31T13:31:04Z</end>
+							</gx:TimeSpan>
+							<longitude>18.65072602946267</longitude>
+							<latitude>54.34948148750385</latitude>
+							<altitude>0</altitude>
+							<heading>6.858960449219712</heading>
+							<tilt>47.6523053129529</tilt>
+							<range>249.0059547953191</range>
+							<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+						</LookAt>
+						<styleUrl>#msn_ylw-pushpin49</styleUrl>
+						<Point>
+							<coordinates>18.6504253937399,54.34911161772724,0</coordinates>
+						</Point>
+					</Placemark>
+					<Placemark>
+						<name>Frokost 31/7 - jødisk restaurant</name>
+						<visibility>0</visibility>
+						<description>Komfuret i udu, så menyen lidt kort</description>
+						<LookAt>
+							<gx:TimeSpan>
+								<begin>2011-07-03T08:16:47Z</begin>
+								<end>2011-07-31T13:31:04Z</end>
+							</gx:TimeSpan>
+							<longitude>18.64912774310698</longitude>
+							<latitude>54.34866662118351</latitude>
+							<altitude>0</altitude>
+							<heading>-8.819094555554145</heading>
+							<tilt>44.99961994429285</tilt>
+							<range>101.0262559620767</range>
+							<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+						</LookAt>
+						<styleUrl>#msn_dining18</styleUrl>
+						<Point>
+							<coordinates>18.64912774310698,54.34866662118351,0</coordinates>
+						</Point>
+					</Placemark>
+					<Placemark>
+						<name>Bus til Lufthavnen</name>
+						<visibility>0</visibility>
+						<open>1</open>
+						<LookAt>
+							<gx:TimeSpan>
+								<begin>2011-07-03T08:16:47Z</begin>
+								<end>2011-07-31T13:31:04Z</end>
+							</gx:TimeSpan>
+							<longitude>18.64665928976806</longitude>
+							<latitude>54.35073416803809</latitude>
+							<altitude>0</altitude>
+							<heading>6.855391513269609</heading>
+							<tilt>35.51084327019105</tilt>
+							<range>133.2262096094242</range>
+							<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+						</LookAt>
+						<styleUrl>#msn_bus3</styleUrl>
+						<Point>
+							<coordinates>18.64658148084135,54.35065915825576,0</coordinates>
+						</Point>
+					</Placemark>
+				</Folder>
+			</Folder>
+		</Folder>
+	</Folder>
+</Document>
+</kml>

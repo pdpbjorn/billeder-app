@@ -1,0 +1,1 @@
+c:\exiftool\exiftool.exe -r  -ext jpg -overwrite_original -AllDates=2007-01-03T00:00:00 "Z:\Foto\Skolefoto\07_01_03 Børnehavefoto"
