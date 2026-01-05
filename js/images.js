@@ -446,7 +446,7 @@ function buildTiles(dataslice){
 		//create thumbnails for dategroup of images
 		$.each(featureDateGroup,function(indexFeature,feature){ //for each image
 			//get path to thumbnail image from image path
-			img = feature.properties.image
+			img = "./Foto/" + feature.properties.image
 			thumbPath = img.substring(0,img.lastIndexOf('/')) + "/.thumb/" + img.substring(img.lastIndexOf('/') +1) + ".jpg"
 			//aapend thumbnail element
 			$("#dateDiv-" + indexDate).append($("<div/>",{"class":"tile","title": feature.properties.timestamp?feature.properties.timestamp:feature.properties.image})
