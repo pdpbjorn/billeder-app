@@ -446,7 +446,7 @@ function buildTiles(dataslice){
 		//create thumbnails for dategroup of images
 		$.each(featureDateGroup,function(indexFeature,feature){ //for each image
 			//get path to thumbnail image from image path
-			img = "./Foto/" + feature.properties.image
+			img = "/Foto/" + feature.properties.image
 			thumbPath = img.substring(0,img.lastIndexOf('/')) + "/.thumb/" + img.substring(img.lastIndexOf('/') +1) + ".jpg"
 			//aapend thumbnail element
 			$("#dateDiv-" + indexDate).append($("<div/>",{"class":"tile","title": feature.properties.timestamp?feature.properties.timestamp:feature.properties.image})
@@ -530,7 +530,7 @@ function imgPage(imageIndex){
 			.append($('<div/>',{"class":"pagecontents","data-role":"content"})
 				.append($('<div/>',{"class":"ui-panel-wrapper"})
 					//the image
-					.append($("<img>",{src:"./Foto/" + theDataset.features[imageIndex].properties.image,id:"image0"})
+					.append($("<img>",{src:"/Foto/" + theDataset.features[imageIndex].properties.image,id:"image0"})
 					.css({"max-height": $( window ).height() - 6 + "px","max-width": $( window ).width() - 6 + "px","display":"block","margin-right":"auto","margin-left":"auto"})
 					)
 					//button to cloase image
