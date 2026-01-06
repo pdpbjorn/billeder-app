@@ -530,7 +530,7 @@ function imgPage(imageIndex){
 			.append($('<div/>',{"class":"pagecontents","data-role":"content"})
 				.append($('<div/>',{"class":"ui-panel-wrapper"})
 					//the image
-					.append($("<img>",{src:theDataset.features[imageIndex].properties.image,id:"image0"})
+					.append($("<img>",{src:"./Foto/" + theDataset.features[imageIndex].properties.image,id:"image0"})
 					.css({"max-height": $( window ).height() - 6 + "px","max-width": $( window ).width() - 6 + "px","display":"block","margin-right":"auto","margin-left":"auto"})
 					)
 					//button to cloase image
