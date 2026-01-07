@@ -106,6 +106,8 @@ function initMap(){
 /* SECTION main setup of environment */
 /* SECTION main setup of environment */
 
+
+
 //setup datasources
 //function started by index.html
 function loadData(){
