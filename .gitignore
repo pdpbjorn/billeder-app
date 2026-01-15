@@ -1,12 +1,35 @@
-# ignore big/generated geojson everywhere
-**/*.geojson
-**/*.geo.json
+# ------------------------------------------------------------
+# billeder compromise policy
+# ------------------------------------------------------------
 
-# but KEEP the one canonical world countries file
-!data/sted/world.total.modified.geo.json
+# Source index (generated, never commit)
+data/source/images.json
 
-# keep your indexes (as before)
+# Generated datasets (large, never commit)
+data/tid/*.geo.json
+data/sted/*.geo.json
+data/anvendelse/*.geo.json
+
+# If any other geojson variants exist
+data/tid/*.geojson
+data/sted/*.geojson
+data/anvendelse/*.geojson
+
+# Also ignore the raw per-folder json (except indexes)
+data/tid/*.json
+data/sted/*.json
+data/anvendelse/*.json
+
+# Keep only index.json in those folders
 !data/tid/index.json
 !data/sted/index.json
 !data/anvendelse/index.json
+
+# Problems folder: generated now, UI later
+data/problems/*.geo.json
+data/problems/*.geojson
+data/problems/*.json
 !data/problems/index.json
+
+# Keep the canonical "world countries" reference file (tracked)
+!data/sted/world.total.modified.geo.json
