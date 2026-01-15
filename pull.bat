@@ -1,12 +1,14 @@
 @echo off
+setlocal
 REM ==========================================================
 REM  billeder.romer-bjorn.org - pull_compromise.bat
 REM  Safe pull script that mirrors server-side compromise
 REM ==========================================================
 
 set REPO=C:\dev\billeder-app
+set GIT=c:\portablegit\cmd\git.exe
 
-cd /d %REPO% || (
+cd /d "%REPO%" || (
   echo ERROR: Could not cd to %REPO%
   pause
   exit /b 1
@@ -18,46 +20,42 @@ echo Pulling allowed files from GitHub...
 echo ===========================================
 echo.
 
-REM ---- Ensure clean working tree ----
-c:\portablegit\cmd\git.exe status --porcelain > _git_dirty.tmp
-for %%A in (_git_dirty.tmp) do set size=%%~zA
-del _git_dirty.tmp
+REM ---- Ensure clean working tree (reliable checks) ----
+REM Unstaged changes?
+%GIT% diff --quiet
+if errorlevel 1 (
+  echo ERROR: Working tree is not clean. ^(unstaged changes^)
+  echo Commit/stash or discard your local changes first.
+  %GIT% status --short
+  pause
+  exit /b 1
+)
 
-if not "%size%"=="0" (
-    echo ERROR: Working tree is not clean.
-    echo Commit or stash your local changes first.
-    c:\portablegit\cmd\git.exe status --short
-    pause
-    exit /b 1
+REM Staged-but-not-committed changes?
+%GIT% diff --cached --quiet
+if errorlevel 1 (
+  echo ERROR: Working tree is not clean. ^(staged changes not committed^)
+  echo Commit/stash or discard your local changes first.
+  %GIT% status --short
+  pause
+  exit /b 1
+)
+
+REM Untracked files?
+for /f %%A in ('%GIT% ls-files --others --exclude-standard ^| find /c /v ""') do set UNTRACKED=%%A
+if not "%UNTRACKED%"=="0" (
+  echo ERROR: Working tree is not clean. ^(untracked files present^)
+  echo Commit/stash or remove the untracked files first.
+  %GIT% status --short
+  pause
+  exit /b 1
 )
 
 REM ---- Pull metadata + scripts ----
-c:\portablegit\cmd\git.exe pull || (
+%GIT% pull || (
   echo ERROR: git pull failed.
   pause
   exit /b 1
 )
 
-REM ---- Safety: verify ignored patterns still active ----
-echo.
-echo Verifying .gitignore rules...
-
-c:\portablegit\cmd\git.exe check-ignore -q data\tid\2020-01.geo.json
-if not errorlevel 1 (
-  echo OK: Large geojson files are ignored.
-) else (
-  echo WARNING: geojson ignore rules may be broken!
-)
-
-c:\portablegit\cmd\git.exe check-ignore -q data\source\images.json
-if not errorlevel 1 (
-  echo OK: images.json is ignored.
-) else (
-  echo WARNING: images.json ignore rule missing!
-)
-
-echo.
-echo ===========================================
-echo Pull complete.
-echo ===========================================
-pause
+REM ---- Safety: verify
