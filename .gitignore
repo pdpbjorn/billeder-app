@@ -1,0 +1,12 @@
+# ignore big/generated geojson everywhere
+**/*.geojson
+**/*.geo.json
+
+# but KEEP the one canonical world countries file
+!data/sted/world.total.modified.geo.json
+
+# keep your indexes (as before)
+!data/tid/index.json
+!data/sted/index.json
+!data/anvendelse/index.json
+!data/problems/index.json
