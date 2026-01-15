@@ -1,0 +1,19 @@
+# --- Generated big data (do NOT version) ---
+data/source/images.json
+
+data/tid/*.geo.json
+data/tid/*.json
+
+data/sted/*.geo.json
+data/sted/*.json
+
+data/anvendelse/*.geo.json
+data/anvendelse/*.json
+
+# --- Keep only the small index files tracked ---
+!data/tid/index.json
+!data/sted/index.json
+!data/anvendelse/index.json
+
+# Optional: keep README/placeholders if you add them
+!data/**/README.md
