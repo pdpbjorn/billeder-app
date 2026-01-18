@@ -1,19 +1,35 @@
-# --- Generated big data (do NOT version) ---
+# ------------------------------------------------------------
+# billeder compromise policy
+# ------------------------------------------------------------
+
+# Source index (generated, never commit)
 data/source/images.json
 
+# Generated datasets (large, never commit)
 data/tid/*.geo.json
-data/tid/*.json
-
 data/sted/*.geo.json
-data/sted/*.json
-
 data/anvendelse/*.geo.json
+
+# If any other geojson variants exist
+data/tid/*.geojson
+data/sted/*.geojson
+data/anvendelse/*.geojson
+
+# Also ignore the raw per-folder json (except indexes)
+data/tid/*.json
+data/sted/*.json
 data/anvendelse/*.json
 
-# --- Keep only the small index files tracked ---
+# Keep only index.json in those folders
 !data/tid/index.json
 !data/sted/index.json
 !data/anvendelse/index.json
 
-# Optional: keep README/placeholders if you add them
-!data/**/README.md
+# Problems folder: generated now, UI later
+data/problems/*.geo.json
+data/problems/*.geojson
+data/problems/*.json
+!data/problems/index.json
+
+# Keep the canonical "world countries" reference file (tracked)
+!data/sted/world.total.modified.geo.json
