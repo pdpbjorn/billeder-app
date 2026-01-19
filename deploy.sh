@@ -17,10 +17,8 @@ echo "-- fetch origin (as $GIT_USER)"
 sudo -u "$GIT_USER" -H git -C "$REPO_DIR" fetch origin
 
 echo "-- merge origin/main into main (as $GIT_USER)"
-# Ensure we are on main
 sudo -u "$GIT_USER" -H git -C "$REPO_DIR" checkout main >/dev/null 2>&1 || true
 
-# Merge (safe on a server; avoids ff-only aborts)
 sudo -u "$GIT_USER" -H git -C "$REPO_DIR" merge --no-ff --no-edit origin/main || {
   echo "ERROR: Merge failed (likely conflicts)."
   echo "Run: sudo -u $GIT_USER -H git -C $REPO_DIR status"
@@ -30,7 +28,7 @@ sudo -u "$GIT_USER" -H git -C "$REPO_DIR" merge --no-ff --no-edit origin/main ||
 echo "-- repo status (after)"
 sudo -u "$GIT_USER" -H git -C "$REPO_DIR" rev-parse --short HEAD
 
-echo "-- rsync to web root (excluding .git)"
+echo "-- rsync to web root (excluding .git/.github)"
 sudo rsync -av --delete \
   --exclude '.git' \
   --exclude '.github' \
