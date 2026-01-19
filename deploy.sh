@@ -7,10 +7,26 @@ GIT_USER="ubuntu"
 
 echo "== Deploy start: $(date -Is) =="
 
-echo "-- fetch + merge from origin/main (as $GIT_USER)"
+cd "$REPO_DIR"
+
+echo "-- repo status (before)"
+sudo -u "$GIT_USER" -H git -C "$REPO_DIR" rev-parse --short HEAD
+sudo -u "$GIT_USER" -H git -C "$REPO_DIR" status --porcelain || true
+
+echo "-- fetch origin (as $GIT_USER)"
 sudo -u "$GIT_USER" -H git -C "$REPO_DIR" fetch origin
+
+echo "-- merge origin/main into main (as $GIT_USER)"
 sudo -u "$GIT_USER" -H git -C "$REPO_DIR" checkout main >/dev/null 2>&1 || true
-sudo -u "$GIT_USER" -H git -C "$REPO_DIR" merge --no-ff --no-edit origin/main
+
+sudo -u "$GIT_USER" -H git -C "$REPO_DIR" merge --no-ff --no-edit origin/main || {
+  echo "ERROR: Merge failed (likely conflicts)."
+  echo "Run: sudo -u $GIT_USER -H git -C $REPO_DIR status"
+  exit 1
+}
+
+echo "-- repo status (after)"
+sudo -u "$GIT_USER" -H git -C "$REPO_DIR" rev-parse --short HEAD
 
 echo "-- rsync to web root (excluding .git/.github)"
 sudo rsync -av --delete \
