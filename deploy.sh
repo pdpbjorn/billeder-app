@@ -3,15 +3,16 @@ set -euo pipefail
 
 REPO_DIR="/srv/billeder-repo"
 WEB_DIR="/var/www/billeder"
+GIT_USER="ubuntu"
 
 echo "== Deploy start: $(date -Is) =="
 
-cd "$REPO_DIR"
+echo "-- fetch + merge from origin/main (as $GIT_USER)"
+sudo -u "$GIT_USER" -H git -C "$REPO_DIR" fetch origin
+sudo -u "$GIT_USER" -H git -C "$REPO_DIR" checkout main >/dev/null 2>&1 || true
+sudo -u "$GIT_USER" -H git -C "$REPO_DIR" merge --no-ff --no-edit origin/main
 
-echo "-- git pull (as ubuntu)"
-sudo -u ubuntu git pull --ff-only
-
-echo "-- rsync to web root (excluding .git)"
+echo "-- rsync to web root (excluding .git/.github)"
 sudo rsync -av --delete \
   --exclude '.git' \
   --exclude '.github' \

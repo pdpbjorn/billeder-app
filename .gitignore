@@ -9,27 +9,28 @@ data/source/images.json
 data/tid/*.geo.json
 data/sted/*.geo.json
 data/anvendelse/*.geo.json
+data/problems/*.geo.json
 
-# If any other geojson variants exist
+# Other geojson variants
 data/tid/*.geojson
 data/sted/*.geojson
 data/anvendelse/*.geojson
+data/problems/*.geojson
 
-# Also ignore the raw per-folder json (except indexes)
+# Ignore raw per-folder json outputs (except indexes)
 data/tid/*.json
 data/sted/*.json
 data/anvendelse/*.json
+data/problems/*.json
 
 # Keep only index.json in those folders
 !data/tid/index.json
 !data/sted/index.json
 !data/anvendelse/index.json
-
-# Problems folder: generated now, UI later
-data/problems/*.geo.json
-data/problems/*.geojson
-data/problems/*.json
 !data/problems/index.json
 
 # Keep the canonical "world countries" reference file (tracked)
 !data/sted/world.total.modified.geo.json
+
+# Reports: keep them (timestamped build reports go here)
+# (No ignore rules for reports/)

@@ -1,8 +1,8 @@
 @echo off
-setlocal
+setlocal enabledelayedexpansion
+
 REM ==========================================================
-REM  billeder.romer-bjorn.org - pull_compromise.bat
-REM  Safe pull script that mirrors server-side compromise
+REM  billeder.romer-bjorn.org - pull.bat
 REM ==========================================================
 
 set REPO=C:\dev\billeder-app
@@ -16,46 +16,54 @@ cd /d "%REPO%" || (
 
 echo.
 echo ===========================================
-echo Pulling allowed files from GitHub...
+echo Pulling from GitHub...
 echo ===========================================
 echo.
 
-REM ---- Ensure clean working tree (reliable checks) ----
-REM Unstaged changes?
+REM ---- Ensure clean working tree ----
 %GIT% diff --quiet
 if errorlevel 1 (
-  echo ERROR: Working tree is not clean. ^(unstaged changes^)
-  echo Commit/stash or discard your local changes first.
+  echo ERROR: Unstaged changes present.
   %GIT% status --short
   pause
   exit /b 1
 )
 
-REM Staged-but-not-committed changes?
 %GIT% diff --cached --quiet
 if errorlevel 1 (
-  echo ERROR: Working tree is not clean. ^(staged changes not committed^)
-  echo Commit/stash or discard your local changes first.
+  echo ERROR: Staged but uncommitted changes present.
   %GIT% status --short
   pause
   exit /b 1
 )
 
-REM Untracked files?
 for /f %%A in ('%GIT% ls-files --others --exclude-standard ^| find /c /v ""') do set UNTRACKED=%%A
 if not "%UNTRACKED%"=="0" (
-  echo ERROR: Working tree is not clean. ^(untracked files present^)
-  echo Commit/stash or remove the untracked files first.
+  echo ERROR: Untracked files present.
   %GIT% status --short
   pause
   exit /b 1
 )
 
-REM ---- Pull metadata + scripts ----
-%GIT% pull || (
+echo -- git pull
+%GIT% pull
+if errorlevel 1 (
   echo ERROR: git pull failed.
   pause
   exit /b 1
 )
 
-REM ---- Safety: verify
+echo.
+echo Verifying key ignore rules...
+%GIT% check-ignore -q data\source\images.json
+if not errorlevel 1 (
+  echo OK: data/source/images.json is ignored.
+) else (
+  echo WARNING: images.json ignore rule missing!
+)
+
+echo.
+echo ===========================================
+echo Pull complete.
+echo ===========================================
+pause
