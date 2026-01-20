@@ -3,45 +3,60 @@ import json
 import os
 import subprocess
 import time
+import tempfile
 from datetime import datetime, timezone
 from typing import Dict, List, Optional, Tuple
 
 PHOTO_ROOT = "/mnt/kDrive/Foto"
 OUT_JSON = "/srv/billeder-repo/data/source/images.json"
+REPORTS_DIR = "/srv/billeder-repo/reports"
 
-# Skip directories anywhere in path
 SKIP_DIR_NAMES = {".thumb", ".thumbs", "Originaler"}
-
-# Extensions to include
 EXTS = {".jpg", ".jpeg", ".png"}
 
-# Thumbnails
+# Thumbnails (still generated if missing)
 THUMB_DIRNAME = ".thumb"
 THUMB_PREFIX = "thumb-"
-THUMB_SIZE = "300x300"  # you can change later
+THUMB_SIZE = "300x300"
 
-# Robustness
 RETRIES = 5
 RETRY_SLEEP = 2.0
-HEALTHCHECK_EVERY = 500  # files
+HEALTHCHECK_EVERY = 500
 
-def run(cmd: List[str], check: bool = False) -> subprocess.CompletedProcess:
-    return subprocess.run(cmd, text=True, capture_output=True, check=check)
+MAGICK_CMD = None  # set in main()
+
+def utc_now() -> datetime:
+    return datetime.now(timezone.utc).replace(microsecond=0)
+
+def utc_stamp(dt: Optional[datetime] = None) -> str:
+    dt = dt or utc_now()
+    return dt.strftime("%Y%m%dT%H%M%SZ")
+
+def atomic_write_json(path: str, obj: Dict) -> None:
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    fd, tmp = tempfile.mkstemp(prefix=os.path.basename(path) + ".", suffix=".tmp", dir=os.path.dirname(path))
+    try:
+        with os.fdopen(fd, "w", encoding="utf-8") as f:
+            json.dump(obj, f, ensure_ascii=False, separators=(",", ":"), sort_keys=False)
+            f.flush()
+            os.fsync(f.fileno())
+        os.replace(tmp, path)
+    finally:
+        try:
+            if os.path.exists(tmp):
+                os.unlink(tmp)
+        except Exception:
+            pass
+
+def run(cmd: List[str]) -> subprocess.CompletedProcess:
+    return subprocess.run(cmd, text=True, capture_output=True)
 
 def mount_healthcheck() -> None:
-    """
-    Raises RuntimeError if mount appears unhealthy.
-    """
-    # Basic list
     try:
-        entries = os.listdir(PHOTO_ROOT)
-        if not entries:
-            # Empty could be legit, but for your mount it's unlikely
-            pass
+        _ = os.listdir(PHOTO_ROOT)
     except Exception as e:
         raise RuntimeError(f"Mount list failed: {e}")
 
-    # Write test
     test_path = os.path.join(PHOTO_ROOT, ".healthcheck_tmp")
     try:
         with open(test_path, "w", encoding="utf-8") as f:
@@ -60,46 +75,27 @@ def find_imagemagick_cmd() -> Optional[str]:
             continue
     return None
 
-MAGICK_CMD = None  # set in main()
-
 def build_snapshot_list() -> List[str]:
-    """
-    Use `find` to build a deterministic snapshot of image files.
-    This avoids os.walk() over a WebDAV mount.
-    """
-    # Build prune expression: -path "*/.thumb/*" -o -path "*/Originaler/*" ...
     prune_parts = []
     for d in SKIP_DIR_NAMES:
         prune_parts += ["-path", f"*/{d}/*", "-o"]
 
-    # find PHOTO_ROOT \( prune... \) -prune -o -type f \( -iname *.jpg ... \) -print
     cmd = ["find", PHOTO_ROOT, "("] + prune_parts
-    # remove trailing -o
     if cmd[-1] == "-o":
         cmd = cmd[:-1]
-    cmd += [")", "-prune", "-o", "-type", "f", "("]
-
-    # extensions
-    exts = [
-        "-iname", "*.jpg", "-o",
-        "-iname", "*.jpeg", "-o",
-        "-iname", "*.png"
-    ]
-    cmd += exts + [")", "-print"]
+    cmd += [")", "-prune", "-o", "-type", "f", "(", "-iname", "*.jpg", "-o", "-iname", "*.jpeg", "-o", "-iname", "*.png", ")", "-print"]
 
     r = run(cmd)
     if r.returncode != 0:
         raise RuntimeError(f"find failed:\n{r.stderr}")
 
     paths = [line.strip() for line in r.stdout.splitlines() if line.strip()]
-    # Filter out anything weird not under root
     paths = [p for p in paths if p.startswith(PHOTO_ROOT.rstrip("/") + "/")]
     paths.sort()
     return paths
 
 def normalize_ts(ts: str) -> str:
-    # exiftool output typically: "2011:01:11 23:43:27"
-    # convert to ISO-like: "2011-01-11T23:43:27"
+    # exiftool typical: "2011:01:11 23:43:27" -> "2011-01-11T23:43:27"
     if not ts:
         return ""
     if ":" in ts and " " in ts and len(ts) >= 19 and ts[4] == ":":
@@ -107,10 +103,6 @@ def normalize_ts(ts: str) -> str:
     return ts
 
 def exif_for_one(abs_path: str) -> Tuple[str, Optional[float], Optional[float], str]:
-    """
-    Returns (timestamp, lat, lon, camera)
-    Uses exiftool per file with retries.
-    """
     for attempt in range(1, RETRIES + 1):
         cmd = [
             "exiftool",
@@ -122,7 +114,7 @@ def exif_for_one(abs_path: str) -> Tuple[str, Optional[float], Optional[float], 
             "-GPSLongitude",
             "-Make",
             "-Model",
-            abs_path
+            abs_path,
         ]
         r = run(cmd)
         if r.returncode == 0:
@@ -137,21 +129,14 @@ def exif_for_one(abs_path: str) -> Tuple[str, Optional[float], Optional[float], 
                 camera = (make + " " + model).strip()
                 return ts, lat, lon, camera
             except Exception:
-                # parse failure, retry
                 pass
 
-        # retry on failure
         if attempt < RETRIES:
             time.sleep(RETRY_SLEEP)
 
-    # final failure
     return "", None, None, ""
 
-def ensure_thumb(abs_img: str) -> Tuple[bool, str]:
-    """
-    Ensure thumbnail exists.
-    Returns (ok, rel_thumb_path or "")
-    """
+def ensure_thumb(abs_img: str) -> bool:
     img_dir = os.path.dirname(abs_img)
     img_name = os.path.basename(abs_img)
 
@@ -160,12 +145,10 @@ def ensure_thumb(abs_img: str) -> Tuple[bool, str]:
     thumb_abs = os.path.join(thumb_dir, thumb_name)
 
     if os.path.exists(thumb_abs):
-        rel_thumb = os.path.relpath(thumb_abs, PHOTO_ROOT).replace("\\", "/")
-        return True, rel_thumb
+        return True
 
     os.makedirs(thumb_dir, exist_ok=True)
 
-    # Create thumb with retries
     for attempt in range(1, RETRIES + 1):
         try:
             if MAGICK_CMD == "magick":
@@ -175,121 +158,178 @@ def ensure_thumb(abs_img: str) -> Tuple[bool, str]:
 
             r = run(cmd)
             if r.returncode == 0 and os.path.exists(thumb_abs):
-                rel_thumb = os.path.relpath(thumb_abs, PHOTO_ROOT).replace("\\", "/")
-                return True, rel_thumb
+                return True
         except Exception:
             pass
 
         if attempt < RETRIES:
             time.sleep(RETRY_SLEEP)
 
-    return False, ""
+    return False
 
-def atomic_write_json(path: str, obj: Dict) -> None:
-    tmp = path + ".tmp"
-    os.makedirs(os.path.dirname(path), exist_ok=True)
-    with open(tmp, "w", encoding="utf-8") as f:
-        json.dump(obj, f, ensure_ascii=False)
-    os.replace(tmp, path)
+def load_existing_index() -> Tuple[Dict[str, Dict], Dict[str, Any]]:
+    """
+    Returns:
+      existing_by_img: { "rel/path.jpg": item_dict }
+      existing_doc: full json dict (or empty)
+    """
+    if not os.path.exists(OUT_JSON):
+        return {}, {}
+
+    try:
+        with open(OUT_JSON, "r", encoding="utf-8") as f:
+            doc = json.load(f)
+        items = doc.get("items") or []
+        by_img = {it.get("img"): it for it in items if it.get("img")}
+        return by_img, doc
+    except Exception:
+        return {}, {}
 
 def main():
     global MAGICK_CMD
-    print("== build_index.py ==")
+    start = utc_now()
 
-    # 0) Health check before doing anything heavy
+    print("== build_index.py ==")
     print("-- healthcheck (pre)")
     mount_healthcheck()
 
     MAGICK_CMD = find_imagemagick_cmd()
     if not MAGICK_CMD:
         raise SystemExit("ImageMagick not found. Install imagemagick (magick/convert).")
-
     print(f"-- ImageMagick cmd: {MAGICK_CMD}")
 
-    # 1) Snapshot list
-    print("-- building snapshot list via find...")
+    print("-- building snapshot list via find")
     paths = build_snapshot_list()
-    print(f"-- found {len(paths)} image files")
+    total = len(paths)
+    print(f"-- found {total} image files")
 
-    items = []
-    failed_exif = []
-    failed_thumb = []
+    existing_by_img, existing_doc = load_existing_index()
+    print(f"-- existing index items: {len(existing_by_img)}")
+
+    snapshot_rel = []
+    for abs_path in paths:
+        rel_img = os.path.relpath(abs_path, PHOTO_ROOT).replace("\\", "/")
+        snapshot_rel.append(rel_img)
+
+    snapshot_set = set(snapshot_rel)
+
+    # stats
     counts = {
-        "total": 0,
+        "total_snapshot": total,
+        "reused_existing": 0,
+        "new_indexed": 0,
+        "removed_from_index": 0,
         "no_timestamp": 0,
-        "has_gps": 0,
-        "no_gps": 0,
+        "has_coords": 0,
+        "no_coords": 0,
         "thumb_ok": 0,
         "thumb_fail": 0,
     }
+    failed_exif: List[str] = []
+    failed_thumb: List[str] = []
+
+    # Remove entries for files that no longer exist in snapshot
+    for img in list(existing_by_img.keys()):
+        if img not in snapshot_set:
+            del existing_by_img[img]
+            counts["removed_from_index"] += 1
+
+    items_out: List[Dict] = []
+    last_print = time.time()
+    last_health = 0
 
     for n, abs_path in enumerate(paths, start=1):
-        # periodic health checks
         if n == 1 or (n % HEALTHCHECK_EVERY == 0):
             try:
                 mount_healthcheck()
             except Exception as e:
-                raise SystemExit(f"Mount became unhealthy at file {n}/{len(paths)}: {e}")
+                raise SystemExit(f"Mount became unhealthy at file {n}/{total}: {e}")
+            last_health = n
 
         rel_img = os.path.relpath(abs_path, PHOTO_ROOT).replace("\\", "/")
 
-        ts, lat, lon, camera = exif_for_one(abs_path)
-        if not ts:
-            counts["no_timestamp"] += 1
-            # Keep record anyway; it goes into "no timestamp" buckets later.
-            # If exif completely failed, note it:
-            if lat is None and lon is None and camera == "":
-                failed_exif.append(rel_img)
-
-        has_gps = lat is not None and lon is not None
-        if has_gps:
-            counts["has_gps"] += 1
+        if rel_img in existing_by_img:
+            items_out.append(existing_by_img[rel_img])
+            counts["reused_existing"] += 1
         else:
-            counts["no_gps"] += 1
+            ts, lat, lon, camera = exif_for_one(abs_path)
+            if not ts:
+                counts["no_timestamp"] += 1
+                if lat is None and lon is None and camera == "":
+                    failed_exif.append(rel_img)
 
-        ok_thumb, rel_thumb = ensure_thumb(abs_path)
-        if ok_thumb:
-            counts["thumb_ok"] += 1
-        else:
-            counts["thumb_fail"] += 1
-            failed_thumb.append(rel_img)
+            has_coords = lat is not None and lon is not None
+            if has_coords:
+                counts["has_coords"] += 1
+            else:
+                counts["no_coords"] += 1
 
-        items.append({
-            "img": rel_img,
-            "ts": ts,
-            "lat": lat,
-            "lon": lon,
-            "gps": 1 if has_gps else 0,
-            "camera": camera,
-            "thumb": rel_thumb,  # relative under Foto tree
-        })
+            ok_thumb = ensure_thumb(abs_path)
+            if ok_thumb:
+                counts["thumb_ok"] += 1
+            else:
+                counts["thumb_fail"] += 1
+                failed_thumb.append(rel_img)
 
-        # light progress output
-        if n % 500 == 0:
-            print(f"Progress: {n}/{len(paths)}  gps={counts['has_gps']}  no_ts={counts['no_timestamp']}  thumb_fail={counts['thumb_fail']}")
+            # NOTE: no "gps" and no "thumb" in the JSON anymore.
+            items_out.append({
+                "img": rel_img,
+                "ts": ts,
+                "lat": lat,
+                "lon": lon,
+                "camera": camera,
+            })
+            counts["new_indexed"] += 1
 
-    counts["total"] = len(items)
+        # timed progress output (every ~30 seconds, or every 2000 files)
+        now = time.time()
+        if (now - last_print) >= 30 or (n % 2000 == 0):
+            elapsed = (utc_now() - start).total_seconds()
+            rate = n / elapsed if elapsed > 0 else 0
+            print(f"[{utc_now().isoformat().replace('+00:00','Z')}] "
+                  f"{n}/{total}  new={counts['new_indexed']}  reused={counts['reused_existing']}  "
+                  f"no_ts={counts['no_timestamp']}  thumb_fail={counts['thumb_fail']}  "
+                  f"{rate:.1f} files/s  last_health={last_health}")
+            last_print = now
 
-    out = {
-        "version": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
-        "count": counts["total"],
-        "items": items,
+    # Sort output deterministically by img path
+    items_out.sort(key=lambda x: x.get("img") or "")
+
+    out_doc = {
+        "version": utc_now().isoformat().replace("+00:00", "Z"),
+        "count": len(items_out),
+        "items": items_out,
         "stats": counts,
         "failures": {
-            "exif": failed_exif[:200],     # cap sample to keep file reasonable
+            "exif": failed_exif[:200],
             "thumb": failed_thumb[:200],
         }
     }
 
     print("-- writing output atomically:", OUT_JSON)
-    atomic_write_json(OUT_JSON, out)
+    atomic_write_json(OUT_JSON, out_doc)
 
+    # Report file
+    os.makedirs(REPORTS_DIR, exist_ok=True)
+    end = utc_now()
+    report_path = os.path.join(REPORTS_DIR, f"index_build_{utc_stamp(end)}.json")
+    report = {
+        "version": 1,
+        "generatedAt": end.isoformat().replace("+00:00", "Z"),
+        "durationSeconds": int((end - start).total_seconds()),
+        "output": "data/source/images.json",
+        "stats": counts,
+        "failuresSample": {
+            "exif": failed_exif[:50],
+            "thumb": failed_thumb[:50],
+        }
+    }
+    atomic_write_json(report_path, report)
+
+    print("-- wrote report:", report_path)
     print("Done.")
     print(json.dumps(counts, indent=2))
-    if failed_exif:
-        print(f"EXIF failures (sample {min(len(failed_exif),200)}): see OUT_JSON.failures.exif")
-    if failed_thumb:
-        print(f"Thumb failures (sample {min(len(failed_thumb),200)}): see OUT_JSON.failures.thumb")
+
 
 if __name__ == "__main__":
     main()
