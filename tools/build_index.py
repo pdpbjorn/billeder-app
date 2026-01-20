@@ -5,7 +5,7 @@ import subprocess
 import time
 import tempfile
 from datetime import datetime, timezone
-from typing import Dict, List, Optional, Tuple
+from typing import Any, Dict, List, Optional, Tuple
 
 PHOTO_ROOT = "/mnt/kDrive/Foto"
 OUT_JSON = "/srv/billeder-repo/data/source/images.json"
