@@ -11,11 +11,12 @@ import time
 from dataclasses import dataclass
 from datetime import datetime, date, timezone
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Any, Dict, List, Optional
 
 REPO = Path("/srv/billeder-repo")
 
 IMAGES_JSON = REPO / "data/source/images.json"
+AREAS_GEOJSON = REPO / "areas.geo.json"
 TRIPS_JSON = REPO / "trips.json"
 
 OUT_TID = REPO / "data/tid"
@@ -23,10 +24,6 @@ OUT_STED = REPO / "data/sted"
 OUT_ANV = REPO / "data/anvendelse"
 OUT_PROB = REPO / "data/problems"
 REPORTS_DIR = REPO / "reports"
-
-# NOTE: runtime should not need areas.geo.json anymore once sted datasets exist.
-# We keep sted outputs as already produced by the pipeline; the app will load data/sted/index.json + data/sted/<id>.geo.json.
-AREAS_GEOJSON = REPO / "areas.geo.json"
 
 try:
     from shapely.geometry import shape, Point
@@ -37,6 +34,11 @@ except Exception as e:
         "Install: sudo apt-get update && sudo apt-get install -y python3-shapely\n"
         f"Original error: {e}"
     )
+
+
+# -----------------------------
+# Utilities
+# -----------------------------
 
 def utc_now() -> datetime:
     return datetime.now(timezone.utc).replace(microsecond=0)
@@ -87,8 +89,40 @@ def decade_label(year: int) -> str:
 def fc(features: List[Dict[str, Any]]) -> Dict[str, Any]:
     return {"type": "FeatureCollection", "features": features}
 
+def build_time_index(counts_by_month: Dict[str, int]) -> Dict[str, Any]:
+    months_sorted = sorted(counts_by_month.keys())
+    decade_map: Dict[str, Dict[int, List[str]]] = {}
+    for mid in months_sorted:
+        y = int(mid.split("-")[0])
+        decade_map.setdefault(decade_label(y), {}).setdefault(y, []).append(mid)
+
+    idx = {"decades": []}
+    for dlab in sorted(decade_map.keys()):
+        years_block = []
+        for y in sorted(decade_map[dlab].keys()):
+            months_block = [{"id": mid, "count": counts_by_month[mid]} for mid in decade_map[dlab][y]]
+            years_block.append({"id": f"{y:04d}", "months": months_block})
+        idx["decades"].append({"id": dlab, "years": years_block})
+    return idx
+
+def progress_line(start_ts: float, n: int, total: int, extra: str = "") -> str:
+    elapsed = max(0.001, time.time() - start_ts)
+    rate = n / elapsed
+    return f"[{utc_iso()}] {n}/{total}  {rate:.1f} items/s  elapsed={int(elapsed)}s{('  ' + extra) if extra else ''}"
+
+
+# -----------------------------
+# Geo feature mapping (Option 2)
+# -----------------------------
+
 def feature_from_item(item: Dict[str, Any]) -> Dict[str, Any]:
-    # thumb path is derived in app; no need to store it
+    """
+    Output schema aligned to existing app:
+      properties.image
+      properties.timestamp
+      properties.camera
+    Geometry: Point if coords exist, else null.
+    """
     lat = item.get("lat")
     lon = item.get("lon")
 
@@ -97,13 +131,17 @@ def feature_from_item(item: Dict[str, Any]) -> Dict[str, Any]:
         geom = {"type": "Point", "coordinates": [lon, lat]}
 
     props = {
-        "img": item.get("img"),
-        "ts": item.get("ts") or "",
+        "image": item.get("img"),                # <— renamed
+        "timestamp": item.get("ts") or "",       # <— renamed
         "camera": item.get("camera") or "",
     }
     return {"type": "Feature", "geometry": geom, "properties": props}
 
-# ---- Areas (still used for generating sted datasets) ----
+
+# -----------------------------
+# Areas
+# -----------------------------
+
 @dataclass
 class Area:
     area_id: str
@@ -132,7 +170,11 @@ def match_area(areas: List[Area], lon: float, lat: float) -> Optional[Area]:
             return a
     return None
 
-# ---- Trips ----
+
+# -----------------------------
+# Trips
+# -----------------------------
+
 @dataclass
 class Trip:
     trip_id: str
@@ -172,29 +214,13 @@ def match_trip(trips: List[Trip], dt: datetime) -> Optional[Trip]:
             return t
     return None
 
-def build_time_index(counts_by_month: Dict[str, int]) -> Dict[str, Any]:
-    months_sorted = sorted(counts_by_month.keys())
-    decade_map: Dict[str, Dict[int, List[str]]] = {}
-    for mid in months_sorted:
-        y = int(mid.split("-")[0])
-        decade_map.setdefault(decade_label(y), {}).setdefault(y, []).append(mid)
 
-    idx = {"decades": []}
-    for dlab in sorted(decade_map.keys()):
-        years_block = []
-        for y in sorted(decade_map[dlab].keys()):
-            months_block = [{"id": mid, "count": counts_by_month[mid]} for mid in decade_map[dlab][y]]
-            years_block.append({"id": f"{y:04d}", "months": months_block})
-        idx["decades"].append({"id": dlab, "years": years_block})
-    return idx
-
-def progress_line(start_ts: float, n: int, total: int, extra: str = "") -> str:
-    elapsed = max(0.001, time.time() - start_ts)
-    rate = n / elapsed
-    return f"[{utc_iso()}] {n}/{total}  {rate:.1f} items/s  elapsed={int(elapsed)}s{('  ' + extra) if extra else ''}"
+# -----------------------------
+# Main
+# -----------------------------
 
 def main() -> int:
-    t0 = time.time()
+    start_clock = time.time()
     started = utc_now()
 
     for p in (IMAGES_JSON, AREAS_GEOJSON, TRIPS_JSON):
@@ -215,17 +241,20 @@ def main() -> int:
     area_name = {a.area_id: a.name for a in areas}
     trip_by_id = {t.trip_id: t for t in trips}
 
+    # Main datasets
     by_month: Dict[str, List[Dict[str, Any]]] = {}
     by_area: Dict[str, List[Dict[str, Any]]] = {}
     by_trip: Dict[str, List[Dict[str, Any]]] = {}
 
-    # Problems:
+    # Problems
     prob_no_ts: List[Dict[str, Any]] = []
     prob_unmatched_geom: List[Dict[str, Any]] = []
 
-    # New: problems/no-coordinates segmented by month
+    # Problems/no-coordinates segmented
     prob_no_coords_by_month: Dict[str, List[Dict[str, Any]]] = {}
     prob_no_coords_no_ts: List[Dict[str, Any]] = []
+
+    total = len(items)
 
     for n, item in enumerate(items, start=1):
         feat = feature_from_item(item)
@@ -245,7 +274,7 @@ def main() -> int:
             if tr:
                 by_trip.setdefault(tr.trip_id, []).append(feat)
 
-        # Place
+        # Place + problems
         if lat is None or lon is None:
             if dt is None:
                 prob_no_coords_no_ts.append(feat)
@@ -254,13 +283,17 @@ def main() -> int:
         else:
             ar = match_area(areas, float(lon), float(lat))
             if ar is None:
-                prob_unmatched_geom.append(feat)  # renamed bucket
+                prob_unmatched_geom.append(feat)
             else:
                 by_area.setdefault(ar.area_id, []).append(feat)
 
-        if n % 5000 == 0 or n == len(items):
-            extra = f"no-ts={len(prob_no_ts)} no-coords={sum(len(v) for v in prob_no_coords_by_month.values())+len(prob_no_coords_no_ts)} unmatched-geom={len(prob_unmatched_geom)}"
-            print(progress_line(t0, n, len(items), extra))
+        if n % 5000 == 0 or n == total:
+            extra = (
+                f"no-ts={len(prob_no_ts)} "
+                f"no-coords={sum(len(v) for v in prob_no_coords_by_month.values())+len(prob_no_coords_no_ts)} "
+                f"unmatched-geometry={len(prob_unmatched_geom)}"
+            )
+            print(progress_line(start_clock, n, total, extra))
 
     # ---- Write Tid ----
     OUT_TID.mkdir(parents=True, exist_ok=True)
@@ -307,9 +340,10 @@ def main() -> int:
                 "comment": t.comment,
                 "startDate": t.start.isoformat(),
                 "endDate": t.end.isoformat(),
-                "filename": t.filename,   # <— added back for UseOnMap(KMLfile)
+                "filename": t.filename,   # <-- required for UseOnMap(KMLfile)
                 "count": len(feats),
             }
+
         group_map.setdefault(group, []).append(entry)
 
     anv_index = {"groups": []}
@@ -321,13 +355,10 @@ def main() -> int:
     # ---- Write Problems ----
     OUT_PROB.mkdir(parents=True, exist_ok=True)
 
-    # no-timestamp (all images missing dt)
     atomic_write_json(OUT_PROB / "no-timestamp.geo.json", fc(prob_no_ts))
-
-    # unmatched renamed:
     atomic_write_json(OUT_PROB / "unmatched-geometry.geo.json", fc(prob_unmatched_geom))
 
-    # New folder for segmented no-coordinates
+    # Segmented no-coordinates folder
     no_coords_dir = OUT_PROB / "no-coordinates"
     no_coords_dir.mkdir(parents=True, exist_ok=True)
 
@@ -343,7 +374,6 @@ def main() -> int:
     }
     atomic_write_json(no_coords_dir / "index.json", no_coords_index)
 
-    # problems/index.json is now a small "directory of problems"
     problems_index = {
         "datasets": {
             "no-timestamp": {"path": "data/problems/no-timestamp.geo.json", "count": len(prob_no_ts)},
@@ -357,7 +387,7 @@ def main() -> int:
     # ---- Report ----
     ended = utc_now()
     report = {
-        "version": 3,
+        "version": 4,
         "generatedAt": utc_iso(ended),
         "durationSeconds": int((ended - started).total_seconds()),
         "inputs": {
@@ -389,6 +419,7 @@ def main() -> int:
 
     print("Done.")
     return 0
+
 
 if __name__ == "__main__":
     raise SystemExit(main())
