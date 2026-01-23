@@ -252,6 +252,7 @@ function loadData(){
 
 //fill areas dropdown - enable actions on select
 //New area dropdown
+/*
 function makeAreaLinks(theAreas){
 	
 
@@ -259,6 +260,26 @@ function makeAreaLinks(theAreas){
 		$('#dropPlace').append($("<li/>").append(  $("<a/>",{onclick:"injectArea(" + index + ")",html:feature.properties.name ,href:"#"})))
 		
 	})
+}
+*/
+function makeAreaLinksFromIndex(stedIndex){
+  $('#dropPlace').empty();
+
+  stedIndex.forEach(a => {
+    // Optionally show count:
+     const label = '${a.name} (${a.count})';
+    //const label = a.name;
+
+    $('#dropPlace').append(
+      $("<li/>").append(
+        $("<a/>", {
+          onclick: "injectAreaById('" + a.id + "')",
+          html: label,
+          href: "#"
+        })
+      )
+    );
+  });
 }
 
 //fill trip dropdown - enable actions on select
@@ -594,6 +615,23 @@ function injectTrip(KMLfile, startDate, endDate){
 }
 
 //-------- END NEW function from ChatGPT
+
+function injectAreaById(areaId){
+  var url = "data/sted/" + areaId + ".geo.json";
+
+  $.getJSON(url, function(json){
+    setCurrentDataset(json);
+
+    if (document.getElementById("Choice-of-list").checked) {
+      buildTiles(currentDataset);
+    } else {
+      window.location.href = "#" + showOnMap(currentDataset);
+    }
+  }).fail(function(){
+    alert("Could not load dataset: " + url);
+  });
+}
+
 
 function injectArea(areaIndex){
   // For now, keep compatibility with existing menu that passes "areaIndex"
