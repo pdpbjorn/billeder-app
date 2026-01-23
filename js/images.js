@@ -268,22 +268,22 @@ function makeTripLinks(theTrips){
 		window.location.href = "#" + UseOnMap(event.target.value.split("&")[0]);
 	})
 */
-	theTrips.grupper.forEach(gruppe =>
+	theTrips.groups.forEach(group =>
 		{
 
 
 			
 			var Gruppe = $("<li/>",{"class":"dropdown"})
-					.append($("<a/>",{html:gruppe.designation,href:"#"}))
+					.append($("<a/>",{html:group.title,href:"#"}))
 					.appendTo("#dropTrips") //add a trip type grouper
 				var GruppeTureListe = ($("<ul/>")).appendTo(Gruppe) 
 			//return gruppe.ture	
 
 			
-			gruppe.ture.forEach(tur =>
+			group.trips.forEach(trip =>
 				{
 				 $("<li/>")
-						.append($("<a/>",{href:"#",html:tur.designation,onclick:"injectTrip('" + tur.filename + "', '" + tur.startDate + "', '" + tur.endDate + "')"}))
+						.append($("<a/>",{href:"#",html:trip.title,onclick:"injectTrip('" + trip.filename + "', '" + trip.startDate + "', '" + trip.endDate + "')"}))
 						.appendTo(GruppeTureListe)
 				}
 				) //and append the months of the year
