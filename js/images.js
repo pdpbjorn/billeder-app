@@ -263,11 +263,9 @@ function makeAreaLinks(theAreas){
 
 //fill trip dropdown - enable actions on select
 
+/*----Begin old function 
 function makeTripLinks(theTrips){
-	/*$('#dropTrip').on( "change", function( event ) {  //on selection of trip, call function to mappage with this trip, navigate to it
-		window.location.href = "#" + UseOnMap(event.target.value.split("&")[0]);
-	})
-*/
+
 	theTrips.groups.forEach(group =>
 		{
 
@@ -290,14 +288,48 @@ function makeTripLinks(theTrips){
 			}
 		)
 
-/*
-		function(grp){
-		 OG = $("<optgroup\>",{label:grp.designation}).appendTo("#dropTrip") // create group in dropdown
-		 grp.ture.forEach( tur => OG.append($("<option/>",{value:tur.filename + "&" + tur.startDate + "&" + tur.endDate ,"class":"anOption"}).text(tur.designation).attr("title",tur.title)))//create dropdown entry
 
-		})
-*/
 	}
+//---------END Old function
+*/
+
+//--------Begin NEW function from ChatGPT
+function makeTripLinks(theTrips){
+
+  $("#dropTrips").empty(); // prevent duplicates on reload
+
+  theTrips.groups.forEach(group => {
+
+    // NEW: group.group instead of group.title
+    var Gruppe = $("<li/>",{"class":"dropdown"})
+      .append($("<a/>",{html:group.group,href:"#"}))
+      .appendTo("#dropTrips");
+
+    var GruppeTureListe = $("<ul/>").appendTo(Gruppe);
+
+    group.trips.forEach(trip => {
+
+      $("<li/>")
+        .append($("<a/>",{
+          href:"#",
+          html: trip.title,   // still correct
+		  title: trip.comment,
+          onclick:
+            "injectTrip('" +
+            trip.filename + "','" +
+            trip.startDate + "','" +
+            trip.endDate + "')"
+        }))
+        .appendTo(GruppeTureListe);
+
+    });
+
+  });
+}
+
+
+
+//--------End NEW function from ChatGPT
 
 //fill months dropdown - enable action on select to load thumbs from the month
 function makeMonthLinks(theDataset){
