@@ -111,6 +111,23 @@ screen.addEventListener("orientationchange", function () {
 function initMap(){
 	//function runs when map API is ready - not used but required by Maps API
 }
+
+
+//new function from ChatGPT
+
+function setCurrentDataset(json){
+  // Ensure local per-selection indexes for image browsing / preload logic
+  if (json && json.features) {
+    json.features.forEach((f, i) => {
+      if (!f.properties) f.properties = {};
+      f.properties.index = i;
+    });
+  }
+  currentDataset = json;
+}
+
+//end new function
+
 /* SECTION main setup of environment */
 /* SECTION main setup of environment */
 /* SECTION main setup of environment */
@@ -119,8 +136,7 @@ function initMap(){
 
 
 
-//setup datasources
-//function started by index.html
+
 /*  old function
 function loadData(){
 	$('select').selectmenu().selectmenu('disable'); //disable dropdowns until data are ready
@@ -169,6 +185,9 @@ function loadData(){
 */
 
 //new function from ChatGPT
+
+//setup datasources
+//function started by index.html
 function loadData(){
   $('select').selectmenu().selectmenu('disable');
 
@@ -414,6 +433,8 @@ function injectNoDate(){ //populate thumbpage with images without timestamp
 	)
 }
 
+/* ------ START  old function
+
 function injectMonth(month){ //populate thumbpage or map with images from specific month
 	//if ($("#Choice-of-list").is(':checked')) //populate thumbpage (buildTiles)
 	if (document.getElementById("Choice-of-list").checked) //populate thumbpage (buildTiles)
@@ -438,6 +459,31 @@ function injectMonth(month){ //populate thumbpage or map with images from specif
 }
 
 
+// ------- END old function
+*/
+
+//--------NEW function from ChatGPT
+function injectMonth(month){ //populate thumbpage or map with images from specific month
+  var url = "data/tid/" + month + ".geo.json";
+
+  $.getJSON(url, function(json){
+    setCurrentDataset(json);
+
+    if (document.getElementById("Choice-of-list").checked) {//list view is chosen
+      buildTiles(currentDataset);
+    } else {
+      window.location.href = "#" + showOnMap(getGeotaggedFeatures(currentDataset));
+    }
+  }).fail(function(){
+    alert("Could not load dataset: " + url);
+  });
+}
+
+
+//-------END NEW function
+
+
+/*----Begin old function 
 function injectArea(areaIndex){ //populate thumbpage or map with images from specific area
 	if (document.getElementById("Choice-of-list").checked)//populate thumbpage (buildTiles)
 	{
@@ -449,6 +495,12 @@ function injectArea(areaIndex){ //populate thumbpage or map with images from spe
 		window.location.href = "#" + showOnMap({"type":"FeatureCollection","features":turf.pointsWithinPolygon(getGeotaggedFeatures(theDataset), theAreas.features[areaIndex]).features})
 	}
 }
+	
+//---------END Old function
+*/
+
+
+/*----Begin old function 
 function injectTrip(KMLfile,startDate,endDate){
 	tripPixDates.startDate = startDate;
 	tripPixDates.endDate = endDate;
@@ -467,6 +519,69 @@ function injectTrip(KMLfile,startDate,endDate){
 		window.location.href = "#" + UseOnMap(KMLfile)
 	}
 }
+
+//---------END Old function
+*/
+
+
+//--------BEGIN NEW function from ChatGPT
+
+
+
+function injectTrip(KMLfile, startDate, endDate){
+  tripPixDates.startDate = startDate;
+  tripPixDates.endDate = endDate;
+
+  if (document.getElementById("Choice-of-list").checked) {
+    // Find trip id by matching filename in theTrips (compat bridge)
+    var tripId = null;
+    try {
+      theTrips.groups.forEach(g => {
+        g.trips.forEach(t => {
+          if (t.filename === KMLfile) tripId = t.id;
+        });
+      });
+    } catch(e){}
+
+    if (!tripId) {
+      alert("Could not resolve tripId for KML: " + KMLfile);
+      return;
+    }
+
+    var url = "data/anvendelse/" + tripId + ".geo.json";
+    $.getJSON(url, function(json){
+      setCurrentDataset(json);
+      buildTiles(currentDataset);
+    }).fail(function(){
+      alert("Could not load dataset: " + url);
+    });
+
+  } else {
+    window.location.href = "#" + UseOnMap(KMLfile);
+  }
+}
+
+//-------- END NEW function from ChatGPT
+
+function injectArea(areaIndex){
+  // For now, keep compatibility with existing menu that passes "areaIndex"
+  var areaId = theAreas.features[areaIndex].properties.id;
+  var url = "data/sted/" + areaId + ".geo.json";
+
+  $.getJSON(url, function(json){
+    setCurrentDataset(json);
+
+    if (document.getElementById("Choice-of-list").checked) {
+      buildTiles(currentDataset);
+    } else {
+      window.location.href = "#" + showOnMap(currentDataset);
+    }
+  }).fail(function(){
+    alert("Could not load dataset: " + url);
+  });
+}
+
+//-------END NEW function
 
 /* SECTION Display builders*/
 /* SECTION Display builders*/
