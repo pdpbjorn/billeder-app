@@ -13,6 +13,17 @@
 	var addedMarkers = []; //array of markers added to the map for geotagging
 	var textFile = null;
 	var tripPixDates = {}; //start and enddates for the selected trip
+
+	//From ChatGPT:
+	var tidIndex = null;
+var stedIndex = null;
+var anvIndex = null;
+
+// New: current selection dataset (replaces the huge global dataset later)
+var currentDataset = null;
+ //End chatGPT
+
+
 /*Ø SECTION General behavior*/	
 /*Ø SECTION General behavior*/	
 /*Ø SECTION General behavior*/	
@@ -110,6 +121,7 @@ function initMap(){
 
 //setup datasources
 //function started by index.html
+/*  old function
 function loadData(){
 	$('select').selectmenu().selectmenu('disable'); //disable dropdowns until data are ready
 
@@ -153,18 +165,71 @@ function loadData(){
 	})
 
 }
-/*
-//fill areas dropdown - enable actions on select
-function makeAreaLinks(theAreas){
-	$('#areaSelect').on( "change", function( event ) { //on selection of area, call function to create thumbs for this area
-		injectArea(event.target.value);
-	})
-
-	$.each(theAreas.features,function(index,feature){ // create the dropdown entries
-		$('#areaSelect').append($("<option/>",{value:index,"class":"anOption"}).text(feature.properties.name));
-	})
-}
+ end old funtcion
 */
+
+//new function from ChatGPT
+function loadData(){
+  $('select').selectmenu().selectmenu('disable');
+
+  // NEW: load the three indexes
+  $.getJSON("data/tid/index.json", function(json) {
+    tidIndex = json;
+    // do not call makeMonthLinks yet (we keep old flow for now)
+  });
+
+  $.getJSON("data/sted/index.json", function(json) {
+    stedIndex = json;
+    // do not call makeAreaLinks yet (we keep old flow for now)
+  });
+
+  $.getJSON("data/anvendelse/index.json", function(json) {
+    anvIndex = json;
+    // do not call makeTripLinks yet (we keep old flow for now)
+  });
+
+  // existing loads (keep for now)
+  $.getJSON("areas.geo.json", function(json) {
+    theAreas = json;
+    makeAreaLinks(theAreas);
+  });
+
+  $.getJSON("trips.json", function(json) {
+    theTrips = json;
+    makeTripLinks(theTrips);
+  });
+
+  $.getJSON("images.geo.json", function(json) {
+    json.features = _.sortBy(json.features, function(feature){ return feature.properties.timestamp });
+    $.each(json.features,function(index,feature){
+      feature.properties.index = index;
+    })
+    theDataset = {"type":"FeatureCollection","features":json.features};
+
+    $('#totalcount').html(theDataset.features.length)
+    $('#datedcount').html(_.filter(theDataset.features,function(feature){return feature.properties.timestamp}).length)
+    $('#gtcount').html(getGeotaggedFeatures(theDataset).features.length)
+
+    makeMonthLinks(theDataset);
+
+    $('#spinner').remove();
+    $('select').selectmenu('enable');
+
+    const li = document.querySelectorAll('li.dropdown a');
+    li.forEach((each)=>{
+      if (each.nextElementSibling !== null) {
+        each.addEventListener('click', e=>{
+          if (window.innerWidth < 1068) {
+            e.target.parentElement.classList.toggle("active");
+          }
+        })
+      }
+    })
+  });
+}
+
+
+//end new function
 
 //fill areas dropdown - enable actions on select
 //New area dropdown
@@ -178,18 +243,7 @@ function makeAreaLinks(theAreas){
 }
 
 //fill trip dropdown - enable actions on select
-/*
-function makeTripLinks(theTrips){
-	$('#tripSelect').on( "change", function( event ) {  //on selection of trip, call function to mappage with this trip, navigate to it
-		window.location.href = "#" + UseOnMap(event.target.value.split("&")[0]);
-	})
 
-	theTrips.grupper.forEach(function(grp){
-		 OG = $("<optgroup\>",{label:grp.designation}).appendTo("#tripSelect") // create group in dropdown
-		 grp.ture.forEach( tur => OG.append($("<option/>",{value:tur.filename + "&" + tur.startDate + "&" + tur.endDate ,"class":"anOption"}).text(tur.designation).attr("title",tur.title)))//create dropdown entry
-	})
-}
-*/
 function makeTripLinks(theTrips){
 	/*$('#dropTrip').on( "change", function( event ) {  //on selection of trip, call function to mappage with this trip, navigate to it
 		window.location.href = "#" + UseOnMap(event.target.value.split("&")[0]);
