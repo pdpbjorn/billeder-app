@@ -202,22 +202,22 @@ function loadData(){
     // do not call makeAreaLinks yet (we keep old flow for now)
   });
 
-  $.getJSON("data/anvendelse/index.json", function(json) {
-    anvIndex = json;
-    // do not call makeTripLinks yet (we keep old flow for now)
-  });
+$.getJSON("data/anvendelse/index.json", function(json) {
+  anvIndex = json;
+  makeTripLinks(anvIndex);
+});
 
   // existing loads (keep for now)
   $.getJSON("areas.geo.json", function(json) {
     theAreas = json;
     makeAreaLinks(theAreas);
   });
-
+/* old
   $.getJSON("trips.json", function(json) {
     theTrips = json;
     makeTripLinks(theTrips);
   });
-
+*/
   $.getJSON("images.geo.json", function(json) {
     json.features = _.sortBy(json.features, function(feature){ return feature.properties.timestamp });
     $.each(json.features,function(index,feature){
