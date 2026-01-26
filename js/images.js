@@ -813,7 +813,7 @@ function buildTiles(dataslice){
 //Create the imagepage to display one photo	
 function imgPage(imageIndex){
 	currentImageIndex = imageIndex
-	var info = theDataset.features[imageIndex].properties //Metadata of the current image
+	var info = currentDataset.features[imageIndex].properties //Metadata of the current image
 		$("<div/>",{"data-role":"page", "class":"jqm-demos ui-page ui-page-theme-b ui-page-active imagepage", "data-quicklinks":"true", "id":"page-" + imageIndex})
 			.appendTo($("body"))
 			//Infopanel
