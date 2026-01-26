@@ -1,5 +1,5 @@
 /*Ø SECTION Global variables*/
-	var theDataset; //Global variable storing the data loaded from geojson
+	//var theDataset; //Global variable storing the data loaded from geojson
 	var theAreas; //a set of geograpical areas (countries) for cookie cutting - loaded from JSON file
 	var theTrips; //a list with descriptions of the trips available as KML - loaded from JSON file
 	let map; //global variable storing the Google Maps map
