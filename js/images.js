@@ -207,12 +207,13 @@ $.getJSON("data/anvendelse/index.json", function(json) {
   makeTripLinks(anvIndex);
 });
 
+/* old
   // existing loads (keep for now)
   $.getJSON("areas.geo.json", function(json) {
     theAreas = json;
     makeAreaLinks(theAreas);
   });
-/* old
+
   $.getJSON("trips.json", function(json) {
     theTrips = json;
     makeTripLinks(theTrips);
@@ -267,8 +268,8 @@ function makeAreaLinksFromIndex(stedIndex){
 
   stedIndex.forEach(a => {
     // Optionally show count:
-     const label = '${a.name} (${a.count})';
-    //const label = a.name;
+     //const label = ${a.name} (${a.count});
+    const label = a.name;
 
     $('#dropPlace').append(
       $("<li/>").append(
