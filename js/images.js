@@ -338,6 +338,7 @@ function makeTripLinks(theTrips){
 		  title: trip.comment,
           onclick:
             "injectTrip('" +
+			trip.id + "','" +
             trip.filename + "','" +
             trip.startDate + "','" +
             trip.endDate + "')"
@@ -581,28 +582,13 @@ function injectTrip(KMLfile,startDate,endDate){
 //--------BEGIN NEW function from ChatGPT
 
 
-
-function injectTrip(KMLfile, startDate, endDate){
+function injectTrip(tripId, KMLfile, startDate, endDate){
   tripPixDates.startDate = startDate;
   tripPixDates.endDate = endDate;
 
   if (document.getElementById("Choice-of-list").checked) {
-    // Find trip id by matching filename in theTrips (compat bridge)
-    var tripId = null;
-    try {
-      theTrips.groups.forEach(g => {
-        g.trips.forEach(t => {
-          if (t.filename === KMLfile) tripId = t.id;
-        });
-      });
-    } catch(e){}
-
-    if (!tripId) {
-      alert("Could not resolve tripId for KML: " + KMLfile);
-      return;
-    }
-
     var url = "data/anvendelse/" + tripId + ".geo.json";
+
     $.getJSON(url, function(json){
       setCurrentDataset(json);
       buildTiles(currentDataset);
@@ -614,6 +600,7 @@ function injectTrip(KMLfile, startDate, endDate){
     window.location.href = "#" + UseOnMap(KMLfile);
   }
 }
+
 
 //-------- END NEW function from ChatGPT
 
