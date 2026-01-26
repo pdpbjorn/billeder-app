@@ -633,7 +633,7 @@ function injectAreaById(areaId){
   });
 }
 
-
+/*
 function injectArea(areaIndex){
   // For now, keep compatibility with existing menu that passes "areaIndex"
   var areaId = theAreas.features[areaIndex].properties.id;
@@ -651,6 +651,8 @@ function injectArea(areaIndex){
     alert("Could not load dataset: " + url);
   });
 }
+*/
+
 
 //-------END NEW function
 
