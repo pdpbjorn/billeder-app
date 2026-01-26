@@ -1,7 +1,7 @@
 /*Ø SECTION Global variables*/
 	//var theDataset; //Global variable storing the data loaded from geojson
-	var theAreas; //a set of geograpical areas (countries) for cookie cutting - loaded from JSON file
-	var theTrips; //a list with descriptions of the trips available as KML - loaded from JSON file
+	//var theAreas; //a set of geograpical areas (countries) for cookie cutting - loaded from JSON file
+	//var theTrips; //a list with descriptions of the trips available as KML - loaded from JSON file
 	let map; //global variable storing the Google Maps map
 	var slideShowOn; //boolean variable which know if the image slideshow is running
 	var thumbPageScroll; //variable storing the vertical scroll position of the thumbnail page before some other page was loaded - useful for restoring scroll position
@@ -227,7 +227,7 @@ function loadData(){
 
 $.getJSON("data/anvendelse/index.json", function(json) {
   anvIndex = json;
-  makeTripLinks(anvIndex);
+  makeTripLinksFromIndex(anvIndex);
   indexLoadedOne();
 });
 
@@ -346,11 +346,11 @@ function makeTripLinks(theTrips){
 */
 
 //--------Begin NEW function from ChatGPT
-function makeTripLinks(theTrips){
+function makeTripLinksFromIndex(anvIndex){
 
   $("#dropTrips").empty(); // prevent duplicates on reload
 
-  theTrips.groups.forEach(group => {
+  anvIndex.groups.forEach(group => {
 
     // NEW: group.group instead of group.title
     var Gruppe = $("<li/>",{"class":"dropdown"})
