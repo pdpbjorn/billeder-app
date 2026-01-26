@@ -505,7 +505,7 @@ function makeMonthLinks(theDataset){
 		$('#dropMonths').append($("<li/>").append($("<a/>",{onclick:"injectNoDate()",html:"udenfor tiden" ,href:"#"})))
 
 		
-		$.each( _.groupBy(theDataset.features //for each decade group of images
+		$.each( _.groupBy(currentDataset.features //for each decade group of images
 		,
 				function(feature){if(feature.properties.timestamp){return feature.properties.timestamp.substring(0,3)}}
 				)
@@ -854,7 +854,7 @@ function imgPage(imageIndex){
 			.append($('<div/>',{"class":"pagecontents","data-role":"content"})
 				.append($('<div/>',{"class":"ui-panel-wrapper"})
 					//the image
-					.append($("<img>",{src:"/Foto/" + theDataset.features[imageIndex].properties.image,id:"image0"})
+					.append($("<img>",{src:"/Foto/" + currentDataset.features[imageIndex].properties.image,id:"image0"})
 					.css({"max-height": $( window ).height() - 6 + "px","max-width": $( window ).width() - 6 + "px","display":"block","margin-right":"auto","margin-left":"auto"})
 					)
 					//button to cloase image
@@ -889,13 +889,13 @@ function imgPage(imageIndex){
 						.on( "click", function(){bladr(true)})
 					)
 					//if image is geocoded then show button
-					.append((theDataset.features[imageIndex].geometry)
+					.append((currentDataset.features[imageIndex].geometry)
 						?
 						$("<button/>",{"data-role":"button", "data-enhanced":"true", "class":"ui-icon ui-button ui-button-icon-only ui-widget ui-icon-location ui-corner-all"})
 							.text("No text")
 							.css({"position":"absolute","top":"2%","right":"12%"})
 							.on("click", function( event ) {
-								loc = showOnMap({"type":"FeatureCollection","features":[theDataset.features[imageIndex]]})
+								loc = showOnMap({"type":"FeatureCollection","features":[currentDataset.features[imageIndex]]})
 								window.location.href = "#" + loc
 							 })
 						:
@@ -953,9 +953,9 @@ function imgPage(imageIndex){
 		window.location.href = "#page-" + imgPage(focusImageIndex + ((forth)?1:-1));
 		$("#page-" + focusImageIndex).remove();
 		//Preload images
-		$("<img/>",{"class":"cacheImg","id":"cacheImg" + focusImageIndex + ((forth)?2:-2),"src":theDataset.features[focusImageIndex + ((forth)?2:-2)].properties.image})
-		$("<img/>",{"class":"cacheImg","id":"cacheImg" + focusImageIndex + ((forth)?3:-3),"src":theDataset.features[focusImageIndex + ((forth)?3:-3)].properties.image})
-		$("<img/>",{"class":"cacheImg","id":"cacheImg" + focusImageIndex + ((forth)?-1:1),"src":theDataset.features[focusImageIndex + ((forth)?-1:1)].properties.image})
+		$("<img/>",{"class":"cacheImg","id":"cacheImg" + focusImageIndex + ((forth)?2:-2),"src":currentDataset.features[focusImageIndex + ((forth)?2:-2)].properties.image})
+		$("<img/>",{"class":"cacheImg","id":"cacheImg" + focusImageIndex + ((forth)?3:-3),"src":currentDataset.features[focusImageIndex + ((forth)?3:-3)].properties.image})
+		$("<img/>",{"class":"cacheImg","id":"cacheImg" + focusImageIndex + ((forth)?-1:1),"src":currentDataset.features[focusImageIndex + ((forth)?-1:1)].properties.image})
 		
 	}
 //Put image metadata on computer clipboard - called by infobox buttons
@@ -1476,7 +1476,7 @@ function addMapControl(controlDiv, map, mapDoWhat) {
 				map.data.addGeoJson(
 					turf.pointsWithinPolygon(//create boundingbox from map bounds and cookie cut the image data
 					//minX, minY, maxX, maxY 
-						getGeotaggedFeatures(theDataset), 
+						getGeotaggedFeatures(currentDataset), 
 						turf.bboxPolygon([newBounds.getSouthWest().lng(),newBounds.getSouthWest().lat(),newBounds.getNorthEast().lng(),newBounds.getNorthEast().lat()])
 					)
 				);
@@ -1507,8 +1507,8 @@ function addMapControl(controlDiv, map, mapDoWhat) {
 				//var endDate = new Date($("#tripSelect :selected").val().split("&")[2]);
 				var startDate = new Date(tripPixDates.startDate);
 				var endDate = new Date(tripPixDates.endDate);
-				//filter theDataset by date, remove non-geotagged and plot on map
-				map.data.addGeoJson(getGeotaggedFeatures(  {"type":"FeatureCollection","features":theDataset.features.filter(f => {
+				//filter currentDataset by date, remove non-geotagged and plot on map
+				map.data.addGeoJson(getGeotaggedFeatures(  {"type":"FeatureCollection","features":currentDataset.features.filter(f => {
 					var date = new Date(f.properties.timestamp);
 					return (date >= startDate && date <= endDate);
 				  })}))
@@ -1574,7 +1574,7 @@ $("#sidepanel").append($("<div/>",{"id":"taggerbox"}).css({"height":"80%","width
 			$("#choosebox").empty();
 			var startDate = new Date($('#choosefrom').val());
 			var endDate = new Date($('#chooseuntil').val());
-			theDataset.features.filter(f => {//toggle ikke-geotaggede
+			currentDataset.features.filter(f => {//toggle ikke-geotaggede
 				var date = new Date(f.properties.timestamp);
 				var allowWithGeometry = (!f.geometry || $("#showGeotagged")[0].checked)?true:false
 				return (date >= startDate && date <= endDate && allowWithGeometry);
