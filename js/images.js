@@ -199,7 +199,7 @@ function loadData(){
 
   $.getJSON("data/sted/index.json", function(json) {
     stedIndex = json;
-    // do not call makeAreaLinks yet (we keep old flow for now)
+     makeAreaLinksFromIndex(stedIndex);
   });
 
 $.getJSON("data/anvendelse/index.json", function(json) {
