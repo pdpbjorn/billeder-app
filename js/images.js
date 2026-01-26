@@ -13,6 +13,7 @@
 	var addedMarkers = []; //array of markers added to the map for geotagging
 	var textFile = null;
 	var tripPixDates = {}; //start and enddates for the selected trip
+	var pendingIndexLoads = 3;//countdown for the index loads
 
 	//From ChatGPT:
 	var tidIndex = null;
@@ -113,6 +114,26 @@ function initMap(){
 }
 
 
+function indexLoadedOne(){
+  pendingIndexLoads--;
+  if (pendingIndexLoads <= 0) {
+    $('#spinner').remove();
+    $('select').selectmenu('enable');
+
+    // keep your mobile click toggling for nested lists
+    const li = document.querySelectorAll('li.dropdown a');
+    li.forEach((each)=>{
+      if (each.nextElementSibling !== null) {
+        each.addEventListener('click', e=>{
+          if (window.innerWidth < 1068) {
+            e.target.parentElement.classList.toggle("active");
+          }
+        })
+      }
+    });
+  }
+}
+
 //new function from ChatGPT
 
 function setCurrentDataset(json){
@@ -194,17 +215,20 @@ function loadData(){
   // NEW: load the three indexes
   $.getJSON("data/tid/index.json", function(json) {
     tidIndex = json;
-    // do not call makeMonthLinks yet (we keep old flow for now)
+    makeMonthLinksFromIndex(tidIndex);
+	indexLoadedOne();
   });
 
   $.getJSON("data/sted/index.json", function(json) {
     stedIndex = json;
      makeAreaLinksFromIndex(stedIndex);
+	 indexLoadedOne();
   });
 
 $.getJSON("data/anvendelse/index.json", function(json) {
   anvIndex = json;
   makeTripLinks(anvIndex);
+  indexLoadedOne();
 });
 
 /* old
@@ -218,7 +242,7 @@ $.getJSON("data/anvendelse/index.json", function(json) {
     theTrips = json;
     makeTripLinks(theTrips);
   });
-*/
+
   $.getJSON("images.geo.json", function(json) {
     json.features = _.sortBy(json.features, function(feature){ return feature.properties.timestamp });
     $.each(json.features,function(index,feature){
@@ -245,7 +269,13 @@ $.getJSON("data/anvendelse/index.json", function(json) {
         })
       }
     })
-  });
+  })
+
+  */
+
+  $('#totalcount').html("—");
+$('#datedcount').html("—");
+$('#gtcount').html("—");
 }
 
 
@@ -353,6 +383,49 @@ function makeTripLinks(theTrips){
 
 
 //--------End NEW function from ChatGPT
+
+//New fkt from ChatMPT
+
+function makeMonthLinksFromIndex(tidIndex){
+  $("#dropMonths").empty();
+
+  tidIndex.decades.forEach(dec => {
+    var decLi = $("<li/>", {"class":"dropdown"})
+      .append($("<a/>", { html: dec.id, href:"#"}))
+      .appendTo("#dropMonths");
+
+    var yearsUl = $("<ul/>").appendTo(decLi);
+
+    dec.years.forEach(yr => {
+      var yrLi = $("<li/>", {"class":"dropdown"})
+        .append($("<a/>", { html: yr.id, href:"#"}))
+        .appendTo(yearsUl);
+
+      var monthsUl = $("<ul/>").appendTo(yrLi);
+
+      yr.months.forEach(m => {
+        const label = m.id; // or: `${m.id} (${m.count})`
+
+        $("<li/>")
+          .append($("<a/>", {
+            href:"#",
+            html: label,
+            onclick: "injectMonth('" + m.id + "')"
+          }))
+          .appendTo(monthsUl);
+      });
+    });
+  });
+
+  // Optional: add "no timestamp" entry at bottom of Tid:
+  $("#dropMonths").append(
+    $("<li/>").append(
+      $("<a/>", { href:"#", html:"(no timestamp)", onclick:"injectNoDate()" })
+    )
+  );
+}
+
+//END new
 
 //fill months dropdown - enable action on select to load thumbs from the month
 function makeMonthLinks(theDataset){
@@ -480,6 +553,25 @@ function makeMonthLinks(theDataset){
 /* SECTION functions to control the population of the thumbpage or the map*/
 /* SECTION functions to control the population of the thumbpage or the map*/
 
+//-----------START new fkt from chatGPT
+
+function injectNoDate(){
+  var url = "data/problems/no-timestamp.geo.json";
+
+  $.getJSON(url, function(json){
+    setCurrentDataset(json);
+
+    if (document.getElementById("Choice-of-list").checked) {
+      buildTiles(currentDataset);
+    } else {
+      window.location.href = "#" + showOnMap(getGeotaggedFeatures(currentDataset));
+    }
+  }).fail(function(){
+    alert("Could not load dataset: " + url);
+  });
+}
+//-----------END new fkt from chatGPT
+/* old function
 function injectNoDate(){ //populate thumbpage with images without timestamp
 	buildTiles({"type":"FeatureCollection","features": _.reject(theDataset.features,function(feature){
 			return feature.properties.timestamp 
@@ -487,7 +579,8 @@ function injectNoDate(){ //populate thumbpage with images without timestamp
 	}
 	)
 }
-
+//End old fkt
+*/
 /* ------ START  old function
 
 function injectMonth(month){ //populate thumbpage or map with images from specific month
