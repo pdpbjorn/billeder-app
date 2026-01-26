@@ -299,7 +299,7 @@ function makeAreaLinksFromIndex(stedIndex){
   stedIndex.forEach(a => {
     // Optionally show count:
      //const label = ${a.name} (${a.count});
-    const label = a.name;
+    const label = a.name + " (" + a.count + ")";
 
     $('#dropPlace').append(
       $("<li/>").append(
