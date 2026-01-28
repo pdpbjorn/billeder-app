@@ -1,425 +1,463 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-from __future__ import annotations
-
 import json
 import os
-import re
-import tempfile
-import time
+import sys
 from dataclasses import dataclass
-from datetime import datetime, date, timezone
-from pathlib import Path
-from typing import Any, Dict, List, Optional
-
-REPO = Path("/srv/billeder-repo")
-
-IMAGES_JSON = REPO / "data/source/images.json"
-AREAS_GEOJSON = REPO / "areas.geo.json"
-TRIPS_JSON = REPO / "trips.json"
-
-OUT_TID = REPO / "data/tid"
-OUT_STED = REPO / "data/sted"
-OUT_ANV = REPO / "data/anvendelse"
-OUT_PROB = REPO / "data/problems"
-REPORTS_DIR = REPO / "reports"
-
-try:
-    from shapely.geometry import shape, Point
-    from shapely.prepared import prep
-except Exception as e:
-    raise SystemExit(
-        "ERROR: Shapely is required.\n"
-        "Install: sudo apt-get update && sudo apt-get install -y python3-shapely\n"
-        f"Original error: {e}"
-    )
-
+from datetime import datetime, date
+from typing import Any, Dict, List, Optional, Tuple
 
 # -----------------------------
-# Utilities
+# Paths (adjust if needed)
 # -----------------------------
+REPO_ROOT = "/srv/billeder-repo"
 
-def utc_now() -> datetime:
-    return datetime.now(timezone.utc).replace(microsecond=0)
+IMAGES_INDEX = os.path.join(REPO_ROOT, "data/source/images.json")
+AREAS_FILE   = os.path.join(REPO_ROOT, "areas.geo.json")
+TRIPS_FILE   = os.path.join(REPO_ROOT, "trips.json")
 
-def utc_stamp(dt: Optional[datetime] = None) -> str:
-    dt = dt or utc_now()
-    return dt.strftime("%Y%m%dT%H%M%SZ")
+OUT_TID  = os.path.join(REPO_ROOT, "data/tid")
+OUT_STED = os.path.join(REPO_ROOT, "data/sted")
+OUT_ANV  = os.path.join(REPO_ROOT, "data/anvendelse")
+OUT_PROB = os.path.join(REPO_ROOT, "data/problems")
 
-def utc_iso(dt: Optional[datetime] = None) -> str:
-    dt = dt or utc_now()
-    return dt.isoformat().replace("+00:00", "Z")
+REPORTS_DIR = os.path.join(REPO_ROOT, "reports")
 
-def atomic_write_json(path: Path, obj: Any) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    fd, tmp = tempfile.mkstemp(prefix=path.name + ".", suffix=".tmp", dir=str(path.parent))
-    try:
-        with os.fdopen(fd, "w", encoding="utf-8") as f:
-            json.dump(obj, f, ensure_ascii=False, separators=(",", ":"), sort_keys=False)
-            f.flush()
-            os.fsync(f.fileno())
-        os.replace(tmp, path)
-    finally:
-        try:
-            if os.path.exists(tmp):
-                os.unlink(tmp)
-        except Exception:
-            pass
+# -----------------------------
+# Helpers
+# -----------------------------
+def ensure_dir(p: str) -> None:
+    os.makedirs(p, exist_ok=True)
 
-def parse_ts(ts: str) -> Optional[datetime]:
-    ts = (ts or "").strip()
-    if not ts:
+def atomic_write_json(path: str, obj: Any) -> None:
+    ensure_dir(os.path.dirname(path))
+    tmp = path + ".tmp"
+    with open(tmp, "w", encoding="utf-8") as f:
+        json.dump(obj, f, ensure_ascii=False, separators=(",", ":"))
+    os.replace(tmp, path)
+
+def load_json(path: str) -> Any:
+    with open(path, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+def parse_yyyy_mm_dd(s: str) -> date:
+    return datetime.strptime(s, "%Y-%m-%d").date()
+
+def month_id_from_ts(ts: str) -> Optional[str]:
+    # expects ts like "YYYY-MM-..." (ISO-ish)
+    if not ts or len(ts) < 7:
         return None
-    try:
-        ts2 = re.split(r"(Z|[+-]\d\d:\d\d)$", ts)[0]
-        return datetime.fromisoformat(ts2)
-    except Exception:
+    return ts[:7]
+
+def decade_id_from_year(y: int) -> str:
+    return f"{(y // 10) * 10}s"
+
+def feature_from_item(item: Dict[str, Any]) -> Optional[Dict[str, Any]]:
+    """
+    Convert one images.json item to a GeoJSON Feature.
+    Expected item keys (typical):
+      img (path), ts (timestamp or None), lat, lon, camera (maybe)
+    """
+    img = item.get("img")
+    if not img:
         return None
 
-def parse_iso_date(d: str) -> date:
-    return datetime.strptime(d, "%Y-%m-%d").date()
-
-def month_id(dt: datetime) -> str:
-    return f"{dt.year:04d}-{dt.month:02d}"
-
-def decade_label(year: int) -> str:
-    return f"{(year // 10) * 10}s"
-
-def fc(features: List[Dict[str, Any]]) -> Dict[str, Any]:
-    return {"type": "FeatureCollection", "features": features}
-
-def build_time_index(counts_by_month: Dict[str, int]) -> Dict[str, Any]:
-    months_sorted = sorted(counts_by_month.keys())
-    decade_map: Dict[str, Dict[int, List[str]]] = {}
-    for mid in months_sorted:
-        y = int(mid.split("-")[0])
-        decade_map.setdefault(decade_label(y), {}).setdefault(y, []).append(mid)
-
-    idx = {"decades": []}
-    for dlab in sorted(decade_map.keys()):
-        years_block = []
-        for y in sorted(decade_map[dlab].keys()):
-            months_block = [{"id": mid, "count": counts_by_month[mid]} for mid in decade_map[dlab][y]]
-            years_block.append({"id": f"{y:04d}", "months": months_block})
-        idx["decades"].append({"id": dlab, "years": years_block})
-    return idx
-
-def progress_line(start_ts: float, n: int, total: int, extra: str = "") -> str:
-    elapsed = max(0.001, time.time() - start_ts)
-    rate = n / elapsed
-    return f"[{utc_iso()}] {n}/{total}  {rate:.1f} items/s  elapsed={int(elapsed)}s{('  ' + extra) if extra else ''}"
-
-
-# -----------------------------
-# Geo feature mapping (Option 2)
-# -----------------------------
-
-def feature_from_item(item: Dict[str, Any]) -> Dict[str, Any]:
-    """
-    Output schema aligned to existing app:
-      properties.image
-      properties.timestamp
-      properties.camera
-    Geometry: Point if coords exist, else null.
-    """
+    ts = item.get("ts")  # may be None
     lat = item.get("lat")
     lon = item.get("lon")
+    camera = item.get("camera")
+
+    props: Dict[str, Any] = {
+        "image": img,
+    }
+    if ts:
+        props["timestamp"] = ts
+    if camera:
+        props["camera"] = camera
 
     geom = None
-    if lat is not None and lon is not None:
+    if isinstance(lat, (int, float)) and isinstance(lon, (int, float)):
         geom = {"type": "Point", "coordinates": [lon, lat]}
 
-    props = {
-        "image": item.get("img"),                # <— renamed
-        "timestamp": item.get("ts") or "",       # <— renamed
-        "camera": item.get("camera") or "",
-    }
-    return {"type": "Feature", "geometry": geom, "properties": props}
+    return {"type": "Feature", "properties": props, "geometry": geom}
 
+# Very small, dependency-free point-in-polygon test (ray casting)
+def point_in_poly(lon: float, lat: float, ring: List[List[float]]) -> bool:
+    inside = False
+    n = len(ring)
+    if n < 3:
+        return False
+    j = n - 1
+    for i in range(n):
+        xi, yi = ring[i][0], ring[i][1]
+        xj, yj = ring[j][0], ring[j][1]
+        intersect = ((yi > lat) != (yj > lat)) and (lon < (xj - xi) * (lat - yi) / ((yj - yi) or 1e-12) + xi)
+        if intersect:
+            inside = not inside
+        j = i
+    return inside
+
+def point_in_geometry(lon: float, lat: float, geom: Dict[str, Any]) -> bool:
+    gtype = geom.get("type")
+    if gtype == "Polygon":
+        # GeoJSON Polygon: coordinates: [ ring1, ring2(hole), ... ]
+        rings = geom.get("coordinates", [])
+        if not rings:
+            return False
+        outer = rings[0]
+        if not point_in_poly(lon, lat, outer):
+            return False
+        # ignore holes for now (good enough for your use)
+        return True
+    if gtype == "MultiPolygon":
+        # MultiPolygon: [ [ [ring...] ], [ [ring...] ], ... ]
+        polys = geom.get("coordinates", [])
+        for poly in polys:
+            if not poly:
+                continue
+            outer = poly[0]
+            if point_in_poly(lon, lat, outer):
+                return True
+        return False
+    return False
 
 # -----------------------------
-# Areas
+# Build steps
 # -----------------------------
+def load_inputs() -> Tuple[List[Dict[str, Any]], Dict[str, Any], Dict[str, Any]]:
+    images = load_json(IMAGES_INDEX)
+    areas = load_json(AREAS_FILE)
+    trips = load_json(TRIPS_FILE)
+    items = images.get("items", [])
+    return items, areas, trips
 
-@dataclass
-class Area:
-    area_id: str
-    name: str
-    prepared: Any
+def build_all_features(items: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    feats: List[Dict[str, Any]] = []
+    for it in items:
+        f = feature_from_item(it)
+        if f:
+            feats.append(f)
+    return feats
 
-def load_active_areas(path: Path) -> List[Area]:
-    data = json.loads(path.read_text(encoding="utf-8"))
-    out: List[Area] = []
-    for f in data.get("features", []):
-        props = f.get("properties") or {}
-        area_id = props.get("id")
-        name = props.get("name")
-        if not area_id or not name:
+def build_time_datasets(features: List[Dict[str, Any]]) -> Tuple[Dict[str, Any], Dict[str, List[Dict[str, Any]]], List[Dict[str, Any]]]:
+    by_month: Dict[str, List[Dict[str, Any]]] = {}
+    no_ts: List[Dict[str, Any]] = []
+
+    for f in features:
+        ts = f.get("properties", {}).get("timestamp")
+        if not ts:
+            no_ts.append(f)
             continue
+        mid = month_id_from_ts(ts)
+        if not mid:
+            no_ts.append(f)
+            continue
+        by_month.setdefault(mid, []).append(f)
+
+    # build tid/index.json in your structure
+    # decades -> years -> months
+    years_map: Dict[int, Dict[str, Any]] = {}
+    for mid, feats in by_month.items():
+        y = int(mid[:4])
+        years_map.setdefault(y, {"id": str(y), "months": []})
+        years_map[y]["months"].append({"id": mid, "count": len(feats)})
+
+    # sort months inside years
+    for y in years_map:
+        years_map[y]["months"].sort(key=lambda m: m["id"])
+
+    decades_map: Dict[str, Dict[str, Any]] = {}
+    for y, yobj in years_map.items():
+        did = decade_id_from_year(y)
+        decades_map.setdefault(did, {"id": did, "years": []})
+        decades_map[did]["years"].append(yobj)
+
+    # sort years in decades
+    for did in decades_map:
+        decades_map[did]["years"].sort(key=lambda yy: yy["id"])
+
+    # sort decades
+    decades = [decades_map[k] for k in sorted(decades_map.keys())]
+    tid_index = {"decades": decades}
+
+    return tid_index, by_month, no_ts
+
+def build_place_datasets(features: List[Dict[str, Any]], areas: Dict[str, Any]) -> Tuple[List[Dict[str, Any]], Dict[str, List[Dict[str, Any]]], List[Dict[str, Any]], List[Dict[str, Any]]]:
+    """
+    Returns:
+      sted_index_list (list of {id,name,count})
+      by_area (area-id -> features)
+      unmatched_geometry (geotagged but not inside any area)
+      no_coordinates (no geometry)
+    """
+    # active areas = features with properties.id and properties.name
+    area_list: List[Tuple[str, str, Dict[str, Any]]] = []
+    for af in areas.get("features", []):
+        pid = af.get("properties", {}).get("id")
+        pname = af.get("properties", {}).get("name")
+        geom = af.get("geometry")
+        if pid and pname and geom:
+            area_list.append((pid, pname, geom))
+
+    by_area: Dict[str, List[Dict[str, Any]]] = {pid: [] for pid, _, _ in area_list}
+    unmatched: List[Dict[str, Any]] = []
+    no_coords: List[Dict[str, Any]] = []
+
+    for f in features:
         geom = f.get("geometry")
         if not geom:
+            no_coords.append(f)
             continue
-        out.append(Area(str(area_id), str(name), prep(shape(geom))))
-    return out
+        coords = geom.get("coordinates") or []
+        if len(coords) != 2:
+            no_coords.append(f)
+            continue
+        lon, lat = coords[0], coords[1]
+        if not isinstance(lon, (int, float)) or not isinstance(lat, (int, float)):
+            no_coords.append(f)
+            continue
 
-def match_area(areas: List[Area], lon: float, lat: float) -> Optional[Area]:
-    p = Point(lon, lat)
-    for a in areas:
-        if a.prepared.contains(p):
-            return a
-    return None
+        hit = False
+        for pid, _, ageom in area_list:
+            if point_in_geometry(lon, lat, ageom):
+                by_area[pid].append(f)
+                hit = True
+                break
+        if not hit:
+            unmatched.append(f)
 
+    # build sted/index.json: only areas with photos
+    sted_index_list: List[Dict[str, Any]] = []
+    for pid, pname, _ in area_list:
+        c = len(by_area.get(pid, []))
+        if c > 0:
+            sted_index_list.append({"id": pid, "name": pname, "count": c})
 
-# -----------------------------
-# Trips
-# -----------------------------
+    # sort by name (or by count; pick what you prefer)
+    sted_index_list.sort(key=lambda x: x["name"].lower())
 
-@dataclass
-class Trip:
-    trip_id: str
-    title: str
-    comment: str
-    filename: str
-    start: date
-    end: date
-    group: str
+    return sted_index_list, by_area, unmatched, no_coords
 
-def load_trips(path: Path) -> List[Trip]:
-    data = json.loads(path.read_text(encoding="utf-8"))
-    trips: List[Trip] = []
-    for g in data.get("groups", []):
-        gname = str(g.get("group") or "Trips")
-        for t in g.get("trips", []):
-            tid = t.get("id")
+def build_trip_datasets(features: List[Dict[str, Any]], trips: Dict[str, Any]) -> Dict[str, Any]:
+    """
+    Produces:
+      anvendelse/index.json shaped like trips.json groups/trips,
+      but each trip includes count + startDate/endDate/filename/title/comment/id.
+
+    Datasets:
+      data/anvendelse/<trip-id>.geo.json only when count>0
+    """
+    out = {"groups": []}
+
+    for grp in trips.get("groups", []):
+        gname = grp.get("group") or grp.get("title") or "Ukendt"
+        out_grp = {"group": gname, "trips": []}
+
+        for trip in grp.get("trips", []):
+            tid = trip.get("id")
             if not tid:
                 continue
-            trips.append(
-                Trip(
-                    trip_id=str(tid),
-                    title=str(t.get("title") or tid),
-                    comment=str(t.get("comments") or t.get("comment") or "").strip(),
-                    filename=str(t.get("filename") or "").strip(),
-                    start=parse_iso_date(t["startDate"]),
-                    end=parse_iso_date(t["endDate"]),
-                    group=gname,
-                )
-            )
-    return trips
+            start = trip.get("startDate")
+            end = trip.get("endDate")
+            filename = trip.get("filename")
+            title = trip.get("title")
+            comment = trip.get("comment")
 
-def match_trip(trips: List[Trip], dt: datetime) -> Optional[Trip]:
-    d = dt.date()
-    for t in trips:
-        if t.start <= d <= t.end:
-            return t
-    return None
+            # Date filtering by timestamp
+            if not start or not end:
+                # If dates missing, we can’t match -> count 0
+                matched: List[Dict[str, Any]] = []
+            else:
+                sd = parse_yyyy_mm_dd(start)
+                ed = parse_yyyy_mm_dd(end)
+                matched = []
+                for f in features:
+                    ts = f.get("properties", {}).get("timestamp")
+                    if not ts:
+                        continue
+                    try:
+                        d = parse_yyyy_mm_dd(ts[:10])
+                    except Exception:
+                        continue
+                    if sd <= d <= ed:
+                        matched.append(f)
 
+            count = len(matched)
+            if count > 0:
+                # write dataset file
+                atomic_write_json(os.path.join(OUT_ANV, f"{tid}.geo.json"), {"type": "FeatureCollection", "features": matched})
 
-# -----------------------------
-# Main
-# -----------------------------
+            out_grp["trips"].append({
+                "id": tid,
+                "title": title,
+                "comment": comment,
+                "startDate": start,
+                "endDate": end,
+                "filename": filename,   # <- YOU REQUESTED THIS BACK
+                "count": count,
+            })
+
+        # keep groups even if all trips are 0? (I’d keep them; you can hide in UI if needed)
+        out["groups"].append(out_grp)
+
+    return out
+
+def build_problems_no_coordinates(no_coords: List[Dict[str, Any]]) -> Dict[str, Any]:
+    """
+    Segment no-coordinate photos by YYYY-MM based on timestamp (like time index),
+    but keep them under data/problems/no-coordinates/...
+    """
+    by_month: Dict[str, List[Dict[str, Any]]] = {}
+    undated: List[Dict[str, Any]] = []
+
+    for f in no_coords:
+        ts = f.get("properties", {}).get("timestamp")
+        if not ts:
+            undated.append(f)
+            continue
+        mid = month_id_from_ts(ts)
+        if not mid:
+            undated.append(f)
+            continue
+        by_month.setdefault(mid, []).append(f)
+
+    # write month datasets
+    out_dir = os.path.join(OUT_PROB, "no-coordinates")
+    ensure_dir(out_dir)
+
+    index_years: Dict[int, Dict[str, Any]] = {}
+    for mid, feats in by_month.items():
+        atomic_write_json(os.path.join(out_dir, f"{mid}.geo.json"), {"type": "FeatureCollection", "features": feats})
+        y = int(mid[:4])
+        index_years.setdefault(y, {"id": str(y), "months": []})
+        index_years[y]["months"].append({"id": mid, "count": len(feats)})
+
+    for y in index_years:
+        index_years[y]["months"].sort(key=lambda m: m["id"])
+
+    decades_map: Dict[str, Dict[str, Any]] = {}
+    for y, yobj in index_years.items():
+        did = decade_id_from_year(y)
+        decades_map.setdefault(did, {"id": did, "years": []})
+        decades_map[did]["years"].append(yobj)
+
+    for did in decades_map:
+        decades_map[did]["years"].sort(key=lambda yy: yy["id"])
+
+    decades = [decades_map[k] for k in sorted(decades_map.keys())]
+    idx = {"decades": decades}
+
+    atomic_write_json(os.path.join(out_dir, "index.json"), idx)
+
+    # Optionally also write undated here if you want:
+    atomic_write_json(os.path.join(out_dir, "no-timestamp.geo.json"), {"type": "FeatureCollection", "features": undated})
+
+    return {
+        "no_coordinates_total": len(no_coords),
+        "no_coordinates_dated": sum(len(v) for v in by_month.values()),
+        "no_coordinates_undated": len(undated),
+        "no_coordinates_month_files": len(by_month),
+    }
+
+def write_stats(features: List[Dict[str, Any]], no_ts: List[Dict[str, Any]], no_coords: List[Dict[str, Any]]) -> None:
+    total = len(features)
+    dated = total - len(no_ts)
+    geotagged = sum(1 for f in features if f.get("geometry") and f["geometry"].get("type") == "Point")
+    stats = {
+        "total": total,
+        "dated": dated,
+        "geotagged": geotagged,
+        "no_timestamp": len(no_ts),
+        "no_coordinates": len(no_coords),
+        "updated": datetime.utcnow().isoformat(timespec="seconds") + "Z",
+    }
+    atomic_write_json(os.path.join(REPO_ROOT, "data/stats.json"), stats)
 
 def main() -> int:
-    start_clock = time.time()
-    started = utc_now()
+    started = datetime.utcnow()
+    ensure_dir(OUT_TID)
+    ensure_dir(OUT_STED)
+    ensure_dir(OUT_ANV)
+    ensure_dir(OUT_PROB)
+    ensure_dir(REPORTS_DIR)
 
-    for p in (IMAGES_JSON, AREAS_GEOJSON, TRIPS_JSON):
-        if not p.exists():
-            print(f"ERROR: missing {p}")
-            return 2
-
-    images_doc = json.loads(IMAGES_JSON.read_text(encoding="utf-8"))
-    items: List[Dict[str, Any]] = images_doc.get("items") or []
-    print(f"Loaded {len(items)} images from {IMAGES_JSON}")
-
-    areas = load_active_areas(AREAS_GEOJSON)
-    print(f"Loaded {len(areas)} active areas")
-
-    trips = load_trips(TRIPS_JSON)
-    print(f"Loaded {len(trips)} trips")
-
-    area_name = {a.area_id: a.name for a in areas}
-    trip_by_id = {t.trip_id: t for t in trips}
-
-    # Main datasets
-    by_month: Dict[str, List[Dict[str, Any]]] = {}
-    by_area: Dict[str, List[Dict[str, Any]]] = {}
-    by_trip: Dict[str, List[Dict[str, Any]]] = {}
-
-    # Problems
-    prob_no_ts: List[Dict[str, Any]] = []
-    prob_unmatched_geom: List[Dict[str, Any]] = []
-
-    # Problems/no-coordinates segmented
-    prob_no_coords_by_month: Dict[str, List[Dict[str, Any]]] = {}
-    prob_no_coords_no_ts: List[Dict[str, Any]] = []
-
-    total = len(items)
-
-    for n, item in enumerate(items, start=1):
-        feat = feature_from_item(item)
-
-        dt = parse_ts(item.get("ts") or "")
-        lat = item.get("lat")
-        lon = item.get("lon")
-
-        # Time + Trips
-        if dt is None:
-            prob_no_ts.append(feat)
-        else:
-            mid = month_id(dt)
-            by_month.setdefault(mid, []).append(feat)
-
-            tr = match_trip(trips, dt)
-            if tr:
-                by_trip.setdefault(tr.trip_id, []).append(feat)
-
-        # Place + problems
-        if lat is None or lon is None:
-            if dt is None:
-                prob_no_coords_no_ts.append(feat)
-            else:
-                prob_no_coords_by_month.setdefault(month_id(dt), []).append(feat)
-        else:
-            ar = match_area(areas, float(lon), float(lat))
-            if ar is None:
-                prob_unmatched_geom.append(feat)
-            else:
-                by_area.setdefault(ar.area_id, []).append(feat)
-
-        if n % 5000 == 0 or n == total:
-            extra = (
-                f"no-ts={len(prob_no_ts)} "
-                f"no-coords={sum(len(v) for v in prob_no_coords_by_month.values())+len(prob_no_coords_no_ts)} "
-                f"unmatched-geometry={len(prob_unmatched_geom)}"
-            )
-            print(progress_line(start_clock, n, total, extra))
-
-    # ---- Write Tid ----
-    OUT_TID.mkdir(parents=True, exist_ok=True)
-    tid_index = build_time_index({m: len(v) for m, v in by_month.items()})
-    for mid, feats in by_month.items():
-        atomic_write_json(OUT_TID / f"{mid}.geo.json", fc(feats))
-    atomic_write_json(OUT_TID / "index.json", tid_index)
-    print(f"Wrote tid: {len(by_month)} month files + index.json")
-
-    # ---- Write Sted ----
-    OUT_STED.mkdir(parents=True, exist_ok=True)
-    sted_index: List[Dict[str, Any]] = []
-    for aid in sorted(by_area.keys()):
-        feats = by_area[aid]
-        atomic_write_json(OUT_STED / f"{aid}.geo.json", fc(feats))
-        sted_index.append({"id": aid, "name": area_name.get(aid, aid), "count": len(feats)})
-    atomic_write_json(OUT_STED / "index.json", sted_index)
-    print(f"Wrote sted: {len(by_area)} area files + index.json")
-
-    # ---- Write Anvendelse ----
-    OUT_ANV.mkdir(parents=True, exist_ok=True)
-
-    group_map: Dict[str, List[Dict[str, Any]]] = {}
-    for trip_id, feats in by_trip.items():
-        atomic_write_json(OUT_ANV / f"{trip_id}.geo.json", fc(feats))
-
-        t = trip_by_id.get(trip_id)
-        if t is None:
-            group = "Trips"
-            entry = {
-                "id": trip_id,
-                "title": trip_id,
-                "comment": "",
-                "startDate": "",
-                "endDate": "",
-                "filename": "",
-                "count": len(feats),
-            }
-        else:
-            group = t.group
-            entry = {
-                "id": t.trip_id,
-                "title": t.title,
-                "comment": t.comment,
-                "startDate": t.start.isoformat(),
-                "endDate": t.end.isoformat(),
-                "filename": t.filename,   # <-- required for UseOnMap(KMLfile)
-                "count": len(feats),
-            }
-
-        group_map.setdefault(group, []).append(entry)
-
-    anv_index = {"groups": []}
-    for g in sorted(group_map.keys()):
-        anv_index["groups"].append({"group": g, "trips": sorted(group_map[g], key=lambda x: x["id"])})
-    atomic_write_json(OUT_ANV / "index.json", anv_index)
-    print(f"Wrote anvendelse: {len(by_trip)} trip files + index.json")
-
-    # ---- Write Problems ----
-    OUT_PROB.mkdir(parents=True, exist_ok=True)
-
-    atomic_write_json(OUT_PROB / "no-timestamp.geo.json", fc(prob_no_ts))
-    atomic_write_json(OUT_PROB / "unmatched-geometry.geo.json", fc(prob_unmatched_geom))
-
-    # Segmented no-coordinates folder
-    no_coords_dir = OUT_PROB / "no-coordinates"
-    no_coords_dir.mkdir(parents=True, exist_ok=True)
-
-    for mid, feats in prob_no_coords_by_month.items():
-        atomic_write_json(no_coords_dir / f"{mid}.geo.json", fc(feats))
-    atomic_write_json(no_coords_dir / "no-timestamp.geo.json", fc(prob_no_coords_no_ts))
-
-    no_coords_counts = {mid: len(feats) for mid, feats in prob_no_coords_by_month.items()}
-    no_coords_index = {
-        "count": sum(no_coords_counts.values()) + len(prob_no_coords_no_ts),
-        "noTimestamp": len(prob_no_coords_no_ts),
-        "timeIndex": build_time_index(no_coords_counts),
-    }
-    atomic_write_json(no_coords_dir / "index.json", no_coords_index)
-
-    problems_index = {
-        "datasets": {
-            "no-timestamp": {"path": "data/problems/no-timestamp.geo.json", "count": len(prob_no_ts)},
-            "no-coordinates": {"path": "data/problems/no-coordinates/index.json", "count": no_coords_index["count"]},
-            "unmatched-geometry": {"path": "data/problems/unmatched-geometry.geo.json", "count": len(prob_unmatched_geom)},
-        }
-    }
-    atomic_write_json(OUT_PROB / "index.json", problems_index)
-    print("Wrote problems datasets + index.json")
-
-    # ---- Report ----
-    ended = utc_now()
-    report = {
-        "version": 4,
-        "generatedAt": utc_iso(ended),
-        "durationSeconds": int((ended - started).total_seconds()),
+    report: Dict[str, Any] = {
+        "started": started.isoformat(timespec="seconds") + "Z",
         "inputs": {
-            "imagesJson": "data/source/images.json",
-            "areasGeoJson": "areas.geo.json",
-            "tripsJson": "trips.json",
-            "imageCount": len(items),
-            "activeAreas": len(areas),
-            "trips": len(trips),
-            "imagesVersion": images_doc.get("version"),
-            "imagesStats": images_doc.get("stats"),
+            "images_index": IMAGES_INDEX,
+            "areas": AREAS_FILE,
+            "trips": TRIPS_FILE,
         },
-        "outputs": {
-            "tid": {"months": len(by_month)},
-            "sted": {"areasWithPhotos": len(by_area)},
-            "anvendelse": {"tripsWithPhotos": len(by_trip)},
-            "problems": {
-                "noTimestamp": len(prob_no_ts),
-                "noCoordinatesTotal": no_coords_index["count"],
-                "noCoordinatesMonths": len(prob_no_coords_by_month),
-                "unmatchedGeometry": len(prob_unmatched_geom),
-            },
-        },
+        "outputs": {},
+        "notes": [],
+        "errors": [],
     }
-    REPORTS_DIR.mkdir(parents=True, exist_ok=True)
-    report_path = REPORTS_DIR / f"datasets_build_{utc_stamp(ended)}.json"
-    atomic_write_json(report_path, report)
-    print(f"Wrote report: {report_path}")
 
-    print("Done.")
+    try:
+        items, areas, trips = load_inputs()
+        features = build_all_features(items)
+
+        # TIME
+        tid_index, by_month, no_ts = build_time_datasets(features)
+        atomic_write_json(os.path.join(OUT_TID, "index.json"), tid_index)
+        for mid, feats in by_month.items():
+            atomic_write_json(os.path.join(OUT_TID, f"{mid}.geo.json"), {"type": "FeatureCollection", "features": feats})
+        atomic_write_json(os.path.join(OUT_TID, "no-timestamp.geo.json"), {"type": "FeatureCollection", "features": no_ts})
+
+        report["outputs"]["tid"] = {
+            "months": len(by_month),
+            "no_timestamp": len(no_ts),
+        }
+
+        # PLACE
+        sted_index_list, by_area, unmatched, no_coords = build_place_datasets(features, areas)
+        atomic_write_json(os.path.join(OUT_STED, "index.json"), sted_index_list)
+        for area_id, feats in by_area.items():
+            if feats:
+                atomic_write_json(os.path.join(OUT_STED, f"{area_id}.geo.json"), {"type": "FeatureCollection", "features": feats})
+        # Renamed per your request
+        atomic_write_json(os.path.join(OUT_STED, "unmatched-geometry.geo.json"), {"type": "FeatureCollection", "features": unmatched})
+        atomic_write_json(os.path.join(OUT_STED, "no-coordinates.geo.json"), {"type": "FeatureCollection", "features": no_coords})
+
+        report["outputs"]["sted"] = {
+            "areas_with_photos": len([x for x in sted_index_list if x.get("count", 0) > 0]),
+            "unmatched_geometry": len(unmatched),
+            "no_coordinates": len(no_coords),
+        }
+
+        # TRIPS / ANVENDELSE
+        anv_index = build_trip_datasets(features, trips)
+        atomic_write_json(os.path.join(OUT_ANV, "index.json"), anv_index)
+
+        report["outputs"]["anvendelse"] = {
+            "groups": len(anv_index.get("groups", [])),
+        }
+
+        # PROBLEMS (segmented no-coordinates)
+        prob_stats = build_problems_no_coordinates(no_coords)
+        report["outputs"]["problems"] = prob_stats
+
+        # Tiny stats for UI
+        write_stats(features, no_ts, no_coords)
+        report["outputs"]["stats_json"] = os.path.join(REPO_ROOT, "data/stats.json")
+
+    except Exception as e:
+        report["errors"].append(repr(e))
+        finished = datetime.utcnow()
+        report["finished"] = finished.isoformat(timespec="seconds") + "Z"
+        report["duration_seconds"] = (finished - started).total_seconds()
+        stamp = datetime.utcnow().strftime("%Y%m%d-%H%M%S")
+        atomic_write_json(os.path.join(REPORTS_DIR, f"datasets-{stamp}.json"), report)
+        raise
+
+    finished = datetime.utcnow()
+    report["finished"] = finished.isoformat(timespec="seconds") + "Z"
+    report["duration_seconds"] = (finished - started).total_seconds()
+    stamp = datetime.utcnow().strftime("%Y%m%d-%H%M%S")
+    atomic_write_json(os.path.join(REPORTS_DIR, f"datasets-{stamp}.json"), report)
+
     return 0
 
-
 if __name__ == "__main__":
-    raise SystemExit(main())
+    sys.exit(main())
