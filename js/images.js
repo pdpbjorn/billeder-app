@@ -553,24 +553,40 @@ function makeMonthLinks(theDataset){
 /* SECTION functions to control the population of the thumbpage or the map*/
 /* SECTION functions to control the population of the thumbpage or the map*/
 
+
 //-----------START new fkt from chatGPT
-
-function injectNoDate(){
-  var url = "data/problems/no-timestamp.geo.json";
-
+//Generic dataset loader
+function loadDataset(url, onReady){
   $.getJSON(url, function(json){
     setCurrentDataset(json);
-
-    if (document.getElementById("Choice-of-list").checked) {
-      buildTiles(currentDataset);
-    } else {
-      window.location.href = "#" + showOnMap(getGeotaggedFeatures(currentDataset));
-    }
+    onReady(currentDataset);
   }).fail(function(){
     alert("Could not load dataset: " + url);
   });
 }
-//-----------END new fkt from chatGPT
+
+//check desired state
+function isListMode(){
+return document.getElementById("Choice-of-list").checked;
+}
+//------END fkt
+
+//--------The loader functions
+function injectNoDate(){
+loadDataset("data/problems/no-timestamp.geo.json", (ds) => {
+if (isListMode()) {
+buildTiles(ds);
+} else {
+window.location.href = "#" + showOnMap(getGeotaggedFeatures(ds));
+}
+});
+}
+
+
+
+
+  
+
 /* old function
 function injectNoDate(){ //populate thumbpage with images without timestamp
 	buildTiles({"type":"FeatureCollection","features": _.reject(theDataset.features,function(feature){
@@ -611,6 +627,19 @@ function injectMonth(month){ //populate thumbpage or map with images from specif
 */
 
 //--------NEW function from ChatGPT
+//-----------START new fkt from chatGPT
+
+function injectMonth(month){
+loadDataset("data/tid/" + month + ".geo.json", (ds) => {
+if (isListMode()) {
+buildTiles(ds);
+} else {
+window.location.href = "#" + showOnMap(getGeotaggedFeatures(ds));
+}
+});
+}
+//-----------END new fkt from chatGPT
+/* the old one
 function injectMonth(month){ //populate thumbpage or map with images from specific month
   var url = "data/tid/" + month + ".geo.json";
 
@@ -626,9 +655,9 @@ function injectMonth(month){ //populate thumbpage or map with images from specif
     alert("Could not load dataset: " + url);
   });
 }
+//end old
+*/
 
-
-//-------END NEW function
 
 
 /*----Begin old function 
@@ -673,45 +702,36 @@ function injectTrip(KMLfile,startDate,endDate){
 
 
 //--------BEGIN NEW function from ChatGPT
-
-
 function injectTrip(tripId, KMLfile, startDate, endDate){
   tripPixDates.startDate = startDate;
   tripPixDates.endDate = endDate;
-
-  if (document.getElementById("Choice-of-list").checked) {
-    var url = "data/anvendelse/" + tripId + ".geo.json";
-
-    $.getJSON(url, function(json){
-      setCurrentDataset(json);
-      buildTiles(currentDataset);
-    }).fail(function(){
-      alert("Could not load dataset: " + url);
-    });
-
-  } else {
-    window.location.href = "#" + UseOnMap(KMLfile);
-  }
+loadDataset("data/anvendelse/" + tripId + ".geo.json", (ds) => {
+if (isListMode()) {
+buildTiles(ds);
+} else {
+window.location.href = "#" + UseOnMap(KMLfile);
+}
+});
 }
 
+
+
+  
 
 //-------- END NEW function from ChatGPT
-
 function injectAreaById(areaId){
-  var url = "data/sted/" + areaId + ".geo.json";
-
-  $.getJSON(url, function(json){
-    setCurrentDataset(json);
-
-    if (document.getElementById("Choice-of-list").checked) {
-      buildTiles(currentDataset);
-    } else {
-      window.location.href = "#" + showOnMap(currentDataset);
-    }
-  }).fail(function(){
-    alert("Could not load dataset: " + url);
-  });
+loadDataset("data/sted/" + areaId + ".geo.json", (ds) => {
+if (isListMode()) {
+buildTiles(ds);
+} else {
+window.location.href = "#" + showOnMap(getGeotaggedFeatures(ds));
 }
+});
+}
+
+
+
+  
 
 /*
 function injectArea(areaIndex){
@@ -782,10 +802,12 @@ function buildTiles(dataslice){
 					
 						window.location.href = "#page-" + imgPage(feature.properties.index); //create and Navigate to image page for clicked thumb
 						//preload next two images and the previous (by global image id)
+						preloadAround(feature.properties.index)
+						/*
 						$("<img/>",{"class":"cacheImg","id":"cacheImg" + feature.properties.index+1,"src":theDataset.features[feature.properties.index+1].properties.image})
 						$("<img/>",{"class":"cacheImg","id":"cacheImg" + feature.properties.index+2,"src":theDataset.features[feature.properties.index+2].properties.image})
 						$("<img/>",{"class":"cacheImg","id":"cacheImg" + feature.properties.index11,"src":theDataset.features[feature.properties.index-1].properties.image})
-						
+						*/
 					}
 					)
 				,
@@ -809,6 +831,20 @@ function buildTiles(dataslice){
 				})
 		)}
 	}
+
+//Preloader - runs when imgPage is called
+function preloadAround(i, radius = 3) {
+  if (!currentDataset?.features) return;
+  for (let k = i - radius; k <= i + radius; k++) {
+    if (k < 0 || k >= currentDataset.features.length) continue;
+    const img = currentDataset.features[k]?.properties?.image;
+    if (!img) continue;
+    const pre = new Image();
+    pre.src = img; // browser cache warms up
+  }
+}
+
+
 
 //Create the imagepage to display one photo	
 function imgPage(imageIndex){
@@ -953,10 +989,12 @@ function imgPage(imageIndex){
 		window.location.href = "#page-" + imgPage(focusImageIndex + ((forth)?1:-1));
 		$("#page-" + focusImageIndex).remove();
 		//Preload images
+		preloadAround(focusImageIndex)
+		/*
 		$("<img/>",{"class":"cacheImg","id":"cacheImg" + focusImageIndex + ((forth)?2:-2),"src":currentDataset.features[focusImageIndex + ((forth)?2:-2)].properties.image})
 		$("<img/>",{"class":"cacheImg","id":"cacheImg" + focusImageIndex + ((forth)?3:-3),"src":currentDataset.features[focusImageIndex + ((forth)?3:-3)].properties.image})
 		$("<img/>",{"class":"cacheImg","id":"cacheImg" + focusImageIndex + ((forth)?-1:1),"src":currentDataset.features[focusImageIndex + ((forth)?-1:1)].properties.image})
-		
+		*/
 	}
 //Put image metadata on computer clipboard - called by infobox buttons
 function setClipboard(value) {
@@ -1433,7 +1471,143 @@ function  calculateFolderBounds(treeData){
 	}while (folderDepth >= 1)
 	
 }
-//greate map buttons and their functionality - supply places to put the button and a keyword describing what it should do
+
+function addMapControl(controlDiv, map, mapDoWhat) {
+  const controlUI = document.createElement("div");
+  controlUI.style.backgroundColor = "#fff";
+  controlUI.style.border = "2px solid #fff";
+  controlUI.style.borderRadius = "3px";
+  controlUI.style.boxShadow = "0 2px 6px rgba(0,0,0,3)";
+  controlUI.style.cursor = "pointer";
+  controlUI.style.marginBottom = "22px";
+  controlUI.style.textAlign = "center";
+  controlDiv.appendChild(controlUI);
+
+  const controlText = document.createElement("div");
+  controlText.style.color = "rgb(25,25,25)";
+  controlText.style.fontFamily = "Roboto,Arial,sans-serif";
+  controlText.style.fontSize = "16px";
+  controlText.style.lineHeight = "38px";
+  controlText.style.paddingLeft = "5px";
+  controlText.style.paddingRight = "5px";
+  controlUI.appendChild(controlText);
+
+  function boundsContainsPoint(bounds, geom) {
+    if (!bounds || !geom) return false;
+    // We only care about Point markers here
+    if (geom.getType && geom.getType() !== "Point") return false;
+    const ll = geom.get(); // google.maps.LatLng
+    return bounds.contains(ll);
+  }
+
+  function currentMapBounds() {
+    // getBounds() is enough; your code used getBounds(true) but the signature is getBounds()
+    return map.getBounds();
+  }
+
+  switch (mapDoWhat) {
+    case "close":
+      controlText.innerHTML = "Gå væk";
+      controlUI.addEventListener("click", () => {
+        $(".mappage").remove();
+        window.location.href = "#initial";
+        setTimeout(function () { window.scrollBy(0, thumbPageScroll); }, 200);
+      });
+      break;
+
+    case "load":
+      // “Load all images within map bounds”
+      // Now: just filter *currentDataset* by bounds (and GPS presence) and add those points to map.data
+      controlText.innerHTML = "Se alle billeder fra dette område";
+      controlUI.addEventListener("click", () => {
+        const b = currentMapBounds();
+        if (!b) return;
+
+        const src = currentDataset;
+        if (!src || !src.features) return;
+
+        const featuresInBounds = src.features.filter(f => {
+          const lat = f?.geometry?.coordinates?.[1];
+          const lon = f?.geometry?.coordinates?.[0];
+          if (typeof lat !== "number" || typeof lon !== "number") return false;
+          return b.contains(new google.maps.LatLng(lat, lon));
+        });
+
+        map.data.addGeoJson({ type: "FeatureCollection", features: featuresInBounds });
+      });
+      break;
+
+    case "thumbs":
+      // “Show the markers currently visible on the map in the thumb-page”
+      controlText.innerHTML = "Vis billedliste for disse markører";
+      controlUI.addEventListener("click", () => {
+        const b = currentMapBounds();
+        if (!b) return;
+
+        const out = { type: "FeatureCollection", features: [] };
+
+        // map.data.forEach is sync, but feature.toGeoJson is async callback-based
+        let pending = 0;
+
+        map.data.forEach(feature => {
+          const geom = feature.getGeometry();
+          if (!boundsContainsPoint(b, geom)) return;
+
+          pending++;
+          feature.toGeoJson(gj => {
+            // gj is a proper GeoJSON Feature
+            out.features.push(gj);
+            pending--;
+            if (pending === 0) {
+              $(".mappage").remove();
+              window.location.href = "#initial";
+              buildTiles(out);
+            }
+          });
+        });
+
+        // If nothing matched, still exit cleanly
+        if (pending === 0) {
+          $(".mappage").remove();
+          window.location.href = "#initial";
+          buildTiles(out);
+        }
+      });
+      break;
+
+    case "trippics":
+      controlText.innerHTML = "Vis billeder for denne tur";
+      controlUI.classList.add("trippix");
+      controlUI.addEventListener("click", () => {
+        const startDate = new Date(tripPixDates.startDate);
+        const endDate = new Date(tripPixDates.endDate);
+
+        const src = currentDataset || theDataset;
+        if (!src || !src.features) return;
+
+        const filtered = src.features.filter(f => {
+          const ts = f?.properties?.timestamp;
+          if (!ts) return false;
+          const d = new Date(ts);
+          return d >= startDate && d <= endDate;
+        });
+
+        // you probably still want geotag-only on map:
+        map.data.addGeoJson(getGeotaggedFeatures({ type: "FeatureCollection", features: filtered }));
+      });
+      break;
+
+    case "tagger":
+      controlText.innerHTML = "G";
+      controlUI.addEventListener("click", () => { taggerInterface(); });
+      break;
+
+    default:
+      break;
+  }
+}
+/* --------------START old function
+//create map buttons and their functionality - supply places to put the button and a keyword describing what it should do
 function addMapControl(controlDiv, map, mapDoWhat) {
 	// Set CSS for the control border
 	const controlUI = document.createElement("div");
@@ -1524,7 +1698,8 @@ function addMapControl(controlDiv, map, mapDoWhat) {
 		break;
 	}
   }
-
+	--------END Old Fkt
+*/
   //Create the geotagging interface
 function taggerInterface(aDate){
 	//Setup the drawingManager to handle placements of images on map
