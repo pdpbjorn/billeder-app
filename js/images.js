@@ -84,18 +84,7 @@ var currentDataset = null;
 		  touchendX = e.changedTouches[0].screenX
 		  checkDirection()
 		})
-	/*
-
-
-screen.orientation.addEventListener('change', function(e) {
-	alert("Angle" + e.target.screen.orientation.angle)
-	//$("#image0").css({"max-height": $( window ).height() - 6 + "px","max-width": $( window ).width() - 6 + "px"}) })
-}
-
-screen.addEventListener("orientationchange", function () {
-	alert("The orientation of the screen is: " + screen.orientation);
-  });
-*/
+	
  
 //Listening for handheld screen orientation change, trying to rotate and resize displayed image
 	$(window).on('orientationchange', function() {
@@ -134,7 +123,7 @@ function indexLoadedOne(){
   }
 }
 
-//new function from ChatGPT
+
 
 function setCurrentDataset(json){
   // Ensure local per-selection indexes for image browsing / preload logic
@@ -147,7 +136,7 @@ function setCurrentDataset(json){
   currentDataset = json;
 }
 
-//end new function
+
 
 /* SECTION main setup of environment */
 /* SECTION main setup of environment */
@@ -158,52 +147,7 @@ function setCurrentDataset(json){
 
 
 
-/*  old function
-function loadData(){
-	$('select').selectmenu().selectmenu('disable'); //disable dropdowns until data are ready
 
-	//load the geographical areas
-	$.getJSON("areas.json", function(json) {
-		theAreas = json;
-		makeAreaLinks(theAreas); //call function to fill dropdown
-	})
-	//load the trip descriptions
-	$.getJSON("trips.json", function(json) {
-		theTrips = json;
-		makeTripLinks(theTrips); //call function to fill dropdown
-	})
-	//load the image information
-	$.getJSON("images.geo.json", function(json) {
-		json.features =_.sortBy(json.features,function(feature){return feature.properties.timestamp}) //order dataset by image timestamp
-		$.each(json.features,function(index,feature){
-			feature.properties.index = index; //create image index in loaded and ordered dataset
-		})
-		theDataset = {"type":"FeatureCollection","features":json.features}; //create the globas dataset as a GeoJSON FeatureCollection
-		//Create counters
-		$('#totalcount').html(theDataset.features.length) //total number of images
-		$('#datedcount').html(_.filter(theDataset.features,function(feature){return feature.properties.timestamp}).length) //Number of images with timestams
-		$('#gtcount').html(getGeotaggedFeatures(theDataset).features.length)//number of geotagged images - use helper function
-		makeMonthLinks(theDataset); //call function to fill dropdown
-		$('#spinner').remove(); //remove the wait image
-		$('select').selectmenu('enable'); //enable the dropdowns
-
-		//make list links clickable i phone mode
-		const li = document.querySelectorAll('li.dropdown a');
-		li.forEach((each)=>{
-			if (each.nextElementSibling !== null) {
-				each.addEventListener('click', e=>{
-					if (window.innerWidth < 1068) {
-					e.target.parentElement.classList.toggle("active");  
-					}
-				})
-			}
-		})
-			
-	})
-
-}
- end old funtcion
-*/
 
 //new function from ChatGPT
 
@@ -231,47 +175,7 @@ $.getJSON("data/anvendelse/index.json", function(json) {
   indexLoadedOne();
 });
 
-/* old
-  // existing loads (keep for now)
-  $.getJSON("areas.geo.json", function(json) {
-    theAreas = json;
-    makeAreaLinks(theAreas);
-  });
 
-  $.getJSON("trips.json", function(json) {
-    theTrips = json;
-    makeTripLinks(theTrips);
-  });
-
-  $.getJSON("images.geo.json", function(json) {
-    json.features = _.sortBy(json.features, function(feature){ return feature.properties.timestamp });
-    $.each(json.features,function(index,feature){
-      feature.properties.index = index;
-    })
-    theDataset = {"type":"FeatureCollection","features":json.features};
-
-    $('#totalcount').html(theDataset.features.length)
-    $('#datedcount').html(_.filter(theDataset.features,function(feature){return feature.properties.timestamp}).length)
-    $('#gtcount').html(getGeotaggedFeatures(theDataset).features.length)
-
-    makeMonthLinks(theDataset);
-
-    $('#spinner').remove();
-    $('select').selectmenu('enable');
-
-    const li = document.querySelectorAll('li.dropdown a');
-    li.forEach((each)=>{
-      if (each.nextElementSibling !== null) {
-        each.addEventListener('click', e=>{
-          if (window.innerWidth < 1068) {
-            e.target.parentElement.classList.toggle("active");
-          }
-        })
-      }
-    })
-  })
-
-  */
 
   $('#totalcount').html("—");
 $('#datedcount').html("—");
@@ -279,20 +183,10 @@ $('#gtcount').html("—");
 }
 
 
-//end new function
+
 
 //fill areas dropdown - enable actions on select
-//New area dropdown
-/*
-function makeAreaLinks(theAreas){
-	
 
-	theAreas.features.forEach( (feature,index) =>{ // create the dropdown entries
-		$('#dropPlace').append($("<li/>").append(  $("<a/>",{onclick:"injectArea(" + index + ")",html:feature.properties.name ,href:"#"})))
-		
-	})
-}
-*/
 function makeAreaLinksFromIndex(stedIndex){
   $('#dropPlace').empty();
 
@@ -304,7 +198,7 @@ function makeAreaLinksFromIndex(stedIndex){
     $('#dropPlace').append(
       $("<li/>").append(
         $("<a/>", {
-          onclick: "injectAreaById('" + a.id + "')",
+          onclick: "injectArea('" + a.id + "')",
           html: label,
           href: "#"
         })
@@ -315,37 +209,9 @@ function makeAreaLinksFromIndex(stedIndex){
 
 //fill trip dropdown - enable actions on select
 
-/*----Begin old function 
-function makeTripLinks(theTrips){
-
-	theTrips.groups.forEach(group =>
-		{
 
 
-			
-			var Gruppe = $("<li/>",{"class":"dropdown"})
-					.append($("<a/>",{html:group.title,href:"#"}))
-					.appendTo("#dropTrips") //add a trip type grouper
-				var GruppeTureListe = ($("<ul/>")).appendTo(Gruppe) 
-			//return gruppe.ture	
 
-			
-			group.trips.forEach(trip =>
-				{
-				 $("<li/>")
-						.append($("<a/>",{href:"#",html:trip.title,onclick:"injectTrip('" + trip.filename + "', '" + trip.startDate + "', '" + trip.endDate + "')"}))
-						.appendTo(GruppeTureListe)
-				}
-				) //and append the months of the year
-			}
-		)
-
-
-	}
-//---------END Old function
-*/
-
-//--------Begin NEW function from ChatGPT
 function makeTripLinksFromIndex(anvIndex){
 
   $("#dropTrips").empty(); // prevent duplicates on reload
@@ -381,10 +247,6 @@ function makeTripLinksFromIndex(anvIndex){
 }
 
 
-
-//--------End NEW function from ChatGPT
-
-//New fkt from ChatMPT
 
 function makeMonthLinksFromIndex(tidIndex){
   $("#dropMonths").empty();
@@ -425,11 +287,12 @@ function makeMonthLinksFromIndex(tidIndex){
   );
 }
 
-//END new
 
 //fill months dropdown - enable action on select to load thumbs from the month
+
 function makeMonthLinks(theDataset){
-		
+	
+	/*not needed ithink
 	var maaneder = [{"name":"Januar","number":"01"},
 	{"name":"Februar","number":"02"},
 	{"name":"Marts","number":"03"},
@@ -442,63 +305,12 @@ function makeMonthLinks(theDataset){
 	{"name":"Oktober","number":"10"},
 	{"name":"November","number":"11"},
 	{"name":"December","number":"12"}]
-
-	/*
-	//on change, start handling function
-	$('#monthSelect').on( "change", function( event ) {
-		//injectMessage('working');
-		if (event.target.value == "noDate"){//if selecting 'no date', start process for images without timestamp
-			injectNoDate();
-		}
-		else{
-			injectMonth( event.target.value);//else, start process for month-group of images
-		}
-	})
-
-	//add a 'no date' option
-	$('#monthSelect').append($("<option/>",{value:"noDate","class":"notAnOption"}).text("Uden dato"));
-
-	//months in year-optgroups
-	//Maybe done better?
-	$.each( _.groupBy(theDataset.features //for each year group of images
-		,
-				function(feature){if(feature.properties.timestamp){
-					return feature.properties.timestamp.substring(0,4)}
-				})
-		,function(yearLiteral,annus){
-			if (yearLiteral != "undefined"){
-				var yearGroup = $("<optgroup\>",{label:yearLiteral}).appendTo("#monthSelect") //add a year grouper
-				_.each(_.groupBy(annus,function(feature){
-					if(feature.properties.timestamp){	return parseInt(feature.properties.timestamp.substring(5,7),10)}}),	
-					function(mensis,monthSeqIndex){
-						$("<option/>",{text:maaneder[parseInt(monthSeqIndex-1,10)].name,value:yearLiteral + '-' + maaneder[parseInt(monthSeqIndex-1,10)].number}).appendTo(yearGroup); //and append the months of the year
-				})
-			}
-		})
-
-		*/
-
-/*
-<!--
-			  <li><a tabindex="-1" href="#">HTML</a></li>
-			  <li><a tabindex="-1" href="#">CSS</a></li>
-			  <li class="dropdown-submenu">
-				<a class="test" tabindex="-1" href="#">New dropdown <span class="caret"></span></a>
-				<ul class="dropdown-menu">
-				  <li><a tabindex="-1" href="#">2nd level dropdown</a></li>
-				  <li><a tabindex="-1" href="#">2nd level dropdown</a></li>
-				  <li class="dropdown-submenu">
-					<a class="test" href="#">Another dropdown <span class="caret"></span></a>
-					<ul class="dropdown-menu">
-					  <li><a href="#"  onclick="injectMonth('2019-01')">2019-01</a></li>
-					  <li><a href="#">3rd level dropdown</a></li>
-					</ul>
-				  </li>
-				</ul>
-			  </li>
-			-->
-
 */
+
+
+	
+
+
 
 		//Make new month menu
 
@@ -539,12 +351,7 @@ function makeMonthLinks(theDataset){
 		})
 	}})
 		
-		//_.groupBy(theDataset.features,function(f){if (f.properties.timestamp) {return f.properties.timestamp.substring(0,4)}}).forEach(g => console.log(g))
 		
-		//fedeFeatures = theDataset.features
-		//fedeFeatures.group()
-		//const ttt = fedeFeatures.group(f => f.properties.timestamp.substring(0,4));//.forEach(yGroup => debug.print(yGroup))
-	//console.log(ttt)
 	
 }
 
@@ -554,7 +361,7 @@ function makeMonthLinks(theDataset){
 /* SECTION functions to control the population of the thumbpage or the map*/
 
 
-//-----------START new fkt from chatGPT
+
 //Generic dataset loader
 function loadDataset(url, onReady){
   $.getJSON(url, function(json){
@@ -569,9 +376,17 @@ function loadDataset(url, onReady){
 function isListMode(){
 return document.getElementById("Choice-of-list").checked;
 }
-//------END fkt
+
 
 //--------The loader functions
+
+//get stats form tiny generated datafile
+$.getJSON("data/stats.json", function(s){
+  $('#totalcount').html(s.total);
+  $('#datedcount').html(s.dated);
+  $('#gtcount').html(s.geotagged);
+});
+
 function injectNoDate(){
 loadDataset("data/problems/no-timestamp.geo.json", (ds) => {
 if (isListMode()) {
@@ -587,47 +402,7 @@ window.location.href = "#" + showOnMap(getGeotaggedFeatures(ds));
 
   
 
-/* old function
-function injectNoDate(){ //populate thumbpage with images without timestamp
-	buildTiles({"type":"FeatureCollection","features": _.reject(theDataset.features,function(feature){
-			return feature.properties.timestamp 
-		}).filter(feature => feature.properties.image)
-	}
-	)
-}
-//End old fkt
-*/
-/* ------ START  old function
 
-function injectMonth(month){ //populate thumbpage or map with images from specific month
-	//if ($("#Choice-of-list").is(':checked')) //populate thumbpage (buildTiles)
-	if (document.getElementById("Choice-of-list").checked) //populate thumbpage (buildTiles)
-	{
-		buildTiles({"type":"FeatureCollection","features": _.filter(theDataset.features,function(feature){
-			if (feature.properties.timestamp){
-				return feature.properties.timestamp.startsWith(month)
-				}
-			})
-		}
-		)
-	}
-	else //populate map (showOnMap)
-	{
-		window.location.href = "#" + showOnMap( getGeotaggedFeatures({"type":"FeatureCollection","features": _.filter(theDataset.features,function(feature){
-			if (feature.properties.timestamp){
-				return feature.properties.timestamp.startsWith(month)
-				}
-			})}))
-	}
-		
-}
-
-
-// ------- END old function
-*/
-
-//--------NEW function from ChatGPT
-//-----------START new fkt from chatGPT
 
 function injectMonth(month){
 loadDataset("data/tid/" + month + ".geo.json", (ds) => {
@@ -638,67 +413,10 @@ window.location.href = "#" + showOnMap(getGeotaggedFeatures(ds));
 }
 });
 }
-//-----------END new fkt from chatGPT
-/* the old one
-function injectMonth(month){ //populate thumbpage or map with images from specific month
-  var url = "data/tid/" + month + ".geo.json";
-
-  $.getJSON(url, function(json){
-    setCurrentDataset(json);
-
-    if (document.getElementById("Choice-of-list").checked) {//list view is chosen
-      buildTiles(currentDataset);
-    } else {
-      window.location.href = "#" + showOnMap(getGeotaggedFeatures(currentDataset));
-    }
-  }).fail(function(){
-    alert("Could not load dataset: " + url);
-  });
-}
-//end old
-*/
 
 
 
-/*----Begin old function 
-function injectArea(areaIndex){ //populate thumbpage or map with images from specific area
-	if (document.getElementById("Choice-of-list").checked)//populate thumbpage (buildTiles)
-	{
-		
-		buildTiles({"type":"FeatureCollection","features":turf.pointsWithinPolygon(getGeotaggedFeatures(theDataset), theAreas.features[areaIndex]).features});
-	}
-	else //populate map (showOnMap)
-	{
-		window.location.href = "#" + showOnMap({"type":"FeatureCollection","features":turf.pointsWithinPolygon(getGeotaggedFeatures(theDataset), theAreas.features[areaIndex]).features})
-	}
-}
-	
-//---------END Old function
-*/
 
-
-/*----Begin old function 
-function injectTrip(KMLfile,startDate,endDate){
-	tripPixDates.startDate = startDate;
-	tripPixDates.endDate = endDate;
-	if (document.getElementById("Choice-of-list").checked)//populate thumbpage (buildTiles)
-	{
-		var startDate = new Date(tripPixDates.startDate);
-		var endDate = new Date(tripPixDates.endDate);
-		buildTiles( {"type":"FeatureCollection","features":theDataset.features.filter(f => {
-					var date = new Date(f.properties.timestamp);
-					return (date >= startDate && date <= endDate);
-				  })})
-		//buildTiles({"type":"FeatureCollection","features":turf.pointsWithinPolygon(getGeotaggedFeatures(theDataset), theAreas.features[areaIndex]).features});
-	}
-	else //populate map (showOnMap)
-	{
-		window.location.href = "#" + UseOnMap(KMLfile)
-	}
-}
-
-//---------END Old function
-*/
 
 
 //--------BEGIN NEW function from ChatGPT
@@ -719,7 +437,7 @@ window.location.href = "#" + UseOnMap(KMLfile);
   
 
 //-------- END NEW function from ChatGPT
-function injectAreaById(areaId){
+function injectArea(areaId){
 loadDataset("data/sted/" + areaId + ".geo.json", (ds) => {
 if (isListMode()) {
 buildTiles(ds);
@@ -731,30 +449,8 @@ window.location.href = "#" + showOnMap(getGeotaggedFeatures(ds));
 
 
 
-  
-
-/*
-function injectArea(areaIndex){
-  // For now, keep compatibility with existing menu that passes "areaIndex"
-  var areaId = theAreas.features[areaIndex].properties.id;
-  var url = "data/sted/" + areaId + ".geo.json";
-
-  $.getJSON(url, function(json){
-    setCurrentDataset(json);
-
-    if (document.getElementById("Choice-of-list").checked) {
-      buildTiles(currentDataset);
-    } else {
-      window.location.href = "#" + showOnMap(currentDataset);
-    }
-  }).fail(function(){
-    alert("Could not load dataset: " + url);
-  });
-}
-*/
 
 
-//-------END NEW function
 
 /* SECTION Display builders*/
 /* SECTION Display builders*/
@@ -1606,100 +1302,7 @@ function addMapControl(controlDiv, map, mapDoWhat) {
       break;
   }
 }
-/* --------------START old function
-//create map buttons and their functionality - supply places to put the button and a keyword describing what it should do
-function addMapControl(controlDiv, map, mapDoWhat) {
-	// Set CSS for the control border
-	const controlUI = document.createElement("div");
-	controlUI.style.backgroundColor = "#fff";
-	controlUI.style.border = "2px solid #fff";
-	controlUI.style.borderRadius = "3px";
-	controlUI.style.boxShadow = "0 2px 6px rgba(0,0,0,.3)";
-	controlUI.style.cursor = "pointer";
-	controlUI.style.marginBottom = "22px";
-	controlUI.style.textAlign = "center";
-	
-	controlDiv.appendChild(controlUI);
-	// Set CSS for the control interior
-	const controlText = document.createElement("div");
-	
-	controlText.style.color = "rgb(25,25,25)";
-	controlText.style.fontFamily = "Roboto,Arial,sans-serif";
-	controlText.style.fontSize = "16px";
-	controlText.style.lineHeight = "38px";
-	controlText.style.paddingLeft = "5px";
-	controlText.style.paddingRight = "5px";
-	
-	controlUI.appendChild(controlText);
-	//depending on the action keyword
-	switch (mapDoWhat) {
-		case "close"://make a button to close the map and browse back to the thumbnail page 
-			controlText.innerHTML = "Gå væk";
-			controlUI.addEventListener("click", () => {
-				  $(".mappage").remove();
-				  window.location.href = "#initial";
-				  //,scroll to the stored position where we left it
-		
-				  setTimeout(function(){window.scrollBy(0,thumbPageScroll);},200)
-			});
-		break;
-		case "load"://load all images taken (and geotagged) within map bounds
-			controlText.innerHTML = "Se alle billeder fra dette område";
-			controlUI.addEventListener("click", () => {
-				newBounds= map.getBounds(true)
-				map.data.addGeoJson(
-					turf.pointsWithinPolygon(//create boundingbox from map bounds and cookie cut the image data
-					//minX, minY, maxX, maxY 
-						getGeotaggedFeatures(currentDataset), 
-						turf.bboxPolygon([newBounds.getSouthWest().lng(),newBounds.getSouthWest().lat(),newBounds.getNorthEast().lng(),newBounds.getNorthEast().lat()])
-					)
-				);
-			});
-			break;
-		case "thumbs"://show the images presently marked on the map in the thumbs-page
-			controlText.innerHTML = "Vis billedliste for disse markører";
-			controlUI.addEventListener("click", () => {
-				visibleFeaturecollection = {"type":"FeatureCollection","features":[]};
-				theBounds= map.getBounds(true)
-				map.data.forEach(element => element.getGeometry().forEachLatLng(LatLng => {//loop through the elements on the map to see if they arein bound and then add them to the array
-					//may work only for markers added through the data interface
-					if (theBounds.contains(LatLng))
-					{visibleFeaturecollection.features.push( {type:"Feature",properties:element.i,"geometry": {"type": "Point", "coordinates": [element.g.g.lng(),element.g.g.lat()]}})}
-				}))
-				$(".mappage").remove();//close the mappage
-				window.location.href = "#initial"
-				buildTiles(visibleFeaturecollection)//submit to the tile builder
-			
-			});
-			break; 
-			case "trippics": //show the pictures form the trip's timeframe on the map
-			controlText.innerHTML = "Vis billeder for denne tur";
-			controlUI.classList.add("trippix");//telling the world that the trip interface is open
-			controlUI.addEventListener("click", () => {
-				//get the trip's dates from the value of the HTML trip dropdown
-				//var startDate = new Date($("#tripSelect :selected").val().split("&")[1]);
-				//var endDate = new Date($("#tripSelect :selected").val().split("&")[2]);
-				var startDate = new Date(tripPixDates.startDate);
-				var endDate = new Date(tripPixDates.endDate);
-				//filter currentDataset by date, remove non-geotagged and plot on map
-				map.data.addGeoJson(getGeotaggedFeatures(  {"type":"FeatureCollection","features":currentDataset.features.filter(f => {
-					var date = new Date(f.properties.timestamp);
-					return (date >= startDate && date <= endDate);
-				  })}))
-			});
-			break; 
-			case "tagger": //show the Geotagging interface
-			controlText.innerHTML = "G";
-			controlUI.addEventListener("click", () => {
-				taggerInterface();
-			});
-			break; 
-		default:
-		break;
-	}
-  }
-	--------END Old Fkt
-*/
+
   //Create the geotagging interface
 function taggerInterface(aDate){
 	//Setup the drawingManager to handle placements of images on map
