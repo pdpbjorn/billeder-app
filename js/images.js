@@ -14,17 +14,89 @@
 	var textFile = null;
 	var tripPixDates = {}; //start and enddates for the selected trip
 	var pendingIndexLoads = 3;//countdown for the index loads
-
-	//From ChatGPT:
 	var tidIndex = null;
-var stedIndex = null;
-var anvIndex = null;
-
-// New: current selection dataset (replaces the huge global dataset later)
-var currentDataset = null;
- //End chatGPT
+	var stedIndex = null;
+	var anvIndex = null;
+	var currentDataset = null;
 
 
+window.initMap = async function initMap() {
+	//function runs when map API is ready 
+	gMarkerLib = await google.maps.importLibrary("marker");
+
+	 const { Map } = await google.maps.importLibrary("maps");
+  const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+
+  const map = new Map(document.getElementById("map"), {
+    center: { lat: 55.6761, lng: 12.5683 },
+    zoom: 8,
+    mapId: "YOUR_MAP_ID" // recommended for advanced markers
+  });
+
+  const marker = new AdvancedMarkerElement({
+    map,
+    position: { lat: 55.6761, lng: 12.5683 },
+    title: "Some title"
+  });
+}
+// --- Modern marker support (AdvancedMarkerElement when available) ---
+let gMarkerLib = null;
+
+// Turn remote KML icon URLs into local file paths.
+// Example: https://example.com/icons/foo.png  ->  icons/foo.png
+function resolveKmlIconUrl(url) {
+  if (!url) return url;
+  // already local/relative
+  if (!/^https?:\/\//i.test(url)) return url;
+
+  const clean = url.split("?")[0];
+  const filename = clean.substring(clean.lastIndexOf("/") + 1);
+  return `icons/${filename}`;
+}
+
+// Create a marker using AdvancedMarkerElement when possible,
+// but fall back to google.maps.Marker when we need draggable/animation/etc.
+function createMarker({ map, position, title, icon, draggable = false, animation }) {
+  // If draggable (or animation), use classic Marker (AdvancedMarker doesn't support these the same way)
+  if (draggable || animation) {
+    return new google.maps.Marker({
+      map,
+      position,
+      title,
+      icon,
+      draggable,
+      animation,
+    });
+  }
+
+  // Use AdvancedMarkerElement if the marker library was loaded
+  const AdvancedMarkerElement = gMarkerLib?.AdvancedMarkerElement;
+  if (AdvancedMarkerElement) {
+    let content = null;
+
+    // icon can be: string URL OR { url, scaledSize, ... } (Icon object)
+    const iconUrl = typeof icon === "string" ? icon : icon?.url;
+    if (iconUrl) {
+      const img = document.createElement("img");
+      img.src = iconUrl;
+      img.alt = title || "";
+      img.style.width = "32px";
+      img.style.height = "32px";
+      img.style.transform = "translate(0, 0)";
+      content = img;
+    }
+
+    return new AdvancedMarkerElement({
+      map,
+      position,
+      title,
+      content,
+    });
+  }
+
+  // Fallback
+  return new google.maps.Marker({ map, position, title, icon });
+}
 /*Ø SECTION General behavior*/	
 /*Ø SECTION General behavior*/	
 /*Ø SECTION General behavior*/	
@@ -98,9 +170,7 @@ var currentDataset = null;
 		});
 	});
 
-function initMap(){
-	//function runs when map API is ready - not used but required by Maps API
-}
+
 
 
 function indexLoadedOne(){
@@ -735,7 +805,7 @@ map = mapCreator(); //get map construct from mapCreator function
 //function to make a map showing places from a trip along with a tree representation of the trip
 function UseOnMap(KMLfile,aDate){
 
-	mapOverlayId = 0 //reset the number of added overalays (features)
+	mapOverlayId = 0 //reset the number of added overlays (features)
 	addedOverlays = [] //the array of features/overlays added to current map
 	map = mapCreator() //get a map
 	
@@ -861,6 +931,181 @@ function AddTreeBox(KMLfile){
 
 }
 //Handle a placemark (place) in context of a treemap node (mother)
+//Handle a placemark (place) in context of a treemap node (mother)
+function doPlacemark(place, mother) {
+  mapOverlayId = mapOverlayId + 1; //increment the number of overlays (features) added to the map
+
+  // ---------- POINT ----------
+  if (place.Point) {
+    const position = LatLnger(place.Point.coordinates["#text"]); // {lat,lng}
+
+    // Resolve icon style (Style or StyleMap->normal->Style)
+    let styleObj = null;
+
+    if (
+      place.styleUrl &&
+      objX.kml?.Document?.Style &&
+      objX.kml.Document.Style.find(o => o.id === place.styleUrl["#text"].substring(1))
+    ) {
+      styleObj = objX.kml.Document.Style.find(o => o.id === place.styleUrl["#text"].substring(1)).IconStyle;
+    } else if (
+      place.styleUrl &&
+      Array.isArray(objX.kml?.Document?.StyleMap) &&
+      objX.kml.Document.StyleMap.find(o => o.id === place.styleUrl["#text"].substring(1))
+    ) {
+      const styleMap = objX.kml.Document.StyleMap.find(o => o.id === place.styleUrl["#text"].substring(1));
+      const styleRef = styleMap.Pair.find(s => s.key["#text"] === "normal").styleUrl["#text"];
+      styleObj = objX.kml.Document.Style.find(o => o.id === styleRef.substring(1)).IconStyle;
+    }
+
+    // Icon URL -> local file path
+    const rawIcon = styleObj?.Icon?.href?.["#text"] || "";
+    const iconUrl = resolveKmlIconUrl(rawIcon);
+
+    // Tree node
+    mother.children.push({
+      text: place.name?.["#text"] || "(uden navn)",
+      state: { opened: false, selected: false },
+      id: "ti_" + mapOverlayId,
+      kind: "point",
+      Point: position,
+      icon: iconUrl // local path now
+    });
+
+    // InfoWindow (keep as-is)
+    const infowindow = new google.maps.InfoWindow({
+      content: place.name?.["#text"] || ""
+    });
+
+    // Marker: prefer AdvancedMarkerElement via createMarker() (local icon),
+    // but keep compatibility with your existing "jump/bounce" code by shimming setAnimation().
+    const aMarker = createMarker({
+      map,
+      position,
+      title: "ti_" + mapOverlayId,
+      icon: iconUrl,
+      // IMPORTANT: do NOT pass animation here, or createMarker will force classic Marker
+      // animation: google.maps.Animation.DROP,
+    });
+
+    // If it's an AdvancedMarkerElement, it won't have setAnimation().
+    // Your tree hover code calls jumper.setAnimation(...), so we shim it.
+    if (aMarker && typeof aMarker.setAnimation !== "function") {
+      // try to find the <img> we created in createMarker()
+      const img = aMarker.content && aMarker.content.tagName === "IMG" ? aMarker.content : null;
+
+      aMarker.setAnimation = (anim) => {
+        if (!img) return;
+        // crude bounce effect via CSS animation class
+        img.classList.toggle("kml-bounce", !!anim);
+      };
+    }
+
+    // Store overlay for tree lookup
+    addedOverlays.push({ id: "ti_" + mapOverlayId, overlay: aMarker });
+
+    // Click -> open infowindow
+    // AdvancedMarkerElement uses DOM events better; classic Marker uses addListener("click")
+    if (aMarker?.addListener) {
+      // Works for classic markers; for advanced marker it may not fire "click" reliably in all setups,
+      // so we also attach a DOM click if there's content.
+      aMarker.addListener("click", () => {
+        infowindow.open({ anchor: aMarker, map, shouldFocus: false });
+      });
+    }
+    if (aMarker?.content) {
+      aMarker.content.style.cursor = "pointer";
+      aMarker.content.addEventListener("click", () => {
+        infowindow.open({ anchor: aMarker, map, shouldFocus: false });
+      });
+      aMarker.content.addEventListener("mouseenter", () => {
+        $("#treebox").jstree("deselect_all");
+        $("#treebox").jstree("select_node", aMarker.title);
+      });
+    } else if (aMarker?.addListener) {
+      // fallback for classic marker hover
+      aMarker.addListener("mouseover", () => {
+        $("#treebox").jstree("deselect_all");
+        $("#treebox").jstree("select_node", aMarker.title);
+      });
+    }
+  }
+
+  // ---------- POLYLINE ----------
+  if (place.LineString && place.LineString.coordinates["#text"]) {
+    let coords = [];
+
+    if (place.LineString.coordinates["#text"]) {
+      coords = place.LineString.coordinates["#text"].trim().split(" ").map(p => LatLnger(p));
+      var trackBounds = new google.maps.LatLngBounds();
+      coords.forEach(lala => trackBounds.extend(lala));
+    }
+
+    let styleObj = null;
+    if (objX.kml.Document.Style.find(o => o.id === place.styleUrl["#text"].substring(1))) {
+      styleObj = objX.kml.Document.Style.find(o => o.id === place.styleUrl["#text"].substring(1)).LineStyle;
+    } else if (objX.kml.Document.StyleMap.find(o => o.id === place.styleUrl["#text"].substring(1))) {
+      const styleMap = objX.kml.Document.StyleMap.find(o => o.id === place.styleUrl["#text"].substring(1));
+      const styleRef = styleMap.Pair.find(s => s.key["#text"] === "normal").styleUrl["#text"];
+      styleObj = objX.kml.Document.Style.find(o => o.id === styleRef.substring(1)).LineStyle;
+    }
+
+    const KMLcolor = (styleObj && styleObj.color) ? styleObj.color["#text"] : "00000000";
+
+    const flightPath = new google.maps.Polyline({
+      path: coords,
+      geodesic: true,
+      strokeColor: "#" + KMLcolor.substring(6, 8) + KMLcolor.substring(4, 6) + KMLcolor.substring(2, 4),
+      strokeOpacity: parseInt(KMLcolor.substring(0, 2), 16) / 255,
+      strokeWeight: (styleObj && styleObj.width) ? parseFloat(styleObj.width["#text"]) : 2,
+      map: map,
+    });
+
+    mother.children.push({
+      text: place.name?.["#text"] || "(uden navn)",
+      state: { opened: false, selected: false },
+      id: "ti_" + mapOverlayId,
+      kind: "polyline",
+      trackBoundsNE: trackBounds.getNorthEast(),
+      trackBoundsSW: trackBounds.getSouthWest()
+    });
+
+    addedOverlays.push({ id: "ti_" + mapOverlayId, overlay: flightPath });
+  }
+
+  // ---------- POLYGON ----------
+  if (place.Polygon && place.Polygon.outerBoundaryIs?.LinearRing?.coordinates?.["#text"]) {
+    const coords = place.Polygon.outerBoundaryIs.LinearRing.coordinates["#text"]
+      .trim()
+      .split(" ")
+      .map(p => LatLnger(p));
+
+    const polyBounds = new google.maps.LatLngBounds();
+    coords.forEach(ll => polyBounds.extend(ll));
+
+    const polygon = new google.maps.Polygon({
+      paths: coords,
+      map: map,
+      strokeOpacity: 0.8,
+      strokeWeight: 2,
+      fillOpacity: 0.2,
+    });
+
+    mother.children.push({
+      text: place.name?.["#text"] || "(uden navn)",
+      state: { opened: false, selected: false },
+      id: "ti_" + mapOverlayId,
+      kind: "polygon",
+      trackBoundsNE: polyBounds.getNorthEast(),
+      trackBoundsSW: polyBounds.getSouthWest()
+    });
+
+    addedOverlays.push({ id: "ti_" + mapOverlayId, overlay: polygon });
+  }
+}
+
+/*------------OLD placemark fkt
+
 function doPlacemark(place,mother){
 	mapOverlayId = mapOverlayId +1; //increment the number of overlays (features) added to the map
 	
@@ -978,6 +1223,8 @@ function doPlacemark(place,mother){
 		  'icon': ""
 		 
 	  })
+
+	  
 	  //add the polyline to the array of added overlays
 	  addedOverlays.push( {id:mapOverlayId,overlay:flightPath})
 	}
@@ -1026,7 +1273,8 @@ function doPlacemark(place,mother){
 
 	
 }
-
+//End Old
+	  */
 function doFolder(fol,mother,doFolderDepth){
 	//Handle a KML folder(fol), in context of a tree node (mother) - supply folder level/depth  (doFolderDepth)
 	
@@ -1537,14 +1785,14 @@ map.fitBounds(addedBounds);
 			anchor: (chosenImage.width > chosenImage.height)? new google.maps.Point(0, 40):new google.maps.Point(0, 60),
 		};
 		//Make marker with the thumbnail image - put it where the drawingManager left its marker
-		const putMarker = new google.maps.Marker({
-			position: position,
-			map,
-			title: "Lige her!",
-			icon: theIcon,
-			draggable:true,
-			customMarkerIndex:chosenImage.dataset.index,
-		  });
+const putMarker = createMarker({
+  map,
+  position,
+  title: "Lige her!",
+  icon: theIcon,
+  draggable: true, // forces classic Marker, so drag works
+});
+putMarker.customMarkerIndex = chosenImage.dataset.index;
 		  //console.log(putMarker.position.lat(),putMarker.position.lng())
 		//add a reference to  marker to the addedMarkers array - as a feature
 		  addedMarkers.push(
