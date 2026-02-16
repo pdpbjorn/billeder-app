@@ -666,7 +666,7 @@ function preloadAround(i, radius = 3) {
   if (!currentDataset?.features) return;
   for (let k = i - radius; k <= i + radius; k++) {
     if (k < 0 || k >= currentDataset.features.length) continue;
-    const img = currentDataset.features[k]?.properties?.image;
+    const img = "Foto/" + currentDataset.features[k]?.properties?.image;
     if (!img) continue;
     const pre = new Image();
     pre.src = img; // browser cache warms up
