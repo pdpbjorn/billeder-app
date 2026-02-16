@@ -485,3 +485,33 @@ nav ul li ul {
 	  background-position: 95% 50%;
 	}
   }
+
+  .am-marker { position: relative; transform: translate(-50%, -100%); }
+.am-marker-img { width: 40px; height: 60px; object-fit: cover; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,.35); }
+.am-marker-dot { width: 12px; height: 12px; border-radius: 50%; background: #e53935; box-shadow: 0 2px 8px rgba(0,0,0,.35); }
+
+/* Drop animation */
+.am-drop { animation: amDrop .35s ease-out; }
+@keyframes amDrop {
+  0%   { transform: translate(-50%, -200%) scale(.9); opacity: 0; }
+  100% { transform: translate(-50%, -100%) scale(1); opacity: 1; }
+}
+/* Bounce animation (safe for Advanced Marker content that already uses translate(-50%,-100%)) */
+.kml-bounce {
+  animation: kmlBounce 600ms ease-in-out infinite;
+}
+
+@keyframes kmlBounce {
+  0%, 100% { transform: translate(-50%, -100%) translateY(0); }
+  50%      { transform: translate(-50%, -100%) translateY(-10px); }
+}
+
+
+/* Optional: a generic bounce you can reuse elsewhere */
+.am-bounce {
+  animation: amBounce 600ms ease-in-out infinite;
+}
+@keyframes amBounce {
+  0%, 100% { transform: translate(-50%, -100%) translateY(0); }
+  50%      { transform: translate(-50%, -100%) translateY(-10px); }
+}

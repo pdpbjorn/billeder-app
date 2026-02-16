@@ -3,6 +3,7 @@
 	//var theAreas; //a set of geograpical areas (countries) for cookie cutting - loaded from JSON file
 	//var theTrips; //a list with descriptions of the trips available as KML - loaded from JSON file
 	let map; //global variable storing the Google Maps map
+	const MAP_ID = "c4befeb907ef4d6a4789e14c";
 	var slideShowOn; //boolean variable which know if the image slideshow is running
 	var thumbPageScroll; //variable storing the vertical scroll position of the thumbnail page before some other page was loaded - useful for restoring scroll position
 	var objX; //Global object storing the JSON version of the trip loaded from the KML file	
@@ -19,26 +20,58 @@
 	var anvIndex = null;
 	var currentDataset = null;
 
+let photoCluster = null;
+// --- Geotagger placement: map click mode (replaces DrawingManager) ---
+let geotagClickListener = null;
 
-window.initMap = async function initMap() {
-	//function runs when map API is ready 
-	gMarkerLib = await google.maps.importLibrary("marker");
+function hasChosenImages() {
+  return document.getElementsByClassName("chosen").length > 0;
+}
 
-	 const { Map } = await google.maps.importLibrary("maps");
-  const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+function enableGeotagClickPlacement() {
+  if (!map || geotagClickListener) return;
 
-  const map = new Map(document.getElementById("map"), {
-    center: { lat: 55.6761, lng: 12.5683 },
-    zoom: 8,
-    mapId: "YOUR_MAP_ID" // recommended for advanced markers
-  });
+  geotagClickListener = map.addListener("click", (e) => {
+    // Only place when user has selected images
+    if (!hasChosenImages()) return;
 
-  const marker = new AdvancedMarkerElement({
-    map,
-    position: { lat: 55.6761, lng: 12.5683 },
-    title: "Some title"
+    const pos = e.latLng.toJSON(); // {lat, lng}
+
+    // Place ALL currently chosen images at clicked position
+    $(".chosen").each(function (_i, chosenImage) {
+      imageToMap(chosenImage, pos, true);
+    });
+
+    makeTextFile(addedMarkers);
+
+    // If everything got placed, disable click mode again
+    syncGeotagClickPlacementMode();
   });
 }
+
+function disableGeotagClickPlacement() {
+  if (geotagClickListener) {
+    google.maps.event.removeListener(geotagClickListener);
+    geotagClickListener = null;
+  }
+}
+
+function syncGeotagClickPlacementMode() {
+  if (hasChosenImages()) enableGeotagClickPlacement();
+  else disableGeotagClickPlacement();
+}
+
+
+let markerReadyResolve;
+const markerReady = new Promise((res) => (markerReadyResolve = res));
+
+
+window.initMap = async function initMap() {
+  gMarkerLib = await google.maps.importLibrary("marker");
+  markerReadyResolve();
+};
+
+
 // --- Modern marker support (AdvancedMarkerElement when available) ---
 let gMarkerLib = null;
 
@@ -53,50 +86,72 @@ function resolveKmlIconUrl(url) {
   const filename = clean.substring(clean.lastIndexOf("/") + 1);
   return `icons/${filename}`;
 }
-
-// Create a marker using AdvancedMarkerElement when possible,
-// but fall back to google.maps.Marker when we need draggable/animation/etc.
-function createMarker({ map, position, title, icon, draggable = false, animation }) {
-  // If draggable (or animation), use classic Marker (AdvancedMarker doesn't support these the same way)
-  if (draggable || animation) {
-    return new google.maps.Marker({
-      map,
-      position,
-      title,
-      icon,
-      draggable,
-      animation,
-    });
-  }
-
-  // Use AdvancedMarkerElement if the marker library was loaded
-  const AdvancedMarkerElement = gMarkerLib?.AdvancedMarkerElement;
-  if (AdvancedMarkerElement) {
-    let content = null;
-
-    // icon can be: string URL OR { url, scaledSize, ... } (Icon object)
-    const iconUrl = typeof icon === "string" ? icon : icon?.url;
-    if (iconUrl) {
-      const img = document.createElement("img");
-      img.src = iconUrl;
-      img.alt = title || "";
-      img.style.width = "32px";
-      img.style.height = "32px";
-      img.style.transform = "translate(0, 0)";
-      content = img;
-    }
-
-    return new AdvancedMarkerElement({
-      map,
-      position,
-      title,
-      content,
-    });
-  }
-
-  // Fallback
-  return new google.maps.Marker({ map, position, title, icon });
+function markerLatLng(m) {
+  const p = m.position;
+  if (!p) return null;
+  if (typeof p.lat === "function") return { lat: p.lat(), lng: p.lng() };
+  return { lat: p.lat, lng: p.lng };
 }
+// Create a marker using AdvancedMarkerElement,
+
+function createMarker({
+  map,
+  position,
+  title = "",
+  icon = null,
+  draggable = false,
+  cssClass = "",
+  animateDrop = false
+}) {
+  const AdvancedMarkerElement = gMarkerLib?.AdvancedMarkerElement;
+  if (!AdvancedMarkerElement) {
+    throw new Error("Advanced marker library not loaded. Check index.htm libraries and initMap().");
+  }
+
+  // Wrapper element that we can style with CSS
+  const wrapper = document.createElement("div");
+  wrapper.className = `am-marker ${cssClass}`.trim();
+
+  const iconUrl = (typeof icon === "string") ? icon : (icon && icon.url ? icon.url : null);
+
+  if (iconUrl) {
+    const img = document.createElement("img");
+    img.src = iconUrl;
+    img.alt = title;
+    img.className = "am-marker-img";
+    wrapper.appendChild(img);
+  } else {
+    const dot = document.createElement("div");
+    dot.className = "am-marker-dot";
+    wrapper.appendChild(dot);
+  }
+
+  if (animateDrop) wrapper.classList.add("am-drop");
+
+  const m = new AdvancedMarkerElement({
+    map,
+    position,
+    title,
+    content: wrapper
+  });
+
+  // Make it clickable + draggable
+  m.gmpClickable = true;               // click support
+  m.gmpDraggable = !!draggable;        // draggable support
+
+  if (animateDrop) {
+    wrapper.addEventListener("animationend", () => wrapper.classList.remove("am-drop"), { once: true });
+  }
+
+  return m;
+}
+
+// CSS-bounce for AdvancedMarkerElement
+function setMarkerBounce(marker, on) {
+  if (!marker || !marker.content) return;
+  marker.content.classList.toggle("am-bounce", !!on);
+}
+
 /*Ø SECTION General behavior*/	
 /*Ø SECTION General behavior*/	
 /*Ø SECTION General behavior*/	
@@ -462,7 +517,8 @@ loadDataset("data/problems/no-timestamp.geo.json", (ds) => {
 if (isListMode()) {
 buildTiles(ds);
 } else {
-window.location.href = "#" + showOnMap(getGeotaggedFeatures(ds));
+    showOnMap(getGeotaggedFeatures(ds));
+window.location.href = "#mappage";
 }
 });
 }
@@ -479,7 +535,8 @@ loadDataset("data/tid/" + month + ".geo.json", (ds) => {
 if (isListMode()) {
 buildTiles(ds);
 } else {
-window.location.href = "#" + showOnMap(getGeotaggedFeatures(ds));
+    showOnMap(getGeotaggedFeatures(ds));
+window.location.href = "#mappage";
 }
 });
 }
@@ -497,7 +554,8 @@ loadDataset("data/anvendelse/" + tripId + ".geo.json", (ds) => {
 if (isListMode()) {
 buildTiles(ds);
 } else {
-window.location.href = "#" + UseOnMap(KMLfile);
+    UseOnMap(KMLfile);
+window.location.href = "#mappage" 
 }
 });
 }
@@ -512,7 +570,8 @@ loadDataset("data/sted/" + areaId + ".geo.json", (ds) => {
 if (isListMode()) {
 buildTiles(ds);
 } else {
-window.location.href = "#" + showOnMap(getGeotaggedFeatures(ds));
+    showOnMap(getGeotaggedFeatures(ds));
+window.location.href = "#mappage";
 }
 });
 }
@@ -546,7 +605,10 @@ function buildTiles(dataslice){
 				.append($("<div/>",{"class":"dateHeader","text":indexDate.indexOf("_") > -1?indexDate:new Intl.DateTimeFormat('da-DK',{ dateStyle: 'full'}).format(new Date(indexDate))}) 
 					
 					.append($("<input/>",{"type":"button","id":"loadDateImages","name":"loadDateImages","value":"load dato i geotagger"})
-						.on("click", function(  ) { window.location.href = "#" + UseOnMap(undefined,indexDate);}
+						.on("click", function(  ) {
+                            UseOnMap(undefined,indexDate);
+                             window.location.href = "#mappage"
+                            }
 						)
 					))
 					.append(
@@ -591,9 +653,10 @@ function buildTiles(dataslice){
 			.text("Vis på kort")
 			.css({"position":"absolute","top":"2%","right":"2%"})
 			.on("click", function( event ) {
-				window.location.href = "#" + showOnMap({"type":"FeatureCollection","features":_.filter(dataslice,function(feature){
+                showOnMap({"type":"FeatureCollection","features":_.filter(dataslice,function(feature){
 					return feature.geometry;			
 				})})
+				window.location.href = "#mappage"
 				})
 		)}
 	}
@@ -774,6 +837,123 @@ function setClipboard(value) {
 }
 
 
+
+let photoMarkers = [];
+let photoInfoWindow = null;
+
+function clearPhotoMarkers() {
+  if (photoCluster) {
+     photoCluster.clearMarkers();
+    photoCluster.setMap(null);
+    photoCluster = null;
+  }
+  photoMarkers.forEach(m => { m.map = null; });
+  photoMarkers = [];
+}
+
+
+async function showOnMap(mapFeatureCollection) {
+  await markerReady;
+
+  map = mapCreator();
+
+  if (!photoInfoWindow) photoInfoWindow = new google.maps.InfoWindow();
+  clearPhotoMarkers();
+
+  const bounds = new google.maps.LatLngBounds();
+
+  mapFeatureCollection.features.forEach((f) => {
+    if (!f.geometry || f.geometry.type !== "Point") return;
+
+    const lng = f.geometry.coordinates[0];
+    const lat = f.geometry.coordinates[1];
+    const position = { lat, lng };
+
+    const marker = createMarker({
+      map,
+      position,
+      title: String(f.properties?.index ?? ""),
+      icon: null,           // optionally thumb URL
+      draggable: false,
+      cssClass: "photo",
+      animateDrop: true,
+    });
+
+    marker.__feature = f;
+
+    marker.addListener("gmp-click", () => {
+      const img = f.properties.image;
+
+      const thumbUrl =
+        img.substring(0, img.lastIndexOf("/")) +
+        "/.thumb/" +
+        img.substring(img.lastIndexOf("/") + 1) +
+        ".jpg";
+
+      const featureIndex = f.properties.index;
+
+      const div = document.createElement("div");
+      const t = document.createElement("img");
+      t.src = thumbUrl;
+      t.style.height = "150px";
+      t.style.cursor = "pointer";
+      t.onclick = function () {
+        injectImage(featureIndex);
+      };
+      div.appendChild(t);
+
+      photoInfoWindow.setContent(div);
+      photoInfoWindow.setPosition(position);
+      photoInfoWindow.setOptions({ pixelOffset: new google.maps.Size(0, -20) });
+      photoInfoWindow.open(map);
+    });
+
+    photoMarkers.push(marker);
+    bounds.extend(position);
+  });
+
+  if (photoMarkers.length) {
+    map.fitBounds(bounds, 10);
+  }
+
+  // ---- CLUSTERING ----
+  // Requires: <script src="https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js"></script>
+  // which you already have in index.htm
+  if (window.markerClusterer && photoMarkers.length > 1) {
+photoCluster = new markerClusterer.MarkerClusterer({
+  map,
+  markers: photoMarkers,
+
+  // Clicking a cluster zooms to its bounds
+onClusterClick: (e, cluster, map) => {
+  // Newer versions: cluster.bounds
+  if (cluster.bounds) {
+    map.fitBounds(cluster.bounds);
+    return;
+  }
+
+  // Fallback: compute bounds from markers
+  const b = new google.maps.LatLngBounds();
+  const ms = cluster.markers || cluster.getMarkers?.() || [];
+  ms.forEach((m) => {
+    const p = m.position;
+    if (!p) return;
+    const ll = (typeof p.lat === "function") ? p : new google.maps.LatLng(p.lat, p.lng);
+    b.extend(ll);
+  });
+  map.fitBounds(b);
+},
+
+  // optional tuning:
+  // algorithmOptions: { maxZoom: 17 }
+});
+  }
+
+  return "mappage";
+}
+
+
+/*
 //show a set of features (images) on map as markers - returns mappage
 function showOnMap(mapFeatureCollection){
 
@@ -800,10 +980,11 @@ map = mapCreator(); //get map construct from mapCreator function
 
 	return "mappage" //to calling function for navigation
 	}
-
+*/
 
 //function to make a map showing places from a trip along with a tree representation of the trip
-function UseOnMap(KMLfile,aDate){
+async function UseOnMap(KMLfile,aDate){
+      await markerReady;
 
 	mapOverlayId = 0 //reset the number of added overlays (features)
 	addedOverlays = [] //the array of features/overlays added to current map
@@ -882,21 +1063,21 @@ function AddTreeBox(KMLfile){
 			}, 500)
 		  },500)
 
-	//make markers jump, when mouse is over corresponding tree node
-	$('#treebox').on('hover_node.jstree',function(e,data){
-		if (data.node.original.kind === "point"){
-			//Use the array of added features to get the marker based on tree node id
-			var overlayTag = addedOverlays.find(o => o.id === data.node.original.id) 
-			let jumper = overlayTag.overlay
-			jumper.setAnimation(google.maps.Animation.BOUNCE);
-		
-		//stop the jumping
-			$('#treebox').on('dehover_node.jstree',function(e,data){
-				jumper.setAnimation(null);
-			})
-		}
+// make markers "bounce" (CSS) when mouse is over corresponding tree node
+$('#treebox').on('hover_node.jstree', function (e, data) {
+  if (data.node.original.kind === "point") {
+    const overlayTag = addedOverlays.find(o => o.id === data.node.original.id);
+    if (!overlayTag) return;
 
-	})
+    const jumper = overlayTag.overlay;
+    setMarkerBounce(jumper, true);
+
+    $('#treebox').one('dehover_node.jstree', function () {
+      setMarkerBounce(jumper, false);
+    });
+  }
+});
+
 	//zoom the map to the bonds of the contents of a clicked tree node	  
 	$("#treebox").on('dblclick','.jstree-anchor', function (e) {
 		var instance = $.jstree.reference(this),
@@ -931,7 +1112,6 @@ function AddTreeBox(KMLfile){
 
 }
 //Handle a placemark (place) in context of a treemap node (mother)
-//Handle a placemark (place) in context of a treemap node (mother)
 function doPlacemark(place, mother) {
   mapOverlayId = mapOverlayId + 1; //increment the number of overlays (features) added to the map
 
@@ -957,7 +1137,7 @@ function doPlacemark(place, mother) {
       const styleRef = styleMap.Pair.find(s => s.key["#text"] === "normal").styleUrl["#text"];
       styleObj = objX.kml.Document.Style.find(o => o.id === styleRef.substring(1)).IconStyle;
     }
-
+  }
     // Icon URL -> local file path
     const rawIcon = styleObj?.Icon?.href?.["#text"] || "";
     const iconUrl = resolveKmlIconUrl(rawIcon);
@@ -977,59 +1157,22 @@ function doPlacemark(place, mother) {
       content: place.name?.["#text"] || ""
     });
 
+
+
+
     // Marker: prefer AdvancedMarkerElement via createMarker() (local icon),
-    // but keep compatibility with your existing "jump/bounce" code by shimming setAnimation().
+    
     const aMarker = createMarker({
       map,
       position,
       title: "ti_" + mapOverlayId,
       icon: iconUrl,
       // IMPORTANT: do NOT pass animation here, or createMarker will force classic Marker
-      // animation: google.maps.Animation.DROP,
+    
     });
 
-    // If it's an AdvancedMarkerElement, it won't have setAnimation().
-    // Your tree hover code calls jumper.setAnimation(...), so we shim it.
-    if (aMarker && typeof aMarker.setAnimation !== "function") {
-      // try to find the <img> we created in createMarker()
-      const img = aMarker.content && aMarker.content.tagName === "IMG" ? aMarker.content : null;
 
-      aMarker.setAnimation = (anim) => {
-        if (!img) return;
-        // crude bounce effect via CSS animation class
-        img.classList.toggle("kml-bounce", !!anim);
-      };
-    }
 
-    // Store overlay for tree lookup
-    addedOverlays.push({ id: "ti_" + mapOverlayId, overlay: aMarker });
-
-    // Click -> open infowindow
-    // AdvancedMarkerElement uses DOM events better; classic Marker uses addListener("click")
-    if (aMarker?.addListener) {
-      // Works for classic markers; for advanced marker it may not fire "click" reliably in all setups,
-      // so we also attach a DOM click if there's content.
-      aMarker.addListener("click", () => {
-        infowindow.open({ anchor: aMarker, map, shouldFocus: false });
-      });
-    }
-    if (aMarker?.content) {
-      aMarker.content.style.cursor = "pointer";
-      aMarker.content.addEventListener("click", () => {
-        infowindow.open({ anchor: aMarker, map, shouldFocus: false });
-      });
-      aMarker.content.addEventListener("mouseenter", () => {
-        $("#treebox").jstree("deselect_all");
-        $("#treebox").jstree("select_node", aMarker.title);
-      });
-    } else if (aMarker?.addListener) {
-      // fallback for classic marker hover
-      aMarker.addListener("mouseover", () => {
-        $("#treebox").jstree("deselect_all");
-        $("#treebox").jstree("select_node", aMarker.title);
-      });
-    }
-  }
 
   // ---------- POLYLINE ----------
   if (place.LineString && place.LineString.coordinates["#text"]) {
@@ -1104,177 +1247,7 @@ function doPlacemark(place, mother) {
   }
 }
 
-/*------------OLD placemark fkt
 
-function doPlacemark(place,mother){
-	mapOverlayId = mapOverlayId +1; //increment the number of overlays (features) added to the map
-	
-	//if the handled palce is a point
-	if (place.Point){
-		var position = LatLnger(place.Point.coordinates['#text']) //convert to latlng literal
-		//if the place has a styleUrl and if a corresponding Style can be found in the KML document
-		if (place.styleUrl && objX.kml.Document.Style.find(o => o.id === place.styleUrl['#text'].substring(1))){
-			//get the iconStyle from the KML document
-			var styleObj = objX.kml.Document.Style.find(o => o.id === place.styleUrl['#text'].substring(1)).IconStyle;
-		}
-		//if not (the style is probably stored as styleMap array)
-		else{
-			//if place has a styleUrl and if an array of StyleMaps exist in kml and if that array contains a StyleMap corresponding to the url a hand
-			if (place.styleUrl &&  Array.isArray(objX.kml.Document.StyleMap) && objX.kml.Document.StyleMap.find(o => o.id === place.styleUrl['#text'].substring(1))){
-				//get that styleMap
-				styleMap = objX.kml.Document.StyleMap.find(o => o.id === place.styleUrl['#text'].substring(1))
-				//get the 'normal' style from the map
-				styleRef = styleMap.Pair.find(s => s.key['#text'] === "normal").styleUrl['#text'];
-				//get the icon from the 'normal' style
-				var styleObj = objX.kml.Document.Style.find(o => o.id === styleRef.substring(1)).IconStyle;
-			}
-		}
-			
-		//make a new child in the context node, identified by its mapoverlayId	
-		mother.children.push({'text':place.name['#text'],
-		'state': {	'opened' :false,'selected' : false},
-		'id':"ti_" + mapOverlayId ,
-		'kind':"point",
-		'Point': position,
-		'icon': (styleObj)?styleObj.Icon.href['#text']:""//also hotSpot
-		})
-		//create a corresponding map infowindow for the place
-		const infowindow = new google.maps.InfoWindow({
-			content: place.name['#text'],
-		  });
-		 //create a map marker for the place, identified with the same mapOverlayId
-		  var aMarker = new google.maps.Marker({
-			position: position,
-			map,
-			title: "ti_" + mapOverlayId,
-			animation: google.maps.Animation.DROP,
-			icon: (styleObj)?styleObj.Icon.href['#text']:"",//også hotSpot 
-		  });
-		
-		  //add the identifier and the marker to the array of added overlays
-		  addedOverlays.push( {id:"ti_" + mapOverlayId,overlay:aMarker})
-		  
-		  //make marker respond to click by opening the infowindow
-		  aMarker.addListener("click", () => {
-			infowindow.open({
-			  anchor: aMarker,
-			  map,
-			  shouldFocus: false,
-			  
-			});
-		  });
-		 //Make maker repsond to mouseover by highlighting its node in the tree (matching the markers title to the tree node id)
-		  aMarker.addListener("mouseover",(mapsMouseEvent) => {
-			$('#treebox').jstree('deselect_all');
-			$('#treebox').jstree('select_node', aMarker.title);
-
-		  })
-		  
-	}
-
-	//if the place is a polyline that has data i.e. a coordinate array
-	if (place.LineString && place.LineString.coordinates['#text']){
-		var coords = []
-				
-		//if the polyline has coordinates
-		if(place.LineString.coordinates['#text']){
-			//create coordinate array from KML coordinates
-			coords = place.LineString.coordinates['#text'].trim().split(" ").map(p => LatLnger(p))
-			//make a bounds object bounding the polyline
-			var trackBounds = new google.maps.LatLngBounds()
-			coords.forEach(lala => trackBounds.extend(lala))
-			
-		}
-		//If a Style exist, corresponding to the place's StyleUrl
-		if (objX.kml.Document.Style.find(o => o.id === place.styleUrl['#text'].substring(1))){
-			//store the linestyle from the KML document as styleObj
-			var styleObj = objX.kml.Document.Style.find(o => o.id === place.styleUrl['#text'].substring(1)).LineStyle;
-		}
-		else{
-			//if a style map exist insteda
-			if (objX.kml.Document.StyleMap.find(o => o.id === place.styleUrl['#text'].substring(1))){
-				//get the linestyle from the 'normal' entryy in the map
-				styleMap = objX.kml.Document.StyleMap.find(o => o.id === place.styleUrl['#text'].substring(1))
-				styleRef = styleMap.Pair.find(s => s.key['#text'] === "normal").styleUrl['#text'];
-				var styleObj = objX.kml.Document.Style.find(o => o.id === styleRef.substring(1)).LineStyle;
-			}
-		}
-		//get the color from the stored style object	
-		KMLcolor =(styleObj && styleObj.color)?styleObj.color['#text']:"00000000"
-	//create path object from the coordinates, using the styles 
-	const flightPath = new google.maps.Polyline({
-		path: coords,
-		geodesic: true,
-		strokeColor: "#" + KMLcolor.substring(6,7) +  KMLcolor.substring(4,5) + KMLcolor.substring(2,3),
-		strokeOpacity: 1.0,
-		strokeWeight: (styleObj)?parseInt(styleObj.width['#text']):6,
-	  });
-	  //put on the map
-	  flightPath.setMap(map);
-	  //make a node in the tree, store the bounds as literals, identify by the counter
-	  mother.children.push({
-		'text':(place.name)?place.name['#text']:"--//--",
-		  'state': {	'opened' :false,'selected' : false},
-		  'id': mapOverlayId,
-		  'kind':"polyline",
-		  'trackBoundsSW':(trackBounds)?{'lat':trackBounds.getSouthWest().lat(),'lng':trackBounds.getSouthWest().lng()}:"",
-		'trackBoundsNE':(trackBounds)?{'lat':trackBounds.getNorthEast().lat(),'lng':trackBounds.getNorthEast().lng()}:"", 
-		  'trackBounds':(trackBounds)?trackBounds:"",  
-		  'icon': ""
-		 
-	  })
-
-	  
-	  //add the polyline to the array of added overlays
-	  addedOverlays.push( {id:mapOverlayId,overlay:flightPath})
-	}
-		//if it is a poligon
-	if (place.Polygon ){
-		var coords = []
-		//if it has coordinates
-		if(place.Polygon.outerBoundaryIs.LinearRing.coordinates['#text']){
-			//make coordinates from the KML data coordinates
-			coords = place.Polygon.outerBoundaryIs.LinearRing.coordinates['#text'].trim().split(" ").map(p => LatLnger(p))
-			//make a bounds object and extend it by each coordinate in the poligon
-			var trackBounds = new google.maps.LatLngBounds()
-			coords.forEach(lala => trackBounds.extend(lala))
-			
-		}
-			//create new poligon
-			//shouldnt it be identified?
-			const bermudaTriangle = new google.maps.Polygon({
-				paths: coords,
-				strokeColor: "#FF0000",
-				strokeOpacity: 0.8,
-				strokeWeight: 2,
-				fillColor: "#FF0000",
-				fillOpacity: 0.35,
-			  });
-
-
-	
-	
-			  bermudaTriangle.setMap(map);
-	  //ad node to the tree, identify and store bounds
-	  mother.children.push({
-		'text':(place.name)?place.name['#text']:"--//--",
-		  'state': {	'opened' :false,'selected' : false},
-		  'id': mapOverlayId,
-		  'kind':"polygon",
-		  'trackBoundsSW':(trackBounds)?{'lat':trackBounds.getSouthWest().lat(),'lng':trackBounds.getSouthWest().lng()}:"",
-		'trackBoundsNE':(trackBounds)?{'lat':trackBounds.getNorthEast().lat(),'lng':trackBounds.getNorthEast().lng()}:"", 
-		  'trackBounds':(trackBounds)?trackBounds:"",  
-		  'icon': ""
-		 
-	  })
-	  //Put the poligon into the overlay array
-	  addedOverlays.push( {id:mapOverlayId,overlay:bermudaTriangle})
-	}
-
-	
-}
-//End Old
-	  */
 function doFolder(fol,mother,doFolderDepth){
 	//Handle a KML folder(fol), in context of a tree node (mother) - supply folder level/depth  (doFolderDepth)
 	
@@ -1319,15 +1292,17 @@ function mapCreator()
 		.append(map_canvas)
 	)
 	//Instantiate map
-	map = new google.maps.Map(document.getElementById('mapCanvas'), {
-		center: ({lat:0,lng:0}),
-		zoom: 8
-	  });
+map = new google.maps.Map(document.getElementById('mapCanvas'), {
+  center: { lat: 0, lng: 0 },
+  zoom: 8,
+  mapId: MAP_ID,
+});
 	  //create infovindow - the pop-up appearing when clicking a map marker
 	  var infowindow = new google.maps.InfoWindow({
 		content: "hello"
 	  });
 	
+	  /*
 	map.data.addListener('click', function(event) { //listen for click on marker
 		//Make thumbnail
 		var img = event.feature.getProperty('image');
@@ -1354,6 +1329,8 @@ function mapCreator()
 		}); // move the infowindow up slightly to the top of the marker icon
 		infowindow.open(map);
 		})
+
+		*/
 		//create the map control buttons
 
 		const closeMapDiv = document.createElement("div"); //the close map button
@@ -1555,32 +1532,9 @@ function addMapControl(controlDiv, map, mapDoWhat) {
 function taggerInterface(aDate){
 	//Setup the drawingManager to handle placements of images on map
 	//const drawingManager = new google.maps.drawing.DrawingManager({
-	drawingManager = new google.maps.drawing.DrawingManager({
-			drawingMode: google.maps.drawing.OverlayType.MARKER,
-		drawingControl: true,
-		drawingControlOptions: {
-		  position: google.maps.ControlPosition.RIGHT_BOTTOM,
-		  drawingModes: [
-			google.maps.drawing.OverlayType.MARKER
-		  ],
-		}
-		
-	  });
-	//give the manager a map
-	  drawingManager.setMap(map);
-	  //do not use it right now
-	  drawingManager.setDrawingMode(null);
-	  //when the interim marker have been placed, let putMarkers() take over, and remove the interim marker
-	  google.maps.event.addListener(drawingManager, 'markercomplete', function(drawnMarker) {
-		
-		$(".chosen").each(function(number,chosenImage){imageToMap(chosenImage,drawnMarker.position,true)})
-		drawingManager.setDrawingMode((document.getElementsByClassName('chosen').length > 0)?'marker':null);	
-		makeTextFile(addedMarkers);
-		drawnMarker.setMap(null)
-			//drawingManager.setDrawingMode('null');	
-			
-		
-	  });
+// Geotagger placement now uses MAP CLICK (not DrawingManager)
+syncGeotagClickPlacementMode();
+
 
 
 
@@ -1622,9 +1576,10 @@ $("#sidepanel").append($("<div/>",{"id":"taggerbox"}).css({"height":"80%","width
 								$("#mappage").append($("<img/>",{"src":event.target.src,"class":"floatingImage"}).css({ "top": "200px",	"z-index": "2000","position":"absolute","left":"200px",}))
 								 jumper = addedMarkers.find(m => m.properties.index === event.target.dataset.index)
 							
-								//var overlayTag = addedOverlays.find(o => o.id === data.node.original.id) 
-								//let jumper = overlayTag.overlay
-								jumper?jumper.marker.setAnimation(google.maps.Animation.BOUNCE):null;
+							if (jumper && jumper.marker) {
+                                 setMarkerBounce(jumper.marker, true);
+                            }
+
 							
 											
 							
@@ -1632,7 +1587,9 @@ $("#sidepanel").append($("<div/>",{"id":"taggerbox"}).css({"height":"80%","width
 							})
 							.mouseout(function(){
 								$(".floatingImage").remove();
-								jumper.marker.setAnimation(null);
+								if (jumper && jumper.marker) {
+                                     setMarkerBounce(jumper.marker, false);
+                                }
 								})
 							.click(function(event){
 								
@@ -1649,14 +1606,14 @@ $("#sidepanel").append($("<div/>",{"id":"taggerbox"}).css({"height":"80%","width
 									addedMarkers.forEach(f => {
 									if (f.properties.index === event.target.dataset.index)
 										{
-										f.marker.setMap(null)
+										f.marker.map = null;
 										addedMarkers.splice(addedMarkers.indexOf(f),1)
 										}
 									})
 									makeTextFile(addedMarkers);
 									
 								}
-								drawingManager.setDrawingMode((document.getElementsByClassName('chosen').length > 0)?'marker':null);	
+								syncGeotagClickPlacementMode();
 									
 							})
 						)
@@ -1687,7 +1644,7 @@ $("#sidepanel").append($("<div/>",{"id":"taggerbox"}).css({"height":"80%","width
 			addedMarkers.forEach(f => {
 			if (f.properties.index === this.dataset.index)
 				{
-				f.marker.setMap(null)
+				f.marker.marker = null;
 				addedMarkers.splice(addedMarkers.indexOf(f),1)
 				}
 			})
@@ -1703,13 +1660,13 @@ $("#sidepanel").append($("<div/>",{"id":"taggerbox"}).css({"height":"80%","width
 		.on("click", function( event ) {//on  click, put class 'chosen' on all
 			Array.from(document.getElementsByClassName('choose')).forEach(i => $(i).addClass("chosen"))
 			//initiate the drawingmanager
-			drawingManager.setDrawingMode((document.getElementsByClassName('chosen').length > 0)?'marker':null);	
+			syncGeotagClickPlacementMode();	
 		 }))
 		 //add deselect button
 	.append($("<input/>",{"type":"button","id":"selectNone","name":"selectNone","value":"Intet","data-role":"none"})
 		.on("click", function( event ) { //remove the 'chosen' class
 			Array.from(document.getElementsByClassName('chosen')).forEach(i => $(i).removeClass("chosen"))
-			drawingManager.setDrawingMode((document.getElementsByClassName('chosen').length > 0)?'marker':null);	
+			syncGeotagClickPlacementMode();	
 		}))
 
 
@@ -1719,7 +1676,7 @@ $("#sidepanel").append($("<div/>",{"id":"taggerbox"}).css({"height":"80%","width
 			
 			$(".chosen").each(function(number,chosenImage){imageToMap(chosenImage,{lat:Number(event.target.value.split(",")[0]),lng:Number(event.target.value.split(",")[1])},true)})
 			makeTextFile(addedMarkers);
-			drawingManager.setDrawingMode((document.getElementsByClassName('chosen').length > 0)?'marker':null);
+			syncGeotagClickPlacementMode();
 		event.target.selectedIndex = -1;
 		})
 	)
@@ -1744,7 +1701,10 @@ $("#sidepanel").append($("<div/>",{"id":"taggerbox"}).css({"height":"80%","width
 var addedBounds = new google.maps.LatLngBounds();
 if (addedMarkers.length > 0){
 for (var i = 0; i < addedMarkers.length; i++) {
-	addedBounds.extend({lat:addedMarkers[i].geometry.coordinates[0],lng:addedMarkers[i].geometry.coordinates[1]});
+	addedBounds.extend({
+        lat:addedMarkers[i].geometry.coordinates[1],
+        lng:addedMarkers[i].geometry.coordinates[0]
+    });
 }
 
 
@@ -1760,16 +1720,7 @@ map.fitBounds(addedBounds);
 
 	}
 	
-	/*
-	//when the interim marker has been dropped
-	function putMarkers(position)
-	{	//work on the images chosen in the box
-		$(".chosen").each(function(number,chosenImage){imageToMap(chosenImage,position)})
-		drawingManager.setDrawingMode((document.getElementsByClassName('chosen').length > 0)?'marker':null);	
-		makeTextFile(addedMarkers);
-	}
 
-	*/
 
 	function imageToMap(chosenImage,position,newGeo){
 		//make class 'placed'
@@ -1785,7 +1736,20 @@ map.fitBounds(addedBounds);
 			anchor: (chosenImage.width > chosenImage.height)? new google.maps.Point(0, 40):new google.maps.Point(0, 60),
 		};
 		//Make marker with the thumbnail image - put it where the drawingManager left its marker
-const putMarker = createMarker({
+
+		const putMarker = createMarker({
+  map,
+  position,
+  title: "Lige her!",
+  icon: theIcon,
+  cssClass: "geotag",
+  animateDrop: true,
+  draggable: true,
+});
+putMarker.customMarkerIndex = chosenImage.dataset.index;
+
+/*
+		const putMarker = createMarker({
   map,
   position,
   title: "Lige her!",
@@ -1793,8 +1757,11 @@ const putMarker = createMarker({
   draggable: true, // forces classic Marker, so drag works
 });
 putMarker.customMarkerIndex = chosenImage.dataset.index;
+
+*/
 		  //console.log(putMarker.position.lat(),putMarker.position.lng())
 		//add a reference to  marker to the addedMarkers array - as a feature
+        const ll0 = markerLatLng(putMarker);
 		  addedMarkers.push(
 			{
 				type:"Feature",
@@ -1805,16 +1772,19 @@ putMarker.customMarkerIndex = chosenImage.dataset.index;
 					timestamp:chosenImage.dataset.timestamp,
 					newGeo:newGeo
 				},
-				geometry:{"type": "Point", "coordinates": [	putMarker.position.lat(),putMarker.position.lng()] } ,
+				
+                geometry: { "type": "Point", "coordinates": [ ll0.lng, ll0.lat ] },
 				marker: putMarker
 				
 			}
 		)
 		//add listener - if marker is moved, update the corresponding marker in addedMarkers - add the newGeo tag
+       
 		putMarker.addListener("dragend", () => {
+             const ll1 = markerLatLng(putMarker);
 			addedMarkers.forEach(function (m){ 
 				if (m.properties.index === putMarker.customMarkerIndex)
-				{m.geometry.coordinates = [	putMarker.position.lat(),putMarker.position.lng()];
+				{m.geometry.coordinates = [	ll1.lng, ll1.lat ];
 				m.properties.newGeo = true;
 				}}
 			)
@@ -1823,29 +1793,34 @@ putMarker.customMarkerIndex = chosenImage.dataset.index;
 			//console.log(putMarker.position.lat(),putMarker.position.lng(),addedMarkers.find(m => m.properties.index === putMarker.customMarkerIndex).geometry.coordinates)
 			});
 			//if marker is right-clicked - remove it from addedMarkers, from the map and revert the box-thumb back to not-placed
-		putMarker.addListener("contextmenu",function() { 
-			dex = putMarker.customMarkerIndex;
-			addedMarkers.forEach(function(f) { 
-				if (f.properties.index === dex)
-				{removeThis = addedMarkers.indexOf(f)}}
-				)
-			addedMarkers.splice(removeThis,1)
-			$(".placed").each(function(x,i){
-				if (i.dataset.index === dex)
-				{$(i).removeClass("placed")}
-				})	
-			putMarker.setMap(null)
-			//console.log(addedMarkers)
-			//write the array of markers to the poweshell textfile
-			makeTextFile(addedMarkers);
-		})
+		putMarker.content.addEventListener("contextmenu", (e) => {
+            e.preventDefault();
+
+            const dex = putMarker.customMarkerIndex;
+
+            const removeThis = addedMarkers.findIndex(f => f.properties.index === dex);
+            if (removeThis >= 0) addedMarkers.splice(removeThis, 1);
+
+            // remove marker from map
+            putMarker.map = null;
+
+            // revert thumbnail back to not-placed (keep your existing logic)
+            $(".placed").each(function(x,i){
+                if (i.dataset.index === dex) { $(i).removeClass("placed"); }
+            });
+
+            makeTextFile(addedMarkers);
+            });
+
+
+
 		//when mouse is over the marker - show larger image
-		putMarker.addListener("mouseover",function(){
+		putMarker.content.addEventListener("mouseover",function(){
 			if(! $("#hidePreview")[0].checked){
 			$("#mappage").append($("<img/>",{"src":putMarker.icon.url,"class":"floatingImage"}).css({ "top": "200px",	"z-index": "2000","position":"absolute","left":"200px",}))
 				}
 			})
-			putMarker.addListener("mouseout",function(){
+			putMarker.content.addEventListener("mouseout",function(){
 			$(".floatingImage").remove()
 			})
 	
@@ -1963,6 +1938,7 @@ function parseXml(xml, arrayTags) {//arrayTags seem not to be in use
 
     return result;
 }
+
 //return objects from object based on key-value filter
 function getObjects(obj, key, val) {
     var objects = [];

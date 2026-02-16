@@ -71,8 +71,9 @@ Ide: Byg dateringsinterface til udaterede billeder  -  noget ala geotagger
 	<script src="./js/jquery.mobile-1.5.0-alpha.1.min.js"></script>
 	<script src="./js/underscore-min.js" type="text/javascript" language="JavaScript"></script>
 	<script src="./js/turf.min.js" type="text/javascript" language="JavaScript"></script>
+	<script src="https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js"></script>
 	<script
-		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2J_gYxDzUWIYJH9HqmnN_gfiZxUEzvxs&callback=initMap&libraries=drawing"
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2J_gYxDzUWIYJH9HqmnN_gfiZxUEzvxs&callback=initMap&v=weekly&libraries=marker"
 		async
 		defer></script>
 	
@@ -174,7 +175,7 @@ Ide: Byg dateringsinterface til udaterede billeder  -  noget ala geotagger
 	</div>
 </body>
 <script>
-	window.onload = loadData()
+	window.onload = loadData;
 
 	//const li = document.querySelectorAll('li.dropdown a');
 const btn = document.querySelector('.nav-btn');
