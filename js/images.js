@@ -629,12 +629,9 @@ function buildTiles(dataslice){
 						thumbPageScroll = window.pageYOffset; //store the vertical scroll of the page
 					
 						window.location.href = "#page-" + imgPage(feature.properties.index); //create and Navigate to image page for clicked thumb
+						/*
 						//preload next two images and the previous (by global image id)
 						preloadAround(feature.properties.index)
-						/*
-						$("<img/>",{"class":"cacheImg","id":"cacheImg" + feature.properties.index+1,"src":theDataset.features[feature.properties.index+1].properties.image})
-						$("<img/>",{"class":"cacheImg","id":"cacheImg" + feature.properties.index+2,"src":theDataset.features[feature.properties.index+2].properties.image})
-						$("<img/>",{"class":"cacheImg","id":"cacheImg" + feature.properties.index11,"src":theDataset.features[feature.properties.index-1].properties.image})
 						*/
 					}
 					)
@@ -662,23 +659,79 @@ function buildTiles(dataslice){
 	}
 
 //Preloader - runs when imgPage is called
+// --- Preload control (keep main image priority) ---
+let preloadIdleHandle = null;
+
 function preloadAround(i, radius = 3) {
   if (!currentDataset?.features) return;
-  for (let k = i - radius; k <= i + radius; k++) {
-    if (k < 0 || k >= currentDataset.features.length) continue;
-    const img = "Foto/" + currentDataset.features[k]?.properties?.image;
-    if (!img) continue;
-    const pre = new Image();
-    pre.src = img; // browser cache warms up
+
+  // Cancel any previous scheduled preload burst (helps when user browses quickly)
+  if (preloadIdleHandle) {
+    if (window.cancelIdleCallback) cancelIdleCallback(preloadIdleHandle);
+    clearTimeout(preloadIdleHandle);
+    preloadIdleHandle = null;
+  }
+
+  const run = () => {
+    // Start preloads AFTER the browser has had a chance to start rendering/loading the main image
+    for (let k = i - radius; k <= i + radius; k++) {
+      if (k < 0 || k >= currentDataset.features.length) continue;
+
+      const rel = currentDataset.features[k]?.properties?.image;
+      if (!rel) continue;
+
+      // Use same base path as your displayed images
+      const url = "/Foto/" + rel;
+
+      const pre = new Image();
+
+      // Hint to browser: this is low importance
+      // (supported in Chromium; harmless elsewhere)
+      try {
+        pre.fetchPriority = "low";
+        pre.decoding = "async";
+      } catch (_) {}
+
+      pre.src = url;
+    }
+  };
+
+  // Use idle time if available; otherwise small timeout
+  if (window.requestIdleCallback) {
+    preloadIdleHandle = requestIdleCallback(run, { timeout: 1200 });
+  } else {
+    preloadIdleHandle = setTimeout(run, 200);
   }
 }
-
-
 
 //Create the imagepage to display one photo	
 function imgPage(imageIndex){
 	currentImageIndex = imageIndex
 	var info = currentDataset.features[imageIndex].properties //Metadata of the current image
+
+const $mainImg = $("<img>", {
+  src: "/Foto/" + currentDataset.features[imageIndex].properties.image,
+  id: "image0",
+  fetchpriority: "high",
+  decoding: "async"
+}).css({
+  "max-height": $(window).height() - 6 + "px",
+  "max-width": $(window).width() - 6 + "px",
+  "display": "block",
+  "margin-right": "auto",
+  "margin-left": "auto"
+});
+
+// IMPORTANT: start preloading only after main image has loaded (or is already cached)
+if ($mainImg[0].complete) {
+  preloadAround(imageIndex);
+} else {
+  $mainImg.one("load", function () {
+    preloadAround(imageIndex);
+  });
+}
+
+
 		$("<div/>",{"data-role":"page", "class":"jqm-demos ui-page ui-page-theme-b ui-page-active imagepage", "data-quicklinks":"true", "id":"page-" + imageIndex})
 			.appendTo($("body"))
 			//Infopanel
@@ -719,7 +772,7 @@ function imgPage(imageIndex){
 			.append($('<div/>',{"class":"pagecontents","data-role":"content"})
 				.append($('<div/>',{"class":"ui-panel-wrapper"})
 					//the image
-					.append($("<img>",{src:"/Foto/" + currentDataset.features[imageIndex].properties.image,id:"image0"})
+					.append($mainImg)
 					.css({"max-height": $( window ).height() - 6 + "px","max-width": $( window ).width() - 6 + "px","display":"block","margin-right":"auto","margin-left":"auto"})
 					)
 					//button to cloase image
@@ -817,12 +870,10 @@ function imgPage(imageIndex){
 		var focusImageIndex = currentImageIndex
 		window.location.href = "#page-" + imgPage(focusImageIndex + ((forth)?1:-1));
 		$("#page-" + focusImageIndex).remove();
+		/*
 		//Preload images
 		preloadAround(focusImageIndex)
-		/*
-		$("<img/>",{"class":"cacheImg","id":"cacheImg" + focusImageIndex + ((forth)?2:-2),"src":currentDataset.features[focusImageIndex + ((forth)?2:-2)].properties.image})
-		$("<img/>",{"class":"cacheImg","id":"cacheImg" + focusImageIndex + ((forth)?3:-3),"src":currentDataset.features[focusImageIndex + ((forth)?3:-3)].properties.image})
-		$("<img/>",{"class":"cacheImg","id":"cacheImg" + focusImageIndex + ((forth)?-1:1),"src":currentDataset.features[focusImageIndex + ((forth)?-1:1)].properties.image})
+		
 		*/
 	}
 //Put image metadata on computer clipboard - called by infobox buttons
