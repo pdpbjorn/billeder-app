@@ -773,8 +773,8 @@ if ($mainImg[0].complete) {
 				.append($('<div/>',{"class":"ui-panel-wrapper"})
 					//the image
 					.append($mainImg)
-					.css({"max-height": $( window ).height() - 6 + "px","max-width": $( window ).width() - 6 + "px","display":"block","margin-right":"auto","margin-left":"auto"})
-					)
+					
+					
 					//button to cloase image
 					.append($("<button/>",{"data-role":"button", "data-enhanced":"true", "class":"ui-icon ui-button ui-button-icon-only ui-widget ui-icon-delete ui-corner-all"})
 						.text("No text")
@@ -857,7 +857,7 @@ if ($mainImg[0].complete) {
 							})
 						)
 					)				
-			
+				)
 	return  imageIndex //for the navigation in the calling function
 }
 /*subsection: helpers for imgpage */
