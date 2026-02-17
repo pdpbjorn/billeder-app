@@ -857,7 +857,7 @@ if ($mainImg[0].complete) {
 							})
 						)
 					)				
-			)
+			
 	return  imageIndex //for the navigation in the calling function
 }
 /*subsection: helpers for imgpage */
