@@ -21,6 +21,23 @@
 	var currentDataset = null;
 
 let photoCluster = null;
+
+// --- Cancelable / yielding thumbnail rendering ---
+let buildTilesToken = 0;
+
+function cancelBuildTiles() {
+  buildTilesToken++;
+
+  // Best-effort abort of in-flight thumbnail downloads from the previous view:
+  // (Setting src="" before removing can cancel many browser fetches)
+  $("#tilebox img").each(function () {
+    this.src = "";
+  });
+
+  // Stop any scroll animation + clear
+  $("#tilebox").stop(true, true).empty();
+}
+
 // --- Geotagger placement: map click mode (replaces DrawingManager) ---
 let geotagClickListener = null;
 
@@ -513,13 +530,14 @@ $.getJSON("data/stats.json", function(s){
 });
 
 function injectNoDate(){
-loadDataset("data/problems/no-timestamp.geo.json", (ds) => {
-if (isListMode()) {
-buildTiles(ds);
-} else {
-    showOnMap(getGeotaggedFeatures(ds));
-window.location.href = "#mappage";
-}
+	cancelBuildTiles();
+	loadDataset("data/problems/no-timestamp.geo.json", (ds) => {
+	if (isListMode()) {
+	buildTiles(ds);
+	} else {
+		showOnMap(getGeotaggedFeatures(ds));
+	window.location.href = "#mappage";
+	}
 });
 }
 
@@ -531,14 +549,15 @@ window.location.href = "#mappage";
 
 
 function injectMonth(month){
-loadDataset("data/tid/" + month + ".geo.json", (ds) => {
-if (isListMode()) {
-buildTiles(ds);
-} else {
-    showOnMap(getGeotaggedFeatures(ds));
-window.location.href = "#mappage";
-}
-});
+	cancelBuildTiles();	
+	loadDataset("data/tid/" + month + ".geo.json", (ds) => {
+	if (isListMode()) {
+	buildTiles(ds);
+	} else {
+		showOnMap(getGeotaggedFeatures(ds));
+	window.location.href = "#mappage";
+	}
+	});
 }
 
 
@@ -548,16 +567,17 @@ window.location.href = "#mappage";
 
 //--------BEGIN NEW function from ChatGPT
 function injectTrip(tripId, KMLfile, startDate, endDate){
-  tripPixDates.startDate = startDate;
-  tripPixDates.endDate = endDate;
-loadDataset("data/anvendelse/" + tripId + ".geo.json", (ds) => {
-if (isListMode()) {
-buildTiles(ds);
-} else {
-    UseOnMap(KMLfile);
-window.location.href = "#mappage" 
-}
-});
+	cancelBuildTiles();
+    tripPixDates.startDate = startDate;
+    tripPixDates.endDate = endDate;
+	loadDataset("data/anvendelse/" + tripId + ".geo.json", (ds) => {
+		if (isListMode()) {
+			buildTiles(ds);
+		} else {
+			UseOnMap(KMLfile);
+			window.location.href = "#mappage" 
+		}
+	});
 }
 
 
@@ -566,14 +586,15 @@ window.location.href = "#mappage"
 
 //-------- END NEW function from ChatGPT
 function injectArea(areaId){
-loadDataset("data/sted/" + areaId + ".geo.json", (ds) => {
-if (isListMode()) {
-buildTiles(ds);
-} else {
-    showOnMap(getGeotaggedFeatures(ds));
-window.location.href = "#mappage";
-}
-});
+	cancelBuildTiles();
+	loadDataset("data/sted/" + areaId + ".geo.json", (ds) => {
+	if (isListMode()) {
+		buildTiles(ds);
+	} else {
+		showOnMap(getGeotaggedFeatures(ds));
+		window.location.href = "#mappage";
+	}
+	});
 }
 
 
@@ -588,75 +609,167 @@ window.location.href = "#mappage";
 //Thumbpage, imgpage, mappage, trippage
 
 //build the thumbpage
-function buildTiles(dataslice){ 
-	//group the images by date
-	dateGroup = _.groupBy(dataslice.features,function(feature){ 
-		
-		return feature.properties.timestamp?feature.properties.timestamp.split("T")[0]:feature.properties.image.substring(0,feature.properties.image.lastIndexOf("/")).split(" ").join("_").split("/").join("_").substring(2)
-	})
-	// scroll up and empty the thumbpage -  and incert new container
-	$("#tilebox").animate({ scrollTop: 0 }, 'slow');
-	$("#tilebox").empty()
-	$("#tilebox").append($("<div/>").css({width:"90%",height:"3.5em"}))
-	
-	$.each(dateGroup,function(indexDate, featureDateGroup){ //for each date-group of images, make header and conainer
-		$("#tilebox").append(
-			$("<div/>",{"class":"dateDiv"})
-				.append($("<div/>",{"class":"dateHeader","text":indexDate.indexOf("_") > -1?indexDate:new Intl.DateTimeFormat('da-DK',{ dateStyle: 'full'}).format(new Date(indexDate))}) 
-					
-					.append($("<input/>",{"type":"button","id":"loadDateImages","name":"loadDateImages","value":"load dato i geotagger"})
-						.on("click", function(  ) {
-                            UseOnMap(undefined,indexDate);
-                             window.location.href = "#mappage"
-                            }
-						)
-					))
-					.append(
-					$("<div/>",{"class":"dateDivMain","id":"dateDiv-" + indexDate})
-				)
-		)
-		//create thumbnails for dategroup of images
-		$.each(featureDateGroup,function(indexFeature,feature){ //for each image
-			//get path to thumbnail image from image path
-			img = "/Foto/" + feature.properties.image
-			thumbPath = img.substring(0,img.lastIndexOf('/')) + "/.thumb/thumb-" + img.substring(img.lastIndexOf('/') +1) 
-			//aapend thumbnail element
-			$("#dateDiv-" + indexDate).append($("<div/>",{"class":"tile","title": feature.properties.timestamp?feature.properties.timestamp:feature.properties.image})
-				.css({"cursor":"pointer"})
-				//append thumbnail image
-				.append($("<img>",{height:"100px",loading:"lazy",id:'th-' + feature.properties.index,"src":thumbPath})
-					.on("click", function( event ) { //events when clicking thumbnail
-						thumbPageScroll = window.pageYOffset; //store the vertical scroll of the page
-					
-						window.location.href = "#page-" + imgPage(feature.properties.index); //create and Navigate to image page for clicked thumb
-						/*
-						//preload next two images and the previous (by global image id)
-						preloadAround(feature.properties.index)
-						*/
-					}
-					)
-				,
-				//if image has coordinates, append geo-button to thumb	
-				(feature.geometry)?$("<button/>",{"href":"#","data-role":"Button","data-icon":"ui-icon-location","data-show-label":"false","class":"ui-icon ui-button ui-button-icon-only ui-widget ui-icon-location ui-corner-all ui-alt-icon"}).css({'position':"absolute", 'bottom':'5px', 'right':'10px'}):null
-				)
-			)
-			
-		})
+function buildTiles(dataslice) {
+  // cancel any previous build immediately
+  cancelBuildTiles();
+  const myToken = buildTilesToken;
 
-	})
-		//if some images in thumbpage are geocoded, dispaly a button to show them on map
-		if ($(".geomarker").length > 0)
-			{$("#tilebox").append($("<button/>",{"data-role":"button", "data-enhanced":"true", "class":"ui-button ui-button-inline ui-corner-all ui-shadow ui-widget"})
-			.text("Vis på kort")
-			.css({"position":"absolute","top":"2%","right":"2%"})
-			.on("click", function( event ) {
-                showOnMap({"type":"FeatureCollection","features":_.filter(dataslice,function(feature){
-					return feature.geometry;			
-				})})
-				window.location.href = "#mappage"
-				})
-		)}
-	}
+  // group the images by date (same as you do now)
+  const dateGroup = _.groupBy(dataslice.features, function (feature) {
+    return feature.properties.timestamp
+      ? feature.properties.timestamp.split("T")[0]
+      : feature.properties.image
+          .substring(0, feature.properties.image.lastIndexOf("/"))
+          .split(" ")
+          .join("_")
+          .split("/")
+          .join("_")
+          .substring(2);
+  });
+
+  // reset UI
+  $("#tilebox").animate({ scrollTop: 0 }, "slow");
+  $("#tilebox").append($("<div/>").css({ width: "90%", height: "3.5em" }));
+
+  // Flatten all tiles into a work list so we can render in batches
+  const jobs = [];
+  $.each(dateGroup, function (indexDate, featureDateGroup) {
+    jobs.push({ type: "header", indexDate, featureDateGroup });
+    featureDateGroup.forEach((feature) => jobs.push({ type: "tile", indexDate, feature }));
+  });
+
+  // Render loop (batching)
+  const BATCH_SIZE = 60; // adjust: 30=more responsive, 100=faster build
+  let p = 0;
+
+  function step() {
+    // if user picked something else, stop instantly
+    if (myToken !== buildTilesToken) return;
+
+    const $tilebox = $("#tilebox");
+    let n = 0;
+
+    while (p < jobs.length && n < BATCH_SIZE) {
+      if (myToken !== buildTilesToken) return;
+
+      const job = jobs[p++];
+
+      if (job.type === "header") {
+        const indexDate = job.indexDate;
+
+        $tilebox.append(
+          $("<div/>", { class: "dateDiv" })
+            .append(
+              $("<div/>", {
+                class: "dateHeader",
+                text:
+                  indexDate.indexOf("_") > -1
+                    ? indexDate
+                    : new Intl.DateTimeFormat("da-DK", { dateStyle: "full" }).format(
+                        new Date(indexDate)
+                      ),
+              }).append(
+                $("<input/>", {
+                  type: "button",
+                  id: "loadDateImages",
+                  name: "loadDateImages",
+                  value: "load dato i geotagger",
+                }).on("click", function () {
+                  UseOnMap(undefined, indexDate);
+                  window.location.href = "#mappage";
+                })
+              )
+            )
+            .append($("<div/>", { class: "dateDivMain", id: "dateDiv-" + indexDate }))
+        );
+      }
+
+      if (job.type === "tile") {
+        const feature = job.feature;
+        const indexDate = job.indexDate;
+
+        const img = "/Foto/" + feature.properties.image;
+        const thumbPath =
+          img.substring(0, img.lastIndexOf("/")) +
+          "/.thumb/thumb-" +
+          img.substring(img.lastIndexOf("/") + 1);
+
+        const $tile = $("<div/>", {
+          class: "tile",
+          title: feature.properties.timestamp ? feature.properties.timestamp : feature.properties.image,
+        }).css({ cursor: "pointer" });
+
+        const $thumb = $("<img>", {
+          height: "100px",
+          loading: "lazy",
+          fetchpriority: "low",      // IMPORTANT: don’t fight main image / new selection
+          decoding: "async",
+          id: "th-" + feature.properties.index,
+          src: thumbPath,
+        }).on("click", function () {
+          if (myToken !== buildTilesToken) return;
+          thumbPageScroll = window.pageYOffset;
+          window.location.href = "#page-" + imgPage(feature.properties.index);
+        });
+
+        $tile.append($thumb);
+
+        if (feature.geometry) {
+          $tile.append(
+            $("<button/>", {
+              href: "#",
+              "data-role": "Button",
+              "data-icon": "ui-icon-location",
+              "data-show-label": "false",
+              class:
+                "ui-icon ui-button ui-button-icon-only ui-widget ui-icon-location ui-corner-all ui-alt-icon",
+            }).css({ position: "absolute", bottom: "5px", right: "10px" })
+          );
+        }
+
+        $("#dateDiv-" + indexDate).append($tile);
+      }
+
+      n++;
+    }
+
+    // Done?
+    if (p >= jobs.length) {
+      if (myToken !== buildTilesToken) return;
+
+      // your “Vis på kort” button logic (unchanged)
+      if ($(".geomarker").length > 0) {
+        $("#tilebox")
+          .append(
+            $("<button/>", {
+              "data-role": "button",
+              "data-enhanced": "true",
+              class: "ui-button ui-button-inline ui-corner-all ui-shadow ui-widget",
+            })
+              .text("Vis på kort")
+              .css({ position: "absolute", top: "2%", right: "2%" })
+              .on("click", function () {
+                showOnMap({
+                  type: "FeatureCollection",
+                  features: _.filter(dataslice, function (feature) {
+                    return feature.geometry;
+                  }),
+                });
+                window.location.href = "#mappage";
+              })
+          );
+      }
+
+      return;
+    }
+
+    // Yield to the browser so clicks/dropdowns can be handled
+    requestAnimationFrame(step);
+  }
+
+  requestAnimationFrame(step);
+}
+
 
 //Preloader - runs when imgPage is called
 // --- Preload control (keep main image priority) ---
