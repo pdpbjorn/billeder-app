@@ -839,7 +839,7 @@ function buildTiles(dataslice) {
       }
     }
 
-    requestAnimationFrame(renderStep);
+    requestAnimationFrame(renderStep); 
   }
 
   requestAnimationFrame(buildGroupsStep);
