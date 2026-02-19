@@ -26,19 +26,21 @@ let photoCluster = null;
 let buildTilesToken = 0;
 let currentDatasetXHR = null;
 
-
 function cancelBuildTiles() {
   buildTilesToken++;
 
-  // Best-effort abort of in-flight thumbnail downloads from the previous view:
-  // (Setting src="" before removing can cancel many browser fetches)
+  if (thumbObserver) {
+    thumbObserver.disconnect();
+    thumbObserver = null;
+  }
+
   $("#tilebox img").each(function () {
     this.src = "";
   });
 
-  // Stop any scroll animation + clear
   $("#tilebox").stop(true, true).empty();
 }
+
 
 // --- True lazy thumbnail loading (prevents network starvation) ---
 const THUMB_PLACEHOLDER =
@@ -769,8 +771,10 @@ function buildTiles(dataslice) {
         }
 
         $("#dateDiv-" + indexDate).append($tile);
+		  // IMPORTANT: start loading only when near viewport
+  		if (thumbObserver) thumbObserver.observe($thumb[0]);
       }
-thumbObserver.observe($thumb);
+
       n++;
     }
 
