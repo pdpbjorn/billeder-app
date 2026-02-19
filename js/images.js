@@ -650,142 +650,174 @@ function injectArea(areaId){
 
 //build the thumbpage
 function buildTiles(dataslice) {
-  // cancel any previous build immediately
   cancelBuildTiles();
   const myToken = buildTilesToken;
   ensureThumbObserver(myToken);
 
-  // group the images by date (same as you do now)
-  const dateGroup = _.groupBy(dataslice.features, function (feature) {
-    return feature.properties.timestamp
-      ? feature.properties.timestamp.split("T")[0]
-      : feature.properties.image
-          .substring(0, feature.properties.image.lastIndexOf("/"))
-          .split(" ")
-          .join("_")
-          .split("/")
-          .join("_")
-          .substring(2);
-  });
+  const $tilebox = $("#tilebox");
+  $tilebox.stop(true, true);
+  $tilebox.empty();
+  $tilebox.scrollTop(0); // avoid long queued "slow" animations
+  $tilebox.append($("<div/>").css({ width: "90%", height: "3.5em" }));
 
-  // reset UI
-  $("#tilebox").animate({ scrollTop: 0 }, "slow");
-  $("#tilebox").append($("<div/>").css({ width: "90%", height: "3.5em" }));
+  const feats = (dataslice && dataslice.features) ? dataslice.features : [];
+  const groupMap = new Map(); // dateKey -> array of features
 
-  // Flatten all tiles into a work list so we can render in batches
-  const jobs = [];
-  $.each(dateGroup, function (indexDate, featureDateGroup) {
-    jobs.push({ type: "header", indexDate, featureDateGroup });
-    featureDateGroup.forEach((feature) => jobs.push({ type: "tile", indexDate, feature }));
-  });
+  // Same dateKey logic as your old groupBy
+  function dateKeyForFeature(feature) {
+    const ts = feature?.properties?.timestamp;
+    if (ts) return ts.split("T")[0];
 
-  // Render loop (batching)
-  const BATCH_SIZE = 60; // adjust: 30=more responsive, 100=faster build
-  let p = 0;
+    const img = feature?.properties?.image || "";
+    return img
+      .substring(0, img.lastIndexOf("/"))
+      .split(" ").join("_")
+      .split("/").join("_")
+      .substring(2);
+  }
 
-  function step() {
-    // if user picked something else, stop instantly
+  // ---- Phase 1: build groups in chunks (cancelable) ----
+  let i = 0;
+  const GROUP_CHUNK = 1200; // tune: bigger = faster, smaller = more responsive
+
+  function buildGroupsStep() {
     if (myToken !== buildTilesToken) return;
 
-    const $tilebox = $("#tilebox");
-    let n = 0;
+    const end = Math.min(i + GROUP_CHUNK, feats.length);
+    for (; i < end; i++) {
+      const f = feats[i];
+      const k = dateKeyForFeature(f);
+      let arr = groupMap.get(k);
+      if (!arr) {
+        arr = [];
+        groupMap.set(k, arr);
+      }
+      arr.push(f);
+    }
 
-    while (p < jobs.length && n < BATCH_SIZE) {
+    if (i < feats.length) {
+      requestAnimationFrame(buildGroupsStep);
+    } else {
+      // When grouping is done, render
+      startRender();
+    }
+  }
+
+  // ---- Phase 2: render groups + tiles in batches (cancelable) ----
+  function startRender() {
+    if (myToken !== buildTilesToken) return;
+
+    // Sort dates for stable output (optional)
+    const dates = Array.from(groupMap.keys()).sort();
+    let d = 0; // date index
+    let fIndex = 0; // feature index within date group
+
+    const RENDER_BATCH = 80; // tiles per frame (tune)
+
+    function renderStep() {
       if (myToken !== buildTilesToken) return;
 
-      const job = jobs[p++];
+      let rendered = 0;
 
-      if (job.type === "header") {
-        const indexDate = job.indexDate;
+      while (d < dates.length && rendered < RENDER_BATCH) {
+        const dateKey = dates[d];
+        const arr = groupMap.get(dateKey) || [];
 
-        $tilebox.append(
-          $("<div/>", { class: "dateDiv" })
-            .append(
-              $("<div/>", {
-                class: "dateHeader",
-                text:
-                  indexDate.indexOf("_") > -1
-                    ? indexDate
-                    : new Intl.DateTimeFormat("da-DK", { dateStyle: "full" }).format(
-                        new Date(indexDate)
-                      ),
-              }).append(
-                $("<input/>", {
-                  type: "button",
-                  id: "loadDateImages",
-                  name: "loadDateImages",
-                  value: "load dato i geotagger",
-                }).on("click", function () {
-                  UseOnMap(undefined, indexDate);
-                  window.location.href = "#mappage";
-                })
+        // Create header + container once per date
+        if (fIndex === 0) {
+          const headerText =
+            dateKey.indexOf("_") > -1
+              ? dateKey
+              : new Intl.DateTimeFormat("da-DK", { dateStyle: "full" }).format(new Date(dateKey));
+
+          $tilebox.append(
+            $("<div/>", { class: "dateDiv" })
+              .append(
+                $("<div/>", { class: "dateHeader", text: headerText })
+                  .append(
+                    $("<input/>", {
+                      type: "button",
+                      id: "loadDateImages",
+                      name: "loadDateImages",
+                      value: "load dato i geotagger",
+                    }).on("click", function () {
+                      UseOnMap(undefined, dateKey);
+                      window.location.href = "#mappage";
+                    })
+                  )
               )
-            )
-            .append($("<div/>", { class: "dateDivMain", id: "dateDiv-" + indexDate }))
-        );
-      }
-
-      if (job.type === "tile") {
-        const feature = job.feature;
-        const indexDate = job.indexDate;
-
-        const img = "/Foto/" + feature.properties.image;
-        const thumbPath =
-          img.substring(0, img.lastIndexOf("/")) +
-          "/.thumb/thumb-" +
-          img.substring(img.lastIndexOf("/") + 1);
-
-        const $tile = $("<div/>", {
-          class: "tile",
-          title: feature.properties.timestamp ? feature.properties.timestamp : feature.properties.image,
-        }).css({ cursor: "pointer" });
-
-        const $thumb = $("<img>", {
-  height: "100px",
-  loading: "lazy",
-  fetchpriority: "low",
-  decoding: "async",
-  id: "th-" + feature.properties.index,
-  src: THUMB_PLACEHOLDER,      // tiny placeholder (no network pressure)
-  "data-src": thumbPath        // real URL stored here
-})
-.on("click", function () {
-          if (myToken !== buildTilesToken) return;
-          thumbPageScroll = window.pageYOffset;
-          window.location.href = "#page-" + imgPage(feature.properties.index);
-        });
-
-        $tile.append($thumb);
-
-        if (feature.geometry) {
-          $tile.append(
-            $("<button/>", {
-              href: "#",
-              "data-role": "Button",
-              "data-icon": "ui-icon-location",
-              "data-show-label": "false",
-              class:
-                "ui-icon ui-button ui-button-icon-only ui-widget ui-icon-location ui-corner-all ui-alt-icon",
-            }).css({ position: "absolute", bottom: "5px", right: "10px" })
+              .append($("<div/>", { class: "dateDivMain", id: "dateDiv-" + dateKey }))
           );
         }
 
-        $("#dateDiv-" + indexDate).append($tile);
-		  // IMPORTANT: start loading only when near viewport
-  		if (thumbObserver) thumbObserver.observe($thumb[0]);
+        // Render tiles for this date
+        const $dateDiv = $("#dateDiv-" + dateKey);
+
+        while (fIndex < arr.length && rendered < RENDER_BATCH) {
+          const feature = arr[fIndex++];
+          const img = "/Foto/" + feature.properties.image;
+          const thumbPath =
+            img.substring(0, img.lastIndexOf("/")) +
+            "/.thumb/thumb-" +
+            img.substring(img.lastIndexOf("/") + 1);
+
+          const $tile = $("<div/>", {
+            class: "tile",
+            title: feature.properties.timestamp ? feature.properties.timestamp : feature.properties.image,
+          }).css({ cursor: "pointer" });
+
+          const $thumb = $("<img>", {
+            height: "100px",
+            loading: "lazy",
+            fetchpriority: "low",
+            decoding: "async",
+            id: "th-" + feature.properties.index,
+            src: THUMB_PLACEHOLDER,
+            "data-src": thumbPath,
+          }).on("click", function () {
+            if (myToken !== buildTilesToken) return;
+            thumbPageScroll = window.pageYOffset;
+            window.location.href = "#page-" + imgPage(feature.properties.index);
+          });
+
+          $tile.append($thumb);
+
+          if (feature.geometry) {
+            $tile.append(
+              $("<button/>", {
+                href: "#",
+                "data-role": "Button",
+                "data-icon": "ui-icon-location",
+                "data-show-label": "false",
+                class:
+                  "ui-icon ui-button ui-button-icon-only ui-widget ui-icon-location ui-corner-all ui-alt-icon",
+              }).css({ position: "absolute", bottom: "5px", right: "10px" })
+            );
+          }
+
+          $dateDiv.append($tile);
+
+          // Observe AFTER append (and only for tiles)
+          if (thumbObserver) thumbObserver.observe($thumb[0]);
+
+          rendered++;
+        }
+
+        // Done with this date group?
+        if (fIndex >= arr.length) {
+          d++;
+          fIndex = 0;
+        }
       }
 
-      n++;
-    }
-
-    // Done?
-    if (p >= jobs.length) {
       if (myToken !== buildTilesToken) return;
 
-      // your “Vis på kort” button logic (unchanged)
-      if ($(".geomarker").length > 0) {
-        $("#tilebox")
-          .append(
+      if (d < dates.length) {
+        requestAnimationFrame(renderStep);
+      } else {
+        // Finished all rendering; optional "Vis på kort" logic can stay as you had it.
+        if ($(".geomarker").length > 0) {
+          $tilebox.append(
             $("<button/>", {
               "data-role": "button",
               "data-enhanced": "true",
@@ -803,17 +835,16 @@ function buildTiles(dataslice) {
                 window.location.href = "#mappage";
               })
           );
+        }
       }
-
-      return;
     }
 
-    // Yield to the browser so clicks/dropdowns can be handled
-    requestAnimationFrame(step);
+    requestAnimationFrame(renderStep);
   }
 
-  requestAnimationFrame(step);
+  requestAnimationFrame(buildGroupsStep);
 }
+
 
 
 //Preloader - runs when imgPage is called
