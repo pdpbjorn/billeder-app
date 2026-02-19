@@ -325,21 +325,37 @@ function setCurrentDataset(json){
 
 //setup datasources
 //function started by index.html
-function loadDataset(url, onReady) {
-  if (currentDatasetXHR) {
-    try { currentDatasetXHR.abort(); } catch (_) {}
-    currentDatasetXHR = null;
-  }
+function loadData(){
+  $('select').selectmenu().selectmenu('disable');
 
-  currentDatasetXHR = $.getJSON(url, function (json) {
-    currentDatasetXHR = null;
-    setCurrentDataset(json);
-    onReady(currentDataset);
-  }).fail(function (xhr, status) {
-    currentDatasetXHR = null;
-    if (status !== "abort") alert("Could not load dataset: " + url);
+  // NEW: load the three indexes
+  $.getJSON("data/tid/index.json", function(json) {
+    tidIndex = json;
+    makeMonthLinksFromIndex(tidIndex);
+	indexLoadedOne();
   });
+
+  $.getJSON("data/sted/index.json", function(json) {
+    stedIndex = json;
+     makeAreaLinksFromIndex(stedIndex);
+	 indexLoadedOne();
+  });
+
+$.getJSON("data/anvendelse/index.json", function(json) {
+  anvIndex = json;
+  makeTripLinksFromIndex(anvIndex);
+  indexLoadedOne();
+});
+
+
+
+  $('#totalcount').html("—");
+$('#datedcount').html("—");
+$('#gtcount').html("—");
 }
+
+
+
 
 //fill areas dropdown - enable actions on select
 
@@ -519,14 +535,22 @@ function makeMonthLinks(theDataset){
 
 
 //Generic dataset loader
-function loadDataset(url, onReady){
-  $.getJSON(url, function(json){
+function loadDataset(url, onReady) {
+  if (currentDatasetXHR) {
+    try { currentDatasetXHR.abort(); } catch (_) {}
+    currentDatasetXHR = null;
+  }
+
+  currentDatasetXHR = $.getJSON(url, function (json) {
+    currentDatasetXHR = null;
     setCurrentDataset(json);
     onReady(currentDataset);
-  }).fail(function(){
-    alert("Could not load dataset: " + url);
+  }).fail(function (xhr, status) {
+    currentDatasetXHR = null;
+    if (status !== "abort") alert("Could not load dataset: " + url);
   });
 }
+
 
 //check desired state
 function isListMode(){
