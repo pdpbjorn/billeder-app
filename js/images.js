@@ -770,7 +770,7 @@ function buildTiles(dataslice) {
 
         $("#dateDiv-" + indexDate).append($tile);
       }
-thumbObserver.observe($thumb[0]);
+thumbObserver.observe($thumb);
       n++;
     }
 
