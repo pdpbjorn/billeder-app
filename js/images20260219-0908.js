@@ -34,17 +34,12 @@ function cancelBuildTiles() {
     thumbObserver = null;
   }
 
-  resetThumbLoader();
-
   $("#tilebox img").each(function () {
-    this.onload = null;
-    this.onerror = null;
     this.src = "";
   });
 
   $("#tilebox").stop(true, true).empty();
 }
-
 
 
 // --- True lazy thumbnail loading (prevents network starvation) ---
@@ -53,72 +48,26 @@ const THUMB_PLACEHOLDER =
 
 let thumbObserver = null;
 
-// Throttle: how many thumbnails may download concurrently
-const MAX_THUMB_INFLIGHT = 6;
-let thumbQueue = [];
-let thumbInFlight = 0;
-
-function resetThumbLoader() {
-  thumbQueue = [];
-  thumbInFlight = 0;
-}
-
-function pumpThumbQueue(myToken) {
-  if (myToken !== buildTilesToken) return;
-
-  while (thumbInFlight < MAX_THUMB_INFLIGHT && thumbQueue.length) {
-    const img = thumbQueue.shift();
-    if (!img) continue;
-    if (myToken !== buildTilesToken) return;
-
-    const real = img.dataset.src;
-    if (!real) continue;
-
-    thumbInFlight++;
-
-    const done = () => {
-      img.onload = null;
-      img.onerror = null;
-      thumbInFlight--;
-      pumpThumbQueue(myToken);
-    };
-
-    img.onload = done;
-    img.onerror = done;
-
-    // Start the network request only here (throttled)
-    if (img.src !== real) img.src = real;
-  }
-}
-
 function ensureThumbObserver(myToken) {
   if (thumbObserver) return;
 
-  thumbObserver = new IntersectionObserver(
-    (entries) => {
-      if (myToken !== buildTilesToken) return;
+  thumbObserver = new IntersectionObserver((entries) => {
+    // if selection changed, don't load anything from old build
+    if (myToken !== buildTilesToken) return;
 
-      entries.forEach((e) => {
-        if (!e.isIntersecting) return;
-
-        const img = e.target;
-        thumbObserver.unobserve(img);
-
-        // Enqueue instead of downloading immediately
-        thumbQueue.push(img);
-      });
-
-      pumpThumbQueue(myToken);
-    },
-    {
-      root: document.getElementById("tilebox") || null,
-      // reduce burstiness (600px tends to pull in lots of tiles very quickly)
-      rootMargin: "200px",
-      threshold: 0.01,
-    }
-  );
+    entries.forEach((e) => {
+      if (!e.isIntersecting) return;
+      const img = e.target;
+      const real = img.dataset.src;
+      if (real && img.src !== real) img.src = real; // START network only now
+      thumbObserver.unobserve(img);
+    });
+  }, {
+    root: document.getElementById("tilebox") || null,
+    rootMargin: "600px", // start loading before user sees it
+    threshold: 0.01
+  });
 }
-
 
 
 // --- Geotagger placement: map click mode (replaces DrawingManager) ---
