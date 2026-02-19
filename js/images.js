@@ -24,6 +24,8 @@ let photoCluster = null;
 
 // --- Cancelable / yielding thumbnail rendering ---
 let buildTilesToken = 0;
+let currentDatasetXHR = null;
+
 
 function cancelBuildTiles() {
   buildTilesToken++;
@@ -37,6 +39,34 @@ function cancelBuildTiles() {
   // Stop any scroll animation + clear
   $("#tilebox").stop(true, true).empty();
 }
+
+// --- True lazy thumbnail loading (prevents network starvation) ---
+const THUMB_PLACEHOLDER =
+  "data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=";
+
+let thumbObserver = null;
+
+function ensureThumbObserver(myToken) {
+  if (thumbObserver) return;
+
+  thumbObserver = new IntersectionObserver((entries) => {
+    // if selection changed, don't load anything from old build
+    if (myToken !== buildTilesToken) return;
+
+    entries.forEach((e) => {
+      if (!e.isIntersecting) return;
+      const img = e.target;
+      const real = img.dataset.src;
+      if (real && img.src !== real) img.src = real; // START network only now
+      thumbObserver.unobserve(img);
+    });
+  }, {
+    root: document.getElementById("tilebox") || null,
+    rootMargin: "600px", // start loading before user sees it
+    threshold: 0.01
+  });
+}
+
 
 // --- Geotagger placement: map click mode (replaces DrawingManager) ---
 let geotagClickListener = null;
@@ -295,37 +325,21 @@ function setCurrentDataset(json){
 
 //setup datasources
 //function started by index.html
-function loadData(){
-  $('select').selectmenu().selectmenu('disable');
+function loadDataset(url, onReady) {
+  if (currentDatasetXHR) {
+    try { currentDatasetXHR.abort(); } catch (_) {}
+    currentDatasetXHR = null;
+  }
 
-  // NEW: load the three indexes
-  $.getJSON("data/tid/index.json", function(json) {
-    tidIndex = json;
-    makeMonthLinksFromIndex(tidIndex);
-	indexLoadedOne();
+  currentDatasetXHR = $.getJSON(url, function (json) {
+    currentDatasetXHR = null;
+    setCurrentDataset(json);
+    onReady(currentDataset);
+  }).fail(function (xhr, status) {
+    currentDatasetXHR = null;
+    if (status !== "abort") alert("Could not load dataset: " + url);
   });
-
-  $.getJSON("data/sted/index.json", function(json) {
-    stedIndex = json;
-     makeAreaLinksFromIndex(stedIndex);
-	 indexLoadedOne();
-  });
-
-$.getJSON("data/anvendelse/index.json", function(json) {
-  anvIndex = json;
-  makeTripLinksFromIndex(anvIndex);
-  indexLoadedOne();
-});
-
-
-
-  $('#totalcount').html("—");
-$('#datedcount').html("—");
-$('#gtcount').html("—");
 }
-
-
-
 
 //fill areas dropdown - enable actions on select
 
@@ -613,6 +627,7 @@ function buildTiles(dataslice) {
   // cancel any previous build immediately
   cancelBuildTiles();
   const myToken = buildTilesToken;
+  ensureThumbObserver(myToken);
 
   // group the images by date (same as you do now)
   const dateGroup = _.groupBy(dataslice.features, function (feature) {
@@ -700,13 +715,15 @@ function buildTiles(dataslice) {
         }).css({ cursor: "pointer" });
 
         const $thumb = $("<img>", {
-          height: "100px",
-          loading: "lazy",
-          fetchpriority: "low",      // IMPORTANT: don’t fight main image / new selection
-          decoding: "async",
-          id: "th-" + feature.properties.index,
-          src: thumbPath,
-        }).on("click", function () {
+  height: "100px",
+  loading: "lazy",
+  fetchpriority: "low",
+  decoding: "async",
+  id: "th-" + feature.properties.index,
+  src: THUMB_PLACEHOLDER,      // tiny placeholder (no network pressure)
+  "data-src": thumbPath        // real URL stored here
+})
+.on("click", function () {
           if (myToken !== buildTilesToken) return;
           thumbPageScroll = window.pageYOffset;
           window.location.href = "#page-" + imgPage(feature.properties.index);
@@ -729,7 +746,7 @@ function buildTiles(dataslice) {
 
         $("#dateDiv-" + indexDate).append($tile);
       }
-
+thumbObserver.observe($thumb[0]);
       n++;
     }
 
