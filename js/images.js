@@ -640,18 +640,26 @@ function injectNoDate(){
   
 
 
-
+//called by 'tid' navigator
 function injectMonth(month){
-	cancelBuildTiles();	
-	loadDataset("data/tid/" + month + ".geo.json", (ds) => {
-	if (isListMode()) {
-	buildTiles(ds);
-	} else {
-		showOnMap(getGeotaggedFeatures(ds));
-	window.location.href = "#mappage";
-	}
-	});
+  cancelBuildTiles();
+  loadDataset("data/tid/" + month + ".geo.json", (ds) => {
+    if (isListMode()) {
+      buildTiles(ds);
+    } else {
+      const geo = getGeotaggedFeatures(ds);
+
+      if (!geo.features || geo.features.length === 0) {
+        showToast("Ingen geotaggede billeder i " + month + ". Vælg 'Liste' for at se dem.");
+        return; // <-- IMPORTANT: do NOT open the map
+      }
+
+      showOnMap(geo);
+      window.location.href = "#mappage";
+    }
+  });
 }
+
 
 
 
@@ -2237,6 +2245,32 @@ function parseXml(xml, arrayTags) {//arrayTags seem not to be in use
     for (let node of dom.childNodes) parseNode(node, result);
 
     return result;
+}
+//Message when no geotagged features in dataset
+function showToast(msg, ms = 4500) {
+  const $box = $("#tilebox");
+  if (!$box.length) { alert(msg); return; }
+
+  // remove any existing toast
+  $("#toastMsg").remove();
+
+  const $t = $("<div/>", { id: "toastMsg", text: msg })
+    .css({
+      position: "fixed",
+      left: "50%",
+      transform: "translateX(-50%)",
+      top: "120px",
+      zIndex: 3000,
+      background: "rgba(0,0,0,0.8)",
+      color: "white",
+      padding: "10px 14px",
+      borderRadius: "10px",
+      maxWidth: "85vw",
+      textAlign: "center"
+    })
+    .appendTo("body");
+
+  setTimeout(() => $t.fadeOut(250, () => $t.remove()), ms);
 }
 
 //return objects from object based on key-value filter
