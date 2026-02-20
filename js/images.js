@@ -1045,7 +1045,7 @@ if ($mainImg[0].complete) {
 					//browse forward 
 					.append($("<button/>",{"data-role":"button", "data-enhanced":"true", "class":"ui-icon ui-button ui-button-icon-only ui-widget ui-corner-all"})
 						.text("No text")
-            .addClass(true?"ui-icon-arrow-r":"ui-icon-forbidden")
+            .addClass(false?"ui-icon-arrow-r":"ui-icon-forbidden")
 						.css({"position":"absolute","top":"49%","right":"2%"})
 						.on( "click", function(){bladr(true)})
 					)
