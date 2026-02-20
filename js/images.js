@@ -1046,7 +1046,7 @@ if ($mainImg[0].complete) {
 					//browse forward 
 					.append($("<button/>",{"data-role":"button", "data-enhanced":"true", "class":"ui-icon ui-button ui-button-icon-only ui-widget ui-corner-all"})
 						.text("No text")
-            .addClass(imageIndex !== currentDataset.features.length?"ui-icon-arrow-r":"ui-icon-forbidden")
+            .addClass(imageIndex !== currentDataset.features.length-1?"ui-icon-arrow-r":"ui-icon-forbidden")
 						.css({"position":"absolute","top":"49%","right":"2%"})
 						.on( "click", function(){bladr(true)})
 					)
@@ -1113,7 +1113,7 @@ if ($mainImg[0].complete) {
 //currentDataset.features.length
 	function bladr (forth){
 		var focusImageIndex = currentImageIndex
-    if ((forth && (focusImageIndex == currentDataset.features.length))||(!forth && (focusImageIndex == 0)))
+    if ((forth && (focusImageIndex == currentDataset.features.length-1))||(!forth && (focusImageIndex == 0)))
     {
       return;
     }
