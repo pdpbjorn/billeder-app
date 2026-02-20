@@ -1042,9 +1042,10 @@ if ($mainImg[0].complete) {
 						.css({"position":"absolute","top":"49%","left":"2%"})
 						.on( "click", function(){bladr(false)})
 					)
-					//browse forward
-					.append($("<button/>",{"data-role":"button", "data-enhanced":"true", "class":"ui-icon ui-button ui-button-icon-only ui-widget ui-icon-arrow-r ui-corner-all"})
+					//browse forward 
+					.append($("<button/>",{"data-role":"button", "data-enhanced":"true", "class":"ui-icon ui-button ui-button-icon-only ui-widget ui-corner-all"})
 						.text("No text")
+            .addClass(true?"ui-icon-arrow-r":"ui-icon-forbidden")
 						.css({"position":"absolute","top":"49%","right":"2%"})
 						.on( "click", function(){bladr(true)})
 					)
