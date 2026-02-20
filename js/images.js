@@ -1185,10 +1185,10 @@ async function showOnMap(mapFeatureCollection) {
       const img = f.properties.image;
 
       const thumbUrl =
+      "Foto/" +
         img.substring(0, img.lastIndexOf("/")) +
-        "/.thumb/" +
-        img.substring(img.lastIndexOf("/") + 1) +
-        ".jpg";
+        "/.thumb/thumb-" +
+        img.substring(img.lastIndexOf("/") + 1);
 
       const featureIndex = f.properties.index;
 
