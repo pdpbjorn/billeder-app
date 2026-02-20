@@ -1037,7 +1037,8 @@ if ($mainImg[0].complete) {
 						.css({"position":"absolute","top":"2%","left":"2%"})
 					)
 					//browse back	
-					.append($("<button/>",{"data-role":"button", "data-enhanced":"true", "class":"ui-icon ui-button ui-button-icon-only ui-widget ui-icon-arrow-l ui-corner-all"})
+					.append($("<button/>",{"data-role":"button", "data-enhanced":"true", "class":"ui-icon ui-button ui-button-icon-only ui-widget ui-corner-all"})
+            .addClass(imageIndex > 0?"ui-icon-arrow-l":"ui-icon-forbidden")
 						.text("No text")
 						.css({"position":"absolute","top":"49%","left":"2%"})
 						.on( "click", function(){bladr(false)})
@@ -1045,7 +1046,7 @@ if ($mainImg[0].complete) {
 					//browse forward 
 					.append($("<button/>",{"data-role":"button", "data-enhanced":"true", "class":"ui-icon ui-button ui-button-icon-only ui-widget ui-corner-all"})
 						.text("No text")
-            .addClass(false?"ui-icon-arrow-r":"ui-icon-forbidden")
+            .addClass(imageIndex !== currentDataset.features.length?"ui-icon-arrow-r":"ui-icon-forbidden")
 						.css({"position":"absolute","top":"49%","right":"2%"})
 						.on( "click", function(){bladr(true)})
 					)
@@ -1114,14 +1115,9 @@ if ($mainImg[0].complete) {
 		var focusImageIndex = currentImageIndex
     if ((forth && (focusImageIndex == currentDataset.features.length))||(!forth && (focusImageIndex == 0)))
     {
-      
+      return;
     }
-    switch (forth) {
-    case true:
-    break;
-		case false:
-    break;
-		window.location.href = "#page-" + imgPage(focusImageIndex + ((forth)?1:-1));
+ 		window.location.href = "#page-" + imgPage(focusImageIndex + ((forth)?1:-1));
 		$("#page-" + focusImageIndex).remove();
 		/*
 		//Preload images
