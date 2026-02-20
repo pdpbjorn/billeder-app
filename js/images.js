@@ -1109,8 +1109,18 @@ if ($mainImg[0].complete) {
 /*subsection: helpers for imgpage */
 
 //	browsing images back and forth - accepts boolean to indicate direction (true=forth, false=back)
+//currentDataset.features.length
 	function bladr (forth){
 		var focusImageIndex = currentImageIndex
+    if ((forth && (focusImageIndex == currentDataset.features.length))||(!forth && (focusImageIndex == 0)))
+    {
+      
+    }
+    switch (forth) {
+    case true:
+    break;
+		case false:
+    break;
 		window.location.href = "#page-" + imgPage(focusImageIndex + ((forth)?1:-1));
 		$("#page-" + focusImageIndex).remove();
 		/*
