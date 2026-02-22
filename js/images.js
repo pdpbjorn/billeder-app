@@ -1309,7 +1309,7 @@ map = mapCreator(); //get map construct from mapCreator function
 */
 
 //function to make a map showing places from a trip along with a tree representation of the trip
-async async function UseOnMap(KMLfile,aDate){
+async function UseOnMap(KMLfile,aDate){
       await markerReady;
 
 	mapOverlayId = 0 //reset the number of added overlays (features)
