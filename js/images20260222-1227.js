@@ -175,97 +175,17 @@ window.initMap = async function initMap() {
 // --- Modern marker support (AdvancedMarkerElement when available) ---
 let gMarkerLib = null;
 
-// Turn KML icon hrefs into local file paths under /icons/KML.
-// Works with:
-//  - absolute URLs: https://.../foo.png?x=y   -> icons/KML/foo.png
-//  - relative hrefs: foo.png or icons/foo.png -> icons/KML/foo.png
-// Leaves data: URLs untouched.
+// Turn remote KML icon URLs into local file paths.
+// Example: https://example.com/icons/foo.png  ->  icons/foo.png
 function resolveKmlIconUrl(url) {
-  if (!url) return "";
-  const s = String(url).trim();
-  if (s.startsWith("data:")) return s;
+  if (!url) return url;
+  // already local/relative
+  if (!/^https?:\/\//i.test(url)) return url;
 
-  // Strip querystring and keep only filename
-  const clean = s.split("?")[0];
+  const clean = url.split("?")[0];
   const filename = clean.substring(clean.lastIndexOf("/") + 1);
-
-  // If href had no filename (weird), just return empty and fall back to default marker
-  if (!filename) return "";
-
-  return `icons/KML/${filename}`;
+  return `icons/${filename}`;
 }
-
-
-// --- KML helpers (shared by trip KML parsing + placemark rendering) ---
-
-// Ensure we can iterate even if parseXml produced a singleton object instead of an array.
-function asArray(x) {
-  if (!x) return [];
-  return Array.isArray(x) ? x : [x];
-}
-
-// Extract style id from a KML styleUrl value like "#myStyle"
-function kmlStyleIdFromUrl(styleUrlText) {
-  if (!styleUrlText) return null;
-  const s = String(styleUrlText);
-  return s.startsWith("#") ? s.slice(1) : s;
-}
-
-// Resolve a <Style> object by id, following StyleMap(normal) indirection when present.
-function kmlResolveStyleById(styleId) {
-  if (!styleId || !objX?.kml?.Document) return null;
-
-  const doc = objX.kml.Document;
-  const styles = asArray(doc.Style);
-  const styleMaps = asArray(doc.StyleMap);
-
-  // Direct Style
-  const direct = styles.find((s) => s?.id === styleId);
-  if (direct) return direct;
-
-  // StyleMap -> Pair(normal) -> Style
-  const sm = styleMaps.find((m) => m?.id === styleId);
-  if (sm?.Pair) {
-    const pairs = asArray(sm.Pair);
-    const normalPair = pairs.find((p) => p?.key?.["#text"] === "normal") || pairs[0];
-    const ref = normalPair?.styleUrl?.["#text"];
-    const refId = kmlStyleIdFromUrl(ref);
-    const resolved = styles.find((s) => s?.id === refId);
-    if (resolved) return resolved;
-  }
-
-  return null;
-}
-
-// Resolve the effective Style for a Placemark (direct style or via StyleMap)
-function kmlResolvePlacemarkStyle(place) {
-  const styleUrlText = place?.styleUrl?.["#text"];
-  const styleId = kmlStyleIdFromUrl(styleUrlText);
-  return kmlResolveStyleById(styleId);
-}
-
-// Convenience: resolve IconStyle specifically (used by Point placemarks)
-function findPlacemarkIconStyle(place) {
-  const style = kmlResolvePlacemarkStyle(place);
-  return style?.IconStyle || null;
-}
-
-// KML color is aabbggrr. Return {color:"#rrggbb", opacity:0..1}
-function kmlColorToRGBA(kmlColor, fallbackColor = "#000000", fallbackOpacity = 1) {
-  if (!kmlColor || typeof kmlColor !== "string" || kmlColor.trim().length < 8) {
-    return { color: fallbackColor, opacity: fallbackOpacity };
-  }
-  const c = kmlColor.trim().slice(-8);
-  const a = parseInt(c.slice(0, 2), 16);
-  const b = c.slice(2, 4);
-  const g = c.slice(4, 6);
-  const r = c.slice(6, 8);
-  return {
-    color: `#${r}${g}${b}`,
-    opacity: (isNaN(a) ? 255 : a) / 255
-  };
-}
-
 function markerLatLng(m) {
   const p = m.position;
   if (!p) return null;
@@ -1494,6 +1414,50 @@ $('#treebox').on('hover_node.jstree', function (e, data) {
  	//console.log("tree:" + data)
 	})
 
+
+
+  // helper: ensure we can .find() even if Style/StyleMap is a single object
+function asArray(x) {
+  if (!x) return [];
+  return Array.isArray(x) ? x : [x];
+}
+
+// helper: turn ANY KML href into local /icons/KML/<filename>
+function resolveKmlIconUrl(url) {
+  if (!url) return "";
+  const clean = String(url).split("?")[0];
+  const filename = clean.substring(clean.lastIndexOf("/") + 1);
+  return `icons/KML/${filename}`;
+}
+
+// helper: locate IconStyle given a placemark + parsed KML objX
+function findPlacemarkIconStyle(place) {
+  const styleUrl = place?.styleUrl?.["#text"];
+  if (!styleUrl || !objX?.kml?.Document) return null;
+
+  const id = styleUrl.startsWith("#") ? styleUrl.substring(1) : styleUrl;
+
+  const styles = asArray(objX.kml.Document.Style);
+  const styleMaps = asArray(objX.kml.Document.StyleMap);
+
+  // 1) direct <Style id="..."><IconStyle>...
+  const direct = styles.find(s => s?.id === id);
+  if (direct?.IconStyle) return direct.IconStyle;
+
+  // 2) <StyleMap id="..."><Pair key="normal"><styleUrl>#someStyle</styleUrl>
+  const sm = styleMaps.find(m => m?.id === id);
+  if (sm?.Pair) {
+    const pairs = asArray(sm.Pair);
+    const normalPair = pairs.find(p => p?.key?.["#text"] === "normal") || pairs[0];
+    const ref = normalPair?.styleUrl?.["#text"];
+    const refId = ref?.startsWith("#") ? ref.substring(1) : ref;
+    const resolved = styles.find(s => s?.id === refId);
+    if (resolved?.IconStyle) return resolved.IconStyle;
+  }
+
+  return null;
+}
+
 }
 //Handle a placemark (place) in context of a treemap node (mother)
 function doPlacemark(place, mother) {
@@ -1590,19 +1554,23 @@ function doPlacemark(place, mother) {
       coords.forEach(lala => trackBounds.extend(lala));
     }
 
+    let styleObj = null;
+    if (objX.kml.Document.Style.find(o => o.id === place.styleUrl["#text"].substring(1))) {
+      styleObj = objX.kml.Document.Style.find(o => o.id === place.styleUrl["#text"].substring(1)).LineStyle;
+    } else if (objX.kml.Document.StyleMap.find(o => o.id === place.styleUrl["#text"].substring(1))) {
+      const styleMap = objX.kml.Document.StyleMap.find(o => o.id === place.styleUrl["#text"].substring(1));
+      const styleRef = styleMap.Pair.find(s => s.key["#text"] === "normal").styleUrl["#text"];
+      styleObj = objX.kml.Document.Style.find(o => o.id === styleRef.substring(1)).LineStyle;
+    }
 
-const style = kmlResolvePlacemarkStyle(place);
-const lineStyle = style?.LineStyle || null;
-
-const stroke = kmlColorToRGBA(lineStyle?.color?.["#text"], "#000000", 1);
-const strokeWeight = lineStyle?.width ? parseFloat(lineStyle.width["#text"]) : 2;
+    const KMLcolor = (styleObj && styleObj.color) ? styleObj.color["#text"] : "00000000";
 
     const flightPath = new google.maps.Polyline({
       path: coords,
       geodesic: true,
-      strokeColor: stroke.color,
-      strokeOpacity: stroke.opacity,
-      strokeWeight: strokeWeight,
+      strokeColor: "#" + KMLcolor.substring(6, 8) + KMLcolor.substring(4, 6) + KMLcolor.substring(2, 4),
+      strokeOpacity: parseInt(KMLcolor.substring(0, 2), 16) / 255,
+      strokeWeight: (styleObj && styleObj.width) ? parseFloat(styleObj.width["#text"]) : 2,
       map: map,
     });
 
@@ -1628,26 +1596,13 @@ const strokeWeight = lineStyle?.width ? parseFloat(lineStyle.width["#text"]) : 2
     const polyBounds = new google.maps.LatLngBounds();
     coords.forEach(ll => polyBounds.extend(ll));
 
-    
-const style = kmlResolvePlacemarkStyle(place);
-const lineStyle = style?.LineStyle || null;
-const polyStyle = style?.PolyStyle || null;
-
-const stroke = kmlColorToRGBA(lineStyle?.color?.["#text"], "#000000", 0.8);
-const fill = kmlColorToRGBA(polyStyle?.color?.["#text"], "#000000", 0.2);
-
-const outlineFlag = polyStyle?.outline?.["#text"];
-const fillFlag = polyStyle?.fill?.["#text"];
-
-const polygon = new google.maps.Polygon({
-  paths: coords,
-  map: map,
-  strokeColor: stroke.color,
-  strokeOpacity: (outlineFlag === "0") ? 0 : stroke.opacity,
-  strokeWeight: lineStyle?.width ? parseFloat(lineStyle.width["#text"]) : 2,
-  fillColor: fill.color,
-  fillOpacity: (fillFlag === "0") ? 0 : fill.opacity,
-});
+    const polygon = new google.maps.Polygon({
+      paths: coords,
+      map: map,
+      strokeOpacity: 0.8,
+      strokeWeight: 2,
+      fillOpacity: 0.2,
+    });
 
     mother.children.push({
       text: place.name?.["#text"] || "(uden navn)",
