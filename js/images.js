@@ -177,15 +177,77 @@ let gMarkerLib = null;
 
 // Turn remote KML icon URLs into local file paths.
 // Example: https://example.com/icons/foo.png  ->  icons/foo.png
+// Turn KML icon hrefs into local file paths under /icons/KML.
+// Works with:
+//  - absolute URLs: https://.../foo.png?x=y   -> icons/KML/foo.png
+//  - relative hrefs: foo.png or icons/foo.png -> icons/KML/foo.png
+// Leaves data: URLs untouched.
 function resolveKmlIconUrl(url) {
-  if (!url) return url;
-  // already local/relative
-  if (!/^https?:\/\//i.test(url)) return url;
+  if (!url) return "";
+  const s = String(url).trim();
+  if (s.startsWith("data:")) return s;
 
-  const clean = url.split("?")[0];
+  const clean = s.split("?")[0];
   const filename = clean.substring(clean.lastIndexOf("/") + 1);
-  return `icons/${filename}`;
+  if (!filename) return "";
+
+  return `icons/KML/${filename}`;
 }
+
+// Helper: ensure we can .find() even if parsed XML yields single objects instead of arrays
+function asArray(x) {
+  if (!x) return [];
+  return Array.isArray(x) ? x : [x];
+}
+
+// Resolve a <Style> object by id, following StyleMap(normal) indirection when present.
+function kmlResolveStyleById(styleId) {
+  if (!styleId || !objX?.kml?.Document) return null;
+
+  const doc = objX.kml.Document;
+  const styles = asArray(doc.Style);
+  const styleMaps = asArray(doc.StyleMap);
+
+  const direct = styles.find(s => s?.id === styleId);
+  if (direct) return direct;
+
+  const sm = styleMaps.find(m => m?.id === styleId);
+  if (sm?.Pair) {
+    const pairs = asArray(sm.Pair);
+    const normalPair = pairs.find(p => p?.key?.["#text"] === "normal") || pairs[0];
+    const ref = normalPair?.styleUrl?.["#text"];
+    const refId = ref ? (String(ref).startsWith("#") ? String(ref).slice(1) : String(ref)) : null;
+    const resolved = styles.find(s => s?.id === refId);
+    if (resolved) return resolved;
+  }
+
+  return null;
+}
+
+function kmlResolvePlacemarkStyle(place) {
+  const styleUrlText = place?.styleUrl?.["#text"];
+  const styleId = styleUrlText ? (String(styleUrlText).startsWith("#") ? String(styleUrlText).slice(1) : String(styleUrlText)) : null;
+  return kmlResolveStyleById(styleId);
+}
+
+function findPlacemarkIconStyle(place) {
+  const style = kmlResolvePlacemarkStyle(place);
+  return style?.IconStyle || null;
+}
+
+// KML color is aabbggrr. Return {color:"#rrggbb", opacity:0..1}
+function kmlColorToRGBA(kmlColor, fallbackColor = "#000000", fallbackOpacity = 1) {
+  if (!kmlColor || typeof kmlColor !== "string" || kmlColor.trim().length < 8) {
+    return { color: fallbackColor, opacity: fallbackOpacity };
+  }
+  const c = kmlColor.trim().slice(-8);
+  const a = parseInt(c.slice(0, 2), 16);
+  const b = c.slice(2, 4);
+  const g = c.slice(4, 6);
+  const r = c.slice(6, 8);
+  return { color: `#${r}${g}${b}`, opacity: (isNaN(a) ? 255 : a) / 255 };
+}
+
 function markerLatLng(m) {
   const p = m.position;
   if (!p) return null;
@@ -1483,108 +1545,87 @@ async function AddTreeBox(KMLfile){
   $("#treebox").on("select_node.jstree", function (_e, _data) {});
 }
 //Handle a placemark (place) in context of a treemap node (mother)
+
+//Handle a placemark (place) in context of a treemap node (mother)
 function doPlacemark(place, mother) {
   mapOverlayId = mapOverlayId + 1; //increment the number of overlays (features) added to the map
+  const itemId = "ti_" + mapOverlayId;
 
   // ---------- POINT ----------
-  if (place.Point) {
+  if (place.Point && place.Point.coordinates && place.Point.coordinates["#text"]) {
     const position = LatLnger(place.Point.coordinates["#text"]); // {lat,lng}
 
-    // Resolve icon style (Style or StyleMap->normal->Style)
-    let styleObj = null;
-
-    if (
-      place.styleUrl &&
-      objX.kml?.Document?.Style &&
-      objX.kml.Document.Style.find(o => o.id === place.styleUrl["#text"].substring(1))
-    ) {
-      styleObj = objX.kml.Document.Style.find(o => o.id === place.styleUrl["#text"].substring(1)).IconStyle;
-    } else if (
-      place.styleUrl &&
-      Array.isArray(objX.kml?.Document?.StyleMap) &&
-      objX.kml.Document.StyleMap.find(o => o.id === place.styleUrl["#text"].substring(1))
-    ) {
-      const styleMap = objX.kml.Document.StyleMap.find(o => o.id === place.styleUrl["#text"].substring(1));
-      const styleRef = styleMap.Pair.find(s => s.key["#text"] === "normal").styleUrl["#text"];
-      styleObj = objX.kml.Document.Style.find(o => o.id === styleRef.substring(1)).IconStyle;
-    }
-  }
-    // Icon URL -> local file path
-    const rawIcon = styleObj?.Icon?.href?.["#text"] || "";
+    const iconStyle = findPlacemarkIconStyle(place);
+    const rawIcon = iconStyle?.Icon?.href?.["#text"] || "";
     const iconUrl = resolveKmlIconUrl(rawIcon);
 
     // Tree node
     mother.children.push({
       text: place.name?.["#text"] || "(uden navn)",
       state: { opened: false, selected: false },
-      id: "ti_" + mapOverlayId,
+      id: itemId,
       kind: "point",
       Point: position,
-      icon: iconUrl // local path now
+      icon: iconUrl
     });
 
-    // InfoWindow (keep as-is)
     const infowindow = new google.maps.InfoWindow({
       content: place.name?.["#text"] || ""
     });
 
-
-
-
-    // Marker: prefer AdvancedMarkerElement via createMarker() (local icon),
-    
     const aMarker = createMarker({
       map,
       position,
-      title: "ti_" + mapOverlayId,
-      icon: iconUrl,
-      // IMPORTANT: do NOT pass animation here, or createMarker will force classic Marker
-    
+      title: itemId,
+      icon: iconUrl
     });
 
+    addedOverlays.push({ id: itemId, overlay: aMarker });
 
+    aMarker.addListener("gmp-click", () => {
+      infowindow.setPosition(position);
+      infowindow.open({ map });
+    });
 
+    return; // done
+  }
 
   // ---------- POLYLINE ----------
-  if (place.LineString && place.LineString.coordinates["#text"]) {
-    let coords = [];
+  if (place.LineString && place.LineString.coordinates && place.LineString.coordinates["#text"]) {
+    const coords = place.LineString.coordinates["#text"]
+      .trim()
+      .split(" ")
+      .filter(Boolean)
+      .map(p => LatLnger(p));
 
-    if (place.LineString.coordinates["#text"]) {
-      coords = place.LineString.coordinates["#text"].trim().split(" ").map(p => LatLnger(p));
-      var trackBounds = new google.maps.LatLngBounds();
-      coords.forEach(lala => trackBounds.extend(lala));
-    }
+    const trackBounds = new google.maps.LatLngBounds();
+    coords.forEach(ll => trackBounds.extend(ll));
 
-    let styleObj = null;
-    if (objX.kml.Document.Style.find(o => o.id === place.styleUrl["#text"].substring(1))) {
-      styleObj = objX.kml.Document.Style.find(o => o.id === place.styleUrl["#text"].substring(1)).LineStyle;
-    } else if (objX.kml.Document.StyleMap.find(o => o.id === place.styleUrl["#text"].substring(1))) {
-      const styleMap = objX.kml.Document.StyleMap.find(o => o.id === place.styleUrl["#text"].substring(1));
-      const styleRef = styleMap.Pair.find(s => s.key["#text"] === "normal").styleUrl["#text"];
-      styleObj = objX.kml.Document.Style.find(o => o.id === styleRef.substring(1)).LineStyle;
-    }
-
-    const KMLcolor = (styleObj && styleObj.color) ? styleObj.color["#text"] : "00000000";
+    const style = kmlResolvePlacemarkStyle(place);
+    const lineStyle = style?.LineStyle || null;
+    const stroke = kmlColorToRGBA(lineStyle?.color?.["#text"], "#000000", 1);
+    const strokeWeight = lineStyle?.width ? parseFloat(lineStyle.width["#text"]) : 2;
 
     const flightPath = new google.maps.Polyline({
       path: coords,
       geodesic: true,
-      strokeColor: "#" + KMLcolor.substring(6, 8) + KMLcolor.substring(4, 6) + KMLcolor.substring(2, 4),
-      strokeOpacity: parseInt(KMLcolor.substring(0, 2), 16) / 255,
-      strokeWeight: (styleObj && styleObj.width) ? parseFloat(styleObj.width["#text"]) : 2,
+      strokeColor: stroke.color,
+      strokeOpacity: stroke.opacity,
+      strokeWeight: strokeWeight,
       map: map,
     });
 
     mother.children.push({
       text: place.name?.["#text"] || "(uden navn)",
       state: { opened: false, selected: false },
-      id: "ti_" + mapOverlayId,
+      id: itemId,
       kind: "polyline",
       trackBoundsNE: trackBounds.getNorthEast(),
       trackBoundsSW: trackBounds.getSouthWest()
     });
 
-    addedOverlays.push({ id: "ti_" + mapOverlayId, overlay: flightPath });
+    addedOverlays.push({ id: itemId, overlay: flightPath });
+    return;
   }
 
   // ---------- POLYGON ----------
@@ -1592,29 +1633,43 @@ function doPlacemark(place, mother) {
     const coords = place.Polygon.outerBoundaryIs.LinearRing.coordinates["#text"]
       .trim()
       .split(" ")
+      .filter(Boolean)
       .map(p => LatLnger(p));
 
     const polyBounds = new google.maps.LatLngBounds();
     coords.forEach(ll => polyBounds.extend(ll));
 
+    const style = kmlResolvePlacemarkStyle(place);
+    const lineStyle = style?.LineStyle || null;
+    const polyStyle = style?.PolyStyle || null;
+
+    const stroke = kmlColorToRGBA(lineStyle?.color?.["#text"], "#000000", 0.8);
+    const fill = kmlColorToRGBA(polyStyle?.color?.["#text"], "#000000", 0.2);
+
+    const outlineFlag = polyStyle?.outline?.["#text"];
+    const fillFlag = polyStyle?.fill?.["#text"];
+
     const polygon = new google.maps.Polygon({
       paths: coords,
       map: map,
-      strokeOpacity: 0.8,
-      strokeWeight: 2,
-      fillOpacity: 0.2,
+      strokeColor: stroke.color,
+      strokeOpacity: (outlineFlag === "0") ? 0 : stroke.opacity,
+      strokeWeight: lineStyle?.width ? parseFloat(lineStyle.width["#text"]) : 2,
+      fillColor: fill.color,
+      fillOpacity: (fillFlag === "0") ? 0 : fill.opacity,
     });
 
     mother.children.push({
       text: place.name?.["#text"] || "(uden navn)",
       state: { opened: false, selected: false },
-      id: "ti_" + mapOverlayId,
+      id: itemId,
       kind: "polygon",
       trackBoundsNE: polyBounds.getNorthEast(),
       trackBoundsSW: polyBounds.getSouthWest()
     });
 
-    addedOverlays.push({ id: "ti_" + mapOverlayId, overlay: polygon });
+    addedOverlays.push({ id: itemId, overlay: polygon });
+    return;
   }
 }
 
