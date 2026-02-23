@@ -203,8 +203,6 @@ function ensureAdvancedMarkerCss() {
   const style = document.createElement("style");
   style.id = "am-marker-css";
   style.textContent = `
-    .am-wrap{position:relative;width:0;height:0;}
-
     .am-marker{
       position:relative;
       --am-size:32px;
@@ -227,7 +225,6 @@ function ensureAdvancedMarkerCss() {
     @keyframes amDrop{0%{transform:translate(-50%,-200%)}100%{transform:translate(-50%,-100%)}}
     .am-bounce{animation:amBounce .5s ease-in-out infinite alternate}
     @keyframes amBounce{from{transform:translate(-50%,-100%)}to{transform:translate(-50%,-110%)}}
-  
   `;
   document.head.appendChild(style);
 }
@@ -246,21 +243,18 @@ function createMarker({
     throw new Error("Advanced marker library not loaded. Check index.htm libraries and initMap().");
   }
 
+  // Wrapper element that we can style with CSS
+  const wrapper = document.createElement("div");
+  wrapper.className = `am-marker ${cssClass}`.trim();
+
+  
   ensureAdvancedMarkerCss();
-
-  // IMPORTANT:
-  // Google Maps positions marker.content by setting a CSS transform on it.
-  // So we MUST NOT use transform on the outer content element for anchoring.
-  // Instead: outer (am-wrap) is positioned by Maps; inner (am-marker) applies our anchor transform.
-  const outer = document.createElement("div");
-  outer.className = "am-wrap";
-
-  const inner = document.createElement("div");
-  inner.className = `am-marker ${cssClass}`.trim();
-  inner.style.filter = "none";
-
+  // Ensure anchor + remove any inherited filters (some pages add drop-shadows)
+  wrapper.style.transform = "translate(-50%, -100%)";
+  wrapper.style.filter = "none";
   let imgEl = null;
-  const iconUrl = (typeof icon === "string") ? icon : (icon && icon.url ? icon.url : null);
+
+const iconUrl = (typeof icon === "string") ? icon : (icon && icon.url ? icon.url : null);
 
   if (iconUrl) {
     const img = document.createElement("img");
@@ -270,39 +264,40 @@ function createMarker({
     img.style.filter = "none";
     img.style.boxShadow = "none";
     img.style.display = "block";
-    inner.appendChild(img);
+    wrapper.appendChild(img);
     imgEl = img;
   } else {
     const dot = document.createElement("div");
     dot.className = "am-marker-dot";
-    inner.appendChild(dot);
+    wrapper.appendChild(dot);
   }
 
-  if (animateDrop) inner.classList.add("am-drop");
-  outer.appendChild(inner);
+  if (animateDrop) wrapper.classList.add("am-drop");
 
   const m = new AdvancedMarkerElement({
     map,
     position,
     title,
-    content: outer
+    content: wrapper
   });
 
-  // If the icon image loads after the marker is placed, force a lightweight refresh
-  // to avoid temporary misplacement.
+  // If the icon image loads after the marker is placed, AdvancedMarker may not
+  // immediately recompute the anchor until the next map render. Force a lightweight refresh.
   if (imgEl && !imgEl.complete) {
     imgEl.addEventListener("load", () => {
+      // Toggle map assignment to trigger a re-layout.
       const mm = m.map;
       m.map = null;
       m.map = mm;
     }, { once: true });
   }
 
-  m.gmpClickable = true;
-  m.gmpDraggable = !!draggable;
+  // Make it clickable + draggable
+  m.gmpClickable = true;               // click support
+  m.gmpDraggable = !!draggable;        // draggable support
 
   if (animateDrop) {
-    inner.addEventListener("animationend", () => inner.classList.remove("am-drop"), { once: true });
+    wrapper.addEventListener("animationend", () => wrapper.classList.remove("am-drop"), { once: true });
   }
 
   return m;
@@ -311,10 +306,7 @@ function createMarker({
 // CSS-bounce for AdvancedMarkerElement
 function setMarkerBounce(marker, on) {
   if (!marker || !marker.content) return;
-  // marker.content is the outer wrapper; inner marker element is firstElementChild
-  const inner = marker.content.firstElementChild;
-  if (!inner) return;
-  inner.classList.toggle("am-bounce", !!on);
+  marker.content.classList.toggle("am-bounce", !!on);
 }
 
 /*Ø SECTION General behavior*/	
