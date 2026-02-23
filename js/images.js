@@ -1539,7 +1539,7 @@ if (place.Point) {
   return; // <-- IMPORTANT: stop here for Point placemarks
 }
 
-
+/*
     // Marker: prefer AdvancedMarkerElement via createMarker() (local icon),
     
     const aMarker = createMarker({
@@ -1551,7 +1551,7 @@ if (place.Point) {
     
     });
 
-
+*/
 
 
   // ---------- POLYLINE ----------
