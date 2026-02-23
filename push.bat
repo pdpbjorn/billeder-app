@@ -38,7 +38,7 @@ if errorlevel 1 (
 
 echo.
 echo === Push ===
-%GIT% push
+%GIT% push -u origin main
 if errorlevel 1 (
   echo ERROR: push failed. You may need to pull/merge first.
   pause

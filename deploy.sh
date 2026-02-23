@@ -19,11 +19,18 @@ sudo -u "$GIT_USER" -H git -C "$REPO_DIR" fetch origin
 echo "-- merge origin/main into main (as $GIT_USER)"
 sudo -u "$GIT_USER" -H git -C "$REPO_DIR" checkout main >/dev/null 2>&1 || true
 
-sudo -u "$GIT_USER" -H git -C "$REPO_DIR" merge --no-ff --no-edit origin/main || {
-  echo "ERROR: Merge failed (likely conflicts)."
-  echo "Run: sudo -u $GIT_USER -H git -C $REPO_DIR status"
-  exit 1
-}
+
+#sudo -u "$GIT_USER" -H git -C "$REPO_DIR" merge --no-ff --no-edit origin/main || {
+#  echo "ERROR: Merge failed (likely conflicts)."
+#  echo "Run: sudo -u $GIT_USER -H git -C $REPO_DIR status"
+#  exit 1
+#}
+
+echo "-- reset main to origin/main (as $GIT_USER)"
+sudo -u "$GIT_USER" -H git -C "$REPO_DIR" checkout -f main
+sudo -u "$GIT_USER" -H git -C "$REPO_DIR" reset --hard origin/main
+sudo -u "$GIT_USER" -H git -C "$REPO_DIR" clean -fd
+
 
 echo "-- repo status (after)"
 sudo -u "$GIT_USER" -H git -C "$REPO_DIR" rev-parse --short HEAD
