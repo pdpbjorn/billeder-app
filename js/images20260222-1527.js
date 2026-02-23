@@ -177,15 +177,77 @@ let gMarkerLib = null;
 
 // Turn remote KML icon URLs into local file paths.
 // Example: https://example.com/icons/foo.png  ->  icons/foo.png
+// Turn KML icon hrefs into local file paths under /icons/KML.
+// Works with:
+//  - absolute URLs: https://.../foo.png?x=y   -> icons/KML/foo.png
+//  - relative hrefs: foo.png or icons/foo.png -> icons/KML/foo.png
+// Leaves data: URLs untouched.
 function resolveKmlIconUrl(url) {
-  if (!url) return url;
-  // already local/relative
-  if (!/^https?:\/\//i.test(url)) return url;
+  if (!url) return "";
+  const s = String(url).trim();
+  if (s.startsWith("data:")) return s;
 
-  const clean = url.split("?")[0];
+  const clean = s.split("?")[0];
   const filename = clean.substring(clean.lastIndexOf("/") + 1);
-  return `icons/${filename}`;
+  if (!filename) return "";
+
+  return `icons/KML/${filename}`;
 }
+
+// Helper: ensure we can .find() even if parsed XML yields single objects instead of arrays
+function asArray(x) {
+  if (!x) return [];
+  return Array.isArray(x) ? x : [x];
+}
+
+// Resolve a <Style> object by id, following StyleMap(normal) indirection when present.
+function kmlResolveStyleById(styleId) {
+  if (!styleId || !objX?.kml?.Document) return null;
+
+  const doc = objX.kml.Document;
+  const styles = asArray(doc.Style);
+  const styleMaps = asArray(doc.StyleMap);
+
+  const direct = styles.find(s => s?.id === styleId);
+  if (direct) return direct;
+
+  const sm = styleMaps.find(m => m?.id === styleId);
+  if (sm?.Pair) {
+    const pairs = asArray(sm.Pair);
+    const normalPair = pairs.find(p => p?.key?.["#text"] === "normal") || pairs[0];
+    const ref = normalPair?.styleUrl?.["#text"];
+    const refId = ref ? (String(ref).startsWith("#") ? String(ref).slice(1) : String(ref)) : null;
+    const resolved = styles.find(s => s?.id === refId);
+    if (resolved) return resolved;
+  }
+
+  return null;
+}
+
+function kmlResolvePlacemarkStyle(place) {
+  const styleUrlText = place?.styleUrl?.["#text"];
+  const styleId = styleUrlText ? (String(styleUrlText).startsWith("#") ? String(styleUrlText).slice(1) : String(styleUrlText)) : null;
+  return kmlResolveStyleById(styleId);
+}
+
+function findPlacemarkIconStyle(place) {
+  const style = kmlResolvePlacemarkStyle(place);
+  return style?.IconStyle || null;
+}
+
+// KML color is aabbggrr. Return {color:"#rrggbb", opacity:0..1}
+function kmlColorToRGBA(kmlColor, fallbackColor = "#000000", fallbackOpacity = 1) {
+  if (!kmlColor || typeof kmlColor !== "string" || kmlColor.trim().length < 8) {
+    return { color: fallbackColor, opacity: fallbackOpacity };
+  }
+  const c = kmlColor.trim().slice(-8);
+  const a = parseInt(c.slice(0, 2), 16);
+  const b = c.slice(2, 4);
+  const g = c.slice(4, 6);
+  const r = c.slice(6, 8);
+  return { color: `#${r}${g}${b}`, opacity: (isNaN(a) ? 255 : a) / 255 };
+}
+
 function markerLatLng(m) {
   const p = m.position;
   if (!p) return null;
@@ -194,31 +256,16 @@ function markerLatLng(m) {
 }
 // Create a marker using AdvancedMarkerElement,
 
-
 let _amCssInjected = false;
 function ensureAdvancedMarkerCss() {
   if (_amCssInjected) return;
   _amCssInjected = true;
+
   const style = document.createElement("style");
   style.id = "am-marker-css";
   style.textContent = `
-    .am-marker{
-      position:relative;
-      --am-size:32px;
-      width:var(--am-size);
-      height:var(--am-size);
-      transform:translate(-50%,-100%);
-      filter:none !important;
-      will-change:transform;
-    }
-    .am-marker-img{
-      width:100%;
-      height:100%;
-      display:block;
-      object-fit:contain;
-      filter:none !important;
-      box-shadow:none !important;
-    }
+    .am-marker{position:relative;transform:translate(-50%,-100%);filter:none;will-change:transform}
+    .am-marker-img{display:block;max-width:none;filter:none;box-shadow:none}
     .am-marker-dot{width:12px;height:12px;border-radius:50%;background:#d00}
     .am-drop{animation:amDrop .6s ease-out}
     @keyframes amDrop{0%{transform:translate(-50%,-200%)}100%{transform:translate(-50%,-100%)}}
@@ -245,15 +292,12 @@ function createMarker({
   // Wrapper element that we can style with CSS
   const wrapper = document.createElement("div");
   wrapper.className = `am-marker ${cssClass}`.trim();
-
-  
   ensureAdvancedMarkerCss();
-  // Ensure anchor + remove any inherited filters (some pages add drop-shadows)
+  // Anchor bottom-center on the LatLng and avoid any inherited filters
   wrapper.style.transform = "translate(-50%, -100%)";
   wrapper.style.filter = "none";
-  let imgEl = null;
 
-const iconUrl = (typeof icon === "string") ? icon : (icon && icon.url ? icon.url : null);
+  const iconUrl = (typeof icon === "string") ? icon : (icon && icon.url ? icon.url : null);
 
   if (iconUrl) {
     const img = document.createElement("img");
@@ -264,7 +308,6 @@ const iconUrl = (typeof icon === "string") ? icon : (icon && icon.url ? icon.url
     img.style.boxShadow = "none";
     img.style.display = "block";
     wrapper.appendChild(img);
-    imgEl = img;
   } else {
     const dot = document.createElement("div");
     dot.className = "am-marker-dot";
@@ -279,17 +322,6 @@ const iconUrl = (typeof icon === "string") ? icon : (icon && icon.url ? icon.url
     title,
     content: wrapper
   });
-
-  // If the icon image loads after the marker is placed, AdvancedMarker may not
-  // immediately recompute the anchor until the next map render. Force a lightweight refresh.
-  if (imgEl && !imgEl.complete) {
-    imgEl.addEventListener("load", () => {
-      // Toggle map assignment to trigger a re-layout.
-      const mm = m.map;
-      m.map = null;
-      m.map = mm;
-    }, { once: true });
-  }
 
   // Make it clickable + draggable
   m.gmpClickable = true;               // click support
@@ -1360,7 +1392,7 @@ async function UseOnMap(KMLfile,aDate){
 		.append(sidepanel)
 		.children("#mapCanvas").css({"height":"100%","width":"66%"})
 		
-	if (KMLfile){AddTreeBox(KMLfile)}
+	if (KMLfile){ await AddTreeBox(KMLfile); }
 	if (aDate){taggerInterface(aDate)}
 	 
 	   return "mappage" //for navigation by the calling function
@@ -1368,208 +1400,232 @@ async function UseOnMap(KMLfile,aDate){
 }
 
 
-function AddTreeBox(KMLfile){
+async function AddTreeBox(KMLfile){
 
-	//add a button to the map for displaying images from the trip's timeframe
-	const trippicsDiv = document.createElement("div");
-		addMapControl(trippicsDiv, map,"trippics");
-		map.controls[google.maps.ControlPosition.TOP_CENTER].push(trippicsDiv);
-
-
-	var treebox = $("<div/>",{"id":"treebox"}).css({"height":"100%","width":"100%","overflow":"scroll"})
-	
-	$("#sidepanel").append(treebox)
-	//data for the tree
-	  var treeData = [];
-	  //get data from local KML tripfile
-	  var localFile ="./KML/" + KMLfile
-	  fetch( localFile, {method:'GET'})
-	  .then(response => response.text())
-	  .then(xmlString => parseXml(xmlString))
-	  .then((xObj) => {//traverse KML data
-		  	objX = xObj
-			var rootFolder = objX.kml.Document.Folder
-			//trip rod
-			treeData.push({'text':rootFolder.name['#text'],'kind':"container",'state': {	'opened' : true,'selected' : true},'children':[],'depth':1})
-			var treeDataChildren = treeData[0].children
-			//each day
-			if (Array.isArray(rootFolder.Folder)){
-				//send the folder to the handling function with context given as the children of the root, folder depth = 2
-				$.each(rootFolder.Folder,function(i,fol){doFolder(fol,treeDataChildren,2)})
-			}
-			else{ doFolder(rootFolder.Folder,treeDataChildren,2)}
-		})
-		//wait a little and call the folder boounds function on the tree data
-		setTimeout(function(){
-			calculateFolderBounds(treeData);
-			setTimeout(function(){
-				//then wait a little bit more and 
-				//add the data to the tree
-				$('#treebox').jstree({
-					'core':  {"multiple" : false,
-						'data': treeData
-						}
-				});
-				//Set map bounds to include the bounds of the folders that are children of the root
-				ruth = getObjects(treeData,'depth',1) //use helper function to get the folder with depth 1
-				useBounds = new google.maps.LatLngBounds()
-				useBounds.extend(ruth[0].folderBoundsNE)
-				useBounds.extend(ruth[0].folderBoundsSW)
-				map.fitBounds(useBounds,10)
-			}, 500)
-		  },500)
-
-// make markers "bounce" (CSS) when mouse is over corresponding tree node
-$('#treebox').on('hover_node.jstree', function (e, data) {
-  if (data.node.original.kind === "point") {
-    const overlayTag = addedOverlays.find(o => o.id === data.node.original.id);
-    if (!overlayTag) return;
-
-    const jumper = overlayTag.overlay;
-    setMarkerBounce(jumper, true);
-
-    $('#treebox').one('dehover_node.jstree', function () {
-      setMarkerBounce(jumper, false);
-    });
+  // Make sure marker library is ready before we start creating AdvancedMarkerElement markers
+  if (typeof markerReady !== "undefined") {
+    try { await markerReady; } catch (_e) {}
   }
-});
 
-	//zoom the map to the bonds of the contents of a clicked tree node	  
-	$("#treebox").on('dblclick','.jstree-anchor', function (e) {
-		var instance = $.jstree.reference(this),
-		node = instance.get_node(this);
-		if (node.original.kind === "point"){
-			//if the nod represent at point, simply zoom to that point (get it from the array)
-			var overlayTag = addedOverlays.find(o => o.id === node.original.id) 
-			map.panTo(overlayTag.overlay.position)
-			map.setZoom(14)//map.getZoom() + 3)
-		}
-		if (node.original.kind === "container"){
-			//if the node represent a folder, use the folder bounds stored with the node
-			useBounds = new google.maps.LatLngBounds()
-			useBounds.extend(node.original.folderBoundsNE)
-			useBounds.extend(node.original.folderBoundsSW)
-			map.fitBounds(useBounds,10)
-		}
-		if (node.original.kind === "polyline" || node.original.kind === "polygon"){
-			//If the node represent a polyline, it also should store bounds
-			useBounds = new google.maps.LatLngBounds()
-			useBounds.extend(node.original.trackBoundsNE)
-			useBounds.extend(node.original.trackBoundsSW)
-			map.fitBounds(useBounds,10)
-		}
-	});
+  // Reset max depth for this trip
+  folderDepth = 1;
 
-	//if you click a node, nothing happens...
-	$('#treebox').on('select_node.jstree',function(e, data){
- 	//console.log("tree:" + data)
-	})
+  // Remove any previous tree instance/container
+  if ($("#treebox").length) {
+    try { $("#treebox").jstree("destroy"); } catch (_e) {}
+    $("#treebox").remove();
+  }
 
+  // Add a button to the map for displaying images from the trip's timeframe
+  const trippicsDiv = document.createElement("div");
+  addMapControl(trippicsDiv, map, "trippics");
+  map.controls[google.maps.ControlPosition.TOP_CENTER].push(trippicsDiv);
 
+  // Create the tree container
+  const treebox = $("<div/>", { id: "treebox" }).css({ height: "100%", width: "100%", overflow: "auto" });
+  $("#sidepanel").append(treebox);
+
+  const treeData = [];
+  const localFile = "./KML/" + KMLfile;
+
+  let xmlString;
+  try {
+    const resp = await fetch(localFile, { method: "GET" });
+    xmlString = await resp.text();
+  } catch (e) {
+    console.error("Failed to load trip KML:", localFile, e);
+    $("#treebox").append($("<div/>").text("Kunne ikke hente KML-filen: " + localFile));
+    return;
+  }
+
+  try {
+    objX = parseXml(xmlString);
+  } catch (e) {
+    console.error("Failed to parse trip KML:", localFile, e);
+    $("#treebox").append($("<div/>").text("Kunne ikke parse KML-filen: " + localFile));
+    return;
+  }
+
+  // Traverse KML -> build tree + overlays
+  const rootFolder = objX?.kml?.Document?.Folder;
+  if (!rootFolder) {
+    $("#treebox").append($("<div/>").text("KML-filen indeholder ingen Folder-struktur."));
+    return;
+  }
+
+  // Trip root node
+  treeData.push({
+    text: rootFolder.name?.["#text"] || "(uden navn)",
+    kind: "container",
+    state: { opened: true, selected: true },
+    children: [],
+    depth: 1
+  });
+
+  const treeDataChildren = treeData[0].children;
+
+  // Each day (Folder under root)
+  if (rootFolder.Folder) {
+    if (Array.isArray(rootFolder.Folder)) {
+      $.each(rootFolder.Folder, function (_i, fol) { doFolder(fol, treeDataChildren, 2); });
+    } else {
+      doFolder(rootFolder.Folder, treeDataChildren, 2);
+    }
+  }
+
+  // Compute bounds deterministically (includes Point + Polyline + Polygon)
+  calculateFolderBounds(treeData);
+
+  // Build tree (now that data is ready)
+  $("#treebox").jstree({
+    core: { multiple: false, data: treeData }
+  });
+
+  // Fit map to the root folder bounds, if we actually have any geometry
+  const ruth = getObjects(treeData, "depth", 1);
+  const root = (ruth && ruth.length) ? ruth[0] : null;
+
+  if (root?.folderBoundsNE && root?.folderBoundsSW) {
+    const useBounds = new google.maps.LatLngBounds();
+    useBounds.extend(root.folderBoundsNE);
+    useBounds.extend(root.folderBoundsSW);
+    if (!useBounds.isEmpty || !useBounds.isEmpty()) {
+      map.fitBounds(useBounds, 10);
+    }
+  } else {
+    // Avoid the (0,0) "São Tomé" default
+    console.warn("Trip has no mappable geometry (no points/lines/polygons).");
+    $("#treebox").prepend($("<div/>").css({ padding: "8px" }).text("Ingen geotaggede data i denne tur."));
+  }
+
+  // make markers "bounce" (CSS) when mouse is over corresponding tree node
+  $("#treebox").on("hover_node.jstree", function (_e, data) {
+    if (data.node.original.kind === "point") {
+      const overlayTag = addedOverlays.find(o => o.id === data.node.original.id);
+      if (!overlayTag) return;
+
+      const jumper = overlayTag.overlay;
+      setMarkerBounce(jumper, true);
+
+      $("#treebox").one("dehover_node.jstree", function () {
+        setMarkerBounce(jumper, false);
+      });
+    }
+  });
+
+  // zoom the map to the bounds of the contents of a clicked tree node
+  $("#treebox").on("dblclick", ".jstree-anchor", function () {
+    const instance = $.jstree.reference(this);
+    const node = instance.get_node(this);
+
+    if (node.original.kind === "point") {
+      const overlayTag = addedOverlays.find(o => o.id === node.original.id);
+      if (!overlayTag) return;
+      map.panTo(overlayTag.overlay.position);
+      map.setZoom(14);
+    }
+
+    if (node.original.kind === "container" && node.original.folderBoundsNE && node.original.folderBoundsSW) {
+      const b = new google.maps.LatLngBounds();
+      b.extend(node.original.folderBoundsNE);
+      b.extend(node.original.folderBoundsSW);
+      map.fitBounds(b, 10);
+    }
+
+    if ((node.original.kind === "polyline" || node.original.kind === "polygon") &&
+        node.original.trackBoundsNE && node.original.trackBoundsSW) {
+      const b = new google.maps.LatLngBounds();
+      b.extend(node.original.trackBoundsNE);
+      b.extend(node.original.trackBoundsSW);
+      map.fitBounds(b, 10);
+    }
+  });
+
+  // if you click a node, nothing happens...
+  $("#treebox").on("select_node.jstree", function (_e, _data) {});
 }
+//Handle a placemark (place) in context of a treemap node (mother)
+
 //Handle a placemark (place) in context of a treemap node (mother)
 function doPlacemark(place, mother) {
   mapOverlayId = mapOverlayId + 1; //increment the number of overlays (features) added to the map
+  const itemId = "ti_" + mapOverlayId;
 
   // ---------- POINT ----------
-  if (place.Point) {
+  if (place.Point && place.Point.coordinates && place.Point.coordinates["#text"]) {
     const position = LatLnger(place.Point.coordinates["#text"]); // {lat,lng}
 
-    // Resolve icon style (Style or StyleMap->normal->Style)
-    let styleObj = null;
-
-    if (
-      place.styleUrl &&
-      objX.kml?.Document?.Style &&
-      objX.kml.Document.Style.find(o => o.id === place.styleUrl["#text"].substring(1))
-    ) {
-      styleObj = objX.kml.Document.Style.find(o => o.id === place.styleUrl["#text"].substring(1)).IconStyle;
-    } else if (
-      place.styleUrl &&
-      Array.isArray(objX.kml?.Document?.StyleMap) &&
-      objX.kml.Document.StyleMap.find(o => o.id === place.styleUrl["#text"].substring(1))
-    ) {
-      const styleMap = objX.kml.Document.StyleMap.find(o => o.id === place.styleUrl["#text"].substring(1));
-      const styleRef = styleMap.Pair.find(s => s.key["#text"] === "normal").styleUrl["#text"];
-      styleObj = objX.kml.Document.Style.find(o => o.id === styleRef.substring(1)).IconStyle;
-    }
-  }
-    // Icon URL -> local file path
-    const rawIcon = styleObj?.Icon?.href?.["#text"] || "";
+    const iconStyle = findPlacemarkIconStyle(place);
+    const rawIcon = iconStyle?.Icon?.href?.["#text"] || "";
     const iconUrl = resolveKmlIconUrl(rawIcon);
 
     // Tree node
     mother.children.push({
       text: place.name?.["#text"] || "(uden navn)",
       state: { opened: false, selected: false },
-      id: "ti_" + mapOverlayId,
+      id: itemId,
       kind: "point",
       Point: position,
-      icon: iconUrl // local path now
+      icon: iconUrl
     });
 
-    // InfoWindow (keep as-is)
     const infowindow = new google.maps.InfoWindow({
       content: place.name?.["#text"] || ""
     });
 
-
-
-
-    // Marker: prefer AdvancedMarkerElement via createMarker() (local icon),
-    
     const aMarker = createMarker({
       map,
       position,
-      title: "ti_" + mapOverlayId,
-      icon: iconUrl,
-      // IMPORTANT: do NOT pass animation here, or createMarker will force classic Marker
-    
+      title: itemId,
+      icon: iconUrl
     });
 
+    addedOverlays.push({ id: itemId, overlay: aMarker });
 
+    aMarker.addListener("gmp-click", () => {
+      infowindow.setPosition(position);
+      infowindow.open({ map });
+    });
 
+    return; // done
+  }
 
   // ---------- POLYLINE ----------
-  if (place.LineString && place.LineString.coordinates["#text"]) {
-    let coords = [];
+  if (place.LineString && place.LineString.coordinates && place.LineString.coordinates["#text"]) {
+    const coords = place.LineString.coordinates["#text"]
+      .trim()
+      .split(" ")
+      .filter(Boolean)
+      .map(p => LatLnger(p));
 
-    if (place.LineString.coordinates["#text"]) {
-      coords = place.LineString.coordinates["#text"].trim().split(" ").map(p => LatLnger(p));
-      var trackBounds = new google.maps.LatLngBounds();
-      coords.forEach(lala => trackBounds.extend(lala));
-    }
+    const trackBounds = new google.maps.LatLngBounds();
+    coords.forEach(ll => trackBounds.extend(ll));
 
-    let styleObj = null;
-    if (objX.kml.Document.Style.find(o => o.id === place.styleUrl["#text"].substring(1))) {
-      styleObj = objX.kml.Document.Style.find(o => o.id === place.styleUrl["#text"].substring(1)).LineStyle;
-    } else if (objX.kml.Document.StyleMap.find(o => o.id === place.styleUrl["#text"].substring(1))) {
-      const styleMap = objX.kml.Document.StyleMap.find(o => o.id === place.styleUrl["#text"].substring(1));
-      const styleRef = styleMap.Pair.find(s => s.key["#text"] === "normal").styleUrl["#text"];
-      styleObj = objX.kml.Document.Style.find(o => o.id === styleRef.substring(1)).LineStyle;
-    }
-
-    const KMLcolor = (styleObj && styleObj.color) ? styleObj.color["#text"] : "00000000";
+    const style = kmlResolvePlacemarkStyle(place);
+    const lineStyle = style?.LineStyle || null;
+    const stroke = kmlColorToRGBA(lineStyle?.color?.["#text"], "#000000", 1);
+    const strokeWeight = lineStyle?.width ? parseFloat(lineStyle.width["#text"]) : 2;
 
     const flightPath = new google.maps.Polyline({
       path: coords,
       geodesic: true,
-      strokeColor: "#" + KMLcolor.substring(6, 8) + KMLcolor.substring(4, 6) + KMLcolor.substring(2, 4),
-      strokeOpacity: parseInt(KMLcolor.substring(0, 2), 16) / 255,
-      strokeWeight: (styleObj && styleObj.width) ? parseFloat(styleObj.width["#text"]) : 2,
+      strokeColor: stroke.color,
+      strokeOpacity: stroke.opacity,
+      strokeWeight: strokeWeight,
       map: map,
     });
 
     mother.children.push({
       text: place.name?.["#text"] || "(uden navn)",
       state: { opened: false, selected: false },
-      id: "ti_" + mapOverlayId,
+      id: itemId,
       kind: "polyline",
       trackBoundsNE: trackBounds.getNorthEast(),
       trackBoundsSW: trackBounds.getSouthWest()
     });
 
-    addedOverlays.push({ id: "ti_" + mapOverlayId, overlay: flightPath });
+    addedOverlays.push({ id: itemId, overlay: flightPath });
+    return;
   }
 
   // ---------- POLYGON ----------
@@ -1577,29 +1633,43 @@ function doPlacemark(place, mother) {
     const coords = place.Polygon.outerBoundaryIs.LinearRing.coordinates["#text"]
       .trim()
       .split(" ")
+      .filter(Boolean)
       .map(p => LatLnger(p));
 
     const polyBounds = new google.maps.LatLngBounds();
     coords.forEach(ll => polyBounds.extend(ll));
 
+    const style = kmlResolvePlacemarkStyle(place);
+    const lineStyle = style?.LineStyle || null;
+    const polyStyle = style?.PolyStyle || null;
+
+    const stroke = kmlColorToRGBA(lineStyle?.color?.["#text"], "#000000", 0.8);
+    const fill = kmlColorToRGBA(polyStyle?.color?.["#text"], "#000000", 0.2);
+
+    const outlineFlag = polyStyle?.outline?.["#text"];
+    const fillFlag = polyStyle?.fill?.["#text"];
+
     const polygon = new google.maps.Polygon({
       paths: coords,
       map: map,
-      strokeOpacity: 0.8,
-      strokeWeight: 2,
-      fillOpacity: 0.2,
+      strokeColor: stroke.color,
+      strokeOpacity: (outlineFlag === "0") ? 0 : stroke.opacity,
+      strokeWeight: lineStyle?.width ? parseFloat(lineStyle.width["#text"]) : 2,
+      fillColor: fill.color,
+      fillOpacity: (fillFlag === "0") ? 0 : fill.opacity,
     });
 
     mother.children.push({
       text: place.name?.["#text"] || "(uden navn)",
       state: { opened: false, selected: false },
-      id: "ti_" + mapOverlayId,
+      id: itemId,
       kind: "polygon",
       trackBoundsNE: polyBounds.getNorthEast(),
       trackBoundsSW: polyBounds.getSouthWest()
     });
 
-    addedOverlays.push({ id: "ti_" + mapOverlayId, overlay: polygon });
+    addedOverlays.push({ id: itemId, overlay: polygon });
+    return;
   }
 }
 
@@ -1711,42 +1781,64 @@ function LatLnger(point){
 	}
 
 //Iteratively Calculate the bounds that would contain the features referred by a tree node and its children - and store them on the node
-function  calculateFolderBounds(treeData){
-	do{//staring with the deepest folders, proceeding until depth = 1
-	getObjects(treeData,'depth',folderDepth).forEach( //return all folders of a certain depth - initially using the globally stored max value
-		function(foldr){
-			var foldrBounds = new google.maps.LatLngBounds(); 
-			foldr.children.forEach( //for each folder/node child, extend the folders bound by the child's bound
-				function(child){
-					if(child.kind === "point"){
-						
-						foldrBounds.extend({'lat':child.Point.lat,'lng':child.Point.lng})
-						}
-					if(child.kind === "polyline" && child.trackBounds){
-						foldrBounds.extend({'lat':child.trackBounds.getNorthEast().lat(),'lng':child.trackBounds.getNorthEast().lng()})
-						foldrBounds.extend({'lat':child.trackBounds.getSouthWest().lat(),'lng':child.trackBounds.getSouthWest().lng()})
-							}
-					if(child.kind === "container" && child.children.length > 0){
-						//console.log(foldr)
-						foldrBounds.extend({'lat':child.folderBounds.getNorthEast().lat(),'lng':child.folderBounds.getNorthEast().lng()})
-						foldrBounds.extend({'lat':child.folderBounds.getSouthWest().lat(),'lng':child.folderBounds.getSouthWest().lng()})
-					}
-				}
-			)
-			//store the generated bound as literals on the node
-			foldr.folderBounds = foldrBounds
-			foldr.folderBoundsSW = {'lat':foldrBounds.getSouthWest().lat(),'lng':foldrBounds.getSouthWest().lng()}
-			foldr.folderBoundsNE = {'lat':foldrBounds.getNorthEast().lat(),'lng':foldrBounds.getNorthEast().lng()}
-					
-		  
+function calculateFolderBounds(treeData) {
+  // Recursively compute bounds for containers based on:
+  //  - point nodes: node.Point {lat,lng}
+  //  - polyline/polygon nodes: node.trackBoundsNE/SW literals
+  // Stores:
+  //  - node.folderBounds (LatLngBounds)
+  //  - node.folderBoundsNE/SW literals
 
-		}
+  function boundsFromTrack(node) {
+    if (!node?.trackBoundsNE || !node?.trackBoundsSW) return null;
+    const b = new google.maps.LatLngBounds();
+    b.extend(node.trackBoundsNE);
+    b.extend(node.trackBoundsSW);
+    return b;
+  }
 
-	)
-	//decrement the depth
-	folderDepth = folderDepth - 1
-	}while (folderDepth >= 1)
-	
+  function compute(node) {
+    if (!node) return null;
+
+    // Leaf: point
+    if (node.kind === "point" && node.Point) {
+      const b = new google.maps.LatLngBounds();
+      b.extend(node.Point);
+      return b;
+    }
+
+    // Leaf: line/polygon
+    if ((node.kind === "polyline" || node.kind === "polygon")) {
+      return boundsFromTrack(node);
+    }
+
+    // Container: union of children
+    if (node.kind === "container" && Array.isArray(node.children)) {
+      const b = new google.maps.LatLngBounds();
+      let hasAny = false;
+
+      node.children.forEach((ch) => {
+        const cb = compute(ch);
+        if (!cb) return;
+        b.extend(cb.getNorthEast());
+        b.extend(cb.getSouthWest());
+        hasAny = true;
+      });
+
+      if (!hasAny) return null;
+
+      node.folderBounds = b;
+      node.folderBoundsNE = { lat: b.getNorthEast().lat(), lng: b.getNorthEast().lng() };
+      node.folderBoundsSW = { lat: b.getSouthWest().lat(), lng: b.getSouthWest().lng() };
+      return b;
+    }
+
+    return null;
+  }
+
+  if (Array.isArray(treeData)) {
+    treeData.forEach((n) => compute(n));
+  }
 }
 
 function addMapControl(controlDiv, map, mapDoWhat) {
