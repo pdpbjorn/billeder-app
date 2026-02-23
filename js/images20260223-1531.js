@@ -205,14 +205,15 @@ function ensureAdvancedMarkerCss() {
   style.textContent = `
     .am-wrap{position:relative;width:0;height:0;}
 
-.am-marker{
-  position:relative;
-  --am-size:32px;
-  width:var(--am-size);
-  height:var(--am-size);
-  translate:-50% -100%;
-  filter:none !important;
-}
+    .am-marker{
+      position:relative;
+      --am-size:32px;
+      width:var(--am-size);
+      height:var(--am-size);
+      transform:translate(-50%,-100%);
+      filter:none !important;
+      will-change:transform;
+    }
     .am-marker-img{
       width:100%;
       height:100%;
@@ -223,15 +224,10 @@ function ensureAdvancedMarkerCss() {
     }
     .am-marker-dot{width:12px;height:12px;border-radius:50%;background:#d00}
     .am-drop{animation:amDrop .6s ease-out}
-    @keyframes amDrop{
-  0%{ translate:-50% -200%; }
-  100%{ translate:-50% -100%; }
-}
-
-@keyframes amBounce{
-  from{ translate:-50% -100%; }
-  to{ translate:-50% -110%; }
-}
+    @keyframes amDrop{0%{transform:translate(-50%,-200%)}100%{transform:translate(-50%,-100%)}}
+    .am-bounce{animation:amBounce .5s ease-in-out infinite alternate}
+    @keyframes amBounce{from{transform:translate(-50%,-100%)}to{transform:translate(-50%,-110%)}}
+  
   `;
   document.head.appendChild(style);
 }
