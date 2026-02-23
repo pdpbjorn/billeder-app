@@ -204,20 +204,15 @@ function ensureAdvancedMarkerCss() {
   style.id = "am-marker-css";
   style.textContent = `
     .am-wrap{position:relative;width:0;height:0;}
-    /* Anchor WITHOUT transform/translate to avoid zoom "walk" */
-    .am-marker{
-      position:absolute;
-      left:0;
-      top:0;
-      --am-size:32px;
-      width:var(--am-size);
-      height:var(--am-size);
-      margin-left:calc(var(--am-size) * -0.5);
-      margin-top:calc(var(--am-size) * -1);
-      filter:none !important;
-      box-shadow:none !important;
-      -webkit-filter:none !important;
-    }
+
+.am-marker{
+  position:relative;
+  --am-size:32px;
+  width:var(--am-size);
+  height:var(--am-size);
+  translate:-50% -100%;
+  filter:none !important;
+}
     .am-marker-img{
       width:100%;
       height:100%;
@@ -225,20 +220,19 @@ function ensureAdvancedMarkerCss() {
       object-fit:contain;
       filter:none !important;
       box-shadow:none !important;
-      -webkit-filter:none !important;
     }
     .am-marker-dot{width:12px;height:12px;border-radius:50%;background:#d00}
     .am-drop{animation:amDrop .6s ease-out}
-    .am-bounce{animation:amBounce .35s ease-in-out infinite alternate}
     @keyframes amDrop{
-      0%{transform:translateY(-36px)}
-      100%{transform:translateY(0)}
-    }
-    @keyframes amBounce{
-      from{transform:translateY(0)}
-      to{transform:translateY(-8px)}
-    }
-`;
+  0%{ translate:-50% -200%; }
+  100%{ translate:-50% -100%; }
+}
+
+@keyframes amBounce{
+  from{ translate:-50% -100%; }
+  to{ translate:-50% -110%; }
+}
+  `;
   document.head.appendChild(style);
 }
 
