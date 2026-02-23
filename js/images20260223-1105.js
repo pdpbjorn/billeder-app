@@ -1360,16 +1360,7 @@ async function UseOnMap(KMLfile,aDate){
 		.css({"display":"flex","flex-direction":"row"})
 		.append(sidepanel)
 		.children("#mapCanvas").css({"height":"100%","width":"66%"})
-	
-        
-// IMPORTANT: mapCanvas size changes after map creation (flex layout).
-// Force Maps to recompute projection/overlay positions immediately (otherwise markers can appear NW until zoom).
-requestAnimationFrame(function(){
-  google.maps.event.trigger(map, "resize");
-  var c = map.getCenter();
-  if (c) { map.setCenter(c); }
-});
-
+		
 	if (KMLfile){AddTreeBox(KMLfile)}
 	if (aDate){taggerInterface(aDate)}
 	 
