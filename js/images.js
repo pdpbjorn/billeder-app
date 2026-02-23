@@ -184,7 +184,8 @@ function resolveKmlIconUrl(url) {
 
   const clean = url.split("?")[0];
   const filename = clean.substring(clean.lastIndexOf("/") + 1);
-  return `icons/${filename}`;
+  return `icons/KML/${filename}`;
+
 }
 function markerLatLng(m) {
   const p = m.position;
@@ -1471,49 +1472,72 @@ $('#treebox').on('hover_node.jstree', function (e, data) {
 function doPlacemark(place, mother) {
   mapOverlayId = mapOverlayId + 1; //increment the number of overlays (features) added to the map
 
+
   // ---------- POINT ----------
-  if (place.Point) {
-    const position = LatLnger(place.Point.coordinates["#text"]); // {lat,lng}
+if (place.Point) {
+  const position = LatLnger(place.Point.coordinates["#text"]); // {lat,lng}
 
-    // Resolve icon style (Style or StyleMap->normal->Style)
-    let styleObj = null;
+  // Resolve icon style (Style or StyleMap->normal->Style)
+  let styleObj = null;
 
-    if (
-      place.styleUrl &&
-      objX.kml?.Document?.Style &&
-      objX.kml.Document.Style.find(o => o.id === place.styleUrl["#text"].substring(1))
-    ) {
-      styleObj = objX.kml.Document.Style.find(o => o.id === place.styleUrl["#text"].substring(1)).IconStyle;
-    } else if (
-      place.styleUrl &&
-      Array.isArray(objX.kml?.Document?.StyleMap) &&
-      objX.kml.Document.StyleMap.find(o => o.id === place.styleUrl["#text"].substring(1))
-    ) {
-      const styleMap = objX.kml.Document.StyleMap.find(o => o.id === place.styleUrl["#text"].substring(1));
-      const styleRef = styleMap.Pair.find(s => s.key["#text"] === "normal").styleUrl["#text"];
-      styleObj = objX.kml.Document.Style.find(o => o.id === styleRef.substring(1)).IconStyle;
+  const styleUrlText = place?.styleUrl?.["#text"];
+  const styleId = styleUrlText ? styleUrlText.substring(1) : null;
+
+  if (styleId && Array.isArray(objX?.kml?.Document?.Style)) {
+    const st = objX.kml.Document.Style.find(o => o?.id === styleId);
+    if (st?.IconStyle) styleObj = st.IconStyle;
+  }
+
+  if (!styleObj && styleId && Array.isArray(objX?.kml?.Document?.StyleMap)) {
+    const sm = objX.kml.Document.StyleMap.find(o => o?.id === styleId);
+    const pairs = sm?.Pair ? (Array.isArray(sm.Pair) ? sm.Pair : [sm.Pair]) : [];
+    const normalPair = pairs.find(p => p?.key?.["#text"] === "normal") || pairs[0];
+    const ref = normalPair?.styleUrl?.["#text"];
+    const refId = ref ? ref.substring(1) : null;
+
+    if (refId && Array.isArray(objX?.kml?.Document?.Style)) {
+      const st2 = objX.kml.Document.Style.find(o => o?.id === refId);
+      if (st2?.IconStyle) styleObj = st2.IconStyle;
     }
   }
-    // Icon URL -> local file path
-    const rawIcon = styleObj?.Icon?.href?.["#text"] || "";
-    const iconUrl = resolveKmlIconUrl(rawIcon);
 
-    // Tree node
-    mother.children.push({
-      text: place.name?.["#text"] || "(uden navn)",
-      state: { opened: false, selected: false },
-      id: "ti_" + mapOverlayId,
-      kind: "point",
-      Point: position,
-      icon: iconUrl // local path now
-    });
+  // Icon URL -> local file path
+  const rawIcon = styleObj?.Icon?.href?.["#text"] || "";
+  const iconUrl = resolveKmlIconUrl(rawIcon);
 
-    // InfoWindow (keep as-is)
-    const infowindow = new google.maps.InfoWindow({
-      content: place.name?.["#text"] || ""
-    });
+  const markerId = "ti_" + mapOverlayId;
 
+  // Tree node
+  mother.children.push({
+    text: place.name?.["#text"] || "(uden navn)",
+    state: { opened: false, selected: false },
+    id: markerId,
+    kind: "point",
+    Point: position,
+    icon: iconUrl
+  });
 
+  const infowindow = new google.maps.InfoWindow({
+    content: place.name?.["#text"] || ""
+  });
+
+  const aMarker = createMarker({
+    map,
+    position,
+    title: markerId,
+    icon: iconUrl
+  });
+
+  // IMPORTANT: allow hover/dblclick logic to find the marker
+  addedOverlays.push({ id: markerId, overlay: aMarker });
+
+  aMarker.addListener("gmp-click", () => {
+    infowindow.setPosition(position);
+    infowindow.open({ map });
+  });
+
+  return; // <-- IMPORTANT: stop here for Point placemarks
+}
 
 
     // Marker: prefer AdvancedMarkerElement via createMarker() (local icon),
