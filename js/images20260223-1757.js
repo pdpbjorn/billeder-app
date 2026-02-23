@@ -1,4 +1,4 @@
-/* SECTION Global variables*/
+/*bØ SECTION Global variables*/
 	//var theDataset; //Global variable storing the data loaded from geojson
 	//var theAreas; //a set of geograpical areas (countries) for cookie cutting - loaded from JSON file
 	//var theTrips; //a list with descriptions of the trips available as KML - loaded from JSON file
@@ -202,46 +202,43 @@ function ensureAdvancedMarkerCss() {
   _amCssInjected = true;
   const style = document.createElement("style");
   style.id = "am-marker-css";
-  style.textContent = `.am-wrap{position:relative;width:0;height:0;}
-/* Stable anchoring: separate anchor transform from animations */
-.am-anchor{
-  position:absolute;
-  left:0;
-  top:0;
-  transform:translate(-50%,-100%);
-  transform-origin:50% 100%;
-  pointer-events:auto;
-}
-.am-anim{
-  position:relative;
-  --am-size:32px;
-  width:var(--am-size);
-  height:var(--am-size);
-  filter:none !important;
-  box-shadow:none !important;
-  -webkit-filter:none !important;
-}
-.am-marker-img{
-  width:100%;
-  height:100%;
-  display:block;
-  object-fit:contain;
-  filter:none !important;
-  box-shadow:none !important;
-  -webkit-filter:none !important;
-  pointer-events:auto;
-}
-.am-marker-dot{width:12px;height:12px;border-radius:50%;background:#d00}
-.am-drop{animation:amDrop .6s ease-out}
-.am-bounce{animation:amBounce .35s ease-in-out infinite alternate}
-@keyframes amDrop{
-  0%{transform:translateY(-36px)}
-  100%{transform:translateY(0)}
-}
-@keyframes amBounce{
-  from{transform:translateY(0)}
-  to{transform:translateY(-8px)}
-}`;
+  style.textContent = `
+    .am-wrap{position:relative;width:0;height:0;}
+    /* Anchor WITHOUT transform/translate to avoid zoom "walk" */
+    .am-marker{
+      position:absolute;
+      left:0;
+      top:0;
+      --am-size:32px;
+      width:var(--am-size);
+      height:var(--am-size);
+      margin-left:calc(var(--am-size) * -0.5);
+      margin-top:calc(var(--am-size) * -1);
+      filter:none !important;
+      box-shadow:none !important;
+      -webkit-filter:none !important;
+    }
+    .am-marker-img{
+      width:100%;
+      height:100%;
+      display:block;
+      object-fit:contain;
+      filter:none !important;
+      box-shadow:none !important;
+      -webkit-filter:none !important;
+    }
+    .am-marker-dot{width:12px;height:12px;border-radius:50%;background:#d00}
+    .am-drop{animation:amDrop .6s ease-out}
+    .am-bounce{animation:amBounce .35s ease-in-out infinite alternate}
+    @keyframes amDrop{
+      0%{transform:translateY(-36px)}
+      100%{transform:translateY(0)}
+    }
+    @keyframes amBounce{
+      from{transform:translateY(0)}
+      to{transform:translateY(-8px)}
+    }
+`;
   document.head.appendChild(style);
 }
 
@@ -261,18 +258,16 @@ function createMarker({
 
   ensureAdvancedMarkerCss();
 
-  // Outer is positioned by Maps (Maps sets transform on it)
+  // IMPORTANT:
+  // Google Maps positions marker.content by setting a CSS transform on it.
+  // So we MUST NOT use transform on the outer content element for anchoring.
+  // Instead: outer (am-wrap) is positioned by Maps; inner (am-marker) applies our anchor transform.
   const outer = document.createElement("div");
   outer.className = "am-wrap";
 
-  // Anchor holds our constant translate(-50%,-100%) and never animates
-  const anchor = document.createElement("div");
-  anchor.className = "am-anchor";
-
-  // Anim element is where we run drop/bounce animations (transform: translateY)
-  const anim = document.createElement("div");
-  anim.className = `am-anim ${cssClass}`.trim();
-  anim.style.filter = "none";
+  const inner = document.createElement("div");
+  inner.className = `am-marker ${cssClass}`.trim();
+  inner.style.filter = "none";
 
   let imgEl = null;
   const iconUrl = (typeof icon === "string") ? icon : (icon && icon.url ? icon.url : null);
@@ -285,18 +280,16 @@ function createMarker({
     img.style.filter = "none";
     img.style.boxShadow = "none";
     img.style.display = "block";
-    anim.appendChild(img);
+    inner.appendChild(img);
     imgEl = img;
   } else {
     const dot = document.createElement("div");
     dot.className = "am-marker-dot";
-    anim.appendChild(dot);
+    inner.appendChild(dot);
   }
 
-  if (animateDrop) anim.classList.add("am-drop");
-
-  anchor.appendChild(anim);
-  outer.appendChild(anchor);
+  if (animateDrop) inner.classList.add("am-drop");
+  outer.appendChild(inner);
 
   const m = new AdvancedMarkerElement({
     map,
@@ -306,7 +299,7 @@ function createMarker({
   });
 
   // If the icon image loads after the marker is placed, force a lightweight refresh
-  // (helps avoid brief incorrect offsets on some browsers)
+  // to avoid temporary misplacement.
   if (imgEl && !imgEl.complete) {
     imgEl.addEventListener("load", () => {
       const mm = m.map;
@@ -319,24 +312,19 @@ function createMarker({
   m.gmpDraggable = !!draggable;
 
   if (animateDrop) {
-    anim.addEventListener("animationend", () => anim.classList.remove("am-drop"), { once: true });
+    inner.addEventListener("animationend", () => inner.classList.remove("am-drop"), { once: true });
   }
-
-  // expose for bounce helper
-  m.__amAnim = anim;
 
   return m;
 }
 
 // CSS-bounce for AdvancedMarkerElement
 function setMarkerBounce(marker, on) {
-  if (!marker) return;
-
-  const anim = marker.__amAnim ||
-    (marker.content?.querySelector ? marker.content.querySelector(".am-anim") : null);
-
-  if (!anim) return;
-  anim.classList.toggle("am-bounce", !!on);
+  if (!marker || !marker.content) return;
+  // marker.content is the outer wrapper; inner marker element is firstElementChild
+  const inner = marker.content.firstElementChild;
+  if (!inner) return;
+  inner.classList.toggle("am-bounce", !!on);
 }
 
 /*Ø SECTION General behavior*/	
