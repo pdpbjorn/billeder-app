@@ -1228,35 +1228,6 @@ function setClipboard(value) {
 let photoMarkers = [];
 let photoInfoWindow = null;
 
-// Trip/KML marker info window (single instance so we can close previous popups)
-let tripInfoWindow = null;
-
-function closeAllInfoWindows() {
-  try { photoInfoWindow?.close(); } catch (_) {}
-  try { tripInfoWindow?.close(); } catch (_) {}
-}
-
-// Select and reveal a node in the trip jsTree (used when clicking markers)
-function selectTreeNode(nodeId) {
-  if (!nodeId) return;
-  const $tree = $("#treebox");
-  if (!$tree.length) return;
-
-  const inst = $tree.jstree(true);
-  if (!inst) return;
-
-  // Open all parents so selection is visible
-  let p = inst.get_parent(nodeId);
-  while (p && p !== "#") {
-    inst.open_node(p);
-    p = inst.get_parent(p);
-  }
-
-  // Select the node (and close any previous selection)
-  inst.deselect_all(true);
-  inst.select_node(nodeId, true, true);
-}
-
 function clearPhotoMarkers() {
   if (photoCluster) {
      photoCluster.clearMarkers();
@@ -1298,7 +1269,6 @@ async function showOnMap(mapFeatureCollection) {
     marker.__feature = f;
 
     marker.addListener("gmp-click", () => {
-      closeAllInfoWindows();
       const img = f.properties.image;
 
       const thumbUrl =
@@ -1586,6 +1556,10 @@ if (place.Point) {
     icon: iconUrl
   });
 
+  const infowindow = new google.maps.InfoWindow({
+    content: place.name?.["#text"] || ""
+  });
+
   const aMarker = createMarker({
     map,
     position,
@@ -1597,22 +1571,8 @@ if (place.Point) {
   addedOverlays.push({ id: markerId, overlay: aMarker });
 
   aMarker.addListener("gmp-click", () => {
-    closeAllInfoWindows();
-
-    if (!tripInfoWindow) tripInfoWindow = new google.maps.InfoWindow();
-
-    // Show placemark name (basic flyout)
-    tripInfoWindow.setContent(place.name?.["#text"] || "");
-    // Prefer anchoring to the marker (works for AdvancedMarkerElement)
-    try {
-      tripInfoWindow.open({ map, anchor: aMarker });
-    } catch (_) {
-      tripInfoWindow.setPosition(position);
-      tripInfoWindow.open({ map });
-    }
-
-    // Sync selection to the trip tree
-    selectTreeNode(markerId);
+    infowindow.setPosition(position);
+    infowindow.open({ map });
   });
 
   return; // <-- IMPORTANT: stop here for Point placemarks
