@@ -1414,6 +1414,16 @@ map = mapCreator(); //get map construct from mapCreator function
 //function to make a map showing places from a trip along with a tree representation of the trip
 async function UseOnMap(KMLfile,aDate){
       await markerReady;
+      if ($(".mappage").length) {
+        try {
+          if (typeof map !== "undefined" && map) {
+            google.maps.event.clearInstanceListeners(map);
+          }
+        } catch(e){}
+
+        $(".mappage").remove();
+        map = null;
+      }
 
 	mapOverlayId = 0 //reset the number of added overlays (features)
 	addedOverlays = [] //the array of features/overlays added to current map
