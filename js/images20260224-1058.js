@@ -1504,14 +1504,10 @@ function AddTreeBox(KMLfile){
 				});
 				//Set map bounds to include the bounds of the folders that are children of the root
 				ruth = getObjects(treeData,'depth',1) //use helper function to get the folder with depth 1
-				if (ruth && ruth[0] && ruth[0].folderBoundsNE && ruth[0].folderBoundsSW) {
-					useBounds = new google.maps.LatLngBounds()
-					useBounds.extend(ruth[0].folderBoundsNE)
-					useBounds.extend(ruth[0].folderBoundsSW)
-					map.fitBounds(useBounds,10)
-				} else {
-					console.warn("Trip has no bounds (maybe empty folder or missing geometries).");
-				}
+				useBounds = new google.maps.LatLngBounds()
+				useBounds.extend(ruth[0].folderBoundsNE)
+				useBounds.extend(ruth[0].folderBoundsSW)
+				map.fitBounds(useBounds,10)
 			}, 500)
 		  },500)
 
@@ -1542,25 +1538,17 @@ $('#treebox').on('hover_node.jstree', function (e, data) {
 		}
 		if (node.original.kind === "container"){
 			//if the node represent a folder, use the folder bounds stored with the node
-			if (node.original.folderBoundsNE && node.original.folderBoundsSW){
-				useBounds = new google.maps.LatLngBounds()
-				useBounds.extend(node.original.folderBoundsNE)
-				useBounds.extend(node.original.folderBoundsSW)
-				map.fitBounds(useBounds,10)
-			} else {
-				console.warn("Folder has no bounds (empty).");
-			}
+			useBounds = new google.maps.LatLngBounds()
+			useBounds.extend(node.original.folderBoundsNE)
+			useBounds.extend(node.original.folderBoundsSW)
+			map.fitBounds(useBounds,10)
 		}
 		if (node.original.kind === "polyline" || node.original.kind === "polygon"){
-			//If the node represent a polyline/polygon, it also should store bounds
-			if (node.original.trackBoundsNE && node.original.trackBoundsSW){
-				useBounds = new google.maps.LatLngBounds()
-				useBounds.extend(node.original.trackBoundsNE)
-				useBounds.extend(node.original.trackBoundsSW)
-				map.fitBounds(useBounds,10)
-			} else {
-				console.warn("Track/Polygon has no bounds.");
-			}
+			//If the node represent a polyline, it also should store bounds
+			useBounds = new google.maps.LatLngBounds()
+			useBounds.extend(node.original.trackBoundsNE)
+			useBounds.extend(node.original.trackBoundsSW)
+			map.fitBounds(useBounds,10)
 		}
 	});
 
@@ -1881,69 +1869,42 @@ function LatLnger(point){
 	}
 
 //Iteratively Calculate the bounds that would contain the features referred by a tree node and its children - and store them on the node
-function calculateFolderBounds(treeData){
-  // Compute bounds for every node without creating "world-sized" bounds when a folder is empty
-  // and without relying on missing properties like child.trackBounds (we store trackBoundsNE/SW).
-  function toLiteral(ll){
-    if (!ll) return null;
-    // ll can be a google.maps.LatLng or a literal
-    if (typeof ll.lat === "function") return { lat: ll.lat(), lng: ll.lng() };
-    if (typeof ll.lat === "number" && typeof ll.lng === "number") return { lat: ll.lat, lng: ll.lng };
-    return null;
-  }
+function  calculateFolderBounds(treeData){
+	do{//staring with the deepest folders, proceeding until depth = 1
+	getObjects(treeData,'depth',folderDepth).forEach( //return all folders of a certain depth - initially using the globally stored max value
+		function(foldr){
+			var foldrBounds = new google.maps.LatLngBounds(); 
+			foldr.children.forEach( //for each folder/node child, extend the folders bound by the child's bound
+				function(child){
+					if(child.kind === "point"){
+						
+						foldrBounds.extend({'lat':child.Point.lat,'lng':child.Point.lng})
+						}
+					if(child.kind === "polyline" && child.trackBounds){
+						foldrBounds.extend({'lat':child.trackBounds.getNorthEast().lat(),'lng':child.trackBounds.getNorthEast().lng()})
+						foldrBounds.extend({'lat':child.trackBounds.getSouthWest().lat(),'lng':child.trackBounds.getSouthWest().lng()})
+							}
+					if(child.kind === "container" && child.children.length > 0){
+						//console.log(foldr)
+						foldrBounds.extend({'lat':child.folderBounds.getNorthEast().lat(),'lng':child.folderBounds.getNorthEast().lng()})
+						foldrBounds.extend({'lat':child.folderBounds.getSouthWest().lat(),'lng':child.folderBounds.getSouthWest().lng()})
+					}
+				}
+			)
+			//store the generated bound as literals on the node
+			foldr.folderBounds = foldrBounds
+			foldr.folderBoundsSW = {'lat':foldrBounds.getSouthWest().lat(),'lng':foldrBounds.getSouthWest().lng()}
+			foldr.folderBoundsNE = {'lat':foldrBounds.getNorthEast().lat(),'lng':foldrBounds.getNorthEast().lng()}
+					
+		  
 
-  function boundsFromNode(node){
-    let b = null;
+		}
 
-    const ensure = () => { if (!b) b = new google.maps.LatLngBounds(); };
-
-    const extendLiteral = (ll) => {
-      const lit = toLiteral(ll);
-      if (!lit || typeof lit.lat !== "number" || typeof lit.lng !== "number") return;
-      ensure();
-      b.extend(lit);
-    };
-
-    if (!node || !node.kind) return null;
-
-    if (node.kind === "point") {
-      extendLiteral(node.Point);
-      return b;
-    }
-
-    if ((node.kind === "polyline" || node.kind === "polygon")) {
-      // Tracks/polygons store literals
-      extendLiteral(node.trackBoundsNE);
-      extendLiteral(node.trackBoundsSW);
-      return b;
-    }
-
-    if (node.kind === "container") {
-      const kids = Array.isArray(node.children) ? node.children : [];
-      kids.forEach((ch) => {
-        const cb = boundsFromNode(ch);
-        if (!cb) return;
-        ensure();
-        b.union(cb);
-      });
-      return b;
-    }
-
-    return b;
-  }
-
-  const roots = Array.isArray(treeData) ? treeData : [treeData];
-  roots.forEach((n) => {
-    const b = boundsFromNode(n);
-    n.folderBounds = b || null;
-    if (b) {
-      n.folderBoundsSW = toLiteral(b.getSouthWest());
-      n.folderBoundsNE = toLiteral(b.getNorthEast());
-    } else {
-      n.folderBoundsSW = null;
-      n.folderBoundsNE = null;
-    }
-  });
+	)
+	//decrement the depth
+	folderDepth = folderDepth - 1
+	}while (folderDepth >= 1)
+	
 }
 
 function addMapControl(controlDiv, map, mapDoWhat) {
