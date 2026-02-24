@@ -27,7 +27,7 @@
 		<IconStyle>
 			<scale>0.7</scale>
 			<Icon>
-				<href>http://kh.google.com:80/flatfile?lf-0-icons/information_new_h.png</href>
+				<href>http://kh.google.com:80/flatfile/lf-0-icons/information_new_h.png</href>
 			</Icon>
 		</IconStyle>
 		<LabelStyle>
@@ -49,7 +49,7 @@
 		<IconStyle>
 			<scale>0.6</scale>
 			<Icon>
-				<href>http://kh.google.com:80/flatfile?lf-0-icons/information_new_n.png</href>
+				<href>http://kh.google.com:80/flatfile/lf-0-icons/information_new_n.png</href>
 			</Icon>
 		</IconStyle>
 		<LineStyle>
