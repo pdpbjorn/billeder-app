@@ -224,7 +224,7 @@
 			</Placemark>
 			<Placemark>
 				<name>Røser</name>
-				<styleUrl>#msn_ylw-pushpin240</styleUrl>
+				<styleUrl>#msn_ylw-pushpin1800</styleUrl>
 				<Polygon>
 					<tessellate>1</tessellate>
 					<outerBoundaryIs>
