@@ -547,35 +547,23 @@ function makeTripLinksFromIndex(anvIndex){
     group.trips.forEach(trip => {
 
       $("<li/>")
-        .append(
-          $("<a/>",{
-            href:"#",
-            html: trip.title,
-            title: trip.comment
-          })
-          .addClass("trip-link")
-          .attr("data-trip-id", trip.id)
-          .attr("data-kml", trip.filename)
-          .attr("data-start", trip.startDate)
-          .attr("data-end", trip.endDate)
-        )
+        .append($("<a/>",{
+          href:"#",
+          html: trip.title,   // still correct
+		  title: trip.comment,
+          onclick:
+            "injectTrip('" +
+			trip.id + "','" +
+            trip.filename + "','" +
+            trip.startDate + "','" +
+            trip.endDate + "')"
+        }))
         .appendTo(GruppeTureListe);
 
     });
 
   });
 }
-
-
-// Delegated handler for trip selection (robust with dynamic menus / jQuery Mobile)
-$(document)
-  .off("click", "#dropTrips a.trip-link")
-  .on("click", "#dropTrips a.trip-link", function (e) {
-    e.preventDefault();
-    e.stopPropagation();
-    injectTrip(this.dataset.tripId, this.dataset.kml, this.dataset.start, this.dataset.end);
-  });
-
 
 
 
