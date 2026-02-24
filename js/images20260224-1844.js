@@ -1882,13 +1882,11 @@ function LatLnger(point){
 
 //Iteratively Calculate the bounds that would contain the features referred by a tree node and its children - and store them on the node
 function calculateFolderBounds(treeData){
-  // Compute bounds for EVERY node (folders, points, tracks) without creating "world-sized" bounds
-  // when a folder is empty, and without relying on missing properties like child.trackBounds.
-  // Tracks/polygons store literals in trackBoundsNE/SW; points store literal in Point.
-
+  // Compute bounds for every node without creating "world-sized" bounds when a folder is empty
+  // and without relying on missing properties like child.trackBounds (we store trackBoundsNE/SW).
   function toLiteral(ll){
     if (!ll) return null;
-    // ll can be a google.maps.LatLng or a literal {lat,lng}
+    // ll can be a google.maps.LatLng or a literal
     if (typeof ll.lat === "function") return { lat: ll.lat(), lng: ll.lng() };
     if (typeof ll.lat === "number" && typeof ll.lng === "number") return { lat: ll.lat, lng: ll.lng };
     return null;
@@ -1908,12 +1906,19 @@ function calculateFolderBounds(treeData){
 
     if (!node || !node.kind) return null;
 
-    if (node.kind === "point"){
+    if (node.kind === "point") {
       extendLiteral(node.Point);
-    } else if (node.kind === "polyline" || node.kind === "polygon"){
+      return b;
+    }
+
+    if ((node.kind === "polyline" || node.kind === "polygon")) {
+      // Tracks/polygons store literals
       extendLiteral(node.trackBoundsNE);
       extendLiteral(node.trackBoundsSW);
-    } else if (node.kind === "container"){
+      return b;
+    }
+
+    if (node.kind === "container") {
       const kids = Array.isArray(node.children) ? node.children : [];
       kids.forEach((ch) => {
         const cb = boundsFromNode(ch);
@@ -1921,23 +1926,24 @@ function calculateFolderBounds(treeData){
         ensure();
         b.union(cb);
       });
-    }
-
-    // IMPORTANT: store bounds on every node, not just roots
-    node.folderBounds = b || null;
-    if (b){
-      node.folderBoundsSW = toLiteral(b.getSouthWest());
-      node.folderBoundsNE = toLiteral(b.getNorthEast());
-    } else {
-      node.folderBoundsSW = null;
-      node.folderBoundsNE = null;
+      return b;
     }
 
     return b;
   }
 
   const roots = Array.isArray(treeData) ? treeData : [treeData];
-  roots.forEach((n) => boundsFromNode(n));
+  roots.forEach((n) => {
+    const b = boundsFromNode(n);
+    n.folderBounds = b || null;
+    if (b) {
+      n.folderBoundsSW = toLiteral(b.getSouthWest());
+      n.folderBoundsNE = toLiteral(b.getNorthEast());
+    } else {
+      n.folderBoundsSW = null;
+      n.folderBoundsNE = null;
+    }
+  });
 }
 
 function addMapControl(controlDiv, map, mapDoWhat) {
