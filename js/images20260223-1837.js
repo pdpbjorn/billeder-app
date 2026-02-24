@@ -1531,42 +1531,9 @@ $('#treebox').on('hover_node.jstree', function (e, data) {
 	});
 
 	//if you click a node, nothing happens...
-	$('#treebox').on('select_node.jstree', function (e, data) {
-  const node = data?.node;
-  if (!node?.original) return;
-
-  // Only point nodes have marker popups
-  if (node.original.kind !== "point") return;
-
-  const overlayTag = addedOverlays.find(o => o.id === node.original.id);
-  if (!overlayTag?.overlay) return;
-
-  const marker = overlayTag.overlay;
-
-  closeAllInfoWindows();
-  if (!tripInfoWindow) tripInfoWindow = new google.maps.InfoWindow();
-
-  // Prefer the node's visible label for the popup
-  tripInfoWindow.setContent(node.text || node.original.text || "");
-
-  try {
-    // AdvancedMarkerElement: anchor to marker
-    tripInfoWindow.open({ map, anchor: marker });
-  } catch (_) {
-    // Fallback: position-based open
-    const pos = markerLatLng(marker) || node.original.Point;
-    if (pos) tripInfoWindow.setPosition(pos);
-    tripInfoWindow.open({ map });
-  }
-
-  // Gentle pan so the popup is comfortably visible
-  const pos = markerLatLng(marker) || node.original.Point;
-  if (pos) {
-    map.panTo(pos);
-    // Nudge upward a bit after pan starts (keeps popup away from edges / finger)
-    setTimeout(() => { try { map.panBy(0, -120); } catch (_) {} }, 150);
-  }
-});
+	$('#treebox').on('select_node.jstree',function(e, data){
+ 	//console.log("tree:" + data)
+	})
 
 
 }

@@ -1532,61 +1532,33 @@ $('#treebox').on('hover_node.jstree', function (e, data) {
 
 	//if you click a node, nothing happens...
 	$('#treebox').on('select_node.jstree', function (e, data) {
-  const node = data?.node;
-  if (!node?.original) return;
+  const orig = data?.node?.original;
+  if (!orig) return;
 
-  // Only point nodes have marker popups
-  if (node.original.kind !== "point") return;
+  // Only point nodes have a marker + InfoWindow
+  if (orig.kind !== "point") return;
 
-  const overlayTag = addedOverlays.find(o => o.id === node.original.id);
-  if (!overlayTag?.overlay) return;
+  const overlayTag = addedOverlays.find(o => o.id === orig.id);
+  if (!overlayTag || !overlayTag.overlay) return;
 
   const marker = overlayTag.overlay;
+  const pos = marker.position || (marker.getPosition ? marker.getPosition() : null);
+  if (!pos) return;
 
+  // Close any previously opened flyouts, then open this one
   closeAllInfoWindows();
   if (!tripInfoWindow) tripInfoWindow = new google.maps.InfoWindow();
+  tripInfoWindow.setContent(orig.text || "");
+  tripInfoWindow.setPosition(pos);
+  tripInfoWindow.open({ map });
 
-  // Prefer the node's visible label for the popup
-  tripInfoWindow.setContent(node.text || node.original.text || "");
+  // Gentle pan so the popup/marker isn't under the finger or too close to the edge
+  map.panTo(pos);
+  setTimeout(() => {
+    try { map.panBy(0, -80); } catch (_) {}
+  }, 120);
+})
 
-  try {
-    // AdvancedMarkerElement: anchor to marker
-    tripInfoWindow.open({ map, anchor: marker });
-  } catch (_) {
-    // Fallback: position-based open
-    const pos = markerLatLng(marker) || node.original.Point;
-    if (pos) tripInfoWindow.setPosition(pos);
-    tripInfoWindow.open({ map });
-  }
-
-  // Gentle pan so the popup is comfortably visible
-  const pos = markerLatLng(marker) || node.original.Point;
-  if (pos) {
-    map.panTo(pos);
-    // Nudge upward a bit after pan starts (keeps popup away from edges / finger)
-    setTimeout(() => { try { map.panBy(0, -120); } catch (_) {} }, 150);
-  }
-});
-
-
-}
-//Handle a placemark (place) in context of a treemap node (mother)
-function doPlacemark(place, mother) {
-  mapOverlayId = mapOverlayId + 1; //increment the number of overlays (features) added to the map
-
-
-  // ---------- POINT ----------
-if (place.Point) {
-  const position = LatLnger(place.Point.coordinates["#text"]); // {lat,lng}
-
-  // Resolve icon style (Style or StyleMap->normal->Style)
-  let styleObj = null;
-
-  const styleUrlText = place?.styleUrl?.["#text"];
-  const styleId = styleUrlText ? styleUrlText.substring(1) : null;
-
-  if (styleId && Array.isArray(objX?.kml?.Document?.Style)) {
-    const st = objX.kml.Document.Style.find(o => o?.id === styleId);
     if (st?.IconStyle) styleObj = st.IconStyle;
   }
 
