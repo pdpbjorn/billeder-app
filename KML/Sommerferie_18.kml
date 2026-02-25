@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>Sommerferie_18.kml</name>
+	<Style id="sn_lodging51">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/lodging.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl014">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/lodging.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_lodging41">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/lodging.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin260">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/lodging.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin031">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin260</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl014</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_lodging32">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_lodging51</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_lodging41</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Folder>
+		<name>Sommerferie &apos;18</name>
+		<open>1</open>
+		<Placemark>
+			<name>8-9/7</name>
+			<description>MÖRTEKÄRR 2, Västervik NO, Kalmar län 590 95, Sweden</description>
+			<LookAt>
+				<longitude>16.68688859854247</longitude>
+				<latitude>57.93299354280686</latitude>
+				<altitude>0</altitude>
+				<heading>0.001008882621100747</heading>
+				<tilt>9.342090614902451</tilt>
+				<range>1208.878814968735</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_lodging32</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>16.68559557842875,57.93229380157432,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>9 - 11/7 2Home Hotel Solna</name>
+			<LookAt>
+				<gx:TimeStamp><when>2010-07-10T13:44:19Z</when>
+</gx:TimeStamp>
+				<longitude>17.97925359994456</longitude>
+				<latitude>59.36346049937149</latitude>
+				<altitude>30.82888116269423</altitude>
+				<heading>-4.775920909685614e-011</heading>
+				<tilt>0</tilt>
+				<range>969.1711174714682</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#m_ylw-pushpin031</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>17.97925359994456,59.3634604993715,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>12-13/7</name>
+			<description>24 Gräsviksgatan D 85, Helsinki, 00180, Finland</description>
+			<LookAt>
+				<longitude>24.92521882283865</longitude>
+				<latitude>60.16414918176238</latitude>
+				<altitude>6.926991743176083</altitude>
+				<heading>-4.337357372220717</heading>
+				<tilt>48.87312774657561</tilt>
+				<range>187.4221848606085</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_lodging32</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>24.92468839333579,60.16403341304514,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>13-16/7 Apple apartments</name>
+			<LookAt>
+				<gx:TimeStamp><when>2021-08-04</when>
+</gx:TimeStamp>
+				<gx:ViewerOptions>
+					<gx:option name="historicalimagery"></gx:option>
+					<gx:option enabled="0" name="sunlight"></gx:option>
+					<gx:option enabled="0" name="streetview"></gx:option>
+				</gx:ViewerOptions>
+				<longitude>24.74665789814079</longitude>
+				<latitude>59.43021777061732</latitude>
+				<altitude>0</altitude>
+				<heading>0.0007530275840567963</heading>
+				<tilt>30.00157451282733</tilt>
+				<range>350.5461507873112</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#m_ylw-pushpin031</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>24.7455111011295,59.42993569680473,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>19 -21/7</name>
+			<description>Vokiečių gatvė 10 20, Vilnius, Vilniaus apskritis 01130, Lithuania</description>
+			<LookAt>
+				<longitude>25.28456401429828</longitude>
+				<latitude>54.67816125095957</latitude>
+				<altitude>0</altitude>
+				<heading>0.0001644313823938921</heading>
+				<tilt>19.48786380678515</tilt>
+				<range>480.5669261418211</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_lodging32</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>25.28456401429828,54.67816125095957,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>21 22/7</name>
+			<description>Agroturystyka Chmielewo I - Rigtig svær at finde - AirBNB pegede på nærliggende landsby</description>
+			<LookAt>
+				<longitude>21.53372533063787</longitude>
+				<latitude>53.66927830156647</latitude>
+				<altitude>0</altitude>
+				<heading>0.008246733835539281</heading>
+				<tilt>24.20989307112007</tilt>
+				<range>394.3378799704715</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_lodging32</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>21.53372533063787,53.66927830156647,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>EdMar 28/7 - 29/7</name>
+			<LookAt>
+				<longitude>19.02220652410074</longitude>
+				<latitude>54.03903738048463</latitude>
+				<altitude>0</altitude>
+				<heading>-0.01154317328215776</heading>
+				<tilt>25.24618331650568</tilt>
+				<range>348.8599341959077</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#m_ylw-pushpin031</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>19.02220652410074,54.03903738048463,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>29 - 30/7  Hotel - Restauracja &quot; Spichlerz&quot;</name>
+			<LookAt>
+				<longitude>15.03920531005066</longitude>
+				<latitude>53.33758231944629</latitude>
+				<altitude>0</altitude>
+				<heading>0.001364479582443123</heading>
+				<tilt>15.89182424374456</tilt>
+				<range>609.1674487478953</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#m_ylw-pushpin031</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>15.03753653280391,53.33782155391832,0</coordinates>
+			</Point>
+		</Placemark>
+	</Folder>
+</Document>
+</kml>
