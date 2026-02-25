@@ -2,6 +2,24 @@
 	//var theDataset; //Global variable storing the data loaded from geojson
 	//var theAreas; //a set of geograpical areas (countries) for cookie cutting - loaded from JSON file
 	//var theTrips; //a list with descriptions of the trips available as KML - loaded from JSON file
+/* Navigation:
+Assure that pages are stacked and that destroying page displays underlaying
+Liste:
+drop->thumbs->img->map
+  thumbclick on map: destroy map, update img
+  listclick on map: destroy map, destroy img, update thumbpage with new dataset
+
+  always (also on geclick) remove .imagepage - if i need it again i can
+  window.location.href = "#page-" + imgPage(currentImageIndex) 
+Kort :
+drop->map->img
+  geoclick on img: destroy img, pan map
+  listclick on map: set List, destroy mappage, call thumbpage with new dataset
+
+
+
+*/
+
 	let map; //global variable storing the Google Maps map
 	const MAP_ID = "c4befeb907ef4d6a4789e14c";
 	var slideShowOn; //boolean variable which know if the image slideshow is running
@@ -1157,6 +1175,7 @@ if ($mainImg[0].complete) {
 							.css({"position":"absolute","top":"2%","right":"12%"})
 							.on("click", function( event ) {
 								loc = showOnMap({"type":"FeatureCollection","features":[currentDataset.features[imageIndex]]})
+                $(".imagepage").remove();
 								window.location.href = "#" + loc
 							 })
 						:
