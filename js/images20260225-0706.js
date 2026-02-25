@@ -1485,23 +1485,11 @@ function AddTreeBox(KMLfile){
 			treeData.push({'text':rootFolder.name['#text'],'kind':"container",'state': {	'opened' : true,'selected' : true},'children':[],'depth':1})
 			var treeDataChildren = treeData[0].children
 			//each day
-			//each day (Folder under root) OR root-level placemarks
-			if (rootFolder.Folder){
-				if (Array.isArray(rootFolder.Folder)){
-					//send the folder to the handling function with context given as the children of the root, folder depth = 2
-					$.each(rootFolder.Folder,function(i,fol){ if(fol){ doFolder(fol,treeDataChildren,2); } })
-				}
-				else{ if(rootFolder.Folder){ doFolder(rootFolder.Folder,treeDataChildren,2); } }
+			if (Array.isArray(rootFolder.Folder)){
+				//send the folder to the handling function with context given as the children of the root, folder depth = 2
+				$.each(rootFolder.Folder,function(i,fol){doFolder(fol,treeDataChildren,2)})
 			}
-
-			//Some KML files place Placemarks directly under the root Folder (no subfolders).
-			if (rootFolder.Placemark){
-				if (Array.isArray(rootFolder.Placemark)){
-					$.each(rootFolder.Placemark, function(i,place){ if(place){ doPlacemark(place, treeData[0]); } });
-				} else {
-					doPlacemark(rootFolder.Placemark, treeData[0]);
-				}
-			}
+			else{ doFolder(rootFolder.Folder,treeDataChildren,2)}
 		})
 		//wait a little and call the folder boounds function on the tree data
 		setTimeout(function(){
