@@ -1271,111 +1271,12 @@ function selectTreeNode(nodeId) {
 
 function clearPhotoMarkers() {
   if (photoCluster) {
-    try { photoCluster.clearMarkers(); } catch (_) {}
-    try { photoCluster.setMap(null); } catch (_) {}
+     photoCluster.clearMarkers();
+    photoCluster.setMap(null);
     photoCluster = null;
   }
-  photoMarkers.forEach((m) => { try { m.map = null; } catch (_) {} });
+  photoMarkers.forEach(m => { m.map = null; });
   photoMarkers = [];
-}
-
-// Add photo markers onto the CURRENT map (used by trip 'Vis billeder for denne tur')
-// Keeps the trip tree + overlays intact, but uses the same AdvancedMarker + InfoWindow behavior as showOnMap().
-async function showTripPhotosOnMap(mapFeatureCollection, opts = {}) {
-  await markerReady;
-  if (!map) return;
-
-  if (!photoInfoWindow) photoInfoWindow = new google.maps.InfoWindow();
-
-  closeAllInfoWindows();
-  clearPhotoMarkers();
-
-  const fit = (opts.fit !== false);
-  const bounds = new google.maps.LatLngBounds();
-
-  const feats = (mapFeatureCollection && Array.isArray(mapFeatureCollection.features))
-    ? mapFeatureCollection.features
-    : [];
-
-  feats.forEach((f) => {
-    if (!f || !f.geometry || f.geometry.type !== "Point") return;
-
-    const lng = f.geometry.coordinates?.[0];
-    const lat = f.geometry.coordinates?.[1];
-    if (typeof lat !== "number" || typeof lng !== "number") return;
-
-    const position = { lat, lng };
-
-    const marker = createMarker({
-      map,
-      position,
-      title: String(f.properties?.index ?? ""),
-      icon: null,
-      draggable: false,
-      cssClass: "photo",
-      animateDrop: true,
-    });
-
-    marker.__feature = f;
-
-    marker.addListener("gmp-click", () => {
-      closeAllInfoWindows();
-
-      const img = f?.properties?.image;
-      const featureIndex = f?.properties?.index;
-      if (!img) return;
-
-      const thumbUrl =
-        "Foto/" +
-        img.substring(0, img.lastIndexOf("/")) +
-        "/.thumb/thumb-" +
-        img.substring(img.lastIndexOf("/") + 1);
-
-      const div = document.createElement("div");
-      const t = document.createElement("img");
-      t.src = thumbUrl;
-      t.style.height = "150px";
-      t.style.cursor = "pointer";
-      t.onclick = function () {
-        imgPage(featureIndex);
-      };
-      div.appendChild(t);
-
-      photoInfoWindow.setContent(div);
-      photoInfoWindow.setPosition(position);
-      photoInfoWindow.setOptions({ pixelOffset: new google.maps.Size(0, -20) });
-      photoInfoWindow.open(map);
-    });
-
-    photoMarkers.push(marker);
-    bounds.extend(position);
-  });
-
-  if (fit && photoMarkers.length) {
-    map.fitBounds(bounds, 10);
-  }
-
-  if (window.markerClusterer && photoMarkers.length > 1) {
-    photoCluster = new markerClusterer.MarkerClusterer({
-      map,
-      markers: photoMarkers,
-      onClusterClick: (e, cluster, map0) => {
-        if (cluster.bounds) {
-          map0.fitBounds(cluster.bounds);
-          return;
-        }
-        const b = new google.maps.LatLngBounds();
-        const ms = cluster.markers || cluster.getMarkers?.() || [];
-        ms.forEach((m) => {
-          const p = m.position;
-          if (!p) return;
-          const ll = (typeof p.lat === "function") ? p : new google.maps.LatLng(p.lat, p.lng);
-          b.extend(ll);
-        });
-        map0.fitBounds(b);
-      },
-    });
-  }
 }
 
 
@@ -2157,7 +2058,7 @@ function addMapControl(controlDiv, map, mapDoWhat) {
     case "trippics":
       controlText.innerHTML = "Vis billeder for denne tur";
       controlUI.classList.add("trippix");
-      controlUI.addEventListener("click", async () => {
+      controlUI.addEventListener("click", () => {
         const startDate = new Date(tripPixDates.startDate);
         const endDate = new Date(tripPixDates.endDate);
 
@@ -2171,16 +2072,8 @@ function addMapControl(controlDiv, map, mapDoWhat) {
           return d >= startDate && d <= endDate;
         });
 
-        // Only geotagged photos can be shown as markers
-        const fc = getGeotaggedFeatures({ type: "FeatureCollection", features: filtered });
-
-        if (!fc.features || !fc.features.length) {
-          alert("Ingen geotaggede billeder i denne tur.");
-          return;
-        }
-
-        // Add/replace photo markers on the existing trip map (AdvancedMarkers + clickable thumb InfoWindow)
-        await showTripPhotosOnMap(fc, { fit: true });
+        // you probably still want geotag-only on map:
+        map.data.addGeoJson(getGeotaggedFeatures({ type: "FeatureCollection", features: filtered }));
       });
       break;
 
