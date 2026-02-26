@@ -2121,7 +2121,7 @@ function addMapControl(controlDiv, map, mapDoWhat) {
       // “Load all images within map bounds”
       // Now: just filter *currentDataset* by bounds (and GPS presence) and add those points to map.data
       controlText.innerHTML = "Se alle billeder fra dette område";
-      controlUI.addEventListener("click", () => {
+      controlUI.addEventListener("click", async () => {
         const b = currentMapBounds();
         if (!b) return;
 
@@ -2135,7 +2135,18 @@ function addMapControl(controlDiv, map, mapDoWhat) {
           return b.contains(new google.maps.LatLng(lat, lon));
         });
 
-        map.data.addGeoJson({ type: "FeatureCollection", features: featuresInBounds });
+        // Only geotagged photos can be shown as markers
+        const fc = getGeotaggedFeatures({ type: "FeatureCollection", features: featuresInBounds });
+
+        if (!fc.features || !fc.features.length) {
+          alert("Ingen geotaggede billeder i denne tur.");
+          return;
+        }
+
+        // Add/replace photo markers on the existing trip map (AdvancedMarkers + clickable thumb InfoWindow)
+        await showTripPhotosOnMap(fc, { fit: true });
+
+        //map.data.addGeoJson({ type: "FeatureCollection", features: featuresInBounds });
       });
       break;
 
