@@ -1449,6 +1449,7 @@ async function showOnMap(mapFeatureCollection) {
       t.style.height = "150px";
       t.style.cursor = "pointer";
       t.onclick = function () {
+        $(".mappage").remove();
         imgPage(featureIndex);
       };
       div.appendChild(t);
