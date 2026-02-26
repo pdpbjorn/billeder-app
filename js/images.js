@@ -1201,9 +1201,11 @@ if ($mainImg[0].complete) {
 							.text("No text")
 							.css({"position":"absolute","top":"2%","right":"12%"})
 							.on("click", function( event ) {
-								loc = showOnMap({"type":"FeatureCollection","features":[currentDataset.features[imageIndex]]})
-                $(".imagepage").remove();
-								window.location.href = "#" + loc
+							  $(".imagepage").remove();
+                 if (!$(".mappage").length) {
+               	    loc = showOnMap({"type":"FeatureCollection","features":[currentDataset.features[imageIndex]]})
+                    window.location.href = "#" + loc
+                 }
 							 })
 						:
 						"")
