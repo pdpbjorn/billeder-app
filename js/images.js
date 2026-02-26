@@ -20,6 +20,30 @@ drop->map->img
   xclick on imgpage -> map
 
 
+  TRIPMARKERS
+    UseOnMap(KML)
+      doFolder
+        doPlacemark
+          *createMarker
+
+
+  GEOCLICK on imgPage
+    ShowOnMap (features)
+      *createMarker
+        PhotoInfoWindow
+          t.onclick
+            map.remove()
+            navigate? -> imgPage        
+
+  Turbilleder          
+    addMapControl:case:trippics
+      showTripPhotosOnMap
+        *createMarker
+          PhotoInfoWindow
+          t.onclick = function () {
+            $(".mappage").remove();
+            imgPage(featureIndex);
+
 
 */
 
@@ -1359,7 +1383,8 @@ async function showTripPhotosOnMap(mapFeatureCollection, opts = {}) {
       t.style.height = "150px";
       t.style.cursor = "pointer";
       t.onclick = function () {
-        $(".mappage").remove();
+        //do not remove map here as we want the collection on map to remain
+    //    $(".mappage").remove();
         imgPage(featureIndex);
       };
       div.appendChild(t);
@@ -1963,35 +1988,7 @@ map = new google.maps.Map(document.getElementById('mapCanvas'), {
 		content: "hello"
 	  });
 	
-	  /*
-	map.data.addListener('click', function(event) { //listen for click on marker
-		//Make thumbnail
-		var img = event.feature.getProperty('image');
-		
-		let thumbUrl = img.substring(0,img.lastIndexOf('/')) + "/.thumb/" + img.substring(img.lastIndexOf('/') +1) + ".jpg"
-		
-		//let imageUrl = event.feature.getProperty('image');
-		let featureIndex = event.feature.getProperty('index');
-		var tommel = document.createElement('img')
-		tommel.src =  thumbUrl 
-		tommel.style.height = '150px'
-		tommel.onclick = function(){ //add click handler to create and navigate to the imagepage
-			if (document.getElementsByClassName("trippix").length === 0) //if the trip interface is open (a button has had the class 'trippix' added), then remove it
-				{
-					//$(".mappage").remove();
-				}
-			//	window.location.href = "#page-" + imgPage(event.feature.i.index) } 
-				window.location.href = "#page-" + imgPage(featureIndex) } 
-			
-		infowindow.setContent(tommel); // show the html variable in the infowindow
-		infowindow.setPosition(event.latLng); // place the infowindow next to the clicked marker
-		infowindow.setOptions({
-			pixelOffset: new google.maps.Size(0, -20)
-		}); // move the infowindow up slightly to the top of the marker icon
-		infowindow.open(map);
-		})
 
-		*/
 		//create the map control buttons
 
 		const closeMapDiv = document.createElement("div"); //the close map button
