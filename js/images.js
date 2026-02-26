@@ -1165,9 +1165,12 @@ if ($mainImg[0].complete) {
 					.append($("<button/>",{"data-role":"button", "data-enhanced":"true", "class":"ui-icon ui-button ui-button-icon-only ui-widget ui-icon-delete ui-corner-all"})
 						.text("No text")
 						.css({"position":"absolute","top":"2%","right":"2%"})
-						.on( "click", function(){$(".imagepage").remove();
+						.on( "click", function(){
+              $(".imagepage").remove();
 							//if the trip interface is open, we should not close it when closing imgpage
-							if (document.getElementsByClassName("trippix").length > 0)
+							//if (document.getElementsByClassName("trippix").length > 0)
+              //if more than one photo is shown on map
+              if(photoMarkers.length > 1)
 							{window.location.href = "#mappage"}
 							else
 							{window.location.href = "#initial"
