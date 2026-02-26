@@ -6,7 +6,9 @@
 Assure that pages are stacked and that destroying page displays underlaying
 Liste:
 drop->thumbs->img->map
-  thumbclick on map: destroy map, update img
+  Xclick on imgpage -> destroy img, ->thumbs
+  geoclick on imgpage -> destroy img - > mappage
+  thumbclick on map: destroy map, reload img
   listclick on map: destroy map, destroy img, update thumbpage with new dataset
 
   always (also on geclick) remove .imagepage - if i need it again i can
@@ -15,6 +17,7 @@ Kort :
 drop->map->img
   geoclick on img: destroy img, pan map
   listclick on map: set List, destroy mappage, call thumbpage with new dataset
+  xclick on imgpage -> map
 
 
 
@@ -1134,7 +1137,7 @@ if ($mainImg[0].complete) {
 					.append($mainImg)
 					
 					
-					//button to cloase image
+					//button to close image
 					.append($("<button/>",{"data-role":"button", "data-enhanced":"true", "class":"ui-icon ui-button ui-button-icon-only ui-widget ui-icon-delete ui-corner-all"})
 						.text("No text")
 						.css({"position":"absolute","top":"2%","right":"2%"})
@@ -1356,6 +1359,7 @@ async function showTripPhotosOnMap(mapFeatureCollection, opts = {}) {
       t.style.height = "150px";
       t.style.cursor = "pointer";
       t.onclick = function () {
+        $(".mappage").remove();
         imgPage(featureIndex);
       };
       div.appendChild(t);
