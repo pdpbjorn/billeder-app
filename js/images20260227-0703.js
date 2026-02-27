@@ -2077,152 +2077,6 @@ function calculateFolderBounds(treeData){
   roots.forEach((n) => boundsFromNode(n));
 }
 
-
-// ---- Areas index (areas.geo.json) for loading images across datasets by map bounds ----
-let areasIndexFc = null;
-let areasIndexPromise = null;
-const areaDatasetCache = new Map(); // areaId -> GeoJSON FeatureCollection
-
-function _walkCoords(coords, cb) {
-  if (!coords) return;
-  if (typeof coords[0] === "number" && typeof coords[1] === "number") {
-    cb(coords); // [lng, lat]
-    return;
-  }
-  if (Array.isArray(coords)) coords.forEach((c) => _walkCoords(c, cb));
-}
-
-function _featureBbox(feature) {
-  try {
-    const g = feature?.geometry;
-    if (!g) return null;
-
-    let minLng = Infinity, minLat = Infinity, maxLng = -Infinity, maxLat = -Infinity;
-
-    _walkCoords(g.coordinates, ([lng, lat]) => {
-      if (typeof lng !== "number" || typeof lat !== "number") return;
-      if (lng < minLng) minLng = lng;
-      if (lng > maxLng) maxLng = lng;
-      if (lat < minLat) minLat = lat;
-      if (lat > maxLat) maxLat = lat;
-    });
-
-    if (!isFinite(minLng) || !isFinite(minLat) || !isFinite(maxLng) || !isFinite(maxLat)) return null;
-    return { minLng, minLat, maxLng, maxLat };
-  } catch (_) {
-    return null;
-  }
-}
-
-function _boundsToBbox(bounds) {
-  if (!bounds) return null;
-  const ne = bounds.getNorthEast?.();
-  const sw = bounds.getSouthWest?.();
-  if (!ne || !sw) return null;
-  return {
-    minLng: sw.lng(),
-    minLat: sw.lat(),
-    maxLng: ne.lng(),
-    maxLat: ne.lat(),
-  };
-}
-
-function _bboxIntersects(a, b) {
-  if (!a || !b) return false;
-  return !(a.maxLng < b.minLng || a.minLng > b.maxLng || a.maxLat < b.minLat || a.minLat > b.maxLat);
-}
-
-function ensureAreasIndex() {
-  if (areasIndexFc) return Promise.resolve(areasIndexFc);
-  if (areasIndexPromise) return areasIndexPromise;
-
-  // areas.geo.json lives at site root (same level as index.htm)
-  areasIndexPromise = $.getJSON("areas.geo.json")
-    .then((fc) => {
-      areasIndexFc = fc || { type: "FeatureCollection", features: [] };
-      (areasIndexFc.features || []).forEach((f) => {
-        if (!f.__bbox) f.__bbox = _featureBbox(f);
-      });
-      return areasIndexFc;
-    })
-    .catch((e) => {
-      console.warn("Could not load areas.geo.json (falling back to currentDataset only).", e);
-      areasIndexFc = { type: "FeatureCollection", features: [] };
-      return areasIndexFc;
-    });
-
-  return areasIndexPromise;
-}
-
-function loadAreaDataset(areaId) {
-  if (!areaId) return Promise.resolve(null);
-  if (areaDatasetCache.has(areaId)) return Promise.resolve(areaDatasetCache.get(areaId));
-
-  const url = `data/sted/${areaId}.geo.json`;
-
-  return $.getJSON(url)
-    .then((fc) => {
-      areaDatasetCache.set(areaId, fc);
-      return fc;
-    })
-    .catch((e) => {
-      console.warn("Could not load area dataset:", url, e);
-      areaDatasetCache.set(areaId, null);
-      return null;
-    });
-}
-
-// Returns a GeoJSON FeatureCollection with ALL images (from relevant area datasets) inside map bounds.
-// If areas.geo.json isn't available or no areas intersect, returns null so caller can fall back.
-async function loadImagesInBoundsFromAreas(bounds) {
-  const bb = _boundsToBbox(bounds);
-  if (!bb) return null;
-
-  const areas = await ensureAreasIndex();
-  const hits = [];
-
-  (areas?.features || []).forEach((f) => {
-    const areaId = String(f?.id ?? f?.properties?.id ?? "").trim();
-    if (!areaId) return;
-
-    const fb = f.__bbox || _featureBbox(f);
-    if (!fb) return;
-
-    if (_bboxIntersects(bb, fb)) hits.push(areaId);
-  });
-
-  const uniqueIds = Array.from(new Set(hits));
-  if (!uniqueIds.length) return null;
-
-  const datasets = await Promise.all(uniqueIds.map(loadAreaDataset));
-
-  const out = [];
-  datasets.forEach((ds) => {
-    (ds?.features || []).forEach((f) => {
-      const lat = f?.geometry?.coordinates?.[1];
-      const lng = f?.geometry?.coordinates?.[0];
-      if (typeof lat !== "number" || typeof lng !== "number") return;
-      if (bounds.contains(new google.maps.LatLng(lat, lng))) out.push(f);
-    });
-  });
-
-  // Deduplicate (areas can overlap/nest). Prefer stable key: image path, else index, else coord string.
-  const seen = new Set();
-  const dedup = [];
-  out.forEach((f) => {
-    const key =
-      f?.properties?.image ??
-      f?.properties?.index ??
-      JSON.stringify(f?.geometry?.coordinates ?? []);
-    if (seen.has(key)) return;
-    seen.add(key);
-    dedup.push(f);
-  });
-
-  return { type: "FeatureCollection", features: dedup };
-}
-
-
 function addMapControl(controlDiv, map, mapDoWhat) {
   const controlUI = document.createElement("div");
   controlUI.style.backgroundColor = "#fff";
@@ -2268,41 +2122,34 @@ function addMapControl(controlDiv, map, mapDoWhat) {
 
     case "load":
       // “Load all images within map bounds”
-      // 1) Try to find intersecting area datasets via areas.geo.json (Sted datasets)
-      // 2) Load those datasets + filter points inside bounds
-      // 3) Deduplicate (areas can overlap) and show with AdvancedMarkers
+      // Now: just filter *currentDataset* by bounds (and GPS presence) and add those points to map.data
       controlText.innerHTML = "Se alle billeder fra dette område";
       controlUI.addEventListener("click", async () => {
         const b = currentMapBounds();
         if (!b) return;
 
-        let fc = await loadImagesInBoundsFromAreas(b);
+        const src = currentDataset;
+        if (!src || !src.features) return;
 
-        // Fallback: just use currentDataset if areas-index isn't available or didn't hit anything
-        if (!fc) {
-          const src = currentDataset;
-          if (!src || !src.features) return;
-
-          const featuresInBounds = src.features.filter(f => {
-            const lat = f?.geometry?.coordinates?.[1];
-            const lon = f?.geometry?.coordinates?.[0];
-            if (typeof lat !== "number" || typeof lon !== "number") return false;
-            return b.contains(new google.maps.LatLng(lat, lon));
-          });
-
-          fc = { type: "FeatureCollection", features: featuresInBounds };
-        }
+        const featuresInBounds = src.features.filter(f => {
+          const lat = f?.geometry?.coordinates?.[1];
+          const lon = f?.geometry?.coordinates?.[0];
+          if (typeof lat !== "number" || typeof lon !== "number") return false;
+          return b.contains(new google.maps.LatLng(lat, lon));
+        });
 
         // Only geotagged photos can be shown as markers
-        const geo = getGeotaggedFeatures(fc);
+        const fc = getGeotaggedFeatures({ type: "FeatureCollection", features: featuresInBounds });
 
-        if (!geo.features || !geo.features.length) {
-          alert("Ingen geotaggede billeder i dette område.");
+        if (!fc.features || !fc.features.length) {
+          alert("Ingen geotaggede billeder i denne tur.");
           return;
         }
 
-        // Add/replace photo markers on the current map (AdvancedMarkers + clickable thumb InfoWindow)
-        await showTripPhotosOnMap(geo, { fit: true });
+        // Add/replace photo markers on the existing trip map (AdvancedMarkers + clickable thumb InfoWindow)
+        await showTripPhotosOnMap(fc, { fit: true });
+
+        //map.data.addGeoJson({ type: "FeatureCollection", features: featuresInBounds });
       });
       break;
 
