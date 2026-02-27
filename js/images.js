@@ -2308,41 +2308,49 @@ function addMapControl(controlDiv, map, mapDoWhat) {
 
     case "thumbs":
       // “Show the markers currently visible on the map in the thumb-page”
-      controlText.innerHTML = "Vis billedliste for disse markører";
-      controlUI.addEventListener("click", () => {
-        const b = currentMapBounds();
-        if (!b) return;
+    
 
-        const out = { type: "FeatureCollection", features: [] };
+  controlUI.title = "Vis thumbnails for synlige markører";
+  controlUI.innerHTML = "Vis thumbnails";
 
-        // map.data.forEach is sync, but feature.toGeoJson is async callback-based
-        let pending = 0;
+  controlUI.addEventListener("click", function () {
 
-        map.data.forEach(feature => {
-          const geom = feature.getGeometry();
-          if (!boundsContainsPoint(b, geom)) return;
+    if (!map || !photoMarkers || !photoMarkers.length) return;
 
-          pending++;
-          feature.toGeoJson(gj => {
-            // gj is a proper GeoJSON Feature
-            out.features.push(gj);
-            pending--;
-            if (pending === 0) {
-              $(".mappage").remove();
-              window.location.href = "#initial";
-              buildTiles(out);
-            }
-          });
-        });
+    const bounds = map.getBounds();
+    if (!bounds) return;
 
-        // If nothing matched, still exit cleanly
-        if (pending === 0) {
-          $(".mappage").remove();
-          window.location.href = "#initial";
-          buildTiles(out);
-        }
-      });
-      break;
+    const visibleFeatures = [];
+
+    photoMarkers.forEach(m => {
+      if (!m.__feature) return;
+
+      const pos = markerLatLng(m);
+      if (!pos) return;
+
+      if (bounds.contains(new google.maps.LatLng(pos.lat, pos.lng))) {
+        visibleFeatures.push(m.__feature);
+      }
+    });
+
+    if (!visibleFeatures.length) {
+      alert("Ingen billeder i det viste kortområde.");
+      return;
+    }
+
+    $(".mappage").remove();
+
+    setCurrentDataset({
+      type: "FeatureCollection",
+      features: visibleFeatures
+    });
+
+    buildTiles(currentDataset);
+
+    window.location.href = "#initial";
+  });
+
+  break;
 
     case "trippics":
       controlText.innerHTML = "Vis billeder for denne tur";
