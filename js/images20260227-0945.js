@@ -658,6 +658,60 @@ function makeMonthLinksFromIndex(tidIndex){
 
 
 //fill months dropdown - enable action on select to load thumbs from the month
+/*
+function makeMonthLinks(theDataset){
+	
+	
+
+
+	
+
+
+
+		//Make new month menu
+
+		$('#dropMonths').append($("<li/>").append($("<a/>",{onclick:"injectNoDate()",html:"udenfor tiden" ,href:"#"})))
+
+		
+		$.each( _.groupBy(currentDataset.features //for each decade group of images
+		,
+				function(feature){if(feature.properties.timestamp){return feature.properties.timestamp.substring(0,3)}}
+				)
+		,function(decadeLiteral,decade){
+			if (decadeLiteral != "undefined"){
+				var decadeGroup = $("<li/>",{"class":"dropdown"})
+					.append($("<a/>",{html:decadeLiteral + "_",href:"#"})
+						)
+					.appendTo("#dropMonths") //add a decade grouper
+					var yearList = ($("<ul/>")).appendTo(decadeGroup) 
+				
+				$.each( _.groupBy(decade //for each year group of images
+		,
+					function(feature){if(feature.properties.timestamp){return feature.properties.timestamp.substring(0,4)}}
+				)
+		,function(yearLiteral,annus){
+			if (yearLiteral != "undefined"){
+				var yearGroup = $("<li/>",{"class":"dropdown"})
+					.append($("<a/>",{html:yearLiteral,href:"#"})
+						)
+					.appendTo(yearList) //add a year grouper
+				var yearMonthList = ($("<ul/>")).appendTo(yearGroup) 
+				_.each(_.groupBy(annus,function(feature){
+					if(feature.properties.timestamp){	return parseInt(feature.properties.timestamp.substring(5,7),10)}}),	
+					function(mensis,monthSeqIndex){
+						$("<li/>")
+						.append($("<a/>",{href:"#",html:maaneder[parseInt(monthSeqIndex-1,10)].name,onclick:"injectMonth('" + yearLiteral + "-" + maaneder[parseInt(monthSeqIndex-1,10)].number + "')"}))
+						.appendTo(yearMonthList); //and append the months of the year
+				})
+			}
+		})
+	}})
+		
+		
+	
+}
+*/
+
 /* SECTION functions to control the population of the thumbpage or the map*/
 
 
@@ -945,7 +999,9 @@ function buildTiles(dataslice) {
               .on("click", function () {
                 showOnMap({
                   type: "FeatureCollection",
-                  features: (dataslice || []).filter(feature => feature && feature.geometry),
+                  features: _.filter(dataslice, function (feature) {
+                    return feature.geometry;
+                  }),
                 });
                 window.location.href = "#mappage";
               })
@@ -2648,12 +2704,9 @@ putMarker.customMarkerIndex = chosenImage.dataset.index;
 */
 //return featureCollection with geotagged images from submitted featureCollection
 //Using underscore - could probably be replaced
-function getGeotaggedFeatures(inputData) {
-  // Return only features with geometry (geotagged) from submitted FeatureCollection
-  const feats = (inputData && Array.isArray(inputData.features)) ? inputData.features : [];
-  return { type: "FeatureCollection", features: feats.filter(f => f && f.geometry) };
+function getGeotaggedFeatures(inputData){//return only features with geotags from submitted features - accept and produce FeatureCollection
+	return {"type":"FeatureCollection","features": _.filter(inputData.features,function(feature){return feature.geometry;})}
 }
-
 
 //help transforming xml data to Javascript object
 function parseXml(xml, arrayTags) {//arrayTags seem not to be in use
