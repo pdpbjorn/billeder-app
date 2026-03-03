@@ -54,7 +54,7 @@ drop->map->img
 	var objX; //Global object storing the JSON version of the trip loaded from the KML file	
 	var currentImageIndex; //Global variable storing the Global index number of the image currently displayed
 	var mapOverlayId = 0; //Globally incrementing counter enumerating all features items liaded to the map
-	var folderDepth = 1; //Globally incrementing counter enumerating the relative nestedness of the folders in the JSTree structure
+	//var folderDepth = 1; //Globally incrementing counter enumerating the relative nestedness of the folders in the JSTree structure
 	var addedOverlays = []; //Array storing all items loaded onto the map
 	var addedMarkers = []; //array of markers added to the map for geotagging
 	var textFile = null;
@@ -1835,7 +1835,7 @@ function doFolder(fol,mother,doFolderDepth){
 	var aNode = {'text':fol.name['#text'],'kind':"container", 'state': {	'opened' :false,'selected' : false},'children':[],depth:doFolderDepth}
 	
 	//if supplied folder depth is greater than 	present folder depth, set the current 	depth to this value
-	if (doFolderDepth > folderDepth){folderDepth = doFolderDepth;}
+	//if (doFolderDepth > folderDepth){folderDepth = doFolderDepth;}
 	
 	//push the current node into the context node
 	mother.push(aNode);
