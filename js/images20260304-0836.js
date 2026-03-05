@@ -65,237 +65,6 @@ drop->map->img
 	var anvIndex = null;
 	var currentDataset = null;
 
-/* ===== New navigation (appbar + drawer) ===== */
-let navDrawerOpen = false;
-let navContext = null; // 'tid' | 'sted' | 'anv'
-let navTidState = { decadeId: null, yearId: null };
-let navLastFocus = null;
-
-function navInit(){
-  if (navInit._done) return;
-  navInit._done = true;
-
-  if (!document.getElementById("drawer")) return;
-
-  const openTid = () => navOpen("tid");
-  const openSted = () => navOpen("sted");
-  const openAnv = () => navOpen("anv");
-
-  $("#btnMenu").off("click").on("click", function(){
-    navOpen(navContext || "tid");
-  });
-  $("#btnTid").off("click").on("click", openTid);
-  $("#btnSted").off("click").on("click", openSted);
-  $("#btnAnv").off("click").on("click", openAnv);
-
-  $("#drawerClose").off("click").on("click", navClose);
-  $("#drawerBackdrop").off("click").on("click", navClose);
-
-  $("#drawerBack").off("click").on("click", function(){
-    if (navContext === "tid"){
-      if (navTidState.yearId){ navTidState.yearId = null; navRenderTid(); return; }
-      if (navTidState.decadeId){ navTidState.decadeId = null; navRenderTid(); return; }
-    }
-    navClose();
-  });
-
-  // Keyboard / TV remote support
-  $(document).off("keydown.navdrawer").on("keydown.navdrawer", function(e){
-    if (!navDrawerOpen) return;
-
-    if (e.key === "Escape"){
-      e.preventDefault();
-      navClose();
-      return;
-    }
-
-    if (e.key === "ArrowDown" || e.key === "ArrowUp"){
-      const items = $("#drawerBody").find("button.drawer-item:visible");
-      if (!items.length) return;
-      e.preventDefault();
-      const active = document.activeElement;
-      let idx = items.toArray().indexOf(active);
-      if (idx < 0) idx = 0;
-      idx = (e.key === "ArrowDown") ? Math.min(items.length - 1, idx + 1) : Math.max(0, idx - 1);
-      items.get(idx).focus();
-      return;
-    }
-  });
-}
-
-function navOpen(ctx){
-  navContext = ctx;
-  navLastFocus = document.activeElement;
-
-  $("#drawerBackdrop").prop("hidden", false);
-  $("#drawer").prop("hidden", false);
-  $("#btnMenu, #btnTid, #btnSted, #btnAnv").attr("aria-expanded", "true");
-  navDrawerOpen = true;
-
-  if (ctx === "tid"){ navTidState = { decadeId: null, yearId: null }; navRenderTid(); }
-  else if (ctx === "sted"){ navRenderSted(); }
-  else if (ctx === "anv"){ navRenderAnv(); }
-
-  setTimeout(() => {
-    const first = $("#drawerBody").find("button.drawer-item:visible").get(0) || document.getElementById("drawerClose");
-    if (first) first.focus();
-  }, 0);
-}
-
-function navClose(){
-  $("#drawerBackdrop").prop("hidden", true);
-  $("#drawer").prop("hidden", true);
-  $("#btnMenu, #btnTid, #btnSted, #btnAnv").attr("aria-expanded", "false");
-  navDrawerOpen = false;
-
-  if (navLastFocus && typeof navLastFocus.focus === "function"){
-    try { navLastFocus.focus(); } catch(_){}
-  }
-}
-
-function navSetChip(id, text){
-  const el = document.getElementById(id);
-  if (!el) return;
-  el.textContent = text && String(text).trim() ? text : "(ingen)";
-  el.setAttribute("title", el.textContent);
-}
-
-function navResetOtherChips(except){
-  if (except !== "tid") navSetChip("selTid", "(ingen)");
-  if (except !== "sted") navSetChip("selSted", "(ingen)");
-  if (except !== "anv") navSetChip("selAnv", "(ingen)");
-}
-
-function navSetHeader(title, crumb){
-  $("#drawerTitle").text(title);
-  $("#drawerCrumb").text(crumb || "");
-  const showBack = (navContext === "tid") && (navTidState.decadeId || navTidState.yearId);
-  $("#drawerFooter").toggle(showBack);
-}
-
-function navClearBody(){ $("#drawerBody").empty(); }
-
-function navAddItem(text, meta, onClick){
-  const btn = $("<button/>", { "class":"drawer-item", type:"button" })
-    .append($("<span/>", { "class":"drawer-item__text", text: text }))
-    .append(meta ? $("<span/>", { "class":"drawer-item__meta", text: meta }) : $("<span/>"))
-    .on("click", onClick);
-  $("#drawerBody").append(btn);
-}
-
-function navAddGroup(title, subtitle){
-  const g = $("<div/>", { "class":"drawer-group" })
-    .append($("<div/>", { text: title }));
-  if (subtitle) g.append($("<small/>", { text: subtitle }));
-  $("#drawerBody").append(g);
-}
-
-/* Tid: Decade -> Year -> Month */
-function navRenderTid(){
-  navContext = "tid";
-  navClearBody();
-
-  if (!tidIndex || !tidIndex.decades){
-    navSetHeader("Tid", "Indlæser…");
-    return;
-  }
-
-  if (!navTidState.decadeId){
-    navSetHeader("Tid", "Vælg årti");
-    tidIndex.decades.forEach(dec => {
-      navAddItem(dec.id, (dec.years ? (dec.years.length + " år") : ""), function(){
-        navTidState.decadeId = dec.id;
-        navRenderTid();
-      });
-    });
-
-    navAddItem("(no timestamp)", "", function(){
-      navResetOtherChips("tid");
-      navSetChip("selTid", "(no timestamp)");
-      navClose();
-      injectNoDate();
-    });
-    return;
-  }
-
-  const dec = tidIndex.decades.find(d => d.id === navTidState.decadeId);
-  if (!dec){ navTidState.decadeId = null; navRenderTid(); return; }
-
-  if (!navTidState.yearId){
-    navSetHeader("Tid", "Tid › " + dec.id);
-    dec.years.forEach(yr => {
-      navAddItem(yr.id, (yr.months ? (yr.months.length + " mdr") : ""), function(){
-        navTidState.yearId = yr.id;
-        navRenderTid();
-      });
-    });
-    return;
-  }
-
-  const yr = dec.years.find(y => y.id === navTidState.yearId);
-  if (!yr){ navTidState.yearId = null; navRenderTid(); return; }
-
-  navSetHeader("Tid", "Tid › " + dec.id + " › " + yr.id);
-  yr.months.forEach(m => {
-    const label = m.id;
-    const meta = (m.count != null) ? (m.count + " billeder") : "";
-    navAddItem(label, meta, function(){
-      navResetOtherChips("tid");
-      navSetChip("selTid", label);
-      navClose();
-      injectMonth(m.id);
-    });
-  });
-}
-
-/* Sted: flat list */
-function navRenderSted(){
-  navContext = "sted";
-  navClearBody();
-
-  if (!stedIndex || !Array.isArray(stedIndex)){
-    navSetHeader("Sted", "Indlæser…");
-    return;
-  }
-
-  navSetHeader("Sted", "Vælg område");
-  stedIndex.forEach(a => {
-    const label = a.name;
-    const meta = (a.count != null) ? (a.count + " billeder") : "";
-    navAddItem(label, meta, function(){
-      navResetOtherChips("sted");
-      navSetChip("selSted", label);
-      navClose();
-      injectArea(a.id);
-    });
-  });
-}
-
-/* Anvendelse: grouped list */
-function navRenderAnv(){
-  navContext = "anv";
-  navClearBody();
-
-  if (!anvIndex || !anvIndex.groups){
-    navSetHeader("Anvendelse", "Indlæser…");
-    return;
-  }
-
-  navSetHeader("Anvendelse", "Vælg tur");
-  anvIndex.groups.forEach(group => {
-    navAddGroup(group.group || group.title || "Gruppe");
-    group.trips.forEach(trip => {
-      navAddItem(trip.title, "", function(){
-        navResetOtherChips("anv");
-        navSetChip("selAnv", trip.title);
-        navClose();
-        injectTrip(trip.id, trip.filename, trip.startDate, trip.endDate);
-      });
-    });
-  });
-}
-
-
 let photoCluster = null;
 
 // --- Cancelable / yielding thumbnail rendering ---
@@ -740,19 +509,19 @@ function loadData(){
   // NEW: load the three indexes
   $.getJSON("data/tid/index.json", function(json) {
     tidIndex = json;
-    navInit();
+    makeMonthLinksFromIndex(tidIndex);
 	indexLoadedOne();
   });
 
   $.getJSON("data/sted/index.json", function(json) {
     stedIndex = json;
-    navInit();
+     makeAreaLinksFromIndex(stedIndex);
 	 indexLoadedOne();
   });
 
 $.getJSON("data/anvendelse/index.json", function(json) {
   anvIndex = json;
-  navInit();
+  makeTripLinksFromIndex(anvIndex);
   indexLoadedOne();
 });
 

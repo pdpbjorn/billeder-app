@@ -189,6 +189,36 @@ Ide: Byg dateringsinterface til udaterede billeder  -  noget ala geotagger
 </body>
 <script>
 	window.onload = loadData;
+
+	//const li = document.querySelectorAll('li.dropdown a');
+const btn = document.querySelector('.nav-btn');
+const nav = document.querySelector('ul.nav');
+
+btn.addEventListener('click', e=>{
+    nav.classList.toggle('toggle');
+})
+
+/*
+li.forEach((each)=>{
+    if (each.nextElementSibling !== null) {
+        each.addEventListener('click', e=>{
+            if (window.innerWidth < 768) {
+              e.target.parentElement.classList.toggle("active");  
+            }
+        })
+    }
+})
+
+	//making the nested month-dropdown work
+	$(document).ready(function () {
+		$('.dropdown-submenu a.click_to_drop').on("click", function (e) {
+			$('.subdrop').hide();
+			$(this).next('ul').toggle();
+			e.stopPropagation();
+			e.preventDefault();
+		});
+	});
+	*/
 </script>
 
 </html>
