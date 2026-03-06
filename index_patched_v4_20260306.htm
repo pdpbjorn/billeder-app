@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<!--
+	Fup pup
+	FIX: Udaterede billeder kan ikke listes: function: buildTiles -> dateGroup dannes ikke
+	!!!!!fix: klik på infowindow billede virker ikke
+	fix: vis billedliste for disse markører  virker ikke
+	fix: til tur bounds virker ikke på fjernsyn
+	fix: stedfilter meget langsom på fjernsyn - måske ventecursor
+	fix: dropdpwn værdier bør nulstille, når anden dropdown bruges
+	Ide: bedre månedsmeny - nested
+	Check om 'i embeds medfør er med' / Det er den
+fix: noget galt med areas! - fx Estland, men Norge virker...
+fix : billeder i skt jørgens sø...
+fix: load af turbilleder virker ikke
+fix: Listeview ved Anvendelse virker ikke
+ide: liste over kameraer på både thumb og map-visning, toggel buttons, når kamera vælges, filtreres billeder - reversibelt
+ide: når load af turbilleder - status over ikke geotaggede i perioden		
+Ide: Klik på geomarkør i thumbs-oversigt
+ide: stabil header når der scrolles 
+ide: håndter også hjemmevideo/telefonfilm
+ide: mere modulær indexering - indexere nytilkomne og opdaterede foldere
+lav geotagger
+		lille form udenfor kort - ml kort og navi-panel
+			Nej, nedenfor træ, delt horisontalt med valgte billeder til højre
+			vis større version ved hover
+		https://stackoverflow.com/questions/21661703/jquery-date-picker-not-working-with-google-map-infowindow
+		https://developers.google.com/maps/documentation/javascript/controls
+	
+		søg billeder vha datoer - mulighed for også at loade taggede billeder - indikator
+		stort billed ved hover over thumb
+Højreklik på ikon fjerner marker, fjerner featureColl entry, og fjerner sort class fra thumb
+
+		Knapper med kendte lokationer - hjemme, tivoli, alme, højklint
+		placering genererer exiftool kommando (hvis billederne har nikonnavn, opdateres både original og kopi) + opdatering til images.geo.json
+
+		https://mcpmag.com/articles/2018/08/08/replace-text-with-powershell.aspx
+https://stackoverflow.com/questions/35062320/string-replacement-in-a-file-using-powershell
+https://docs.microsoft.com/en-us/answers/questions/467133/find-and-replace-in-a-file-using-powershell.html
+https://powershellcookbook.com/recipe/uZgg/replace-text-in-a-string
+https://stackoverflow.com/questions/3403217/how-to-replace-multiple-strings-in-a-file-using-powershell
+
+ide: med tiden erstatte Googlearth helt - migrere til ën geojson fil og udvikle funktion til at gemme punkter og pathes direkte i filen - som så er master
+ide: find turbilleder som ikke er geokodet vha datoer
+Ide: Vis alle billeder i tids-liste, hvis denne er geografisk filtreret
+Ide: sammenklappelig månedsmenu
+Ide: *Swipe på mobil
+Ide: Pinch zoom på mobil
+Ide: Bladr måned op/ned når thumbs er månedsloadet
+Ide: erstat Underscore med plain JS filtrering
+Ide: Byg dateringsinterface til udaterede billeder  -  noget ala geotagger
+
+-->
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1" />
+<title>billeder</title>
+	<script src="./js/jquery-3.2.1.min.js" type="text/javascript" language="JavaScript"></script>
+	<script src="./js/images.js" type="text/javascript" language="JavaScript"></script>
+	<script src="./js/jstree.js"></script>
+	<script src="./js/filesystempaths.js"></script>
+	<script>
+		$(document).bind("mobileinit", function () {
+			$.mobile.defaultPageTransition = 'none';
+		});
+	</script>
+	<script src="./js/jquery.mobile-1.5.0-alpha.1.min.js"></script>
+<!-- <script src="./js/turf.min.js" type="text/javascript" language="JavaScript"></script> -->
+	<script src="https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js"></script>
+	<script
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2J_gYxDzUWIYJH9HqmnN_gfiZxUEzvxs&callback=initMap&v=weekly&libraries=marker&loading=async"
+		async
+		defer></script>
+	
+	<link rel="stylesheet" type="text/css" href="./css/jquery.mobile-1.5.0-alpha.1.min.css" />
+
+	<link rel="stylesheet" type="text/css" href="./css/images.css" />
+	<link rel="stylesheet" href="./css/jstree/default/style.css" />
+	
+	<link rel="shortcut icon" href="fav.png" type="image/png" />
+</head>
+
+<body>
+
+	<div data-role="page" class="jqm-demos" data-quicklinks="true" id="initial">
+		<div data-role="header" data-position="fixed"
+			class="header-footer ui-header ui-header-fullscreen ui-bar-inherit ui-header-fixed slidedown centerflex">
+
+			<br />
+
+		</div>
+
+		<nav class="app-nav" aria-label="Hovednavigation">
+			<div class="app-toolbar">
+				<div class="toolbar-primary toolbar-primary-full">
+					<button type="button" class="toolbar-btn" id="nav-open-time" data-nav-root="tid">Tid</button>
+					<button type="button" class="toolbar-btn" id="nav-open-place" data-nav-root="sted">Sted</button>
+					<button type="button" class="toolbar-btn" id="nav-open-usage" data-nav-root="anvendelse">Anvendelse</button>
+					<form class="view-toggle view-toggle-prominent" aria-label="Visningstype">
+						<label class="view-toggle-option active" for="Choice-of-list">
+							<input type="radio" name="options[]" id="Choice-of-list" checked="checked">Liste
+						</label>
+						<label class="view-toggle-option" for="Choice-of-map">
+							<input type="radio" name="options[]" id="Choice-of-map">Kort
+						</label>
+					</form>
+				</div>
+			</div>
+			<div id="activeSelection" class="active-selection" aria-live="polite">Vælg Tid, Sted eller Anvendelse</div>
+
+			<div id="navDrawerBackdrop" class="nav-drawer-backdrop" hidden></div>
+			<aside id="navDrawer" class="nav-drawer" aria-hidden="true" aria-labelledby="navDrawerTitle">
+				<div class="nav-drawer-header">
+					<button type="button" class="drawer-action" id="navDrawerBack">Tilbage</button>
+					<div class="nav-drawer-heading">
+						<div id="navDrawerTitle">Vælg filter</div>
+						<div id="navBreadcrumb" class="nav-breadcrumb"></div>
+						<div id="navDrawerHint" class="nav-drawer-hint"></div>
+					</div>
+					<button type="button" class="drawer-action" id="navDrawerClose">Luk</button>
+				</div>
+				<div id="navDrawerBody" class="nav-drawer-body"></div>
+				<div class="nav-drawer-footer">
+					<button type="button" class="drawer-footer-btn" id="navClearSelection">Nulstil</button>
+				</div>
+			</aside>
+		</nav>
+
+	
+
+	<div role="main" class="ui-content mainbox" id="tilebox">
+		<img src="lillehest.png" width="60%" class="lillehest">
+		<div id="spinner"><img src="fav.png" /></div>
+<style>
+#logout-btn {
+  position: fixed;
+  top: 12px;
+  right: 16px;
+  padding: 8px 14px;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-family: sans-serif;
+  font-size: 14px;
+  z-index: 9999;
+  transition: background 0.2s ease;
+}
+#logout-btn:hover {
+  background: rgba(0,0,0,0.85);
+}
+</style>
+
+<a id="logout-btn" href="/logout.php">Logout</a>
+	</div>
+
+	<div data-role="footer" data-position="fixed" data-tap-toggle="false"
+		class="header-footer jqm-footer ui-footer ui-bar-inherit ui-footer-fixed slideup centerflex" role="contentinfo" style="position: fixed;
+		bottom: 0;width:100%">
+		<div style="font-size: large;">Vores billeder</div>
+		<div id="counters">Vi har <span id="totalcount" class="counters"></span> billeder - af dem er <span
+				id="datedcount" class="counters"></span> daterede og <span id="gtcount" class="counters"></span> er
+			geotagged </div>
+
+	</div>
+
+	</div>
+
+
+
+</body>
+<script>
+	window.onload = function () {
+		if (typeof initAdaptiveNav === "function") {
+			initAdaptiveNav();
+		}
+		loadData();
+	};
+</script>
+
+</html>
