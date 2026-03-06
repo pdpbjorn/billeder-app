@@ -637,6 +637,12 @@ function selectAndApply(selection) {
   selection.action();
 }
 
+function updateTimeColumns(){
+  const body=$("#navDrawerBody");
+  body.empty();
+  renderTimeDesktopChooser(body);
+}
+
 function getNavItems() {
   const root = navState.currentRoot;
   if (root === "tid") {
@@ -646,7 +652,7 @@ function getNavItems() {
         label: dec.id,
         meta: dec.years?.length ? dec.years.length + " år" : "",
         hasChildren: true,
-        onSelect: () => { navState.stack.push({ label: dec.id, node: dec }); navState.pendingSelection = null; renderNavDrawer(); }
+        onSelect: () => { navState.stack.push({ label: dec.id, node: dec }); navState.pendingSelection = null; updateTimeColumns();; }
       }));
     }
     if (navState.stack.length === 1) {
@@ -655,7 +661,7 @@ function getNavItems() {
         label: yr.id,
         meta: yr.months?.length ? yr.months.length + " måneder" : "",
         hasChildren: true,
-        onSelect: () => { navState.stack.push({ label: yr.id, node: yr }); navState.pendingSelection = null; renderNavDrawer(); }
+        onSelect: () => { navState.stack.push({ label: yr.id, node: yr }); navState.pendingSelection = null; updateTimeColumns();; }
       }));
     }
     const yr = navState.stack[1].node;
@@ -3026,3 +3032,50 @@ function getObjects(obj, key, val) {
     }
     return objects;
 }
+/* ===== v7 navigation behaviour ===== */
+
+function collapseToolbar(){
+  document.querySelector(".app-nav").classList.add("nav-collapsed");
+}
+
+function expandToolbar(){
+  document.querySelector(".app-nav").classList.remove("nav-collapsed");
+}
+
+document.addEventListener("click",function(e){
+  if(e.target.id==="navShowFull"){
+    expandToolbar();
+  }
+});
+
+/* auto collapse after selection */
+function selectAndApply(selection){
+
+  navState.pendingSelection = selection;
+  navState.activeSelection = selection;
+
+  updateSelectionLabel();
+
+  document.getElementById("collapsedSelection").textContent =
+    selection.label;
+
+  closeNavDrawer();
+
+  collapseToolbar();
+
+  selection.action();
+}
+
+/* scroll shrink */
+let lastScrollY=0;
+
+window.addEventListener("scroll",function(){
+
+  const y=window.scrollY;
+
+  if(y>200 && y>lastScrollY){
+      collapseToolbar();
+  }
+
+  lastScrollY=y;
+});

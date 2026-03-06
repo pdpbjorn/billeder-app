@@ -886,3 +886,72 @@ a:focus-visible {
     font-size: 1.08rem;
   }
 }
+/* ===== v7 Navigation improvements ===== */
+
+/* collapsed toolbar */
+.nav-collapsed-bar{
+  display:none;
+  position:sticky;
+  top:0;
+  z-index:1500;
+  background:#e5e7eb;
+  padding:6px 10px;
+  align-items:center;
+  gap:10px;
+}
+
+.nav-reopen-btn{
+  border:1px solid #999;
+  border-radius:6px;
+  padding:4px 8px;
+  background:white;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.collapsed-toggle{
+  margin-left:auto;
+}
+
+.nav-collapsed .nav-collapsed-bar{
+  display:flex;
+}
+
+.nav-collapsed #fullToolbar{
+  display:none;
+}
+
+/* desktop toolbar layout */
+@media (min-width:900px){
+
+.toolbar-primary-full{
+  display:flex;
+  flex-direction:row;
+  gap:12px;
+  align-items:center;
+}
+
+.view-toggle-prominent{
+  margin-left:auto;
+}
+
+}
+
+/* ===== Tid column chooser ===== */
+
+.time-column-list{
+  max-height:55vh;
+  overflow:auto;
+}
+
+/* prevent column rollback scroll */
+.time-column-list button.is-selected{
+  scroll-margin:40px;
+}
+
+/* layout */
+.layout-time-columns{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:16px;
+}
