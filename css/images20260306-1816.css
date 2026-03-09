@@ -539,7 +539,7 @@ nav ul li ul {
 }
 
 .toolbar-primary-full {
-  flex-wrap:nowrap;
+  justify-content: flex-start;
 }
 
 .toolbar-btn,
@@ -954,12 +954,4 @@ a:focus-visible {
   display:grid;
   grid-template-columns:1fr 1fr 1fr;
   gap:16px;
-}
-
-.toolbar-primary-full{
-  flex-wrap:nowrap;
-}
-
-.toolbar-btn{
-  flex:0 0 auto;
 }
