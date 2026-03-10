@@ -97,7 +97,14 @@ Ide: Byg dateringsinterface til udaterede billeder  -  noget ala geotagger
     <button id="navShowFull" class="nav-reopen-btn">☰ Filtre</button>
     <span id="collapsedSelection">Vælg Tid, Sted eller Anvendelse</span>
 
-    
+    <form class="view-toggle view-toggle-prominent collapsed-toggle">
+      <label class="view-toggle-option active" for="Choice-of-list">
+        <input type="radio" name="options[]" id="Choice-of-list" checked="checked">Liste
+      </label>
+      <label class="view-toggle-option" for="Choice-of-map">
+        <input type="radio" name="options[]" id="Choice-of-map">Kort
+      </label>
+    </form>
   </div>
 
   <div class="app-toolbar" id="fullToolbar">
@@ -120,23 +127,7 @@ Ide: Byg dateringsinterface til udaterede billeder  -  noget ala geotagger
   <div id="activeSelection" class="active-selection">Vælg Tid, Sted eller Anvendelse</div>
 </nav>
 
-	<div id="navDrawerBackdrop" class="nav-drawer-backdrop" hidden></div>
-
-<aside id="navDrawer" class="nav-drawer" aria-hidden="true" aria-labelledby="navDrawerTitle">
-  <div class="nav-drawer-header">
-    <button type="button" class="drawer-action" id="navDrawerBack">Tilbage</button>
-    <div class="nav-drawer-heading">
-      <div id="navDrawerTitle">Vælg filter</div>
-      <div id="navBreadcrumb" class="nav-breadcrumb"></div>
-      <div id="navDrawerHint" class="nav-drawer-hint"></div>
-    </div>
-    <button type="button" class="drawer-action" id="navDrawerClose">Luk</button>
-  </div>
-  <div id="navDrawerBody" class="nav-drawer-body"></div>
-  <div class="nav-drawer-footer">
-    <button type="button" class="drawer-footer-btn" id="navClearSelection">Nulstil</button>
-  </div>
-</aside>
+	
 
 	<div role="main" class="ui-content mainbox" id="tilebox">
 		<img src="lillehest.png" width="60%" class="lillehest">

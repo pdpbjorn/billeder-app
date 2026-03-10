@@ -3061,7 +3061,7 @@ function selectAndApply(selection){
 
   closeNavDrawer();
 
- // collapseToolbar();
+  collapseToolbar();
 
   selection.action();
 }

@@ -963,32 +963,3 @@ a:focus-visible {
 .toolbar-btn{
   flex:0 0 auto;
 }
-
-.app-toolbar .toolbar-primary-full{
-  display:flex;
-  flex-wrap:nowrap;
-  align-items:center;
-  gap:12px;
-  width:100%;
-}
-
-.app-toolbar .toolbar-btn{
-  width:auto !important;
-  min-width:9rem;
-  flex:0 0 auto;
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  white-space:nowrap;
-}
-
-.app-toolbar .view-toggle{
-  margin-left:auto;
-  flex:0 0 auto;
-}
-
-.app-toolbar .view-toggle-option{
-  width:auto !important;
-  flex:0 0 auto;
-  display:inline-flex;
-}
