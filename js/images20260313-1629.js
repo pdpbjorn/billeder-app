@@ -559,10 +559,8 @@ function openNavRoot(root) {
     return;
   }
   navState.currentRoot = root;
+  navState.stack = [];
   navState.pendingSelection = null;
-  navState.savedStacks = navState.savedStacks || { tid: [], sted: [], anvendelse: [] };
-  const saved = navState.savedStacks[root] || [];
-  navState.stack = saved.map(item => ({ label: item.label, node: item.node }));
   $(".toolbar-btn[data-nav-root]").removeClass("is-active");
   $(".toolbar-btn[data-nav-root='" + root + "']").addClass("is-active");
   renderNavDrawer();
@@ -639,20 +637,10 @@ function selectAndApply(selection) {
   selection.action();
 }
 
-function captureTimeColumnScrolls(){
-  return $("#navDrawerBody .time-column-list").map(function(){ return this.scrollTop; }).get();
-}
-
-function updateTimeColumns(previousScrolls = [], preserveThroughIndex = -1){
-  const body = $("#navDrawerBody");
+function updateTimeColumns(){
+  const body=$("#navDrawerBody");
   body.empty();
   renderTimeDesktopChooser(body);
-  const lists = body.find(".time-column-list");
-  lists.each(function(index){
-    if (index <= preserveThroughIndex && previousScrolls[index] != null) {
-      this.scrollTop = previousScrolls[index];
-    }
-  });
 }
 
 function getNavItems() {
@@ -751,12 +739,11 @@ function renderTimeDesktopChooser($body) {
       selectedId: selectedDecade?.id,
       empty: 'Ingen årtier',
       click: dec => {
-        const scrolls = captureTimeColumnScrolls();
         navState.stack = [{ label: dec.id, node: dec }];
         if (dec.years?.length) {
           navState.stack.push({ label: dec.years[0].id, node: dec.years[0] });
         }
-        updateTimeColumns(scrolls, 0);
+        renderNavDrawer();
       },
       mapItem: dec => ({ label: dec.id, meta: dec.years?.length ? dec.years.length + ' år' : '' })
     },
@@ -766,9 +753,8 @@ function renderTimeDesktopChooser($body) {
       selectedId: selectedYear?.id,
       empty: 'Vælg først et årti',
       click: yr => {
-        const scrolls = captureTimeColumnScrolls();
         navState.stack = [{ label: selectedDecade.id, node: selectedDecade }, { label: yr.id, node: yr }];
-        updateTimeColumns(scrolls, 1);
+        renderNavDrawer();
       },
       mapItem: yr => ({ label: yr.id, meta: yr.months?.length ? yr.months.length + ' måneder' : '' })
     },
@@ -3046,72 +3032,50 @@ function getObjects(obj, key, val) {
     }
     return objects;
 }
-
-/* ===== v8 navigation behaviour ===== */
+/* ===== v7 navigation behaviour ===== */
 
 function collapseToolbar(){
-  document.querySelector(".app-nav")?.classList.add("nav-collapsed");
+  document.querySelector(".app-nav").classList.add("nav-collapsed");
 }
 
 function expandToolbar(){
-  document.querySelector(".app-nav")?.classList.remove("nav-collapsed");
+  document.querySelector(".app-nav").classList.remove("nav-collapsed");
 }
 
-document.addEventListener("click", function(e){
-  if(e.target && e.target.id === "navShowFull"){
+document.addEventListener("click",function(e){
+  if(e.target.id==="navShowFull"){
     expandToolbar();
   }
 });
 
-function cloneStack(stack){
-  return (stack || []).map(item => ({ label: item.label, node: item.node }));
-}
-
-function saveCurrentNavState(){
-  navState.savedStacks = navState.savedStacks || { tid: [], sted: [], anvendelse: [] };
-  if (navState.currentRoot) {
-    navState.savedStacks[navState.currentRoot] = cloneStack(navState.stack);
-  }
-}
-
+/* auto collapse after selection */
 function selectAndApply(selection){
+
   navState.pendingSelection = selection;
   navState.activeSelection = selection;
 
-  if (navState.currentRoot === "tid") {
-    navState.savedStacks = navState.savedStacks || { tid: [], sted: [], anvendelse: [] };
-    navState.savedStacks.tid = cloneStack(navState.stack);
-  } else if (navState.currentRoot === "sted") {
-    navState.savedStacks = navState.savedStacks || { tid: [], sted: [], anvendelse: [] };
-    navState.savedStacks.sted = [];
-  } else if (navState.currentRoot === "anvendelse") {
-    navState.savedStacks = navState.savedStacks || { tid: [], sted: [], anvendelse: [] };
-    navState.savedStacks.anvendelse = cloneStack(navState.stack);
-  }
-
   updateSelectionLabel();
 
-  const collapsedSelection = document.getElementById("collapsedSelection");
-  if (collapsedSelection) collapsedSelection.textContent = selection.label;
+  document.getElementById("collapsedSelection").textContent =
+    selection.label;
 
   closeNavDrawer();
 
-  if (isListMode()) collapseToolbar();
-  else expandToolbar();
+ // collapseToolbar();
 
   selection.action();
 }
 
-function resetCurrentSelection() {
-  navState.pendingSelection = null;
-  navState.activeSelection = null;
-  navState.stack = [];
-  navState.savedStacks = { tid: [], sted: [], anvendelse: [] };
-  updateSelectionLabel();
-  const collapsedSelection = document.getElementById("collapsedSelection");
-  if (collapsedSelection) collapsedSelection.textContent = "Vælg Tid, Sted eller Anvendelse";
-  closeNavDrawer();
-  expandToolbar();
-  $(".toolbar-btn[data-nav-root]").removeClass("is-active");
-  restoreHomeSplash();
-}
+/* scroll shrink */
+let lastScrollY=0;
+
+window.addEventListener("scroll",function(){
+
+  const y=window.scrollY;
+
+  if(y>200 && y>lastScrollY){
+      collapseToolbar();
+  }
+
+  lastScrollY=y;
+});
