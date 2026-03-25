@@ -875,7 +875,12 @@ function renderNavDrawer() {
 }
 
 function updateSelectionLabel() {
-  $("#activeSelection").text(navState.activeSelection?.label || "Vælg Tid, Sted eller Anvendelse");
+  const el = $("#activeSelection");
+  if (navState.activeSelection) {
+    el.text(navState.activeSelection.label).show();
+  } else {
+    el.hide();
+  }
 }
 
 function restoreHomeSplash() {
