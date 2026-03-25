@@ -1111,7 +1111,7 @@ function buildTiles(dataslice) {
   $tilebox.stop(true, true);
   $tilebox.empty();
   $tilebox.scrollTop(0); // avoid long queued "slow" animations
- $tilebox.append($("<div/>").css({ width: "100%", height: "0.75em" }));
+  $tilebox.append($("<div/>").css({ width: "90%", height: "3.5em" }));
 
   const feats = (dataslice && dataslice.features) ? dataslice.features : [];
   const groupMap = new Map(); // dateKey -> array of features
