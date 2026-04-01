@@ -835,78 +835,7 @@ a:focus-visible {
   background:none;
   color:#2f2f2f;
 }
-
-
-/* ===== Consolidated responsive layout ===== */
-
-/* Collapsed navigation */
-.nav-collapsed-bar{
-  display:none;
-  position:sticky;
-  top:0;
-  z-index:1500;
-  background:#e5e7eb;
-  padding:6px 10px;
-  align-items:center;
-  gap:10px;
-}
-
-.nav-reopen-btn{
-  border:1px solid #999;
-  border-radius:6px;
-  padding:4px 8px;
-  background:white;
-  font-weight:bold;
-  cursor:pointer;
-}
-
-.nav-collapsed .nav-collapsed-bar{
-  display:flex;
-}
-
-.nav-collapsed #fullToolbar{
-  display:none;
-}
-
-.drawer-view-toggle{
-  display:flex;
-  gap:10px;
-  margin-top:10px;
-}
-
-.drawer-view-toggle label{
-  font-size:0.9rem;
-  cursor:pointer;
-}
-
-/* Footer / content rhythm */
-.ui-footer{
-  padding:10px 18px 14px;
-  box-sizing:border-box;
-}
-
-#counters{
-  margin-top:4px;
-  line-height:1.35;
-}
-
-#tilebox{
-  width:100%;
-  min-height:calc(100vh - 170px);
-  box-sizing:border-box;
-}
-
-.mainbox{
-  padding-top:10px;
-  padding-bottom:40px;
-}
-
-.app-nav{
-  padding-bottom:4px;
-}
-
-/* Mobile / tablet */
-@media (max-width: 899px) {
+@media screen and (max-width: 899px) {
   .app-toolbar {
     padding-top: 0.5rem;
   }
@@ -945,56 +874,295 @@ a:focus-visible {
   .nav-drawer.is-open {
     transform: translateX(0);
   }
-
+  
+#logout-btn:hover{
+  background:none;
+  color:#2f2f2f;
+}
   .nav-drawer-body.layout-grid,
   .nav-drawer-body.layout-time-columns {
     grid-template-columns: 1fr;
   }
 
-  #logout-btn{
-    float:right;
-    margin-right:10px;
-    text-decoration:none;
-    border-radius:6px;
-    padding:8px 14px;
-    font-family:sans-serif;
-    font-size:14px;
-  }
-
-  #logout-btn:hover{
-    background:rgba(0,0,0,0.85);
-    color:white;
-  }
+#logout-btn {
+  position:static;
+  float:right;
+  margin-right:10px;
+  background:none;
+  color:#555;
+  padding: 8px 14px;
+  
+  
+  text-decoration: none;
+  border-radius: 6px;
+  font-family: sans-serif;
+  font-size: 14px;
+  z-index: 9999;
+  transition: background 0.2s ease;
+}
+#logout-btn:hover {
+  background: rgba(0,0,0,0.85);
 }
 
-/* Desktop */
-@media (min-width: 900px) {
-  html{
-    font-size:14px;
+#logout-btn{
+
+}
+}
+
+@media (min-width: 1200px) {
+
+  /* typography scaling */
+  .toolbar-btn,
+  .view-toggle-option,
+  .drawer-action,
+  .drawer-footer-btn,
+  .drawer-option,
+  .drawer-secondary-option {
+    font-size: 1.08rem;
   }
 
-  body{
-    background:#cfd4cc;
-  }
-
+  /* layout width + centering */
   .desktop-frame,
   .app-nav,
-  .ui-footer{
-    width:min(1200px, calc(100vw - 40px));
-    margin-left:auto;
-    margin-right:auto;
+.ui-footer{
+    width:min(1480px, calc(100vw - 48px)) !important;
+    left:50%;
+    transform:translateX(-50%);
+    border-radius:16px 16px 0 0;
+    box-shadow:0 -1px 8px rgba(0,0,0,0.04);
+  }
+
+}
+/* ===== v7 Navigation improvements ===== */
+
+/* collapsed toolbar */
+.nav-collapsed-bar{
+  display:none;
+  position:sticky;
+  top:0;
+  z-index:1500;
+  background:#e5e7eb;
+  padding:6px 10px;
+  align-items:center;
+  gap:10px;
+}
+
+.nav-reopen-btn{
+  border:1px solid #999;
+  border-radius:6px;
+  padding:4px 8px;
+  background:white;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.collapsed-toggle{
+  margin-left:auto;
+}
+
+.nav-collapsed .nav-collapsed-bar{
+  display:flex;
+}
+
+.nav-collapsed #fullToolbar{
+  display:none;
+}
+
+/* desktop toolbar layout */
+@media (min-width:900px){
+
+.toolbar-primary-full{
+  display:flex;
+  flex-direction:row;
+  gap:12px;
+  align-items:center;
+}
+
+.view-toggle-prominent{
+  margin-left:auto;
+}
+
+}
+
+/* ===== Tid column chooser ===== */
+
+.time-column-list{
+  max-height:55vh;
+  overflow:auto;
+}
+
+/* prevent column rollback scroll */
+.time-column-list button.is-selected{
+  scroll-margin:40px;
+}
+
+/* layout */
+.layout-time-columns{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:8px;
+}
+
+.toolbar-primary-full{
+  flex-wrap:nowrap;
+}
+
+.toolbar-btn{
+  flex:0 0 auto;
+}
+
+.app-toolbar .toolbar-primary-full{
+  display:flex;
+  flex-wrap:nowrap;
+  align-items:center;
+  gap:12px;
+  width:100%;
+}
+
+.app-toolbar .toolbar-btn{
+  width:auto !important;
+  min-width:9rem;
+  flex:0 0 auto;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  white-space:nowrap;
+}
+
+.app-toolbar .view-toggle{
+  margin-left:auto;
+  flex:0 0 auto;
+}
+
+.app-toolbar .view-toggle-option{
+  width:auto !important;
+  flex:0 0 auto;
+  display:inline-flex;
+}
+
+.ui-footer{
+  padding:10px 18px 14px;
+  box-sizing:border-box;
+}
+
+#counters{
+  margin-top:4px;
+  line-height:1.35;
+}
+
+.app-nav{
+  padding-bottom:4px;
+}
+
+.toolbar-btn{
+  min-height:30px;
+  padding:0.3rem 0.6rem;
+}
+
+.view-toggle-option{
+  min-height:28px;
+}
+
+.mainbox{
+  padding-top:10px;
+  padding-bottom:40px;
+}
+
+.drawer-view-toggle{
+  display:flex;
+  gap:10px;
+  margin-top:10px;
+}
+
+.drawer-view-toggle label{
+  font-size:0.9rem;
+  cursor:pointer;
+}
+
+/* ===== v9 Desktop Layout Mode ===== */
+
+@media (min-width: 900px){
+
+/* Center entire app content */
+.desktop-frame{
+  display:flex;
+  justify-content:center;
+}
+/* Main content column */
+.mainbox{
+    width:100%;
+    margin:10px 0 0;
+    padding:20px 24px 56px;
+    background:#d8dbd2;
+    border-radius:18px;
+    box-shadow:0 3px 14px rgba(0,0,0,0.06);
     box-sizing:border-box;
   }
 
-  .desktop-frame{
-    width:100%;
-  }
+/* Reduce header dominance */
+.app-nav{
+  max-width:1200px;
+  margin:0 auto;
+  border-radius:0 0 12px 12px;
+}
 
-  .app-nav{
-    border-radius:0 0 12px 12px;
-    box-shadow:0 2px 10px rgba(0,0,0,0.08);
-  }
+/* Toolbar tighter */
+.toolbar-btn{
+  min-height:30px;
+  padding:0.3rem 0.6rem;
+  font-size:0.9rem;
+}
 
+/* Make drawer look like a dialog */
+.nav-drawer{
+  width:min(900px, 90vw);
+  left:50%;
+  transform:translateX(-50%);
+  border-radius:14px;
+  top:80px;
+}
+
+/* Center welcome image nicely */
+.lillehest{
+  display:block;
+  margin:40px auto;
+  max-width:80%;
+  max-height:calc(100vh - 220px);
+  object-fit:contain;
+}
+
+/* Improve tiles layout */
+.tile{
+  max-width:260px;
+}
+
+/* Add spacing between date groups */
+.dateDivMain{
+  gap:12px;
+}
+
+/* Footer aligned with content */
+.ui-footer{
+  max-width:1200px;
+  margin:0 auto;
+  border-radius:12px 12px 0 0;
+}
+
+/* Subtle background framing */
+body{
+  background:#cfd4cc;
+}
+
+/* Content card effect */
+.mainbox{
+  background:#e9ece6;
+  border-radius:16px;
+}
+
+/* Slight shadow for depth */
+.mainbox{
+  box-shadow:0 4px 20px rgba(0,0,0,0.08);
+}
   .app-toolbar{
     padding:12px 16px 10px;
   }
@@ -1004,74 +1172,24 @@ a:focus-visible {
     align-items:center;
     gap:10px;
     flex-wrap:nowrap;
-    width:100%;
   }
 
   .toolbar-btn{
-    width:auto !important;
     min-height:32px;
     min-width:92px;
     padding:0.28rem 0.8rem;
     border-radius:9px;
-    font-size:0.9rem;
-    flex:0 0 auto;
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    white-space:nowrap;
-  }
-
-  .mainbox{
-    width:100%;
-    margin:10px 0 0;
-    padding:20px 24px 56px;
-    background:#e9ece6;
-    border-radius:16px;
-    box-shadow:0 4px 20px rgba(0,0,0,0.08);
-    box-sizing:border-box;
-  }
-
-  .lillehest{
-    display:block;
-    width:auto;
-    max-width:min(980px, 92%);
-    max-height:calc(100vh - 260px);
-    margin:28px auto 8px;
-    object-fit:contain;
-    position:relative;
-  }
-
-  .tile{
-    max-width:260px;
-  }
-
-  .dateDivMain{
-    gap:12px;
-  }
-
-  .nav-drawer{
-    width:min(900px, 90vw);
-    top:80px;
-    left:50%;
-    transform:translateX(-50%);
-    border-radius:14px;
-  }
-
-  .nav-drawer.is-open{
-    transform:translateX(-50%);
   }
 }
 
-/* Large desktop */
-@media (min-width: 1200px) {
-  .toolbar-btn,
-  .view-toggle-option,
-  .drawer-action,
-  .drawer-footer-btn,
-  .drawer-option,
-  .drawer-secondary-option {
-    font-size: 1.02rem;
+@media (min-width:900px){
+  html{
+    font-size:14px;
   }
+}
+
+/* ===== v10 desktop fine tuning ===== */
+@media (min-width: 1200px) {
 
   body{
     background:#d3d7cf;
@@ -1088,6 +1206,32 @@ a:focus-visible {
 
   .app-nav{
     border-radius:0 0 16px 16px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+  }
+
+  .app-toolbar{
+    padding:12px 16px 10px;
+  }
+
+  .toolbar-primary-full{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    flex-wrap:nowrap;
+  }
+
+  .toolbar-btn{
+    min-height:32px;
+    min-width:92px;
+    padding:0.28rem 0.8rem;
+    border-radius:9px;
+    font-size:0.9rem;
+  }
+
+  #tilebox{
+    width:100%;
+    min-height:calc(100vh - 170px);
+    box-sizing:border-box;
   }
 
   .mainbox{
@@ -1097,12 +1241,17 @@ a:focus-visible {
     background:#d8dbd2;
     border-radius:18px;
     box-shadow:0 3px 14px rgba(0,0,0,0.06);
+    box-sizing:border-box;
   }
 
   .lillehest{
-    max-width:min(1120px, 94%);
-    max-height:calc(100vh - 250px);
-    margin:24px auto 8px;
+    display:block;
+    width:auto;
+    max-width:min(980px, 92%);
+    max-height:calc(100vh - 260px);
+    margin:28px auto 8px;
+    object-fit:contain;
+    position:relative;
   }
 
   .nav-drawer{
@@ -1127,8 +1276,37 @@ a:focus-visible {
   }
 
   .ui-footer{
+    width:min(1480px, calc(100vw - 48px)) !important;
+    left:50%;
+    transform:translateX(-50%);
     padding:10px 18px 14px;
     border-radius:16px 16px 0 0;
     box-shadow:0 -1px 8px rgba(0,0,0,0.04);
+  }
+
+  #counters{
+    margin-top:4px;
+    line-height:1.35;
+  }
+
+  #logout-btn{
+    position:static;
+    margin-left:18px;
+    padding:0;
+    background:none;
+    color:#5a5f66;
+    text-decoration:underline;
+    border-radius:0;
+    font-size:0.92rem;
+    transition:none;
+  }
+
+  #logout-btn:hover{
+    background:none;
+    color:#2f2f2f;
+  }
+
+  .active-selection{
+    display:none !important;
   }
 }
