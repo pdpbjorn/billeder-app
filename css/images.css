@@ -679,9 +679,10 @@ nav ul li ul {
 }
 
 #navDrawerTitle {
-  font-size: 1.15rem;
-  font-weight: 700;
-  line-height: 1.1;
+        font-size: 1.55rem;
+        line-height: 1.55;
+        margin: 0;
+        text-align: center;
 }
 
 .nav-breadcrumb {
@@ -1117,11 +1118,7 @@ a:focus-visible {
     min-width:0;
   }
 
-  #navDrawerTitle{
-    font-size:1.15rem;
-    line-height:1.15;
-    margin:0;
-  }
+
 
   .nav-drawer-hint{
     font-size:0.84rem;
