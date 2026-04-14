@@ -118,6 +118,14 @@ Ide: Byg dateringsinterface til udaterede billeder  -  noget ala geotagger
 <aside id="navDrawer" class="nav-drawer" aria-hidden="true" aria-labelledby="navDrawerTitle">
   <div class="nav-drawer-header">
     <button type="button" class="drawer-action" id="navDrawerBack">Tilbage</button>
+	<div class="drawer-view-toggle">
+  <label>
+    <input type="radio" name="viewmode" id="Choice-of-list" checked> Liste
+  </label>
+  <label>
+    <input type="radio" name="viewmode" id="Choice-of-map"> Kort
+  </label>
+</div>
     <div class="nav-drawer-heading">
       <div id="navDrawerTitle">Vælg filter</div>
       <div id="navBreadcrumb" class="nav-breadcrumb"></div>
@@ -128,14 +136,7 @@ Ide: Byg dateringsinterface til udaterede billeder  -  noget ala geotagger
   <div id="navDrawerBody" class="nav-drawer-body"></div>
   <div class="nav-drawer-footer">
     <button type="button" class="drawer-footer-btn" id="navClearSelection">Nulstil</button>
-	<div class="drawer-view-toggle">
-  <label>
-    <input type="radio" name="viewmode" id="Choice-of-list" checked> Liste
-  </label>
-  <label>
-    <input type="radio" name="viewmode" id="Choice-of-map"> Kort
-  </label>
-</div>
+	
   </div>
 </aside>
 
