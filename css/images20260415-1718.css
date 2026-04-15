@@ -204,6 +204,9 @@ transform: translate3d(30em,0,0);
 	padding: 0.2em
 }
 
+
+
+
 .infotable{
 	color:darkgray;
 	font-size:medium;
@@ -282,11 +285,13 @@ h2 {
 	display: flex;
 	justify-content:center;
 
+
 }
 
 .nav{
 	/*background-color: #7f7f7177;*/
 }
+
 
 #topdiv {
 	height:200px;
@@ -403,6 +408,11 @@ nav ul li ul {
 	color: #fff;
   }
   
+  @media screen and (max-width: 768px) {
+	.mobile-nav {
+	  display: flex;
+	}
+  
 	nav ul.nav {
 	  visibility: hidden;
 	  transform: translateY(-120%);
@@ -460,7 +470,7 @@ nav ul li ul {
 	.dropdown.active > a:hover {
 	  background-position: 95% 50%;
 	}
-  
+  }
 
   .am-marker { position: relative; transform: translate(-50%, -100%); }
 .am-marker-img { width: 40px; height: 60px; object-fit: cover; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,.35); }
@@ -482,6 +492,7 @@ nav ul li ul {
   50%      { transform: translate(-50%, -100%) translateY(-10px); }
 }
 
+
 /* Optional: a generic bounce you can reuse elsewhere */
 .am-bounce {
   animation: amBounce 600ms ease-in-out infinite;
@@ -490,6 +501,7 @@ nav ul li ul {
   0%, 100% { transform: translate(-50%, -100%) translateY(0); }
   50%      { transform: translate(-50%, -100%) translateY(-10px); }
 }
+
 
 /* === Adaptive navigation replacement v11 === */
 .app-nav {
@@ -1129,6 +1141,8 @@ a:focus-visible {
     gap:2px;
     min-width:0;
   }
+
+
 
   .nav-drawer-hint{
     font-size:0.84rem;
