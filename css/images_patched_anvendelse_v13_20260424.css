@@ -690,11 +690,6 @@ nav ul li ul {
   white-space:nowrap;
 }
 
-.nav-drawer-hint:empty,
-.nav-breadcrumb:empty {
-  display: none;
-}
-
 .nav-drawer-body {
   padding: 0.75rem;
   overflow-y: auto;
@@ -834,48 +829,7 @@ nav ul li ul {
   color: #6b7280;
   margin-left: 0.5rem;
 }
-.nav-drawer-body.nav-root-anvendelse.layout-list {
-  gap: 6px;
-}
 
-.nav-root-anvendelse .drawer-option {
-  min-height: 0;
-  padding: 6px 12px;
-  align-items: baseline;
-}
-
-.nav-root-anvendelse .drawer-option-main {
-  display: grid;
-  grid-template-columns: minmax(12rem, max-content) minmax(0, 1fr);
-  column-gap: 18px;
-  align-items: baseline;
-  width: 100%;
-}
-
-.nav-root-anvendelse .drawer-option-label {
-  white-space: nowrap;
-  font-size: 0.95rem;
-  line-height: 1.15;
-}
-
-.nav-root-anvendelse .drawer-option-meta {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  margin: 0;
-  font-size: 0.82rem;
-  line-height: 1.15;
-}
-
-.nav-root-anvendelse .drawer-chevron {
-  flex: 0 0 auto;
-  margin-left: 14px;
-  font-size: 0.92rem;
-}
-
-.nav-root-anvendelse.layout-grid .drawer-option-main {
-  display: flex;
-}
 .drawer-option.is-selected .drawer-chevron {
   color: rgba(255,255,255,0.88);
 }
@@ -985,17 +939,6 @@ a:focus-visible {
   .mobile-nav {
     display: flex;
   }
-
-.nav-root-anvendelse .drawer-option-main {
-  grid-template-columns: 1fr;
-  row-gap: 2px;
-}
-
-.nav-root-anvendelse .drawer-option-meta {
-  white-space: normal;
-  overflow: visible;
-  text-overflow: clip;
-}
 
   nav ul.nav {
     visibility: hidden;
@@ -1264,3 +1207,72 @@ a:focus-visible {
     box-shadow:0 -1px 8px rgba(0,0,0,0.04);
   }
 }
+
+
+/* === v13: Anvendelse drawer refinement === */
+
+/* Avoid reserving visual space when JS intentionally returns an empty hint */
+.nav-drawer-hint:empty,
+.nav-breadcrumb:empty {
+  display: none;
+}
+
+/* Anvendelse list: make trip rows read as one compact line on desktop/laptop */
+.nav-drawer-body.nav-root-anvendelse.layout-list {
+  gap: 6px;
+}
+
+.nav-root-anvendelse .drawer-option {
+  min-height: 0;
+  padding: 6px 12px;
+  align-items: baseline;
+}
+
+.nav-root-anvendelse .drawer-option-main {
+  display: grid;
+  grid-template-columns: minmax(12rem, max-content) minmax(0, 1fr);
+  column-gap: 18px;
+  align-items: baseline;
+  width: 100%;
+}
+
+.nav-root-anvendelse .drawer-option-label {
+  white-space: nowrap;
+  font-size: 0.95rem;
+  line-height: 1.15;
+}
+
+.nav-root-anvendelse .drawer-option-meta {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.15;
+}
+
+.nav-root-anvendelse .drawer-chevron {
+  flex: 0 0 auto;
+  margin-left: 14px;
+  font-size: 0.92rem;
+}
+
+/* Group rows still behave like normal cards */
+.nav-root-anvendelse.layout-grid .drawer-option-main {
+  display: flex;
+}
+
+/* Keep Anvendelse readable on narrow screens */
+@media (max-width: 899px) {
+  .nav-root-anvendelse .drawer-option-main {
+    grid-template-columns: 1fr;
+    row-gap: 2px;
+  }
+
+  .nav-root-anvendelse .drawer-option-meta {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+  }
+}
+

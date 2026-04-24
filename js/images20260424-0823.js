@@ -610,44 +610,17 @@ function getBreadcrumbText() {
   return navState.stack.map(item => item.label).join(" › ");
 }
 
-function formatTripDate(dateString) {
-  if (!dateString) return "";
-  const parts = String(dateString).split("-");
-  if (parts.length !== 3) return dateString;
-  return parts[2] + "." + parts[1] + "." + parts[0];
-}
-
-function formatTripRange(trip) {
-  const start = formatTripDate(trip.startDate);
-  const end = formatTripDate(trip.endDate);
-  if (start && end && start !== end) return start + " – " + end;
-  return start || end || "";
-}
-
-function buildTripMeta(trip) {
-  const pieces = [];
-
-  const range = formatTripRange(trip);
-  if (trip.comment) pieces.push(trip.comment);
-  if (range) pieces.push(range);
-  if (typeof trip.count === "number" && trip.count > 0) {
-    pieces.push(trip.count + " billeder");
-  }
-
-  return pieces.join(" · ");
-}
-
 function getDrawerHint() {
   if (navState.currentRoot === "tid") {
-    if (isDesktopTimeChooser()) return "Vælg årti, år og måned.";
-    if (navState.stack.length === 0) return "Vælg et årti.";
-    if (navState.stack.length === 1) return "Vælg et år.";
-    return "Vælg en måned.";
+    if (isDesktopTimeChooser()) return "Vælg årti, år og måned. Panelet lukker automatisk, når måneden er valgt.";
+    if (navState.stack.length === 0) return "Vælg et årti. Derefter vælges år og måned.";
+    if (navState.stack.length === 1) return "Vælg et år i " + navState.stack[0].label + ".";
+    return "Vælg en måned. Valget åbner straks i " + (isListMode() ? "liste" : "kort") + "-visning.";
   }
-  if (navState.currentRoot === "sted") return "";
+  if (navState.currentRoot === "sted") return "Vælg et område. Valget åbner straks i " + (isListMode() ? "liste" : "kort") + "-visning.";
   if (navState.currentRoot === "anvendelse") {
-    if (navState.stack.length === 0) return "Vælg gruppe.";
-    return "";
+    if (navState.stack.length === 0) return "Vælg først en gruppe af ture.";
+    return "Vælg en tur. Valget åbner straks i " + (isListMode() ? "liste" : "kort") + "-visning.";
   }
   return "";
 }
@@ -750,7 +723,7 @@ function getNavItems() {
     const group = navState.stack[0].node;
     return (group.trips || []).map(trip => ({
       label: trip.title,
-      meta: buildTripMeta(trip),
+      meta: trip.comment || [trip.startDate, trip.endDate].filter(Boolean).join(" – "),
       hasChildren: false,
       key: "anv:" + trip.id,
       onSelect: () => selectAndApply({
@@ -863,11 +836,7 @@ function renderNavDrawer() {
   $("#navDrawerBack").toggleClass("is-hidden", navState.stack.length === 0 || isDesktopTimeChooser());
 
   const $body = $("#navDrawerBody");
-  
-  $body
-  .removeClass("layout-grid layout-list layout-time-columns nav-root-tid nav-root-sted nav-root-anvendelse")
-  .addClass(getCurrentLayoutClass() + " nav-root-" + navState.currentRoot)
-  .empty();
+  $body.removeClass("layout-grid layout-list layout-time-columns").addClass(getCurrentLayoutClass()).empty();
 
   if (isDesktopTimeChooser()) {
     renderTimeDesktopChooser($body);
@@ -898,7 +867,7 @@ function renderNavDrawer() {
     const isSelected = navState.activeSelection?.key && item.key === navState.activeSelection.key;
     const $btn = $("<button/>", {
       type: "button",
-     class: "drawer-option drawer-option-" + navState.currentRoot + (isSelected ? " is-selected" : "")
+      class: "drawer-option" + (isSelected ? " is-selected" : "")
     });
     const $main = $("<span/>", { class: "drawer-option-main" }).appendTo($btn);
     $("<span/>", { class: "drawer-option-label", text: item.label }).appendTo($main);
