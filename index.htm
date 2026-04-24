@@ -113,40 +113,35 @@ Ide: Byg dateringsinterface til udaterede billeder  -  noget ala geotagger
   <div id="activeSelection" class="active-selection">Vælg Tid, Sted eller Anvendelse</div>
 </nav>
 
-	<div id="navDrawerBackdrop" class="nav-drawer-backdrop" hidden></div>
+<div id="navDrawerBackdrop" class="nav-drawer-backdrop" hidden></div>
 
 <aside id="navDrawer" class="nav-drawer" aria-hidden="true" aria-labelledby="navDrawerTitle">
+  <div class="nav-drawer-header">
+    <div class="drawer-view-toggle">
+      <label class="view-toggle-option active" for="Choice-of-list">
+        <input type="radio" name="viewmode" id="Choice-of-list" checked>
+        <span>Liste</span>
+      </label>
 
-<div class="nav-drawer-header">
-  <div class="drawer-view-toggle">
-    <label class="view-toggle-option active" for="Choice-of-list">
-      <input type="radio" name="viewmode" id="Choice-of-list" checked>
-      <span>Liste</span>
-    </label>
+      <label class="view-toggle-option" for="Choice-of-map">
+        <input type="radio" name="viewmode" id="Choice-of-map">
+        <span>Kort</span>
+      </label>
+    </div>
 
-    <label class="view-toggle-option" for="Choice-of-map">
-      <input type="radio" name="viewmode" id="Choice-of-map">
-      <span>Kort</span>
-    </label>
+    <div class="nav-drawer-heading">
+      <div id="navDrawerTitle">Vælg filter</div>
+      <div id="navBreadcrumb" class="nav-breadcrumb"></div>
+      <div id="navDrawerHint" class="nav-drawer-hint"></div>
+    </div>
+
+    <button type="button" class="drawer-action" id="navDrawerClose">Luk</button>
   </div>
-
-  <div class="nav-drawer-heading">
-    <div id="navDrawerTitle">Vælg tid</div>
-    <div id="navDrawerHint" class="nav-drawer-hint"></div>
-  </div>
-
-  <button type="button" class="drawer-action" id="navDrawerClose">Luk</button>
-</div>
-	
-    
-    <div id="navDrawerTitle" >Vælg tid</div><button type="button" class="drawer-action ui-button ui-shadow ui-corner-all ui-widget ui-button-inherit" id="navDrawerClose">Luk</button>
-  </div>
-
 
   <div id="navDrawerBody" class="nav-drawer-body"></div>
+
   <div class="nav-drawer-footer">
     <button type="button" class="drawer-footer-btn" id="navClearSelection">Nulstil</button>
-	
   </div>
 </aside>
 

@@ -578,6 +578,12 @@ function openNavDrawer() {
 }
 
 function closeNavDrawer() {
+
+   const drawer = document.getElementById("navDrawer");
+
+  if (drawer && drawer.contains(document.activeElement)) {
+    document.activeElement.blur();
+  }
   $("#navDrawer").removeClass("is-open").attr("aria-hidden", "true");
   $("#navDrawerBackdrop").prop("hidden", true);
 }
