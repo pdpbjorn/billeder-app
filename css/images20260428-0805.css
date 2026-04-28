@@ -987,25 +987,22 @@ a:focus-visible {
   }
 
 .nav-root-anvendelse .drawer-option {
-  display: block;
-  height: auto !important;
-  min-height: 0 !important;
-  padding: 8px 10px;
-  overflow: visible;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: start;
+  column-gap: 8px;
+  padding: 7px 10px;
 }
 
 .nav-root-anvendelse .drawer-option-main {
-  display: block !important;
-  width: 100%;
+  display: block;
   min-width: 0;
 }
 
 .nav-root-anvendelse .drawer-option-label,
 .nav-root-anvendelse .drawer-option-meta {
   display: block;
-  white-space: normal !important;
-  overflow: visible !important;
-  text-overflow: clip !important;
+  white-space: normal;
   overflow-wrap: anywhere;
   word-break: normal;
 }
@@ -1015,15 +1012,15 @@ a:focus-visible {
 }
 
 .nav-root-anvendelse .drawer-option-meta {
-  margin-top: 3px;
-  line-height: 1.2;
-  padding-right: 2.5rem;
+  margin-top: 2px;
+  line-height: 1.15;
+  overflow: visible;
+  text-overflow: clip;
 }
 
 .nav-root-anvendelse .drawer-chevron {
-  float: right;
-  margin-left: 8px;
-  line-height: 1.2;
+  align-self: center;
+  margin-left: 0;
   white-space: nowrap;
 }
   nav ul.nav {
