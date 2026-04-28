@@ -882,8 +882,7 @@ nav ul li ul {
 
 .drawer-secondary-option {
   background: #edf2ff;
-  min-height: 0;
-  padding: 7px 10px;
+  min-height: 2.8rem;
 }
 
 .tv-focus-ring:focus-visible,
@@ -988,19 +987,16 @@ a:focus-visible {
   }
 
 .nav-root-anvendelse .drawer-option {
-  display: grid !important;
-  grid-template-columns: minmax(0, 1fr) auto;
-  column-gap: 8px;
-  align-items: center;
+  display: block;
   height: auto !important;
   min-height: 0 !important;
-  padding: 7px 10px;
+  padding: 8px 10px;
   overflow: visible;
 }
 
 .nav-root-anvendelse .drawer-option-main {
   display: block !important;
-  width: auto;
+  width: 100%;
   min-width: 0;
 }
 
@@ -1010,7 +1006,8 @@ a:focus-visible {
   white-space: normal !important;
   overflow: visible !important;
   text-overflow: clip !important;
-  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
+  word-break: normal;
 }
 
 .nav-root-anvendelse .drawer-option-label {
@@ -1018,17 +1015,15 @@ a:focus-visible {
 }
 
 .nav-root-anvendelse .drawer-option-meta {
-  margin-top: 2px;
+  margin-top: 3px;
   line-height: 1.2;
-  padding-right: 0;
+  padding-right: 2.5rem;
 }
 
 .nav-root-anvendelse .drawer-chevron {
-  float: none !important;
-  grid-column: 2;
-  grid-row: 1 / span 2;
-  align-self: center;
-  margin-left: 0;
+  float: right;
+  margin-left: 8px;
+  line-height: 1.2;
   white-space: nowrap;
 }
   nav ul.nav {
