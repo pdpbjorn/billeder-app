@@ -986,17 +986,43 @@ a:focus-visible {
     display: flex;
   }
 
+.nav-root-anvendelse .drawer-option {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: start;
+  column-gap: 8px;
+  padding: 7px 10px;
+}
+
 .nav-root-anvendelse .drawer-option-main {
-  grid-template-columns: 1fr;
-  row-gap: 2px;
+  display: block;
+  min-width: 0;
+}
+
+.nav-root-anvendelse .drawer-option-label,
+.nav-root-anvendelse .drawer-option-meta {
+  display: block;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+.nav-root-anvendelse .drawer-option-label {
+  line-height: 1.15;
 }
 
 .nav-root-anvendelse .drawer-option-meta {
-  white-space: normal;
+  margin-top: 2px;
+  line-height: 1.15;
   overflow: visible;
   text-overflow: clip;
 }
 
+.nav-root-anvendelse .drawer-chevron {
+  align-self: center;
+  margin-left: 0;
+  white-space: nowrap;
+}
   nav ul.nav {
     visibility: hidden;
     transform: translateY(-120%);
