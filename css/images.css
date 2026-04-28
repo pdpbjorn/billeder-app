@@ -990,43 +990,53 @@ a:focus-visible {
 .nav-root-anvendelse .drawer-option {
   display: grid !important;
   grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-rows: auto auto;
   column-gap: 8px;
-  align-items: center;
+  row-gap: 1px;
+
+  min-height: 42px !important;
   height: auto !important;
-  min-height: 0 !important;
-  padding: 7px 10px;
-  overflow: visible;
+  padding: 5px 10px !important;
+  align-items: center;
+  overflow: hidden;
 }
 
 .nav-root-anvendelse .drawer-option-main {
-  display: block !important;
-  width: auto;
-  min-width: 0;
-}
-
-.nav-root-anvendelse .drawer-option-label,
-.nav-root-anvendelse .drawer-option-meta {
-  display: block;
-  white-space: normal !important;
-  overflow: visible !important;
-  text-overflow: clip !important;
-  overflow-wrap: break-word;
+  display: contents !important;
 }
 
 .nav-root-anvendelse .drawer-option-label {
+  grid-column: 1;
+  grid-row: 1;
+
+  display: block;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+
   line-height: 1.15;
+  font-size: 0.92rem;
 }
 
 .nav-root-anvendelse .drawer-option-meta {
-  margin-top: 2px;
-  line-height: 1.2;
-  padding-right: 0;
+  grid-column: 1;
+  grid-row: 2;
+
+  display: block;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+
+  margin: 0;
+  line-height: 1.15;
+  font-size: 0.78rem;
 }
 
 .nav-root-anvendelse .drawer-chevron {
-  float: none !important;
   grid-column: 2;
-  grid-row: 1 / span 2;
+  grid-row: 1 / 3;
+
+  float: none !important;
   align-self: center;
   margin-left: 0;
   white-space: nowrap;
