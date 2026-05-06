@@ -1848,9 +1848,8 @@ async function UseOnMap(KMLfile,aDate){
 
 	//add button to open geotagging interface
 	const taggerbuttonDiv = document.createElement("div");
-  taggerbuttonDiv.className = "app-map-toolbar app-map-toolbar-secondary";
-  addMapControl(taggerbuttonDiv, map, "tagger");
-  map.controls[google.maps.ControlPosition.RIGHT_CENTER].push(taggerbuttonDiv);
+	addMapControl(taggerbuttonDiv, map,"tagger");
+	map.controls[google.maps.ControlPosition.RIGHT_CENTER].push(taggerbuttonDiv);
 
 	//create div for the use functions and append it to the mappage	
 	var sidepanel = $("<div/>",{"id":"sidepanel"}).css({"height":"100%","width":"33%","align-self":"flex-end","display":"flex","flex-direction":"column"})
@@ -1880,9 +1879,8 @@ function AddTreeBox(KMLfile){
 
 	//add a button to the map for displaying images from the trip's timeframe
 	const trippicsDiv = document.createElement("div");
-  trippicsDiv.className = "app-map-toolbar app-map-toolbar-trip";
-  addMapControl(trippicsDiv, map, "trippics");
-  map.controls[google.maps.ControlPosition.TOP_LEFT].push(trippicsDiv);
+		addMapControl(trippicsDiv, map,"trippics");
+		map.controls[google.maps.ControlPosition.TOP_CENTER].push(trippicsDiv);
 
 
 	var treebox = $("<div/>",{"id":"treebox"}).css({"height":"100%","width":"100%","overflow":"scroll"})
@@ -2258,15 +2256,19 @@ map = new google.maps.Map(document.getElementById('mapCanvas'), {
 	  });
 	
 */
-		//create the app map toolbar
-const mapToolbarDiv = document.createElement("div");
-mapToolbarDiv.className = "app-map-toolbar";
+		//create the map control buttons
 
-addMapControl(mapToolbarDiv, map, "close");
-addMapControl(mapToolbarDiv, map, "load");
-addMapControl(mapToolbarDiv, map, "thumbs");
-
-map.controls[google.maps.ControlPosition.TOP_LEFT].push(mapToolbarDiv);
+		const closeMapDiv = document.createElement("div"); //the close map button
+		addMapControl(closeMapDiv, map,"close"); //call the button builder
+		map.controls[google.maps.ControlPosition.TOP_CENTER].push(closeMapDiv); //add it to the map
+		
+		const loadOnMapDiv = document.createElement("div"); //load all images taken inside the map bounds as markder
+		addMapControl(loadOnMapDiv, map,"load");
+		map.controls[google.maps.ControlPosition.TOP_CENTER].push(loadOnMapDiv);
+		
+		const thumbsOnMapDiv = document.createElement("div"); //create thumbpage with all markers within map bounds
+		addMapControl(thumbsOnMapDiv, map,"thumbs");
+		map.controls[google.maps.ControlPosition.TOP_CENTER].push(thumbsOnMapDiv);
 	
 return map; //to the calling function 
 }
@@ -2484,18 +2486,24 @@ async function loadImagesInBoundsFromAreas(bounds) {
 
 
 function addMapControl(controlDiv, map, mapDoWhat) {
-  const controlUI = document.createElement("button");
-controlUI.type = "button";
-controlUI.className = "app-map-control app-map-control-" + mapDoWhat;
-controlDiv.appendChild(controlUI);
+  const controlUI = document.createElement("div");
+  controlUI.style.backgroundColor = "#fff";
+  controlUI.style.border = "2px solid #fff";
+  controlUI.style.borderRadius = "3px";
+  controlUI.style.boxShadow = "0 2px 6px rgba(0,0,0,3)";
+  controlUI.style.cursor = "pointer";
+  controlUI.style.marginBottom = "22px";
+  controlUI.style.textAlign = "center";
+  controlDiv.appendChild(controlUI);
 
-const controlIcon = document.createElement("span");
-controlIcon.className = "app-map-control-icon";
-controlUI.appendChild(controlIcon);
-
-const controlText = document.createElement("span");
-controlText.className = "app-map-control-text";
-controlUI.appendChild(controlText);
+  const controlText = document.createElement("div");
+  controlText.style.color = "rgb(25,25,25)";
+  controlText.style.fontFamily = "Roboto,Arial,sans-serif";
+  controlText.style.fontSize = "16px";
+  controlText.style.lineHeight = "38px";
+  controlText.style.paddingLeft = "5px";
+  controlText.style.paddingRight = "5px";
+  controlUI.appendChild(controlText);
 
   function boundsContainsPoint(bounds, geom) {
     if (!bounds || !geom) return false;
@@ -2512,9 +2520,7 @@ controlUI.appendChild(controlText);
 
   switch (mapDoWhat) {
     case "close":
-      controlIcon.textContent = "×";
-      controlText.textContent = "Luk kort";
-      controlUI.title = "Luk kort";
+      controlText.innerHTML = "Gå væk";
       controlUI.addEventListener("click", () => {
         $(".mappage").remove();
         window.location.href = "#initial";
@@ -2527,9 +2533,7 @@ controlUI.appendChild(controlText);
       // 1) Try to find intersecting area datasets via areas.geo.json (Sted datasets)
       // 2) Load those datasets + filter points inside bounds
       // 3) Deduplicate (areas can overlap) and show with AdvancedMarkers
-      controlIcon.textContent = "●";
-      controlText.textContent = "Markører";
-      controlUI.title = "Vis alle geotaggede billeder i det viste område";
+      controlText.innerHTML = "Se alle billeder fra dette område";
       controlUI.addEventListener("click", async () => {
         const b = currentMapBounds();
         if (!b) return;
@@ -2568,10 +2572,8 @@ controlUI.appendChild(controlText);
       // “Show the markers currently visible on the map in the thumb-page”
     
 
-  
-  controlIcon.textContent = "▦";
-  controlText.textContent = "Liste";
-  controlUI.title = "Se alle billeder fra det viste område som liste";      
+  controlUI.title = "Vis thumbnails for synlige markører";
+  controlUI.innerHTML = "Vis thumbnails";
 
   controlUI.addEventListener("click", function () {
 
@@ -2613,9 +2615,7 @@ controlUI.appendChild(controlText);
   break;
 
     case "trippics":
-      controlIcon.textContent = "📷";
-      controlText.textContent = "Turbilleder";
-      controlUI.title = "Vis billeder for denne tur";
+      controlText.innerHTML = "Vis billeder for denne tur";
       controlUI.classList.add("trippix");
       controlUI.addEventListener("click", async () => {
         const startDate = new Date(tripPixDates.startDate);
@@ -2645,9 +2645,7 @@ controlUI.appendChild(controlText);
       break;
 
     case "tagger":
-      controlIcon.textContent = "✚";
-      controlText.textContent = "Geotag";
-      controlUI.title = "Åbn geotagging";
+      controlText.innerHTML = "G";
       controlUI.addEventListener("click", () => { taggerInterface(); });
       break;
 

@@ -491,56 +491,6 @@ nav ul li ul {
   50%      { transform: translate(-50%, -100%) translateY(-10px); }
 }
 
-
-/* App map controls */
-.app-map-toolbar {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  margin: 10px;
-}
-
-.app-map-toolbar-trip {
-  margin-top: 92px;
-}
-
-.app-map-control {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-
-  min-height: 36px;
-  padding: 0 12px;
-
-  border: 1px solid rgba(0,0,0,0.18);
-  border-radius: 4px;
-
-  background: #fff;
-  color: #1f2933;
-
-  font-family: Roboto, Arial, sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-
-  box-shadow: 0 1px 4px rgba(0,0,0,0.28);
-  cursor: pointer;
-  white-space: nowrap;
-}
-
-.app-map-control:hover {
-  background: #f5f5f5;
-}
-
-.app-map-control-icon {
-  min-width: 1.1em;
-  text-align: center;
-  font-weight: 700;
-}
-
-.app-map-control-text {
-  display: inline-block;
-}
-
 /* === Adaptive navigation replacement v11 === */
 .app-nav {
   position: sticky;
@@ -1379,25 +1329,6 @@ a:focus-visible {
     background:rgba(0,0,0,0.85);
     color:white;
   }
-
-  .app-map-toolbar {
-  gap: 4px;
-  margin: 8px;
-}
-
-.app-map-control {
-  min-width: 40px;
-  min-height: 40px;
-  padding: 0 10px;
-}
-
-.app-map-control-text {
-  display: none;
-}
-
-.app-map-control-icon {
-  font-size: 18px;
-}
 }
 
 /* Large desktop only */
