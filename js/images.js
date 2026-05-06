@@ -2528,7 +2528,7 @@ controlUI.appendChild(controlText);
       // 2) Load those datasets + filter points inside bounds
       // 3) Deduplicate (areas can overlap) and show with AdvancedMarkers
       controlIcon.textContent = "●";
-      controlText.textContent = "Markører";
+      controlText.textContent = "Vis billeder";
       controlUI.title = "Vis alle geotaggede billeder i det viste område";
       controlUI.addEventListener("click", async () => {
         const b = currentMapBounds();
@@ -2570,7 +2570,7 @@ controlUI.appendChild(controlText);
 
   
   controlIcon.textContent = "▦";
-  controlText.textContent = "Liste";
+  controlText.textContent = "Se liste";
   controlUI.title = "Se alle billeder fra det viste område som liste";      
 
   controlUI.addEventListener("click", function () {
