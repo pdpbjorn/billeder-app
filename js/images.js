@@ -605,6 +605,41 @@ function getDrawerTitle() {
   return "Vælg filter";
 }
 
+function ensureFloatingFilterButton() {
+  let btn = document.getElementById("floatingFilterButton");
+
+  if (!btn) {
+    btn = document.createElement("button");
+    btn.type = "button";
+    btn.id = "floatingFilterButton";
+    btn.className = "floating-filter-btn";
+    btn.textContent = "☰ Filtre";
+    btn.addEventListener("click", showMainToolbar);
+    document.body.appendChild(btn);
+  }
+
+  return btn;
+}
+
+function showFloatingFilterButton() {
+  ensureFloatingFilterButton().hidden = false;
+}
+
+function hideFloatingFilterButton() {
+  const btn = document.getElementById("floatingFilterButton");
+  if (btn) btn.hidden = true;
+}
+
+function hideMainToolbar() {
+  $(".app-nav").addClass("app-nav-hidden");
+  showFloatingFilterButton();
+}
+
+function showMainToolbar() {
+  $(".app-nav").removeClass("app-nav-hidden");
+  hideFloatingFilterButton();
+}
+
 function getBreadcrumbText() {
   if (!navState.stack.length) return "";
   return navState.stack.map(item => item.label).join(" › ");
@@ -670,6 +705,8 @@ function selectAndApply(selection) {
   updateSelectionLabel();
   closeNavDrawer();
   selection.action();
+
+  hideMainToolbar();
 }
 
 function captureTimeColumnScrolls(){
@@ -2237,6 +2274,7 @@ function doFolder(fol,mother,doFolderDepth){
 //return map div with map instance
 function mapCreator()
 {
+  hideMainToolbar();
 	//create map div and append it
 	var map_canvas = $("<div/>",{"id":"mapCanvas"}).css({"height":"100%"})
 	$("<div/>",{"id":"mappage","data-role":"page", "class":"jqm-demos ui-page ui-page-theme-a ui-page-active mappage", "data-quicklinks":"true"})
@@ -3157,5 +3195,6 @@ function resetCurrentSelection() {
   closeNavDrawer();
   expandToolbar();
   $(".toolbar-btn[data-nav-root]").removeClass("is-active");
+  showMainToolbar();
   restoreHomeSplash();
 }

@@ -551,6 +551,36 @@ nav ul li ul {
   padding-bottom: 4px;
 }
 
+.app-nav-hidden {
+  display: none !important;
+}
+
+.floating-filter-btn {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 1600;
+
+  min-height: 38px;
+  padding: 0 14px;
+
+  border: 1px solid rgba(0,0,0,0.18);
+  border-radius: 10px;
+
+  background: rgba(255,255,255,0.96);
+  color: #1f2933;
+
+  font-weight: 700;
+  font-size: 0.95rem;
+
+  box-shadow: 0 2px 10px rgba(0,0,0,0.22);
+  cursor: pointer;
+}
+
+.floating-filter-btn:hover {
+  background: #f4f7ff;
+}
+
 .app-toolbar {
   padding: 0.35rem 0.7rem;
 }
@@ -1095,6 +1125,13 @@ a:focus-visible {
   .mobile-nav {
     display: flex;
   }
+
+  .floating-filter-btn {
+  top: 8px;
+  left: 8px;
+  min-height: 40px;
+  padding: 0 12px;
+}
 
 .nav-drawer-header {
   display: grid;
