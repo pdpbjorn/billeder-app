@@ -255,6 +255,7 @@ h2 {
 		margin:3px auto;
 		box-shadow: 0px 2px 1px white inset, 0px -2px 8px white, 0px 2px 5px rgba(0, 0, 0, 0.1), 0px 8px 10px rgba(0, 0, 0, 0.1);
 		-webkit-transition:box-shadow 0.5s;
+    transition:box-shadow 0.5s;
 }
 #counters{
 	font-size: small;
@@ -284,9 +285,7 @@ h2 {
 
 }
 
-.nav{
-	/*background-color: #7f7f7177;*/
-}
+
 
 #topdiv {
 	height:200px;
@@ -555,6 +554,8 @@ nav ul li ul {
   display: none !important;
 }
 
+
+
 .floating-filter-btn {
   position: fixed;
   top: 12px;
@@ -579,6 +580,18 @@ nav ul li ul {
 
 .floating-filter-btn:hover {
   background: #f4f7ff;
+}
+body.map-mode .floating-filter-btn {
+  top: 78px;
+}
+body.map-mode .app-nav:not(.app-nav-hidden) {
+  position: fixed;
+  top: 78px;
+  left: 12px;
+  right: auto;
+  width: min(560px, calc(100vw - 24px));
+  z-index: 1550;
+  border-radius: 14px;
 }
 
 .app-toolbar {

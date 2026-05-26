@@ -417,6 +417,7 @@ function setMarkerBounce(marker, on) {
 				switch(e.key) {
 					case 'Escape': //if 'escape then close map and go to thumbpage
 						$(".mappage").remove();
+            exitMapMode();
 						window.location.href = "#initial";
 					break;
 				}
@@ -613,16 +614,27 @@ function ensureFloatingFilterButton() {
     btn.type = "button";
     btn.id = "floatingFilterButton";
     btn.className = "floating-filter-btn";
-    btn.textContent = "☰ Filtre";
-    btn.addEventListener("click", showMainToolbar);
+    btn.addEventListener("click", toggleMainToolbar);
     document.body.appendChild(btn);
   }
 
+  updateFloatingFilterButtonText();
   return btn;
 }
 
+function updateFloatingFilterButtonText() {
+  const btn = document.getElementById("floatingFilterButton");
+  if (!btn) return;
+
+  btn.textContent = $(".app-nav").hasClass("app-nav-hidden")
+    ? "☰ Filtre"
+    : "× Filtre";
+}
+
 function showFloatingFilterButton() {
-  ensureFloatingFilterButton().hidden = false;
+  const btn = ensureFloatingFilterButton();
+  btn.hidden = false;
+  updateFloatingFilterButtonText();
 }
 
 function hideFloatingFilterButton() {
@@ -633,12 +645,33 @@ function hideFloatingFilterButton() {
 function hideMainToolbar() {
   $(".app-nav").addClass("app-nav-hidden");
   showFloatingFilterButton();
+  updateFloatingFilterButtonText();
 }
 
 function showMainToolbar() {
   $(".app-nav").removeClass("app-nav-hidden");
-  hideFloatingFilterButton();
+  showFloatingFilterButton();   // keep button visible so it can close again
+  updateFloatingFilterButtonText();
 }
+
+function toggleMainToolbar() {
+  if ($(".app-nav").hasClass("app-nav-hidden")) {
+    showMainToolbar();
+  } else {
+    hideMainToolbar();
+  }
+}
+
+function enterMapMode() {
+  document.body.classList.add("map-mode");
+  hideMainToolbar();
+}
+
+function exitMapMode() {
+  document.body.classList.remove("map-mode");
+}
+
+
 
 function getBreadcrumbText() {
   if (!navState.stack.length) return "";
@@ -1105,6 +1138,7 @@ function injectNoDate(){
 	loadDataset("data/problems/no-timestamp.geo.json", (ds) => {
 	if (isListMode()) {
 	buildTiles(ds);
+  hideMainToolbar();
 	} else {
 		showOnMap(getGeotaggedFeatures(ds));
 	window.location.href = "#mappage";
@@ -1124,6 +1158,7 @@ function injectMonth(month){
 	loadDataset("data/tid/" + month + ".geo.json", (ds) => {
 	if (isListMode()) {
 	buildTiles(ds);
+  hideMainToolbar();
 	} else {
 		showOnMap(getGeotaggedFeatures(ds));
 	window.location.href = "#mappage";
@@ -1144,6 +1179,7 @@ function injectTrip(tripId, KMLfile, startDate, endDate){
 	loadDataset("data/anvendelse/" + tripId + ".geo.json", (ds) => {
 		if (isListMode()) {
 			buildTiles(ds);
+      hideMainToolbar();
 		} else {
 			UseOnMap(KMLfile);
 			window.location.href = "#mappage" 
@@ -1161,6 +1197,7 @@ function injectArea(areaId){
 	loadDataset("data/sted/" + areaId + ".geo.json", (ds) => {
 	if (isListMode()) {
 		buildTiles(ds);
+    hideMainToolbar();
 	} else {
 		showOnMap(getGeotaggedFeatures(ds));
 		window.location.href = "#mappage";
@@ -1806,6 +1843,7 @@ async function showOnMap(mapFeatureCollection) {
       t.style.cursor = "pointer";
       t.onclick = function () {
         $(".mappage").remove();
+        exitMapMode();
         imgPage(featureIndex);
       };
       div.appendChild(t);
@@ -1874,6 +1912,7 @@ async function UseOnMap(KMLfile,aDate){
         } catch(e){}
 
         $(".mappage").remove();
+        exitMapMode();
         map = null;
       }
 
@@ -2274,6 +2313,7 @@ function doFolder(fol,mother,doFolderDepth){
 //return map div with map instance
 function mapCreator()
 {
+  enterMapMode();
   hideMainToolbar();
 	//create map div and append it
 	var map_canvas = $("<div/>",{"id":"mapCanvas"}).css({"height":"100%"})
@@ -2555,6 +2595,7 @@ controlUI.appendChild(controlText);
       controlUI.title = "Luk kort";
       controlUI.addEventListener("click", () => {
         $(".mappage").remove();
+        exitMapMode();
         window.location.href = "#initial";
         setTimeout(function () { window.scrollBy(0, thumbPageScroll); }, 200);
       });
@@ -2637,6 +2678,7 @@ controlUI.appendChild(controlText);
     }
 
     $(".mappage").remove();
+    exitMapMode();
 
     setCurrentDataset({
       type: "FeatureCollection",
