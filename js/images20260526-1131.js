@@ -645,20 +645,13 @@ function hideFloatingFilterButton() {
 
 function hideMainToolbar() {
   $(".app-nav").addClass("app-nav-hidden");
-
-  document.body.classList.remove("toolbar-floating");
-
   showFloatingFilterButton();
   updateFloatingFilterButtonText();
 }
 
 function showMainToolbar() {
-  $(".app-nav")
-    .removeClass("app-nav-hidden");
-
-  document.body.classList.add("toolbar-floating");
-
-  showFloatingFilterButton();
+  $(".app-nav").removeClass("app-nav-hidden");
+  showFloatingFilterButton();   // keep button visible so it can close again
   updateFloatingFilterButtonText();
 }
 

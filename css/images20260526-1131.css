@@ -542,41 +542,19 @@ nav ul li ul {
 
 /* === Adaptive navigation replacement v11 === */
 .app-nav {
-  position: relative;
+  position: sticky;
+  top: 0;
   z-index: 1200;
-
   background: #d8dbd2;
   box-shadow: 0 2px 10px rgba(0,0,0,0.10);
-
-  border-radius: 0 0 18px 18px;
-
-  margin: 0 auto 18px;
-  padding: 12px 16px;
-
-  width: min(1100px, calc(100vw - 32px));
+  padding-bottom: 4px;
 }
 
 .app-nav-hidden {
   display: none !important;
 }
 
-body.toolbar-floating .app-nav:not(.app-nav-hidden) {
-  position: fixed;
-  top: 58px;
-  left: 12px;
 
-  width: min(420px, calc(100vw - 24px));
-  max-width: calc(100vw - 24px);
-
-  border-radius: 16px;
-
-  z-index: 1550;
-}
-
-body:not(.map-mode) .app-nav {
-  position: sticky;
-  top: 0;
-}
 
 .floating-filter-btn {
   position: fixed;
