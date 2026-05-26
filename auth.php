@@ -1,8 +1,4 @@
 <?php
-// auth.php
-// Used by nginx auth_request to validate a signed cookie.
-// IMPORTANT: Keep this file free of BOM/whitespace before <?php and avoid a closing ?> at EOF.
-
 require '/etc/nginx/site-auth/auth_config.php';
 
 function fail(): void {
@@ -30,6 +26,5 @@ if (!is_int($exp) || time() > $exp) fail();
 $expected = hash_hmac('sha256', $payloadB64, APP_SECRET);
 if (!hash_equals($expected, $sigHex)) fail();
 
-// OK
 http_response_code(200);
 exit;
