@@ -581,10 +581,8 @@ nav ul li ul {
 .floating-filter-btn:hover {
   background: #f4f7ff;
 }
-
-
 body.map-mode .floating-filter-btn {
-  display: none !important;
+  top: 78px;
 }
 
 

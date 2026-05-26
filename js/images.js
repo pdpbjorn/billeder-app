@@ -418,6 +418,7 @@ function setMarkerBounce(marker, on) {
 					case 'Escape': //if 'escape then close map and go to thumbpage
 						$(".mappage").remove();
             exitMapMode();
+            hideMainToolbar();
 						window.location.href = "#initial";
 					break;
 				}
@@ -1844,6 +1845,7 @@ async function showOnMap(mapFeatureCollection) {
       t.onclick = function () {
         $(".mappage").remove();
         exitMapMode();
+        hideMainToolbar();
         imgPage(featureIndex);
       };
       div.appendChild(t);
@@ -1913,6 +1915,7 @@ async function UseOnMap(KMLfile,aDate){
 
         $(".mappage").remove();
         exitMapMode();
+        hideMainToolbar();
         map = null;
       }
 
@@ -2596,6 +2599,7 @@ controlUI.appendChild(controlText);
       controlUI.addEventListener("click", () => {
         $(".mappage").remove();
         exitMapMode();
+        hideMainToolbar();
         window.location.href = "#initial";
         setTimeout(function () { window.scrollBy(0, thumbPageScroll); }, 200);
       });
@@ -2678,6 +2682,7 @@ controlUI.appendChild(controlText);
     }
 
     $(".mappage").remove();
+    hideMainToolbar();
     exitMapMode();
 
     setCurrentDataset({
