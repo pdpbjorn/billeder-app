@@ -1149,7 +1149,7 @@ a:focus-visible {
 
 body.map-mode .app-nav:not(.app-nav-hidden) {
   position: fixed;
-  top: 158px;
+  top: 58px;
   left: 8px;
   right: 8px;
   width: auto;
