@@ -256,7 +256,6 @@ function ensureAdvancedMarkerCss() {
   transform:translate(-50%,-100%);
   transform-origin:50% 100%;
   pointer-events:auto;
-  transition:transform .16s ease;
 }
 .am-anim{
   position:relative;
@@ -1663,122 +1662,6 @@ function setClipboard(value) {
 let photoMarkers = [];
 let photoInfoWindow = null;
 
-function makePhotoThumbUrl(feature) {
-  const img = feature?.properties?.image;
-  if (!img) return "";
-
-  return "Foto/" +
-    img.substring(0, img.lastIndexOf("/")) +
-    "/.thumb/thumb-" +
-    img.substring(img.lastIndexOf("/") + 1);
-}
-
-function openPhotoFlyout(feature, position, removeMapBeforeImage) {
-  closeAllInfoWindows();
-
-  const thumbUrl = makePhotoThumbUrl(feature);
-  const featureIndex = feature?.properties?.index;
-  if (!thumbUrl) return;
-
-  const div = document.createElement("div");
-  const t = document.createElement("img");
-
-  t.src = thumbUrl;
-  t.style.height = "150px";
-  t.style.cursor = "pointer";
-
-  t.onclick = function () {
-    if (removeMapBeforeImage) {
-      $(".mappage").remove();
-      exitMapMode();
-      hideMainToolbar();
-    }
-    imgPage(featureIndex);
-  };
-
-  div.appendChild(t);
-
-  photoInfoWindow.setContent(div);
-  photoInfoWindow.setPosition(position);
-  photoInfoWindow.setOptions({ pixelOffset: new google.maps.Size(0, -20) });
-  photoInfoWindow.open(map);
-}
-
-function wirePhotoMarker(marker, feature, position, removeMapBeforeImage) {
-  marker.__feature = feature;
-  marker.__photoBasePosition = position;
-
-  marker.addListener("gmp-click", () => {
-    openPhotoFlyout(feature, position, removeMapBeforeImage);
-  });
-
-  if (marker.content) {
-    marker.content.addEventListener("mouseenter", () => {
-      openPhotoFlyout(feature, position, removeMapBeforeImage);
-    });
-  }
-}
-
-function photoMarkerKey(marker) {
-  const p = marker.__photoBasePosition;
-  if (!p) return "";
-  return Number(p.lat).toFixed(7) + "," + Number(p.lng).toFixed(7);
-}
-
-function setMarkerVisualOffset(marker, x, y) {
-  const anchor = marker.content?.querySelector?.(".am-anchor");
-  if (!anchor) return;
-
-  anchor.style.transform =
-    "translate(calc(-50% + " + x + "px), calc(-100% + " + y + "px))";
-}
-
-function setPhotoGroupSpread(group, spread) {
-  const n = group.length;
-  const radius = Math.min(64, 24 + n * 4);
-
-  group.forEach((marker, i) => {
-    const angle = -Math.PI / 2 + (2 * Math.PI * i / n);
-    const x = spread ? Math.round(Math.cos(angle) * radius) : 0;
-    const y = spread ? Math.round(Math.sin(angle) * radius) : 0;
-
-    setMarkerVisualOffset(marker, x, y);
-    marker.zIndex = spread ? 10000 + i : undefined;
-  });
-}
-
-function enablePhotoOverlapSpreading(markers) {
-  const groups = new Map();
-
-  markers.forEach(marker => {
-    const key = photoMarkerKey(marker);
-    if (!key) return;
-    if (!groups.has(key)) groups.set(key, []);
-    groups.get(key).push(marker);
-  });
-
-  groups.forEach(group => {
-    if (group.length < 2) return;
-
-    let collapseTimer = null;
-
-    group.forEach(marker => {
-      if (!marker.content) return;
-
-      marker.content.addEventListener("mouseenter", () => {
-        clearTimeout(collapseTimer);
-        setPhotoGroupSpread(group, true);
-      });
-
-      marker.content.addEventListener("mouseleave", () => {
-        collapseTimer = setTimeout(() => {
-          setPhotoGroupSpread(group, false);
-        }, 650);
-      });
-    });
-  });
-}
-
 // Trip/KML marker info window (single instance so we can close previous popups)
 let tripInfoWindow = null;
 
@@ -1856,7 +1739,7 @@ async function showTripPhotosOnMap(mapFeatureCollection, opts = {}) {
     });
 
     marker.__feature = f;
-/*
+
     marker.addListener("gmp-click", () => {
       closeAllInfoWindows();
 
@@ -1887,9 +1770,6 @@ async function showTripPhotosOnMap(mapFeatureCollection, opts = {}) {
       photoInfoWindow.setOptions({ pixelOffset: new google.maps.Size(0, -20) });
       photoInfoWindow.open(map);
     });
-*/
-
-wirePhotoMarker(marker, f, position, false);
 
     photoMarkers.push(marker);
     bounds.extend(position);
@@ -1898,9 +1778,6 @@ wirePhotoMarker(marker, f, position, false);
   if (fit && photoMarkers.length) {
     map.fitBounds(bounds, 10);
   }
-
-
-  enablePhotoOverlapSpreading(photoMarkers);
 
   if (window.markerClusterer && photoMarkers.length > 1) {
     photoCluster = new markerClusterer.MarkerClusterer({
@@ -1954,7 +1831,7 @@ async function showOnMap(mapFeatureCollection) {
     });
 
     marker.__feature = f;
-/*
+
     marker.addListener("gmp-click", () => {
       closeAllInfoWindows();
       const img = f.properties.image;
@@ -1985,21 +1862,14 @@ async function showOnMap(mapFeatureCollection) {
       photoInfoWindow.setOptions({ pixelOffset: new google.maps.Size(0, -20) });
       photoInfoWindow.open(map);
     });
-*/
-wirePhotoMarker(marker, f, position, true);
-
 
     photoMarkers.push(marker);
     bounds.extend(position);
   });
 
-
   if (photoMarkers.length) {
     map.fitBounds(bounds, 10);
   }
-
-enablePhotoOverlapSpreading(photoMarkers);
-
 
   // ---- CLUSTERING ----
   // Requires: <script src="https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js"></script>
