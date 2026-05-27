@@ -1708,13 +1708,75 @@ function wirePhotoMarker(marker, feature, position, removeMapBeforeImage) {
   marker.__feature = feature;
   marker.__photoBasePosition = position;
 
+  let hoverCloseTimer = null;
+
+  function openHoverFlyout() {
+    clearTimeout(hoverCloseTimer);
+
+    closeAllInfoWindows();
+
+    const thumbUrl = makePhotoThumbUrl(feature);
+    const featureIndex = feature?.properties?.index;
+    if (!thumbUrl) return;
+
+    const div = document.createElement("div");
+    div.className = "photo-hover-flyout";
+
+    const t = document.createElement("img");
+    t.src = thumbUrl;
+    t.style.height = "150px";
+    t.style.cursor = "pointer";
+
+    t.onclick = function () {
+      if (removeMapBeforeImage) {
+        $(".mappage").remove();
+        exitMapMode();
+        hideMainToolbar();
+      }
+
+      imgPage(featureIndex);
+    };
+
+    div.appendChild(t);
+
+    div.addEventListener("mouseenter", () => {
+      clearTimeout(hoverCloseTimer);
+    });
+
+    div.addEventListener("mouseleave", () => {
+      hoverCloseTimer = setTimeout(() => {
+        photoInfoWindow.close();
+      }, 180);
+    });
+
+    photoInfoWindow.setContent(div);
+    photoInfoWindow.setPosition(position);
+    photoInfoWindow.setOptions({
+      pixelOffset: new google.maps.Size(0, -20)
+    });
+
+    photoInfoWindow.open(map);
+  }
+
+  function scheduleClose() {
+    clearTimeout(hoverCloseTimer);
+
+    hoverCloseTimer = setTimeout(() => {
+      photoInfoWindow.close();
+    }, 180);
+  }
+
   marker.addListener("gmp-click", () => {
-    openPhotoFlyout(feature, position, removeMapBeforeImage);
+    openHoverFlyout();
   });
 
   if (marker.content) {
     marker.content.addEventListener("mouseenter", () => {
-      openPhotoFlyout(feature, position, removeMapBeforeImage);
+      openHoverFlyout();
+    });
+
+    marker.content.addEventListener("mouseleave", () => {
+      scheduleClose();
     });
   }
 }
