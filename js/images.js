@@ -1663,6 +1663,166 @@ function setClipboard(value) {
 let photoMarkers = [];
 let photoInfoWindow = null;
 
+let activeSpiderGroup = null;
+let activeSpiderLines = [];
+let activeSpiderMouseMove = null;
+
+function makePhotoThumbUrl(feature) {
+  const img = feature?.properties?.image;
+  if (!img) return "";
+
+  return "Foto/" +
+    img.substring(0, img.lastIndexOf("/")) +
+    "/.thumb/thumb-" +
+    img.substring(img.lastIndexOf("/") + 1);
+}
+
+function openPhotoPreview(feature, position) {
+  closeAllInfoWindows();
+
+  const thumbUrl = makePhotoThumbUrl(feature);
+  if (!thumbUrl) return;
+
+  const div = document.createElement("div");
+  const t = document.createElement("img");
+
+  t.src = thumbUrl;
+  t.style.height = "150px";
+
+  div.appendChild(t);
+
+  photoInfoWindow.setContent(div);
+  photoInfoWindow.setPosition(position);
+  photoInfoWindow.setOptions({ pixelOffset: new google.maps.Size(0, -20) });
+  photoInfoWindow.open(map);
+}
+
+function openPhotoImage(feature, removeMapBeforeImage) {
+  const featureIndex = feature?.properties?.index;
+  if (featureIndex == null) return;
+
+  if (removeMapBeforeImage) {
+    $(".mappage").remove();
+    exitMapMode();
+    hideMainToolbar();
+  }
+
+  imgPage(featureIndex);
+}
+
+function photoCoordKey(feature) {
+  const c = feature?.geometry?.coordinates;
+  if (!c || c.length < 2) return "";
+  return Number(c[1]).toFixed(7) + "," + Number(c[0]).toFixed(7);
+}
+
+function groupPhotoMarkersByCoordinate(markers) {
+  const groups = new Map();
+
+  markers.forEach(marker => {
+    const key = marker.__photoCoordKey;
+    if (!key) return;
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key).push(marker);
+  });
+
+  return groups;
+}
+
+function latLngToPixel(latLng) {
+  const projection = map.getProjection();
+  const zoom = map.getZoom();
+  const scale = Math.pow(2, zoom);
+  const point = projection.fromLatLngToPoint(new google.maps.LatLng(latLng));
+  return {
+    x: point.x * scale,
+    y: point.y * scale
+  };
+}
+
+function pixelToLatLng(pixel) {
+  const projection = map.getProjection();
+  const zoom = map.getZoom();
+  const scale = Math.pow(2, zoom);
+  const point = new google.maps.Point(pixel.x / scale, pixel.y / scale);
+  return projection.fromPointToLatLng(point).toJSON();
+}
+
+function offsetLatLngByPixels(origin, dx, dy) {
+  const p = latLngToPixel(origin);
+  return pixelToLatLng({
+    x: p.x + dx,
+    y: p.y + dy
+  });
+}
+
+function clearSpiderLines() {
+  activeSpiderLines.forEach(line => line.setMap(null));
+  activeSpiderLines = [];
+}
+
+function collapseSpiderGroup() {
+  if (!activeSpiderGroup) return;
+
+  activeSpiderGroup.forEach(marker => {
+    marker.position = marker.__photoBasePosition;
+    marker.zIndex = undefined;
+  });
+
+  clearSpiderLines();
+
+  if (activeSpiderMouseMove) {
+    google.maps.event.removeListener(activeSpiderMouseMove);
+    activeSpiderMouseMove = null;
+  }
+
+  activeSpiderGroup = null;
+  closeAllInfoWindows();
+}
+
+function spiderfyGroup(group) {
+  collapseSpiderGroup();
+
+  if (!group || group.length < 2) return;
+
+  activeSpiderGroup = group;
+
+  const origin = group[0].__photoBasePosition;
+  const radius = Math.min(76, 28 + group.length * 5);
+
+  group.forEach((marker, i) => {
+    const angle = -Math.PI / 2 + (2 * Math.PI * i / group.length);
+    const dx = Math.cos(angle) * radius;
+    const dy = Math.sin(angle) * radius;
+
+    const spreadPosition = offsetLatLngByPixels(origin, dx, dy);
+
+    marker.__photoSpreadPosition = spreadPosition;
+    marker.position = spreadPosition;
+    marker.zIndex = 10000 + i;
+
+    const line = new google.maps.Polyline({
+      map,
+      path: [origin, spreadPosition],
+      strokeColor: "#444",
+      strokeOpacity: 0.45,
+      strokeWeight: 1
+    });
+
+    activeSpiderLines.push(line);
+  });
+
+  activeSpiderMouseMove = map.addListener("mousemove", e => {
+    const mouse = latLngToPixel(e.latLng);
+    const center = latLngToPixel(origin);
+    const dist = Math.hypot(mouse.x - center.x, mouse.y - center.y);
+
+    if (dist > radius + 45) {
+      collapseSpiderGroup();
+    }
+  });
+}
+
 function makePhotoThumbUrl(feature) {
   const img = feature?.properties?.image;
   if (!img) return "";
@@ -1707,78 +1867,41 @@ function openPhotoFlyout(feature, position, removeMapBeforeImage) {
 function wirePhotoMarker(marker, feature, position, removeMapBeforeImage) {
   marker.__feature = feature;
   marker.__photoBasePosition = position;
-
-  let hoverCloseTimer = null;
-
-  function openHoverFlyout() {
-    clearTimeout(hoverCloseTimer);
-
-    closeAllInfoWindows();
-
-    const thumbUrl = makePhotoThumbUrl(feature);
-    const featureIndex = feature?.properties?.index;
-    if (!thumbUrl) return;
-
-    const div = document.createElement("div");
-    div.className = "photo-hover-flyout";
-
-    const t = document.createElement("img");
-    t.src = thumbUrl;
-    t.style.height = "150px";
-    t.style.cursor = "pointer";
-
-    t.onclick = function () {
-      if (removeMapBeforeImage) {
-        $(".mappage").remove();
-        exitMapMode();
-        hideMainToolbar();
-      }
-
-      imgPage(featureIndex);
-    };
-
-    div.appendChild(t);
-
-    div.addEventListener("mouseenter", () => {
-      clearTimeout(hoverCloseTimer);
-    });
-
-    div.addEventListener("mouseleave", () => {
-      hoverCloseTimer = setTimeout(() => {
-        photoInfoWindow.close();
-      }, 180);
-    });
-
-    photoInfoWindow.setContent(div);
-    photoInfoWindow.setPosition(position);
-    photoInfoWindow.setOptions({
-      pixelOffset: new google.maps.Size(0, -20)
-    });
-
-    photoInfoWindow.open(map);
-  }
-
-  function scheduleClose() {
-    clearTimeout(hoverCloseTimer);
-
-    hoverCloseTimer = setTimeout(() => {
-      photoInfoWindow.close();
-    }, 180);
-  }
+  marker.__photoCoordKey = photoCoordKey(feature);
 
   marker.addListener("gmp-click", () => {
-    openHoverFlyout();
+    const group = marker.__photoGroup || [marker];
+
+    if (group.length > 1 && activeSpiderGroup !== group) {
+      spiderfyGroup(group);
+      return;
+    }
+
+    openPhotoImage(feature, removeMapBeforeImage);
   });
 
   if (marker.content) {
     marker.content.addEventListener("mouseenter", () => {
-      openHoverFlyout();
+      const previewPosition =
+        marker.__photoSpreadPosition ||
+        marker.__photoBasePosition;
+
+      openPhotoPreview(feature, previewPosition);
     });
 
     marker.content.addEventListener("mouseleave", () => {
-      scheduleClose();
+      photoInfoWindow.close();
     });
   }
+}
+function enablePhotoSpiderGroups(markers) {
+  const groups = groupPhotoMarkersByCoordinate(markers);
+
+  groups.forEach(group => {
+    group.forEach(marker => {
+      marker.__photoGroup = group;
+    });
+  });
 }
 
 function photoMarkerKey(marker) {
@@ -1871,6 +1994,7 @@ function selectTreeNode(nodeId) {
 }
 
 function clearPhotoMarkers() {
+  collapseSpiderGroup();
   if (photoCluster) {
     try { photoCluster.clearMarkers(); } catch (_) {}
     try { photoCluster.setMap(null); } catch (_) {}
@@ -1952,7 +2076,7 @@ async function showTripPhotosOnMap(mapFeatureCollection, opts = {}) {
 */
 
 wirePhotoMarker(marker, f, position, false);
-
+enablePhotoSpiderGroups(photoMarkers);
     photoMarkers.push(marker);
     bounds.extend(position);
   });
@@ -1962,7 +2086,7 @@ wirePhotoMarker(marker, f, position, false);
   }
 
 
-  enablePhotoOverlapSpreading(photoMarkers);
+
 
   if (window.markerClusterer && photoMarkers.length > 1) {
     photoCluster = new markerClusterer.MarkerClusterer({
@@ -2049,7 +2173,7 @@ async function showOnMap(mapFeatureCollection) {
     });
 */
 wirePhotoMarker(marker, f, position, true);
-
+enablePhotoSpiderGroups(photoMarkers);
 
     photoMarkers.push(marker);
     bounds.extend(position);
@@ -2060,7 +2184,7 @@ wirePhotoMarker(marker, f, position, true);
     map.fitBounds(bounds, 10);
   }
 
-enablePhotoOverlapSpreading(photoMarkers);
+
 
 
   // ---- CLUSTERING ----
