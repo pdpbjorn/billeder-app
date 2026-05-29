@@ -279,54 +279,40 @@ function ensureAdvancedMarkerCss() {
   -webkit-filter:none !important;
   pointer-events:auto;
 }
-.am-marker-dot{
-  width:12px;
-  height:12px;
-  border-radius:50%;
-  background:#d00;
+.am-marker-dot{width:12px;height:12px;border-radius:50%;background:#d00}
+.photo-multi{
+  transform:scale(1.18);
 }
 
-/* For photo markers, place the dot center exactly on the map coordinate */
-.am-anim.photo .am-marker-dot{
-  position:absolute;
-  left:50%;
-  bottom:-6px;
-  transform:translateX(-50%);
-}
-
-/* Collapsed multi-marker badge, centered on the actual dot */
-.am-anim.photo.photo-multi::after{
+.photo-multi::after{
   content:"";
   position:absolute;
-  left:50%;
-  bottom:-17px;
-  width:34px;
-  height:34px;
-  transform:translateX(-50%);
-  border:3px solid #d40000;
+  inset:-4px;
+  border:3px solid #ffffff;
   border-radius:50%;
-  box-shadow:0 0 0 2px #fff, 0 0 8px rgba(0,0,0,.45);
+  box-shadow:
+    0 0 0 2px #d40000,
+    0 0 8px rgba(0,0,0,.45);
   pointer-events:none;
 }
 
-.am-anim.photo.photo-multi::before{
+.photo-multi::before{
   content:"+";
   position:absolute;
-  left:calc(50% + 10px);
-  bottom:8px;
-  width:18px;
-  height:18px;
+  right:-7px;
+  top:-7px;
+  width:16px;
+  height:16px;
   border-radius:50%;
   background:#d40000;
   color:#fff;
-  font-size:13px;
+  font-size:12px;
   font-weight:bold;
   display:flex;
   align-items:center;
   justify-content:center;
   box-shadow:0 0 4px rgba(0,0,0,.4);
   z-index:2;
-  pointer-events:none;
 }
 .am-drop{animation:amDrop .6s ease-out}
 .am-bounce{animation:amBounce .35s ease-in-out infinite alternate}
@@ -1761,8 +1747,12 @@ function openPhotoImage(feature, removeMapBeforeImage) {
   const featureIndex = feature?.properties?.index;
   if (featureIndex == null) return;
 
-  // Keep the map alive underneath the image page.
-  // Closing the image can then return to the same map position.
+  if (removeMapBeforeImage) {
+    $(".mappage").remove();
+    exitMapMode();
+    hideMainToolbar();
+  }
+
   imgPage(featureIndex);
 }
 
@@ -1831,12 +1821,7 @@ function collapseSpiderGroup() {
     google.maps.event.removeListener(activeSpiderMouseMove);
     activeSpiderMouseMove = null;
   }
-activeSpiderGroup.forEach(marker => {
-  const group = marker.__photoGroup || [];
-  if (group.length > 1) {
-    marker.__amAnim?.classList.add("photo-multi");
-  }
-});
+
   activeSpiderGroup = null;
   closeAllInfoWindows();
 }
@@ -1847,9 +1832,6 @@ function spiderfyGroup(group) {
   if (!group || group.length < 2) return;
 
   activeSpiderGroup = group;
-  group.forEach(marker => {
-  marker.__amAnim?.classList.remove("photo-multi");
-});
 
   const origin = group[0].__photoBasePosition;
   const radius = Math.min(76, 28 + group.length * 5);
@@ -2156,7 +2138,7 @@ async function showOnMap(mapFeatureCollection) {
     marker.__feature = f;
 
  photoMarkers.push(marker);
- wirePhotoMarker(marker, f, position, false);
+ wirePhotoMarker(marker, f, position, true);
 bounds.extend(position);
   });
 
