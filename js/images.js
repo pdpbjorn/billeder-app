@@ -447,13 +447,19 @@ function setMarkerBounce(marker, on) {
 			{   
 				switch(e.key) {
 					case 'Escape': //if 'escape' then close image page
-						$(".imagepage").remove();
-						if (document.getElementsByClassName("trippix").length > 0) //If the imagepage was opened from a map thumb, go to mappage, if not goto thumbpage
-									{window.location.href = "#mappage"}
-									else
-									{window.location.href = "#initial"
-									setTimeout(function(){window.scrollBy(0,thumbPageScroll);},200)}
-					break;
+					case 'Escape':
+            $(".imagepage").remove();
+
+            if (lastViewMode === "map") {
+              window.location.href = "#mappage";
+            } else {
+              window.location.href = "#initial";
+              setTimeout(function(){
+                window.scrollBy(0, thumbPageScroll);
+              }, 200);
+            }
+
+            break;
 					case 'ArrowRight'://if 'right arrow' browse to higher image index
 						bladr(true)
 					break;
