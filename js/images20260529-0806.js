@@ -447,7 +447,7 @@ function setMarkerBounce(marker, on) {
 			{   
 				switch(e.key) {
 					case 'Escape': //if 'escape' then close image page
-				
+					case 'Escape':
             $(".imagepage").remove();
 
             if (lastViewMode === "map") {
