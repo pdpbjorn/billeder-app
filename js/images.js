@@ -468,6 +468,7 @@ function setMarkerBounce(marker, on) {
 					break;
 					default:
 				}
+                return;
 			}
 			if ($(".mappage").length > 0) //if the Map page is open
 			{   
@@ -626,6 +627,10 @@ function openNavRoot(root) {
   $(".toolbar-btn[data-nav-root='" + root + "']").addClass("is-active");
   renderNavDrawer();
   openNavDrawer();
+  if (document.body.classList.contains("toolbar-floating")) {
+  $(".app-nav").addClass("app-nav-hidden");
+  updateFloatingFilterButtonText();
+}
 }
 
 function openNavDrawer() {
