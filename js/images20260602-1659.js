@@ -1012,18 +1012,10 @@ function renderNavDrawer() {
   .addClass(getCurrentLayoutClass() + " nav-root-" + navState.currentRoot)
   .empty();
 
- if (isDesktopTimeChooser()) {
-  renderTimeDesktopChooser($body);
-
-  const $footer = $(".nav-drawer-footer");
-  $footer.find(".drawer-no-date-btn").remove();
-
-  if (navState.currentRoot === "tid") {
-    renderNoDateButton($footer);
+  if (isDesktopTimeChooser()) {
+    renderTimeDesktopChooser($body);
+    return;
   }
-
-  return;
-}
 
   if (navState.currentRoot === "tid" && navState.stack.length === 0) {
     const isSelected = navState.activeSelection?.key === "tid:no-date";
@@ -1061,7 +1053,12 @@ function renderNavDrawer() {
     $body.append($btn);
   });
 
+  const $footer = $(".nav-drawer-footer");
+$footer.find(".drawer-no-date-btn").remove();
 
+if (navState.currentRoot === "tid" && isDesktopTimeChooser()) {
+  renderNoDateButton($footer);
+}
 }
 
 function updateSelectionLabel() {
