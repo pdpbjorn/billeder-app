@@ -785,10 +785,20 @@ body.map-mode .app-nav:not(.app-nav-hidden) {
 }
 
 .nav-drawer-footer {
+    display: flex;
+  gap: 12px;
+  align-items: center;
   border-top: 1px solid rgba(0,0,0,0.08);
   justify-content: space-between;
 }
+.drawer-no-date-btn {
+  flex: 0 0 auto;
+  min-width: 190px;
+}
 
+#navClearSelection {
+  flex: 1 1 auto;
+}
 .nav-drawer-heading{
   min-width:0;
   text-align:center;
@@ -1549,7 +1559,9 @@ body.map-mode .floating-filter-btn {
     margin-right:auto;
     box-sizing:border-box;
   }
-
+  .drawer-no-date-btn {
+    min-width: 150px;
+  }
   .app-nav{
     border-radius:0 0 16px 16px;
   }

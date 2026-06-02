@@ -981,19 +981,22 @@ function renderTimeDesktopChooser($body) {
     });
   });
 
-  const $secondary = $('<div/>', { class: 'time-secondary-actions' }).appendTo($body);
+  
+}
+function renderNoDateButton($target) {
   const isSelected = navState.activeSelection?.key === 'tid:no-date';
-  $('<button/>', {
+
+  return $('<button/>', {
     type: 'button',
-    class: 'drawer-secondary-option' + (isSelected ? ' is-selected' : ''),
-    text: 'Billeder uden tidsstempel'
+    class: 'drawer-footer-btn drawer-no-date-btn' + (isSelected ? ' is-selected' : ''),
+    text: 'Uden tidsstempel'
   }).on('click', function () {
     selectAndApply({
       key: 'tid:no-date',
       label: 'Tid: uden tidsstempel',
       action: injectNoDate
     });
-  }).appendTo($secondary);
+  }).appendTo($target);
 }
 
 function renderNavDrawer() {
@@ -1049,6 +1052,13 @@ function renderNavDrawer() {
     $btn.on("click", item.onSelect);
     $body.append($btn);
   });
+
+  const $footer = $(".nav-drawer-footer");
+$footer.find(".drawer-no-date-btn").remove();
+
+if (navState.currentRoot === "tid" && isDesktopTimeChooser()) {
+  renderNoDateButton($footer);
+}
 }
 
 function updateSelectionLabel() {
