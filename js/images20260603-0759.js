@@ -791,11 +791,7 @@ function getDrawerHint() {
 }
 
 function isDesktopTimeChooser() {
-  return (
-    navState.currentRoot === "tid" &&
-    window.innerWidth >= 1100 &&
-    !window.matchMedia("(pointer: coarse)").matches
-  );
+  return navState.currentRoot === "tid" && window.innerWidth >= 900;
 }
 
 function getCurrentLayoutClass() {
@@ -819,7 +815,7 @@ function selectAndApply(selection) {
 function captureTimeColumnScrolls(){
   return $("#navDrawerBody .time-column-list").map(function(){ return this.scrollTop; }).get();
 }
-function advanceTidNav(nextStack) {
+function advanceTidNav(nextStack, focusSelector) {
   navState.stack = nextStack;
   navState.pendingSelection = null;
 
@@ -832,10 +828,13 @@ function advanceTidNav(nextStack) {
 
   setTimeout(() => {
     const drawer = document.getElementById("navDrawerBody");
-    if (drawer) drawer.scrollTop = 0;
+    const target =
+      document.querySelector(focusSelector) ||
+      document.querySelector("#navDrawerBody .drawer-option");
 
-    const first = document.querySelector("#navDrawerBody .drawer-option");
-    if (first) first.focus({ preventScroll: true });
+    if (drawer) drawer.scrollTop = 0;
+    if (target) target.scrollIntoView({ block: "start", behavior: "smooth" });
+    if (target) target.focus?.();
   }, 30);
 }
 
@@ -862,7 +861,9 @@ function getNavItems() {
         hasChildren: true,
        onSelect: () => {
   advanceTidNav(
-    [{ label: dec.id, node: dec }]  );
+    [{ label: dec.id, node: dec }],
+    "#navDrawerBody .drawer-option"
+  );
 }
       }));
     }
@@ -877,7 +878,9 @@ function getNavItems() {
     [
       navState.stack[0],
       { label: yr.id, node: yr }
-    ]);
+    ],
+    "#navDrawerBody .drawer-option"
+  );
 }
       }));
     }
