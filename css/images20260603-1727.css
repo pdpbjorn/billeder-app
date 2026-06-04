@@ -1534,6 +1534,39 @@ body.map-mode .floating-filter-btn {
 .app-map-control-icon {
   font-size: 18px;
 }
+
+.nav-root-tid .drawer-option {
+  min-height: 44px;
+  padding: 6px 12px;
+  align-items: center;
+}
+
+.nav-root-tid .drawer-option-main {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+  width: 100%;
+  gap: 12px;
+}
+
+.nav-root-tid .drawer-option-label {
+  font-size: 1rem;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
+.nav-root-tid .drawer-option-meta {
+  margin: 0;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  color: #6b7280;
+}
+
+.nav-root-tid .drawer-chevron {
+  margin-left: 8px;
+  flex: 0 0 auto;
+}
 }
 
 /* Large desktop only */

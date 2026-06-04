@@ -236,27 +236,33 @@ h2 {
     justify-content: space-between;
 }
 
-.dateDivMain{
-	display: flex;
-	flex-wrap:  wrap }	
-	
-.tile{
-		position:relative;
-		background: #ECECEC;
-		border-radius: 15px;
-		padding: 10px 10px;
-		display: block;
-		font-family: arial;
-		font-weight: bold;
-		color:#7f7f7f;
-		text-decoration: none;
-		text-shadow:0px 1px 0px #fff;
-		border:1px solid #a7a7a7;
-		margin:3px auto;
-		box-shadow: 0px 2px 1px white inset, 0px -2px 8px white, 0px 2px 5px rgba(0, 0, 0, 0.1), 0px 8px 10px rgba(0, 0, 0, 0.1);
-		-webkit-transition:box-shadow 0.5s;
-    transition:box-shadow 0.5s;
+.dateDivMain {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(118px, 1fr));
+  gap: 4px;
+  padding: 4px 6px 10px;
 }
+
+.tile {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  display: block;
+  background: transparent;
+  border: 0;
+  border-radius: 4px;
+  box-shadow: none;
+  overflow: hidden;
+}
+
+.tile img {
+  width: 100%;
+  height: 112px;
+  object-fit: cover;
+  display: block;
+  border-radius: 4px;
+}
+
 #counters{
 	font-size: small;
 }
@@ -576,6 +582,32 @@ body.toolbar-floating .app-nav:not(.app-nav-hidden) {
 body:not(.map-mode) .app-nav {
   position: sticky;
   top: 0;
+}
+.floating-month-nav {
+  position: fixed;
+  top: 12px;
+  left: 118px;
+  z-index: 1600;
+  display: flex;
+  gap: 6px;
+}
+
+.floating-month-btn {
+  min-width: 38px;
+  min-height: 38px;
+  border: 1px solid rgba(0,0,0,0.18);
+  border-radius: 10px;
+  background: rgba(255,255,255,0.96);
+  color: #1f2933;
+  font-weight: 800;
+  font-size: 1.25rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.22);
+  cursor: pointer;
+}
+
+.floating-month-btn:disabled {
+  opacity: 0.35;
+  cursor: default;
 }
 
 .floating-filter-btn {
@@ -1178,8 +1210,27 @@ a:focus-visible {
   padding-bottom:40px;
 }
 
+.image-zoom-wrap {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  touch-action: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.zoomable-image {
+  transform-origin: center center;
+  will-change: transform;
+}''
 /* Mobile / tablet: single responsive block */
 @media (max-width: 899px) {
+
+ .floating-month-nav {
+  top: 12px;
+  left: 112px;
+}
 
 body.map-mode .app-nav:not(.app-nav-hidden) {
   position: fixed;
@@ -1566,6 +1617,16 @@ body.map-mode .floating-filter-btn {
 .nav-root-tid .drawer-chevron {
   margin-left: 8px;
   flex: 0 0 auto;
+}
+
+.dateDivMain {
+  grid-template-columns: repeat(auto-fill, minmax(92px, 1fr));
+  gap: 3px;
+  padding: 3px 4px 8px;
+}
+
+.tile img {
+  height: 96px;
 }
 }
 

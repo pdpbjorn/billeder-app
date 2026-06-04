@@ -712,17 +712,16 @@ function hideMainToolbar() {
 
   showFloatingFilterButton();
   updateFloatingFilterButtonText();
-  updateMonthNavButtons();
 }
 
 function showMainToolbar() {
-  $(".app-nav").removeClass("app-nav-hidden");
+  $(".app-nav")
+    .removeClass("app-nav-hidden");
 
   document.body.classList.add("toolbar-floating");
 
   showFloatingFilterButton();
   updateFloatingFilterButtonText();
-  updateMonthNavButtons();
 }
 
 function toggleMainToolbar() {
@@ -733,110 +732,13 @@ function toggleMainToolbar() {
   }
 }
 
-function getAllMonthIds() {
-  const out = [];
-  const decades = appNavData.tid?.decades || [];
-
-  decades.forEach(dec => {
-    (dec.years || []).forEach(yr => {
-      (yr.months || []).forEach(m => {
-        if (m.id) out.push(m.id);
-      });
-    });
-  });
-
-  return out.sort();
-}
-
-function getActiveMonthId() {
-  const key = navState.activeSelection?.key || "";
-  const month = key.startsWith("tid:") ? key.slice(4) : "";
-  return /^\d{4}-\d{2}$/.test(month) ? month : null;
-}
-
-function ensureMonthNavButtons() {
-  let wrap = document.getElementById("floatingMonthNav");
-
-  if (!wrap) {
-    wrap = document.createElement("div");
-    wrap.id = "floatingMonthNav";
-    wrap.className = "floating-month-nav";
-
-    const prev = document.createElement("button");
-    prev.type = "button";
-    prev.id = "floatingPrevMonth";
-    prev.className = "floating-month-btn";
-    prev.textContent = "‹";
-    prev.title = "Forrige måned";
-    prev.addEventListener("click", () => goAdjacentMonth(-1));
-
-    const next = document.createElement("button");
-    next.type = "button";
-    next.id = "floatingNextMonth";
-    next.className = "floating-month-btn";
-    next.textContent = "›";
-    next.title = "Næste måned";
-    next.addEventListener("click", () => goAdjacentMonth(1));
-
-    wrap.append(prev, next);
-    document.body.appendChild(wrap);
-  }
-
-  return wrap;
-}
-
-function updateMonthNavButtons() {
-  const wrap = ensureMonthNavButtons();
-  const month = getActiveMonthId();
-
-  if (!month || document.body.classList.contains("map-mode")) {
-    wrap.hidden = true;
-    return;
-  }
-
-  const months = getAllMonthIds();
-  const idx = months.indexOf(month);
-
-  if (idx < 0) {
-    wrap.hidden = true;
-    return;
-  }
-
-  wrap.hidden = false;
-  document.getElementById("floatingPrevMonth").disabled = idx <= 0;
-  document.getElementById("floatingNextMonth").disabled = idx >= months.length - 1;
-}
-
-function goAdjacentMonth(delta) {
-  const month = getActiveMonthId();
-  if (!month) return;
-
-  const months = getAllMonthIds();
-  const idx = months.indexOf(month);
-  const next = months[idx + delta];
-
-  if (!next) return;
-
-  navState.activeSelection = {
-    key: "tid:" + next,
-    label: "Tid: " + next
-  };
-
-  updateSelectionLabel();
-  injectMonth(next);
-  hideMainToolbar();
-  updateMonthNavButtons();
-}
-
 function enterMapMode() {
   document.body.classList.add("map-mode");
   hideMainToolbar();
-  updateMonthNavButtons();
 }
 
 function exitMapMode() {
   document.body.classList.remove("map-mode");
-  updateMonthNavButtons();
 }
 
 
@@ -1735,8 +1637,9 @@ if ($mainImg[0].complete) {
 					)
 			//Main page/display		
 			.append($('<div/>',{"class":"pagecontents","data-role":"content"})
-				.append($('<div/>',{"class":"ui-panel-wrapper image-zoom-wrap"})
-        .append($mainImg.addClass("zoomable-image"))
+				.append($('<div/>',{"class":"ui-panel-wrapper"})
+					//the image
+					.append($mainImg)
 					
 					
 					//button to close image
@@ -1835,48 +1738,7 @@ if ($mainImg[0].complete) {
 	return  imageIndex //for the navigation in the calling function
 }
 /*subsection: helpers for imgpage */
-function clampZoom(v) {
-  return Math.max(1, Math.min(6, v));
-}
 
-let imageZoomState = {
-  scale: 1,
-  startScale: 1,
-  startDistance: 0
-};
-
-function distanceBetweenTouches(touches) {
-  const a = touches[0];
-  const b = touches[1];
-  return Math.hypot(a.clientX - b.clientX, a.clientY - b.clientY);
-}
-
-$(document)
-  .off("touchstart", ".image-zoom-wrap")
-  .on("touchstart", ".image-zoom-wrap", function (e) {
-    if (e.originalEvent.touches.length === 2) {
-      imageZoomState.startDistance = distanceBetweenTouches(e.originalEvent.touches);
-      imageZoomState.startScale = imageZoomState.scale;
-    }
-  })
-  .off("touchmove", ".image-zoom-wrap")
-  .on("touchmove", ".image-zoom-wrap", function (e) {
-    if (e.originalEvent.touches.length !== 2) return;
-
-    e.preventDefault();
-
-    const d = distanceBetweenTouches(e.originalEvent.touches);
-    if (!imageZoomState.startDistance) return;
-
-    imageZoomState.scale = clampZoom(
-      imageZoomState.startScale * d / imageZoomState.startDistance
-    );
-
-    $(".zoomable-image").css(
-      "transform",
-      "scale(" + imageZoomState.scale + ")"
-    );
-  });
 
 //	browsing images back and forth - accepts boolean to indicate direction (true=forth, false=back)
 //currentDataset.features.length
