@@ -608,6 +608,7 @@ body:not(.map-mode) .app-nav {
   font-size: 1.25rem;
   box-shadow: 0 2px 10px rgba(0,0,0,0.22);
   cursor: pointer;
+    z-index: 900;
 }
 
 .floating-month-btn:disabled {
