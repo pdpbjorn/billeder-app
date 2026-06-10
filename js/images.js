@@ -483,22 +483,40 @@ function setMarkerBounce(marker, on) {
 			}
 		}
 //Handlingn swipes		
-		let touchstartX = 0
-		let touchendX = 0
-			
-		function checkDirection() {
-		  if (touchendX < touchstartX && (touchendX - touchstartX) < -100) bladr(false)
-		  if (touchendX > touchstartX && (touchendX - touchstartX) > 100) bladr(true)
-		}
-		
-		document.addEventListener('touchstart', e => {
-		  touchstartX = e.changedTouches[0].screenX
-		})
-		
-		document.addEventListener('touchend', e => {
-		  touchendX = e.changedTouches[0].screenX
-		  checkDirection()
-		})
+let touchstartX = 0;
+let touchendX = 0;
+let swipeWasPinch = false;
+
+function checkDirection() {
+  if (swipeWasPinch) return;
+  if ($(".imagepage").length === 0) return;
+
+  if (imageZoomState?.scale && imageZoomState.scale > 1.05) return;
+
+  if (touchendX < touchstartX && (touchendX - touchstartX) < -100) bladr(false);
+  if (touchendX > touchstartX && (touchendX - touchstartX) > 100) bladr(true);
+}
+
+document.addEventListener("touchstart", e => {
+  swipeWasPinch = e.touches.length > 1;
+  if (!swipeWasPinch) {
+    touchstartX = e.changedTouches[0].screenX;
+  }
+}, { passive: true });
+
+document.addEventListener("touchmove", e => {
+  if (e.touches.length > 1) swipeWasPinch = true;
+}, { passive: true });
+
+document.addEventListener("touchend", e => {
+  if (swipeWasPinch) {
+    if (e.touches.length === 0) swipeWasPinch = false;
+    return;
+  }
+
+  touchendX = e.changedTouches[0].screenX;
+  checkDirection();
+}, { passive: true });
 	
  
 //Listening for handheld screen orientation change, trying to rotate and resize displayed image

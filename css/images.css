@@ -82,10 +82,15 @@ figcaption{
 	width: 30em;
 }
 
+.imagepage {
+  z-index: 2000 !important;
+}
+
 .imagepage .ui-panel-content-wrap-position-left.ui-panel-content-wrap-open,
 .ui-panel-dismiss-position-left.ui-panel-dismiss-open {
 left: 30em;
 right: -30em;
+
 }
 
 .imagepage .ui-panel-animate.ui-panel-content-wrap-position-left.ui-panel-content-wrap-open.ui-panel-content-wrap-display-reveal {
@@ -587,7 +592,7 @@ body:not(.map-mode) .app-nav {
   position: fixed;
   top: 12px;
   left: 118px;
-  z-index: 1600;
+  z-index: 900;
   display: flex;
   gap: 6px;
 }
@@ -614,7 +619,7 @@ body:not(.map-mode) .app-nav {
   position: fixed;
   top: 12px;
   left: 12px;
-  z-index: 1600;
+  z-index: 900;
 
   min-height: 38px;
   padding: 0 14px;
@@ -1223,7 +1228,7 @@ a:focus-visible {
 .zoomable-image {
   transform-origin: center center;
   will-change: transform;
-}''
+}
 /* Mobile / tablet: single responsive block */
 @media (max-width: 899px) {
 
